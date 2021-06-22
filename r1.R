@@ -1,7 +1,7 @@
 library(dplyr) 
 library(data.table)
 library(tidyr)
-
+library(ggplot2)
 
 #############################
 # It is now uh, appropriate-seeming to add in a table of contents.
@@ -41,6 +41,8 @@ combined_results_df <- do.call("rbind", lapply(result_files_df, as.data.frame))
 
 # 2. Volume Data ------------------------------------------
 
+# NOTE: this gets kind of complicated and we go back and forth with operations
+# and then converting back to dataframe
 
 # this line splits the lines by delimiter "volume =" to create the volume_data_df
 # NOTE!!! This removes some data for tracability if we want to look back at specific pockets. But this seems highly improbably desirable
@@ -49,11 +51,18 @@ combined_results_df %>%
 
 # remove the NA values from the dataframe (this is a result of rows that did not contain volume data)
 volume_data_clean <- na.omit(volume_data_df)
+volume_data_df <- volume_data_clean
 
 # shit was imported from the text file as strings, convert to numbers
 volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data))
 
-# achieved volume dataframe with just volume data
+# remove outliers, as we got some w/ 40k A3
+ volume_data_df <- volume_data_df[volume_data_df$volume_data <= 1000, ]
+
+ # outlier operation however FUCKS IT UP so... need to convert back to df
+ volume_data_df <- as.data.frame(volume_data_df)
+ 
+# achieved volume dataframe with just volume data limited to 0-1000 A^3; difficult lol
 
 
 # 3. Residues Results ----------------------------------
@@ -80,24 +89,26 @@ clean_tbl <- subset(residue_table_prelim_df_w_crap, Var1 %in% residues_ref_ls)
 
 # 4. Plotting -------------------------
 
-# VOLUME DATA PLOT! 
-# this histogram shit doesn't work as well as it should
+# VOLUME DATA PLOT! -----------------vvv
 hist(volume_data_df$volume_data,
      main = "Distribution of Volume of Pockets",
      xlab = "Volume, A3",
-     col="darkmagenta",
-     xlim=c(0,5000),
-     breaks = c(0,100,150,200,250,300,350,400,450,500,5000))
+     col = "darkmagenta",
+     #xlim = c(0,5000),
+     #breaks = c(0,100,150,200,250,300,350,400,450,1000)
+     )
 
-# RESIDUE FREQ PLOT!
+ # RESIDUE FREQ PLOT! --------------
 
 # order data before we plot
-clean_tbl <- clean_tbl[order(clean_tbl$Freq, decreasing = TRUE), ]
+clean_tbl <- clean_tbl[order(clean_tbl$Freq, decreasing = TRUE), ] #this comma is necessary
 
 # this 100% works and plots everything
 # NOTE: just zoom + maximize to see ALL NAMES
-hist(clean_tbl$Freq)
 barplot(clean_tbl$Freq,
         main = "Residue Freq around Hemes",
         xlab = "Residues",
-        names.arg = clean_tbl$Var1)
+        col = "orange",
+        names.arg = clean_tbl$Var1,
+        
+        )
