@@ -1,0 +1,36 @@
+% this main.tex largely serves to boot up all the packages and tie the various files together 
+
+% Use book class. Report is an option, but makes sectioning off the front and back matter more difficult. Report more useful for an actual paper v. a thesis, imo based off a quick search
+% Further, the book class defaults to assuming this will look like a book. To override this there are two options:
+%1:
+%\documentclass[openany]{book} %this starts chapters on even pages where appropriate, otherwise it waits for odd
+%2:
+%\documentclass[oneside]{book} %this sets so that the entire thing is one page
+
+\documentclass[12pt,oneside,a4paper]{book}
+
+% PACKAGES --------------------
+
+% go to packagesmacros.sty to view all packages loaded. subfolders is muy importante
+\usepackage{PackagesMacros}
+
+
+% STRUCTURE OF THE DOCUMENT ---------------
+\begin{document}
+	% ENGAGE TITLE PAGE
+	\input{a_Front_Matter/titlepage.tex}
+	
+	% INITIATE FRONT MATTER
+	\frontmatter
+	\input{a_Front_Matter/abstract.tex}
+	% acknowledgments
+	
+	\tableofcontents
+	
+	\listoffigures
+	\listoftables
+	
+	\pagebreak
+	
+	
+\end{document}

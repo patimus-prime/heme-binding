@@ -1,0 +1,28 @@
+%List of all Packages being deployed in this document
+\ProvidesPackage{PackagesMacros}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+% use this to handle images
+\usepackage{graphicx} 
+% specify path to images
+\graphicspath{ {images/} }
+\usepackage{blindtext}
+
+% GLOSSARY, IF DESIRED. **MUST GO HERE, or before begin document in main** ------------
+% LIKELY REQUIRES FULL LATEX INSTALLATION LOLLOLLOLOL
+
+%\makeglossaries
+%\makenomenclature
+%\makeindex[columns=3, title=Alphabetical Index, intoc] % Make LaTeX produce the files required to compile the index
+
+%\loadglsentries{C) Back Matter/acronyms.tex}
+%\loadglsentries{C) Back Matter/glossary.tex} 
+%\makeglossaries %https://www.overleaf.com/learn/latex/glossaries
+
+
+% note: title info in title.tex in A) Front Matter
+
+
+% LOAD LAST. THIS PACKAGE IS SUPER MEGA IMPORTANT YO, OTHERWISE NO STRUCTURE!!!!!
+\usepackage{subfiles}
+
