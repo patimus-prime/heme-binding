@@ -10,9 +10,40 @@
 \documentclass[12pt,oneside,a4paper]{book}
 
 % PACKAGES --------------------
+% if this becomes too much, full install of latex, put in filename.sty in same folder as main.tex
+% include \ProvidesPackage{packagename} and use usepackage{that} here
 
-% go to packagesmacros.sty to view all packages loaded. subfolders is muy importante
-\usepackage{PackagesMacros}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}  % use this to handle images
+\graphicspath{ {images/} } % specify path to images
+
+%%% LOTS OF GARBAGE %%%%%%
+
+
+%\usepackage{blindtext} %idk
+%\usepackage{algorithm2e}
+%\usepackage{float} %to list algorthims
+
+% GLOSSARY, IF DESIRED. **MUST GO HERE, or before begin document in main** ------------
+% LIKELY REQUIRES FULL LATEX INSTALLATION LOLLOLLOLOL
+
+%\makeglossaries
+%\makenomenclature
+%\makeindex[columns=3, title=Alphabetical Index, intoc] % Make LaTeX produce the files required to compile the index
+
+%\loadglsentries{C) Back Matter/acronyms.tex}
+%\loadglsentries{C) Back Matter/glossary.tex} 
+%\makeglossaries %https://www.overleaf.com/learn/latex/glossaries
+
+
+% note: title info in title.tex in A) Front Matter
+
+
+% LOAD LAST. THIS PACKAGE IS SUPER MEGA IMPORTANT YO, OTHERWISE NO STRUCTURE!!!!!
+\usepackage{subfiles}
+
+% END OF PACKAGES --------------
 
 
 % STRUCTURE OF THE DOCUMENT ---------------
@@ -24,13 +55,37 @@
 	\frontmatter
 	\input{a_Front_Matter/abstract.tex}
 	% acknowledgments
+	% i guess not too much front matter
 	
+	%TOC
 	\tableofcontents
-	
 	\listoffigures
 	\listoftables
 	
 	\pagebreak
 	
+	%listing chapters in order, avoid need to rename numbers if start moving things around/remove equipment chapter
+	\mainmatter
+	\input{b_Chapters/Introduction.tex}	
+	\input{b_Chapters/Methods.tex}
+	\input{b_Chapters/Equipment.tex}
+	\input{b_Chapters/Results.tex}
+	\input{b_Chapters/Discussion}
+	\input{b_Chapters/Conclusion}
+	
+	%add your sources in the bib file and change the style here
+	%\bibliographystyle{alpha}
+	%\bibliography{bibliography}
+	
+	%\printglossary[type=\acronymtype]
+	%\printglossary
+	
+	%\cleardoublepage{}
+	%\pagebreak
+	
+	%add your end matter here
+	%\appendix{}
+	
+	%\input{C) Back Matter/appendix}
 	
 \end{document}

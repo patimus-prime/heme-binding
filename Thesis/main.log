@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.29)  29 JUN 2021 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.29)  29 JUN 2021 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,9 +23,7 @@ File: bk12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-) (./PackagesMacros.sty
-Package: PackagesMacros 
-
+)
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2020/02/14 3.40 The Babel package
 
@@ -80,71 +78,46 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen136
 \Gin@req@width=\dimen137
 )
-(/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
-Package: blindtext 2012/01/06 V2.0 blindtext-Package
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)
-\c@blindtext=\count178
-\c@Blindtext=\count179
-\c@blind@countparstart=\count180
-\blind@countxx=\count181
-\blindtext@numBlindtext=\count182
-\blind@countyy=\count183
-\c@blindlist=\count184
-\c@blindlistlevel=\count185
-\c@blindlist@level=\count186
-\blind@listitem=\count187
-\c@blind@listcount=\count188
-\c@blind@levelcount=\count189
-\blind@mathformula=\count190
-\blind@Mathformula=\count191
-\c@blind@randomcount=\count192
-\c@blind@randommax=\count193
-\c@blind@pangramcount=\count194
-\c@blind@pangrammax=\count195
-)
 (/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/02/14 v1.6 Multi-file projects (package)
 
 (/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
 Package: import 2009/03/23  v 5.1
-)))
+))
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count196
+\l__kernel_color_stack_int=\count178
 \l__pdf_internal_box=\box45
 )
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count197
+\scratchcounter=\count179
 \scratchdimen=\dimen138
 \scratchbox=\box46
-\nofMPsegments=\count198
-\nofMParguments=\count199
+\nofMPsegments=\count180
+\nofMParguments=\count181
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count266
+\MPscratchCnt=\count182
 \MPscratchDim=\dimen139
-\MPnumerator=\count267
-\makeMPintoPDFobject=\count268
+\MPnumerator=\count183
+\makeMPintoPDFobject=\count184
 \everyMPtoPDFconversion=\toks18
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -164,14 +137,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./a_Front_Matter/abstrac
-t.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 2.
-) [1
+t.tex) [1
 
 
 ] (./main.toc)
@@ -180,37 +146,61 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [2
 
-]
-No file main.lof.
+] (./main.lof)
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
+
 [3
 
-]
-No file main.lot.
+] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
-[4
+ [4
+
+] (./b_Chapters/Introduction.tex
+Chapter 1.
+) (./b_Chapters/Methods.tex [1
+
+
+]
+Chapter 2.
+) (./b_Chapters/Equipment.tex [2
+
+]
+Chapter 3.
+) (./b_Chapters/Results.tex [3
+
+]
+Chapter 4.
+) (./b_Chapters/Discussion.tex [4
+
+]
+Chapter 5.
+) (./b_Chapters/Conclusion.tex [5
+
+]
+Chapter 6.
+) [6
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2054 strings out of 483065
- 30215 string characters out of 5963550
- 276023 words of memory out of 5000000
- 17073 multiletter control sequences out of 15000+600000
- 537199 words of font info for 40 fonts, out of 8000000 for 9000
+ 1887 strings out of 483065
+ 27566 string characters out of 5963550
+ 266071 words of memory out of 5000000
+ 16899 multiletter control sequences out of 15000+600000
+ 535098 words of font info for 33 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 38i,6n,31p,218b,181s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on main.pdf (5 pages, 41907 bytes).
+ 30i,6n,27p,664b,181s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/pat/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/
+tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on main.pdf (11 pages, 50231 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
