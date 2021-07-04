@@ -7,7 +7,7 @@
 %2:
 %\documentclass[oneside]{book} %this sets so that the entire thing is one page
 
-\documentclass[12pt,oneside,a4paper]{book}
+\documentclass[12pt,oneside,a4paper]{report}
 
 % PACKAGES --------------------
 % if this becomes too much, full install of latex, put in filename.sty in same folder as main.tex
@@ -15,8 +15,13 @@
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
+
 \usepackage{graphicx}  % use this to handle images
 \graphicspath{ {images/} } % specify path to images
+
+\usepackage{biblatex} %enable bibliography
+\addbibresource{ThesisReferences.bib} %auto-synced from Mendely Desktop, Thesis Refs.bib should auto update then get input to here etc.
+
 
 %%% LOTS OF GARBAGE %%%%%%
 
@@ -52,7 +57,7 @@
 	\input{a_Front_Matter/titlepage.tex}
 	
 	% INITIATE FRONT MATTER
-	\frontmatter
+	%\frontmatter
 	\input{a_Front_Matter/abstract.tex}
 	% acknowledgments
 	% i guess not too much front matter
@@ -65,7 +70,7 @@
 	\pagebreak
 	
 	%listing chapters in order, avoid need to rename numbers if start moving things around/remove equipment chapter
-	\mainmatter
+	%\mainmatter
 	\input{b_Chapters/Introduction.tex}	
 	\input{b_Chapters/Methods.tex}
 	\input{b_Chapters/Equipment.tex}
@@ -73,6 +78,15 @@
 	\input{b_Chapters/Discussion}
 	\input{b_Chapters/Conclusion}
 	
+	
+	%ok so apparently biblio doesn't go in backmatter
+	%\bibliographystyle{alpha}
+	%\bibliography{Thesis Refs.bib}
+	
+	blablabla \cite{Li2011}
+	
+	
+	\printbibliography%[heading=subbibintoc]
 	%add your sources in the bib file and change the style here
 	%\bibliographystyle{alpha}
 	%\bibliography{bibliography}
