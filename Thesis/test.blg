@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'test.blg'
+[78] biber:322> INFO - === Tue Jul  6, 2021, 23:24:10
+[213] Utils.pm:309> ERROR - Cannot find 'test.bcf'!
+[213] Biber.pm:132> INFO - ERRORS: 1

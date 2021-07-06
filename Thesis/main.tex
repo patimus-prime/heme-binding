@@ -1,12 +1,5 @@
 % this main.tex largely serves to boot up all the packages and tie the various files together 
 
-% Use book class. Report is an option, but makes sectioning off the front and back matter more difficult. Report more useful for an actual paper v. a thesis, imo based off a quick search
-% Further, the book class defaults to assuming this will look like a book. To override this there are two options:
-%1:
-%\documentclass[openany]{book} %this starts chapters on even pages where appropriate, otherwise it waits for odd
-%2:
-%\documentclass[oneside]{book} %this sets so that the entire thing is one page
-
 \documentclass[12pt,oneside,a4paper]{report}
 
 % PACKAGES --------------------
@@ -16,11 +9,25 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 
+%next 4 lines suppress "Chapter N" etc. which is obnoxious
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\Large} %or {\Huge}
+
 \usepackage{graphicx}  % use this to handle images
 \graphicspath{ {images/} } % specify path to images
 
-\usepackage{biblatex} %enable bibliography
-\addbibresource{ThesisReferences.bib} %auto-synced from Mendely Desktop, Thesis Refs.bib should auto update then get input to here etc.
+% for the uh, apparently American style of quotation marks
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+%=== WARNING %===: IF ISSUES PRESENTED WITH BIBLIOGRAPHY, IN TERMINAL, IN DIRECTORY OF MAIN.TEX, RUN THE COMMAND "biber filename" with no ext in filename.ext. If you run with .ext it will not work.
+\usepackage[backend=biber]{biblatex} %enable bibliography
+\addbibresource{ThesisReferences.bib}
+ %auto-synced from Mendely Desktop, Thesis Refs.bib should auto update then get input to here etc.
 
 
 %%% LOTS OF GARBAGE %%%%%%
@@ -51,16 +58,37 @@
 % END OF PACKAGES --------------
 
 
+
+
 % STRUCTURE OF THE DOCUMENT ---------------
 \begin{document}
 	% ENGAGE TITLE PAGE
 	\input{a_Front_Matter/titlepage.tex}
 	
-	% INITIATE FRONT MATTER
-	%\frontmatter
-	\input{a_Front_Matter/abstract.tex}
-	% acknowledgments
-	% i guess not too much front matter
+	\chapter*{Abstract}
+		%not sure why I can't just \input abstract but w/e
+		Metalloproteins compose approximately 40 percent (look up how to do percents in latex) of all known proteins, and use some metallic group to accomplish their chemistry. One such metallic group is heme. Heme is a member of the porphyrin family, which are able to catalyze a broad range of reactions. Heme in particular catalyzes many different reactions and is present in many proteins. However, the underlying structural requirements to host heme in a protein are not well studied.
+		
+		In this study, all heme or heme-c containing proteins as of xx were downloaded and processed in order to determine underlying structural characteristics these proteins may have in common. Parameters that were examined include: xx. Overall, we found: xx. These results may have implications for protein engineering; or if I fucked up this illustrates the difficulty of the field and demonstrate the wide range of acceptable environments of heme; it may therefore be more appropriate to take a more hands-on approach until perhaps other computational methods evolve to better examine structure-function relationships.
+		
+		See? Not so bad of a worst-case scenario. Just, an unusual sentiment to see in modern science.
+		
+	
+	
+	
+	
+	
+	\chapter*{Acknowledgments}
+		Lastly, and most importantly, I'd like to thank me. I'd like to thank me for doing all this hard work and putting myself through this. I want to thank me for being enough, and forgiving myself when things didn't work out; and I want to thank me for persevering anyway, to make them work.
+		something something \cite{Cooper2019}
+		
+		
+		"I want to thank me for believing in me, I want to thank me for doing all this hard work. I wanna thank me for having no days off. I wanna thank me for never quitting. I wanna thank me for always been a giver and trying to give more than I receive. I want to thank me for trying to do more right than wrong. I want to thank me for just being me at all times."
+		
+		- Snoop Dogg
+		
+		%https://www.youtube.com/watch?v=NfF3bThOW0Q
+	
 	
 	%TOC
 	\tableofcontents
@@ -69,24 +97,21 @@
 	
 	\pagebreak
 	
+	%%%==== MAIN MATTER ====%%%
+	
 	%listing chapters in order, avoid need to rename numbers if start moving things around/remove equipment chapter
-	%\mainmatter
+	
 	\input{b_Chapters/Introduction.tex}	
 	\input{b_Chapters/Methods.tex}
 	\input{b_Chapters/Equipment.tex}
 	\input{b_Chapters/Results.tex}
 	\input{b_Chapters/Discussion}
-	\input{b_Chapters/Conclusion}
+	\input{b_Chapters/Conclusion}	
+
+	\printbibliography
 	
 	
-	%ok so apparently biblio doesn't go in backmatter
-	%\bibliographystyle{alpha}
-	%\bibliography{Thesis Refs.bib}
-	
-	blablabla \cite{Li2011}
-	
-	
-	\printbibliography%[heading=subbibintoc]
+	%[heading=subbibintoc]
 	%add your sources in the bib file and change the style here
 	%\bibliographystyle{alpha}
 	%\bibliography{bibliography}
