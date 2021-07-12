@@ -1,0 +1,21 @@
+#0, chain A: transcriptional regulator
+3VP5.pdb.mono.pdb opened
+1956 spheres
+Surfnet for "sel" - "sel":  volume = 1963.4
+Surfnet for "sel" - "sel" split ? 12:  volume = 2.6237
+Surfnet for "sel" - "sel" split ? 7:  volume = 4.0752
+Surfnet for "sel" - "sel" split ? 1:  volume = 1227.6
+Surfnet for "sel" - "sel" split ? 3:  volume = 13.02
+Surfnet for "sel" - "sel" split ? 5:  volume = 194.89
+Surfnet for "sel" - "sel" split ? 11:  volume = 203.01
+Surfnet for "sel" - "sel" split ? 15:  volume = 3.8578
+Surfnet for "sel" - "sel" split ? 4:  volume = 7.5228
+Surfnet for "sel" - "sel" split ? 16:  volume = 18.499
+Surfnet for "sel" - "sel" split ? 8:  volume = 8.9389
+Surfnet for "sel" - "sel" split ? 9:  volume = 16.71
+Surfnet for "sel" - "sel" split ? 13:  volume = 188.29
+Surfnet for "sel" - "sel" split ? 2:  volume = 29.567
+Surfnet for "sel" - "sel" split ? 6:  volume = 17.306
+Surfnet for "sel" - "sel" split ? 14:  volume = 24.528
+Surfnet for "sel" - "sel" split ? 10:  volume = 3.0511
+

@@ -1,0 +1,36 @@
+The following problems occurred while reading PDB file for 3SIK.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (136 )
+#0, chain A: IRON transport-associated domain protein
+3SIK.pdb.mono.pdb opened
+SER 83.A
+ILE 134.A
+HOH 166.A
+TYR 136.A
+HOH 168.A
+ALA 138.A
+SER 139.A
+TYR 140.A
+ASP 141.A
+ILE 142.A
+ILE 84.A
+VAL 44.A
+TRP 45.A
+LYS 46.A
+GLY 47.A
+GLU 51.A
+SER 52.A
+SER 53.A
+ARG 54.A
+MET 55.A
+HOH 167.A
+HEM 154.A
+TYR 58.A
+ASN 130.A
+HOH 169.A
+ASN 56.A
+VAL 127.A
+ILE 129.A
+LYS 79.A
+ILE 131.A
+ASP 80.A
+

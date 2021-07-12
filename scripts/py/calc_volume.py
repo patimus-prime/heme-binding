@@ -33,7 +33,7 @@ replyDialog = dialogs.find("reply")
 replyDialog.Clear()
 
 # specifying path:
-path = "~/0_Pat_Project/test_folder/monomers"
+path = "~/heme-binding/pdb_source_data/1_monomers_processed"
 full_path = os.path.expanduser(path)
 
 # :'( you may also be able to use "home/pat/0_Pat_Project/test_folder"
@@ -67,9 +67,11 @@ for fn in file_names:
 
     # FIXME!!!
     # GET RESIDUES. MOVE TO ANOTHER SCRIPT WHEN WE ALTER R FOR MULTIPLE TYPES OF FILES
-    rc("sel :HEM zr < 7.0")
-    for i in chimera.selection.currentResidues():
-        print i
+    #rc("sel :HEM zr < 7.0")
+    #for i in chimera.selection.currentResidues():
+    #    print i
+
+    
     # OK NOW GO TO GET THE VOLUME.
     rc("sel :HEM za < 7.0")
 
@@ -84,7 +86,7 @@ for fn in file_names:
     # select the residues around the heme but not the heme mols itself, some how also the volume
     rc("sel sel &~:HEM")
     # weird way to specify heme and vol around heme without selecting heme
-    interface_surfnet("sel","sel",interval=0.5)
+    interface_surfnet("sel","sel")
     # ADD AFTER FINAL "SEL" TO PUT IN SOME SETTINGS: ,cutoff=12.0,interval = 0.5)
     # split the surfaces, FIXME! not sure why actually 6 June 2021
     rc("sop split #")
@@ -92,11 +94,11 @@ for fn in file_names:
 
 
     rc("center")
-    rc("pause")
+    #rc("pause")
 
 
     # specifying path to the results folder!
-    results_path = "~/0_Pat_Project/test_folder/results"
+    results_path = "~/heme-binding/results/volume"
     full_results_path = os.path.expanduser(results_path)
 
     # this looks funky but it' just within results_path, with processed_file.txt being saved

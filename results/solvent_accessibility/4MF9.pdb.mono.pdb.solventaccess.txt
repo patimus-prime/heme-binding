@@ -1,0 +1,15 @@
+The following problems occurred while reading PDB file for 4MF9.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (209 )
+warning: cannot find LINK/SSBOND residue HEM (400 )
+#0, chain A: hemin degrading factor
+4MF9.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 4MF9.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 488.695
+  Total solvent accessible surface area = 790.732
+

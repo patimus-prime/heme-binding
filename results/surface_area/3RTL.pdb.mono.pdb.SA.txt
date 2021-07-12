@@ -1,0 +1,49 @@
+The following problems occurred while reading PDB file for 3RTL.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue ASP (428 )
+warning: cannot find LINK/SSBOND residue ASP (428 )
+warning: cannot find LINK/SSBOND residue GLU (354 )
+warning: cannot find LINK/SSBOND residue TYR (440 )
+warning: cannot find LINK/SSBOND residue GLU (354 )
+warning: cannot find LINK/SSBOND residue TYR (440 )
+warning: cannot find LINK/SSBOND residue GLU (354 )
+warning: cannot find LINK/SSBOND residue TYR (440 )
+warning: cannot find LINK/SSBOND residue MET (362 )
+warning: cannot find LINK/SSBOND residue MET (362 )
+warning: cannot find LINK/SSBOND residue MET (362 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue HOH (503 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue HOH (606 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+#0, chain A: iron-regulated surface determinant protein B
+3RTL.pdb.mono.pdb opened
+1166 spheres
+Surfnet for "sel" - "sel":  volume = 850.29
+Surfnet for "sel" - "sel" split ? 4:  volume = 11.925
+Surfnet for "sel" - "sel" split ? 2:  volume = 65.343
+Surfnet for "sel" - "sel" split ? 3:  volume = 603.18
+Surfnet for "sel" - "sel" split ? 11:  volume = 5.0953
+Surfnet for "sel" - "sel" split ? 8:  volume = 1.8963
+Surfnet for "sel" - "sel" split ? 13:  volume = 18.864
+Surfnet for "sel" - "sel" split ? 9:  volume = 3.5842
+Surfnet for "sel" - "sel" split ? 10:  volume = 25.72
+Surfnet for "sel" - "sel" split ? 1:  volume = 5.6035
+Surfnet for "sel" - "sel" split ? 6:  volume = 4.1283
+Surfnet for "sel" - "sel" split ? 12:  volume = 5.3144
+Surfnet for "sel" - "sel" split ? 7:  volume = 12.047
+Surfnet for "sel" - "sel" split ? 5:  volume = 87.585
+

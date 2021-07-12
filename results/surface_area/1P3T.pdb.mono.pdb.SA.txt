@@ -1,0 +1,20 @@
+#0, chain A: Ho-1; HEME oxygenase (decyclizing) 1
+1P3T.pdb.mono.pdb opened
+2090 spheres
+Surfnet for "sel" - "sel":  volume = 2188.4
+Surfnet for "sel" - "sel" split ? 9:  volume = 4.5339
+Surfnet for "sel" - "sel" split ? 10:  volume = 19.007
+Surfnet for "sel" - "sel" split ? 2:  volume = 72.488
+Surfnet for "sel" - "sel" split ? 5:  volume = 25.731
+Surfnet for "sel" - "sel" split ? 12:  volume = 6.1972
+Surfnet for "sel" - "sel" split ? 8:  volume = 4.7059
+Surfnet for "sel" - "sel" split ? 11:  volume = 222.22
+Surfnet for "sel" - "sel" split ? 1:  volume = 1560
+Surfnet for "sel" - "sel" split ? 3:  volume = 72.687
+Surfnet for "sel" - "sel" split ? 13:  volume = 42.869
+Surfnet for "sel" - "sel" split ? 14:  volume = 7.3653
+Surfnet for "sel" - "sel" split ? 6:  volume = 141.38
+Surfnet for "sel" - "sel" split ? 15:  volume = 4.9889
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.2026
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.0575
+

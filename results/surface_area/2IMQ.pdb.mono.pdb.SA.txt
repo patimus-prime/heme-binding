@@ -1,0 +1,21 @@
+#0, chain X: salivary nitrophorin
+2IMQ.pdb.mono.pdb opened
+2226 spheres
+Surfnet for "sel" - "sel":  volume = 1945.7
+Surfnet for "sel" - "sel" split ? 3:  volume = 72.497
+Surfnet for "sel" - "sel" split ? 15:  volume = 2.7685
+Surfnet for "sel" - "sel" split ? 1:  volume = 22.015
+Surfnet for "sel" - "sel" split ? 6:  volume = 35.831
+Surfnet for "sel" - "sel" split ? 16:  volume = 19.355
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.1914
+Surfnet for "sel" - "sel" split ? 11:  volume = 29.087
+Surfnet for "sel" - "sel" split ? 13:  volume = 40.74
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.2663
+Surfnet for "sel" - "sel" split ? 10:  volume = 0.0033813
+Surfnet for "sel" - "sel" split ? 8:  volume = 107.19
+Surfnet for "sel" - "sel" split ? 12:  volume = 143.38
+Surfnet for "sel" - "sel" split ? 9:  volume = 25.524
+Surfnet for "sel" - "sel" split ? 4:  volume = 4.0387
+Surfnet for "sel" - "sel" split ? 14:  volume = 27.424
+Surfnet for "sel" - "sel" split ? 2:  volume = 1411.4
+

@@ -1,0 +1,11 @@
+The following problems occurred while reading PDB file for 3HX9.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (75 )
+#0, chain A: protein RV3592
+3HX9.pdb.mono.pdb opened
+1058 spheres
+Surfnet for "sel" - "sel":  volume = 1863.1
+Surfnet for "sel" - "sel" split ? 4:  volume = 3.1153
+Surfnet for "sel" - "sel" split ? 3:  volume = 1844.5
+Surfnet for "sel" - "sel" split ? 2:  volume = 13.353
+Surfnet for "sel" - "sel" split ? 1:  volume = 2.1619
+

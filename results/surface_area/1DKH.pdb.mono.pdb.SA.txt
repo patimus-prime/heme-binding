@@ -1,0 +1,15 @@
+#0, chain A: HASA
+1DKH.pdb.mono.pdb opened
+1350 spheres
+Surfnet for "sel" - "sel":  volume = 1370.9
+Surfnet for "sel" - "sel" split ? 5:  volume = 8.2338
+Surfnet for "sel" - "sel" split ? 9:  volume = 2.0937
+Surfnet for "sel" - "sel" split ? 4:  volume = 83.856
+Surfnet for "sel" - "sel" split ? 6:  volume = 9.0747
+Surfnet for "sel" - "sel" split ? 2:  volume = 20.459
+Surfnet for "sel" - "sel" split ? 8:  volume = 15.527
+Surfnet for "sel" - "sel" split ? 1:  volume = 1085.7
+Surfnet for "sel" - "sel" split ? 10:  volume = 6.2392
+Surfnet for "sel" - "sel" split ? 3:  volume = 123.78
+Surfnet for "sel" - "sel" split ? 7:  volume = 15.968
+

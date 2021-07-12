@@ -1,0 +1,19 @@
+#0, chain A: NP4
+3TGC.pdb.mono.pdb opened
+2258 spheres
+Surfnet for "sel" - "sel":  volume = 2321.7
+Surfnet for "sel" - "sel" split ? 1:  volume = 1817.6
+Surfnet for "sel" - "sel" split ? 11:  volume = 23.652
+Surfnet for "sel" - "sel" split ? 2:  volume = 130.06
+Surfnet for "sel" - "sel" split ? 13:  volume = 13.38
+Surfnet for "sel" - "sel" split ? 9:  volume = 1.865
+Surfnet for "sel" - "sel" split ? 7:  volume = 30.458
+Surfnet for "sel" - "sel" split ? 3:  volume = 133.58
+Surfnet for "sel" - "sel" split ? 5:  volume = 24.87
+Surfnet for "sel" - "sel" split ? 14:  volume = 8.5765
+Surfnet for "sel" - "sel" split ? 6:  volume = 12.557
+Surfnet for "sel" - "sel" split ? 12:  volume = 10.186
+Surfnet for "sel" - "sel" split ? 8:  volume = 18.015
+Surfnet for "sel" - "sel" split ? 10:  volume = 19.364
+Surfnet for "sel" - "sel" split ? 4:  volume = 77.532
+

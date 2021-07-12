@@ -1,0 +1,25 @@
+#0, chain A: cytochrome P450 3A4
+4I3Q.pdb.mono.pdb opened
+2900 spheres
+Surfnet for "sel" - "sel":  volume = 2855.7
+Surfnet for "sel" - "sel" split ? 16:  volume = 4.7076
+Surfnet for "sel" - "sel" split ? 8:  volume = 2.2512
+Surfnet for "sel" - "sel" split ? 1:  volume = 1836.6
+Surfnet for "sel" - "sel" split ? 20:  volume = 108.98
+Surfnet for "sel" - "sel" split ? 17:  volume = 10.458
+Surfnet for "sel" - "sel" split ? 10:  volume = 6.3289
+Surfnet for "sel" - "sel" split ? 5:  volume = 4.0463
+Surfnet for "sel" - "sel" split ? 9:  volume = 37.418
+Surfnet for "sel" - "sel" split ? 12:  volume = 10.001
+Surfnet for "sel" - "sel" split ? 7:  volume = 71.283
+Surfnet for "sel" - "sel" split ? 19:  volume = 93.601
+Surfnet for "sel" - "sel" split ? 18:  volume = 3.8355
+Surfnet for "sel" - "sel" split ? 11:  volume = 269.48
+Surfnet for "sel" - "sel" split ? 4:  volume = 15.673
+Surfnet for "sel" - "sel" split ? 2:  volume = 64.446
+Surfnet for "sel" - "sel" split ? 6:  volume = 19.793
+Surfnet for "sel" - "sel" split ? 3:  volume = 104.49
+Surfnet for "sel" - "sel" split ? 13:  volume = 131.09
+Surfnet for "sel" - "sel" split ? 15:  volume = 58.422
+Surfnet for "sel" - "sel" split ? 14:  volume = 2.8019
+

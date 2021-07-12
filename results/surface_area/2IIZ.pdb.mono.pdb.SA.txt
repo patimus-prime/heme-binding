@@ -1,0 +1,21 @@
+#0, chain A: melanin biosynthesis protein tyra, putative
+2IIZ.pdb.mono.pdb opened
+2668 spheres
+Surfnet for "sel" - "sel":  volume = 2358.2
+Surfnet for "sel" - "sel" split ? 11:  volume = 24.489
+Surfnet for "sel" - "sel" split ? 3:  volume = 302.65
+Surfnet for "sel" - "sel" split ? 4:  volume = 1687.9
+Surfnet for "sel" - "sel" split ? 10:  volume = 23.522
+Surfnet for "sel" - "sel" split ? 15:  volume = 19.981
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.8268
+Surfnet for "sel" - "sel" split ? 8:  volume = 184.02
+Surfnet for "sel" - "sel" split ? 7:  volume = 5.3916
+Surfnet for "sel" - "sel" split ? 6:  volume = 5.3914
+Surfnet for "sel" - "sel" split ? 9:  volume = 5.2423
+Surfnet for "sel" - "sel" split ? 2:  volume = 24.24
+Surfnet for "sel" - "sel" split ? 12:  volume = 22.482
+Surfnet for "sel" - "sel" split ? 1:  volume = 2.6085
+Surfnet for "sel" - "sel" split ? 14:  volume = 3.0861
+Surfnet for "sel" - "sel" split ? 13:  volume = 30.035
+Surfnet for "sel" - "sel" split ? 16:  volume = 14.318
+

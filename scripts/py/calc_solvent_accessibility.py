@@ -33,7 +33,7 @@ replyDialog = dialogs.find("reply")
 replyDialog.Clear()
 
 # specifying path:
-path = "~/0_Pat_Project/test_folder/small_sample"
+path = "~/heme-binding/pdb_source_data/1_monomers_processed"
 full_path = os.path.expanduser(path)
 
 # :'( you may also be able to use "home/pat/0_Pat_Project/test_folder"
@@ -61,9 +61,7 @@ for fn in file_names:
     #for an unclear reeason this does not transfer to the below to print only selected residues
     # 7A selected in order to accomodate for all potential chemical interactions with heme
     # this is potentially inaccurate, but a more case-specific A-distance study can be conducted in not a Master's
-    rc("sel :HEM zr <7.0")
-    rc("del :HEM")
-    #surfnet with sel and sel specified
+    #rc("sel :HEM zr <7.0")
     #for i in chimera.selection.currentResidues():
     #    print i
 
@@ -78,19 +76,26 @@ for fn in file_names:
     # select the residues around the heme but not the heme mols itself, some how also the volume
     #rc("sel sel &~:HEM")
     # weird way to specify heme and vol around heme without selecting heme
-    interface_surfnet("sel","sel")
+    #interface_surfnet("sel","sel")
 
     # split the surfaces, FIXME! not sure why actually 6 June 2021
-    rc("sop split #")
-    rc("measure volume #") #same result # or #1
+    #rc("sop split #")
+    #rc("measure volume #") #same result # or #1
+
+    rc("del Fe")
+    rc("surf :HEM")
     rc("center")
-    rc("pause")
+
+
+    #rc("pause")
+
+    
     # specifying path to the results folder!
-    results_path = "~/0_Pat_Project/test_folder/turbo_results"
+    results_path = "~/heme-binding/results/solvent_accessibility"
     full_results_path = os.path.expanduser(results_path)
 
     # this looks funky but it' just within results_path, with processed_file.txt being saved
-    saveReplyLog((full_results_path + "/%s") %(fn + ".SA.txt"))
+    saveReplyLog((full_results_path + "/%s") %(fn + ".solventaccess.txt"))
 
     #close current file, avoid extreme memory use
     rc("close all")

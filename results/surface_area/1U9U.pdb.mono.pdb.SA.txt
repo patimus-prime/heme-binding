@@ -1,0 +1,17 @@
+#0, chain A: cytochrome B5
+1U9U.pdb.mono.pdb opened
+958 spheres
+Surfnet for "sel" - "sel":  volume = 948.63
+Surfnet for "sel" - "sel" split ? 10:  volume = 19.444
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.9282
+Surfnet for "sel" - "sel" split ? 12:  volume = 31.539
+Surfnet for "sel" - "sel" split ? 2:  volume = 1.9281
+Surfnet for "sel" - "sel" split ? 6:  volume = 47.452
+Surfnet for "sel" - "sel" split ? 9:  volume = 3.3754
+Surfnet for "sel" - "sel" split ? 8:  volume = 10.602
+Surfnet for "sel" - "sel" split ? 11:  volume = 18.681
+Surfnet for "sel" - "sel" split ? 4:  volume = 112.57
+Surfnet for "sel" - "sel" split ? 1:  volume = 692.51
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.802
+Surfnet for "sel" - "sel" split ? 7:  volume = 3.8004
+
