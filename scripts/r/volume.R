@@ -3,6 +3,11 @@ library(data.table)
 library(tidyr)
 library(ggplot2) #thus far not used 22 June 2021
 
+
+library(tidyverse)
+library(datasets)
+#for filtering: https://www.youtube.com/watch?v=PsSqn0pxouM
+
 #############################
 # It is now uh, appropriate-seeming to add in a table of contents.
 # So, by header in this code we have:
@@ -49,11 +54,18 @@ combined_results_df <- do.call("rbind", lapply(result_files_df, as.data.frame))
 # NOTE!!! This removes some data for tracability if we want to look back at specific pockets. But this seems highly improbably desirable
 # WE'LL HAVE ABSOLUTELY NO IDEA WHOSE VOLUME IS WHOSE. THIS APPLIES ALSO TO OTHER DATA ACHIEVED WITH THIS SAME METHOD
 
+
+# FIXME!! Still need to add first column of where this data FUCKING COMES FROM
+
+
+
+
+# THIS FILTERS ONLY FOR REAL, INDIV VOLUMES ACQUIRED!!!
+combined_results_df %>%
+  filter(grepl('[?]', V1)) -> no_quest
+
 combined_results_df %>%
   separate(V1, c(NA ,"volume_data"), "volume = ") -> volume_data_df
-
-#FIXME! REMOVE FIRST ROW OF VOLUMEAREA ETC.
-
 
 # remove the NA values from the dataframe (this is a result of rows that did not contain volume data)
 volume_data_clean <- na.omit(volume_data_df)
@@ -62,13 +74,18 @@ volume_data_df <- volume_data_clean
 # shit was imported from the text file as strings, convert to numbers
 volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data))
 
+
+
+
+
+
 # remove outliers, as we got some w/ 40k A3
 # outlier operation however FUCKS IT UP so... need to convert back to df in between ops
 # therefore, below code filters >50, conv back to df, filter <= 1000, conv back to df
  volume_data_df <- volume_data_df[volume_data_df$volume_data >= 50, ]
  volume_data_df <- as.data.frame(volume_data_df)
- volume_data_df <- volume_data_df[volume_data_df$volume_data <= 1000, ] 
- volume_data_df <- as.data.frame(volume_data_df)
+ #volume_data_df <- volume_data_df[volume_data_df$volume_data <= 1000, ] 
+ #volume_data_df <- as.data.frame(volume_data_df)
  
 # achieved volume dataframe with just volume data limited to 0-1000 A^3; difficult lol
 
