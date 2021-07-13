@@ -1,0 +1,33 @@
+The following problems occurred while reading PDB file for 2J18.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+#0, chain A: chloroperoxidase
+2J18.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 2J18.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  21 connected surface components
+  Total solvent excluded surface area = 12675.1
+    component areas = 11768, 98.2097, 79.1031, 79.0254, 70.4138, 55.5826, 51.3932, 48.7009, 45.5369, 45.0845, 42.4145, 35.7379, 31.7198, 31.0845, 30.8489, 29.4059, 28.8568, 28.1682, 25.7669, 25.1673, 24.8403
+  Total solvent accessible surface area = 12779
+    component areas = 12724.8, 12.6612, 9.81955, 9.8817, 8.60039, 2.98535, 2.55166, 1.29062, 1.52949, 1.83997, 1.69707, 0.413872, 0.275923, 0.172208, 0.186529, 0.0913862, 0.117203, 0.0707439, 0.006345, 0.00112082, 0.000217424
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 2J18.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  21 connected surface components
+  Total solvent excluded surface area = 12675.1
+    component areas = 11768, 98.2097, 79.1031, 79.0254, 70.4138, 55.5826, 51.3932, 48.7009, 45.5369, 45.0845, 42.4145, 35.7379, 31.7198, 31.0845, 30.8489, 29.4059, 28.8568, 28.1682, 25.7669, 25.1673, 24.8403
+  Total solvent accessible surface area = 12779
+    component areas = 12724.8, 12.6612, 9.81955, 9.8817, 8.60039, 2.98535, 2.55166, 1.29062, 1.52949, 1.83997, 1.69707, 0.413872, 0.275923, 0.172208, 0.186529, 0.0913862, 0.117203, 0.0707439, 0.006345, 0.00112082, 0.000217424
+

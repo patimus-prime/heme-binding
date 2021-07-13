@@ -2,29 +2,20 @@ library(dplyr)
 library(data.table)
 library(tidyr)
 library(ggplot2) #thus far not used 22 June 2021
-# use install.packages("R.utils") for the insert funciton
+source("~/heme-binding/scripts/r/addpdbcol.R")
 #for filtering: https://www.youtube.com/watch?v=PsSqn0pxouM
 
-#############################
-# It is now uh, appropriate-seeming to add in a table of contents.
-# So, by header in this code we have:
-# 0. Notes on global variables that must be altered for this code to run properly
-# 1. Assemble all lines/results from the result log from Chimera into one data_frame
-# 2. Volume results and cleaning code
-# 3. Residue results and cleaning
-# 4. Plotting
-############################
 
 # 0. Notes on global variables...---------------------------
 
 #may need to specify this option every run/change for running ALL PROCESSED FILES
 #options(max.print = 999999999999999999999) #or whatever number
 
+
 # 1. Assembling all results into one dataframe -----------------------------
 
 #set working directory to the folder w files!
-volume_path = "~/heme-binding/results/volume" 
-setwd(volume_path)
+setwd("~/heme-binding/results/volume") 
 
 # import all the shit that's been processed
 # currently using results specific file, all of type .txt; therefore:
@@ -36,50 +27,8 @@ result_files_ls <- list.files(pattern = "*.txt")
 # now read them from the list into a dataframe 
 result_files_df <- lapply(result_files_ls, function(x) {read.delim(file = x, header = FALSE)})
 
-#FIXME! HERE IS THE GREAT OPPORTUNITY TO ENSURE WE HAVE DATA TRACABILITY:
-
-#https://stackoverflow.com/questions/19460120/looping-through-list-of-data-frames-in-r
-
-# NOTE!! FOR BELOW FOR LOOP, INDEXES IN R START AT 1
-
-for(i in 1:length(result_files_df))
-{
-  # we're now in per DF. so...
-  # 1. Find line with the PDB code
- #i = 1
- result_files_df[[i]] %>%
-    filter(grepl('opened', V1)) -> line_w_code #'opened' can also be used
-  #changed to 'opened' as weird things can happen in 2nd line if something is slightly off/monomer algorithm fucks it
-  
-  # 2. Get that code
- # line_w_code is correctly identified, but is a df right now.
- str_w_code <- sapply(line_w_code, as.character)
- 
- #str_w_code %>%
- #substr(line_w_code, )
- the_code <- substr(str_w_code, start = 1, stop = 4)
- # it's a string
- # 3. Create a new column populated only with the PDB code
- temp_df <- result_files_df[[i]]
- temp_df['PDB_ID'] = the_code
- temp_df <- temp_df %>%
-   select(PDB_ID, everything())
- result_files_df[[i]] <- temp_df
- 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+# add source pdb column
+result_files_df <- addpdbcol(result_files_df)
 
 #i think each file now has its own dataframe. now we combine them
 combined_results_df <- do.call("rbind", lapply(result_files_df, as.data.frame))
@@ -87,27 +36,20 @@ combined_results_df <- do.call("rbind", lapply(result_files_df, as.data.frame))
 
 # combined_results_df is now the final output of this section and the primary df
 
+
 # 2. Volume Data ------------------------------------------
 
-# NOTE: this gets kind of complicated and we go back and forth with operations
-# and then converting back to dataframe
-
-# this line splits the lines by delimiter "volume =" to create the volume_data_df
-# NOTE!!! This removes some data for tracability if we want to look back at specific pockets. But this seems highly improbably desirable
-# WE'LL HAVE ABSOLUTELY NO IDEA WHOSE VOLUME IS WHOSE. THIS APPLIES ALSO TO OTHER DATA ACHIEVED WITH THIS SAME METHOD
-
-
-# FIXME!! Still need to add first column of where this data FUCKING COMES FROM
-
-
-
-
-# THIS FILTERS ONLY FOR REAL, INDIV VOLUMES ACQUIRED!!!
+# get only the REAL, INDIV VOLUMES ACQUIRED!!!
+# remove the sum volume
 combined_results_df %>%
-  filter(grepl('[?]', V1)) -> no_quest
+  filter(grepl('[?]', V1)) -> combined_results_df
 
+# acquire only the numeric data
 combined_results_df %>%
   separate(V1, c(NA ,"volume_data"), "volume = ") -> volume_data_df
+
+
+# 3. Filter ------------
 
 # remove the NA values from the dataframe (this is a result of rows that did not contain volume data)
 volume_data_clean <- na.omit(volume_data_df)
@@ -116,12 +58,7 @@ volume_data_df <- volume_data_clean
 # shit was imported from the text file as strings, convert to numbers
 volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data))
 
-
-
-
-
-
-# remove outliers, as we got some w/ 40k A3
+# remove outliers ----------
 # outlier operation however FUCKS IT UP so... need to convert back to df in between ops
 # therefore, below code filters >50, conv back to df, filter <= 1000, conv back to df
  volume_data_df <- volume_data_df[volume_data_df$volume_data >= 50, ]
@@ -129,13 +66,15 @@ volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data
  #volume_data_df <- volume_data_df[volume_data_df$volume_data <= 1000, ] 
  #volume_data_df <- as.data.frame(volume_data_df)
  
-# achieved volume dataframe with just volume data limited to 0-1000 A^3; difficult lol
-
-
-
-# 4. Plotting -------------------------
-
-# VOLUME DATA PLOT! -----------------vvv
+ 
+ # selecting only the max for each row
+ volume_data_df %>%
+   group_by(PDB_ID) %>% slice(which.max(volume_data)) -> max_volume_df
+ 
+ ##group %>% group_by(sub) %>% slice(which.max(marks))
+ # from: https://www.geeksforgeeks.org/how-to-select-row-with-maximum-value-in-each-group-in-r-language/
+ 
+# 4. VOLUME DATA PLOT! -----------------
 hist(volume_data_df$volume_data,
      main = "Distribution of Volume of Pockets",
      xlab = "Volume, A3",
@@ -145,3 +84,13 @@ hist(volume_data_df$volume_data,
      )
 
  
+ 
+# 99. Cleanup!
+ rm(result_files_df, 
+    combined_results_df,
+    temp_df, 
+    volume_data_clean, 
+    no_quest, 
+    line_w_code,
+    
+ )

@@ -9,6 +9,11 @@ from chimera.tkgui import saveReplyLog # to save the results, which also appear 
 from chimera import replyobj # gives status messages
 from chimera import dialogs # LOL the reply log keeps spilling over
 
+########################
+# Ctrl+F "pause" to pause each mol in Chimera to visually examine!!
+########################
+
+
 #######
 # this script so far, 2 June 2021, prints the volume of pockets detected
 # within x Angstroms from heme molecules. also prints the residues WITHIN
@@ -56,7 +61,7 @@ for fn in file_names:
     rc("del ions")
 
 
-    # conduct analysis below
+    # conduct analysis below ----------------------------
 
     # select residues within x Angstroms from the heme molecules
 
@@ -64,26 +69,9 @@ for fn in file_names:
     # 7A selected in order to accomodate for all potential chemical interactions with heme
     # this is potentially inaccurate, but a more case-specific A-distance study can be conducted in not a Master's
 
-
-    # FIXME!!!
-    # GET RESIDUES. MOVE TO ANOTHER SCRIPT WHEN WE ALTER R FOR MULTIPLE TYPES OF FILES
-    #rc("sel :HEM zr < 7.0")
-    #for i in chimera.selection.currentResidues():
-    #    print i
-
-
     # OK NOW GO TO GET THE VOLUME.
+    # Select the atoms within 7A of heme. Then, of that selection, keep everything but heme.
     rc("sel :HEM za < 7.0")
-
-    # next 3 lines to print those residues within specified distance from heme
-    # NOTE: JUST PRINTS RESIDUES WITHIN SPECIFIED VOL. NOT CLEAR WHERE THEY ARE/EXACT distance
-    # if desired later, change zr < x and run again and again
-
-
-    #heme_residues = chimera.selection.currentResidues()
-
-
-    # select the residues around the heme but not the heme mols itself, some how also the volume
     rc("sel sel &~:HEM")
     # weird way to specify heme and vol around heme without selecting heme
     interface_surfnet("sel","sel")
@@ -91,7 +79,7 @@ for fn in file_names:
     # split the surfaces, FIXME! not sure why actually 6 June 2021
     rc("sop split #")
     rc("measure volume #") #same result # or #1
-
+    # the # sign specifies all applicable surfaces.
 
     rc("center")
     #rc("pause")
@@ -110,13 +98,6 @@ for fn in file_names:
 # exit Chimera when the script is done
 rc("stop now")
 
-
-
-
-#this will need some work to organize the reply log
-#but after we have this automated for more molecules
-
-# the # sign specifies all applicable surfaces.
 # if you add #x where x is a number, you specify a surface # or range of #s.
 
 

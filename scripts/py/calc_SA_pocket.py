@@ -10,9 +10,11 @@ from chimera import replyobj # gives status messages
 from chimera import dialogs # LOL the reply log keeps spilling over
 
 #######
-# 13 July 2021: Print a list of all residues within 7A of heme molecules.
-# 7A is some cutoff for potential interactions with the heme. Not necessarily reflective
-# of the chemistry in each molecule. Further refinement may be desirable depending on investigation.
+# 13 July 2021
+# Calculate the solvent accessibility/surface area of the pocket containing
+# heme. Note there's a column that gets put in due to the lack of a chemical
+# bond in this space. CASTp also does this and maybe it's sufficient for
+# our purposes but it seems scientifically shit. But it's a failure of the
 ######
 
 #####
@@ -51,15 +53,21 @@ for fn in file_names:
     replyobj.status("Processing " + fn) # show what file we're working on
     rc("open " + fn)
 
+    # conduct analysis below
     # remove stuff that can affect results
-    #rc("del solvent")
+    rc("del solvent")
     rc("del ions")
 
-    # GET RESIDUES.
-    rc("sel :HEM zr < 7.0")
-    for i in chimera.selection.currentResidues():
-        print i
+    # select residues within x Angstroms from the heme molecules
 
+    #for an unclear reeason this does not transfer to the below to print only selected residues
+    # 7A selected in order to accomodate for all potential chemical interactions with heme
+    # this is potentially inaccurate, but a more case-specific A-distance study can be conducted in not a Master's
+
+
+    rc("sel :HEM za <7.0")
+    rc("del :HEM")
+    rc("surf sel")
     rc("center")
 
 
@@ -67,12 +75,11 @@ for fn in file_names:
 
 
     # specifying path to the results folder!
-    results_path = "~/heme-binding/results/aa_frequency"
+    results_path = "~/heme-binding/results/pocketSA"
     full_results_path = os.path.expanduser(results_path)
 
     # this looks funky but it' just within results_path, with processed_file.txt being saved
-    saveReplyLog((full_results_path + "/%s") %(fn + ".processed.aa.txt"))
-
+    saveReplyLog((full_results_path + "/%s") %(fn + ".pocketSA.txt"))
 
     #close current file, avoid extreme memory use
     rc("close all")

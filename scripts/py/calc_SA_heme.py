@@ -10,9 +10,9 @@ from chimera import replyobj # gives status messages
 from chimera import dialogs # LOL the reply log keeps spilling over
 
 #######
-# 13 July 2021: Print a list of all residues within 7A of heme molecules.
-# 7A is some cutoff for potential interactions with the heme. Not necessarily reflective
-# of the chemistry in each molecule. Further refinement may be desirable depending on investigation.
+# 13 July 2021
+# Calculate the solvent accessibility/surface area of the heme molecule
+# within its pocket. Likely very similar across molecules.
 ######
 
 #####
@@ -51,15 +51,14 @@ for fn in file_names:
     replyobj.status("Processing " + fn) # show what file we're working on
     rc("open " + fn)
 
+    # conduct analysis below
     # remove stuff that can affect results
-    #rc("del solvent")
+    rc("del solvent")
     rc("del ions")
+    rc("del Fe")
 
-    # GET RESIDUES.
-    rc("sel :HEM zr < 7.0")
-    for i in chimera.selection.currentResidues():
-        print i
-
+    # acquire surface of heme molecules
+    rc("surf :HEM")
     rc("center")
 
 
@@ -67,12 +66,11 @@ for fn in file_names:
 
 
     # specifying path to the results folder!
-    results_path = "~/heme-binding/results/aa_frequency"
+    results_path = "~/heme-binding/results/hemeSA"
     full_results_path = os.path.expanduser(results_path)
 
     # this looks funky but it' just within results_path, with processed_file.txt being saved
-    saveReplyLog((full_results_path + "/%s") %(fn + ".processed.aa.txt"))
-
+    saveReplyLog((full_results_path + "/%s") %(fn + ".hemeSA.txt"))
 
     #close current file, avoid extreme memory use
     rc("close all")

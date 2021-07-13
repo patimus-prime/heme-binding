@@ -28,6 +28,12 @@ title_data_df$code = pdb_list$pdb_files_ls
 
 write.csv(title_data_df, "~/0_Pat_Project/test_folder/titles_codes.csv", row.names = FALSE)
 #write.csv(Your DataFrame,"Path to export the DataFrame\\File Name.csv", row.names = FALSE)
+
+
+
+
+# attempts and trash ----------------
+
 #IDK HOW TO GET RID OF THE .PDB
 #pdb_list[pdb_files_ls] = pdb_list[pdb_files_ls].str.replace(".pdb","")
 #df[pdb_list] = df[pdb_list].str.replace(".pdb","")

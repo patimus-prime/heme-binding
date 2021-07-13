@@ -58,3 +58,14 @@ barplot(clean_tbl$Freq,
         names.arg = clean_tbl$Var1,
         
 )
+
+
+# Cleanup!
+
+rm(clean_tbl,
+   residue_table_prelim,
+   result_files_df,
+   combined_results_df,
+   residue_table_prelim_df_w_crap,
+   residues_data_df
+   )
