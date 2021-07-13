@@ -3,11 +3,11 @@
 2080 spheres
 Surfnet for "sel" - "sel":  volume = 1464.4
 Surfnet for "sel" - "sel" split ? 8:  volume = 1.7598
-Surfnet for "sel" - "sel" split ? 7:  volume = 7.2586
 Surfnet for "sel" - "sel" split ? 2:  volume = 2.5939
-Surfnet for "sel" - "sel" split ? 5:  volume = 2.666
-Surfnet for "sel" - "sel" split ? 4:  volume = 2.4624
-Surfnet for "sel" - "sel" split ? 6:  volume = 7.0363
-Surfnet for "sel" - "sel" split ? 3:  volume = 2.2749
 Surfnet for "sel" - "sel" split ? 1:  volume = 1438.3
+Surfnet for "sel" - "sel" split ? 7:  volume = 7.2586
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.4624
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.2749
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.666
+Surfnet for "sel" - "sel" split ? 6:  volume = 7.0363
 

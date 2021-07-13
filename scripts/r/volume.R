@@ -2,10 +2,7 @@ library(dplyr)
 library(data.table)
 library(tidyr)
 library(ggplot2) #thus far not used 22 June 2021
-
-
-library(tidyverse)
-library(datasets)
+# use install.packages("R.utils") for the insert funciton
 #for filtering: https://www.youtube.com/watch?v=PsSqn0pxouM
 
 #############################
@@ -38,6 +35,51 @@ result_files_ls <- list.files(pattern = "*.txt")
 
 # now read them from the list into a dataframe 
 result_files_df <- lapply(result_files_ls, function(x) {read.delim(file = x, header = FALSE)})
+
+#FIXME! HERE IS THE GREAT OPPORTUNITY TO ENSURE WE HAVE DATA TRACABILITY:
+
+#https://stackoverflow.com/questions/19460120/looping-through-list-of-data-frames-in-r
+
+# NOTE!! FOR BELOW FOR LOOP, INDEXES IN R START AT 1
+
+for(i in 1:length(result_files_df))
+{
+  # we're now in per DF. so...
+  # 1. Find line with the PDB code
+ #i = 1
+ result_files_df[[i]] %>%
+    filter(grepl('opened', V1)) -> line_w_code #'opened' can also be used
+  #changed to 'opened' as weird things can happen in 2nd line if something is slightly off/monomer algorithm fucks it
+  
+  # 2. Get that code
+ # line_w_code is correctly identified, but is a df right now.
+ str_w_code <- sapply(line_w_code, as.character)
+ 
+ #str_w_code %>%
+ #substr(line_w_code, )
+ the_code <- substr(str_w_code, start = 1, stop = 4)
+ # it's a string
+ # 3. Create a new column populated only with the PDB code
+ temp_df <- result_files_df[[i]]
+ temp_df['PDB_ID'] = the_code
+ temp_df <- temp_df %>%
+   select(PDB_ID, everything())
+ result_files_df[[i]] <- temp_df
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #i think each file now has its own dataframe. now we combine them
 combined_results_df <- do.call("rbind", lapply(result_files_df, as.data.frame))

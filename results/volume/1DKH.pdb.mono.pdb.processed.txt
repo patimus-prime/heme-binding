@@ -2,11 +2,11 @@
 1DKH.pdb.mono.pdb opened
 1160 spheres
 Surfnet for "sel" - "sel":  volume = 1043.5
-Surfnet for "sel" - "sel" split ? 3:  volume = 13.83
-Surfnet for "sel" - "sel" split ? 5:  volume = 1.9172
-Surfnet for "sel" - "sel" split ? 6:  volume = 6.1049
-Surfnet for "sel" - "sel" split ? 1:  volume = 1010.7
-Surfnet for "sel" - "sel" split ? 7:  volume = 3.585
-Surfnet for "sel" - "sel" split ? 4:  volume = 3.4944
 Surfnet for "sel" - "sel" split ? 2:  volume = 3.894
+Surfnet for "sel" - "sel" split ? 1:  volume = 1010.7
+Surfnet for "sel" - "sel" split ? 4:  volume = 3.4944
+Surfnet for "sel" - "sel" split ? 7:  volume = 3.585
+Surfnet for "sel" - "sel" split ? 6:  volume = 6.1049
+Surfnet for "sel" - "sel" split ? 5:  volume = 1.9172
+Surfnet for "sel" - "sel" split ? 3:  volume = 13.83
 

@@ -2,12 +2,12 @@
 2IMQ.pdb.mono.pdb opened
 1496 spheres
 Surfnet for "sel" - "sel":  volume = 981.96
-Surfnet for "sel" - "sel" split ? 2:  volume = 927.37
 Surfnet for "sel" - "sel" split ? 3:  volume = 32.035
-Surfnet for "sel" - "sel" split ? 4:  volume = 2.3596
 Surfnet for "sel" - "sel" split ? 5:  volume = 2.7456
 Surfnet for "sel" - "sel" split ? 8:  volume = 4.4684
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.3596
 Surfnet for "sel" - "sel" split ? 6:  volume = 4.2883
-Surfnet for "sel" - "sel" split ? 7:  volume = 6.8097
 Surfnet for "sel" - "sel" split ? 1:  volume = 1.8895
+Surfnet for "sel" - "sel" split ? 2:  volume = 927.37
+Surfnet for "sel" - "sel" split ? 7:  volume = 6.8097
 

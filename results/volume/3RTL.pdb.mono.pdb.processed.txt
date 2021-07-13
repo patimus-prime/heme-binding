@@ -33,10 +33,10 @@ warning: cannot find LINK/SSBOND residue  MG (1 )
 3RTL.pdb.mono.pdb opened
 1082 spheres
 Surfnet for "sel" - "sel":  volume = 911.08
-Surfnet for "sel" - "sel" split ? 5:  volume = 10.527
-Surfnet for "sel" - "sel" split ? 1:  volume = 3.6593
-Surfnet for "sel" - "sel" split ? 4:  volume = 22.428
-Surfnet for "sel" - "sel" split ? 6:  volume = 10.543
-Surfnet for "sel" - "sel" split ? 3:  volume = 4.358
 Surfnet for "sel" - "sel" split ? 2:  volume = 859.56
+Surfnet for "sel" - "sel" split ? 3:  volume = 4.358
+Surfnet for "sel" - "sel" split ? 4:  volume = 22.428
+Surfnet for "sel" - "sel" split ? 1:  volume = 3.6593
+Surfnet for "sel" - "sel" split ? 5:  volume = 10.527
+Surfnet for "sel" - "sel" split ? 6:  volume = 10.543
 

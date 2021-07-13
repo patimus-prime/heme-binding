@@ -71,7 +71,7 @@ for fn in file_names:
     #for i in chimera.selection.currentResidues():
     #    print i
 
-    
+
     # OK NOW GO TO GET THE VOLUME.
     rc("sel :HEM za < 7.0")
 
