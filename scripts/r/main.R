@@ -6,15 +6,24 @@ source("~/heme-binding/scripts/r/volume.R")
 source("~/heme-binding/scripts/r/aa_frequency.R")
 source("~/heme-binding/scripts/r/hemeSA.R")
 source("~/heme-binding/scripts/r/pocketSA.R")
-source("~/heme-binding/scripts/r/pdb_titles_codes.R")
+source("~/heme-binding/scripts/r/pdb_titles_codes.R") #error here investigate 15 July 2021
+source("~/heme-binding/scripts/r/source_organism.R")
+
+# ok let's reorder
+
+mega_df <- merge(pdb_code_df,source_organism_df,by.x = "PDB_ID")
 #this is the way. but first must only take largest volume pocket from volume data
-mega_df <- merge(max_volume_df,hemeSA_df,by.x = "PDB_ID") 
-# add pocket surface area stuff. Note this is max pocket surface area
+mega_df <- merge(mega_df, max_volume_df,by.x = "PDB_ID")
+mega_df <- merge(mega_df,hemeSA_df,by.x = "PDB_ID")
 mega_df <- merge(mega_df, pocketSA_df,by.x = "PDB_ID")
+#mega_df <- merge(max_volume_df,hemeSA_df,by.x = "PDB_ID") 
+# add pocket surface area stuff. Note this is max pocket surface area
+#mega_df <- merge(mega_df, pocketSA_df,by.x = "PDB_ID")
 # add molecule name
 #FIXME! PROBABLY GO BACKWARDS. START WITH PDB_CODE_DF AND ADD VOLUME ETC.
-mega_df <- merge(mega_df,pdb_code_df,by.x = "PDB_ID")
+#mega_df <- merge(mega_df,pdb_code_df,by.x = "PDB_ID")
 
+#mega_df <- merge(mega_df,source_organism_df,by.x = "PDB_ID")
 
 # 14 July 2021, 13:12: we need a script to acquire host organism (new function) and mol function (adapt script) 
 
