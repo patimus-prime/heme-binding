@@ -26,21 +26,30 @@ pdb_list <- as.data.frame(pdb_files_ls)
 
 title_data_df$code = pdb_list$pdb_files_ls
 
-write.csv(title_data_df, "~/0_Pat_Project/test_folder/titles_codes.csv", row.names = FALSE)
-#write.csv(Your DataFrame,"Path to export the DataFrame\\File Name.csv", row.names = FALSE)
+#pdb_list %>%
+#  separate(pdb_files_ls, c(NA,"Code"), ".txt") -> pdb_list
 
+# naming is confusing
+pdb_code_df <- pdb_list
 
+names(pdb_code_df)[names(pdb_code_df) == 'pdb_files_ls'] <- 'PDB_ID'
 
+# get only the pdbs
+pdb_code_df %>%
+  filter(grepl('\\.pdb', PDB_ID)) -> pdb_code_df
 
-# attempts and trash ----------------
+# if only we'd imported this data a different way but whatever:
 
-#IDK HOW TO GET RID OF THE .PDB
-#pdb_list[pdb_files_ls] = pdb_list[pdb_files_ls].str.replace(".pdb","")
-#df[pdb_list] = df[pdb_list].str.replace(".pdb","")
-#pdb_list["pdb_files_ls"] = pdb_list["pdb_files_ls"].str_replace(".pdb","")
-#pdb_list$pdb_files_ls = pdb_list$pdb_files_ls.str.replace(".pdb","")
+pdb_code_df$PDB_ID <- substr(pdb_code_df$PDB_ID,1,4)
 
-#df["Date"] = df["Date"].str.replace("\s:00", "")
-#pdb_list <- strsplit(as.character(pdb_list$pdb_files_ls),".pdb")
+#YAY! Just PDB_ID
+# now add in the column for the molecule names
+pdb_code_df['Molecule Name'] <- title_data_df$title_of_pdbs
 
-#pdb_list <- as.data.frame(t(pdb_list))
+#pdb_code_df <- title_data_df$title_of_pdbs
+#pdb_code_df <- as.data.frame(pdb_code_df)
+#new_title_df <- title_data_df$title_of_pdbs
+#new_title_df <- as.data.frame(new_title_df)
+#id_title_df <- merge(pdb_code_df,new_title_df,by.x = "PDB_ID")
+
+#mega_df <- merge(max_volume_df,hemeSA_df,by.x = "PDB_ID") 
