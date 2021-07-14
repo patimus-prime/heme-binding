@@ -62,7 +62,7 @@ barplot(clean_tbl$Freq,
 
 # Cleanup!
 
-rm(clean_tbl,
+rm(#clean_tbl,
    residue_table_prelim,
    result_files_df,
    combined_results_df,

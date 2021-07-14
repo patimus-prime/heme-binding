@@ -7,7 +7,7 @@ library(stringr)
 
 #to grab the fucking pdb titles
 
-pdb_path = test_path = "~/0_Pat_Project/test_folder/" 
+pdb_path = test_path = "~/heme-binding/pdb_source_data/0_raw_download" 
 setwd(pdb_path)
 pdb_files_ls <- list.files(pattern = "*.pdb")
 # now read them from the list into a dataframe 

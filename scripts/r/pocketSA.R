@@ -35,3 +35,44 @@ combined_results_df <- do.call("rbind", lapply(result_files_df, as.data.frame))
 #@ line 981 (w/ orig PDBs, get an enormous volume. can either throw out this header, or filter as below)
 
 # combined_results_df is now the final output of this section and the primary df
+
+
+# 2. Acquire data from noise --------------------------------------
+
+# only lines with 'surface area'
+combined_results_df %>%
+  filter(grepl('surface area = ', V1)) -> combined_results_df
+
+# we must divide this into two separate data frames, excluded and accessible.
+# they can be merged later into two columns in the same dataframe.
+# FIXME: Perhaps rewrite this later when you feel more confident in R skills
+
+combined_results_df %>%
+  filter(grepl('excluded', V1)) -> excluded_df
+combined_results_df %>%
+  filter(grepl('accessible', V1)) -> accessible_df
+#these two df would change into two columns of the same in the case of rewrite
+
+# 3 acquire only the numeric data ----------------------
+
+excluded_df %>%
+  separate(V1, c(NA ,"Pocket_Excluded_SA"), "= ") -> excluded_df
+
+accessible_df %>%
+  separate(V1, c(NA, "Pocket_Accessible_SA"),"= ") -> accessible_df#[['perf']]
+
+# select only the max rows. There's lots of duplicates. The surf() algorithm in Chimera seems to be a troublemaker
+
+excluded_df %>%
+  group_by(PDB_ID) %>% slice(which.max(Pocket_Excluded_SA)) -> max_excluded_df
+
+
+accessible_df %>%
+  group_by(PDB_ID) %>% slice(which.max(Pocket_Accessible_SA)) -> max_accessible_df
+
+
+# 4 into one dataframe --------------------
+
+pocketSA_df <- max_excluded_df
+pocketSA_df['Pocket_Accessible_SA'] <- max_accessible_df$Pocket_Accessible_SA
+

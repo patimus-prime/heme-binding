@@ -63,20 +63,33 @@ combined_results_df %>%
 #  separate(V1, c(NA ,"exc_sa"), "= ") -> excluded_df[['exc_sa']]
 
 excluded_df %>%
-  separate(V1, c(NA ,"Excluded_SA"), "= ") -> excluded_df
+  separate(V1, c(NA ,"Heme_Excluded_SA"), "= ") -> excluded_df
 
 accessible_df %>%
-  separate(V1, c(NA, "Accessible_SA"),"= ") -> accessible_df#[['perf']]
+  separate(V1, c(NA, "Heme_Accessible_SA"),"= ") -> accessible_df#[['perf']]
 
 
-#combined_results_df %>%
-#  separate(V1, c(NA ,"volume_data"), "volume = ") -> volume_data_df
+# only max, in case of duplicate heme 
+
+excluded_df %>%
+  group_by(PDB_ID) %>% slice(which.max(Heme_Excluded_SA)) -> max_excluded_df
+
+accessible_df %>%
+  group_by(PDB_ID) %>% slice(which.max(Heme_Accessible_SA)) -> max_accessible_df
+
+
+# 4 into one dataframe --------------------
+
+hemeSA_df <- max_excluded_df
+hemeSA_df['Heme_Accessible_SA'] <- max_accessible_df$Heme_Accessible_SA
+
+
 
 
 # put into one dataframe
 
-hemeSA_df <- excluded_df
-hemeSA_df['Accessible_SA'] <- accessible_df$Accessible_SA
+#hemeSA_df <- excluded_df
+#hemeSA_df['Heme_Accessible_SA'] <- accessible_df$Heme_Accessible_SA
 
 #BING BANG BOOM! hemeSA_df is the final result of all this painful work lol
 
