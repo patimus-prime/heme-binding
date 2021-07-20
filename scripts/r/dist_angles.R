@@ -7,6 +7,7 @@ library(dplyr)
 library(data.table)
 library(tidyr)
 library(ggplot2) #thus far not used 22 June 2021
+library(stringr)
 source("~/heme-binding/scripts/r/addpdbcol.R")
 #for filtering: https://www.youtube.com/watch?v=PsSqn0pxouM
 
@@ -72,54 +73,73 @@ combined_results_df %>%
 # hopefully unnecessary!
 
 # So, distance first:
-
+# 3. Process Distance -------------------------------------
 # angle row # == dist row #, so we're doing great so far. GJ me.
-#distance_raw_df %>%
-#  separate(V1, c(NA,"Distance"),"is ") -> distance_num_df
-distance_raw_df %>%
-  separate(V1, c(NA,"Res_Num"), "to a") -> dist_aa_df
-dist_aa_df %>%
-  separate(Res_Num, c('ResNum', 'Dist'), "is ") -> dist_aa_df
 
+distance_raw_df %>%
+  separate(V1, c(NA,"Residue_Number"), "to a") -> Distance_df
+Distance_df %>%
+  separate(Residue_Number, c('Residue_Number', 'Distance'), "is ") -> Distance_df
+#volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data))
+Distance_df$Distance <- as.numeric(as.character(Distance_df$Distance))
+Distance_df$Residue_Number <- as.numeric(as.character(Distance_df$Residue_Number))
 #this separates 'em up by a delimiter, and surprisingly splits each line perfectly
 #update it for less confusion. but change the name if you'd like to verify it worked
 
 # YAAAAAAAASSSS THAT WORKED WTFFFFFFF AMAZING
-
+# 4. Process Amino acid residues/codes -----------------------------
 
 #aa and num: same thing as above. use '...' to get the line. Then split by ' '
 # NOTE: DO NOT SPLIT BY '...' ALONE. IT FUCKS EVERYTHING UP, likely due to regular expressions
 aa_num_raw_df %>%
-  separate(V1, c(NA,"another_step_req"), "processing residue...") -> aa_super_df
-aa_super_df %>%
-  separate(another_step_req, c('Res_code','Res_num'),' ') -> awesome_df
+  separate(V1, c(NA,"another_step_req"), "processing residue...") -> aa_num_raw_df
+aa_num_raw_df %>%
+  separate(another_step_req, c('Residue_Code','Residue_Number'),' ') -> aa_num_raw_df
 # next two lines to get JUST the number in the second column.
 regexp <- "[[:digit:]]+"
-str_extract(awesome_df$Res_num,regexp) -> awesome_df$Res_num
-awesome_df -> ResCode_ResNum_df
+str_extract(aa_num_raw_df$Residue_Number,regexp) -> aa_num_raw_df$Residue_Number
+aa_num_raw_df -> ResCode_ResNum_df
+ResCode_ResNum_df$Residue_Number <- as.numeric(as.character(ResCode_ResNum_df$Residue_Number))
 
+# 5. PRocess angles ------------------------------------
 # linking by PDB ID and residue NUM now possible! would give + Residue Code, in this case
 # FINALLY! We get angle!
 # delimiter ' and ' to get the: aNN and angle.
 angle_raw_df %>%
-  separate(V1, c(NA,'raw_angle_lines'), 'and ') -> ang1_df
+  separate(V1, c(NA,'raw_angle_lines'), 'and ') -> angle_raw_df
 #split by ' is '
-ang1_df %>%
-  separate(raw_angle_lines, c('Residue_number','Angle'),' is ') -> omega_df
+angle_raw_df %>%
+  separate(raw_angle_lines, c('Residue_Number','Angle'),' is ') -> Angles_df
 
-str_extract(omega_df$Residue_number,regexp) -> omega_df$Residue_number
-
-omega_df -> Angles_df
-
-# BOOM! THAT'S EVERYTHING!
-# FIXME! RENAME A LOT OF THIS STUFF LOL.
-
-# so for our purposes now, we have: Angles_df. ResCode_ResNum_df. dist_aa_df.
+str_extract(Angles_df$Residue_Number,regexp) -> Angles_df$Residue_Number
+Angles_df$Residue_Number <- as.numeric(as.character(Angles_df$Residue_Number))
+# so for our purposes now, we have: Angles_df. ResCode_ResNum_df. Distance_df
 
 #this must all now be merged!
 #use this:
 # https://stackoverflow.com/questions/6709151/how-do-i-combine-two-data-frames-based-on-two-columns
 
-# we'll need to actually go back and rename stuff for completeness
-#then merging is a triviality.
+# NOTE: ALL THE ABOVE 'AS.NUMERIC, AS.CHARACTER' ARE TO GET THE DISTANCE FROM STR -> NUMERIC,
+# SO THAT THE MERGE BELOW CAN ACTUALLY OCCUR.
 
+# 6. Merge ---------------------------
+omega_df <- merge(Distance_df,Angles_df,by = c("PDB_ID","Residue_Number"))#,"Residue_Number"))
+omega_df <- merge(omega_df,ResCode_ResNum_df, by = c("PDB_ID","Residue_Number"))
+
+Distance_and_Angles_df <- omega_df
+
+
+# CLEANUP ---------------------------
+rm(awesome_df,
+   combined_results_df,
+   dist_aa_df,
+   distance_raw_df,
+   omega_df,
+   result_files_df,
+   regexp,
+   result_files_ls,
+   aa_num_raw_df,
+   aa_super_df,
+   ang1_df,
+   angle_raw_df
+)

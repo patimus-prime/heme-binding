@@ -8,7 +8,7 @@
 
 addpdbcol <- function(listofdf) 
 {
-  for(i in 1:length(listofdf))
+  for(i in 1:(length(listofdf)))
   {
     # we're now in per DF. so...
     # 1. Find line with the PDB code
