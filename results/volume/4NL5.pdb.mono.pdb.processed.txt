@@ -5,13 +5,13 @@ warning: cannot find LINK/SSBOND residue HEM (201 )
 4NL5.pdb.mono.pdb opened
 986 spheres
 Surfnet for "sel" - "sel":  volume = 1177
-Surfnet for "sel" - "sel" split ? 9:  volume = 2.9102
-Surfnet for "sel" - "sel" split ? 8:  volume = 56.293
-Surfnet for "sel" - "sel" split ? 3:  volume = 2.3151
-Surfnet for "sel" - "sel" split ? 4:  volume = 11.783
-Surfnet for "sel" - "sel" split ? 6:  volume = 5.2283
-Surfnet for "sel" - "sel" split ? 5:  volume = 1088.7
 Surfnet for "sel" - "sel" split ? 2:  volume = 2.5361
 Surfnet for "sel" - "sel" split ? 1:  volume = 4.5613
+Surfnet for "sel" - "sel" split ? 6:  volume = 5.2283
+Surfnet for "sel" - "sel" split ? 8:  volume = 56.293
+Surfnet for "sel" - "sel" split ? 5:  volume = 1088.7
+Surfnet for "sel" - "sel" split ? 9:  volume = 2.9102
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.3151
+Surfnet for "sel" - "sel" split ? 4:  volume = 11.783
 Surfnet for "sel" - "sel" split ? 7:  volume = 2.6884
 

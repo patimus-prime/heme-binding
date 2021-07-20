@@ -2,9 +2,9 @@
 1U9U.pdb.mono.pdb opened
 872 spheres
 Surfnet for "sel" - "sel":  volume = 774.11
-Surfnet for "sel" - "sel" split ? 1:  volume = 738.55
-Surfnet for "sel" - "sel" split ? 5:  volume = 7.4569
-Surfnet for "sel" - "sel" split ? 4:  volume = 5.4746
 Surfnet for "sel" - "sel" split ? 3:  volume = 6.4824
+Surfnet for "sel" - "sel" split ? 4:  volume = 5.4746
+Surfnet for "sel" - "sel" split ? 5:  volume = 7.4569
 Surfnet for "sel" - "sel" split ? 2:  volume = 16.141
+Surfnet for "sel" - "sel" split ? 1:  volume = 738.55
 

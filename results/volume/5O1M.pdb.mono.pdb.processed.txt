@@ -5,8 +5,8 @@ warning: cannot find LINK/SSBOND residue HIS (198 )
 5O1M.pdb.mono.pdb opened
 1766 spheres
 Surfnet for "sel" - "sel":  volume = 1514.5
-Surfnet for "sel" - "sel" split ? 3:  volume = 52.621
 Surfnet for "sel" - "sel" split ? 1:  volume = 1431.3
 Surfnet for "sel" - "sel" split ? 2:  volume = 27.397
 Surfnet for "sel" - "sel" split ? 4:  volume = 3.1674
+Surfnet for "sel" - "sel" split ? 3:  volume = 52.621
 

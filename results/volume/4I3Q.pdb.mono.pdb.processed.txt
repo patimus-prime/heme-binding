@@ -2,15 +2,15 @@
 4I3Q.pdb.mono.pdb opened
 1710 spheres
 Surfnet for "sel" - "sel":  volume = 1304.1
-Surfnet for "sel" - "sel" split ? 8:  volume = 2.4658
-Surfnet for "sel" - "sel" split ? 3:  volume = 2.3413
-Surfnet for "sel" - "sel" split ? 5:  volume = 19.824
-Surfnet for "sel" - "sel" split ? 2:  volume = 4.2524
 Surfnet for "sel" - "sel" split ? 9:  volume = 2.1756
+Surfnet for "sel" - "sel" split ? 5:  volume = 19.824
+Surfnet for "sel" - "sel" split ? 8:  volume = 2.4658
 Surfnet for "sel" - "sel" split ? 7:  volume = 30.122
-Surfnet for "sel" - "sel" split ? 1:  volume = 1220.5
-Surfnet for "sel" - "sel" split ? 10:  volume = 2.2219
-Surfnet for "sel" - "sel" split ? 11:  volume = 2.377
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.3413
 Surfnet for "sel" - "sel" split ? 4:  volume = 7.8329
+Surfnet for "sel" - "sel" split ? 1:  volume = 1220.5
+Surfnet for "sel" - "sel" split ? 11:  volume = 2.377
+Surfnet for "sel" - "sel" split ? 2:  volume = 4.2524
 Surfnet for "sel" - "sel" split ? 6:  volume = 9.9929
+Surfnet for "sel" - "sel" split ? 10:  volume = 2.2219
 

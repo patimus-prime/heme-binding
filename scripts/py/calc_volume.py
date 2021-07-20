@@ -82,6 +82,8 @@ for fn in file_names:
     # the # sign specifies all applicable surfaces.
 
     rc("center")
+    # now save an image of our surfnet calculation, this is how:
+    #copy png file ~/bullshit.png #only change "bullshit"
     #rc("pause")
 
 
@@ -91,7 +93,8 @@ for fn in file_names:
 
     # this looks funky but it' just within results_path, with processed_file.txt being saved
     saveReplyLog((full_results_path + "/%s") %(fn + ".processed.txt"))
-
+    
+    rc(("copy png file " + full_results_path + "/%s") %(fn+".pocketimage.png"))
     #close current file, avoid extreme memory use
     rc("close all")
 

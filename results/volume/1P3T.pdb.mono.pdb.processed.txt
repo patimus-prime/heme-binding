@@ -2,19 +2,19 @@
 1P3T.pdb.mono.pdb opened
 1220 spheres
 Surfnet for "sel" - "sel":  volume = 1139.1
-Surfnet for "sel" - "sel" split ? 4:  volume = 2.132
-Surfnet for "sel" - "sel" split ? 3:  volume = 1.8861
 Surfnet for "sel" - "sel" split ? 14:  volume = 13.073
-Surfnet for "sel" - "sel" split ? 13:  volume = 5.0649
-Surfnet for "sel" - "sel" split ? 11:  volume = 38.306
-Surfnet for "sel" - "sel" split ? 9:  volume = 3.6299
-Surfnet for "sel" - "sel" split ? 6:  volume = 17.138
-Surfnet for "sel" - "sel" split ? 8:  volume = 3.4397
-Surfnet for "sel" - "sel" split ? 10:  volume = 5.851
-Surfnet for "sel" - "sel" split ? 5:  volume = 8.7403
-Surfnet for "sel" - "sel" split ? 7:  volume = 21.746
-Surfnet for "sel" - "sel" split ? 2:  volume = 15.125
-Surfnet for "sel" - "sel" split ? 1:  volume = 987.05
-Surfnet for "sel" - "sel" split ? 12:  volume = 11.38
 Surfnet for "sel" - "sel" split ? 15:  volume = 4.4895
+Surfnet for "sel" - "sel" split ? 8:  volume = 3.4397
+Surfnet for "sel" - "sel" split ? 1:  volume = 987.05
+Surfnet for "sel" - "sel" split ? 11:  volume = 38.306
+Surfnet for "sel" - "sel" split ? 3:  volume = 1.8861
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.132
+Surfnet for "sel" - "sel" split ? 13:  volume = 5.0649
+Surfnet for "sel" - "sel" split ? 6:  volume = 17.138
+Surfnet for "sel" - "sel" split ? 9:  volume = 3.6299
+Surfnet for "sel" - "sel" split ? 5:  volume = 8.7403
+Surfnet for "sel" - "sel" split ? 2:  volume = 15.125
+Surfnet for "sel" - "sel" split ? 10:  volume = 5.851
+Surfnet for "sel" - "sel" split ? 7:  volume = 21.746
+Surfnet for "sel" - "sel" split ? 12:  volume = 11.38
 

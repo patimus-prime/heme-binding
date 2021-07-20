@@ -71,7 +71,7 @@ for fn in file_names:
 
     # this looks funky but it' just within results_path, with processed_file.txt being saved
     saveReplyLog((full_results_path + "/%s") %(fn + ".hemeSA.txt"))
-
+    rc(("copy png file " + full_results_path + "/%s") %(fn+".surfheme.png"))
     #close current file, avoid extreme memory use
     rc("close all")
 

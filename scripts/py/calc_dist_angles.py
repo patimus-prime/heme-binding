@@ -90,7 +90,7 @@ for fn in file_names:
             rc("angle p1 a" + currentResidue) #in this way each time we get another residue we get its axis
             #NOTE: AXIS HAS NOTHING TO DO WITH... HMM. NOTE: AXIS NUMBER == RESIDUE NUMBER
         else:
-            print "SHIT! Weird molecule, do nothing."
+            print "SHIT! Weird molecule, do nothing." #this seems to execute too often but, no issue presnted 20 July 2021
 
     rc("center")
 
@@ -104,7 +104,7 @@ for fn in file_names:
 
     # this looks funky but it' just within results_path, with processed_file.txt being saved
     saveReplyLog((full_results_path + "/%s") %(fn + ".dist.angle.txt"))
-
+    rc(("copy png file " + full_results_path + "/%s") %(fn+".dist.angle.image.png"))
 
     #close current file, avoid extreme memory use
     rc("close all")
