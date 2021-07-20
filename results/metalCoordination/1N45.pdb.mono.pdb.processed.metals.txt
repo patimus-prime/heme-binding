@@ -1,0 +1,14 @@
+The following problems occurred while reading PDB file for 1N45.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (25 )
+warning: cannot find LINK/SSBOND residue HEM (300 )
+Center of rotation: 18.6025 -0.122 4.25
+#0, chain A: Ho-1
+1N45.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 300.A ND
+HEM 300.A NA
+HEM 300.A NC
+HIS 25.A NE2
+HEM 300.A NB
+HOH 301.A O
+

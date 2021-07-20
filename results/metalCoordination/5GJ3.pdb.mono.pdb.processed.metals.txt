@@ -1,0 +1,11 @@
+Center of rotation: 2.89 17.177 5.42
+#0, chain A: periplasmic HEME-binding protein RHUT
+5GJ3.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+TYR 140.A OH
+HEM 401.A ND
+HEM 401.A NA
+HEM 401.A NB
+HEM 401.A NC
+HEM 402.A NB
+

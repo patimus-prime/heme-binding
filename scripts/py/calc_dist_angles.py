@@ -57,7 +57,10 @@ for fn in file_names:
     rc("del ions") #this WILL fuck up if you get a chlorine or something as a 'residue'
 
     # declare the plane at the heme. This will be referenced in for loop below
-    rc("define plane number 1 :HEM")
+    # NOTE: plane changed to axis. if plane, perfectly aligned residues to the plane WILL
+    # be counted as 0 DISTANCE. NOPE. Therefore, define as an axis with a number... at present,
+    # conisdered impossible for proteins to contain this many residues.
+    rc("define axis number 999999999 :HEM")
 
     currentResidue = -1 #this will throw an error if currentResidue # ever gets fucked below in another pdb
     # GET RESIDUES.
@@ -85,9 +88,9 @@ for fn in file_names:
 
             rc("define axis number " + currentResidue + " :" + currentResidue)
 
-            rc("distance p1 a" + currentResidue)
+            rc("distance a999999999 a" + currentResidue)
             # we now have the plane p1 above defined, and now axis whatever
-            rc("angle p1 a" + currentResidue) #in this way each time we get another residue we get its axis
+            rc("angle a999999999 a" + currentResidue) #in this way each time we get another residue we get its axis
             #NOTE: AXIS HAS NOTHING TO DO WITH... HMM. NOTE: AXIS NUMBER == RESIDUE NUMBER
         else:
             print "SHIT! Weird molecule, do nothing." #this seems to execute too often but, no issue presnted 20 July 2021
@@ -99,6 +102,7 @@ for fn in file_names:
 
 
     # specifying path to the results folder!
+    # change to .../test if.... testing
     results_path = "~/heme-binding/results/distances_and_angles"
     full_results_path = os.path.expanduser(results_path)
 
@@ -111,3 +115,5 @@ for fn in file_names:
 
 # exit Chimera when the script is done
 rc("stop now")
+
+# note 20 july 2021: it seesm to... just not remember to close.

@@ -1,0 +1,11 @@
+Center of rotation: 34.304 50.422 20.798
+#0, chain A: HASA
+1DKH.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 200.A NA
+HEM 200.A NC
+HEM 200.A NB
+HEM 200.A ND
+TYR 75.A OH
+HIS 32.A NE2
+

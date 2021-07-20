@@ -1,0 +1,13 @@
+The following problems occurred while reading PDB file for 3SIK.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (136 )
+Center of rotation: 31.369 1.791 0.9
+#0, chain A: IRON transport-associated domain protein
+3SIK.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 154.A NC
+HEM 154.A NB
+HEM 154.A NA
+HEM 154.A ND
+TYR 136.A OH
+TYR 140.A OH
+

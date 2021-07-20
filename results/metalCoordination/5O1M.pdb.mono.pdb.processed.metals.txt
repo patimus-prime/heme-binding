@@ -1,0 +1,14 @@
+The following problems occurred while reading PDB file for 5O1M.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue LYS (167 )
+warning: cannot find LINK/SSBOND residue HIS (198 )
+Center of rotation: -5.7515 -5.78 -0.8185
+#0, chain A: rubber oxygenase
+5O1M.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 600.A NB
+HEM 600.A NC
+HEM 600.A NA
+HEM 600.A ND
+HIS 198.A NE2
+LYS 167.A NZ
+

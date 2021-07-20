@@ -1,0 +1,11 @@
+Center of rotation: 4.1875 -24.2825 9.1555
+#0, chain A: heme A synthase
+6A2J.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 601.A NC
+HIS 216.A NE2
+HIS 278.A NE2
+HEM 601.A NA
+HEM 601.A NB
+HEM 601.A ND
+

@@ -1,0 +1,11 @@
+Center of rotation: -20.955 -28.7245 -2.688
+#0, chain A: myoglobin
+2E2Y.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 154.A NC
+HEM 154.A NA
+HEM 154.A NB
+HEM 154.A ND
+HOH 1224.A O
+HIS 93.A NE2
+

@@ -1,0 +1,20 @@
+The following problems occurred while reading PDB file for 2J18.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+Center of rotation: 15.958 24.2625 -7.1775
+#0, chain A: chloroperoxidase
+2J18.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HIS 105.A O
+GLU 104.A OE2
+HEM 1300.A O1A
+SER 108.A OG
+HOH 2333.A O
+HOH 2334.A O
+HIS 105.A N
+

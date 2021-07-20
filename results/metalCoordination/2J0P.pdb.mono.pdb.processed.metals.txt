@@ -1,0 +1,11 @@
+Center of rotation: 12.4305 27.103 -11.9935
+#0, chain A: HEMS
+2J0P.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 1342.A NB
+HIS 196.A NE2
+HEM 1342.A NA
+HEM 1342.A NC
+HEM 1342.A ND
+ARG 102.A NE
+

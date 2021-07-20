@@ -1,0 +1,12 @@
+The following problems occurred while reading PDB file for 3HX9.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (75 )
+Center of rotation: 5.0115 7.101 28.0465
+#0, chain A: protein RV3592
+3HX9.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 200.A NA
+HEM 200.A NC
+HEM 200.A ND
+HEM 200.A NB
+CL 301.A CL
+

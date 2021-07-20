@@ -1,0 +1,11 @@
+Center of rotation: 16.2425 23.186 -10.6995
+#0, chain A: cytochrome P450 3A4
+4I3Q.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 601.A NC
+HEM 601.A NA
+CYS 442.A SG
+HEM 601.A NB
+HEM 601.A ND
+HOH 703.A O
+

@@ -1,0 +1,10 @@
+Center of rotation: 47.6625 3.6685 23.913
+#0, chain A: nitric-oxide synthase, brain
+1ZVI.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+HEM 900.A ND
+HEM 900.A NA
+HEM 900.A NB
+HEM 900.A NC
+CYS 415.A SG
+
