@@ -80,10 +80,12 @@ OnlyDistance_df$Residue_Number <- as.numeric(as.character(OnlyDistance_df$Residu
 OnlyDistance_df %>%
   group_by(PDB_ID) %>% slice(which.min(Distance)) -> min_distance_df
   #dank
-
+# FIXME! CONVERT TO NUMERICS PRIOR TO PLOTTING
 # 2. Maximum distnace to Fe
 OnlyDistance_df %>%
   group_by(PDB_ID) %>% slice(which.max(Distance)) -> max_distance_df
+
+#barplot(max_distance_df$Distance) #FIXME! NEED TO CONVERT TO NUMERICS
   # sensible result, we select only atoms <= 7A away. NOT RESIDUES
 
 # next part tricky!!!!!!!!!11
@@ -98,6 +100,8 @@ mean_dist_df %>%
     Mean_Distance = x
   ) -> mean_dist_df
 
+barplot(mean_dist_df$Mean_Distance) # do this and label the axes etc.
+
 # 4. Median distance to Fe
 median_dist_df <- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID), median)
 #rename
@@ -106,6 +110,8 @@ median_dist_df %>%
     PDB_ID = Group.1,
     Median_Distance = x
   ) -> median_dist_df
+
+barplot(median_dist_df$Median_Distance)
 
 #well, that was easy.
 
