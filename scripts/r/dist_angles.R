@@ -128,6 +128,37 @@ omega_df <- merge(omega_df,ResCode_ResNum_df, by = c("PDB_ID","Residue_Number"))
 
 Distance_and_Angles_df <- omega_df
 
+# 7. Plotting ---------------------------
+
+# all data in Distances...df, and we are only interested in the angles.
+# btw we can probably revert to'plane' for HEM. Since only interested in angles
+
+# we must convert type to factor, for this plot
+
+Distance_and_Angles_df$Angle <- as.numeric(as.character(Distance_and_Angles_df$Angle))
+Distance_and_Angles_df$Residue_Number <- as.numeric(as.character(Distance_and_Angles_df$Residue_Number))
+
+Distance_and_Angles_df$Residue_Code <- as.factor(Distance_and_Angles_df$Residue_Code)
+#head(Distance_and_Angles_df)
+angleplot <- ggplot(Distance_and_Angles_df, aes(x=Residue_Code, y=Angle)) +
+   geom_violin(trim=FALSE)
+angleplot #ENSURE YOU CONVERT TO NUMERIC DATA TYPES ABOVE
+
+#welp, that's not conclusive, at all.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # CLEANUP ---------------------------
 rm(awesome_df,

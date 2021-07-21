@@ -108,3 +108,33 @@ median_dist_df %>%
   ) -> median_dist_df
 
 #well, that was easy.
+
+
+# GRAPHING AS VIOLIN PLOT LET'S GO!!!!!  -----------------------------
+
+#using: http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization
+
+# we must convert type to factor, for this plot
+OnlyDistance_df$Residue_Code <- as.factor(OnlyDistance_df$Residue_Code)
+#head(OnlyDistance_df)
+
+distancePlot <- ggplot(OnlyDistance_df, aes(x=Residue_Code, y=Distance)) +
+  geom_violin(trim = FALSE)#geom_violin()
+distancePlot
+
+
+#distance_table_prelim <- table(unlist(OnlyDistance_df))
+residues_ref_ls <- c("ALA","ARG","ASN","ASP","ASX","CYS",
+                     "GLU","GLN","GLX","GLY","HIS","ILE",
+                     "LEU","LYS","MET","PHE","PRO","SER",
+                     "THR","TRP","TYR","VAL")
+#distance_df_prelim <- as.data.frame(distance_table_prelim)
+
+trial_df <- subset(OnlyDistance_df, Residue_Code %in% residues_ref_ls)
+
+tp <- ggplot(trial_df, aes(x=Residue_Code, y=Distance)) +
+  geom_violin(trim=FALSE)
+tp
+
+# yaaaaaaaay
+# not going to clean the data yet. But you may use this code from th amino acid freq script: -----------------
