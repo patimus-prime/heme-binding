@@ -76,3 +76,6 @@ accessible_df %>%
 pocketSA_df <- max_excluded_df
 pocketSA_df['Pocket_Accessible_SA'] <- max_accessible_df$Pocket_Accessible_SA
 
+# convert to numerics
+pocketSA_df$Pocket_Excluded_SA <- as.numeric(as.character(pocketSA_df$Pocket_Excluded_SA))
+pocketSA_df$Pocket_Accessible_SA <- as.numeric(as.character(pocketSA_df$Pocket_Accessible_SA))

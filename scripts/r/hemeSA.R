@@ -83,7 +83,9 @@ accessible_df %>%
 hemeSA_df <- max_excluded_df
 hemeSA_df['Heme_Accessible_SA'] <- max_accessible_df$Heme_Accessible_SA
 
-
+# and convert into numerics lol!!!!
+hemeSA_df$Heme_Excluded_SA <- as.numeric(as.character(hemeSA_df$Heme_Excluded_SA))
+hemeSA_df$Heme_Accessible_SA <- as.numeric(as.character(hemeSA_df$Heme_Accessible_SA))
 
 
 # put into one dataframe
