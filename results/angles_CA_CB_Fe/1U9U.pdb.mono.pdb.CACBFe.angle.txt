@@ -1,0 +1,15 @@
+#0, chain A: cytochrome B5
+1U9U.pdb.mono.pdb opened
+currently processing residue...HIS 39.A
+stipped to only code...HIS
+stripped to only the number, this is residue 39
+Angle #0:39.A@CA #0:39.A@CB #0:90.A@FE: 102.275
+currently processing residue...HEM 90.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 63.A
+stipped to only code...HIS
+stripped to only the number, this is residue 63
+Angle #0:63.A@CA #0:63.A@CB #0:90.A@FE: 116.013
+

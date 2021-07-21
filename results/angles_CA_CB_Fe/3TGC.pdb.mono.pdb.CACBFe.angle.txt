@@ -1,0 +1,18 @@
+#0, chain A: NP4
+3TGC.pdb.mono.pdb opened
+currently processing residue...LEU 133.A
+stipped to only code...LEU
+stripped to only the number, this is residue 133
+Angle #0:133.A@CA #0:133.A@CB #0:185.A@FE: 175.43
+currently processing residue...HEM 185.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 59.A
+stipped to only code...HIS
+stripped to only the number, this is residue 59
+Angle #0:59.A@CA #0:59.A@CB #0:185.A@FE: 124.37
+currently processing residue...NO2 186.A
+stipped to only code...NO2
+SHIT! Weird molecule, do nothing.
+
