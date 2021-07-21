@@ -70,13 +70,41 @@ OnlyDistance_df %>%
 # get max, min, avg, median distance to Fe. This will be input to Res_num, Res_Code. Can be linked
 # only to the DISTANG_DF and REPLACE DISTANCE IN THAT DF, OR NOT REPORT IT THERE TO BEGIN WITH. BOOM.
 
+# we already did something similar in volumes, woohoo!
+# convert to numerics real quick
 
+OnlyDistance_df$Distance <- as.numeric(as.character(OnlyDistance_df$Distance))
+OnlyDistance_df$Residue_Number <- as.numeric(as.character(OnlyDistance_df$Residue_Number))
 
 # 1. Minimum distance to Fe
-  
+OnlyDistance_df %>%
+  group_by(PDB_ID) %>% slice(which.min(Distance)) -> min_distance_df
+  #dank
 
 # 2. Maximum distnace to Fe
+OnlyDistance_df %>%
+  group_by(PDB_ID) %>% slice(which.max(Distance)) -> max_distance_df
+  # sensible result, we select only atoms <= 7A away. NOT RESIDUES
+
+# next part tricky!!!!!!!!!11
+# no it's not: https://stackoverflow.com/questions/21982987/mean-per-group-in-a-data-frame
 
 # 3. Average distance to Fe
+mean_dist_df <- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID), mean)
+# rename nasty defaults
+mean_dist_df %>%
+  rename(
+    PDB_ID = Group.1,
+    Mean_Distance = x
+  ) -> mean_dist_df
 
 # 4. Median distance to Fe
+median_dist_df <- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID), median)
+#rename
+median_dist_df %>%
+  rename(
+    PDB_ID = Group.1,
+    Median_Distance = x
+  ) -> median_dist_df
+
+#well, that was easy.
