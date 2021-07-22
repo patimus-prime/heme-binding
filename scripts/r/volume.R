@@ -75,15 +75,17 @@ volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data
  # from: https://www.geeksforgeeks.org/how-to-select-row-with-maximum-value-in-each-group-in-r-language/
  
 # 4. VOLUME DATA PLOT! -----------------
-hist(volume_data_df$volume_data,
-     main = "Distribution of Volume of Pockets",
-     xlab = "Volume, A3",
-     col = "darkmagenta",
-     xlim = c(50,600), #force start at 50 then go to 1000
-     #breaks = c(0,100,150,200,250,300,350,400,450,1000)
-     )
-
+# moved to main!
  
+# hist(volume_data_df$volume_data,
+#      main = "Distribution of Volume of Pockets",
+#      xlab = "Volume, A3",
+#      col = "darkmagenta",
+#      xlim = c(50,600), #force start at 50 then go to 1000
+#      #breaks = c(0,100,150,200,250,300,350,400,450,1000)
+#      )
+# 
+#  
  
 # 99. Cleanup!
  rm(result_files_df, 

@@ -146,13 +146,13 @@ onlyDist <- function()
   distancePlot <- ggplot(OnlyDistance_df, aes(x=Residue_Code, y=Distance, fill = Residue_Code)) +
     geom_violin(trim = FALSE) +
     labs(title = "All Residues' Distance to Fe in each PDB", x="Residue", y="Distance")
-  distancePlot #INCLUDES ALL SMALL MOLS
+   #INCLUDES ALL SMALL MOLS
   
   # note change OnlyDistance_df for just the residues
   mean_SD_distPlot <- ggplot(OnlyDistance_df,aes(x=Residue_Code,y=Distance, fill=Residue_Code)) +
     geom_violin(trim=FALSE) +
-    labs(title = "All Residues to Fe in each PDB - MEAN+SD", x="Residue", y="Distance")
-  mean_SD_distPlot + stat_summary(fun.data = mean_sdl, mult =1, 
+    labs(title = "All Residues to Fe in each PDB - MEAN+SD", x="Residue", y="Distance") + 
+    stat_summary(fun.data = mean_sdl, mult =1, 
                                    geom = "pointrange")
   
   # crap if you decide two groups of plots: wih and without small molecules ---------------------------
@@ -207,15 +207,15 @@ onlyDist <- function()
     labs(title = "Closest Residues to Fe in each PDB - Boxplot, Median+Quartiles", x="Residue", y="Distance") +
     geom_boxplot(width=0.1, fill="white") + #adds MEDIAN and QUARTILE
     theme_classic()
-  min_dist_violin # the closest residue for each PDB. And how their distances fluctuate
+   # the closest residue for each PDB. And how their distances fluctuate
                   # now this is remarkable! the coordinating residues are ALWAYS HIS, TYR OR CYS
   
   
   # or mean + SD. I like this the most, let's use this.
   mean_SD_of_min_df <- ggplot(min_distance_df,aes(x=Residue_Code,y=Distance, fill=Residue_Code)) +
     geom_violin(trim=FALSE) +
-    labs(title = "Closest Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance")
-  mean_SD_of_min_df + stat_summary(fun.data = mean_sdl, mult =1, 
+    labs(title = "Closest Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
+    stat_summary(fun.data = mean_sdl, mult =1, 
                                    geom = "pointrange")
   
   # nonpolar plot -------------------------------
@@ -271,6 +271,9 @@ onlyDist <- function()
   # here is why this has become a function: here, we can return all plots and call in main.
   return(list(
     nonpolar_plot,
-    min_dist_violin
+    min_dist_violin,
+    mean_SD_of_min_df,
+    mean_SD_distPlot,
+    distancePlot
   ))
 }
