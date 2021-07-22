@@ -58,14 +58,39 @@ Metal_Coordination_df -> AAAA_METAL_DF
 # what the value would be in the case of data aggregation. Perhaps the values acquired for each
 # pocket would need to be averaged, but this could hide issues in calculation amongst the many hemes in each PDB.
 
-# Histograms/barplots of the MEGA dataframe data.
-# bar plots would need WORK
-hist(mega_df$volume_data)
-hist(mega_df$Heme_Excluded_SA)
-hist(mega_df$Heme_Accessible_SA)
-hist(mega_df$Pocket_Excluded_SA)
-hist(mega_df$Pocket_Accessible_SA)
+# Histograms/barplots of the MEGA dataframe data --------------------
+# see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
 
+hist(mega_df$volume_data,
+     main = "Volume of Pockets in ea PDB, A^3",
+     xlab = "Volume, A^3",
+     #ylab = "Frequency",
+     col = "darkmagenta"
+     )
+hist(mega_df$Heme_Excluded_SA,
+     main = "Heme Excluded Surface Area in ea PDB, square A",
+     xlab = "Excluded Surface Area, A^2",
+     col = "blue"
+     )
+hist(mega_df$Heme_Accessible_SA,
+     main = "Heme Accessible Surface Area, A^2",
+     xlab = "Accessible Surface Area, A^2",
+     col = "lightblue"
+     )
+hist(mega_df$Pocket_Excluded_SA,
+     main = "Pocket Excluded Surface Area, A^2",
+     xlab = "Excluded Surface Area, A^2",
+     col = "green"
+     )
+hist(mega_df$Pocket_Accessible_SA,
+     main = "Pocket Accessible Surface Area, A^2",
+     xlab = "Accessible Surface Area, A^2",
+     col = "lightgreen"
+     )
+
+
+
+# distance plots ------------------
 # return from that shit!
 distance_plots <- onlyDist() # returns of all fancy plots to put in
 # print the dank plots!
