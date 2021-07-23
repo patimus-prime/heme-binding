@@ -8,18 +8,6 @@ warning: cannot find LINK/SSBOND residue NAG (1 )
 warning: cannot find LINK/SSBOND residue MAN (1 )
 #0, chain A: chloroperoxidase
 2J18.pdb.mono.pdb opened
-currently processing residue...PHE 186.A
-stipped to only code...PHE
-stripped to only the number, this is residue 186
-Angle #0:186.A@CA #0:186.A@CB #0:1300.A@FE: 174.251
-currently processing residue...HEM 1300.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
-currently processing residue...CYS 29.A
-stipped to only code...CYS
-stripped to only the number, this is residue 29
-Angle #0:29.A@CA #0:29.A@CB #0:1300.A@FE: 118.425
 currently processing residue...PRO 30.A
 stipped to only code...PRO
 stripped to only the number, this is residue 30
@@ -32,4 +20,16 @@ currently processing residue...GLU 183.A
 stipped to only code...GLU
 stripped to only the number, this is residue 183
 Angle #0:183.A@CA #0:183.A@CB #0:1300.A@FE: 107.196
+currently processing residue...PHE 186.A
+stipped to only code...PHE
+stripped to only the number, this is residue 186
+Angle #0:186.A@CA #0:186.A@CB #0:1300.A@FE: 174.251
+currently processing residue...HEM 1300.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...CYS 29.A
+stipped to only code...CYS
+stripped to only the number, this is residue 29
+Angle #0:29.A@CA #0:29.A@CB #0:1300.A@FE: 118.425
 

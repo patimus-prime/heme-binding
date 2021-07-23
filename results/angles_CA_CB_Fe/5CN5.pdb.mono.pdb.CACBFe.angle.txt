@@ -1,13 +1,13 @@
 #0, chain A: myoglobin
 5CN5.pdb.mono.pdb opened
+currently processing residue...VAL 68.A
+stipped to only code...VAL
+stripped to only the number, this is residue 68
+Angle #0:68.A@CA #0:68.A@CB #0:201.A@FE: 104.007
 currently processing residue...HEM 201.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
-currently processing residue...HIS 64.A
-stipped to only code...HIS
-stripped to only the number, this is residue 64
-Angle #0:64.A@CA #0:64.A@CB #0:201.A@FE: 107.142
 currently processing residue...HIS 93.A
 stipped to only code...HIS
 stripped to only the number, this is residue 93
@@ -15,8 +15,8 @@ Angle #0:93.A@CA #0:93.A@CB #0:201.A@FE: 113.187
 currently processing residue...CMO 204.A
 stipped to only code...CMO
 SHIT! Weird molecule, do nothing.
-currently processing residue...VAL 68.A
-stipped to only code...VAL
-stripped to only the number, this is residue 68
-Angle #0:68.A@CA #0:68.A@CB #0:201.A@FE: 104.007
+currently processing residue...HIS 64.A
+stipped to only code...HIS
+stripped to only the number, this is residue 64
+Angle #0:64.A@CA #0:64.A@CB #0:201.A@FE: 107.142
 

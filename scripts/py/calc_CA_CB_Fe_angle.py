@@ -67,7 +67,9 @@ for fn in file_names:
     currentResidue = -1 #this will throw an error if currentResidue # ever gets fucked below in another pdb
     # GET RESIDUES.
     HEMstr = "HEM"
-    allResidueString = "ALA,ARG,ASN,ASP,ASX,CYS,GLU,GLN,GLX,GLY,HIS,ILE,LEU,LYS,MET,PHE,PRO,SER,THR,TRP,TYR,VAL"
+    # note below we exclude GLY, no CB
+    # Removed: GLY, ASX, GLX,
+    allResidueString = "ALA,ARG,ASN,ASP,CYS,GLU,GLN,HIS,ILE,LEU,LYS,MET,PHE,PRO,SER,THR,TRP,TYR,VAL"
     FEstr = "FE"
     ########## CHANG HERE ##################
     rc("sel :HEM@Fe zr < 5.0") # uncrease to 7, maybe, but unlikely coordinaton

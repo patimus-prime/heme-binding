@@ -1,0 +1,15 @@
+#0, chain A: HEMS
+2J0P.pdb.mono.pdb opened
+currently processing residue...HEM 1342.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 196.A
+stipped to only code...HIS
+stripped to only the number, this is residue 196
+Angle #0:196.A@CA #0:196.A@CB #0:1342.A@FE: 111.162
+currently processing residue...ARG 102.A
+stipped to only code...ARG
+stripped to only the number, this is residue 102
+Angle #0:102.A@CA #0:102.A@CB #0:1342.A@FE: 139.609
+

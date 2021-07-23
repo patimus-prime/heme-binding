@@ -1,0 +1,30 @@
+The following problems occurred while reading PDB file for 2IPS.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+#0, chain A: LPO
+2IPS.pdb.mono.pdb opened
+currently processing residue...GLN 105.A
+stipped to only code...GLN
+stripped to only the number, this is residue 105
+Angle #0:105.A@CA #0:105.A@CB #0:708.A@FE: 100.517
+currently processing residue...HEM 708.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 351.A
+stipped to only code...HIS
+stripped to only the number, this is residue 351
+Angle #0:351.A@CA #0:351.A@CB #0:708.A@FE: 94.9759
+currently processing residue...LEU 433.A
+stipped to only code...LEU
+stripped to only the number, this is residue 433
+Angle #0:433.A@CA #0:433.A@CB #0:708.A@FE: 130.063
+

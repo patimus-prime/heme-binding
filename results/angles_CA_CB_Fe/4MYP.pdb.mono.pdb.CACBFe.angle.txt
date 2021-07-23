@@ -9,15 +9,15 @@ currently processing residue...TYR 289.A
 stipped to only code...TYR
 stripped to only the number, this is residue 289
 Angle #0:289.A@CA #0:289.A@CB #0:401.A@FE: 133.717
-currently processing residue...TYR 280.A
-stipped to only code...TYR
-stripped to only the number, this is residue 280
-Angle #0:280.A@CA #0:280.A@CB #0:401.A@FE: 129.764
-currently processing residue...GOL 407.A
-stipped to only code...GOL
-SHIT! Weird molecule, do nothing.
 currently processing residue...HEM 401.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
+currently processing residue...GOL 407.A
+stipped to only code...GOL
+SHIT! Weird molecule, do nothing.
+currently processing residue...TYR 280.A
+stipped to only code...TYR
+stripped to only the number, this is residue 280
+Angle #0:280.A@CA #0:280.A@CB #0:401.A@FE: 129.764
 

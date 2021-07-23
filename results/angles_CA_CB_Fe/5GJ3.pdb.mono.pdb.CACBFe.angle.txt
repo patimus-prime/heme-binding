@@ -1,0 +1,31 @@
+#0, chain A: periplasmic HEME-binding protein RHUT
+5GJ3.pdb.mono.pdb opened
+currently processing residue...TYR 239.A
+stipped to only code...TYR
+stripped to only the number, this is residue 239
+Dihedral #0:239.A@CA #0:239.A@CB #0:401.A@FE #0:402.A@FE: -79.3505
+currently processing residue...ARG 241.A
+stipped to only code...ARG
+stripped to only the number, this is residue 241
+Dihedral #0:241.A@CA #0:241.A@CB #0:401.A@FE #0:402.A@FE: 148.123
+currently processing residue...GLN 141.A
+stipped to only code...GLN
+stripped to only the number, this is residue 141
+Dihedral #0:141.A@CA #0:141.A@CB #0:401.A@FE #0:402.A@FE: -20.1395
+currently processing residue...ARG 142.A
+stipped to only code...ARG
+stripped to only the number, this is residue 142
+Dihedral #0:142.A@CA #0:142.A@CB #0:401.A@FE #0:402.A@FE: 133.027
+currently processing residue...TYR 140.A
+stipped to only code...TYR
+stripped to only the number, this is residue 140
+Dihedral #0:140.A@CA #0:140.A@CB #0:401.A@FE #0:402.A@FE: 160.037
+currently processing residue...HEM 401.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HEM 402.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+
