@@ -13,6 +13,7 @@ Center of rotation: -0.161 -6.9185 17.658
 #0, chain A: LPO
 2IPS.pdb.mono.pdb opened
 This is the metal(s) present in this file...
+These are the coordinating residues in the file...
 ASP 110.A OD1
 ASP 110.A O
 SER 190.A OG

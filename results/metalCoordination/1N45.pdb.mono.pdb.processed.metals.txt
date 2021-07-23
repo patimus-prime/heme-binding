@@ -5,6 +5,7 @@ Center of rotation: 18.6025 -0.122 4.25
 #0, chain A: Ho-1
 1N45.pdb.mono.pdb opened
 This is the metal(s) present in this file...
+These are the coordinating residues in the file...
 HEM 300.A ND
 HEM 300.A NA
 HEM 300.A NC

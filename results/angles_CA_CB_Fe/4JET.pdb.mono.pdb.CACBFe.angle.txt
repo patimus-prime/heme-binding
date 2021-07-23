@@ -10,23 +10,26 @@ warning: cannot find LINK/SSBOND residue TYR (75 )
 warning: cannot find LINK/SSBOND residue TYR (75 )
 #0, chain A: secreted hemophore
 4JET.pdb.mono.pdb opened
-currently processing residue...HIS 81.A
-stipped to only code...HIS
-stripped to only the number, this is residue 81
-Angle #0:81.A@CA #0:81.A@CB #0:201.A@FE: 121.274
 currently processing residue...TYR 75.A
 stipped to only code...TYR
 stripped to only the number, this is residue 75
+ResID: TYR 75.A
 Angle #0:75.A@CA #0:75.A@CB #0:201.A@FE: 129.013
+currently processing residue...CL 202.A
+stipped to only code...CL 
+SHIT! Weird molecule, do nothing.
 currently processing residue...HEM 201.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
-currently processing residue...CL 202.A
-stipped to only code...CL 
-SHIT! Weird molecule, do nothing.
 currently processing residue...ARG 40.A
 stipped to only code...ARG
 stripped to only the number, this is residue 40
+ResID: ARG 40.A
 Angle #0:40.A@CA #0:40.A@CB #0:201.A@FE: 117.67
+currently processing residue...HIS 81.A
+stipped to only code...HIS
+stripped to only the number, this is residue 81
+ResID: HIS 81.A
+Angle #0:81.A@CA #0:81.A@CB #0:201.A@FE: 121.274
 

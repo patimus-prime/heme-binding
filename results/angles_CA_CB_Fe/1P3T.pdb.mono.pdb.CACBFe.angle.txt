@@ -3,16 +3,18 @@
 currently processing residue...GLY 120.A
 stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
-currently processing residue...HEM 300.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
 currently processing residue...SER 117.A
 stipped to only code...SER
 stripped to only the number, this is residue 117
+ResID: SER 117.A
 Angle #0:117.A@CA #0:117.A@CB #0:300.A@FE: 57.1608
 currently processing residue...HIS 23.A
 stipped to only code...HIS
 stripped to only the number, this is residue 23
+ResID: HIS 23.A
 Angle #0:23.A@CA #0:23.A@CB #0:300.A@FE: 111.758
+currently processing residue...HEM 300.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
 

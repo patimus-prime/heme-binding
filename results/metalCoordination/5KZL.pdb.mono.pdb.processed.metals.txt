@@ -2,6 +2,7 @@ Center of rotation: 16.232 8.972 66.87
 #0, chain A: heme oxygenase
 5KZL.pdb.mono.pdb opened
 This is the metal(s) present in this file...
+These are the coordinating residues in the file...
 HEM 301.A ND.A
 HEM 301.A NA.A
 HEM 301.A NB.A

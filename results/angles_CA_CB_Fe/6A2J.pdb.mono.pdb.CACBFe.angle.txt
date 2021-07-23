@@ -1,0 +1,25 @@
+#0, chain A: heme A synthase
+6A2J.pdb.mono.pdb opened
+currently processing residue...HIS 278.A
+stipped to only code...HIS
+stripped to only the number, this is residue 278
+ResID: HIS 278.A
+Angle #0:278.A@CA #0:278.A@CB #0:601.A@FE: 124.621
+currently processing residue...HEM 601.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 216.A
+stipped to only code...HIS
+stripped to only the number, this is residue 216
+ResID: HIS 216.A
+Angle #0:216.A@CA #0:216.A@CB #0:601.A@FE: 122.289
+currently processing residue...GLY 179.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLN 258.A
+stipped to only code...GLN
+stripped to only the number, this is residue 258
+ResID: GLN 258.A
+Angle #0:258.A@CA #0:258.A@CB #0:601.A@FE: 91.0438
+

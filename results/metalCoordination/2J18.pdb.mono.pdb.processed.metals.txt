@@ -10,6 +10,7 @@ Center of rotation: 15.958 24.2625 -7.1775
 #0, chain A: chloroperoxidase
 2J18.pdb.mono.pdb opened
 This is the metal(s) present in this file...
+These are the coordinating residues in the file...
 HIS 105.A O
 GLU 104.A OE2
 HEM 1300.A O1A

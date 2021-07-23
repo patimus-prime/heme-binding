@@ -20,6 +20,7 @@ source("~/heme-binding/scripts/r/source_organism.R")
 source("~/heme-binding/scripts/r/dist_angles.R")
 source("~/heme-binding/scripts/r/metal_coordination.R")
 source("~/heme-binding/scripts/r/only_distances.R")
+source("~/heme-binding/scripts/r/anglesCACBFE.R")
 # ok let's reorder
 
 # merge all dataframes reported (not produced by functions) into mega dataframe: -----
@@ -46,6 +47,8 @@ Distance_and_Angles_df <- temp_list$angleDF
 
 metal_list <- metal_coordinating_fn()
 Metal_Coordination_df <- metal_list$Metal_coordination_df
+
+CACBFE_df <- CACBFE_fn()
 
 # put into the easily visibile DF 
 mega_df -> AAAA_MEGA_DF
@@ -142,6 +145,25 @@ plots <- angle_plots
 
 # line below confirms this is a shit way to find distance
 #angle_plots$min_dist_angles_plot #THIS USES DISTANCES FROM AXES PROTOCOL
+
+
+
+# CACBFE angle plots --------------------------
+# we have CACBFE_df
+# only one figure to make we can do it here
+
+CACBFE_plot <- ggplot(CACBFE_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
+   geom_violin(trim=FALSE) +
+   labs(title = "Angles CA-CB-Fe per type of residue to Fe within pocket", x="Residue",y="Angle")
+   #stat_summary(fun.data = mean_sdl, mult=1, geom="pointrange")
+CACBFE_plot
+
+# 
+# nonpolar_plot <- ggplot(nonpolar_res_df,aes(x=Residue_Code,y=Distance, fill=Residue_Code)) +
+#    geom_violin(trim=FALSE) +
+#    labs(title = "Nonpolar Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
+#    stat_summary(fun.data = mean_sdl, mult =1,geom = "pointrange")
+# # 
 
 
 # EXPORTING ALL PLOTS, AS IN THE ORDER THEY APPEAR IN THE IDE TO THE RIGHT: ------------

@@ -82,19 +82,8 @@ metal_coordinating_fn <- function()
   
   # let's do a frequency of residues reported as coordinating
   # table() outputs the freq of occurrences of residue_code
-  metal_tbl <- table(Metal_Coordination_df$Residue_Code)
+  metal_tbl <- table(Metal_Coordination_df)
   metal_tbl <- as.data.frame(metal_tbl)
-  metal_tbl <- metal_tbl[order(metal_tbl$Freq,decreasing = TRUE),]
-  
-  barplot(metal_tbl$Freq,
-          main = "Metal Coordinating Residue Freq for Heme, as determined by Chimera",
-          xlab = "Residues",
-          ylab = "Frequency",
-          col = "hotpink",
-          names.arg =metal_tbl$Var1,
-          
-  )
-  
   # rm(combined_results_df,
   #    coordRes_df,
   #    result_files_df)

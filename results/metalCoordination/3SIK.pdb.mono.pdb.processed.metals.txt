@@ -4,6 +4,7 @@ Center of rotation: 31.369 1.791 0.9
 #0, chain A: IRON transport-associated domain protein
 3SIK.pdb.mono.pdb opened
 This is the metal(s) present in this file...
+These are the coordinating residues in the file...
 HEM 154.A NC
 HEM 154.A NB
 HEM 154.A NA

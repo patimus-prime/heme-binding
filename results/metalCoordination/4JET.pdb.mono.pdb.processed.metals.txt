@@ -12,6 +12,7 @@ Center of rotation: -25.3155 -17.6 55.3505
 #0, chain A: secreted hemophore
 4JET.pdb.mono.pdb opened
 This is the metal(s) present in this file...
+These are the coordinating residues in the file...
 HEM 201.A ND
 HEM 201.A NB
 HEM 201.A NA

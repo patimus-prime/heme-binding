@@ -2,6 +2,7 @@ Center of rotation: 30.1205 6.118 9.378
 #0, chain A: hemoglobin
 4UZV.pdb.mono.pdb opened
 This is the metal(s) present in this file...
+These are the coordinating residues in the file...
 HEM 1157.A NA
 HEM 1157.A NC
 HEM 1157.A NB

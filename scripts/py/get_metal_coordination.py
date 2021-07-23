@@ -71,6 +71,7 @@ for fn in file_names:
     #should output one Fe belonging to heme, if you desire to check.
 
     coordinatingAtoms = dlg.coordinationTable.data
+    print "These are the coordinating residues in the file..."
     for j in coordinatingAtoms:
         print j
     # should output everything coordinating Fe.

@@ -1,0 +1,15 @@
+#0, chain A: protoglobin
+2VEB.pdb.mono.pdb opened
+currently processing residue...HEM 200.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...OXY 350.A
+stipped to only code...OXY
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 120.A
+stipped to only code...HIS
+stripped to only the number, this is residue 120
+ResID: HIS 120.A
+Angle #0:120.A@CA #0:120.A@CB #0:200.A@FE: 110.488
+

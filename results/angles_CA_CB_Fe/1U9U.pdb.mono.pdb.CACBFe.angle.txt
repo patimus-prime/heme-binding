@@ -7,9 +7,11 @@ SHIT! Weird molecule, do nothing.
 currently processing residue...HIS 63.A
 stipped to only code...HIS
 stripped to only the number, this is residue 63
+ResID: HIS 63.A
 Angle #0:63.A@CA #0:63.A@CB #0:90.A@FE: 116.013
 currently processing residue...HIS 39.A
 stipped to only code...HIS
 stripped to only the number, this is residue 39
+ResID: HIS 39.A
 Angle #0:39.A@CA #0:39.A@CB #0:90.A@FE: 102.275
 

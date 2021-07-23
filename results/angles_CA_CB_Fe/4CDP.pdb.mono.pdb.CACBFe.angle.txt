@@ -1,18 +1,20 @@
 #0, chain A: putative heme/hemoglobin transport protein
 4CDP.pdb.mono.pdb opened
-currently processing residue...ARG 100.A
-stipped to only code...ARG
-stripped to only the number, this is residue 100
-Angle #0:100.A@CA #0:100.A@CB #0:402.A@FE: 139.043
-currently processing residue...FMT 401.A
-stipped to only code...FMT
-SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 193.A
+stipped to only code...HIS
+stripped to only the number, this is residue 193
+ResID: HIS 193.A
+Angle #0:193.A@CA #0:193.A@CB #0:402.A@FE: 109.772
 currently processing residue...HEM 402.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
-currently processing residue...HIS 193.A
-stipped to only code...HIS
-stripped to only the number, this is residue 193
-Angle #0:193.A@CA #0:193.A@CB #0:402.A@FE: 109.772
+currently processing residue...ARG 100.A
+stipped to only code...ARG
+stripped to only the number, this is residue 100
+ResID: ARG 100.A
+Angle #0:100.A@CA #0:100.A@CB #0:402.A@FE: 139.043
+currently processing residue...FMT 401.A
+stipped to only code...FMT
+SHIT! Weird molecule, do nothing.
 

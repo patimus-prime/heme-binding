@@ -80,6 +80,7 @@ for fn in file_names:
         currentResidue = str(currentResidue)
         residueCode = currentResidue[0 : 3] #only first 3 of string
         print "currently processing residue..." + currentResidue
+        ResID = currentResidue # will make output easier to parse
         print "stipped to only code..." + residueCode
 
         # don't compare heme to itself
@@ -93,6 +94,8 @@ for fn in file_names:
 
             print "stripped to only the number, this is residue " + currentResidue
 
+            ##!!!!! next two lines are pretty much the only ones parsed. other stuff is to make sur we're ok
+            print "ResID: " + ResID # no way to combine these lines :(
             rc("angle :" + currentResidue + "@CA" + " :" + currentResidue + "@CB" + " :HEM@FE")
 
             #rc("define axis number " + currentResidue + " :" + currentResidue)
