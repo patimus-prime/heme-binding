@@ -18,7 +18,7 @@ source("~/heme-binding/scripts/r/pocketSA.R")
 source("~/heme-binding/scripts/r/pdb_titles_codes.R") #error here investigate 15 July 2021
 source("~/heme-binding/scripts/r/source_organism.R")
 source("~/heme-binding/scripts/r/dist_angles.R")
-source("~/heme-binding/scripts/r/metal_coordination.R")
+source("~/heme-binding/scripts/r/metal_coordination.R") #garbage
 source("~/heme-binding/scripts/r/only_distances.R")
 source("~/heme-binding/scripts/r/anglesCACBFE.R")
 # ok let's reorder
