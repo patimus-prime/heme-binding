@@ -71,8 +71,8 @@ def SA_ligand(activeLigand,activeSourcePath,activeResultPath):
         #full_results_path = os.path.expanduser(results_path)
 
         # this looks funky but it' just within results_path, with processed_file.txt being saved
-        saveReplyLog((activeResultPath + "/%s") %(fn + ".+"activeLigand+"SA.txt"))
-        rc(("copy png file " + activeResultPath + "/%s") %(fn+".surf"+activeLigand+".png"))
+        saveReplyLog((activeResultPath + "/%s") %(fn + ".ligandSA.txt"))
+        rc(("copy png file " + activeResultPath + "/%s") %(fn+".surfLigand.png"))
         #close current file, avoid extreme memory use
         rc("close all")
 
