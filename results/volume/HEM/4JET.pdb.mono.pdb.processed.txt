@@ -12,7 +12,7 @@ warning: cannot find LINK/SSBOND residue TYR (75 )
 4JET.pdb.mono.pdb opened
 1214 spheres
 Surfnet for "sel" - "sel":  volume = 1020.2
+Surfnet for "sel" - "sel" split ? 3:  volume = 5.035
 Surfnet for "sel" - "sel" split ? 1:  volume = 1010.8
 Surfnet for "sel" - "sel" split ? 2:  volume = 4.3317
-Surfnet for "sel" - "sel" split ? 3:  volume = 5.035
 

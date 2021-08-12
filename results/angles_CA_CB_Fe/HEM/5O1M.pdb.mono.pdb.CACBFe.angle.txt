@@ -3,48 +3,48 @@ warning: cannot find LINK/SSBOND residue LYS (167 )
 warning: cannot find LINK/SSBOND residue HIS (198 )
 #0, chain A: rubber oxygenase
 5O1M.pdb.mono.pdb opened
-currently processing residue...ILE 222.A
-stipped to only code...ILE
-stripped to only the number, this is residue 222
-ResID: ILE 222.A
-Angle #0:222.A@CA #0:222.A@CB #0:600.A@FE: 136.224
-currently processing residue...VAL 197.A
-stipped to only code...VAL
-stripped to only the number, this is residue 197
-ResID: VAL 197.A
-Angle #0:197.A@CA #0:197.A@CB #0:600.A@FE: 113.694
 currently processing residue...HIS 198.A
 stipped to only code...HIS
 stripped to only the number, this is residue 198
 ResID: HIS 198.A
 Angle #0:198.A@CA #0:198.A@CB #0:600.A@FE: 100.307
+currently processing residue...VAL 197.A
+stipped to only code...VAL
+stripped to only the number, this is residue 197
+ResID: VAL 197.A
+Angle #0:197.A@CA #0:197.A@CB #0:600.A@FE: 113.694
 currently processing residue...HEM 600.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
-currently processing residue...VAL 152.A
-stipped to only code...VAL
-stripped to only the number, this is residue 152
-ResID: VAL 152.A
-Angle #0:152.A@CA #0:152.A@CB #0:600.A@FE: 96.3132
-currently processing residue...THR 230.A
-stipped to only code...THR
-stripped to only the number, this is residue 230
-ResID: THR 230.A
-Angle #0:230.A@CA #0:230.A@CB #0:600.A@FE: 174.918
-currently processing residue...LYS 167.A
-stipped to only code...LYS
-stripped to only the number, this is residue 167
-ResID: LYS 167.A
-Angle #0:167.A@CA #0:167.A@CB #0:600.A@FE: 134.497
-currently processing residue...THR 168.A
-stipped to only code...THR
-stripped to only the number, this is residue 168
-ResID: THR 168.A
-Angle #0:168.A@CA #0:168.A@CB #0:600.A@FE: 85.9567
 currently processing residue...THR 194.A
 stipped to only code...THR
 stripped to only the number, this is residue 194
 ResID: THR 194.A
 Angle #0:194.A@CA #0:194.A@CB #0:600.A@FE: 101.522
+currently processing residue...THR 168.A
+stipped to only code...THR
+stripped to only the number, this is residue 168
+ResID: THR 168.A
+Angle #0:168.A@CA #0:168.A@CB #0:600.A@FE: 85.9567
+currently processing residue...LYS 167.A
+stipped to only code...LYS
+stripped to only the number, this is residue 167
+ResID: LYS 167.A
+Angle #0:167.A@CA #0:167.A@CB #0:600.A@FE: 134.497
+currently processing residue...THR 230.A
+stipped to only code...THR
+stripped to only the number, this is residue 230
+ResID: THR 230.A
+Angle #0:230.A@CA #0:230.A@CB #0:600.A@FE: 174.918
+currently processing residue...VAL 152.A
+stipped to only code...VAL
+stripped to only the number, this is residue 152
+ResID: VAL 152.A
+Angle #0:152.A@CA #0:152.A@CB #0:600.A@FE: 96.3132
+currently processing residue...ILE 222.A
+stipped to only code...ILE
+stripped to only the number, this is residue 222
+ResID: ILE 222.A
+Angle #0:222.A@CA #0:222.A@CB #0:600.A@FE: 136.224
 

@@ -13,6 +13,11 @@ stipped to only code...LEU
 stripped to only the number, this is residue 32
 ResID: LEU 32.A
 Angle #0:32.A@CA #0:32.A@CB #0:1300.A@FE: 96.2823
+currently processing residue...GLU 183.A
+stipped to only code...GLU
+stripped to only the number, this is residue 183
+ResID: GLU 183.A
+Angle #0:183.A@CA #0:183.A@CB #0:1300.A@FE: 107.196
 currently processing residue...ALA 71.A
 stipped to only code...ALA
 stripped to only the number, this is residue 71
@@ -37,11 +42,6 @@ stipped to only code...PHE
 stripped to only the number, this is residue 103
 ResID: PHE 103.A
 Angle #0:103.A@CA #0:103.A@CB #0:1300.A@FE: 111.531
-currently processing residue...GLU 183.A
-stipped to only code...GLU
-stripped to only the number, this is residue 183
-ResID: GLU 183.A
-Angle #0:183.A@CA #0:183.A@CB #0:1300.A@FE: 107.196
 currently processing residue...PRO 28.A
 stipped to only code...PRO
 stripped to only the number, this is residue 28

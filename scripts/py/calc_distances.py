@@ -67,7 +67,7 @@ def d(activeLigand,activeSourcePath,activeResultPath):
         ###############################################################
         # SELECT IRON ATOM WITHIN HEME, and WITHIN 7A from IRON #####
 
-        rc("sel :HEM@Fe") #select the Fe atom. DO NOT del ions above.
+        rc("sel :"+activeLigand+"@Fe") #select the Fe atom. DO NOT del ions above.
         fe = chimera.selection.currentAtoms()[0] # index to acquire the one atom selected; manual sel defines a list
 
         rc("sel sel za < "+settings.angstromDistance)#7") # select all atoms within 5A of Fe (also de-selects Fe)

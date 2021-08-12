@@ -99,7 +99,7 @@ resultPath = "~/heme-binding/results/ligandSA/"
 for activeLigand in ligandList:
     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-    calc_SA_heme.SA_ligand(activeLigand,activeSourcePath,activeResultPath)
+    calc_SA_ligand.SA_ligand(activeLigand,activeSourcePath,activeResultPath)
 
 ##### CALCULATE POCKET SA #######
 sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"

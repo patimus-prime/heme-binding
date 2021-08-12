@@ -2,38 +2,38 @@ The following problems occurred while reading PDB file for 3SIK.pdb.mono.pdb
 warning: cannot find LINK/SSBOND residue TYR (136 )
 #0, chain A: IRON transport-associated domain protein
 3SIK.pdb.mono.pdb opened
-currently processing residue...ILE 129.A
-stipped to only code...ILE
-stripped to only the number, this is residue 129
-ResID: ILE 129.A
-Angle #0:129.A@CA #0:129.A@CB #0:154.A@FE: 165.519
-currently processing residue...ARG 54.A
-stipped to only code...ARG
-stripped to only the number, this is residue 54
-ResID: ARG 54.A
-Angle #0:54.A@CA #0:54.A@CB #0:154.A@FE: 163.046
-currently processing residue...ILE 131.A
-stipped to only code...ILE
-stripped to only the number, this is residue 131
-ResID: ILE 131.A
-Angle #0:131.A@CA #0:131.A@CB #0:154.A@FE: 134.142
-currently processing residue...TYR 136.A
-stipped to only code...TYR
-stripped to only the number, this is residue 136
-ResID: TYR 136.A
-Angle #0:136.A@CA #0:136.A@CB #0:154.A@FE: 131.739
 currently processing residue...HEM 154.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
-currently processing residue...ALA 138.A
-stipped to only code...ALA
-stripped to only the number, this is residue 138
-ResID: ALA 138.A
-Angle #0:138.A@CA #0:138.A@CB #0:154.A@FE: 159.221
 currently processing residue...TYR 140.A
 stipped to only code...TYR
 stripped to only the number, this is residue 140
 ResID: TYR 140.A
 Angle #0:140.A@CA #0:140.A@CB #0:154.A@FE: 140.887
+currently processing residue...ILE 129.A
+stipped to only code...ILE
+stripped to only the number, this is residue 129
+ResID: ILE 129.A
+Angle #0:129.A@CA #0:129.A@CB #0:154.A@FE: 165.519
+currently processing residue...ALA 138.A
+stipped to only code...ALA
+stripped to only the number, this is residue 138
+ResID: ALA 138.A
+Angle #0:138.A@CA #0:138.A@CB #0:154.A@FE: 159.221
+currently processing residue...ARG 54.A
+stipped to only code...ARG
+stripped to only the number, this is residue 54
+ResID: ARG 54.A
+Angle #0:54.A@CA #0:54.A@CB #0:154.A@FE: 163.046
+currently processing residue...TYR 136.A
+stipped to only code...TYR
+stripped to only the number, this is residue 136
+ResID: TYR 136.A
+Angle #0:136.A@CA #0:136.A@CB #0:154.A@FE: 131.739
+currently processing residue...ILE 131.A
+stipped to only code...ILE
+stripped to only the number, this is residue 131
+ResID: ILE 131.A
+Angle #0:131.A@CA #0:131.A@CB #0:154.A@FE: 134.142
 

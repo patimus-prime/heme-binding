@@ -4,16 +4,6 @@ currently processing residue...HEM 900.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
-currently processing residue...CYS 415.A
-stipped to only code...CYS
-stripped to only the number, this is residue 415
-ResID: CYS 415.A
-Angle #0:415.A@CA #0:415.A@CB #0:900.A@FE: 112.744
-currently processing residue...GLU 592.A
-stipped to only code...GLU
-stripped to only the number, this is residue 592
-ResID: GLU 592.A
-Angle #0:592.A@CA #0:592.A@CB #0:900.A@FE: 140.05
 currently processing residue...VAL 416.A
 stipped to only code...VAL
 stripped to only the number, this is residue 416
@@ -22,6 +12,11 @@ Angle #0:416.A@CA #0:416.A@CB #0:900.A@FE: 55.0798
 currently processing residue...GLY 417.A
 stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
+currently processing residue...CYS 415.A
+stipped to only code...CYS
+stripped to only the number, this is residue 415
+ResID: CYS 415.A
+Angle #0:415.A@CA #0:415.A@CB #0:900.A@FE: 112.744
 currently processing residue...ARG 418.A
 stipped to only code...ARG
 stripped to only the number, this is residue 418
@@ -55,4 +50,9 @@ stipped to only code...ARG
 stripped to only the number, this is residue 414
 ResID: ARG 414.A
 Angle #0:414.A@CA #0:414.A@CB #0:900.A@FE: 71.6516
+currently processing residue...GLU 592.A
+stipped to only code...GLU
+stripped to only the number, this is residue 592
+ResID: GLU 592.A
+Angle #0:592.A@CA #0:592.A@CB #0:900.A@FE: 140.05
 
