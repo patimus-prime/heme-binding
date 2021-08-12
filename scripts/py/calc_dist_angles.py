@@ -9,6 +9,7 @@ from chimera.tkgui import saveReplyLog # to save the results, which also appear 
 from chimera import replyobj # gives status messages
 from chimera import dialogs # LOL the reply log keeps spilling over
 import re #necessary to strip down to only residue number
+import settings
 #######
 # 16 July 2021: Acquire distances, and the angles between 1) Ca,Cb, and Fe;
 # 2) the angle between a plane at HEM, and axes roughly representing the orientation

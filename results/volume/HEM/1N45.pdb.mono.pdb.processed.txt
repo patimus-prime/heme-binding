@@ -1,0 +1,17 @@
+The following problems occurred while reading PDB file for 1N45.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (25 )
+warning: cannot find LINK/SSBOND residue HEM (300 )
+#0, chain A: Ho-1
+1N45.pdb.mono.pdb opened
+952 spheres
+Surfnet for "sel" - "sel":  volume = 1103.2
+Surfnet for "sel" - "sel" split ? 7:  volume = 3.3552
+Surfnet for "sel" - "sel" split ? 8:  volume = 2.5149
+Surfnet for "sel" - "sel" split ? 6:  volume = 85.618
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.2987
+Surfnet for "sel" - "sel" split ? 3:  volume = 15.229
+Surfnet for "sel" - "sel" split ? 4:  volume = 3.1454
+Surfnet for "sel" - "sel" split ? 2:  volume = 3.5717
+Surfnet for "sel" - "sel" split ? 1:  volume = 978.98
+Surfnet for "sel" - "sel" split ? 9:  volume = 8.4396
+
