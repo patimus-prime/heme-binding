@@ -1,0 +1,65 @@
+The following problems occurred while reading PDB file for 4JET.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+#0, chain A: secreted hemophore
+4JET.pdb.mono.pdb opened
+currently processing residue...MET 147.A
+stipped to only code...MET
+stripped to only the number, this is residue 147
+ResID: MET 147.A
+Angle #0:147.A@CA #0:147.A@CB #0:201.A@FE: 164.889
+currently processing residue...PHE 77.A
+stipped to only code...PHE
+stripped to only the number, this is residue 77
+ResID: PHE 77.A
+Angle #0:77.A@CA #0:77.A@CB #0:201.A@FE: 57.43
+currently processing residue...CL 202.A
+stipped to only code...CL 
+SHIT! Weird molecule, do nothing.
+currently processing residue...TYR 75.A
+stipped to only code...TYR
+stripped to only the number, this is residue 75
+ResID: TYR 75.A
+Angle #0:75.A@CA #0:75.A@CB #0:201.A@FE: 129.013
+currently processing residue...PHE 50.A
+stipped to only code...PHE
+stripped to only the number, this is residue 50
+ResID: PHE 50.A
+Angle #0:50.A@CA #0:50.A@CB #0:201.A@FE: 101.199
+currently processing residue...HEM 201.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...ARG 40.A
+stipped to only code...ARG
+stripped to only the number, this is residue 40
+ResID: ARG 40.A
+Angle #0:40.A@CA #0:40.A@CB #0:201.A@FE: 117.67
+currently processing residue...ILE 30.A
+stipped to only code...ILE
+stripped to only the number, this is residue 30
+ResID: ILE 30.A
+Angle #0:30.A@CA #0:30.A@CB #0:201.A@FE: 147.559
+currently processing residue...TYR 55.A
+stipped to only code...TYR
+stripped to only the number, this is residue 55
+ResID: TYR 55.A
+Angle #0:55.A@CA #0:55.A@CB #0:201.A@FE: 128.177
+currently processing residue...HIS 81.A
+stipped to only code...HIS
+stripped to only the number, this is residue 81
+ResID: HIS 81.A
+Angle #0:81.A@CA #0:81.A@CB #0:201.A@FE: 121.274
+currently processing residue...ARG 144.A
+stipped to only code...ARG
+stripped to only the number, this is residue 144
+ResID: ARG 144.A
+Angle #0:144.A@CA #0:144.A@CB #0:201.A@FE: 94.9228
+

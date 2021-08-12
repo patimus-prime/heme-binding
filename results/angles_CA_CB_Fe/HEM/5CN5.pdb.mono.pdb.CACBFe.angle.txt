@@ -1,0 +1,60 @@
+#0, chain A: myoglobin
+5CN5.pdb.mono.pdb opened
+currently processing residue...HIS 93.A
+stipped to only code...HIS
+stripped to only the number, this is residue 93
+ResID: HIS 93.A
+Angle #0:93.A@CA #0:93.A@CB #0:201.A@FE: 113.187
+currently processing residue...VAL 68.A
+stipped to only code...VAL
+stripped to only the number, this is residue 68
+ResID: VAL 68.A
+Angle #0:68.A@CA #0:68.A@CB #0:201.A@FE: 104.007
+currently processing residue...ILE 107.A
+stipped to only code...ILE
+stripped to only the number, this is residue 107
+ResID: ILE 107.A
+Angle #0:107.A@CA #0:107.A@CB #0:201.A@FE: 172.19
+currently processing residue...PHE 43.A
+stipped to only code...PHE
+stripped to only the number, this is residue 43
+ResID: PHE 43.A
+Angle #0:43.A@CA #0:43.A@CB #0:201.A@FE: 99.8337
+currently processing residue...HIS 97.A
+stipped to only code...HIS
+stripped to only the number, this is residue 97
+ResID: HIS 97.A
+Angle #0:97.A@CA #0:97.A@CB #0:201.A@FE: 177.397
+currently processing residue...ILE 99.A
+stipped to only code...ILE
+stripped to only the number, this is residue 99
+ResID: ILE 99.A
+Angle #0:99.A@CA #0:99.A@CB #0:201.A@FE: 160.019
+currently processing residue...LEU 89.A
+stipped to only code...LEU
+stripped to only the number, this is residue 89
+ResID: LEU 89.A
+Angle #0:89.A@CA #0:89.A@CB #0:201.A@FE: 97.7142
+currently processing residue...HIS 64.A
+stipped to only code...HIS
+stripped to only the number, this is residue 64
+ResID: HIS 64.A
+Angle #0:64.A@CA #0:64.A@CB #0:201.A@FE: 107.142
+currently processing residue...HEM 201.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...SER 92.A
+stipped to only code...SER
+stripped to only the number, this is residue 92
+ResID: SER 92.A
+Angle #0:92.A@CA #0:92.A@CB #0:201.A@FE: 111.518
+currently processing residue...LEU 104.A
+stipped to only code...LEU
+stripped to only the number, this is residue 104
+ResID: LEU 104.A
+Angle #0:104.A@CA #0:104.A@CB #0:201.A@FE: 86.5002
+currently processing residue...CMO 204.A
+stipped to only code...CMO
+SHIT! Weird molecule, do nothing.
+

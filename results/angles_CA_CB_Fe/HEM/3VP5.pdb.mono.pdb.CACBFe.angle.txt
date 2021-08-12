@@ -1,0 +1,62 @@
+#0, chain A: transcriptional regulator
+3VP5.pdb.mono.pdb opened
+currently processing residue...TYR 91.A
+stipped to only code...TYR
+stripped to only the number, this is residue 91
+ResID: TYR 91.A
+Angle #0:91.A@CA #0:91.A@CB #0:201.A@FE: 135.684
+currently processing residue...THR 130.A
+stipped to only code...THR
+stripped to only the number, this is residue 130
+ResID: THR 130.A
+Angle #0:130.A@CA #0:130.A@CB #0:201.A@FE: 115.418
+currently processing residue...THR 68.A
+stipped to only code...THR
+stripped to only the number, this is residue 68
+ResID: THR 68.A
+Angle #0:68.A@CA #0:68.A@CB #0:201.A@FE: 105.78
+currently processing residue...VAL 131.A
+stipped to only code...VAL
+stripped to only the number, this is residue 131
+ResID: VAL 131.A
+Angle #0:131.A@CA #0:131.A@CB #0:201.A@FE: 118.651
+currently processing residue...PHE 112.A
+stipped to only code...PHE
+stripped to only the number, this is residue 112
+ResID: PHE 112.A
+Angle #0:112.A@CA #0:112.A@CB #0:201.A@FE: 98.9329
+currently processing residue...LYS 145.A
+stipped to only code...LYS
+stripped to only the number, this is residue 145
+ResID: LYS 145.A
+Angle #0:145.A@CA #0:145.A@CB #0:201.A@FE: 85.9178
+currently processing residue...ILE 71.A
+stipped to only code...ILE
+stripped to only the number, this is residue 71
+ResID: ILE 71.A
+Angle #0:71.A@CA #0:71.A@CB #0:201.A@FE: 105.244
+currently processing residue...HIS 72.A
+stipped to only code...HIS
+stripped to only the number, this is residue 72
+ResID: HIS 72.A
+Angle #0:72.A@CA #0:72.A@CB #0:201.A@FE: 101.657
+currently processing residue...VAL 148.A
+stipped to only code...VAL
+stripped to only the number, this is residue 148
+ResID: VAL 148.A
+Angle #0:148.A@CA #0:148.A@CB #0:201.A@FE: 110.66
+currently processing residue...HEM 201.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 149.A
+stipped to only code...HIS
+stripped to only the number, this is residue 149
+ResID: HIS 149.A
+Angle #0:149.A@CA #0:149.A@CB #0:201.A@FE: 100.82
+currently processing residue...PHE 76.A
+stipped to only code...PHE
+stripped to only the number, this is residue 76
+ResID: PHE 76.A
+Angle #0:76.A@CA #0:76.A@CB #0:201.A@FE: 108.677
+

@@ -37,13 +37,13 @@ def ccf(activeLigand,activeSourcePath,activeResultPath):
     replyDialog.Clear()
 
     # specifying path:
-    path = "~/heme-binding/pdb_source_data/1_monomers_processed"
-    full_path = os.path.expanduser(path)
+    #path = "~/heme-binding/pdb_source_data/1_monomers_processed"
+    #full_path = os.path.expanduser(path)
 
     # :'( you may also be able to use "home/pat/0_Pat_Project/test_folder"
 
     # actually changing to path:
-    os.chdir(full_path)
+    os.chdir(activeSourcePath)
 
     # gather the names of .pdb files in the folder (UNPACK/RENAME IF STILL .GZ)
     file_names = [fn for fn in os.listdir(".") if fn.endswith(".pdb")]
@@ -73,7 +73,7 @@ def ccf(activeLigand,activeSourcePath,activeResultPath):
         allResidueString = "ALA,ARG,ASN,ASP,CYS,GLU,GLN,HIS,ILE,LEU,LYS,MET,PHE,PRO,SER,THR,TRP,TYR,VAL"
         FEstr = "FE"
         ########## CHANG HERE ##################
-        rc("sel :HEM@Fe zr < 5.0") # uncrease to 7, maybe, but unlikely coordinaton
+        rc("sel :"+activeLigand+"@Fe zr < "+settings.angstromDistance)#5.0") # uncrease to 7, maybe, but unlikely coordinaton
 
         for currentResidue in chimera.selection.currentResidues():
             #this will loop through all residues within 7A, so
@@ -85,7 +85,7 @@ def ccf(activeLigand,activeSourcePath,activeResultPath):
             print "stipped to only code..." + residueCode
 
             # don't compare heme to itself
-            if HEMstr in currentResidue:
+            if activeLigand in currentResidue:
                 print "Oops! HEM shouldn't be compared to itself, Do nothing."
             if FEstr in currentResidue:
                 print "Fuck. FE shouldn't compare to itself either. Do nada."
@@ -97,7 +97,7 @@ def ccf(activeLigand,activeSourcePath,activeResultPath):
 
                 ##!!!!! next two lines are pretty much the only ones parsed. other stuff is to make sur we're ok
                 print "ResID: " + ResID # no way to combine these lines :(
-                rc("angle :" + currentResidue + "@CA" + " :" + currentResidue + "@CB" + " :HEM@FE")
+                rc("angle :" + currentResidue + "@CA" + " :" + currentResidue + "@CB" + " :"+activeLigand+"@FE")
 
                 #rc("define axis number " + currentResidue + " :" + currentResidue)
 
@@ -116,17 +116,17 @@ def ccf(activeLigand,activeSourcePath,activeResultPath):
 
         # specifying path to the results folder!
         # change to .../test if.... testing
-        results_path = "~/heme-binding/results/angles_CA_CB_Fe"
-        full_results_path = os.path.expanduser(results_path)
+        #results_path = "~/heme-binding/results/angles_CA_CB_Fe"
+        #full_results_path = os.path.expanduser(results_path)
 
         # this looks funky but it' just within results_path, with processed_file.txt being saved
-        saveReplyLog((full_results_path + "/%s") %(fn + ".CACBFe.angle.txt"))
-        rc(("copy png file " + full_results_path + "/%s") %(fn+".CACBFe.angle.image.png"))
+        saveReplyLog((activeResultPath + "/%s") %(fn + ".CACBFe.angle.txt"))
+        rc(("copy png file " + activeResultPath + "/%s") %(fn+".CACBFe.angle.image.png"))
 
         #close current file, avoid extreme memory use
         rc("close all")
 
     # exit Chimera when the script is done
-    rc("stop now")
+    #rc("stop now")
 
     # note 20 july 2021: it seesm to... just not remember to close.

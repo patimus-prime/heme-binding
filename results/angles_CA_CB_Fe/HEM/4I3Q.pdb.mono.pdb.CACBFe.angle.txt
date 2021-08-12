@@ -1,0 +1,63 @@
+#0, chain A: cytochrome P450 3A4
+4I3Q.pdb.mono.pdb opened
+currently processing residue...ASN 441.A
+stipped to only code...ASN
+stripped to only the number, this is residue 441
+ResID: ASN 441.A
+Angle #0:441.A@CA #0:441.A@CB #0:601.A@FE: 60.3712
+currently processing residue...CYS 442.A
+stipped to only code...CYS
+stripped to only the number, this is residue 442
+ResID: CYS 442.A
+Angle #0:442.A@CA #0:442.A@CB #0:601.A@FE: 103.995
+currently processing residue...THR 309.A
+stipped to only code...THR
+stripped to only the number, this is residue 309
+ResID: THR 309.A
+Angle #0:309.A@CA #0:309.A@CB #0:601.A@FE: 172.707
+currently processing residue...ILE 443.A
+stipped to only code...ILE
+stripped to only the number, this is residue 443
+ResID: ILE 443.A
+Angle #0:443.A@CA #0:443.A@CB #0:601.A@FE: 55.5209
+currently processing residue...GLY 444.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...ALA 305.A
+stipped to only code...ALA
+stripped to only the number, this is residue 305
+ResID: ALA 305.A
+Angle #0:305.A@CA #0:305.A@CB #0:601.A@FE: 115.605
+currently processing residue...ARG 212.A
+stipped to only code...ARG
+stripped to only the number, this is residue 212
+ResID: ARG 212.A
+Angle #0:212.A@CA #0:212.A@CB #0:601.A@FE: 133.199
+currently processing residue...MET 445.A
+stipped to only code...MET
+stripped to only the number, this is residue 445
+ResID: MET 445.A
+Angle #0:445.A@CA #0:445.A@CB #0:601.A@FE: 65.1655
+currently processing residue...GLY 306.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...PRO 434.A
+stipped to only code...PRO
+stripped to only the number, this is residue 434
+ResID: PRO 434.A
+Angle #0:434.A@CA #0:434.A@CB #0:601.A@FE: 69.3456
+currently processing residue...PHE 435.A
+stipped to only code...PHE
+stripped to only the number, this is residue 435
+ResID: PHE 435.A
+Angle #0:435.A@CA #0:435.A@CB #0:601.A@FE: 83.4925
+currently processing residue...HEM 601.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...ALA 448.A
+stipped to only code...ALA
+stripped to only the number, this is residue 448
+ResID: ALA 448.A
+Angle #0:448.A@CA #0:448.A@CB #0:601.A@FE: 146.687
+

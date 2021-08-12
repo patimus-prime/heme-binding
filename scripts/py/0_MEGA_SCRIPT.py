@@ -13,8 +13,9 @@ import settings
 import convert_multi_to_mono
 import calc_volume
 import get_residues_within_xA
-import calc_only_distances
+import calc_only_distances #FIXME!! RENAME
 import calc_CA_CB_Fe_angle
+import calc_dist_angles #FIXME!! RENAME
 
 # specify the desired ligands below:
 # could also put this into the settings file with angstromDistance, but... later
@@ -69,14 +70,27 @@ ligandList = settings.setLigandList
 #     calc_only_distances.d(activeLigand,activeSourcePath,activeResultPath)
 
 ##### CALCULATE CA-CB-FE ANGLEs ####################
+# sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
+# resultPath = "~/heme-binding/results/angles_CA_CB_Fe/"
+#
+# for activeLigand in ligandList:
+#     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
+#     activeResultPath = os.path.expanduser(resultPath + activeLigand)
+#     calc_CA_CB_Fe_angle.ccf(activeLigand,activeSourcePath,activeResultPath)
+
+##### CALCULATE ANGLES WHOLE AA TO HEME PLANE #######
 sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
-resultPath = "~/heme-binding/results/angles_CA_CB_Fe/"
+resultPath = "~/heme-binding/results/distances_and_angles/"
 
 for activeLigand in ligandList:
     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-    
+    calc_dist_angles.angle_aa_ligand_plane(activeLigand,activeSourcePath,activeResultPath)
 
+##### CALCULATE HEME SA ######
+
+
+###### CALCULATE POCKET SA #######
 
 
 #rc("pause")
