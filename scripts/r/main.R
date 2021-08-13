@@ -124,13 +124,33 @@ for(ligand in 1:(length(ligandList)))
 }
 CACBFE_df
 #FIXME! ERROR FROM HERE R STOPPED GIVING CORRECT FEEDBACK
-
+# yeahp, just restart the computer fuuuuuuck R
 
 # PDBs titles codes ---------------
 # bullshit ones, put below I guess Idk
 source("~/heme-binding/scripts/r/pdb_titles_codes.R") #error here investigate 15 July 2021
-source("~/heme-binding/scripts/r/source_organism.R")
+resultPath = "~/heme-binding/pdb_source_data/0_raw_download/"
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   pdbCodeDf <- pdbTitlesCodesFn(activeLigand,activeResultPath)
+   assign(paste(activeLigand,"_pdbCodesDf",sep=""),pdbCodeDf)
+}
 
+
+# PDB source organism ---------------------
+source("~/heme-binding/scripts/r/source_organism.R")
+resultPath = "~/heme-binding/pdb_source_data/0_raw_download/"
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   sourceOrganismDf <- sourceOrganismFn(activeLigand,activeResultPath)
+   assign(paste(activeLigand,"_sourceOrganismDf",sep=""),sourceOrganismDf)
+#   pdbCodeDf <- pdbTitlesCodesFn(activeLigand,activeResultPath)
+ #  assign(paste(activeLigand,"_pdbCodesDf",sep=""),pdbCodeDf)
+}
 
 # merge all dataframes reported (not produced by functions) into mega dataframe: -----
 
