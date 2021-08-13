@@ -4,10 +4,10 @@ library(data.table)
 library(tidyr)
 library(ggplot2) #thus far not used 22 June 2021
 library(stringr)
+
 source("~/heme-binding/scripts/r/addpdbcol.R")
 #source("C:/Users/nobody/Documents/R/MyScript.R")
 
-source("~/heme-binding/scripts/r/volume.R")
 source("~/heme-binding/scripts/r/aa_frequency.R")
 source("~/heme-binding/scripts/r/hemeSA.R")
 source("~/heme-binding/scripts/r/pocketSA.R")
@@ -22,6 +22,32 @@ source("~/heme-binding/scripts/r/metal_coordination.R") #garbage
 source("~/heme-binding/scripts/r/only_distances.R")
 source("~/heme-binding/scripts/r/anglesCACBFE.R")
 # ok let's reorder
+
+# DECLARATIONS --------------
+ligandList = list("HEM")
+angstromDistance = 7.0 #not sure if used here, maybe useful for figures!
+
+# need a different loop for each script, as the result paths are different for all
+#------ VOLUME ---------
+source("~/heme-binding/scripts/r/volume.R")
+resultPath = "~/heme-binding/results/volume/"
+for(ligand in 1:(length(ligandList)))
+   {
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   
+   volume_dfs <- volumeFn(activeLigand,activeResultPath)
+   
+   #this line is freaky fresh
+   # paste() automates df name creation, second arg is the df assigned. BAM!
+   assign(paste(activeLigand,"_maxVolDf",sep=""), volume_dfs$maxVolDf)
+   }
+# FUCK YES THAT'S VOLUME AUTOMATED BABY! Merging will be funky, require another loop
+# loop for ea. ligand to create unique mega DFs. Similar process as this.
+# bam! that's all the thinking required. the rest is typing and changing
+# to accomodate for HEM v. activeLigand. Bing bang boom!
+
+# after that, adding data, testing, and otherwise doneeeeeee omg lol
 
 # merge all dataframes reported (not produced by functions) into mega dataframe: -----
 

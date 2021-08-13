@@ -15,41 +15,41 @@ stipped to only code...ALA
 stripped to only the number, this is residue 42
 ResID: ALA 42.A
 Angle #0:42.A@CA #0:42.A@CB #0:185.A@FE: 151.329
-currently processing residue...THR 121.A
-stipped to only code...THR
-stripped to only the number, this is residue 121
-ResID: THR 121.A
-Angle #0:121.A@CA #0:121.A@CB #0:185.A@FE: 149.178
 currently processing residue...TYR 40.A
 stipped to only code...TYR
 stripped to only the number, this is residue 40
 ResID: TYR 40.A
 Angle #0:40.A@CA #0:40.A@CB #0:185.A@FE: 142.716
-currently processing residue...NO2 186.A
-stipped to only code...NO2
+currently processing residue...HEM 185.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
 currently processing residue...LEU 123.A
 stipped to only code...LEU
 stripped to only the number, this is residue 123
 ResID: LEU 123.A
 Angle #0:123.A@CA #0:123.A@CB #0:185.A@FE: 148.31
-currently processing residue...HEM 185.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
 currently processing residue...VAL 36.A
 stipped to only code...VAL
 stripped to only the number, this is residue 36
 ResID: VAL 36.A
 Angle #0:36.A@CA #0:36.A@CB #0:185.A@FE: 128.756
-currently processing residue...HIS 59.A
-stipped to only code...HIS
-stripped to only the number, this is residue 59
-ResID: HIS 59.A
-Angle #0:59.A@CA #0:59.A@CB #0:185.A@FE: 124.37
+currently processing residue...NO2 186.A
+stipped to only code...NO2
+SHIT! Weird molecule, do nothing.
+currently processing residue...THR 121.A
+stipped to only code...THR
+stripped to only the number, this is residue 121
+ResID: THR 121.A
+Angle #0:121.A@CA #0:121.A@CB #0:185.A@FE: 149.178
 currently processing residue...LEU 133.A
 stipped to only code...LEU
 stripped to only the number, this is residue 133
 ResID: LEU 133.A
 Angle #0:133.A@CA #0:133.A@CB #0:185.A@FE: 175.43
+currently processing residue...HIS 59.A
+stipped to only code...HIS
+stripped to only the number, this is residue 59
+ResID: HIS 59.A
+Angle #0:59.A@CA #0:59.A@CB #0:185.A@FE: 124.37
 

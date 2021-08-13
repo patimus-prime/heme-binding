@@ -1,0 +1,14 @@
+#0, chain A: putative heme/hemoglobin transport protein
+4CDP.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 4CDP.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  13 connected surface components
+  Total solvent excluded surface area = 1425.05
+    component areas = 516.876, 76.4022, 76.1716, 76.1651, 76.1141, 76.0041, 75.8771, 75.7954, 75.6027, 75.2651, 75.2561, 74.9418, 74.5762
+  Total solvent accessible surface area = 3141.09
+    component areas = 852.528, 192.371, 191.674, 191.968, 191.548, 191.209, 191.047, 191.01, 190.286, 189.61, 189.413, 189.604, 188.818
+

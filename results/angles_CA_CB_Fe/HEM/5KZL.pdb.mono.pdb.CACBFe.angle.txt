@@ -1,10 +1,40 @@
 #0, chain A: heme oxygenase
 5KZL.pdb.mono.pdb opened
-currently processing residue...VAL 124.A
-stipped to only code...VAL
-stripped to only the number, this is residue 124
-ResID: VAL 124.A
-Dihedral #0:124.A@CA #0:124.A@CB #0:301.A@FE.A #0:301.A@FE.B: 134.541
+currently processing residue...PHE 195.A
+stipped to only code...PHE
+stripped to only the number, this is residue 195
+ResID: PHE 195.A
+Dihedral #0:195.A@CA #0:195.A@CB #0:301.A@FE.A #0:301.A@FE.B: -175.107
+currently processing residue...GLU 19.A
+stipped to only code...GLU
+stripped to only the number, this is residue 19
+ResID: GLU 19.A
+Dihedral #0:19.A@CA #0:19.A@CB #0:301.A@FE.A #0:301.A@FE.B: 75.5535
+currently processing residue...HEM 301.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLY 132.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...SER 131.A
+stipped to only code...SER
+stripped to only the number, this is residue 131
+ResID: SER 131.A
+Dihedral #0:131.A@CA #0:131.A@CB #0:301.A@FE.A #0:301.A@FE.B: -166.307
+currently processing residue...ASP 129.A
+stipped to only code...ASP
+stripped to only the number, this is residue 129
+ResID: ASP 129.A
+Dihedral #0:129.A@CA #0:129.A@CB #0:301.A@FE.A #0:301.A@FE.B: 148.951
+currently processing residue...LEU 127.A
+stipped to only code...LEU
+stripped to only the number, this is residue 127
+ResID: LEU 127.A
+Dihedral #0:127.A@CA #0:127.A@CB #0:301.A@FE.A #0:301.A@FE.B: -142.333
+currently processing residue...GLY 128.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
 currently processing residue...LEU 136.A
 stipped to only code...LEU
 stripped to only the number, this is residue 136
@@ -15,39 +45,9 @@ stipped to only code...HIS
 stripped to only the number, this is residue 15
 ResID: HIS 15.A
 Dihedral #0:15.A@CA #0:15.A@CB #0:301.A@FE.A #0:301.A@FE.B: 69.6066
-currently processing residue...GLY 132.A
-stipped to only code...GLY
-SHIT! Weird molecule, do nothing.
-currently processing residue...PHE 195.A
-stipped to only code...PHE
-stripped to only the number, this is residue 195
-ResID: PHE 195.A
-Dihedral #0:195.A@CA #0:195.A@CB #0:301.A@FE.A #0:301.A@FE.B: -175.107
-currently processing residue...SER 131.A
-stipped to only code...SER
-stripped to only the number, this is residue 131
-ResID: SER 131.A
-Dihedral #0:131.A@CA #0:131.A@CB #0:301.A@FE.A #0:301.A@FE.B: -166.307
-currently processing residue...HEM 301.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
-currently processing residue...ASP 129.A
-stipped to only code...ASP
-stripped to only the number, this is residue 129
-ResID: ASP 129.A
-Dihedral #0:129.A@CA #0:129.A@CB #0:301.A@FE.A #0:301.A@FE.B: 148.951
-currently processing residue...GLU 19.A
-stipped to only code...GLU
-stripped to only the number, this is residue 19
-ResID: GLU 19.A
-Dihedral #0:19.A@CA #0:19.A@CB #0:301.A@FE.A #0:301.A@FE.B: 75.5535
-currently processing residue...GLY 128.A
-stipped to only code...GLY
-SHIT! Weird molecule, do nothing.
-currently processing residue...LEU 127.A
-stipped to only code...LEU
-stripped to only the number, this is residue 127
-ResID: LEU 127.A
-Dihedral #0:127.A@CA #0:127.A@CB #0:301.A@FE.A #0:301.A@FE.B: -142.333
+currently processing residue...VAL 124.A
+stipped to only code...VAL
+stripped to only the number, this is residue 124
+ResID: VAL 124.A
+Dihedral #0:124.A@CA #0:124.A@CB #0:301.A@FE.A #0:301.A@FE.B: 134.541
 

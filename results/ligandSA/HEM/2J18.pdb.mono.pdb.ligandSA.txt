@@ -1,0 +1,22 @@
+The following problems occurred while reading PDB file for 2J18.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+#0, chain A: chloroperoxidase
+2J18.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 2J18.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  6 connected surface components
+  Total solvent excluded surface area = 1962.99
+    component areas = 562.107, 497.408, 287.276, 285.786, 186.028, 144.384
+  Total solvent accessible surface area = 3556.34
+    component areas = 1008.1, 808.511, 538.649, 530.46, 370.233, 300.387
+

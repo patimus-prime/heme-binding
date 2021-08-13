@@ -1,42 +1,38 @@
 #0, chain A: protoglobin
 2VEB.pdb.mono.pdb opened
-currently processing residue...OXY 350.A
-stipped to only code...OXY
-SHIT! Weird molecule, do nothing.
-currently processing residue...ILE 116.A
-stipped to only code...ILE
-stripped to only the number, this is residue 116
-ResID: ILE 116.A
-Angle #0:116.A@CA #0:116.A@CB #0:200.A@FE: 101.782
-currently processing residue...ILE 137.A
-stipped to only code...ILE
-stripped to only the number, this is residue 137
-ResID: ILE 137.A
-Angle #0:137.A@CA #0:137.A@CB #0:200.A@FE: 179.105
-currently processing residue...TRP 185.A
-stipped to only code...TRP
-stripped to only the number, this is residue 185
-ResID: TRP 185.A
-Angle #0:185.A@CA #0:185.A@CB #0:200.A@FE: 165.603
 currently processing residue...PHE 145.A
 stipped to only code...PHE
 stripped to only the number, this is residue 145
 ResID: PHE 145.A
 Angle #0:145.A@CA #0:145.A@CB #0:200.A@FE: 170.374
-currently processing residue...HEM 200.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
-currently processing residue...PHE 93.A
-stipped to only code...PHE
-stripped to only the number, this is residue 93
-ResID: PHE 93.A
-Angle #0:93.A@CA #0:93.A@CB #0:200.A@FE: 112.461
+currently processing residue...HIS 120.A
+stipped to only code...HIS
+stripped to only the number, this is residue 120
+ResID: HIS 120.A
+Angle #0:120.A@CA #0:120.A@CB #0:200.A@FE: 110.488
 currently processing residue...LEU 142.A
 stipped to only code...LEU
 stripped to only the number, this is residue 142
 ResID: LEU 142.A
 Angle #0:142.A@CA #0:142.A@CB #0:200.A@FE: 87.5695
+currently processing residue...PHE 93.A
+stipped to only code...PHE
+stripped to only the number, this is residue 93
+ResID: PHE 93.A
+Angle #0:93.A@CA #0:93.A@CB #0:200.A@FE: 112.461
+currently processing residue...ILE 116.A
+stipped to only code...ILE
+stripped to only the number, this is residue 116
+ResID: ILE 116.A
+Angle #0:116.A@CA #0:116.A@CB #0:200.A@FE: 101.782
+currently processing residue...OXY 350.A
+stipped to only code...OXY
+SHIT! Weird molecule, do nothing.
+currently processing residue...ILE 137.A
+stipped to only code...ILE
+stripped to only the number, this is residue 137
+ResID: ILE 137.A
+Angle #0:137.A@CA #0:137.A@CB #0:200.A@FE: 179.105
 currently processing residue...VAL 89.A
 stipped to only code...VAL
 stripped to only the number, this is residue 89
@@ -47,9 +43,13 @@ stipped to only code...PHE
 stripped to only the number, this is residue 74
 ResID: PHE 74.A
 Angle #0:74.A@CA #0:74.A@CB #0:200.A@FE: 96.7886
-currently processing residue...HIS 120.A
-stipped to only code...HIS
-stripped to only the number, this is residue 120
-ResID: HIS 120.A
-Angle #0:120.A@CA #0:120.A@CB #0:200.A@FE: 110.488
+currently processing residue...TRP 185.A
+stipped to only code...TRP
+stripped to only the number, this is residue 185
+ResID: TRP 185.A
+Angle #0:185.A@CA #0:185.A@CB #0:200.A@FE: 165.603
+currently processing residue...HEM 200.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
 

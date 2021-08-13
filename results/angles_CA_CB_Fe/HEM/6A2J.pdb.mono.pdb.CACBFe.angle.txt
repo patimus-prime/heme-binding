@@ -1,5 +1,20 @@
 #0, chain A: heme A synthase
 6A2J.pdb.mono.pdb opened
+currently processing residue...VAL 175.A
+stipped to only code...VAL
+stripped to only the number, this is residue 175
+ResID: VAL 175.A
+Angle #0:175.A@CA #0:175.A@CB #0:601.A@FE: 96.8786
+currently processing residue...ILE 265.A
+stipped to only code...ILE
+stripped to only the number, this is residue 265
+ResID: ILE 265.A
+Angle #0:265.A@CA #0:265.A@CB #0:601.A@FE: 147.733
+currently processing residue...HIS 278.A
+stipped to only code...HIS
+stripped to only the number, this is residue 278
+ResID: HIS 278.A
+Angle #0:278.A@CA #0:278.A@CB #0:601.A@FE: 124.621
 currently processing residue...HEM 601.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
@@ -55,19 +70,4 @@ Angle #0:261.A@CA #0:261.A@CB #0:601.A@FE: 84.4336
 currently processing residue...GLY 262.A
 stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
-currently processing residue...VAL 175.A
-stipped to only code...VAL
-stripped to only the number, this is residue 175
-ResID: VAL 175.A
-Angle #0:175.A@CA #0:175.A@CB #0:601.A@FE: 96.8786
-currently processing residue...ILE 265.A
-stipped to only code...ILE
-stripped to only the number, this is residue 265
-ResID: ILE 265.A
-Angle #0:265.A@CA #0:265.A@CB #0:601.A@FE: 147.733
-currently processing residue...HIS 278.A
-stipped to only code...HIS
-stripped to only the number, this is residue 278
-ResID: HIS 278.A
-Angle #0:278.A@CA #0:278.A@CB #0:601.A@FE: 124.621
 

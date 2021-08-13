@@ -1,5 +1,40 @@
 #0, chain A: myoglobin
 2E2Y.pdb.mono.pdb opened
+currently processing residue...TRP 43.A
+stipped to only code...TRP
+stripped to only the number, this is residue 43
+ResID: TRP 43.A
+Angle #0:43.A@CA #0:43.A@CB #0:154.A@FE: 95.5213
+currently processing residue...ILE 68.A
+stipped to only code...ILE
+stripped to only the number, this is residue 68
+ResID: ILE 68.A
+Angle #0:68.A@CA #0:68.A@CB #0:154.A@FE: 97.7283
+currently processing residue...HIS 93.A
+stipped to only code...HIS
+stripped to only the number, this is residue 93
+ResID: HIS 93.A
+Angle #0:93.A@CA #0:93.A@CB #0:154.A@FE: 114.498
+currently processing residue...THR 67.A
+stipped to only code...THR
+stripped to only the number, this is residue 67
+ResID: THR 67.A
+Angle #0:67.A@CA #0:67.A@CB #0:154.A@FE: 106.079
+currently processing residue...ILE 107.A
+stipped to only code...ILE
+stripped to only the number, this is residue 107
+ResID: ILE 107.A
+Angle #0:107.A@CA #0:107.A@CB #0:154.A@FE: 171.694
+currently processing residue...SER 92.A
+stipped to only code...SER
+stripped to only the number, this is residue 92
+ResID: SER 92.A
+Angle #0:92.A@CA #0:92.A@CB #0:154.A@FE: 115.205
+currently processing residue...LEU 104.A
+stipped to only code...LEU
+stripped to only the number, this is residue 104
+ResID: LEU 104.A
+Angle #0:104.A@CA #0:104.A@CB #0:154.A@FE: 87.1682
 currently processing residue...ASP 64.A
 stipped to only code...ASP
 stripped to only the number, this is residue 64
@@ -20,43 +55,8 @@ stipped to only code...HIS
 stripped to only the number, this is residue 97
 ResID: HIS 97.A
 Angle #0:97.A@CA #0:97.A@CB #0:154.A@FE: 177.186
-currently processing residue...ILE 107.A
-stipped to only code...ILE
-stripped to only the number, this is residue 107
-ResID: ILE 107.A
-Angle #0:107.A@CA #0:107.A@CB #0:154.A@FE: 171.694
 currently processing residue...HEM 154.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
-currently processing residue...HIS 93.A
-stipped to only code...HIS
-stripped to only the number, this is residue 93
-ResID: HIS 93.A
-Angle #0:93.A@CA #0:93.A@CB #0:154.A@FE: 114.498
-currently processing residue...TRP 43.A
-stipped to only code...TRP
-stripped to only the number, this is residue 43
-ResID: TRP 43.A
-Angle #0:43.A@CA #0:43.A@CB #0:154.A@FE: 95.5213
-currently processing residue...ILE 68.A
-stipped to only code...ILE
-stripped to only the number, this is residue 68
-ResID: ILE 68.A
-Angle #0:68.A@CA #0:68.A@CB #0:154.A@FE: 97.7283
-currently processing residue...SER 92.A
-stipped to only code...SER
-stripped to only the number, this is residue 92
-ResID: SER 92.A
-Angle #0:92.A@CA #0:92.A@CB #0:154.A@FE: 115.205
-currently processing residue...THR 67.A
-stipped to only code...THR
-stripped to only the number, this is residue 67
-ResID: THR 67.A
-Angle #0:67.A@CA #0:67.A@CB #0:154.A@FE: 106.079
-currently processing residue...LEU 104.A
-stipped to only code...LEU
-stripped to only the number, this is residue 104
-ResID: LEU 104.A
-Angle #0:104.A@CA #0:104.A@CB #0:154.A@FE: 87.1682
 

@@ -1,25 +1,5 @@
 #0, chain A: Ho-1; HEME oxygenase (decyclizing) 1
 1P3T.pdb.mono.pdb opened
-currently processing residue...ASP 27.A
-stipped to only code...ASP
-stripped to only the number, this is residue 27
-ResID: ASP 27.A
-Angle #0:27.A@CA #0:27.A@CB #0:300.A@FE: 103.481
-currently processing residue...CYS 113.A
-stipped to only code...CYS
-stripped to only the number, this is residue 113
-ResID: CYS 113.A
-Angle #0:113.A@CA #0:113.A@CB #0:300.A@FE: 62.222
-currently processing residue...VAL 26.A
-stipped to only code...VAL
-stripped to only the number, this is residue 26
-ResID: VAL 26.A
-Angle #0:26.A@CA #0:26.A@CB #0:300.A@FE: 118.549
-currently processing residue...HIS 23.A
-stipped to only code...HIS
-stripped to only the number, this is residue 23
-ResID: HIS 23.A
-Angle #0:23.A@CA #0:23.A@CB #0:300.A@FE: 111.758
 currently processing residue...ALA 121.A
 stipped to only code...ALA
 stripped to only the number, this is residue 121
@@ -27,10 +7,6 @@ ResID: ALA 121.A
 Angle #0:121.A@CA #0:121.A@CB #0:300.A@FE: 48.9641
 currently processing residue...GLY 120.A
 stipped to only code...GLY
-SHIT! Weird molecule, do nothing.
-currently processing residue...HEM 300.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
 currently processing residue...LEU 119.A
 stipped to only code...LEU
@@ -52,7 +28,31 @@ stipped to only code...SER
 stripped to only the number, this is residue 117
 ResID: SER 117.A
 Angle #0:117.A@CA #0:117.A@CB #0:300.A@FE: 57.1608
+currently processing residue...HEM 300.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
 currently processing residue...GLY 116.A
 stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
+currently processing residue...ASP 27.A
+stipped to only code...ASP
+stripped to only the number, this is residue 27
+ResID: ASP 27.A
+Angle #0:27.A@CA #0:27.A@CB #0:300.A@FE: 103.481
+currently processing residue...VAL 26.A
+stipped to only code...VAL
+stripped to only the number, this is residue 26
+ResID: VAL 26.A
+Angle #0:26.A@CA #0:26.A@CB #0:300.A@FE: 118.549
+currently processing residue...CYS 113.A
+stipped to only code...CYS
+stripped to only the number, this is residue 113
+ResID: CYS 113.A
+Angle #0:113.A@CA #0:113.A@CB #0:300.A@FE: 62.222
+currently processing residue...HIS 23.A
+stipped to only code...HIS
+stripped to only the number, this is residue 23
+ResID: HIS 23.A
+Angle #0:23.A@CA #0:23.A@CB #0:300.A@FE: 111.758
 

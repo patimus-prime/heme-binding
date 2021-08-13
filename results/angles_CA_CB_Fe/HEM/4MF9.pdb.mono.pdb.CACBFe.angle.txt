@@ -22,6 +22,11 @@ stipped to only code...MET
 stripped to only the number, this is residue 257
 ResID: MET 257.A
 Angle #0:257.A@CA #0:257.A@CB #0:400.A@FE: 151.646
+currently processing residue...PHE 259.A
+stipped to only code...PHE
+stripped to only the number, this is residue 259
+ResID: PHE 259.A
+Angle #0:259.A@CA #0:259.A@CB #0:400.A@FE: 124.86
 currently processing residue...THR 208.A
 stipped to only code...THR
 stripped to only the number, this is residue 208
@@ -32,9 +37,4 @@ stipped to only code...HIS
 stripped to only the number, this is residue 209
 ResID: HIS 209.A
 Angle #0:209.A@CA #0:209.A@CB #0:400.A@FE: 108.649
-currently processing residue...PHE 259.A
-stipped to only code...PHE
-stripped to only the number, this is residue 259
-ResID: PHE 259.A
-Angle #0:259.A@CA #0:259.A@CB #0:400.A@FE: 124.86
 

@@ -1,5 +1,15 @@
 #0, chain A: melanin biosynthesis protein tyra, putative
 2IIZ.pdb.mono.pdb opened
+currently processing residue...PHE 257.A
+stipped to only code...PHE
+stripped to only the number, this is residue 257
+ResID: PHE 257.A
+Angle #0:257.A@CA #0:257.A@CB #0:400.A@FE: 119.317
+currently processing residue...HIS 224.A
+stipped to only code...HIS
+stripped to only the number, this is residue 224
+ResID: HIS 224.A
+Angle #0:224.A@CA #0:224.A@CB #0:400.A@FE: 124.338
 currently processing residue...ASP 284.A
 stipped to only code...ASP
 stripped to only the number, this is residue 284
@@ -14,16 +24,9 @@ currently processing residue...HEM 400.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
-currently processing residue...HIS 224.A
-stipped to only code...HIS
-stripped to only the number, this is residue 224
-ResID: HIS 224.A
-Angle #0:224.A@CA #0:224.A@CB #0:400.A@FE: 124.338
-currently processing residue...ARG 242.A
-stipped to only code...ARG
-stripped to only the number, this is residue 242
-ResID: ARG 242.A
-Angle #0:242.A@CA #0:242.A@CB #0:400.A@FE: 162.019
+currently processing residue...MSE 274.A
+stipped to only code...MSE
+SHIT! Weird molecule, do nothing.
 currently processing residue...ILE 225.A
 stipped to only code...ILE
 stripped to only the number, this is residue 225
@@ -39,17 +42,14 @@ stipped to only code...VAL
 stripped to only the number, this is residue 228
 ResID: VAL 228.A
 Angle #0:228.A@CA #0:228.A@CB #0:400.A@FE: 165.271
+currently processing residue...ARG 242.A
+stipped to only code...ARG
+stripped to only the number, this is residue 242
+ResID: ARG 242.A
+Angle #0:242.A@CA #0:242.A@CB #0:400.A@FE: 162.019
 currently processing residue...LEU 255.A
 stipped to only code...LEU
 stripped to only the number, this is residue 255
 ResID: LEU 255.A
 Angle #0:255.A@CA #0:255.A@CB #0:400.A@FE: 168.309
-currently processing residue...PHE 257.A
-stipped to only code...PHE
-stripped to only the number, this is residue 257
-ResID: PHE 257.A
-Angle #0:257.A@CA #0:257.A@CB #0:400.A@FE: 119.317
-currently processing residue...MSE 274.A
-stipped to only code...MSE
-SHIT! Weird molecule, do nothing.
 
