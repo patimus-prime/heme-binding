@@ -8,17 +8,11 @@ library(stringr)
 source("~/heme-binding/scripts/r/addpdbcol.R")
 #source("C:/Users/nobody/Documents/R/MyScript.R")
 
-source("~/heme-binding/scripts/r/pocketSA.R")
 
 # for the pdb-Titles_codes script, YOU MUST NOT HAVE ANYTHING THAT COULD INTERFERE
 # WITH THE REGEXP '.pdb' in the folder!!!! this will throw errors!
 # now still throws an error but minor. I think it doesn't like the source dataframe only having 1 column
-source("~/heme-binding/scripts/r/pdb_titles_codes.R") #error here investigate 15 July 2021
-source("~/heme-binding/scripts/r/source_organism.R")
-source("~/heme-binding/scripts/r/dist_angles.R")
-source("~/heme-binding/scripts/r/metal_coordination.R") #garbage
-source("~/heme-binding/scripts/r/only_distances.R")
-source("~/heme-binding/scripts/r/anglesCACBFE.R")
+#source("~/heme-binding/scripts/r/metal_coordination.R") #garbage
 # ok let's reorder
 
 # DECLARATIONS --------------
@@ -70,8 +64,57 @@ for(ligand in 1:(length(ligandList)))
    activeLigand = ligandList[[ligand]]
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    ligandSA_df <- ligandSA_fn(activeLigand,activeResultPath)
-   assign(paste(activeLigand,"_ligandSA_df",sep = ""),ligandSA_df)
+   assign(paste(activeLigand,"_ligandSA_df",sep = ""), ligandSA_df)
 }
+
+# Pocket Surface Area ------------------------
+source("~/heme-binding/scripts/r/pocketSA.R")
+resultPath = "~/heme-binding/results/pocketSA/"
+
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   pocketSA_df <- pocketSA_fn(activeLigand,activeResultPath)
+   assign(paste(activeLigand,"_pocketSA_df",sep = ""), pocketSA_df)
+}
+
+# AA to ligand plane -------------
+source("~/heme-binding/scripts/r/dist_angles.R")
+resultPath = "~/heme-binding/results/distances_and_angles/"
+
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   planar_angles_list <- aaAnglesFn(activeLigand,activeResultPath)
+   assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
+}
+HEM_planar_angles_list$angleDF #DANK
+
+# Distances of AA atoms to Fe ------------------
+source("~/heme-binding/scripts/r/only_distances.R")
+resultPath = "~/heme-binding/results/only_distances/"
+
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   distancesList <- distancesFn(activeLigand,activeResultPath)
+   assign(paste(activeLigand,"_distances_list",sep=""),distancesList)
+   #planar_angles_list <- aaAnglesFn(activeLigand,activeResultPath)
+   #assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
+}
+distancesList$dataframe #NOTE: DO NOT FORGET TO NAME STUFF LMAO
+# 
+source("~/heme-binding/scripts/r/anglesCACBFE.R")
+
+
+
+# PDBs titles codes ---------------
+# bullshit ones, put below I guess Idk
+source("~/heme-binding/scripts/r/pdb_titles_codes.R") #error here investigate 15 July 2021
+source("~/heme-binding/scripts/r/source_organism.R")
 
 
 # merge all dataframes reported (not produced by functions) into mega dataframe: -----

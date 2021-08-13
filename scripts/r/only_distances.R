@@ -5,10 +5,11 @@ library(ggplot2) #thus far not used 22 June 2021
 library(stringr)
 source("~/heme-binding/scripts/r/addpdbcol.R")
 
-onlyDist <- function()
+distancesFn <- function(activeLigand,activeResultPath)
 {
     
   # data acquisition ----------------------------------
+  setwd(activeResultPath)
   setwd("~/heme-binding/results/only_distances")
   
   # import all the shit that's been processed
@@ -62,9 +63,10 @@ onlyDist <- function()
   OnlyDistance_df %>%
     filter(!grepl("FE",Atom)) -> OnlyDistance_df
   
+  #XX
   # remove HEM distances
   OnlyDistance_df %>%
-    filter(!grepl("HEM",Residue_Code)) -> OnlyDistance_df
+    filter(!grepl(activeLigand,Residue_Code)) -> OnlyDistance_df
   
   # Now, measurements of distance ----------------
   # I don't think I've subsetted per row before. 
@@ -270,10 +272,11 @@ onlyDist <- function()
   
   # here is why this has become a function: here, we can return all plots and call in main.
   return(list(
-    nonpolar_plot,
-    min_dist_violin,
-    mean_SD_of_min_df,
-    mean_SD_distPlot,
-    distancePlot
+    "dataframe" = OnlyDistance_df,
+    "nonpolar_plot" = nonpolar_plot,
+    "min_dist_violin" = min_dist_violin,
+    "mean_SD_of_minimum_dist_df" = mean_SD_of_min_df,
+    "mean_SD_of_minimum_dist_plot" = mean_SD_distPlot,
+    "distance_Plot" = distancePlot
   ))
 }

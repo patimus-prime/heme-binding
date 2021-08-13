@@ -12,9 +12,9 @@ source("~/heme-binding/scripts/r/addpdbcol.R")
 #for filtering: https://www.youtube.com/watch?v=PsSqn0pxouM
 
 
-anglesFn <- function()
+aaAnglesFn <- function(activeLigand,activeResultPath)
 {
-   
+   paste(activeLigand,"aa to ligand plane processing...")
    # 0. Notes on global variables...---------------------------
    
    #may need to specify this option every run/change for running ALL PROCESSED FILES
@@ -26,10 +26,11 @@ anglesFn <- function()
    #set working directory to the folder w files!
    #hemeSA_path = "~/heme-binding/results/hemeSA" 
    #setwd(hemeSA_path)
-   setwd("~/heme-binding/results/distances_and_angles")
-   
+   #setwd("~/heme-binding/results/distances_and_angles")
+   setwd(activeResultPath)
    # import all the shit that's been processed
    # currently using results specific file, all of type .txt; therefore:
+   #XXXXX THIS WILL PROBABLY CHANGE... THE EXTENSION, EVENTUALLY MANNNNN
    result_files_ls <- list.files(pattern = "*.dist.angle.txt") #double check what's up
    
    # may need to add path = whatever from wd into the parentheses
