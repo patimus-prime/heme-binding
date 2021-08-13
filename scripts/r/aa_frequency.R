@@ -4,12 +4,13 @@ library(tidyr)
 library(ggplot2) #thus far not used 22 June 2021
 
 
-aaFreq_fn <- function()
+aaFreq_fn <- function(activeLigand,activeResultPath)
 {
-  
+  paste(activeLigand,"AA_freq data processing...")
+  setwd(activeResultPath)
   #set working directory to the folder w files!
-  aa_freq_path = "~/heme-binding/results/aa_frequency" 
-  setwd(aa_freq_path)
+  #aa_freq_path = "~/heme-binding/results/aa_frequency" 
+  #setwd(aa_freq_path)
   
   # import all the shit that's been processed
   # currently using results specific file, all of type .txt; therefore:

@@ -8,8 +8,6 @@ library(stringr)
 source("~/heme-binding/scripts/r/addpdbcol.R")
 #source("C:/Users/nobody/Documents/R/MyScript.R")
 
-source("~/heme-binding/scripts/r/aa_frequency.R")
-source("~/heme-binding/scripts/r/hemeSA.R")
 source("~/heme-binding/scripts/r/pocketSA.R")
 
 # for the pdb-Titles_codes script, YOU MUST NOT HAVE ANYTHING THAT COULD INTERFERE
@@ -48,6 +46,33 @@ for(ligand in 1:(length(ligandList)))
 # to accomodate for HEM v. activeLigand. Bing bang boom!
 
 # after that, adding data, testing, and otherwise doneeeeeee omg lol
+# finish tonight omg fuck yess brooooo! call peeps even jesus awesomeeeee
+
+
+# AA Frequency -----------------
+source("~/heme-binding/scripts/r/aa_frequency.R")
+resultPath = "~/heme-binding/results/aa_frequency/"
+
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   aa_freq_df <- aaFreq_fn(activeLigand,activeResultPath)
+   assign(paste(activeLigand,"_aaFreqDf",sep=""), aa_freq_df)
+}
+   
+# Ligand surface area ----------------------
+source("~/heme-binding/scripts/r/ligandSA.R")
+resultPath = "~/heme-binding/results/ligandSA/"
+
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   ligandSA_df <- ligandSA_fn(activeLigand,activeResultPath)
+   assign(paste(activeLigand,"_ligandSA_df",sep = ""),ligandSA_df)
+}
+
 
 # merge all dataframes reported (not produced by functions) into mega dataframe: -----
 
