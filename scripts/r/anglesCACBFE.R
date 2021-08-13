@@ -5,10 +5,11 @@ library(ggplot2) #thus far not used 22 June 2021
 library(stringr)
 source("~/heme-binding/scripts/r/addpdbcol.R")
 
-CACBFE_fn <- function()
+CACBFE_fn <- function(activeLigand,activeResultPath)
 {
-  setwd("~/heme-binding/results/angles_CA_CB_Fe")
-  
+  paste(activeLigand,"CACBFE angle processing...")
+  #setwd("~/heme-binding/results/angles_CA_CB_Fe")
+  setwd(activeResultPath)
   # import all the shit that's been processed
   # currently using results specific file, all of type .txt; therefore:
   result_files_ls <- list.files(pattern = "*.CACBFe.angle.txt") #double check what's up

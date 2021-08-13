@@ -106,9 +106,24 @@ for(ligand in 1:(length(ligandList)))
    #assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
 }
 distancesList$dataframe #NOTE: DO NOT FORGET TO NAME STUFF LMAO
-# 
-source("~/heme-binding/scripts/r/anglesCACBFE.R")
 
+#  Angles CACBFe -------------------------------
+source("~/heme-binding/scripts/r/anglesCACBFE.R")
+resultPath = "~/heme-binding/results/angles_CA_CB_Fe/"
+
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   CACBFE_df <- CACBFE_fn(activeLigand,activeResultPath)
+   
+  # distancesList <- distancesFn(activeLigand,activeResultPath)
+   #assign(paste(activeLigand,"_distances_list",sep=""),distancesList)
+   #planar_angles_list <- aaAnglesFn(activeLigand,activeResultPath)
+   #assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
+}
+CACBFE_df
+#FIXME! ERROR FROM HERE R STOPPED GIVING CORRECT FEEDBACK
 
 
 # PDBs titles codes ---------------
