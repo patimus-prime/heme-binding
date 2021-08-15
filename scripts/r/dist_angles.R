@@ -146,7 +146,7 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    #head(Distance_and_Angles_df)
    angleplot <- ggplot(Distance_and_Angles_df, aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
       geom_violin(trim=FALSE) +
-      labs(title = "Angles of Residues v. Heme (defined as axis) in each PDB", x="Residue",y="Angle")
+      labs(title = paste("Angles of Residues v. ",activeLigand," (defined as axis) in each PDB",sep = ""), x="Residue",y="Angle")
    #angleplot #ENSURE YOU CONVERT TO NUMERIC DATA TYPES ABOVE
    
    #welp, that's not conclusive, at all.
@@ -158,8 +158,8 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    
    coord_angle_plot <- ggplot(coord_Res_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
       geom_violin(trim=FALSE) +
-      labs(title = "Angles of Residues MOST LIKELY to coordinate. 
-           Does not select for residues that are actually confirmed as coordinating",
+      labs(title = paste(activeLigand,": Angles of Residues MOST LIKELY to coordinate. 
+           Does not select for residues that are actually confirmed as coordinating",sep=''),
            x="Residue",y="Angle") +
       stat_summary(fun.data = mean_sdl, mult =1,geom="pointrange")
       
@@ -168,7 +168,7 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    
    min_dist_angles_plot <- ggplot(min_dist_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
       geom_violin(trim=FALSE) +
-      labs(title = "Angles of each PDB's closest residue to Heme, where heme is defined as an axis",
+      labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ligand, where ligand is defined as an axis", sep=''),
            x = "Residue",y="Angle") +
       stat_summary(fun.data = mean_sdl, mult=1,geom="pointrange")
    

@@ -193,10 +193,10 @@ for(ligand in 1:(length(ligandList)))
    assign(paste(activeLigand,"_MERGED_DF",sep = ""),mergedDF)
    }
 
-#other stuff:
-HEM_distances_list$dataframe
-HEM_CACBFe_DF
-HEM_planar_angles_list$angleDF
+# #other stuff:
+# HEM_distances_list$dataframe
+# HEM_CACBFe_DF
+# HEM_planar_angles_list$angleDF
 # those two lists contain plots!
 # shit ------
 # 
@@ -232,167 +232,196 @@ Metal_Coordination_df -> AAAA_METAL_DF
 
 # Graphs: ----------------------------------
 
-# declare a list to add all plots to, makes exporting easier
-plots <- list()
+for(ligand in 1:(length(ligandList)))
+   {
+   
+   # declare a list to add all plots to, makes exporting easier
+   #plots <- list()
+   
+   # AA FREQ PLOT --------------------
+   
+   #eval(parse(text = "HEM_aaFreqPlot")) <- hist(HEM_aaFreqDf$Freq)
+   
+   aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
+                main = paste("Frequency of Residues within 7A of ",activeLigand,sep = ""),
+                xlab = "Residues",
+                ylab = "Frequency",
+                col = "orange",
+                names.arg = 
+                   eval(parse(text = (paste(activeLigand,"_aaFreqDf$Var1",sep="")))))
+   HEM_maxVolDf$volume_data
+   HEM_MERGED_DF$volume_data
+   # Histograms/barplots of the MEGA dataframe data --------------------
+   # see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
+   
+   volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
+                       main = paste(activeLigand," Volume of Pockets in ea PDB, A^3", sep=""),
+                       xlab = "Volume, A^3",
+                       ylab = "Frequency",
+                       col = "darkmagenta")
+   # volume_hist <- hist(mega_df$volume_data,
+   #      main = "Volume of Pockets in ea PDB, A^3",
+   #      xlab = "Volume, A^3",
+   #      #ylab = "Frequency",
+   #      col = "darkmagenta"
+   #      )
+   #plots <- volume_hist
+   #HEM_MERGED_DF$HEM_Excluded_SA
+   
+   LigExcSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Excluded_SA",sep = ""))),
+                    main = paste(activeLigand," Excluded Surface Area in ea PDB, square A",sep = ""),
+                    xlab = "Excluded Surface Area, A^2",
+                    col = "blue")
+    
+   
+   # volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
+   #                  
+   # heme_excSA <- hist(mega_df$Heme_Excluded_SA,
+   #      main = "Heme Excluded Surface Area in ea PDB, square A",
+   #      xlab = "Excluded Surface Area, A^2",
+   #      col = "blue"
+   #      )
+   # plots <- heme_excSA
+   #HEM_MERGED_DF$HEM_Accessible_SA
+   LigAccSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Accessible_SA",sep = ""))),
+        main = paste(activeLigand," Accessible Surface Area, A^2",sep = ""),
+        xlab = "Accessible Surface Area, A^2",
+        col = "lightblue")
+   #plots <- heme_accSA
+   # eval(parse(text = paste(activeLigand,"damn",sep="")))
+   # eval(parse(text = paste(activeLigand,"damn"))) <- LigAccSA
+   
+   HEM_MERGED_DF$Pocket_Excluded_SA
+   pocket_excSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Excluded_SA",sep = ""))),
+        main = paste(activeLigand," Pocket Excluded Surface Area, A^2", sep=''),
+        xlab = "Excluded Surface Area, A^2",
+        col = "green"
+        )
+   plots <- pocket_excSA
+   
+   pocket_accSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Accessible_SA",sep = ""))),
+        main = paste(activeLigand, " Pocket Accessible Surface Area, A^2", sep = ''),
+        xlab = "Accessible Surface Area, A^2",
+        col = "lightgreen"
+        )
+   # 
+   # plots <- pocket_accSA
+   # 
+   # 
+   # # distance plots ------------------
+   # # return from that shit!
+   # distance_plots <- onlyDist() # returns of all fancy plots to put in
+   # # print the dank plots!
+   # distance_plots
+   # plots <- distance_plots
+   # 
+   # # angle plots -------------------
+   # # we return a dataframe from angles also, so we use this protocol.
+   # # found here. may be applied above: https://stackoverflow.com/questions/8936099/returning-multiple-objects-in-an-r-function
+   
+   #NEED TO MAYBE ASSIGN PER LIGAND... IDK MAN THIS IS FUNKY STUFF RIGHT HERE LOL
+   # HEM_planar_angles_list$angleplot
+   # HEM_planar_angles_list$coordinating_res_plot
+   # HEM_planar_angles_list$min_dist_angles_plot
+   
+   qq <- eval(parse(text = paste(activeLigand,"_planar_angles_list$angleplot",sep='')))
+   print(qq)
+   ww <- eval(parse(text = paste(activeLigand,"_planar_angles_list$coordinating_res_plot",sep = '')))
+   print(ww)
+   ee <- eval(parse(text = paste(activeLigand,"_planar_angles_list$min_dist_angles_plot",sep='')))
+   print(ee)
+   # 
+   # angle_plots <- anglesFn()
+   # angle_plots$angleplot
+   # angle_plots$coordinating_res_plot
+   # plots <- angle_plots
+   
+   # line below confirms this is a shit way to find distance
+   #angle_plots$min_dist_angles_plot #THIS USES DISTANCES FROM AXES PROTOCOL
+   
+   
+   
+   # CACBFE angle plots --------------------------
+   # we have CACBFE_df
+   # only one figure to make we can do it here
+   
+   cabplot <- ggplot(eval(parse(text=paste(activeLigand,"_CACBFe_DF",sep=''))),
+                       aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe within pocket",sep=''), x="Residue",y="Angle")
+   print(cabplot)
+   #    #stat_summary(fun.data = mean_sdl, mult=1, geom="pointrange")
+   # 
+   # CACBFE_plot <- ggplot(CACBFE_df,
+   #                       aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
+   #    geom_violin(trim=FALSE) +
+   #    labs(title = "Angles CA-CB-Fe per type of residue to Fe within pocket", x="Residue",y="Angle")
+   #    #stat_summary(fun.data = mean_sdl, mult=1, geom="pointrange")
+   # CACBFE_plot
+   
+   # 
+   # nonpolar_plot <- ggplot(nonpolar_res_df,aes(x=Residue_Code,y=Distance, fill=Residue_Code)) +
+   #    geom_violin(trim=FALSE) +
+   #    labs(title = "Nonpolar Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
+   #    stat_summary(fun.data = mean_sdl, mult =1,geom = "pointrange")
+   # # 
+}
 
-# AA FREQ PLOT --------------------
-
-#eval(parse(text = "HEM_aaFreqPlot")) <- hist(HEM_aaFreqDf$Freq)
-
-aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
-             main = paste("Frequency of Residues within 7A of ",activeLigand,sep = ""),
-             xlab = "Residues",
-             ylab = "Frequency",
-             col = "orange",
-             names.arg = 
-                eval(parse(text = (paste(activeLigand,"_aaFreqDf$Var1",sep="")))))
-HEM_maxVolDf$volume_data
-HEM_MERGED_DF$volume_data
-# Histograms/barplots of the MEGA dataframe data --------------------
-# see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
-
-volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
-                    main = paste(activeLigand," Volume of Pockets in ea PDB, A^3", sep=""),
-                    xlab = "Volume, A^3",
-                    ylab = "Frequency",
-                    col = "darkmagenta")
-# volume_hist <- hist(mega_df$volume_data,
-#      main = "Volume of Pockets in ea PDB, A^3",
-#      xlab = "Volume, A^3",
-#      #ylab = "Frequency",
-#      col = "darkmagenta"
-#      )
-#plots <- volume_hist
-#HEM_MERGED_DF$HEM_Excluded_SA
-
-LigExcSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Excluded_SA",sep = ""))),
-                 main = paste(activeLigand," Excluded Surface Area in ea PDB, square A",sep = ""),
-                 xlab = "Excluded Surface Area, A^2",
-                 col = "blue")
- 
-
-# volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
-#                  
-# heme_excSA <- hist(mega_df$Heme_Excluded_SA,
-#      main = "Heme Excluded Surface Area in ea PDB, square A",
-#      xlab = "Excluded Surface Area, A^2",
-#      col = "blue"
-#      )
-# plots <- heme_excSA
-#HEM_MERGED_DF$HEM_Accessible_SA
-LigAccSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Accessible_SA",sep = ""))),
-     main = paste(activeLigand," Accessible Surface Area, A^2",sep = ""),
-     xlab = "Accessible Surface Area, A^2",
-     col = "lightblue")
-#plots <- heme_accSA
-eval(parse(text = paste(activeLigand,"damn",sep="")))
-eval(parse(text = paste(activeLigand,"damn"))) <- LigAccSA
-pocket_excSA <- hist(mega_df$Pocket_Excluded_SA,
-     main = "Pocket Excluded Surface Area, A^2",
-     xlab = "Excluded Surface Area, A^2",
-     col = "green"
-     )
-plots <- pocket_excSA
-
-pocket_accSA <- hist(mega_df$Pocket_Accessible_SA,
-     main = "Pocket Accessible Surface Area, A^2",
-     xlab = "Accessible Surface Area, A^2",
-     col = "lightgreen"
-     )
-plots <- pocket_accSA
-
-
-# distance plots ------------------
-# return from that shit!
-distance_plots <- onlyDist() # returns of all fancy plots to put in
-# print the dank plots!
-distance_plots
-plots <- distance_plots
-
-# angle plots -------------------
-# we return a dataframe from angles also, so we use this protocol.
-# found here. may be applied above: https://stackoverflow.com/questions/8936099/returning-multiple-objects-in-an-r-function
-
-angle_plots <- anglesFn()
-angle_plots$angleplot
-angle_plots$coordinating_res_plot
-plots <- angle_plots
-
-# line below confirms this is a shit way to find distance
-#angle_plots$min_dist_angles_plot #THIS USES DISTANCES FROM AXES PROTOCOL
+# FIXME!!! UNCOMMENT HERE IF YOU WISH TO USE THIS SOLUTION TO FIGURE SAVING
 
 
 
-# CACBFE angle plots --------------------------
-# we have CACBFE_df
-# only one figure to make we can do it here
-
-CACBFE_plot <- ggplot(CACBFE_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
-   geom_violin(trim=FALSE) +
-   labs(title = "Angles CA-CB-Fe per type of residue to Fe within pocket", x="Residue",y="Angle")
-   #stat_summary(fun.data = mean_sdl, mult=1, geom="pointrange")
-CACBFE_plot
-
-# 
-# nonpolar_plot <- ggplot(nonpolar_res_df,aes(x=Residue_Code,y=Distance, fill=Residue_Code)) +
-#    geom_violin(trim=FALSE) +
-#    labs(title = "Nonpolar Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
-#    stat_summary(fun.data = mean_sdl, mult =1,geom = "pointrange")
+# # EXPORTING ALL PLOTS, AS IN THE ORDER THEY APPEAR IN THE IDE TO THE RIGHT: ------------
+# # from: https://stackoverflow.com/questions/35321775/save-all-plots-already-present-in-the-panel-of-rstudio/53809715
+# # another solution that might preserve plot name: https://stackoverflow.com/questions/24182349/r-plot-saving-and-file-name
 # # 
-
-
-# EXPORTING ALL PLOTS, AS IN THE ORDER THEY APPEAR IN THE IDE TO THE RIGHT: ------------
-# from: https://stackoverflow.com/questions/35321775/save-all-plots-already-present-in-the-panel-of-rstudio/53809715
-# another solution that might preserve plot name: https://stackoverflow.com/questions/24182349/r-plot-saving-and-file-name
 # 
-
-# BIG NOTE: WAIT LIKE 30 SEC BEFORE RUNNING THIS CODE. IT SEEMS TO WAIT FOR STUFF
-# TO PROPERLY LOAD AT THE PANEL ON THE RIGHT. IDK MAN.
-
-plots.dir.path <- list.files(tempdir(), pattern="rs-graphics", full.names = TRUE);
-plots.png.paths <- list.files(plots.dir.path, pattern=".png", full.names = TRUE)
-
-file.copy(from=plots.png.paths, to="~/heme-binding/results/0_figures_and_tables/")
-
-#ordering:
-plots.png.details <- file.info(plots.png.paths)
-plots.png.details <- plots.png.details[order(plots.png.details$mtime),]
-sorted.png.names <- gsub(plots.dir.path, "~/heme-binding/results/0_figures_and_tables/", row.names(plots.png.details), fixed=TRUE)
-numbered.png.names <- paste0("~/heme-binding/results/0_figures_and_tables/", 1:length(sorted.png.names), ".png")
-
-# Rename all the .png files as: 1.png, 2.png, 3.png, and so on.
-file.rename(from=sorted.png.names, to=numbered.png.names)
-
-# for(i in 1:(length(plots)))
-#    {
-#    print(plots[[i]]) #<- ggplot() + geom_point(aes(x=runif(10), y=runif(10))))
-#    #print(plots[[2]] <- ggplot() + geom_point(aes(x=runif(10), y=runif(10))))
-#    #print(plots[[3]] <- ggplot() + geom_point(aes(x=runif(10), y=runif(10))))
-# #    }
-# invisible(
-#    lapply(
-#       seq_along(plots), 
-#       function(x) ggsave(filename=paste0("myplot", x, ".png"), plot=plots[[x]])
-#    ) )
-
-
-# TIDY UP! ------------------
-rm(result_files_df,
-   combined_results_df,
-   temp_df,
-   volume_data_clean,
-   no_quest,
-   line_w_code,
-   #clean_tbl,
-   residue_table_prelim,
-   result_files_df,
-   combined_results_df,
-   residue_table_prelim_df_w_crap,
-   residues_data_df,
-   #hemeSA_df,
-   #max_volume_df,
-   accessible_df,
-   excluded_df,
-   max_accessible_df,
-   max_excluded_df
-)
+# # BIG NOTE: WAIT LIKE 30 SEC BEFORE RUNNING THIS CODE. IT SEEMS TO WAIT FOR STUFF
+# # TO PROPERLY LOAD AT THE PANEL ON THE RIGHT. IDK MAN.
+# 
+# plots.dir.path <- list.files(tempdir(), pattern="rs-graphics", full.names = TRUE);
+# plots.png.paths <- list.files(plots.dir.path, pattern=".png", full.names = TRUE)
+# 
+# file.copy(from=plots.png.paths, to="~/heme-binding/results/0_figures_and_tables/")
+# 
+# #ordering:
+# plots.png.details <- file.info(plots.png.paths)
+# plots.png.details <- plots.png.details[order(plots.png.details$mtime),]
+# sorted.png.names <- gsub(plots.dir.path, "~/heme-binding/results/0_figures_and_tables/", row.names(plots.png.details), fixed=TRUE)
+# numbered.png.names <- paste0("~/heme-binding/results/0_figures_and_tables/", 1:length(sorted.png.names), ".png")
+# 
+# # Rename all the .png files as: 1.png, 2.png, 3.png, and so on.
+# file.rename(from=sorted.png.names, to=numbered.png.names)
+# 
+# # for(i in 1:(length(plots)))
+# #    {
+# #    print(plots[[i]]) #<- ggplot() + geom_point(aes(x=runif(10), y=runif(10))))
+# #    #print(plots[[2]] <- ggplot() + geom_point(aes(x=runif(10), y=runif(10))))
+# #    #print(plots[[3]] <- ggplot() + geom_point(aes(x=runif(10), y=runif(10))))
+# # #    }
+# # invisible(
+# #    lapply(
+# #       seq_along(plots), 
+# #       function(x) ggsave(filename=paste0("myplot", x, ".png"), plot=plots[[x]])
+# #    ) )
+# 
+# 
+# # TIDY UP! ------------------
+# rm(result_files_df,
+#    combined_results_df,
+#    temp_df,
+#    volume_data_clean,
+#    no_quest,
+#    line_w_code,
+#    #clean_tbl,
+#    residue_table_prelim,
+#    result_files_df,
+#    combined_results_df,
+#    residue_table_prelim_df_w_crap,
+#    residues_data_df,
+#    #hemeSA_df,
+#    #max_volume_df,
+#    accessible_df,
+#    excluded_df,
+#    max_accessible_df,
+#    max_excluded_df
+# )
