@@ -19,6 +19,11 @@ source("~/heme-binding/scripts/r/addpdbcol.R")
 ligandList = list("HEM")
 angstromDistance = 7.0 #not sure if used here, maybe useful for figures!
 
+# Initialize list of DFs/lists, add results in each for loop
+# FIXME! The automated naming doesn't like this lol, for lists in particular
+# moving ahead with fixed results and merging in a few steps. 
+# shitty list code in VOLUME for loop
+
 # need a different loop for each script, as the result paths are different for all
 #------ VOLUME ---------
 source("~/heme-binding/scripts/r/volume.R")
@@ -33,6 +38,11 @@ for(ligand in 1:(length(ligandList)))
    #this line is freaky fresh
    # paste() automates df name creation, second arg is the df assigned. BAM!
    assign(paste(activeLigand,"_maxVolDf",sep=""), volume_dfs$maxVolDf)
+
+   eval(parse(text=(paste(activeLigand,"_dfList",sep = "")))) <- list(volume_dfs$maxVolDf, volume_dfs$allVolDf)
+   # xx <- list(volume_dfs$maxVolDf)
+   #  eval(parse(text = paste(activeLigand,"_dfList",sep = ""))) <- xx
+   # "yy" = list(volume_dfs$allVolDf) 
    }
 # FUCK YES THAT'S VOLUME AUTOMATED BABY! Merging will be funky, require another loop
 # loop for ea. ligand to create unique mega DFs. Similar process as this.
@@ -116,13 +126,13 @@ for(ligand in 1:(length(ligandList)))
    activeLigand = ligandList[[ligand]]
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    CACBFE_df <- CACBFE_fn(activeLigand,activeResultPath)
-   
+   assign(paste(activeLigand,"_CACBFe_DF",sep = ""),CACBFE_df)
   # distancesList <- distancesFn(activeLigand,activeResultPath)
    #assign(paste(activeLigand,"_distances_list",sep=""),distancesList)
    #planar_angles_list <- aaAnglesFn(activeLigand,activeResultPath)
    #assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
 }
-CACBFE_df
+#CACBFE_df
 #FIXME! ERROR FROM HERE R STOPPED GIVING CORRECT FEEDBACK
 # yeahp, just restart the computer fuuuuuuck R
 
@@ -151,14 +161,50 @@ for(ligand in 1:(length(ligandList)))
 #   pdbCodeDf <- pdbTitlesCodesFn(activeLigand,activeResultPath)
  #  assign(paste(activeLigand,"_pdbCodesDf",sep=""),pdbCodeDf)
 }
-
+eval(parse(text="sourceOrganismDf"))
 # merge all dataframes reported (not produced by functions) into mega dataframe: -----
+# MERGEEEEEEE
+# NOTE: Perhaps adding DFs to a list and slowly merging may be easier.
+# but uncertain if merge functions for lists of DF would produce intended results
+# A LIST WOULD END UP BEING PREFERABLE IF WE WERE TO EXPAND/ADD MORE RESULTS
+# BUT I'M GETTING TIRED OF THIS AND JUST WANT THE THESIS DONE AHHHHHHH
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   # zDF <- merge(HEM_pdbCodesDf,
+   #              HEM_sourceOrganismDf,
+   #              by.x = "PDB_ID")
+   mergedDF <- merge(eval(parse(text = paste(activeLigand,"_pdbCodesDf",sep = ""))),
+                eval(parse(text = paste(activeLigand,"_sourceOrganismDf",sep = ""))),
+                by.x = "PDB_ID")
 
-mega_df <- merge(pdb_code_df,source_organism_df,by.x = "PDB_ID")
-#this is the way. but first must only take largest volume pocket from volume data
-mega_df <- merge(mega_df, max_volume_df,by.x = "PDB_ID")
-mega_df <- merge(mega_df,hemeSA_df,by.x = "PDB_ID")
-mega_df <- merge(mega_df, pocketSA_df,by.x = "PDB_ID")
+   mergedDF <- merge(mergedDF,
+                     eval(parse(text = paste(activeLigand,"_maxVolDf",sep = ""))),
+                     by.x= "PDB_ID")
+   
+   mergedDF <- merge(mergedDF,
+                     eval(parse(text = paste(activeLigand,"_ligandSA_df",sep = ""))),
+                     by.x = "PDB_ID")
+   
+   mergedDF <- merge(mergedDF,
+                     eval(parse(text = paste(activeLigand,"_pocketSA_df",sep = ""))),
+                     by.x = "PDB_ID")
+
+   assign(paste(activeLigand,"_MERGED_DF",sep = ""),mergedDF)
+   }
+
+#other stuff:
+HEM_distances_list$dataframe
+HEM_CACBFe_DF
+HEM_planar_angles_list$angleDF
+# those two lists contain plots!
+# shit ------
+# 
+# mega_df <- merge(pdb_code_df,source_organism_df,by.x = "PDB_ID")
+# #this is the way. but first must only take largest volume pocket from volume data
+# mega_df <- merge(mega_df, max_volume_df,by.x = "PDB_ID")
+# mega_df <- merge(mega_df,hemeSA_df,by.x = "PDB_ID")
+# mega_df <- merge(mega_df, pocketSA_df,by.x = "PDB_ID")
 
 
 # NOTE!!! The line immediately below cannot occur. There are multiple entries in each PDB. This is what
@@ -191,56 +237,56 @@ plots <- list()
 
 # AA FREQ PLOT --------------------
 
-aa_freq_df <- aaFreq_fn()
-aa_freq_plot <- barplot(aa_freq_df$Freq,
-        main = "Frequency of Residues within 7A of Heme",
-        xlab = "Residues",
-        ylab = "Frequency",
-        col = "orange",
-        names.arg = aa_freq_df$Var1,
-)
-plots <- aa_freq_plot
+#eval(parse(text = "HEM_aaFreqPlot")) <- hist(HEM_aaFreqDf$Freq)
 
-# METAL COORD FREQ PLOT ------------
-metal_freq <- metal_list$Frequency_df
-
-metal_coord_plot <- barplot(metal_freq$Freq,
-        main = "Metal Coordinating Residue Freq for Heme, as determined by Chimera",
-        xlab = "Residues",
-        ylab = "Frequency",
-        col = "hotpink",
-        names.arg =metal_freq$Var1,
-        
-)
-plots <- metal_coord_plot
-
-
-
+aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
+             main = paste("Frequency of Residues within 7A of ",activeLigand,sep = ""),
+             xlab = "Residues",
+             ylab = "Frequency",
+             col = "orange",
+             names.arg = 
+                eval(parse(text = (paste(activeLigand,"_aaFreqDf$Var1",sep="")))))
+HEM_maxVolDf$volume_data
+HEM_MERGED_DF$volume_data
 # Histograms/barplots of the MEGA dataframe data --------------------
 # see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
 
-volume_hist <- hist(mega_df$volume_data,
-     main = "Volume of Pockets in ea PDB, A^3",
-     xlab = "Volume, A^3",
-     #ylab = "Frequency",
-     col = "darkmagenta"
-     )
-plots <- volume_hist
+volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
+                    main = paste(activeLigand," Volume of Pockets in ea PDB, A^3", sep=""),
+                    xlab = "Volume, A^3",
+                    ylab = "Frequency",
+                    col = "darkmagenta")
+# volume_hist <- hist(mega_df$volume_data,
+#      main = "Volume of Pockets in ea PDB, A^3",
+#      xlab = "Volume, A^3",
+#      #ylab = "Frequency",
+#      col = "darkmagenta"
+#      )
+#plots <- volume_hist
+#HEM_MERGED_DF$HEM_Excluded_SA
 
-heme_excSA <- hist(mega_df$Heme_Excluded_SA,
-     main = "Heme Excluded Surface Area in ea PDB, square A",
-     xlab = "Excluded Surface Area, A^2",
-     col = "blue"
-     )
-plots <- heme_excSA
+LigExcSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Excluded_SA",sep = ""))),
+                 main = paste(activeLigand," Excluded Surface Area in ea PDB, square A",sep = ""),
+                 xlab = "Excluded Surface Area, A^2",
+                 col = "blue")
+ 
 
-heme_accSA <- hist(mega_df$Heme_Accessible_SA,
-     main = "Heme Accessible Surface Area, A^2",
+# volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
+#                  
+# heme_excSA <- hist(mega_df$Heme_Excluded_SA,
+#      main = "Heme Excluded Surface Area in ea PDB, square A",
+#      xlab = "Excluded Surface Area, A^2",
+#      col = "blue"
+#      )
+# plots <- heme_excSA
+#HEM_MERGED_DF$HEM_Accessible_SA
+LigAccSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Accessible_SA",sep = ""))),
+     main = paste(activeLigand," Accessible Surface Area, A^2",sep = ""),
      xlab = "Accessible Surface Area, A^2",
-     col = "lightblue"
-     )
-plots <- heme_accSA
-
+     col = "lightblue")
+#plots <- heme_accSA
+eval(parse(text = paste(activeLigand,"damn",sep="")))
+eval(parse(text = paste(activeLigand,"damn"))) <- LigAccSA
 pocket_excSA <- hist(mega_df$Pocket_Excluded_SA,
      main = "Pocket Excluded Surface Area, A^2",
      xlab = "Excluded Surface Area, A^2",
