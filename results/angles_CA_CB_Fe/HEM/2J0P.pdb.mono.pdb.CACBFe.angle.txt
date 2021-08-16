@@ -1,5 +1,20 @@
 #0, chain A: HEMS
 2J0P.pdb.mono.pdb opened
+currently processing residue...PHE 246.A
+stipped to only code...PHE
+stripped to only the number, this is residue 246
+ResID: PHE 246.A
+Angle #0:246.A@CA #0:246.A@CB #0:1342.A@FE: 127.92
+currently processing residue...HIS 196.A
+stipped to only code...HIS
+stripped to only the number, this is residue 196
+ResID: HIS 196.A
+Angle #0:196.A@CA #0:196.A@CB #0:1342.A@FE: 111.162
+currently processing residue...MET 244.A
+stipped to only code...MET
+stripped to only the number, this is residue 244
+ResID: MET 244.A
+Angle #0:244.A@CA #0:244.A@CB #0:1342.A@FE: 155.79
 currently processing residue...ILE 255.A
 stipped to only code...ILE
 stripped to only the number, this is residue 255
@@ -10,26 +25,10 @@ stipped to only code...ASP
 stripped to only the number, this is residue 194
 ResID: ASP 194.A
 Angle #0:194.A@CA #0:194.A@CB #0:1342.A@FE: 107.821
-currently processing residue...MET 244.A
-stipped to only code...MET
-stripped to only the number, this is residue 244
-ResID: MET 244.A
-Angle #0:244.A@CA #0:244.A@CB #0:1342.A@FE: 155.79
-currently processing residue...VAL 195.A
-stipped to only code...VAL
-stripped to only the number, this is residue 195
-ResID: VAL 195.A
-Angle #0:195.A@CA #0:195.A@CB #0:1342.A@FE: 111.446
-currently processing residue...HIS 196.A
-stipped to only code...HIS
-stripped to only the number, this is residue 196
-ResID: HIS 196.A
-Angle #0:196.A@CA #0:196.A@CB #0:1342.A@FE: 111.162
-currently processing residue...PHE 246.A
-stipped to only code...PHE
-stripped to only the number, this is residue 246
-ResID: PHE 246.A
-Angle #0:246.A@CA #0:246.A@CB #0:1342.A@FE: 127.92
+currently processing residue...HEM 1342.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
 currently processing residue...PHE 199.A
 stipped to only code...PHE
 stripped to only the number, this is residue 199
@@ -40,8 +39,9 @@ stipped to only code...ARG
 stripped to only the number, this is residue 102
 ResID: ARG 102.A
 Angle #0:102.A@CA #0:102.A@CB #0:1342.A@FE: 139.609
-currently processing residue...HEM 1342.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
+currently processing residue...VAL 195.A
+stipped to only code...VAL
+stripped to only the number, this is residue 195
+ResID: VAL 195.A
+Angle #0:195.A@CA #0:195.A@CB #0:1342.A@FE: 111.446
 

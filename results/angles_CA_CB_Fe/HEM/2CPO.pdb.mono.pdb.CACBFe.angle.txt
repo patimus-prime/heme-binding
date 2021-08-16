@@ -1,0 +1,62 @@
+The following problems occurred while reading PDB file for 2CPO.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+#0, chain A: chloroperoxidase
+2CPO.pdb.mono.pdb opened
+currently processing residue...PRO 28.A
+stipped to only code...PRO
+stripped to only the number, this is residue 28
+ResID: PRO 28.A
+Angle #0:28.A@CA #0:28.A@CB #0:396.A@FE: 69.8826
+currently processing residue...PHE 186.A
+stipped to only code...PHE
+stripped to only the number, this is residue 186
+ResID: PHE 186.A
+Angle #0:186.A@CA #0:186.A@CB #0:396.A@FE: 173.007
+currently processing residue...HEM 396.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLU 183.A
+stipped to only code...GLU
+stripped to only the number, this is residue 183
+ResID: GLU 183.A
+Angle #0:183.A@CA #0:183.A@CB #0:396.A@FE: 105.946
+currently processing residue...PHE 103.A
+stipped to only code...PHE
+stripped to only the number, this is residue 103
+ResID: PHE 103.A
+Angle #0:103.A@CA #0:103.A@CB #0:396.A@FE: 112.786
+currently processing residue...ALA 71.A
+stipped to only code...ALA
+stripped to only the number, this is residue 71
+ResID: ALA 71.A
+Angle #0:71.A@CA #0:71.A@CB #0:396.A@FE: 137.283
+currently processing residue...LEU 32.A
+stipped to only code...LEU
+stripped to only the number, this is residue 32
+ResID: LEU 32.A
+Angle #0:32.A@CA #0:32.A@CB #0:396.A@FE: 99.3621
+currently processing residue...PHE 57.A
+stipped to only code...PHE
+stripped to only the number, this is residue 57
+ResID: PHE 57.A
+Angle #0:57.A@CA #0:57.A@CB #0:396.A@FE: 125.623
+currently processing residue...ALA 31.A
+stipped to only code...ALA
+stripped to only the number, this is residue 31
+ResID: ALA 31.A
+Angle #0:31.A@CA #0:31.A@CB #0:396.A@FE: 115.04
+currently processing residue...PRO 30.A
+stipped to only code...PRO
+stripped to only the number, this is residue 30
+ResID: PRO 30.A
+Angle #0:30.A@CA #0:30.A@CB #0:396.A@FE: 65.4937
+currently processing residue...CYS 29.A
+stipped to only code...CYS
+stripped to only the number, this is residue 29
+ResID: CYS 29.A
+Angle #0:29.A@CA #0:29.A@CB #0:396.A@FE: 118.189
+

@@ -65,7 +65,6 @@ for activeLigand in ligandList:
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
     get_residues_within_xA.fn(activeLigand,activeSourcePath,activeResultPath)
 
-
 #### CALCULATE CA-CB-FE ANGLEs ####################
 sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
 resultPath = "~/heme-binding/results/angles_CA_CB_Fe/"
@@ -94,8 +93,17 @@ for activeLigand in ligandList:
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
     calc_SA_pocket.SA_pocket(activeLigand,activeSourcePath,activeResultPath)
 
-##### CALCULATE ANGLES WHOLE AA TO HEME PLANE #######
-##### KEEP AT BOTTOM, TAKES FOREVER TO RUN #######
+#### CALCULATE DISTANCES ########
+sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
+resultPath = "~/heme-binding/results/only_distances/"
+
+for activeLigand in ligandList:
+    activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
+    activeResultPath = os.path.expanduser(resultPath + activeLigand)
+    calc_distances.d(activeLigand,activeSourcePath,activeResultPath)
+
+#### CALCULATE ANGLES WHOLE AA TO HEME PLANE #######
+#### KEEP AT BOTTOM, TAKES FOREVER TO RUN #######
 # sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
 # resultPath = "~/heme-binding/results/distances_and_angles/"
 #

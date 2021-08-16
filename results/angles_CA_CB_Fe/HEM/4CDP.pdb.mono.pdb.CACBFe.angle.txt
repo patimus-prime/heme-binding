@@ -1,50 +1,50 @@
 #0, chain A: putative heme/hemoglobin transport protein
 4CDP.pdb.mono.pdb opened
-currently processing residue...VAL 192.A
-stipped to only code...VAL
-stripped to only the number, this is residue 192
-ResID: VAL 192.A
-Angle #0:192.A@CA #0:192.A@CB #0:402.A@FE: 109.632
-currently processing residue...HIS 193.A
-stipped to only code...HIS
-stripped to only the number, this is residue 193
-ResID: HIS 193.A
-Angle #0:193.A@CA #0:193.A@CB #0:402.A@FE: 109.772
-currently processing residue...ARG 100.A
-stipped to only code...ARG
-stripped to only the number, this is residue 100
-ResID: ARG 100.A
-Angle #0:100.A@CA #0:100.A@CB #0:402.A@FE: 139.043
-currently processing residue...ASP 191.A
-stipped to only code...ASP
-stripped to only the number, this is residue 191
-ResID: ASP 191.A
-Angle #0:191.A@CA #0:191.A@CB #0:402.A@FE: 101.316
 currently processing residue...LEU 90.A
 stipped to only code...LEU
 stripped to only the number, this is residue 90
 ResID: LEU 90.A
 Angle #0:90.A@CA #0:90.A@CB #0:402.A@FE: 152.765
-currently processing residue...FMT 401.A
-stipped to only code...FMT
-SHIT! Weird molecule, do nothing.
-currently processing residue...HEM 402.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 193.A
+stipped to only code...HIS
+stripped to only the number, this is residue 193
+ResID: HIS 193.A
+Angle #0:193.A@CA #0:193.A@CB #0:402.A@FE: 109.772
 currently processing residue...PHE 243.A
 stipped to only code...PHE
 stripped to only the number, this is residue 243
 ResID: PHE 243.A
 Angle #0:243.A@CA #0:243.A@CB #0:402.A@FE: 125.667
-currently processing residue...ILE 252.A
-stipped to only code...ILE
-stripped to only the number, this is residue 252
-ResID: ILE 252.A
-Angle #0:252.A@CA #0:252.A@CB #0:402.A@FE: 160.778
+currently processing residue...VAL 192.A
+stipped to only code...VAL
+stripped to only the number, this is residue 192
+ResID: VAL 192.A
+Angle #0:192.A@CA #0:192.A@CB #0:402.A@FE: 109.632
+currently processing residue...ASP 191.A
+stipped to only code...ASP
+stripped to only the number, this is residue 191
+ResID: ASP 191.A
+Angle #0:191.A@CA #0:191.A@CB #0:402.A@FE: 101.316
 currently processing residue...MET 241.A
 stipped to only code...MET
 stripped to only the number, this is residue 241
 ResID: MET 241.A
 Angle #0:241.A@CA #0:241.A@CB #0:402.A@FE: 157.12
+currently processing residue...ILE 252.A
+stipped to only code...ILE
+stripped to only the number, this is residue 252
+ResID: ILE 252.A
+Angle #0:252.A@CA #0:252.A@CB #0:402.A@FE: 160.778
+currently processing residue...ARG 100.A
+stipped to only code...ARG
+stripped to only the number, this is residue 100
+ResID: ARG 100.A
+Angle #0:100.A@CA #0:100.A@CB #0:402.A@FE: 139.043
+currently processing residue...HEM 402.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...FMT 401.A
+stipped to only code...FMT
+SHIT! Weird molecule, do nothing.
 

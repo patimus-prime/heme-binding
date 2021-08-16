@@ -1,0 +1,67 @@
+The following problems occurred while reading PDB file for 1S56.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (81 )
+warning: cannot find LINK/SSBOND residue HEM (144 )
+warning: cannot find LINK/SSBOND residue HEM (144 )
+#0, chain A: flavohemoglobin
+1S56.pdb.mono.pdb opened
+currently processing residue...LEU 54.A
+stipped to only code...LEU
+stripped to only the number, this is residue 54
+ResID: LEU 54.A
+Angle #0:54.A@CA #0:54.A@CB #0:144.A@FE: 117.064
+currently processing residue...VAL 94.A
+stipped to only code...VAL
+stripped to only the number, this is residue 94
+ResID: VAL 94.A
+Angle #0:94.A@CA #0:94.A@CB #0:144.A@FE: 156.673
+currently processing residue...HIS 81.A
+stipped to only code...HIS
+stripped to only the number, this is residue 81
+ResID: HIS 81.A
+Angle #0:81.A@CA #0:81.A@CB #0:144.A@FE: 112.678
+currently processing residue...VAL 80.A
+stipped to only code...VAL
+stripped to only the number, this is residue 80
+ResID: VAL 80.A
+Angle #0:80.A@CA #0:80.A@CB #0:144.A@FE: 122.111
+currently processing residue...CYN 145.A
+stipped to only code...CYN
+SHIT! Weird molecule, do nothing.
+currently processing residue...ILE 86.A
+stipped to only code...ILE
+stripped to only the number, this is residue 86
+ResID: ILE 86.A
+Angle #0:86.A@CA #0:86.A@CB #0:144.A@FE: 163.788
+currently processing residue...MET 77.A
+stipped to only code...MET
+stripped to only the number, this is residue 77
+ResID: MET 77.A
+Angle #0:77.A@CA #0:77.A@CB #0:144.A@FE: 79.9304
+currently processing residue...VAL 126.A
+stipped to only code...VAL
+stripped to only the number, this is residue 126
+ResID: VAL 126.A
+Angle #0:126.A@CA #0:126.A@CB #0:144.A@FE: 116.612
+currently processing residue...PHE 46.A
+stipped to only code...PHE
+stripped to only the number, this is residue 46
+ResID: PHE 46.A
+Angle #0:46.A@CA #0:46.A@CB #0:144.A@FE: 100.784
+currently processing residue...GLN 58.A
+stipped to only code...GLN
+stripped to only the number, this is residue 58
+ResID: GLN 58.A
+Angle #0:58.A@CA #0:58.A@CB #0:144.A@FE: 114.908
+currently processing residue...HEC 144.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...TYR 33.A
+stipped to only code...TYR
+stripped to only the number, this is residue 33
+ResID: TYR 33.A
+Angle #0:33.A@CA #0:33.A@CB #0:144.A@FE: 98.2768
+currently processing residue...XE 203.A
+stipped to only code...XE 
+SHIT! Weird molecule, do nothing.
+

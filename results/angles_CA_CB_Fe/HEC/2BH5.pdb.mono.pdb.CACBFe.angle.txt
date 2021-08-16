@@ -1,0 +1,60 @@
+#0, chain X: cytochrome C-550
+2BH5.pdb.mono.pdb opened
+currently processing residue...TYR 79.X
+stipped to only code...TYR
+stripped to only the number, this is residue 79
+ResID: TYR 79.X
+Angle #0:79.X@CA #0:79.X@CB #0:1123.X@FE: 107.597
+currently processing residue...PRO 83.X
+stipped to only code...PRO
+stripped to only the number, this is residue 83
+ResID: PRO 83.X
+Angle #0:83.X@CA #0:83.X@CB #0:1123.X@FE: 141.641
+currently processing residue...HIS 19.X
+stipped to only code...HIS
+stripped to only the number, this is residue 19
+ResID: HIS 19.X
+Angle #0:19.X@CA #0:19.X@CB #0:1123.X@FE: 122.423
+currently processing residue...CYS 18.X
+stipped to only code...CYS
+stripped to only the number, this is residue 18
+ResID: CYS 18.X
+Angle #0:18.X@CA #0:18.X@CB #0:1123.X@FE: 129.925
+currently processing residue...VAL 80.X
+stipped to only code...VAL
+stripped to only the number, this is residue 80
+ResID: VAL 80.X
+Angle #0:80.X@CA #0:80.X@CB #0:1123.X@FE: 86.0062
+currently processing residue...LEU 39.X
+stipped to only code...LEU
+stripped to only the number, this is residue 39
+ResID: LEU 39.X
+Angle #0:39.X@CA #0:39.X@CB #0:1123.X@FE: 123.575
+currently processing residue...CYS 15.X
+stipped to only code...CYS
+stripped to only the number, this is residue 15
+ResID: CYS 15.X
+Angle #0:15.X@CA #0:15.X@CB #0:1123.X@FE: 93.4388
+currently processing residue...HEC 1123.X
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...PHE 102.X
+stipped to only code...PHE
+stripped to only the number, this is residue 102
+ResID: PHE 102.X
+Angle #0:102.X@CA #0:102.X@CB #0:1123.X@FE: 125.906
+currently processing residue...LYS 100.X
+stipped to only code...LYS
+stripped to only the number, this is residue 100
+ResID: LYS 100.X
+Angle #0:100.X@CA #0:100.X@CB #0:1123.X@FE: 174.46
+currently processing residue...PRO 37.X
+stipped to only code...PRO
+stripped to only the number, this is residue 37
+ResID: PRO 37.X
+Angle #0:37.X@CA #0:37.X@CB #0:1123.X@FE: 77.9642
+currently processing residue...GLY 36.X
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+

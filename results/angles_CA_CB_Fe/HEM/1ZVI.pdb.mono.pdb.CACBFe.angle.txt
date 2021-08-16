@@ -1,53 +1,20 @@
 #0, chain A: nitric-oxide synthase, brain
 1ZVI.pdb.mono.pdb opened
-currently processing residue...HEM 900.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
 currently processing residue...ARG 414.A
 stipped to only code...ARG
 stripped to only the number, this is residue 414
 ResID: ARG 414.A
 Angle #0:414.A@CA #0:414.A@CB #0:900.A@FE: 71.6516
-currently processing residue...GLU 592.A
-stipped to only code...GLU
-stripped to only the number, this is residue 592
-ResID: GLU 592.A
-Angle #0:592.A@CA #0:592.A@CB #0:900.A@FE: 140.05
-currently processing residue...CYS 415.A
-stipped to only code...CYS
-stripped to only the number, this is residue 415
-ResID: CYS 415.A
-Angle #0:415.A@CA #0:415.A@CB #0:900.A@FE: 112.744
-currently processing residue...VAL 416.A
-stipped to only code...VAL
-stripped to only the number, this is residue 416
-ResID: VAL 416.A
-Angle #0:416.A@CA #0:416.A@CB #0:900.A@FE: 55.0798
-currently processing residue...GLY 417.A
-stipped to only code...GLY
+currently processing residue...HEM 900.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
 currently processing residue...ARG 418.A
 stipped to only code...ARG
 stripped to only the number, this is residue 418
 ResID: ARG 418.A
 Angle #0:418.A@CA #0:418.A@CB #0:900.A@FE: 69.7795
-currently processing residue...ALA 412.A
-stipped to only code...ALA
-stripped to only the number, this is residue 412
-ResID: ALA 412.A
-Angle #0:412.A@CA #0:412.A@CB #0:900.A@FE: 147.876
-currently processing residue...TRP 587.A
-stipped to only code...TRP
-stripped to only the number, this is residue 587
-ResID: TRP 587.A
-Angle #0:587.A@CA #0:587.A@CB #0:900.A@FE: 40.2585
-currently processing residue...PHE 584.A
-stipped to only code...PHE
-stripped to only the number, this is residue 584
-ResID: PHE 584.A
-Angle #0:584.A@CA #0:584.A@CB #0:900.A@FE: 116.638
-currently processing residue...GLY 586.A
+currently processing residue...GLY 417.A
 stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
 currently processing residue...TRP 409.A
@@ -55,4 +22,37 @@ stipped to only code...TRP
 stripped to only the number, this is residue 409
 ResID: TRP 409.A
 Angle #0:409.A@CA #0:409.A@CB #0:900.A@FE: 90.927
+currently processing residue...VAL 416.A
+stipped to only code...VAL
+stripped to only the number, this is residue 416
+ResID: VAL 416.A
+Angle #0:416.A@CA #0:416.A@CB #0:900.A@FE: 55.0798
+currently processing residue...CYS 415.A
+stipped to only code...CYS
+stripped to only the number, this is residue 415
+ResID: CYS 415.A
+Angle #0:415.A@CA #0:415.A@CB #0:900.A@FE: 112.744
+currently processing residue...PHE 584.A
+stipped to only code...PHE
+stripped to only the number, this is residue 584
+ResID: PHE 584.A
+Angle #0:584.A@CA #0:584.A@CB #0:900.A@FE: 116.638
+currently processing residue...ALA 412.A
+stipped to only code...ALA
+stripped to only the number, this is residue 412
+ResID: ALA 412.A
+Angle #0:412.A@CA #0:412.A@CB #0:900.A@FE: 147.876
+currently processing residue...GLY 586.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...TRP 587.A
+stipped to only code...TRP
+stripped to only the number, this is residue 587
+ResID: TRP 587.A
+Angle #0:587.A@CA #0:587.A@CB #0:900.A@FE: 40.2585
+currently processing residue...GLU 592.A
+stipped to only code...GLU
+stripped to only the number, this is residue 592
+ResID: GLU 592.A
+Angle #0:592.A@CA #0:592.A@CB #0:900.A@FE: 140.05
 

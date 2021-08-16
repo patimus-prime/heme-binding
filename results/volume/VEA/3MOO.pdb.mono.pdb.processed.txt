@@ -1,0 +1,20 @@
+The following problems occurred while reading PDB file for 3MOO.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue GLC (1 )
+warning: cannot find LINK/SSBOND residue GLC (1 )
+warning: cannot find LINK/SSBOND residue HIS (20 )
+warning: cannot find LINK/SSBOND residue AZI (217 )
+warning: cannot find LINK/SSBOND residue AZI (217 )
+#0, chain A: heme oxygenase
+3MOO.pdb.mono.pdb opened
+878 spheres
+Surfnet for "sel" - "sel":  volume = 915.74
+Surfnet for "sel" - "sel" split ? 2:  volume = 6.7673
+Surfnet for "sel" - "sel" split ? 7:  volume = 5.8899
+Surfnet for "sel" - "sel" split ? 1:  volume = 864.48
+Surfnet for "sel" - "sel" split ? 3:  volume = 15.479
+Surfnet for "sel" - "sel" split ? 5:  volume = 5.2748
+Surfnet for "sel" - "sel" split ? 9:  volume = 2.6547
+Surfnet for "sel" - "sel" split ? 6:  volume = 6.0349
+Surfnet for "sel" - "sel" split ? 8:  volume = 5.101
+Surfnet for "sel" - "sel" split ? 4:  volume = 4.057
+

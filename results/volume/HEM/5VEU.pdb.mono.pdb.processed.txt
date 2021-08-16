@@ -1,0 +1,31 @@
+The following problems occurred while reading PDB file for 5VEU.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue HEM (601 )
+warning: cannot find LINK/SSBOND residue HEM (601 )
+#0, chain A: cytochrome P450 3A5
+5VEU.pdb.mono.pdb opened
+1870 spheres
+Surfnet for "sel" - "sel":  volume = 1139.7
+Surfnet for "sel" - "sel" split ? 4:  volume = 13.553
+Surfnet for "sel" - "sel" split ? 3:  volume = 24.676
+Surfnet for "sel" - "sel" split ? 8:  volume = 3.6906
+Surfnet for "sel" - "sel" split ? 12:  volume = 39.328
+Surfnet for "sel" - "sel" split ? 11:  volume = 30.664
+Surfnet for "sel" - "sel" split ? 10:  volume = 14.696
+Surfnet for "sel" - "sel" split ? 2:  volume = 20.916
+Surfnet for "sel" - "sel" split ? 1:  volume = 964.76
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.1135
+Surfnet for "sel" - "sel" split ? 6:  volume = 2.227
+Surfnet for "sel" - "sel" split ? 7:  volume = 8.8379
+Surfnet for "sel" - "sel" split ? 9:  volume = 14.285
+

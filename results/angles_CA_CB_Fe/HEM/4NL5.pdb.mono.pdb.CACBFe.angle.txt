@@ -3,6 +3,23 @@ warning: cannot find LINK/SSBOND residue HIS (75 )
 warning: cannot find LINK/SSBOND residue HEM (201 )
 #0, chain A: heme-degrading monooxygenase hmob
 4NL5.pdb.mono.pdb opened
+currently processing residue...CYN 202.A
+stipped to only code...CYN
+SHIT! Weird molecule, do nothing.
+currently processing residue...TRP 66.A
+stipped to only code...TRP
+stripped to only the number, this is residue 66
+ResID: TRP 66.A
+Angle #0:66.A@CA #0:66.A@CB #0:201.A@FE: 112.701
+currently processing residue...HEM 201.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...VAL 53.A
+stipped to only code...VAL
+stripped to only the number, this is residue 53
+ResID: VAL 53.A
+Angle #0:53.A@CA #0:53.A@CB #0:201.A@FE: 175.033
 currently processing residue...HIS 75.A
 stipped to only code...HIS
 stripped to only the number, this is residue 75
@@ -28,21 +45,4 @@ stipped to only code...ASN
 stripped to only the number, this is residue 7
 ResID: ASN 7.A
 Angle #0:7.A@CA #0:7.A@CB #0:201.A@FE: 170.552
-currently processing residue...HEM 201.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
-currently processing residue...CYN 202.A
-stipped to only code...CYN
-SHIT! Weird molecule, do nothing.
-currently processing residue...TRP 66.A
-stipped to only code...TRP
-stripped to only the number, this is residue 66
-ResID: TRP 66.A
-Angle #0:66.A@CA #0:66.A@CB #0:201.A@FE: 112.701
-currently processing residue...VAL 53.A
-stipped to only code...VAL
-stripped to only the number, this is residue 53
-ResID: VAL 53.A
-Angle #0:53.A@CA #0:53.A@CB #0:201.A@FE: 175.033
 

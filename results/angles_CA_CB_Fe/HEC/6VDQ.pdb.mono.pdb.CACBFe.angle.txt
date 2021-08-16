@@ -1,0 +1,57 @@
+#0, chain A: 3-methyl-L-tyrosine peroxygenase
+6VDQ.pdb.mono.pdb opened
+currently processing residue...HIS 313.A
+stipped to only code...HIS
+stripped to only the number, this is residue 313
+ResID: HIS 313.A
+Angle #0:313.A@CA #0:313.A@CB #0:401.A@FE: 123.295
+currently processing residue...LEU 238.A
+stipped to only code...LEU
+stripped to only the number, this is residue 238
+ResID: LEU 238.A
+Angle #0:238.A@CA #0:238.A@CB #0:401.A@FE: 130.475
+currently processing residue...HIS 274.A
+stipped to only code...HIS
+stripped to only the number, this is residue 274
+ResID: HIS 274.A
+Angle #0:274.A@CA #0:274.A@CB #0:401.A@FE: 121.17
+currently processing residue...TYR 310.A
+stipped to only code...TYR
+stripped to only the number, this is residue 310
+ResID: TYR 310.A
+Angle #0:310.A@CA #0:310.A@CB #0:401.A@FE: 57.7313
+currently processing residue...HEC 401.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...THR 309.A
+stipped to only code...THR
+stripped to only the number, this is residue 309
+ResID: THR 309.A
+Angle #0:309.A@CA #0:309.A@CB #0:401.A@FE: 99.5431
+currently processing residue...TRP 271.A
+stipped to only code...TRP
+stripped to only the number, this is residue 271
+ResID: TRP 271.A
+Angle #0:271.A@CA #0:271.A@CB #0:401.A@FE: 138.854
+currently processing residue...PHE 320.A
+stipped to only code...PHE
+stripped to only the number, this is residue 320
+ResID: PHE 320.A
+Angle #0:320.A@CA #0:320.A@CB #0:401.A@FE: 123.165
+currently processing residue...CYS 317.A
+stipped to only code...CYS
+stripped to only the number, this is residue 317
+ResID: CYS 317.A
+Angle #0:317.A@CA #0:317.A@CB #0:401.A@FE: 153.487
+currently processing residue...ILE 278.A
+stipped to only code...ILE
+stripped to only the number, this is residue 278
+ResID: ILE 278.A
+Angle #0:278.A@CA #0:278.A@CB #0:401.A@FE: 112.02
+currently processing residue...LEU 277.A
+stipped to only code...LEU
+stripped to only the number, this is residue 277
+ResID: LEU 277.A
+Angle #0:277.A@CA #0:277.A@CB #0:401.A@FE: 130.848
+

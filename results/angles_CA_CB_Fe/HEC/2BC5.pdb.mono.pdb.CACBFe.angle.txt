@@ -1,0 +1,65 @@
+The following problems occurred while reading PDB file for 2BC5.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+#0, chain A: cytochrome B-562
+2BC5.pdb.mono.pdb opened
+currently processing residue...MET 7.A
+stipped to only code...MET
+stripped to only the number, this is residue 7
+ResID: MET 7.A
+Angle #0:7.A@CA #0:7.A@CB #0:150.A@FE: 112.073
+currently processing residue...ASN 99.A
+stipped to only code...ASN
+stripped to only the number, this is residue 99
+ResID: ASN 99.A
+Angle #0:99.A@CA #0:99.A@CB #0:150.A@FE: 26.5703
+currently processing residue...HEC 150.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...LEU 10.A
+stipped to only code...LEU
+stripped to only the number, this is residue 10
+ResID: LEU 10.A
+Angle #0:10.A@CA #0:10.A@CB #0:150.A@FE: 145.522
+currently processing residue...ARG 106.A
+stipped to only code...ARG
+stripped to only the number, this is residue 106
+ResID: ARG 106.A
+Angle #0:106.A@CA #0:106.A@CB #0:150.A@FE: 119.295
+currently processing residue...CYS 98.A
+stipped to only code...CYS
+stripped to only the number, this is residue 98
+ResID: CYS 98.A
+Angle #0:98.A@CA #0:98.A@CB #0:150.A@FE: 83.1994
+currently processing residue...CYS 101.A
+stipped to only code...CYS
+stripped to only the number, this is residue 101
+ResID: CYS 101.A
+Angle #0:101.A@CA #0:101.A@CB #0:150.A@FE: 122.738
+currently processing residue...HIS 102.A
+stipped to only code...HIS
+stripped to only the number, this is residue 102
+ResID: HIS 102.A
+Angle #0:102.A@CA #0:102.A@CB #0:150.A@FE: 96.2948
+currently processing residue...LEU 3.A
+stipped to only code...LEU
+stripped to only the number, this is residue 3
+ResID: LEU 3.A
+Angle #0:3.A@CA #0:3.A@CB #0:150.A@FE: 93.4646
+currently processing residue...PHE 65.A
+stipped to only code...PHE
+stripped to only the number, this is residue 65
+ResID: PHE 65.A
+Angle #0:65.A@CA #0:65.A@CB #0:150.A@FE: 87.4034
+

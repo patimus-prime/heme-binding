@@ -1,0 +1,26 @@
+The following problems occurred while reading PDB file for 3X15.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue HEC (200 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+#0, chain A: cytochrome C552
+3X15.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3X15.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 5722.9
+  Total solvent accessible surface area = 7493.62
+

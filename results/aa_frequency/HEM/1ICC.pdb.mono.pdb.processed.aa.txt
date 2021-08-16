@@ -1,0 +1,67 @@
+The following problems occurred while reading PDB file for 1ICC.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HOH (203 )
+warning: cannot find LINK/SSBOND residue HOH (203 )
+warning: cannot find LINK/SSBOND residue HOH (202 )
+warning: cannot find LINK/SSBOND residue HOH (202 )
+warning: cannot find LINK/SSBOND residue HOH (204 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+#0, chain A: cytochrome B5 outer mitochondrial membrane isoform
+1ICC.pdb.mono.pdb opened
+ALA 67.A
+ASP 66.A
+HOH 213.A
+PRO 65.A
+HOH 224.A
+SER 64.A
+HOH 243.A
+HIS 63.A
+GLY 62.A
+VAL 61.A
+HOH 295.A
+PHE 58.A
+SER 57.A
+LEU 32.A
+HOH 292.A
+THR 55.A
+ALA 54.A
+HEM 201.A
+ALA 50.A
+GLN 49.A
+GLU 48.A
+ARG 47.A
+HIS 39.A
+VAL 45.A
+TYR 30.A
+GLU 44.A
+GLY 42.A
+GLU 38.A
+GLY 41.A
+PRO 40.A
+HOH 238.A
+LEU 46.A
+PHE 35.A
+TYR 74.A
+HOH 227.A
+GLN 73.A
+LYS 72.A
+LEU 71.A
+MET 70.A
+GLU 69.A
+HOH 263.A
+ARG 68.A
+ILE 25.A
+MET 23.A
+HOH 255.A
+HOH 304.A
+

@@ -1,0 +1,73 @@
+The following problems occurred while reading PDB file for 2CN4.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (32 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue HEM (1175 )
+#0, chain A: hemophore hasa
+2CN4.pdb.mono.pdb opened
+Atom being analyzed... HEM 1175.A CAA ... Distance to Fe... 5.7369452673
+Atom being analyzed... HEM 1175.A CMA ... Distance to Fe... 5.71631218532
+Atom being analyzed... HEM 1175.A C4A ... Distance to Fe... 3.07434155552
+Atom being analyzed... HEM 1175.A C3A ... Distance to Fe... 4.29628967832
+Atom being analyzed... HEM 1175.A C2A ... Distance to Fe... 4.31156700052
+Atom being analyzed... HEM 1175.A C1A ... Distance to Fe... 3.09827742463
+Atom being analyzed... HEM 1175.A NA ... Distance to Fe... 2.06485883295
+Atom being analyzed... HEM 1175.A CHD ... Distance to Fe... 3.42511693231
+Atom being analyzed... HEM 1175.A CHC ... Distance to Fe... 3.44206696623
+Atom being analyzed... HEM 1175.A CHB ... Distance to Fe... 3.42295661673
+Atom being analyzed... HEM 1175.A CHA ... Distance to Fe... 3.4660643387
+Atom being analyzed... HEM 1175.A FE ... Distance to Fe... 0.0
+Atom being analyzed... LEU 77.A CD1 ... Distance to Fe... 5.87284309343
+Atom being analyzed... LEU 77.A O ... Distance to Fe... 6.70827347385
+Atom being analyzed... LEU 77.A C ... Distance to Fe... 6.95734273987
+Atom being analyzed... LEU 77.A CA ... Distance to Fe... 6.36926447873
+Atom being analyzed... LEU 77.A N ... Distance to Fe... 6.83619930956
+Atom being analyzed... TYR 137.A CE1 ... Distance to Fe... 5.99998866666
+Atom being analyzed... TYR 137.A CD1 ... Distance to Fe... 6.2857683699
+Atom being analyzed... TYR 75.A OH ... Distance to Fe... 1.96756956675
+Atom being analyzed... TYR 75.A CZ ... Distance to Fe... 2.95186212415
+Atom being analyzed... TYR 75.A CE2 ... Distance to Fe... 3.7738586354
+Atom being analyzed... TYR 75.A CE1 ... Distance to Fe... 3.6962555377
+Atom being analyzed... TYR 75.A CD2 ... Distance to Fe... 4.98775600847
+Atom being analyzed... TYR 55.A OH ... Distance to Fe... 6.80623934343
+Atom being analyzed... TYR 75.A CD1 ... Distance to Fe... 4.9377437155
+Atom being analyzed... TYR 75.A CG ... Distance to Fe... 5.49544920821
+Atom being analyzed... TYR 75.A CB ... Distance to Fe... 6.94994057529
+Atom being analyzed... THR 84.A N ... Distance to Fe... 6.80457294766
+Atom being analyzed... HIS 83.A NE2 ... Distance to Fe... 5.66351807625
+Atom being analyzed... HIS 83.A CE1 ... Distance to Fe... 4.64613323098
+Atom being analyzed... HIS 83.A CD2 ... Distance to Fe... 5.66030432044
+Atom being analyzed... HIS 83.A ND1 ... Distance to Fe... 3.83230752941
+Atom being analyzed... HIS 83.A CG ... Distance to Fe... 4.59061477364
+Atom being analyzed... HIS 83.A CB ... Distance to Fe... 4.64168353079
+Atom being analyzed... HIS 83.A O ... Distance to Fe... 5.77431389864
+Atom being analyzed... HIS 83.A C ... Distance to Fe... 5.86598141831
+Atom being analyzed... HIS 83.A CA ... Distance to Fe... 5.30433643352
+Atom being analyzed... HIS 83.A N ... Distance to Fe... 6.53955266054
+Atom being analyzed... HEM 1175.A CBD ... Distance to Fe... 6.92017875492
+Atom being analyzed... HEM 1175.A CAD ... Distance to Fe... 5.69641360858
+Atom being analyzed... HEM 1175.A CMD ... Distance to Fe... 5.74025957601
+Atom being analyzed... HEM 1175.A C4D ... Distance to Fe... 3.10173338635
+Atom being analyzed... HEM 1175.A C3D ... Distance to Fe... 4.34044571444
+Atom being analyzed... HEM 1175.A C2D ... Distance to Fe... 4.33862720224
+Atom being analyzed... HEM 1175.A C1D ... Distance to Fe... 3.09304138349
+Atom being analyzed... HEM 1175.A ND ... Distance to Fe... 2.09817897235
+Atom being analyzed... HEM 1175.A CBC ... Distance to Fe... 6.48634673757
+Atom being analyzed... HEM 1175.A CAC ... Distance to Fe... 5.74061930457
+Atom being analyzed... HEM 1175.A CMC ... Distance to Fe... 5.72151256225
+Atom being analyzed... MET 140.A CE ... Distance to Fe... 5.20152102755
+Atom being analyzed... HEM 1175.A C3C ... Distance to Fe... 4.2899624707
+Atom being analyzed... HEM 1175.A C2C ... Distance to Fe... 4.29110428678
+Atom being analyzed... HEM 1175.A C1C ... Distance to Fe... 3.07583695927
+Atom being analyzed... HEM 1175.A NC ... Distance to Fe... 2.05458901
+Atom being analyzed... HEM 1175.A CBB ... Distance to Fe... 6.15971801303
+Atom being analyzed... HEM 1175.A CAB ... Distance to Fe... 5.71052668324
+Atom being analyzed... HEM 1175.A CMB ... Distance to Fe... 5.70484890247
+Atom being analyzed... HEM 1175.A C4B ... Distance to Fe... 3.06926522151
+Atom being analyzed... HEM 1175.A C3B ... Distance to Fe... 4.2827659287
+Atom being analyzed... HEM 1175.A C4C ... Distance to Fe... 3.0674507331
+Atom being analyzed... HEM 1175.A C2B ... Distance to Fe... 4.27774531734
+Atom being analyzed... HEM 1175.A C1B ... Distance to Fe... 3.05735588377
+Atom being analyzed... HEM 1175.A NB ... Distance to Fe... 2.0432611189
+Atom being analyzed... HEM 1175.A CBA ... Distance to Fe... 6.61922858043
+Atom being analyzed... MET 140.A SD ... Distance to Fe... 6.43103296524
+

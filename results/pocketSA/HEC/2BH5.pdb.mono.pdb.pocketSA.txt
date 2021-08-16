@@ -1,0 +1,15 @@
+#0, chain X: cytochrome C-550
+2BH5.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: compute_SES_area: ERROR: Solide angle (-0.000018) for contact face 41 too large or too small
+
+Surface 2BH5.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  7 connected surface components
+  Total solvent excluded surface area = 6359.51
+    component areas = 6122.31, 47.5901, 47.5692, 42.108, 34.984, 33.189, 31.7572
+  Total solvent accessible surface area = 6975.7
+    component areas = 6968.51, 2.21519, 2.57528, 1.10466, 0.648494, 0.388225, 0.254382
+

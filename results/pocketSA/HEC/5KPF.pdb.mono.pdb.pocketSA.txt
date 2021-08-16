@@ -1,0 +1,30 @@
+The following problems occurred while reading PDB file for 5KPF.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue CYS (17 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue MET (80 )
+#0, chain A: cytochrome C iso-1
+5KPF.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 5KPF.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  3 connected surface components
+  Total solvent excluded surface area = 5485.51
+    component areas = 5415.26, 42.941, 27.3057
+  Total solvent accessible surface area = 6155.84
+    component areas = 6154.17, 1.6402, 0.0315797
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 5KPF.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  3 connected surface components
+  Total solvent excluded surface area = 5485.51
+    component areas = 5415.26, 42.941, 27.3057
+  Total solvent accessible surface area = 6155.84
+    component areas = 6154.17, 1.6402, 0.0315797
+

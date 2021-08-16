@@ -1,0 +1,57 @@
+The following problems occurred while reading PDB file for 3EAH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (63 )
+warning: cannot find LINK/SSBOND residue CYS (68 )
+warning: cannot find LINK/SSBOND residue CYS (150 )
+#0, chain A: nitric oxide synthase, endothelial
+3EAH.pdb.mono.pdb opened
+currently processing residue...CYS 150.A
+stipped to only code...CYS
+stripped to only the number, this is residue 150
+ResID: CYS 150.A
+Angle #0:150.A@CA #0:150.A@CB #0:861.A@FE: 109.907
+currently processing residue...PHE 319.A
+stipped to only code...PHE
+stripped to only the number, this is residue 319
+ResID: PHE 319.A
+Angle #0:319.A@CA #0:319.A@CB #0:861.A@FE: 117.813
+currently processing residue...ARG 149.A
+stipped to only code...ARG
+stripped to only the number, this is residue 149
+ResID: ARG 149.A
+Angle #0:149.A@CA #0:149.A@CB #0:861.A@FE: 75.1674
+currently processing residue...327 864.A
+stipped to only code...327
+SHIT! Weird molecule, do nothing.
+currently processing residue...ARG 153.A
+stipped to only code...ARG
+stripped to only the number, this is residue 153
+ResID: ARG 153.A
+Angle #0:153.A@CA #0:153.A@CB #0:861.A@FE: 70.9288
+currently processing residue...HEC 861.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...TRP 322.A
+stipped to only code...TRP
+stripped to only the number, this is residue 322
+ResID: TRP 322.A
+Angle #0:322.A@CA #0:322.A@CB #0:861.A@FE: 42.5273
+currently processing residue...GLY 152.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...TRP 144.A
+stipped to only code...TRP
+stripped to only the number, this is residue 144
+ResID: TRP 144.A
+Angle #0:144.A@CA #0:144.A@CB #0:861.A@FE: 91.6868
+currently processing residue...VAL 151.A
+stipped to only code...VAL
+stripped to only the number, this is residue 151
+ResID: VAL 151.A
+Angle #0:151.A@CA #0:151.A@CB #0:861.A@FE: 58.7518
+currently processing residue...ALA 147.A
+stipped to only code...ALA
+stripped to only the number, this is residue 147
+ResID: ALA 147.A
+Angle #0:147.A@CA #0:147.A@CB #0:861.A@FE: 152.038
+

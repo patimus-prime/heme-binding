@@ -2,13 +2,13 @@
 2IIZ.pdb.mono.pdb opened
 1542 spheres
 Surfnet for "sel" - "sel":  volume = 1133.5
-Surfnet for "sel" - "sel" split ? 7:  volume = 12.192
-Surfnet for "sel" - "sel" split ? 1:  volume = 1015.6
-Surfnet for "sel" - "sel" split ? 9:  volume = 3.5422
-Surfnet for "sel" - "sel" split ? 3:  volume = 3.0079
-Surfnet for "sel" - "sel" split ? 5:  volume = 2.6342
 Surfnet for "sel" - "sel" split ? 2:  volume = 58.492
 Surfnet for "sel" - "sel" split ? 4:  volume = 18.119
-Surfnet for "sel" - "sel" split ? 6:  volume = 15.158
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.6342
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.0079
 Surfnet for "sel" - "sel" split ? 8:  volume = 4.7347
+Surfnet for "sel" - "sel" split ? 1:  volume = 1015.6
+Surfnet for "sel" - "sel" split ? 6:  volume = 15.158
+Surfnet for "sel" - "sel" split ? 7:  volume = 12.192
+Surfnet for "sel" - "sel" split ? 9:  volume = 3.5422
 

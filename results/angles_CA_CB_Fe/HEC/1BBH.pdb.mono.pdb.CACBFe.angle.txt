@@ -1,0 +1,51 @@
+The following problems occurred while reading PDB file for 1BBH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (121 )
+warning: cannot find LINK/SSBOND residue CYS (124 )
+warning: cannot find LINK/SSBOND residue HIS (125 )
+#0, chain A: cytochrome C'
+1BBH.pdb.mono.pdb opened
+currently processing residue...TYR 16.A
+stipped to only code...TYR
+stripped to only the number, this is residue 16
+ResID: TYR 16.A
+Angle #0:16.A@CA #0:16.A@CB #0:132.A@FE: 126.038
+currently processing residue...CYS 121.A
+stipped to only code...CYS
+stripped to only the number, this is residue 121
+ResID: CYS 121.A
+Angle #0:121.A@CA #0:121.A@CB #0:132.A@FE: 88.6062
+currently processing residue...HEC 132.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...ARG 129.A
+stipped to only code...ARG
+stripped to only the number, this is residue 129
+ResID: ARG 129.A
+Angle #0:129.A@CA #0:129.A@CB #0:132.A@FE: 148.175
+currently processing residue...CYS 124.A
+stipped to only code...CYS
+stripped to only the number, this is residue 124
+ResID: CYS 124.A
+Angle #0:124.A@CA #0:124.A@CB #0:132.A@FE: 118.466
+currently processing residue...MET 19.A
+stipped to only code...MET
+stripped to only the number, this is residue 19
+ResID: MET 19.A
+Angle #0:19.A@CA #0:19.A@CB #0:132.A@FE: 132.162
+currently processing residue...HIS 125.A
+stipped to only code...HIS
+stripped to only the number, this is residue 125
+ResID: HIS 125.A
+Angle #0:125.A@CA #0:125.A@CB #0:132.A@FE: 95.2502
+currently processing residue...GLU 17.A
+stipped to only code...GLU
+stripped to only the number, this is residue 17
+ResID: GLU 17.A
+Angle #0:17.A@CA #0:17.A@CB #0:132.A@FE: 46.847
+currently processing residue...TYR 58.A
+stipped to only code...TYR
+stripped to only the number, this is residue 58
+ResID: TYR 58.A
+Angle #0:58.A@CA #0:58.A@CB #0:132.A@FE: 118.403
+

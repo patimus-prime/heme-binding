@@ -1,0 +1,96 @@
+The following problems occurred while reading PDB file for 1ZJ8.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (69 )
+warning: cannot find LINK/SSBOND residue CYS (417 )
+warning: cannot find LINK/SSBOND residue CYS (423 )
+warning: cannot find LINK/SSBOND residue CYS (463 )
+warning: cannot find LINK/SSBOND residue CYS (467 )
+#0, chain A: sulfite reductase NIRA
+1ZJ8.pdb.mono.pdb opened
+Atom being analyzed... SRM 557.A CAB ... Distance to Fe... 4.5768205121
+Atom being analyzed... SRM 557.A C3B ... Distance to Fe... 4.21390673841
+Atom being analyzed... SRM 557.A O4B ... Distance to Fe... 6.7808366003
+Atom being analyzed... SRM 557.A CEB ... Distance to Fe... 6.4722561754
+Atom being analyzed... SF4 556.A S1 ... Distance to Fe... 5.72736632319
+Atom being analyzed... SRM 557.A CDB ... Distance to Fe... 5.07364898273
+Atom being analyzed... SRM 557.A CMB ... Distance to Fe... 5.41389545522
+Atom being analyzed... SRM 557.A C2B ... Distance to Fe... 4.32684931561
+Atom being analyzed... SRM 557.A C1B ... Distance to Fe... 3.01810039594
+Atom being analyzed... SRM 557.A NB ... Distance to Fe... 1.96610554142
+Atom being analyzed... SF4 556.A FE4 ... Distance to Fe... 6.99733413523
+Atom being analyzed... SRM 557.A C4A ... Distance to Fe... 2.99363758662
+Atom being analyzed... ARG 97.A NE ... Distance to Fe... 6.76244667262
+Atom being analyzed... SRM 557.A CBA ... Distance to Fe... 6.61477709375
+Atom being analyzed... SRM 557.A CAA ... Distance to Fe... 5.37079482014
+Atom being analyzed... SRM 557.A C3A ... Distance to Fe... 4.30932222049
+Atom being analyzed... CYS 467.A SG ... Distance to Fe... 2.73986733255
+Atom being analyzed... SRM 557.A O3A ... Distance to Fe... 6.50018238206
+Atom being analyzed... CYS 467.A O ... Distance to Fe... 5.62044606771
+Atom being analyzed... SRM 557.A CDA ... Distance to Fe... 5.45434148179
+Atom being analyzed... SRM 557.A CMA ... Distance to Fe... 4.93495005041
+Atom being analyzed... SRM 557.A C2A ... Distance to Fe... 4.32339924134
+Atom being analyzed... SRM 557.A CEA ... Distance to Fe... 6.5481464553
+Atom being analyzed... SRM 557.A NA ... Distance to Fe... 1.99965146963
+Atom being analyzed... SRM 557.A CHD ... Distance to Fe... 3.45475136587
+Atom being analyzed... SRM 557.A CHC ... Distance to Fe... 3.25433772064
+Atom being analyzed... SRM 557.A CHB ... Distance to Fe... 3.34929201474
+Atom being analyzed... SRM 557.A CHA ... Distance to Fe... 3.41614373234
+Atom being analyzed... ASP 129.A OD1 ... Distance to Fe... 6.87398697991
+Atom being analyzed... GLN 134.A OE1 ... Distance to Fe... 6.87050805982
+Atom being analyzed... SRM 557.A FE ... Distance to Fe... 0.0
+Atom being analyzed... SF4 556.A S4 ... Distance to Fe... 5.4809864988
+Atom being analyzed... LYS 207.A CD ... Distance to Fe... 6.15863702454
+Atom being analyzed... ASN 465.A CB ... Distance to Fe... 6.117298832
+Atom being analyzed... ASN 465.A O ... Distance to Fe... 6.32979328256
+Atom being analyzed... ASN 465.A C ... Distance to Fe... 6.72961521931
+Atom being analyzed... SF4 556.A FE3 ... Distance to Fe... 6.66555961642
+Atom being analyzed... SF4 556.A FE2 ... Distance to Fe... 4.58574170664
+Atom being analyzed... CYS 467.A C ... Distance to Fe... 5.62254204075
+Atom being analyzed... SF4 556.A FE1 ... Distance to Fe... 6.95861408615
+Atom being analyzed... CL 558.A CL ... Distance to Fe... 2.13287106971
+Atom being analyzed... CYS 467.A CB ... Distance to Fe... 3.89158849315
+Atom being analyzed... CYS 467.A N ... Distance to Fe... 5.40975498521
+Atom being analyzed... ALA 468.A N ... Distance to Fe... 6.77489630917
+Atom being analyzed... SRM 557.A C1A ... Distance to Fe... 3.02746857952
+Atom being analyzed... LYS 209.A NZ ... Distance to Fe... 4.79433113166
+Atom being analyzed... SER 466.A O ... Distance to Fe... 6.6981754232
+Atom being analyzed... SER 466.A C ... Distance to Fe... 6.38068193848
+Atom being analyzed... LYS 209.A CE ... Distance to Fe... 5.71387819261
+Atom being analyzed... TYR 69.A OH ... Distance to Fe... 6.96334890696
+Atom being analyzed... SRM 557.A C4D ... Distance to Fe... 3.01788966001
+Atom being analyzed... SRM 557.A C2D ... Distance to Fe... 4.15030794038
+Atom being analyzed... SRM 557.A O3D ... Distance to Fe... 6.06649486936
+Atom being analyzed... SRM 557.A C4B ... Distance to Fe... 2.92012893551
+Atom being analyzed... SRM 557.A CED ... Distance to Fe... 6.35870835941
+Atom being analyzed... SRM 557.A CDD ... Distance to Fe... 5.5352695508
+Atom being analyzed... SRM 557.A C3D ... Distance to Fe... 4.15682619314
+Atom being analyzed... ASN 465.A CG ... Distance to Fe... 6.85248867201
+Atom being analyzed... CYS 467.A CA ... Distance to Fe... 4.57235923786
+Atom being analyzed... SRM 557.A CBD ... Distance to Fe... 6.27179679199
+Atom being analyzed... SRM 557.A CAD ... Distance to Fe... 5.51303355694
+Atom being analyzed... ARG 166.A NH1 ... Distance to Fe... 5.8811608548
+Atom being analyzed... ARG 97.A NH1 ... Distance to Fe... 5.48319304785
+Atom being analyzed... ARG 166.A CZ ... Distance to Fe... 6.94223112551
+Atom being analyzed... ASN 465.A ND2 ... Distance to Fe... 6.91945872161
+Atom being analyzed... SRM 557.A ND ... Distance to Fe... 2.02408127307
+Atom being analyzed... SRM 557.A C4C ... Distance to Fe... 2.99815443231
+Atom being analyzed... LYS 207.A NZ ... Distance to Fe... 4.09798596874
+Atom being analyzed... SRM 557.A CCC ... Distance to Fe... 6.65959172923
+Atom being analyzed... SRM 557.A CBC ... Distance to Fe... 6.57126121837
+Atom being analyzed... SRM 557.A CAC ... Distance to Fe... 5.57160246249
+Atom being analyzed... SRM 557.A C3C ... Distance to Fe... 4.14318814441
+Atom being analyzed... LYS 207.A CE ... Distance to Fe... 5.58217403885
+Atom being analyzed... SRM 557.A O3C ... Distance to Fe... 6.16955962772
+Atom being analyzed... SRM 557.A CEC ... Distance to Fe... 6.39990632744
+Atom being analyzed... SRM 557.A CDC ... Distance to Fe... 5.50862287691
+Atom being analyzed... SRM 557.A C2C ... Distance to Fe... 4.14827108565
+Atom being analyzed... ARG 97.A CZ ... Distance to Fe... 5.57078405613
+Atom being analyzed... SRM 557.A C1C ... Distance to Fe... 2.9181578093
+Atom being analyzed... SRM 557.A NC ... Distance to Fe... 1.93239695715
+Atom being analyzed... ARG 97.A NH2 ... Distance to Fe... 4.71526086235
+Atom being analyzed... SF4 556.A S3 ... Distance to Fe... 6.25468792187
+Atom being analyzed... SRM 557.A O2B ... Distance to Fe... 5.88128710403
+Atom being analyzed... SRM 557.A C1D ... Distance to Fe... 2.97122550474
+Atom being analyzed... SRM 557.A CCB ... Distance to Fe... 6.18851565402
+Atom being analyzed... SRM 557.A CBB ... Distance to Fe... 5.56582302989
+Atom being analyzed... SRM 557.A O1C ... Distance to Fe... 5.95114720033
+

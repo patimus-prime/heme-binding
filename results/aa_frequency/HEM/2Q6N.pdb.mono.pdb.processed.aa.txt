@@ -1,0 +1,73 @@
+The following problems occurred while reading PDB file for 2Q6N.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue HEM (500 )
+warning: cannot find LINK/SSBOND residue HEM (500 )
+warning: cannot find LINK/SSBOND residue HEM (500 )
+warning: cannot find LINK/SSBOND residue HEM (500 )
+#0, chain A: cytochrome P450 2B4
+2Q6N.pdb.mono.pdb opened
+SER 294.A
+SER 128.A
+LEU 295.A
+PHE 296.A
+PHE 297.A
+ALA 298.A
+1CI 501.A
+GLY 299.A
+THR 300.A
+TRP 121.A
+GLY 438.A
+THR 302.A
+THR 303.A
+SER 304.A
+MET 132.A
+THR 305.A
+HEM 500.A
+THR 306.A
+ALA 116.A
+PHE 115.A
+ILE 114.A
+VAL 113.A
+ASP 361.A
+LEU 362.A
+ILE 363.A
+PHE 365.A
+GLY 366.A
+VAL 367.A
+ARG 125.A
+PRO 368.A
+HIS 369.A
+LEU 307.A
+ARG 98.A
+GLY 97.A
+MET 427.A
+GLN 357.A
+PRO 428.A
+PHE 429.A
+SER 430.A
+LEU 431.A
+LEU 446.A
+ILE 179.A
+LYS 433.A
+THR 291.A
+ARG 434.A
+ILE 435.A
+LEU 88.A
+CYS 436.A
+LEU 437.A
+MET 137.A
+GLU 439.A
+GLY 440.A
+ILE 441.A
+PRO 390.A
+ALA 442.A
+GLU 301.A
+ARG 443.A
+LEU 392.A
+GLU 445.A
+THR 175.A
+

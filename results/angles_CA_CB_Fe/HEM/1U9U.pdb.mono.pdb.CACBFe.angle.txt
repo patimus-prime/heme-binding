@@ -1,10 +1,45 @@
 #0, chain A: cytochrome B5
 1U9U.pdb.mono.pdb opened
+currently processing residue...PHE 35.A
+stipped to only code...PHE
+stripped to only the number, this is residue 35
+ResID: PHE 35.A
+Angle #0:35.A@CA #0:35.A@CB #0:90.A@FE: 120.968
+currently processing residue...VAL 61.A
+stipped to only code...VAL
+stripped to only the number, this is residue 61
+ResID: VAL 61.A
+Angle #0:61.A@CA #0:61.A@CB #0:90.A@FE: 152.251
 currently processing residue...TYR 58.A
 stipped to only code...TYR
 stripped to only the number, this is residue 58
 ResID: TYR 58.A
 Angle #0:58.A@CA #0:58.A@CB #0:90.A@FE: 75.1903
+currently processing residue...LEU 46.A
+stipped to only code...LEU
+stripped to only the number, this is residue 46
+ResID: LEU 46.A
+Angle #0:46.A@CA #0:46.A@CB #0:90.A@FE: 99.9911
+currently processing residue...HEM 90.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...VAL 45.A
+stipped to only code...VAL
+stripped to only the number, this is residue 45
+ResID: VAL 45.A
+Angle #0:45.A@CA #0:45.A@CB #0:90.A@FE: 133.123
+currently processing residue...GLY 42.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLY 41.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...ALA 67.A
+stipped to only code...ALA
+stripped to only the number, this is residue 67
+ResID: ALA 67.A
+Angle #0:67.A@CA #0:67.A@CB #0:90.A@FE: 136.61
 currently processing residue...PRO 40.A
 stipped to only code...PRO
 stripped to only the number, this is residue 40
@@ -15,44 +50,9 @@ stipped to only code...HIS
 stripped to only the number, this is residue 39
 ResID: HIS 39.A
 Angle #0:39.A@CA #0:39.A@CB #0:90.A@FE: 102.275
-currently processing residue...GLY 42.A
-stipped to only code...GLY
-SHIT! Weird molecule, do nothing.
-currently processing residue...ALA 67.A
-stipped to only code...ALA
-stripped to only the number, this is residue 67
-ResID: ALA 67.A
-Angle #0:67.A@CA #0:67.A@CB #0:90.A@FE: 136.61
-currently processing residue...PHE 35.A
-stipped to only code...PHE
-stripped to only the number, this is residue 35
-ResID: PHE 35.A
-Angle #0:35.A@CA #0:35.A@CB #0:90.A@FE: 120.968
-currently processing residue...LEU 46.A
-stipped to only code...LEU
-stripped to only the number, this is residue 46
-ResID: LEU 46.A
-Angle #0:46.A@CA #0:46.A@CB #0:90.A@FE: 99.9911
 currently processing residue...HIS 63.A
 stipped to only code...HIS
 stripped to only the number, this is residue 63
 ResID: HIS 63.A
 Angle #0:63.A@CA #0:63.A@CB #0:90.A@FE: 116.013
-currently processing residue...VAL 45.A
-stipped to only code...VAL
-stripped to only the number, this is residue 45
-ResID: VAL 45.A
-Angle #0:45.A@CA #0:45.A@CB #0:90.A@FE: 133.123
-currently processing residue...VAL 61.A
-stipped to only code...VAL
-stripped to only the number, this is residue 61
-ResID: VAL 61.A
-Angle #0:61.A@CA #0:61.A@CB #0:90.A@FE: 152.251
-currently processing residue...HEM 90.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
-currently processing residue...GLY 41.A
-stipped to only code...GLY
-SHIT! Weird molecule, do nothing.
 

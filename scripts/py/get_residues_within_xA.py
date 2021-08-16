@@ -58,7 +58,7 @@ def fn(activeLigand,activeSourcePath,activeResultPath):
         rc("del ions")
 
         # GET RESIDUES.
-        rc("sel :HEM zr < "+settings.angstromDistance)#7.0")
+        rc("sel :"+activeLigand+" zr < "+settings.angstromDistance)#7.0")
         for i in chimera.selection.currentResidues():
             print i
 

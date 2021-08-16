@@ -1,0 +1,25 @@
+The following problems occurred while reading PDB file for 6XNK.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue CYS (17 )
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue LYS (79 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue LYS (79 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue LYS (79 )
+#0, chain A: cytochrome C
+6XNK.pdb.mono.pdb opened
+8616 spheres
+Surfnet for "sel" - "sel":  volume = 2261.4
+Surfnet for "sel" - "sel" split ? 6:  volume = 6.2415
+Surfnet for "sel" - "sel" split ? 2:  volume = 6.9535
+Surfnet for "sel" - "sel" split ? 7:  volume = 1.8682
+Surfnet for "sel" - "sel" split ? 8:  volume = 13.283
+Surfnet for "sel" - "sel" split ? 9:  volume = 3.5438
+Surfnet for "sel" - "sel" split ? 1:  volume = 2214.4
+Surfnet for "sel" - "sel" split ? 3:  volume = 4.5307
+Surfnet for "sel" - "sel" split ? 4:  volume = 4.8643
+Surfnet for "sel" - "sel" split ? 5:  volume = 5.7368
+

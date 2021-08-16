@@ -1,0 +1,67 @@
+The following problems occurred while reading PDB file for 1S56.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (81 )
+warning: cannot find LINK/SSBOND residue HEM (144 )
+warning: cannot find LINK/SSBOND residue HEM (144 )
+#0, chain A: flavohemoglobin
+1S56.pdb.mono.pdb opened
+HOH 428.A
+GLN 41.A
+LEU 42.A
+SER 43.A
+VAL 80.A
+ALA 44.A
+PHE 45.A
+ASN 50.A
+PHE 46.A
+LEU 54.A
+SER 47.A
+GLY 48.A
+THR 49.A
+HOH 460.A
+HOH 419.A
+MET 51.A
+ARG 53.A
+PHE 32.A
+HOH 414.A
+HOH 461.A
+LYS 55.A
+ALA 95.A
+ALA 120.A
+PHE 62.A
+PHE 61.A
+SER 92.A
+LYS 57.A
+HIS 90.A
+GLU 60.A
+MET 88.A
+HOH 404.A
+VAL 59.A
+THR 87.A
+ILE 86.A
+HOH 457.A
+ARG 84.A
+XE 207.A
+XE 203.A
+HEC 144.A
+GLN 58.A
+LEU 93.A
+ALA 75.A
+CYN 145.A
+MET 77.A
+PRO 76.A
+THR 127.A
+VAL 126.A
+GLY 74.A
+PHE 91.A
+VAL 94.A
+TYR 72.A
+ALA 123.A
+LEU 122.A
+PRO 121.A
+TYR 33.A
+ILE 119.A
+THR 73.A
+VAL 118.A
+VAL 36.A
+HIS 81.A
+

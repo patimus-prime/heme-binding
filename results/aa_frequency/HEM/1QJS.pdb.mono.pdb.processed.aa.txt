@@ -1,0 +1,61 @@
+The following problems occurred while reading PDB file for 1QJS.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (27 )
+warning: cannot find LINK/SSBOND residue CYS (126 )
+warning: cannot find LINK/SSBOND residue CYS (165 )
+warning: cannot find LINK/SSBOND residue CYS (230 )
+warning: cannot find LINK/SSBOND residue CYS (339 )
+warning: cannot find LINK/SSBOND residue CYS (391 )
+warning: cannot find LINK/SSBOND residue HIS (213 )
+warning: cannot find LINK/SSBOND residue  NA (512 )
+warning: cannot find LINK/SSBOND residue  NA (512 )
+warning: cannot find LINK/SSBOND residue  NA (512 )
+warning: cannot find LINK/SSBOND residue  NA (513 )
+warning: cannot find LINK/SSBOND residue  NA (513 )
+warning: cannot find LINK/SSBOND residue  NA (513 )
+warning: cannot find LINK/SSBOND residue  NA (513 )
+warning: cannot find LINK/SSBOND residue  NA (522 )
+warning: cannot find LINK/SSBOND residue  NA (522 )
+warning: cannot find LINK/SSBOND residue  NA (522 )
+warning: cannot find LINK/SSBOND residue  NA (523 )
+warning: cannot find LINK/SSBOND residue  NA (523 )
+warning: cannot find LINK/SSBOND residue  NA (523 )
+warning: cannot find LINK/SSBOND residue  NA (523 )
+#0, chain A: hemopexin
+1QJS.pdb.mono.pdb opened
+HIS 272.A
+SER 216.A
+SER 215.A
+ARG 214.A
+ARG 174.A
+HIS 213.A
+THR 228.A
+SER 207.A
+LEU 206.A
+PHE 205.A
+HIS 225.A
+TYR 204.A
+ASP 203.A
+SER 267.A
+MET 44.A
+LEU 199.A
+GLU 226.A
+TYR 197.A
+GLY 196.A
+SER 227.A
+PRO 269.A
+HIS 56.A
+HIS 254.A
+ARG 185.A
+LEU 184.A
+PHE 183.A
+HEM 500.A
+PHE 186.A
+TYR 176.A
+TYR 175.A
+TRP 265.A
+HIS 266.A
+HIS 217.A
+TRP 268.A
+TRP 171.A
+ARG 218.A
+

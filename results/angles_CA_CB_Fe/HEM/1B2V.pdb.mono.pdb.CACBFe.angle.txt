@@ -1,0 +1,57 @@
+#0, chain A: HASA
+1B2V.pdb.mono.pdb opened
+currently processing residue...HIS 83.A
+stipped to only code...HIS
+stripped to only the number, this is residue 83
+ResID: HIS 83.A
+Angle #0:83.A@CA #0:83.A@CB #0:200.A@FE: 102.916
+currently processing residue...SER 42.A
+stipped to only code...SER
+stripped to only the number, this is residue 42
+ResID: SER 42.A
+Angle #0:42.A@CA #0:42.A@CB #0:200.A@FE: 82.8367
+currently processing residue...HEM 200.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...MET 140.A
+stipped to only code...MET
+stripped to only the number, this is residue 140
+ResID: MET 140.A
+Angle #0:140.A@CA #0:140.A@CB #0:200.A@FE: 173.792
+currently processing residue...TYR 137.A
+stipped to only code...TYR
+stripped to only the number, this is residue 137
+ResID: TYR 137.A
+Angle #0:137.A@CA #0:137.A@CB #0:200.A@FE: 107.075
+currently processing residue...VAL 37.A
+stipped to only code...VAL
+stripped to only the number, this is residue 37
+ResID: VAL 37.A
+Angle #0:37.A@CA #0:37.A@CB #0:200.A@FE: 150.539
+currently processing residue...LEU 77.A
+stipped to only code...LEU
+stripped to only the number, this is residue 77
+ResID: LEU 77.A
+Angle #0:77.A@CA #0:77.A@CB #0:200.A@FE: 57.1497
+currently processing residue...TYR 75.A
+stipped to only code...TYR
+stripped to only the number, this is residue 75
+ResID: TYR 75.A
+Angle #0:75.A@CA #0:75.A@CB #0:200.A@FE: 132.454
+currently processing residue...THR 84.A
+stipped to only code...THR
+stripped to only the number, this is residue 84
+ResID: THR 84.A
+Angle #0:84.A@CA #0:84.A@CB #0:200.A@FE: 18.8827
+currently processing residue...HIS 32.A
+stipped to only code...HIS
+stripped to only the number, this is residue 32
+ResID: HIS 32.A
+Angle #0:32.A@CA #0:32.A@CB #0:200.A@FE: 116.315
+currently processing residue...ASN 41.A
+stipped to only code...ASN
+stripped to only the number, this is residue 41
+ResID: ASN 41.A
+Angle #0:41.A@CA #0:41.A@CB #0:200.A@FE: 79.4068
+

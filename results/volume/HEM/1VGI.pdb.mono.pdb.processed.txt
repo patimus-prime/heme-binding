@@ -1,0 +1,17 @@
+#0, chain A: heme oxygenase 1
+1VGI.pdb.mono.pdb opened
+966 spheres
+Surfnet for "sel" - "sel":  volume = 982.91
+Surfnet for "sel" - "sel" split ? 9:  volume = 11.389
+Surfnet for "sel" - "sel" split ? 2:  volume = 6.5934
+Surfnet for "sel" - "sel" split ? 1:  volume = 870.44
+Surfnet for "sel" - "sel" split ? 8:  volume = 2.853
+Surfnet for "sel" - "sel" split ? 12:  volume = 4.3585
+Surfnet for "sel" - "sel" split ? 11:  volume = 2.8158
+Surfnet for "sel" - "sel" split ? 5:  volume = 5.4145
+Surfnet for "sel" - "sel" split ? 10:  volume = 4.2665
+Surfnet for "sel" - "sel" split ? 7:  volume = 1.826
+Surfnet for "sel" - "sel" split ? 3:  volume = 58.458
+Surfnet for "sel" - "sel" split ? 4:  volume = 1.9738
+Surfnet for "sel" - "sel" split ? 6:  volume = 12.52
+

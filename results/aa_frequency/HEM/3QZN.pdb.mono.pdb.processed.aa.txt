@@ -1,0 +1,63 @@
+The following problems occurred while reading PDB file for 3QZN.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (83 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (83 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (83 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (83 )
+#0, chain A: iron-regulated surface determinant protein A
+3QZN.pdb.mono.pdb opened
+HOH 320.A
+SER 111.A
+HOH 34.A
+ILE 159.A
+ASN 109.A
+ASN 108.A
+VAL 157.A
+TRP 113.A
+ASP 76.A
+HOH 198.A
+THR 155.A
+GLN 74.A
+VAL 73.A
+ALA 166.A
+HOH 293.A
+HOH 243.A
+HIS 158.A
+HOH 190.A
+HOH 31.A
+HOH 294.A
+ALA 110.A
+MET 88.A
+LEU 107.A
+TYR 87.A
+ASP 86.A
+ASP 85.A
+MET 84.A
+HIS 83.A
+HOH 305.A
+SER 82.A
+LYS 81.A
+LYS 75.A
+GLU 80.A
+HOH 207.A
+HOH 220.A
+HOH 215.A
+HOH 353.A
+THR 172.A
+THR 171.A
+TYR 170.A
+ARG 169.A
+HIS 168.A
+ASN 167.A
+HOH 335.A
+ILE 164.A
+GLN 163.A
+HEM 200.A
+PRO 162.A
+VAL 161.A
+PHE 112.A
+VAL 160.A
+

@@ -1,0 +1,49 @@
+The following problems occurred while reading PDB file for 1TWR.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (25 )
+warning: cannot find LINK/SSBOND residue VER (300 )
+#0, chain A: Ho-1
+1TWR.pdb.mono.pdb opened
+currently processing residue...GLY 139.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLY 143.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...SER 142.A
+stipped to only code...SER
+stripped to only the number, this is residue 142
+ResID: SER 142.A
+Angle #0:142.A@CA #0:142.A@CB #0:300.A@FE: 129.276
+currently processing residue...ASP 140.A
+stipped to only code...ASP
+stripped to only the number, this is residue 140
+ResID: ASP 140.A
+Angle #0:140.A@CA #0:140.A@CB #0:300.A@FE: 27.4184
+currently processing residue...NO 400.A
+stipped to only code...NO 
+SHIT! Weird molecule, do nothing.
+currently processing residue...LEU 138.A
+stipped to only code...LEU
+stripped to only the number, this is residue 138
+ResID: LEU 138.A
+Angle #0:138.A@CA #0:138.A@CB #0:300.A@FE: 75.0669
+currently processing residue...VER 300.A
+stipped to only code...VER
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLU 29.A
+stipped to only code...GLU
+stripped to only the number, this is residue 29
+ResID: GLU 29.A
+Angle #0:29.A@CA #0:29.A@CB #0:300.A@FE: 103.11
+currently processing residue...PHE 207.A
+stipped to only code...PHE
+stripped to only the number, this is residue 207
+ResID: PHE 207.A
+Angle #0:207.A@CA #0:207.A@CB #0:300.A@FE: 107.075
+currently processing residue...HIS 25.A
+stipped to only code...HIS
+stripped to only the number, this is residue 25
+ResID: HIS 25.A
+Angle #0:25.A@CA #0:25.A@CB #0:300.A@FE: 108.864
+

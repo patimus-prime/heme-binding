@@ -1,0 +1,106 @@
+The following problems occurred while reading PDB file for 5H8V.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (106 )
+warning: cannot find LINK/SSBOND residue VAL (424 )
+warning: cannot find LINK/SSBOND residue ASN (453 )
+warning: cannot find LINK/SSBOND residue CYS (494 )
+warning: cannot find LINK/SSBOND residue CYS (500 )
+warning: cannot find LINK/SSBOND residue CYS (540 )
+warning: cannot find LINK/SSBOND residue CYS (544 )
+warning: cannot find LINK/SSBOND residue CYS (544 )
+warning: cannot find LINK/SSBOND residue  MG (704 )
+warning: cannot find LINK/SSBOND residue  MG (704 )
+warning: cannot find LINK/SSBOND residue  MG (705 )
+#0, chain A: zmsir
+5H8V.pdb.mono.pdb opened
+VAL 289.A
+MET 492.A
+ALA 493.A
+CYS 494.A
+PRO 495.A
+ALA 496.A
+ASP 295.A
+PRO 498.A
+LEU 499.A
+CYS 500.A
+PRO 501.A
+LEU 502.A
+ALA 503.A
+GLU 508.A
+GLY 317.A
+GLY 318.A
+MET 319.A
+GLY 320.A
+ARG 321.A
+THR 322.A
+ASN 426.A
+SF4 701.A
+SRM 702.A
+PO4 703.A
+HOH 804.A
+HOH 805.A
+CYS 540.A
+PRO 541.A
+ASN 542.A
+GLY 543.A
+CYS 544.A
+ALA 545.A
+ARG 546.A
+PRO 547.A
+TYR 548.A
+HOH 817.A
+ASP 290.A
+PRO 452.A
+GLN 454.A
+ARG 364.A
+LYS 365.A
+SER 367.A
+ARG 368.A
+ARG 428.A
+THR 293.A
+LYS 370.A
+TYR 371.A
+ASN 294.A
+HOH 814.A
+LEU 497.A
+HOH 854.A
+HOH 858.A
+HOH 860.A
+ALA 187.A
+CYS 188.A
+HOH 863.A
+ARG 193.A
+ASN 194.A
+HOH 869.A
+HOH 870.A
+HOH 871.A
+LEU 196.A
+LYS 101.A
+TYR 106.A
+GLN 107.A
+GLN 108.A
+HOH 840.A
+HOH 894.A
+MET 122.A
+ARG 124.A
+THR 125.A
+HOH 902.A
+HOH 903.A
+HOH 906.A
+HOH 908.A
+HOH 910.A
+HOH 810.A
+HOH 811.A
+ARG 153.A
+LEU 154.A
+THR 155.A
+THR 156.A
+ARG 157.A
+GLN 158.A
+THR 159.A
+PHE 160.A
+GLN 161.A
+HIS 163.A
+ARG 275.A
+LYS 276.A
+LYS 278.A
+

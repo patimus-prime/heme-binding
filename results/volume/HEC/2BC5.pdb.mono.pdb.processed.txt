@@ -1,0 +1,27 @@
+The following problems occurred while reading PDB file for 2BC5.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+#0, chain A: cytochrome B-562
+2BC5.pdb.mono.pdb opened
+1126 spheres
+Surfnet for "sel" - "sel":  volume = 1207.1
+Surfnet for "sel" - "sel" split ? 7:  volume = 3.0668
+Surfnet for "sel" - "sel" split ? 6:  volume = 3.5179
+Surfnet for "sel" - "sel" split ? 5:  volume = 5.9012
+Surfnet for "sel" - "sel" split ? 1:  volume = 1166.2
+Surfnet for "sel" - "sel" split ? 8:  volume = 2.5001
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.3148
+Surfnet for "sel" - "sel" split ? 2:  volume = 5.2003
+Surfnet for "sel" - "sel" split ? 9:  volume = 2.5166
+Surfnet for "sel" - "sel" split ? 4:  volume = 15.944
+

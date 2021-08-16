@@ -1,25 +1,13 @@
 #0, chain A: NP4
 3TGC.pdb.mono.pdb opened
-currently processing residue...LEU 57.A
-stipped to only code...LEU
-stripped to only the number, this is residue 57
-ResID: LEU 57.A
-Angle #0:57.A@CA #0:57.A@CB #0:185.A@FE: 140.892
-currently processing residue...PHE 68.A
-stipped to only code...PHE
-stripped to only the number, this is residue 68
-ResID: PHE 68.A
-Angle #0:68.A@CA #0:68.A@CB #0:185.A@FE: 103.482
-currently processing residue...ALA 42.A
-stipped to only code...ALA
-stripped to only the number, this is residue 42
-ResID: ALA 42.A
-Angle #0:42.A@CA #0:42.A@CB #0:185.A@FE: 151.329
 currently processing residue...TYR 40.A
 stipped to only code...TYR
 stripped to only the number, this is residue 40
 ResID: TYR 40.A
 Angle #0:40.A@CA #0:40.A@CB #0:185.A@FE: 142.716
+currently processing residue...NO2 186.A
+stipped to only code...NO2
+SHIT! Weird molecule, do nothing.
 currently processing residue...HEM 185.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
@@ -34,9 +22,6 @@ stipped to only code...VAL
 stripped to only the number, this is residue 36
 ResID: VAL 36.A
 Angle #0:36.A@CA #0:36.A@CB #0:185.A@FE: 128.756
-currently processing residue...NO2 186.A
-stipped to only code...NO2
-SHIT! Weird molecule, do nothing.
 currently processing residue...THR 121.A
 stipped to only code...THR
 stripped to only the number, this is residue 121
@@ -52,4 +37,19 @@ stipped to only code...HIS
 stripped to only the number, this is residue 59
 ResID: HIS 59.A
 Angle #0:59.A@CA #0:59.A@CB #0:185.A@FE: 124.37
+currently processing residue...LEU 57.A
+stipped to only code...LEU
+stripped to only the number, this is residue 57
+ResID: LEU 57.A
+Angle #0:57.A@CA #0:57.A@CB #0:185.A@FE: 140.892
+currently processing residue...PHE 68.A
+stipped to only code...PHE
+stripped to only the number, this is residue 68
+ResID: PHE 68.A
+Angle #0:68.A@CA #0:68.A@CB #0:185.A@FE: 103.482
+currently processing residue...ALA 42.A
+stipped to only code...ALA
+stripped to only the number, this is residue 42
+ResID: ALA 42.A
+Angle #0:42.A@CA #0:42.A@CB #0:185.A@FE: 151.329
 

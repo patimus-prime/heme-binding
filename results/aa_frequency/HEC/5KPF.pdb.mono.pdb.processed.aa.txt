@@ -1,0 +1,73 @@
+The following problems occurred while reading PDB file for 5KPF.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue CYS (17 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue MET (80 )
+#0, chain A: cytochrome C iso-1
+5KPF.pdb.mono.pdb opened
+PRO 71.A
+HOH 381.A
+HIS 18.A
+LEU 98.A
+HOH 397.A
+GLN 16.A
+HOH 384.A
+ILE 95.A
+CYS 14.A
+TYR 67.A
+ARG 13.A
+LEU 94.A
+THR 12.A
+GLY 77.A
+PHE 10.A
+LEU 9.A
+GLY 41.A
+THR 78.A
+HOH 431.A
+LEU 85.A
+TRP 59.A
+VAL 57.A
+MET 80.A
+CYS 17.A
+PHE 82.A
+ILE 53.A
+GLY 84.A
+HOH 315.A
+ASN 52.A
+LEU 68.A
+HOH 329.A
+ASP 50.A
+ALA 81.A
+THR 49.A
+TYR 48.A
+SER 47.A
+MET 64.A
+TYR 46.A
+LEU 15.A
+HOH 360.A
+ALA 43.A
+GLN 42.A
+HOH 367.A
+HOH 328.A
+SER 40.A
+HOH 305.A
+HOH 323.A
+HIS 39.A
+ARG 38.A
+HEC 201.A
+ILE 35.A
+HOH 345.A
+ILE 75.A
+LEU 32.A
+HOH 343.A
+ASN 31.A
+PRO 30.A
+HOH 346.A
+GLY 29.A
+LYS 79.A
+VAL 28.A
+HOH 327.A
+ALA 51.A
+LYS 27.A
+HOH 368.A
+

@@ -1,0 +1,47 @@
+#0, chain A: extracellular heme acquisition hemophore hasa
+4Y1Q.pdb.mono.pdb opened
+currently processing residue...ARG 144.A
+stipped to only code...ARG
+stripped to only the number, this is residue 144
+ResID: ARG 144.A
+Angle #0:144.A@CA #0:144.A@CB #0:301.A@FE: 98.5684
+currently processing residue...ALA 75.A
+stipped to only code...ALA
+stripped to only the number, this is residue 75
+ResID: ALA 75.A
+Angle #0:75.A@CA #0:75.A@CB #0:301.A@FE: 130.591
+currently processing residue...PHE 77.A
+stipped to only code...PHE
+stripped to only the number, this is residue 77
+ResID: PHE 77.A
+Angle #0:77.A@CA #0:77.A@CB #0:301.A@FE: 49.1641
+currently processing residue...TYR 55.A
+stipped to only code...TYR
+stripped to only the number, this is residue 55
+ResID: TYR 55.A
+Angle #0:55.A@CA #0:55.A@CB #0:301.A@FE: 130.246
+currently processing residue...MET 147.A
+stipped to only code...MET
+stripped to only the number, this is residue 147
+ResID: MET 147.A
+Angle #0:147.A@CA #0:147.A@CB #0:301.A@FE: 164.057
+currently processing residue...ARG 40.A
+stipped to only code...ARG
+stripped to only the number, this is residue 40
+ResID: ARG 40.A
+Angle #0:40.A@CA #0:40.A@CB #0:301.A@FE: 121.148
+currently processing residue...HEM 301.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 81.A
+stipped to only code...HIS
+stripped to only the number, this is residue 81
+ResID: HIS 81.A
+Angle #0:81.A@CA #0:81.A@CB #0:301.A@FE: 126.831
+currently processing residue...PHE 50.A
+stipped to only code...PHE
+stripped to only the number, this is residue 50
+ResID: PHE 50.A
+Angle #0:50.A@CA #0:50.A@CB #0:301.A@FE: 113.8
+

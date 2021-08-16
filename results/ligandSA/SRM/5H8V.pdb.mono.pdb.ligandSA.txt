@@ -1,0 +1,33 @@
+The following problems occurred while reading PDB file for 5H8V.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (106 )
+warning: cannot find LINK/SSBOND residue VAL (424 )
+warning: cannot find LINK/SSBOND residue ASN (453 )
+warning: cannot find LINK/SSBOND residue CYS (494 )
+warning: cannot find LINK/SSBOND residue CYS (500 )
+warning: cannot find LINK/SSBOND residue CYS (540 )
+warning: cannot find LINK/SSBOND residue CYS (544 )
+warning: cannot find LINK/SSBOND residue CYS (544 )
+warning: cannot find LINK/SSBOND residue  MG (704 )
+warning: cannot find LINK/SSBOND residue  MG (704 )
+warning: cannot find LINK/SSBOND residue  MG (705 )
+#0, chain A: zmsir
+5H8V.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 5H8V.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 685.85
+  Total solvent accessible surface area = 1052.56
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 5H8V.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 685.85
+  Total solvent accessible surface area = 1052.56
+

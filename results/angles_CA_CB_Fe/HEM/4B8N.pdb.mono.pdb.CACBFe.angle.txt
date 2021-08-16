@@ -1,0 +1,65 @@
+The following problems occurred while reading PDB file for 4B8N.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+#0, chain A: cytochrome B5-host origin
+4B8N.pdb.mono.pdb opened
+currently processing residue...HIS 48.A
+stipped to only code...HIS
+stripped to only the number, this is residue 48
+ResID: HIS 48.A
+Angle #0:48.A@CA #0:48.A@CB #0:201.A@FE: 104.904
+currently processing residue...HEM 201.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 71.A
+stipped to only code...HIS
+stripped to only the number, this is residue 71
+ResID: HIS 71.A
+Angle #0:71.A@CA #0:71.A@CB #0:201.A@FE: 119.392
+currently processing residue...LEU 70.A
+stipped to only code...LEU
+stripped to only the number, this is residue 70
+ResID: LEU 70.A
+Angle #0:70.A@CA #0:70.A@CB #0:201.A@FE: 123.054
+currently processing residue...PHE 44.A
+stipped to only code...PHE
+stripped to only the number, this is residue 44
+ResID: PHE 44.A
+Angle #0:44.A@CA #0:44.A@CB #0:201.A@FE: 119.792
+currently processing residue...ILE 55.A
+stipped to only code...ILE
+stripped to only the number, this is residue 55
+ResID: ILE 55.A
+Angle #0:55.A@CA #0:55.A@CB #0:201.A@FE: 101.706
+currently processing residue...PHE 67.A
+stipped to only code...PHE
+stripped to only the number, this is residue 67
+ResID: PHE 67.A
+Angle #0:67.A@CA #0:67.A@CB #0:201.A@FE: 78.7253
+currently processing residue...ALA 54.A
+stipped to only code...ALA
+stripped to only the number, this is residue 54
+ResID: ALA 54.A
+Angle #0:54.A@CA #0:54.A@CB #0:201.A@FE: 135.486
+currently processing residue...GLY 51.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLY 50.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...VAL 75.A
+stipped to only code...VAL
+stripped to only the number, this is residue 75
+ResID: VAL 75.A
+Angle #0:75.A@CA #0:75.A@CB #0:201.A@FE: 149.853
+currently processing residue...PRO 49.A
+stipped to only code...PRO
+stripped to only the number, this is residue 49
+ResID: PRO 49.A
+Angle #0:49.A@CA #0:49.A@CB #0:201.A@FE: 79.7519
+

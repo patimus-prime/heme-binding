@@ -2,14 +2,14 @@
 3TGC.pdb.mono.pdb opened
 1098 spheres
 Surfnet for "sel" - "sel":  volume = 1025.8
-Surfnet for "sel" - "sel" split ? 6:  volume = 2.4403
-Surfnet for "sel" - "sel" split ? 10:  volume = 8.1196
-Surfnet for "sel" - "sel" split ? 5:  volume = 3.1194
-Surfnet for "sel" - "sel" split ? 1:  volume = 969.87
-Surfnet for "sel" - "sel" split ? 9:  volume = 3.4221
-Surfnet for "sel" - "sel" split ? 7:  volume = 2.7638
-Surfnet for "sel" - "sel" split ? 4:  volume = 7.2229
-Surfnet for "sel" - "sel" split ? 2:  volume = 11.965
 Surfnet for "sel" - "sel" split ? 8:  volume = 4.2378
+Surfnet for "sel" - "sel" split ? 10:  volume = 8.1196
+Surfnet for "sel" - "sel" split ? 1:  volume = 969.87
 Surfnet for "sel" - "sel" split ? 3:  volume = 12.647
+Surfnet for "sel" - "sel" split ? 2:  volume = 11.965
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.7638
+Surfnet for "sel" - "sel" split ? 9:  volume = 3.4221
+Surfnet for "sel" - "sel" split ? 6:  volume = 2.4403
+Surfnet for "sel" - "sel" split ? 4:  volume = 7.2229
+Surfnet for "sel" - "sel" split ? 5:  volume = 3.1194
 

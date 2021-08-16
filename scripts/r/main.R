@@ -16,7 +16,7 @@ source("~/heme-binding/scripts/r/addpdbcol.R")
 # ok let's reorder
 
 # DECLARATIONS --------------
-ligandList = list("HEM")
+ligandList = list("HEM","HEC","SRM","VER","VEA")
 angstromDistance = 7.0 #not sure if used here, maybe useful for figures!
 
 # Initialize list of DFs/lists, add results in each for loop
@@ -34,12 +34,12 @@ for(ligand in 1:(length(ligandList)))
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    
    volume_dfs <- volumeFn(activeLigand,activeResultPath)
-   
+   #rrrt <- volumeFn(activeLigand,activeResultPath)
    #this line is freaky fresh
    # paste() automates df name creation, second arg is the df assigned. BAM!
    assign(paste(activeLigand,"_maxVolDf",sep=""), volume_dfs$maxVolDf)
 
-   eval(parse(text=(paste(activeLigand,"_dfList",sep = "")))) <- list(volume_dfs$maxVolDf, volume_dfs$allVolDf)
+   #eval(parse(text=(paste(activeLigand,"_dfList",sep = "")))) <- list(volume_dfs$maxVolDf, volume_dfs$allVolDf)
    # xx <- list(volume_dfs$maxVolDf)
    #  eval(parse(text = paste(activeLigand,"_dfList",sep = ""))) <- xx
    # "yy" = list(volume_dfs$allVolDf) 
@@ -62,8 +62,10 @@ for(ligand in 1:(length(ligandList)))
    activeLigand = ligandList[[ligand]]
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    aa_freq_df <- aaFreq_fn(activeLigand,activeResultPath)
-   assign(paste(activeLigand,"_aaFreqDf",sep=""), aa_freq_df)
-}
+   aa_freq_df
+   assign(paste(activeLigand,"_aaFreqDf",sep=""), aaFreq_fn(activeLigand,activeResultPath))
+   #if(activeLigand=="HEC"){stop()}
+   }
    
 # Ligand surface area ----------------------
 source("~/heme-binding/scripts/r/ligandSA.R")
@@ -148,20 +150,23 @@ for(ligand in 1:(length(ligandList)))
    assign(paste(activeLigand,"_pdbCodesDf",sep=""),pdbCodeDf)
 }
 
-
+#sourceOrganismDf <- c("")
 # PDB source organism ---------------------
 source("~/heme-binding/scripts/r/source_organism.R")
 resultPath = "~/heme-binding/pdb_source_data/0_raw_download/"
 for(ligand in 1:(length(ligandList)))
 {
+   #sourceOrganismDf <- c("")
+   paste(activeLigand,"source org processing...")
    activeLigand = ligandList[[ligand]]
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    sourceOrganismDf <- sourceOrganismFn(activeLigand,activeResultPath)
    assign(paste(activeLigand,"_sourceOrganismDf",sep=""),sourceOrganismDf)
+   #sourceOrganismDf <- sourceOrganismDf[0,]
 #   pdbCodeDf <- pdbTitlesCodesFn(activeLigand,activeResultPath)
  #  assign(paste(activeLigand,"_pdbCodesDf",sep=""),pdbCodeDf)
 }
-eval(parse(text="sourceOrganismDf"))
+#eval(parse(text="sourceOrganismDf"))
 # merge all dataframes reported (not produced by functions) into mega dataframe: -----
 # MERGEEEEEEE
 # NOTE: Perhaps adding DFs to a list and slowly merging may be easier.
@@ -217,19 +222,19 @@ for(ligand in 1:(length(ligandList)))
 # so it's easy to see:
 
 # the four lines below acquire the dataframes produced by functions...
-temp_list <- anglesFn()
-Distance_and_Angles_df <- temp_list$angleDF
-
-metal_list <- metal_coordinating_fn()
-Metal_Coordination_df <- metal_list$Metal_coordination_df
-
-CACBFE_df <- CACBFE_fn()
+# temp_list <- anglesFn()
+# Distance_and_Angles_df <- temp_list$angleDF
+# 
+# metal_list <- metal_coordinating_fn()
+# Metal_Coordination_df <- metal_list$Metal_coordination_df
+# 
+# CACBFE_df <- CACBFE_fn()
 
 # put into the easily visibile DF 
-mega_df -> AAAA_MEGA_DF
-Distance_and_Angles_df -> AAAA_DISTANG_DF
-Metal_Coordination_df -> AAAA_METAL_DF
-
+# mega_df -> AAAA_MEGA_DF
+# Distance_and_Angles_df -> AAAA_DISTANG_DF
+# Metal_Coordination_df -> AAAA_METAL_DF
+# 
 # Graphs: ----------------------------------
 
 for(ligand in 1:(length(ligandList)))
@@ -324,12 +329,17 @@ for(ligand in 1:(length(ligandList)))
    # HEM_planar_angles_list$coordinating_res_plot
    # HEM_planar_angles_list$min_dist_angles_plot
    
-   qq <- eval(parse(text = paste(activeLigand,"_planar_angles_list$angleplot",sep='')))
-   print(qq)
-   ww <- eval(parse(text = paste(activeLigand,"_planar_angles_list$coordinating_res_plot",sep = '')))
-   print(ww)
-   ee <- eval(parse(text = paste(activeLigand,"_planar_angles_list$min_dist_angles_plot",sep='')))
-   print(ee)
+   
+   # FIXME!!! UNCOMMENT XXXX HERE WHEN THE DATA EXIST!
+   # qq <- eval(parse(text = paste(activeLigand,"_planar_angles_list$angleplot",sep='')))
+   # print(qq)
+   # ww <- eval(parse(text = paste(activeLigand,"_planar_angles_list$coordinating_res_plot",sep = '')))
+   # print(ww)
+   # ee <- eval(parse(text = paste(activeLigand,"_planar_angles_list$min_dist_angles_plot",sep='')))
+   # print(ee)
+   # 
+   
+   
    # 
    # angle_plots <- anglesFn()
    # angle_plots$angleplot
@@ -364,6 +374,7 @@ for(ligand in 1:(length(ligandList)))
    #    labs(title = "Nonpolar Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
    #    stat_summary(fun.data = mean_sdl, mult =1,geom = "pointrange")
    # # 
+   readline(prompt="Press [enter] to continue") # to stop and save the graphs lol
 }
 
 # FIXME!!! UNCOMMENT HERE IF YOU WISH TO USE THIS SOLUTION TO FIGURE SAVING

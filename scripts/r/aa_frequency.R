@@ -66,7 +66,9 @@ aaFreq_fn <- function(activeLigand,activeResultPath)
      result_files_df,
      combined_results_df,
      residue_table_prelim_df_w_crap,
-     residues_data_df
+     residues_data_df,
+     clean_tbl,
+     result_files_ls
      )
   
   return(aa_freq_df)

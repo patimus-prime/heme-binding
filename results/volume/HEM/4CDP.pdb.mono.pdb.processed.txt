@@ -2,13 +2,13 @@
 4CDP.pdb.mono.pdb opened
 980 spheres
 Surfnet for "sel" - "sel":  volume = 1125.1
-Surfnet for "sel" - "sel" split ? 4:  volume = 3.1272
-Surfnet for "sel" - "sel" split ? 3:  volume = 3.1525
-Surfnet for "sel" - "sel" split ? 5:  volume = 2.5055
-Surfnet for "sel" - "sel" split ? 8:  volume = 7.6544
 Surfnet for "sel" - "sel" split ? 7:  volume = 2.75
-Surfnet for "sel" - "sel" split ? 9:  volume = 10.833
 Surfnet for "sel" - "sel" split ? 1:  volume = 39.151
-Surfnet for "sel" - "sel" split ? 6:  volume = 2.2123
+Surfnet for "sel" - "sel" split ? 9:  volume = 10.833
 Surfnet for "sel" - "sel" split ? 2:  volume = 1053.7
+Surfnet for "sel" - "sel" split ? 6:  volume = 2.2123
+Surfnet for "sel" - "sel" split ? 8:  volume = 7.6544
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.1525
+Surfnet for "sel" - "sel" split ? 4:  volume = 3.1272
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.5055
 

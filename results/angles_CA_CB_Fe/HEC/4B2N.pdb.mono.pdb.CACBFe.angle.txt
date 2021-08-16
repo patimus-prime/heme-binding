@@ -1,0 +1,139 @@
+The following problems occurred while reading PDB file for 4B2N.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (32 )
+warning: cannot find LINK/SSBOND residue CYS (574 )
+warning: cannot find LINK/SSBOND residue HEC (700 )
+warning: cannot find LINK/SSBOND residue HEC (700 )
+warning: cannot find LINK/SSBOND residue HEC (700 )
+warning: cannot find LINK/SSBOND residue HEC (700 )
+warning: cannot find LINK/SSBOND residue HEC (701 )
+warning: cannot find LINK/SSBOND residue HEC (701 )
+warning: cannot find LINK/SSBOND residue HEC (701 )
+#0, chain A: ROXA
+4B2N.pdb.mono.pdb opened
+currently processing residue...CYS 191.A
+stipped to only code...CYS
+stripped to only the number, this is residue 191
+ResID: CYS 191.A
+Dihedral #0:191.A@CA #0:191.A@CB #0:700.A@FE #0:701.A@FE: -100.373
+currently processing residue...CYS 393.A
+stipped to only code...CYS
+stripped to only the number, this is residue 393
+ResID: CYS 393.A
+Dihedral #0:393.A@CA #0:393.A@CB #0:700.A@FE #0:701.A@FE: -138.638
+currently processing residue...HIS 394.A
+stipped to only code...HIS
+stripped to only the number, this is residue 394
+ResID: HIS 394.A
+Dihedral #0:394.A@CA #0:394.A@CB #0:700.A@FE #0:701.A@FE: 115.697
+currently processing residue...ALA 503.A
+stipped to only code...ALA
+stripped to only the number, this is residue 503
+ResID: ALA 503.A
+Dihedral #0:503.A@CA #0:503.A@CB #0:700.A@FE #0:701.A@FE: 50.4376
+currently processing residue...CYS 194.A
+stipped to only code...CYS
+stripped to only the number, this is residue 194
+ResID: CYS 194.A
+Dihedral #0:194.A@CA #0:194.A@CB #0:700.A@FE #0:701.A@FE: 86.6398
+currently processing residue...HIS 195.A
+stipped to only code...HIS
+stripped to only the number, this is residue 195
+ResID: HIS 195.A
+Dihedral #0:195.A@CA #0:195.A@CB #0:700.A@FE #0:701.A@FE: -63.3149
+currently processing residue...PHE 301.A
+stipped to only code...PHE
+stripped to only the number, this is residue 301
+ResID: PHE 301.A
+Dihedral #0:301.A@CA #0:301.A@CB #0:700.A@FE #0:701.A@FE: -24.6164
+currently processing residue...ALA 251.A
+stipped to only code...ALA
+stripped to only the number, this is residue 251
+ResID: ALA 251.A
+Dihedral #0:251.A@CA #0:251.A@CB #0:700.A@FE #0:701.A@FE: -113.361
+currently processing residue...PRO 504.A
+stipped to only code...PRO
+stripped to only the number, this is residue 504
+ResID: PRO 504.A
+Dihedral #0:504.A@CA #0:504.A@CB #0:700.A@FE #0:701.A@FE: 126.935
+currently processing residue...LEU 506.A
+stipped to only code...LEU
+stripped to only the number, this is residue 506
+ResID: LEU 506.A
+Dihedral #0:506.A@CA #0:506.A@CB #0:700.A@FE #0:701.A@FE: 159.237
+currently processing residue...HEC 700.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...HEC 701.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...OXY 1663.A
+stipped to only code...OXY
+SHIT! Weird molecule, do nothing.
+currently processing residue...SER 313.A
+stipped to only code...SER
+stripped to only the number, this is residue 313
+ResID: SER 313.A
+Dihedral #0:313.A@CA #0:313.A@CB #0:700.A@FE #0:701.A@FE: -179.825
+currently processing residue...GLU 314.A
+stipped to only code...GLU
+stripped to only the number, this is residue 314
+ResID: GLU 314.A
+Dihedral #0:314.A@CA #0:314.A@CB #0:700.A@FE #0:701.A@FE: 110.24
+currently processing residue...PHE 317.A
+stipped to only code...PHE
+stripped to only the number, this is residue 317
+ResID: PHE 317.A
+Dihedral #0:317.A@CA #0:317.A@CB #0:700.A@FE #0:701.A@FE: -55.7409
+currently processing residue...PHE 516.A
+stipped to only code...PHE
+stripped to only the number, this is residue 516
+ResID: PHE 516.A
+Dihedral #0:516.A@CA #0:516.A@CB #0:700.A@FE #0:701.A@FE: 39.0629
+currently processing residue...PRO 289.A
+stipped to only code...PRO
+stripped to only the number, this is residue 289
+ResID: PRO 289.A
+Dihedral #0:289.A@CA #0:289.A@CB #0:700.A@FE #0:701.A@FE: -82.8927
+currently processing residue...VAL 527.A
+stipped to only code...VAL
+stripped to only the number, this is residue 527
+ResID: VAL 527.A
+Dihedral #0:527.A@CA #0:527.A@CB #0:700.A@FE #0:701.A@FE: -113.789
+currently processing residue...PHE 643.A
+stipped to only code...PHE
+stripped to only the number, this is residue 643
+ResID: PHE 643.A
+Dihedral #0:643.A@CA #0:643.A@CB #0:700.A@FE #0:701.A@FE: 98.3747
+currently processing residue...ILE 426.A
+stipped to only code...ILE
+stripped to only the number, this is residue 426
+ResID: ILE 426.A
+Dihedral #0:426.A@CA #0:426.A@CB #0:700.A@FE #0:701.A@FE: 96.4704
+currently processing residue...HIS 641.A
+stipped to only code...HIS
+stripped to only the number, this is residue 641
+ResID: HIS 641.A
+Dihedral #0:641.A@CA #0:641.A@CB #0:700.A@FE #0:701.A@FE: -111.942
+currently processing residue...ALA 288.A
+stipped to only code...ALA
+stripped to only the number, this is residue 288
+ResID: ALA 288.A
+Dihedral #0:288.A@CA #0:288.A@CB #0:700.A@FE #0:701.A@FE: -35.9422
+currently processing residue...CYS 390.A
+stipped to only code...CYS
+stripped to only the number, this is residue 390
+ResID: CYS 390.A
+Dihedral #0:390.A@CA #0:390.A@CB #0:700.A@FE #0:701.A@FE: 63.5664
+currently processing residue...THR 644.A
+stipped to only code...THR
+stripped to only the number, this is residue 644
+ResID: THR 644.A
+Dihedral #0:644.A@CA #0:644.A@CB #0:700.A@FE #0:701.A@FE: -55.4228
+currently processing residue...TRP 291.A
+stipped to only code...TRP
+stripped to only the number, this is residue 291
+ResID: TRP 291.A
+Dihedral #0:291.A@CA #0:291.A@CB #0:700.A@FE #0:701.A@FE: 20.3312
+

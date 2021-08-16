@@ -1,0 +1,89 @@
+The following problems occurred while reading PDB file for 2O6P.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (190 )
+warning: cannot find LINK/SSBOND residue HEM (190 )
+warning: cannot find LINK/SSBOND residue  ZN (1001 )
+warning: cannot find LINK/SSBOND residue  ZN (1001 )
+warning: cannot find LINK/SSBOND residue  ZN (1002 )
+warning: cannot find LINK/SSBOND residue  ZN (1002 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1005 )
+warning: cannot find LINK/SSBOND residue  ZN (1005 )
+warning: cannot find LINK/SSBOND residue  ZN (1005 )
+#0, chain A: iron-regulated surface determinant protein C
+2O6P.pdb.mono.pdb opened
+Atom being analyzed... ALA 49.A N ... Distance to Fe... 6.07646492625
+Atom being analyzed... ILE 48.A CD1 ... Distance to Fe... 4.86465065549
+Atom being analyzed... ILE 48.A CG2 ... Distance to Fe... 3.75437584693
+Atom being analyzed... ILE 48.A CG1 ... Distance to Fe... 5.28043208459
+Atom being analyzed... ILE 48.A CB ... Distance to Fe... 4.54745137412
+Atom being analyzed... ILE 48.A O ... Distance to Fe... 6.12813470805
+Atom being analyzed... ILE 48.A C ... Distance to Fe... 5.86163637562
+Atom being analyzed... HEM 190.A C2C ... Distance to Fe... 4.3354206255
+Atom being analyzed... HEM 190.A C2B ... Distance to Fe... 4.32479698946
+Atom being analyzed... ILE 48.A N ... Distance to Fe... 6.65944306981
+Atom being analyzed... HEM 190.A C1C ... Distance to Fe... 3.10832398569
+Atom being analyzed... HEM 190.A CBA ... Distance to Fe... 6.11887506001
+Atom being analyzed... HEM 190.A CAA ... Distance to Fe... 5.73437921662
+Atom being analyzed... HEM 190.A CMA ... Distance to Fe... 5.74827052251
+Atom being analyzed... HEM 190.A C4A ... Distance to Fe... 3.11496035288
+Atom being analyzed... HEM 190.A C3A ... Distance to Fe... 4.32562608185
+Atom being analyzed... HEM 190.A C2A ... Distance to Fe... 4.3283536131
+Atom being analyzed... HEM 190.A C1A ... Distance to Fe... 3.10460722153
+Atom being analyzed... HEM 190.A CBB ... Distance to Fe... 6.81812840888
+Atom being analyzed... HEM 190.A CHD ... Distance to Fe... 3.4788048235
+Atom being analyzed... HEM 190.A CHC ... Distance to Fe... 3.46092169805
+Atom being analyzed... HEM 190.A CHB ... Distance to Fe... 3.46342922549
+Atom being analyzed... HEM 190.A CHA ... Distance to Fe... 3.45320155797
+Atom being analyzed... HEM 190.A CAB ... Distance to Fe... 5.678156479
+Atom being analyzed... HEM 190.A CMB ... Distance to Fe... 5.74484299176
+Atom being analyzed... TYR 136.A OH ... Distance to Fe... 3.98118072938
+Atom being analyzed... TYR 136.A CZ ... Distance to Fe... 4.43683321751
+Atom being analyzed... TYR 136.A CE2 ... Distance to Fe... 4.24483462575
+Atom being analyzed... TYR 136.A CE1 ... Distance to Fe... 5.54003122735
+Atom being analyzed... HEM 190.A C4B ... Distance to Fe... 3.09071820132
+Atom being analyzed... TYR 136.A CD2 ... Distance to Fe... 5.25959789338
+Atom being analyzed... TYR 136.A CD1 ... Distance to Fe... 6.34071683645
+Atom being analyzed... TYR 136.A CG ... Distance to Fe... 6.23671155337
+Atom being analyzed... HEM 190.A C3B ... Distance to Fe... 4.31074030765
+Atom being analyzed... VAL 119.A CG2 ... Distance to Fe... 6.07740388653
+Atom being analyzed... ILE 48.A CA ... Distance to Fe... 5.83165088118
+Atom being analyzed... HEM 190.A C1B ... Distance to Fe... 3.10508115836
+Atom being analyzed... HIS 134.A CD2 ... Distance to Fe... 6.2498829589
+Atom being analyzed... HIS 134.A CG ... Distance to Fe... 6.65881746258
+Atom being analyzed... HIS 134.A CB ... Distance to Fe... 6.58107848305
+Atom being analyzed... TYR 52.A OH ... Distance to Fe... 6.88309116604
+Atom being analyzed... VAL 119.A CG1 ... Distance to Fe... 6.11098142691
+Atom being analyzed... TYR 52.A CE2 ... Distance to Fe... 6.48122982157
+Atom being analyzed... TYR 132.A OH ... Distance to Fe... 2.04827268692
+Atom being analyzed... TYR 132.A CZ ... Distance to Fe... 3.02947850298
+Atom being analyzed... TYR 132.A CE2 ... Distance to Fe... 3.98940722414
+Atom being analyzed... TYR 132.A CE1 ... Distance to Fe... 3.64914085779
+Atom being analyzed... TYR 132.A CD2 ... Distance to Fe... 5.17150713042
+Atom being analyzed... TYR 132.A CD1 ... Distance to Fe... 4.91528320649
+Atom being analyzed... TYR 132.A CG ... Distance to Fe... 5.58216830631
+Atom being analyzed... HEM 190.A FE ... Distance to Fe... 0.0
+Atom being analyzed... HEM 190.A ND ... Distance to Fe... 2.11247366847
+Atom being analyzed... HEM 190.A NC ... Distance to Fe... 2.0940890621
+Atom being analyzed... HEM 190.A NB ... Distance to Fe... 2.09372825362
+Atom being analyzed... HEM 190.A NA ... Distance to Fe... 2.10027569619
+Atom being analyzed... VAL 119.A CB ... Distance to Fe... 6.34139495695
+Atom being analyzed... HEM 190.A O1D ... Distance to Fe... 6.50622417382
+Atom being analyzed... HEM 190.A CGD ... Distance to Fe... 6.60673845403
+Atom being analyzed... HEM 190.A CBD ... Distance to Fe... 6.40856785873
+Atom being analyzed... HEM 190.A CAD ... Distance to Fe... 5.76317907062
+Atom being analyzed... HEM 190.A CMD ... Distance to Fe... 5.74752190078
+Atom being analyzed... HEM 190.A C4D ... Distance to Fe... 3.09967772518
+Atom being analyzed... HEM 190.A C3D ... Distance to Fe... 4.34356593135
+Atom being analyzed... HEM 190.A C2D ... Distance to Fe... 4.34072275088
+Atom being analyzed... HEM 190.A C3C ... Distance to Fe... 4.34175563568
+Atom being analyzed... HEM 190.A C1D ... Distance to Fe... 3.12088993718
+Atom being analyzed... HEM 190.A CBC ... Distance to Fe... 6.85229749792
+Atom being analyzed... HEM 190.A CAC ... Distance to Fe... 5.72509082897
+Atom being analyzed... HEM 190.A CMC ... Distance to Fe... 5.74183681412
+Atom being analyzed... HEM 190.A C4C ... Distance to Fe... 3.12030030606
+Atom being analyzed... ALA 49.A CA ... Distance to Fe... 6.63566047956
+Atom being analyzed... ILE 121.A CD1 ... Distance to Fe... 6.85208077886
+

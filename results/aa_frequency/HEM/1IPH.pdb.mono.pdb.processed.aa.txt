@@ -1,0 +1,64 @@
+The following problems occurred while reading PDB file for 1IPH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (754 )
+warning: cannot find LINK/SSBOND residue HEM (754 )
+warning: cannot find LINK/SSBOND residue HEM (754 )
+#0, chain A: catalase hpii
+1IPH.pdb.mono.pdb opened
+SER 167.A
+ASN 386.A
+THR 168.A
+LEU 412.A
+ARG 422.A
+LEU 423.A
+GLY 273.A
+ILE 274.A
+HIS 275.A
+GLU 124.A
+PHE 413.A
+ARG 125.A
+ILE 126.A
+VAL 127.A
+HIS 128.A
+HIS 212.A
+GLY 131.A
+ARG 183.A
+GLY 184.A
+LEU 408.A
+PHE 185.A
+ALA 186.A
+ALA 389.A
+ALA 390.A
+PHE 391.A
+HIS 392.A
+LEU 407.A
+PRO 393.A
+PHE 272.A
+THR 416.A
+ALA 129.A
+LEU 198.A
+HEM 754.A
+VAL 164.A
+GLY 200.A
+VAL 199.A
+ASN 201.A
+ASN 202.A
+THR 203.A
+PRO 406.A
+ILE 205.A
+PHE 206.A
+PHE 207.A
+GLY 410.A
+ILE 208.A
+ARG 411.A
+PRO 356.A
+ASP 210.A
+ALA 211.A
+GLN 419.A
+SER 414.A
+TYR 415.A
+PHE 214.A
+PRO 215.A
+THR 418.A
+ARG 165.A
+PHE 166.A
+

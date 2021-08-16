@@ -1,0 +1,54 @@
+The following problems occurred while reading PDB file for 3X15.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue HEC (200 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+#0, chain A: cytochrome C552
+3X15.pdb.mono.pdb opened
+currently processing residue...PRO 25.A
+stipped to only code...PRO
+stripped to only the number, this is residue 25
+ResID: PRO 25.A
+Angle #0:25.A@CA #0:25.A@CB #0:200.A@FE: 84.9462
+currently processing residue...GLY 24.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...CYS 12.A
+stipped to only code...CYS
+stripped to only the number, this is residue 12
+ResID: CYS 12.A
+Angle #0:12.A@CA #0:12.A@CB #0:200.A@FE: 87.5164
+currently processing residue...PHE 44.A
+stipped to only code...PHE
+stripped to only the number, this is residue 44
+ResID: PHE 44.A
+Angle #0:44.A@CA #0:44.A@CB #0:200.A@FE: 118.73
+currently processing residue...ILE 30.A
+stipped to only code...ILE
+stripped to only the number, this is residue 30
+ResID: ILE 30.A
+Angle #0:30.A@CA #0:30.A@CB #0:200.A@FE: 143.922
+currently processing residue...HIS 16.A
+stipped to only code...HIS
+stripped to only the number, this is residue 16
+ResID: HIS 16.A
+Angle #0:16.A@CA #0:16.A@CB #0:200.A@FE: 123.252
+currently processing residue...CYS 15.A
+stipped to only code...CYS
+stripped to only the number, this is residue 15
+ResID: CYS 15.A
+Angle #0:15.A@CA #0:15.A@CB #0:200.A@FE: 124.513
+currently processing residue...HEC 200.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+

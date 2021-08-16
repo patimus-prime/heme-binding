@@ -1,0 +1,13 @@
+#0, chain A: NII3
+3VKP.pdb.mono.pdb opened
+1698 spheres
+Surfnet for "sel" - "sel":  volume = 1247.7
+Surfnet for "sel" - "sel" split ? 7:  volume = 3.9062
+Surfnet for "sel" - "sel" split ? 4:  volume = 7.8175
+Surfnet for "sel" - "sel" split ? 2:  volume = 1178
+Surfnet for "sel" - "sel" split ? 6:  volume = 8.866
+Surfnet for "sel" - "sel" split ? 1:  volume = 2.1469
+Surfnet for "sel" - "sel" split ? 5:  volume = 5.043
+Surfnet for "sel" - "sel" split ? 3:  volume = 1.7914
+Surfnet for "sel" - "sel" split ? 8:  volume = 40.049
+
