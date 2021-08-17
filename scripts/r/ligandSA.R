@@ -86,7 +86,7 @@ ligandSA_fn <- function(activeLigand,activeResultPath)
   max_accessible_df$Accessible_SA <- as.numeric(as.character(max_accessible_df$Accessible_SA))
   
   # 4 into one dataframe --------------------
-  
+  #FIXME!!! Consider changing to just 'Ligand_Access..' so all columns the same.
   ligandSA_df <- max_excluded_df
   ligandSA_df[paste(activeLigand,'_Accessible_SA',sep = "")] <- max_accessible_df$Accessible_SA
   # mut rename first column 

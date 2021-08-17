@@ -16,6 +16,8 @@ source("~/heme-binding/scripts/r/addpdbcol.R")
 # ok let's reorder
 
 # DECLARATIONS --------------
+# warning: ligandList is altered at the end of merging dataframes below
+# this is because VER and VEA are merged to 'VERDOHEME'
 ligandList = list("HEM","HEC","SRM","VER","VEA")
 angstromDistance = 7.0 #not sure if used here, maybe useful for figures!
 
@@ -198,6 +200,56 @@ for(ligand in 1:(length(ligandList)))
    assign(paste(activeLigand,"_MERGED_DF",sep = ""),mergedDF)
    }
 
+VEA_MERGED_DF %>%
+   rename(
+      VXX_Excluded_SA = VEA_Excluded_SA,
+      VXX_Accessible_SA = VEA_Accessible_SA
+   ) -> VEA_MERGED_DF
+
+VER_MERGED_DF %>%
+   rename(
+      VXX_Excluded_SA = VER_Excluded_SA,
+      VXX_Accessible_SA = VER_Accessible_SA
+   ) -> VER_MERGED_DF
+
+VERDOHEME_MERGED_DF <- rbind(VEA_MERGED_DF,VER_MERGED_DF)
+
+VERDOHEME_MERGED_DF %>%
+   rename(
+      VERDOHEME_Excluded_SA = VXX_Excluded_SA,
+      VERDOHEME_Accessible_SA = VXX_Accessible_SA
+   ) -> VERDOHEME_MERGED_DF
+
+# GGET THE ANGLES, EASY JUST RBIND
+VERDOHEME_CACBFe_DF <- rbind(VEA_CACBFe_DF,VER_CACBFe_DF)
+
+
+# === ALL OF THE BELOW JUST TO MERGE THESE TWO LOLOLOL JUST FOR AMINO ACID...
+# amino acid must be rebound... may be the case for the planar df's also.
+VERDOHEME_aaFreqDf <- rbind(VEA_aaFreqDf,VER_aaFreqDf)
+#aggregate(Var1 ~ Freq, data = VERDOHEME_aaFreqDf, sum)
+#volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data))
+VERDOHEME_aaFreqDf$Freq <- as.numeric(as.character(VERDOHEME_aaFreqDf$Freq))
+VERDOHEME_aaFreqDf$Var1 <- as.character(VERDOHEME_aaFreqDf$Var1)
+verdotemp <- tapply(VERDOHEME_aaFreqDf$Freq,VERDOHEME_aaFreqDf$Var1,FUN=sum)
+verdotemp <- as.data.frame(verdotemp)
+VERDOHEME_aaFreqDf <- tibble::rownames_to_column(verdotemp, "Var1")
+VERDOHEME_aaFreqDf %>%
+   rename(
+      Freq = verdotemp
+   ) -> VERDOHEME_aaFreqDf
+#almost done, have to order it:
+VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
+
+
+clean_tbl <- clean_tbl[order(clean_tbl$Freq, decreasing = TRUE), ] #this comma is necessary
+
+clean_tbl -> aa_freq_df
+
+
+
+#df <- tibble::rownames_to_column(df, "VALUE")
+
 # #other stuff:
 # HEM_distances_list$dataframe
 # HEM_CACBFe_DF
@@ -236,10 +288,10 @@ for(ligand in 1:(length(ligandList)))
 # Metal_Coordination_df -> AAAA_METAL_DF
 # 
 # Graphs: ----------------------------------
-
+ligandList = list("HEM","HEC","SRM","VERDOHEME")
 for(ligand in 1:(length(ligandList)))
    {
-   
+   activeLigand = ligandList[[ligand]]
    # declare a list to add all plots to, makes exporting easier
    #plots <- list()
    
@@ -254,6 +306,7 @@ for(ligand in 1:(length(ligandList)))
                 col = "orange",
                 names.arg = 
                    eval(parse(text = (paste(activeLigand,"_aaFreqDf$Var1",sep="")))))
+
    HEM_maxVolDf$volume_data
    HEM_MERGED_DF$volume_data
    # Histograms/barplots of the MEGA dataframe data --------------------
@@ -374,7 +427,7 @@ for(ligand in 1:(length(ligandList)))
    #    labs(title = "Nonpolar Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
    #    stat_summary(fun.data = mean_sdl, mult =1,geom = "pointrange")
    # # 
-   readline(prompt="Press [enter] to continue") # to stop and save the graphs lol
+   #readline(prompt="Press [enter] to continue") # to stop and save the graphs lol
 }
 
 # FIXME!!! UNCOMMENT HERE IF YOU WISH TO USE THIS SOLUTION TO FIGURE SAVING
