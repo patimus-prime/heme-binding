@@ -1,22 +1,5 @@
 #0, chain A: ferredoxin--nitrite reductase, chloroplast
 2AKJ.pdb.mono.pdb opened
-currently processing residue...SF4 563.A
-stipped to only code...SF4
-SHIT! Weird molecule, do nothing.
-currently processing residue...ARG 179.A
-stipped to only code...ARG
-stripped to only the number, this is residue 179
-ResID: ARG 179.A
-Angle #0:179.A@CA #0:179.A@CB #0:564.A@FE: 150.816
-currently processing residue...SRM 564.A
-stipped to only code...SRM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
-currently processing residue...THR 142.A
-stipped to only code...THR
-stripped to only the number, this is residue 142
-ResID: THR 142.A
-Angle #0:142.A@CA #0:142.A@CB #0:564.A@FE: 112.585
 currently processing residue...ASN 484.A
 stipped to only code...ASN
 stripped to only the number, this is residue 484
@@ -45,4 +28,21 @@ stipped to only code...LYS
 stripped to only the number, this is residue 224
 ResID: LYS 224.A
 Angle #0:224.A@CA #0:224.A@CB #0:564.A@FE: 179.302
+currently processing residue...SF4 563.A
+stipped to only code...SF4
+SHIT! Weird molecule, do nothing.
+currently processing residue...ARG 179.A
+stipped to only code...ARG
+stripped to only the number, this is residue 179
+ResID: ARG 179.A
+Angle #0:179.A@CA #0:179.A@CB #0:564.A@FE: 150.816
+currently processing residue...SRM 564.A
+stipped to only code...SRM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...THR 142.A
+stipped to only code...THR
+stripped to only the number, this is residue 142
+ResID: THR 142.A
+Angle #0:142.A@CA #0:142.A@CB #0:564.A@FE: 112.585
 

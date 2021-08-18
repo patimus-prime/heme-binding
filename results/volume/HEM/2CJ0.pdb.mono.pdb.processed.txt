@@ -9,13 +9,13 @@ warning: cannot find LINK/SSBOND residue MAN (1 )
 2CJ0.pdb.mono.pdb opened
 1528 spheres
 Surfnet for "sel" - "sel":  volume = 902.57
-Surfnet for "sel" - "sel" split ? 7:  volume = 2.466
 Surfnet for "sel" - "sel" split ? 6:  volume = 4.7052
+Surfnet for "sel" - "sel" split ? 2:  volume = 40.453
 Surfnet for "sel" - "sel" split ? 4:  volume = 809.62
 Surfnet for "sel" - "sel" split ? 9:  volume = 3.0528
-Surfnet for "sel" - "sel" split ? 1:  volume = 28.741
 Surfnet for "sel" - "sel" split ? 3:  volume = 2.2715
-Surfnet for "sel" - "sel" split ? 2:  volume = 40.453
-Surfnet for "sel" - "sel" split ? 5:  volume = 8.686
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.466
 Surfnet for "sel" - "sel" split ? 8:  volume = 2.5807
+Surfnet for "sel" - "sel" split ? 5:  volume = 8.686
+Surfnet for "sel" - "sel" split ? 1:  volume = 28.741
 

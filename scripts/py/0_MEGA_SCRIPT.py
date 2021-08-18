@@ -102,15 +102,15 @@ for activeLigand in ligandList:
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
     calc_distances.d(activeLigand,activeSourcePath,activeResultPath)
 
-#### CALCULATE ANGLES WHOLE AA TO HEME PLANE #######
-#### KEEP AT BOTTOM, TAKES FOREVER TO RUN #######
-# sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
-# resultPath = "~/heme-binding/results/distances_and_angles/"
-#
-# for activeLigand in ligandList:
-#     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
-#     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-#     calc_planar_angles.angle_aa_ligand_plane(activeLigand,activeSourcePath,activeResultPath)
+### CALCULATE ANGLES WHOLE AA TO HEME PLANE #######
+### KEEP AT BOTTOM, TAKES FOREVER TO RUN #######
+sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
+resultPath = "~/heme-binding/results/distances_and_angles/"
+
+for activeLigand in ligandList:
+    activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
+    activeResultPath = os.path.expanduser(resultPath + activeLigand)
+    calc_planar_angles.angle_aa_ligand_plane(activeLigand,activeSourcePath,activeResultPath)
 
 #rc("pause")
 rc("stop now")

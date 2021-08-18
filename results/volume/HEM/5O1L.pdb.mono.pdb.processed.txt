@@ -6,7 +6,7 @@ warning: cannot find LINK/SSBOND residue HEM (501 )
 1548 spheres
 Surfnet for "sel" - "sel":  volume = 1474.6
 Surfnet for "sel" - "sel" split ? 3:  volume = 15.058
-Surfnet for "sel" - "sel" split ? 1:  volume = 2.2015
 Surfnet for "sel" - "sel" split ? 2:  volume = 1438.7
 Surfnet for "sel" - "sel" split ? 4:  volume = 18.674
+Surfnet for "sel" - "sel" split ? 1:  volume = 2.2015
 

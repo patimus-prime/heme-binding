@@ -1,46 +1,5 @@
 #0, chain A: NII3
 3VKP.pdb.mono.pdb opened
-currently processing residue...ASN 483.A
-stipped to only code...ASN
-stripped to only the number, this is residue 483
-ResID: ASN 483.A
-Angle #0:483.A@CA #0:483.A@CB #0:601.A@FE: 125.935
-currently processing residue...CL 604.A
-stipped to only code...CL 
-SHIT! Weird molecule, do nothing.
-currently processing residue...THR 484.A
-stipped to only code...THR
-stripped to only the number, this is residue 484
-ResID: THR 484.A
-Angle #0:484.A@CA #0:484.A@CB #0:601.A@FE: 32.2678
-currently processing residue...CYS 485.A
-stipped to only code...CYS
-stripped to only the number, this is residue 485
-ResID: CYS 485.A
-Angle #0:485.A@CA #0:485.A@CB #0:601.A@FE: 113.156
-currently processing residue...NO2 606.A
-stipped to only code...NO2
-SHIT! Weird molecule, do nothing.
-currently processing residue...THR 142.A
-stipped to only code...THR
-stripped to only the number, this is residue 142
-ResID: THR 142.A
-Angle #0:142.A@CA #0:142.A@CB #0:601.A@FE: 114.32
-currently processing residue...ARG 109.A
-stipped to only code...ARG
-stripped to only the number, this is residue 109
-ResID: ARG 109.A
-Angle #0:109.A@CA #0:109.A@CB #0:601.A@FE: 159.006
-currently processing residue...ALA 486.A
-stipped to only code...ALA
-stripped to only the number, this is residue 486
-ResID: ALA 486.A
-Angle #0:486.A@CA #0:486.A@CB #0:601.A@FE: 52.9419
-currently processing residue...LYS 224.A
-stipped to only code...LYS
-stripped to only the number, this is residue 224
-ResID: LYS 224.A
-Angle #0:224.A@CA #0:224.A@CB #0:601.A@FE: 175.826
 currently processing residue...SRM 601.A
 stipped to only code...SRM
 Oops! HEM shouldn't be compared to itself, Do nothing.
@@ -53,4 +12,45 @@ stipped to only code...ARG
 stripped to only the number, this is residue 179
 ResID: ARG 179.A
 Angle #0:179.A@CA #0:179.A@CB #0:601.A@FE: 149.541
+currently processing residue...ASN 483.A
+stipped to only code...ASN
+stripped to only the number, this is residue 483
+ResID: ASN 483.A
+Angle #0:483.A@CA #0:483.A@CB #0:601.A@FE: 125.935
+currently processing residue...THR 142.A
+stipped to only code...THR
+stripped to only the number, this is residue 142
+ResID: THR 142.A
+Angle #0:142.A@CA #0:142.A@CB #0:601.A@FE: 114.32
+currently processing residue...THR 484.A
+stipped to only code...THR
+stripped to only the number, this is residue 484
+ResID: THR 484.A
+Angle #0:484.A@CA #0:484.A@CB #0:601.A@FE: 32.2678
+currently processing residue...CL 604.A
+stipped to only code...CL 
+SHIT! Weird molecule, do nothing.
+currently processing residue...CYS 485.A
+stipped to only code...CYS
+stripped to only the number, this is residue 485
+ResID: CYS 485.A
+Angle #0:485.A@CA #0:485.A@CB #0:601.A@FE: 113.156
+currently processing residue...NO2 606.A
+stipped to only code...NO2
+SHIT! Weird molecule, do nothing.
+currently processing residue...ALA 486.A
+stipped to only code...ALA
+stripped to only the number, this is residue 486
+ResID: ALA 486.A
+Angle #0:486.A@CA #0:486.A@CB #0:601.A@FE: 52.9419
+currently processing residue...ARG 109.A
+stipped to only code...ARG
+stripped to only the number, this is residue 109
+ResID: ARG 109.A
+Angle #0:109.A@CA #0:109.A@CB #0:601.A@FE: 159.006
+currently processing residue...LYS 224.A
+stipped to only code...LYS
+stripped to only the number, this is residue 224
+ResID: LYS 224.A
+Angle #0:224.A@CA #0:224.A@CB #0:601.A@FE: 175.826
 

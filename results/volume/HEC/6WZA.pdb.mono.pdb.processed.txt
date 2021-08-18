@@ -22,9 +22,9 @@ warning: cannot find LINK/SSBOND residue  NA (202 )
 6WZA.pdb.mono.pdb opened
 1532 spheres
 Surfnet for "sel" - "sel":  volume = 1070.2
-Surfnet for "sel" - "sel" split ? 2:  volume = 2.7054
 Surfnet for "sel" - "sel" split ? 4:  volume = 23.389
-Surfnet for "sel" - "sel" split ? 1:  volume = 1040.1
 Surfnet for "sel" - "sel" split ? 3:  volume = 2.2113
 Surfnet for "sel" - "sel" split ? 5:  volume = 1.858
+Surfnet for "sel" - "sel" split ? 1:  volume = 1040.1
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.7054
 

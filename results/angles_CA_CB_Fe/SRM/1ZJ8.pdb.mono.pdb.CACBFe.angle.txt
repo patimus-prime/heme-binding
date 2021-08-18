@@ -6,6 +6,38 @@ warning: cannot find LINK/SSBOND residue CYS (463 )
 warning: cannot find LINK/SSBOND residue CYS (467 )
 #0, chain A: sulfite reductase NIRA
 1ZJ8.pdb.mono.pdb opened
+currently processing residue...ALA 468.A
+stipped to only code...ALA
+stripped to only the number, this is residue 468
+ResID: ALA 468.A
+Angle #0:468.A@CA #0:468.A@CB #0:557.A@FE: 54.3434
+currently processing residue...SF4 556.A
+stipped to only code...SF4
+SHIT! Weird molecule, do nothing.
+currently processing residue...SRM 557.A
+stipped to only code...SRM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...ASP 129.A
+stipped to only code...ASP
+stripped to only the number, this is residue 129
+ResID: ASP 129.A
+Angle #0:129.A@CA #0:129.A@CB #0:557.A@FE: 96.5485
+currently processing residue...LYS 207.A
+stipped to only code...LYS
+stripped to only the number, this is residue 207
+ResID: LYS 207.A
+Angle #0:207.A@CA #0:207.A@CB #0:557.A@FE: 172.22
+currently processing residue...TYR 69.A
+stipped to only code...TYR
+stripped to only the number, this is residue 69
+ResID: TYR 69.A
+Angle #0:69.A@CA #0:69.A@CB #0:557.A@FE: 168.238
+currently processing residue...ARG 97.A
+stipped to only code...ARG
+stripped to only the number, this is residue 97
+ResID: ARG 97.A
+Angle #0:97.A@CA #0:97.A@CB #0:557.A@FE: 148.837
 currently processing residue...LYS 209.A
 stipped to only code...LYS
 stripped to only the number, this is residue 209
@@ -16,9 +48,11 @@ stipped to only code...GLN
 stripped to only the number, this is residue 134
 ResID: GLN 134.A
 Angle #0:134.A@CA #0:134.A@CB #0:557.A@FE: 147.384
-currently processing residue...CL 558.A
-stipped to only code...CL 
-SHIT! Weird molecule, do nothing.
+currently processing residue...ARG 166.A
+stipped to only code...ARG
+stripped to only the number, this is residue 166
+ResID: ARG 166.A
+Angle #0:166.A@CA #0:166.A@CB #0:557.A@FE: 157.126
 currently processing residue...ASN 465.A
 stipped to only code...ASN
 stripped to only the number, this is residue 465
@@ -34,41 +68,7 @@ stipped to only code...CYS
 stripped to only the number, this is residue 467
 ResID: CYS 467.A
 Angle #0:467.A@CA #0:467.A@CB #0:557.A@FE: 106.838
-currently processing residue...ALA 468.A
-stipped to only code...ALA
-stripped to only the number, this is residue 468
-ResID: ALA 468.A
-Angle #0:468.A@CA #0:468.A@CB #0:557.A@FE: 54.3434
-currently processing residue...SF4 556.A
-stipped to only code...SF4
+currently processing residue...CL 558.A
+stipped to only code...CL 
 SHIT! Weird molecule, do nothing.
-currently processing residue...ARG 166.A
-stipped to only code...ARG
-stripped to only the number, this is residue 166
-ResID: ARG 166.A
-Angle #0:166.A@CA #0:166.A@CB #0:557.A@FE: 157.126
-currently processing residue...SRM 557.A
-stipped to only code...SRM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
-currently processing residue...ASP 129.A
-stipped to only code...ASP
-stripped to only the number, this is residue 129
-ResID: ASP 129.A
-Angle #0:129.A@CA #0:129.A@CB #0:557.A@FE: 96.5485
-currently processing residue...ARG 97.A
-stipped to only code...ARG
-stripped to only the number, this is residue 97
-ResID: ARG 97.A
-Angle #0:97.A@CA #0:97.A@CB #0:557.A@FE: 148.837
-currently processing residue...LYS 207.A
-stipped to only code...LYS
-stripped to only the number, this is residue 207
-ResID: LYS 207.A
-Angle #0:207.A@CA #0:207.A@CB #0:557.A@FE: 172.22
-currently processing residue...TYR 69.A
-stipped to only code...TYR
-stripped to only the number, this is residue 69
-ResID: TYR 69.A
-Angle #0:69.A@CA #0:69.A@CB #0:557.A@FE: 168.238
 

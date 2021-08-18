@@ -1,12 +1,12 @@
 #0, chain A: catalase
 4CAT.pdb.mono.pdb opened
+currently processing residue...UNK 128.A
+stipped to only code...UNK
+SHIT! Weird molecule, do nothing.
 currently processing residue...UNK 61.A
 stipped to only code...UNK
 SHIT! Weird molecule, do nothing.
 currently processing residue...UNK 60.A
-stipped to only code...UNK
-SHIT! Weird molecule, do nothing.
-currently processing residue...UNK 128.A
 stipped to only code...UNK
 SHIT! Weird molecule, do nothing.
 currently processing residue...HEM 660.A

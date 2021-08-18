@@ -21,7 +21,7 @@ warning: cannot find LINK/SSBOND residue  MG (88 )
 1034 spheres
 Surfnet for "sel" - "sel":  volume = 1053.1
 Surfnet for "sel" - "sel" split ? 3:  volume = 3.5488
-Surfnet for "sel" - "sel" split ? 2:  volume = 1000.4
-Surfnet for "sel" - "sel" split ? 4:  volume = 9.9342
 Surfnet for "sel" - "sel" split ? 1:  volume = 39.211
+Surfnet for "sel" - "sel" split ? 4:  volume = 9.9342
+Surfnet for "sel" - "sel" split ? 2:  volume = 1000.4
 

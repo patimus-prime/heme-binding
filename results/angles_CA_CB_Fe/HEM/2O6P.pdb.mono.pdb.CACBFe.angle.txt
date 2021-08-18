@@ -14,21 +14,35 @@ warning: cannot find LINK/SSBOND residue  ZN (1005 )
 warning: cannot find LINK/SSBOND residue  ZN (1005 )
 #0, chain A: iron-regulated surface determinant protein C
 2O6P.pdb.mono.pdb opened
-currently processing residue...TYR 52.A
-stipped to only code...TYR
-stripped to only the number, this is residue 52
-ResID: TYR 52.A
-Angle #0:52.A@CA #0:52.A@CB #0:190.A@FE: 136.901
 currently processing residue...TYR 132.A
 stipped to only code...TYR
 stripped to only the number, this is residue 132
 ResID: TYR 132.A
 Angle #0:132.A@CA #0:132.A@CB #0:190.A@FE: 132.967
-currently processing residue...ILE 121.A
-stipped to only code...ILE
-stripped to only the number, this is residue 121
-ResID: ILE 121.A
-Angle #0:121.A@CA #0:121.A@CB #0:190.A@FE: 132.205
+currently processing residue...VAL 119.A
+stipped to only code...VAL
+stripped to only the number, this is residue 119
+ResID: VAL 119.A
+Angle #0:119.A@CA #0:119.A@CB #0:190.A@FE: 171.654
+currently processing residue...HEM 190.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...TYR 52.A
+stipped to only code...TYR
+stripped to only the number, this is residue 52
+ResID: TYR 52.A
+Angle #0:52.A@CA #0:52.A@CB #0:190.A@FE: 136.901
+currently processing residue...ALA 49.A
+stipped to only code...ALA
+stripped to only the number, this is residue 49
+ResID: ALA 49.A
+Angle #0:49.A@CA #0:49.A@CB #0:190.A@FE: 69.626
+currently processing residue...TYR 136.A
+stipped to only code...TYR
+stripped to only the number, this is residue 136
+ResID: TYR 136.A
+Angle #0:136.A@CA #0:136.A@CB #0:190.A@FE: 145.409
 currently processing residue...ILE 48.A
 stipped to only code...ILE
 stripped to only the number, this is residue 48
@@ -39,23 +53,9 @@ stipped to only code...HIS
 stripped to only the number, this is residue 134
 ResID: HIS 134.A
 Angle #0:134.A@CA #0:134.A@CB #0:190.A@FE: 146.779
-currently processing residue...VAL 119.A
-stipped to only code...VAL
-stripped to only the number, this is residue 119
-ResID: VAL 119.A
-Angle #0:119.A@CA #0:119.A@CB #0:190.A@FE: 171.654
-currently processing residue...TYR 136.A
-stipped to only code...TYR
-stripped to only the number, this is residue 136
-ResID: TYR 136.A
-Angle #0:136.A@CA #0:136.A@CB #0:190.A@FE: 145.409
-currently processing residue...ALA 49.A
-stipped to only code...ALA
-stripped to only the number, this is residue 49
-ResID: ALA 49.A
-Angle #0:49.A@CA #0:49.A@CB #0:190.A@FE: 69.626
-currently processing residue...HEM 190.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
+currently processing residue...ILE 121.A
+stipped to only code...ILE
+stripped to only the number, this is residue 121
+ResID: ILE 121.A
+Angle #0:121.A@CA #0:121.A@CB #0:190.A@FE: 132.205
 

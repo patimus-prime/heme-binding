@@ -2,11 +2,6 @@ The following problems occurred while reading PDB file for 3HX9.pdb.mono.pdb
 warning: cannot find LINK/SSBOND residue HIS (75 )
 #0, chain A: protein RV3592
 3HX9.pdb.mono.pdb opened
-currently processing residue...TRP 66.A
-stipped to only code...TRP
-stripped to only the number, this is residue 66
-ResID: TRP 66.A
-Dihedral #0:66.A@CA #0:66.A@CB #0:300.A@FE #0:200.A@FE: -149.114
 currently processing residue...HEM 300.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
@@ -45,6 +40,11 @@ currently processing residue...HEM 200.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
+currently processing residue...TRP 66.A
+stipped to only code...TRP
+stripped to only the number, this is residue 66
+ResID: TRP 66.A
+Dihedral #0:66.A@CA #0:66.A@CB #0:300.A@FE #0:200.A@FE: -149.114
 currently processing residue...CL 301.A
 stipped to only code...CL 
 SHIT! Weird molecule, do nothing.

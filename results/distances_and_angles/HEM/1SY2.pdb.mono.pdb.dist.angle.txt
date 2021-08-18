@@ -1,0 +1,308 @@
+#0, chain A: NP4
+1SY2.pdb.mono.pdb opened
+axis name, ID, length, center, direction: axis: a999999999 13.345 ( 11.284,  21.297,  35.951) (-0.137, -0.870,  0.474)
+currently processing residue...ALA 84.A
+stipped to only code...ALA
+stripped to only the number, this is residue 84
+axis name, ID, length, center, direction: axis: a84  2.845 ( -0.144,  22.051,  32.906) (-0.523, -0.792,  0.316)
+Distance from a999999999 to a84 is 11.249
+Angle between a999999999 and a84 is 24.494
+currently processing residue...ASP 70.A
+stipped to only code...ASP
+stripped to only the number, this is residue 70
+axis name, ID, length, center, direction: axis: a70  5.248 (  5.393,  26.715,  39.509) ( 0.659,  0.070, -0.749)
+Distance from a999999999 to a70 is 6.217
+Angle between a999999999 and a70 is 59.596
+currently processing residue...ASN 103.A
+stipped to only code...ASN
+stripped to only the number, this is residue 103
+axis name, ID, length, center, direction: axis: a103  5.061 (  4.520,  27.522,  28.909) ( 0.724,  0.690, -0.000)
+Distance from a999999999 to a103 is 7.343
+Angle between a999999999 and a103 is 45.626
+currently processing residue...PRO 37.A
+stipped to only code...PRO
+stripped to only the number, this is residue 37
+axis name, ID, length, center, direction: axis: a37  3.996 ( 20.510,  18.612,  36.591) (-0.140,  0.956, -0.258)
+Distance from a999999999 to a37 is 8.967
+Angle between a999999999 and a37 is 20.861
+currently processing residue...VAL 89.A
+stipped to only code...VAL
+stripped to only the number, this is residue 89
+axis name, ID, length, center, direction: axis: a89  4.559 (  5.124,  31.837,  41.429) (-0.984, -0.065, -0.163)
+Distance from a999999999 to a89 is 11.312
+Angle between a999999999 and a89 is 83.465
+currently processing residue...LYS 88.A
+stipped to only code...LYS
+stripped to only the number, this is residue 88
+axis name, ID, length, center, direction: axis: a88  7.262 (  8.327,  31.173,  37.214) ( 0.955, -0.187, -0.231)
+Distance from a999999999 to a88 is 4.953
+Angle between a999999999 and a88 is 85.540
+currently processing residue...LYS 87.A
+stipped to only code...LYS
+stripped to only the number, this is residue 87
+axis name, ID, length, center, direction: axis: a87  6.712 (  0.593,  31.095,  37.706) (-0.815,  0.431,  0.389)
+Distance from a999999999 to a87 is 9.887
+Angle between a999999999 and a87 is 85.482
+currently processing residue...LYS 38.A
+stipped to only code...LYS
+stripped to only the number, this is residue 38
+axis name, ID, length, center, direction: axis: a38  6.221 ( 23.327,  15.939,  38.019) ( 0.689,  0.530, -0.493)
+Distance from a999999999 to a38 is 10.887
+Angle between a999999999 and a38 is 37.841
+currently processing residue...PHE 86.A
+stipped to only code...PHE
+stripped to only the number, this is residue 86
+axis name, ID, length, center, direction: axis: a86  5.276 (  4.092,  26.401,  33.284) ( 0.823, -0.364, -0.436)
+Distance from a999999999 to a86 is 5.884
+Angle between a999999999 and a86 is 89.863
+currently processing residue...LEU 44.A
+stipped to only code...LEU
+stripped to only the number, this is residue 44
+axis name, ID, length, center, direction: axis: a44  4.739 (  4.273,  17.946,  43.962) ( 0.134,  0.508,  0.851)
+Distance from a999999999 to a44 is 7.122
+Angle between a999999999 and a44 is 86.711
+currently processing residue...ALA 43.A
+stipped to only code...ALA
+stripped to only the number, this is residue 43
+axis name, ID, length, center, direction: axis: a43  3.255 (  8.253,  19.258,  45.094) ( 0.582, -0.414,  0.700)
+Distance from a999999999 to a43 is 7.156
+Angle between a999999999 and a43 is 52.254
+currently processing residue...TYR 134.A
+stipped to only code...TYR
+stripped to only the number, this is residue 134
+axis name, ID, length, center, direction: axis: a134  8.553 (  9.626,   8.316,  33.763) (-0.318, -0.562, -0.764)
+Distance from a999999999 to a134 is 5.245
+Angle between a999999999 and a134 is 80.180
+currently processing residue...LEU 133.A
+stipped to only code...LEU
+stripped to only the number, this is residue 133
+axis name, ID, length, center, direction: axis: a133  4.472 ( 11.100,  13.456,  34.030) ( 0.563,  0.636,  0.527)
+Distance from a999999999 to a133 is 4.130
+Angle between a999999999 and a133 is 67.620
+currently processing residue...LYS 128.A
+stipped to only code...LYS
+stripped to only the number, this is residue 128
+axis name, ID, length, center, direction: axis: a128  6.132 ( 13.276,  23.549,  26.359) ( 0.378, -0.219,  0.899)
+Distance from a999999999 to a128 is 5.803
+Angle between a999999999 and a128 is 55.589
+currently processing residue...LYS 125.A
+stipped to only code...LYS
+stripped to only the number, this is residue 125
+axis name, ID, length, center, direction: axis: a125  7.320 ( 10.109,  26.615,  29.482) ( 0.408,  0.422,  0.810)
+Distance from a999999999 to a125 is 1.264
+Angle between a999999999 and a125 is 87.748
+currently processing residue...HIS 124.A
+stipped to only code...HIS
+stripped to only the number, this is residue 124
+axis name, ID, length, center, direction: axis: a124  6.452 (  5.989,  21.151,  26.521) (-0.320, -0.784, -0.532)
+Distance from a999999999 to a124 is 7.544
+Angle between a999999999 and a124 is 61.698
+currently processing residue...LEU 123.A
+stipped to only code...LEU
+stripped to only the number, this is residue 123
+axis name, ID, length, center, direction: axis: a123  4.611 (  8.496,  20.627,  30.303) ( 0.298,  0.687,  0.663)
+Distance from a999999999 to a123 is 4.021
+Angle between a999999999 and a123 is 71.098
+currently processing residue...SER 72.A
+stipped to only code...SER
+stripped to only the number, this is residue 72
+axis name, ID, length, center, direction: axis: a72  4.302 ( -0.914,  24.727,  37.618) ( 0.818, -0.021, -0.574)
+Distance from a999999999 to a72 is 10.902
+Angle between a999999999 and a72 is 68.511
+currently processing residue...ALA 135.A
+stipped to only code...ALA
+stripped to only the number, this is residue 135
+axis name, ID, length, center, direction: axis: a135  2.896 (  8.986,  10.152,  39.385) ( 0.497,  0.721, -0.483)
+Distance from a999999999 to a135 is 4.369
+Angle between a999999999 and a135 is 22.458
+currently processing residue...THR 121.A
+stipped to only code...THR
+stripped to only the number, this is residue 121
+axis name, ID, length, center, direction: axis: a121  3.719 (  6.593,  14.699,  33.134) (-0.208,  0.688,  0.695)
+Distance from a999999999 to a121 is 5.935
+Angle between a999999999 and a121 is 76.088
+currently processing residue...HIS 120.A
+stipped to only code...HIS
+stripped to only the number, this is residue 120
+axis name, ID, length, center, direction: axis: a120  5.803 (  5.471,  10.879,  32.379) (-0.271,  0.056,  0.961)
+Distance from a999999999 to a120 is 8.228
+Angle between a999999999 and a120 is 63.661
+currently processing residue...TYR 69.A
+stipped to only code...TYR
+stripped to only the number, this is residue 69
+axis name, ID, length, center, direction: axis: a69  8.713 (  8.202,  28.005,  44.446) ( 0.206, -0.136,  0.969)
+Distance from a999999999 to a69 is 8.550
+Angle between a999999999 and a69 is 56.645
+currently processing residue...ILE 119.A
+stipped to only code...ILE
+stripped to only the number, this is residue 119
+axis name, ID, length, center, direction: axis: a119  4.422 (  5.238,  10.538,  37.839) ( 0.559, -0.538, -0.631)
+Distance from a999999999 to a119 is 7.221
+Angle between a999999999 and a119 is 84.741
+currently processing residue...PHE 68.A
+stipped to only code...PHE
+stripped to only the number, this is residue 68
+axis name, ID, length, center, direction: axis: a68  5.414 ( 12.057,  26.942,  39.713) ( 0.354, -0.430, -0.831)
+Distance from a999999999 to a68 is 3.702
+Angle between a999999999 and a68 is 86.062
+currently processing residue...VAL 25.A
+stipped to only code...VAL
+stripped to only the number, this is residue 25
+axis name, ID, length, center, direction: axis: a25  4.232 ( 11.150,  13.882,  44.056) (-0.387,  0.287, -0.876)
+Distance from a999999999 to a25 is 3.247
+Angle between a999999999 and a25 is 52.274
+currently processing residue...THR 166.A
+stipped to only code...THR
+stripped to only the number, this is residue 166
+axis name, ID, length, center, direction: axis: a166  4.257 ( 17.218,  13.394,  45.687) (-0.680, -0.041, -0.732)
+Distance from a999999999 to a166 is 7.688
+Angle between a999999999 and a166 is 77.427
+currently processing residue...ASP 66.A
+stipped to only code...ASP
+stripped to only the number, this is residue 66
+axis name, ID, length, center, direction: axis: a66  4.097 ( 17.956,  27.876,  40.505) ( 0.211, -0.289,  0.934)
+Distance from a999999999 to a66 is 7.951
+Angle between a999999999 and a66 is 48.326
+currently processing residue...TYR 17.A
+stipped to only code...TYR
+stripped to only the number, this is residue 17
+axis name, ID, length, center, direction: axis: a17  7.652 ( -1.756,  12.356,  43.761) ( 0.809,  0.095, -0.580)
+Distance from a999999999 to a17 is 9.754
+Angle between a999999999 and a17 is 62.084
+currently processing residue...ASP 61.A
+stipped to only code...ASP
+stripped to only the number, this is residue 61
+axis name, ID, length, center, direction: axis: a61  4.699 ( 20.543,  23.290,  41.609) ( 0.543, -0.205, -0.814)
+Distance from a999999999 to a61 is 11.028
+Angle between a999999999 and a61 is 73.625
+currently processing residue...TYR 60.A
+stipped to only code...TYR
+stripped to only the number, this is residue 60
+axis name, ID, length, center, direction: axis: a60  7.737 ( 17.508,  24.319,  45.736) ( 0.555,  0.471,  0.685)
+Distance from a999999999 to a60 is 8.111
+Angle between a999999999 and a60 is 80.724
+currently processing residue...HIS 59.A
+stipped to only code...HIS
+stripped to only the number, this is residue 59
+axis name, ID, length, center, direction: axis: a59  6.646 ( 12.036,  23.052,  40.814) (-0.402, -0.461, -0.791)
+Distance from a999999999 to a59 is 2.120
+Angle between a999999999 and a59 is 85.351
+currently processing residue...HEM 185.A
+stipped to only code...HEM
+Oops! Ligand shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...TYR 58.A
+stipped to only code...TYR
+stripped to only the number, this is residue 58
+axis name, ID, length, center, direction: axis: a58  7.739 ( 11.008,  23.774,  45.570) ( 0.677,  0.321,  0.662)
+Distance from a999999999 to a58 is 7.252
+Angle between a999999999 and a58 is 86.657
+currently processing residue...LEU 57.A
+stipped to only code...LEU
+stripped to only the number, this is residue 57
+axis name, ID, length, center, direction: axis: a57  5.426 (  5.672,  22.902,  41.292) (-0.259, -0.568, -0.781)
+Distance from a999999999 to a57 is 6.694
+Angle between a999999999 and a57 is 80.845
+currently processing residue...PHE 107.A
+stipped to only code...PHE
+stripped to only the number, this is residue 107
+axis name, ID, length, center, direction: axis: a107  6.226 (  0.969,  14.832,  36.064) ( 0.105,  0.165,  0.981)
+Distance from a999999999 to a107 is 9.073
+Angle between a999999999 and a107 is 72.139
+currently processing residue...THR 106.A
+stipped to only code...THR
+stripped to only the number, this is residue 106
+axis name, ID, length, center, direction: axis: a106  4.534 (  2.168,  16.273,  30.526) (-0.361, -0.010, -0.932)
+Distance from a999999999 to a106 is 9.458
+Angle between a999999999 and a106 is 67.436
+currently processing residue...ASP 27.A
+stipped to only code...ASP
+stripped to only the number, this is residue 27
+axis name, ID, length, center, direction: axis: a27  5.276 ( 14.115,   8.744,  42.903) ( 0.413, -0.642,  0.646)
+Distance from a999999999 to a27 is 6.080
+Angle between a999999999 and a27 is 36.113
+currently processing residue...GLU 55.A
+stipped to only code...GLU
+stripped to only the number, this is residue 55
+axis name, ID, length, center, direction: axis: a55  6.236 (  0.186,  20.318,  40.558) (-0.277,  0.908,  0.313)
+Distance from a999999999 to a55 is 9.538
+Angle between a999999999 and a55 is 52.861
+currently processing residue...TYR 105.A
+stipped to only code...TYR
+stripped to only the number, this is residue 105
+axis name, ID, length, center, direction: axis: a105  6.535 (  2.978,  20.252,  34.304) (-0.037,  0.129,  0.991)
+Distance from a999999999 to a105 is 8.182
+Angle between a999999999 and a105 is 68.754
+currently processing residue...TYR 28.A
+stipped to only code...TYR
+stripped to only the number, this is residue 28
+axis name, ID, length, center, direction: axis: a28  6.292 ( 16.437,  12.567,  38.733) ( 0.671,  0.742,  0.017)
+Distance from a999999999 to a28 is 6.477
+Angle between a999999999 and a28 is 43.207
+currently processing residue...LEU 29.A
+stipped to only code...LEU
+stripped to only the number, this is residue 29
+axis name, ID, length, center, direction: axis: a29  4.507 ( 14.590,   8.108,  34.504) (-0.237,  0.919,  0.316)
+Distance from a999999999 to a29 is 7.552
+Angle between a999999999 and a29 is 51.901
+currently processing residue...VAL 36.A
+stipped to only code...VAL
+stripped to only the number, this is residue 36
+axis name, ID, length, center, direction: axis: a36  4.526 ( 18.148,  17.490,  33.875) (-1.000, -0.008, -0.004)
+Distance from a999999999 to a36 is 6.102
+Angle between a999999999 and a36 is 81.825
+currently processing residue...ASP 30.A
+stipped to only code...ASP
+stripped to only the number, this is residue 30
+axis name, ID, length, center, direction: axis: a30  4.568 ( 15.972,  12.899,  32.043) (-0.054, -0.990,  0.129)
+Distance from a999999999 to a30 is 8.442
+Angle between a999999999 and a30 is 21.595
+currently processing residue...ALA 42.A
+stipped to only code...ALA
+stripped to only the number, this is residue 42
+axis name, ID, length, center, direction: axis: a42  3.092 ( 11.573,  18.193,  43.998) ( 0.497,  0.404, -0.768)
+Distance from a999999999 to a42 is 5.160
+Angle between a999999999 and a42 is 38.441
+currently processing residue...ARG 39.A
+stipped to only code...ARG
+stripped to only the number, this is residue 39
+axis name, ID, length, center, direction: axis: a39  8.657 ( 24.490,  16.717,  42.217) ( 0.889, -0.295,  0.349)
+Distance from a999999999 to a39 is 10.310
+Angle between a999999999 and a39 is 72.537
+currently processing residue...TYR 40.A
+stipped to only code...TYR
+stripped to only the number, this is residue 40
+axis name, ID, length, center, direction: axis: a40  8.088 ( 17.132,  19.768,  40.695) (-0.364,  0.740, -0.566)
+Distance from a999999999 to a40 is 5.181
+Angle between a999999999 and a40 is 30.456
+currently processing residue...TYR 104.A
+stipped to only code...TYR
+stripped to only the number, this is residue 104
+axis name, ID, length, center, direction: axis: a104  6.321 (  2.171,  21.791,  27.130) (-0.253, -0.456, -0.853)
+Distance from a999999999 to a104 is 9.925
+Angle between a999999999 and a104 is 88.447
+currently processing residue...CYS 41.A
+stipped to only code...CYS
+stripped to only the number, this is residue 41
+axis name, ID, length, center, direction: axis: a41  4.811 ( 15.819,  19.140,  44.817) ( 0.656, -0.137,  0.742)
+Distance from a999999999 to a41 is 6.450
+Angle between a999999999 and a41 is 67.587
+currently processing residue...LEU 137.A
+stipped to only code...LEU
+stripped to only the number, this is residue 137
+axis name, ID, length, center, direction: axis: a137  5.491 (  6.714,  10.557,  44.359) (-0.317,  0.703, -0.636)
+Distance from a999999999 to a137 is 6.461
+Angle between a999999999 and a137 is 29.551
+currently processing residue...VAL 97.A
+stipped to only code...VAL
+stripped to only the number, this is residue 97
+axis name, ID, length, center, direction: axis: a97  4.207 (  6.074,  34.050,  34.349) ( 0.931,  0.041, -0.362)
+Distance from a999999999 to a97 is 8.216
+Angle between a999999999 and a97 is 70.400
+currently processing residue...ASP 35.A
+stipped to only code...ASP
+stripped to only the number, this is residue 35
+axis name, ID, length, center, direction: axis: a35  5.098 ( 18.673,  18.347,  29.247) (-0.056,  0.289,  0.956)
+Distance from a999999999 to a35 is 8.627
+Angle between a999999999 and a35 is 77.907
+

@@ -4,12 +4,12 @@ warning: cannot find LINK/SSBOND residue HIS (25 )
 1TWN.pdb.mono.pdb opened
 950 spheres
 Surfnet for "sel" - "sel":  volume = 1191.3
-Surfnet for "sel" - "sel" split ? 5:  volume = 11.923
+Surfnet for "sel" - "sel" split ? 6:  volume = 13.327
 Surfnet for "sel" - "sel" split ? 7:  volume = 7.1
 Surfnet for "sel" - "sel" split ? 4:  volume = 1.9544
-Surfnet for "sel" - "sel" split ? 6:  volume = 13.327
-Surfnet for "sel" - "sel" split ? 1:  volume = 1145
+Surfnet for "sel" - "sel" split ? 5:  volume = 11.923
 Surfnet for "sel" - "sel" split ? 3:  volume = 6.9257
 Surfnet for "sel" - "sel" split ? 8:  volume = 1.9746
+Surfnet for "sel" - "sel" split ? 1:  volume = 1145
 Surfnet for "sel" - "sel" split ? 2:  volume = 3.1468
 

@@ -7,12 +7,12 @@ warning: cannot find LINK/SSBOND residue HEM (754 )
 1778 spheres
 Surfnet for "sel" - "sel":  volume = 1387.3
 Surfnet for "sel" - "sel" split ? 5:  volume = 15.522
-Surfnet for "sel" - "sel" split ? 6:  volume = 2.528
-Surfnet for "sel" - "sel" split ? 3:  volume = 2.6953
 Surfnet for "sel" - "sel" split ? 2:  volume = 2.2812
-Surfnet for "sel" - "sel" split ? 7:  volume = 2.4861
 Surfnet for "sel" - "sel" split ? 8:  volume = 5.0606
-Surfnet for "sel" - "sel" split ? 4:  volume = 9.0133
 Surfnet for "sel" - "sel" split ? 9:  volume = 2.129
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.4861
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.6953
+Surfnet for "sel" - "sel" split ? 4:  volume = 9.0133
+Surfnet for "sel" - "sel" split ? 6:  volume = 2.528
 Surfnet for "sel" - "sel" split ? 1:  volume = 1345.6
 

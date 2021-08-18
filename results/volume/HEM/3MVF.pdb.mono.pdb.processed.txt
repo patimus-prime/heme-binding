@@ -2,13 +2,13 @@
 3MVF.pdb.mono.pdb opened
 1106 spheres
 Surfnet for "sel" - "sel":  volume = 1321.2
-Surfnet for "sel" - "sel" split ? 4:  volume = 11.449
-Surfnet for "sel" - "sel" split ? 7:  volume = 2.6286
-Surfnet for "sel" - "sel" split ? 1:  volume = 1271.4
-Surfnet for "sel" - "sel" split ? 2:  volume = 6.3158
-Surfnet for "sel" - "sel" split ? 8:  volume = 3.5638
-Surfnet for "sel" - "sel" split ? 6:  volume = 6.1719
-Surfnet for "sel" - "sel" split ? 3:  volume = 10.61
 Surfnet for "sel" - "sel" split ? 9:  volume = 4.1906
+Surfnet for "sel" - "sel" split ? 3:  volume = 10.61
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.6286
+Surfnet for "sel" - "sel" split ? 4:  volume = 11.449
+Surfnet for "sel" - "sel" split ? 8:  volume = 3.5638
+Surfnet for "sel" - "sel" split ? 1:  volume = 1271.4
+Surfnet for "sel" - "sel" split ? 6:  volume = 6.1719
 Surfnet for "sel" - "sel" split ? 5:  volume = 4.9486
+Surfnet for "sel" - "sel" split ? 2:  volume = 6.3158
 

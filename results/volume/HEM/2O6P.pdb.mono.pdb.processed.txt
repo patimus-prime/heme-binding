@@ -16,9 +16,9 @@ warning: cannot find LINK/SSBOND residue  ZN (1005 )
 2O6P.pdb.mono.pdb opened
 810 spheres
 Surfnet for "sel" - "sel":  volume = 818.79
+Surfnet for "sel" - "sel" split ? 3:  volume = 6.8524
 Surfnet for "sel" - "sel" split ? 5:  volume = 13.521
 Surfnet for "sel" - "sel" split ? 4:  volume = 7.2804
-Surfnet for "sel" - "sel" split ? 1:  volume = 788.05
 Surfnet for "sel" - "sel" split ? 2:  volume = 3.0905
-Surfnet for "sel" - "sel" split ? 3:  volume = 6.8524
+Surfnet for "sel" - "sel" split ? 1:  volume = 788.05
 

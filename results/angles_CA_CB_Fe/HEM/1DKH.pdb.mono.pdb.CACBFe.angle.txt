@@ -4,21 +4,26 @@ currently processing residue...HEM 200.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 32.A
+stipped to only code...HIS
+stripped to only the number, this is residue 32
+ResID: HIS 32.A
+Angle #0:32.A@CA #0:32.A@CB #0:200.A@FE: 121.375
 currently processing residue...SER 42.A
 stipped to only code...SER
 stripped to only the number, this is residue 42
 ResID: SER 42.A
 Angle #0:42.A@CA #0:42.A@CB #0:200.A@FE: 32.8371
-currently processing residue...MET 140.A
-stipped to only code...MET
-stripped to only the number, this is residue 140
-ResID: MET 140.A
-Angle #0:140.A@CA #0:140.A@CB #0:200.A@FE: 172.207
 currently processing residue...LEU 77.A
 stipped to only code...LEU
 stripped to only the number, this is residue 77
 ResID: LEU 77.A
 Angle #0:77.A@CA #0:77.A@CB #0:200.A@FE: 66.1552
+currently processing residue...MET 140.A
+stipped to only code...MET
+stripped to only the number, this is residue 140
+ResID: MET 140.A
+Angle #0:140.A@CA #0:140.A@CB #0:200.A@FE: 172.207
 currently processing residue...TYR 137.A
 stipped to only code...TYR
 stripped to only the number, this is residue 137
@@ -44,9 +49,4 @@ stipped to only code...HIS
 stripped to only the number, this is residue 83
 ResID: HIS 83.A
 Angle #0:83.A@CA #0:83.A@CB #0:200.A@FE: 122.96
-currently processing residue...HIS 32.A
-stipped to only code...HIS
-stripped to only the number, this is residue 32
-ResID: HIS 32.A
-Angle #0:32.A@CA #0:32.A@CB #0:200.A@FE: 121.375
 

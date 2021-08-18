@@ -2,20 +2,11 @@ The following problems occurred while reading PDB file for 1TWN.pdb.mono.pdb
 warning: cannot find LINK/SSBOND residue HIS (25 )
 #0, chain A: Ho-1
 1TWN.pdb.mono.pdb opened
-currently processing residue...GLU 29.A
-stipped to only code...GLU
-stripped to only the number, this is residue 29
-ResID: GLU 29.A
-Angle #0:29.A@CA #0:29.A@CB #0:300.A@FE: 100.173
 currently processing residue...ASP 140.A
 stipped to only code...ASP
 stripped to only the number, this is residue 140
 ResID: ASP 140.A
 Angle #0:140.A@CA #0:140.A@CB #0:300.A@FE: 27.4847
-currently processing residue...VER 300.A
-stipped to only code...VER
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
 currently processing residue...GLY 139.A
 stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
@@ -24,6 +15,11 @@ stipped to only code...LEU
 stripped to only the number, this is residue 138
 ResID: LEU 138.A
 Angle #0:138.A@CA #0:138.A@CB #0:300.A@FE: 75.1317
+currently processing residue...GLU 29.A
+stipped to only code...GLU
+stripped to only the number, this is residue 29
+ResID: GLU 29.A
+Angle #0:29.A@CA #0:29.A@CB #0:300.A@FE: 100.173
 currently processing residue...HIS 25.A
 stipped to only code...HIS
 stripped to only the number, this is residue 25
@@ -50,4 +46,8 @@ stipped to only code...SER
 stripped to only the number, this is residue 142
 ResID: SER 142.A
 Angle #0:142.A@CA #0:142.A@CB #0:300.A@FE: 114.715
+currently processing residue...VER 300.A
+stipped to only code...VER
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
 

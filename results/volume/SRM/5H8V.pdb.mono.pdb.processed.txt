@@ -14,15 +14,15 @@ warning: cannot find LINK/SSBOND residue  MG (705 )
 5H8V.pdb.mono.pdb opened
 1818 spheres
 Surfnet for "sel" - "sel":  volume = 1450.8
-Surfnet for "sel" - "sel" split ? 9:  volume = 4.2944
-Surfnet for "sel" - "sel" split ? 4:  volume = 1360.8
-Surfnet for "sel" - "sel" split ? 11:  volume = 2.2261
-Surfnet for "sel" - "sel" split ? 8:  volume = 7.1608
-Surfnet for "sel" - "sel" split ? 5:  volume = 7.7653
-Surfnet for "sel" - "sel" split ? 1:  volume = 31.588
-Surfnet for "sel" - "sel" split ? 2:  volume = 8.7847
-Surfnet for "sel" - "sel" split ? 7:  volume = 10.041
-Surfnet for "sel" - "sel" split ? 6:  volume = 9.2125
 Surfnet for "sel" - "sel" split ? 10:  volume = 4.4794
+Surfnet for "sel" - "sel" split ? 4:  volume = 1360.8
+Surfnet for "sel" - "sel" split ? 6:  volume = 9.2125
+Surfnet for "sel" - "sel" split ? 1:  volume = 31.588
+Surfnet for "sel" - "sel" split ? 9:  volume = 4.2944
+Surfnet for "sel" - "sel" split ? 5:  volume = 7.7653
+Surfnet for "sel" - "sel" split ? 11:  volume = 2.2261
+Surfnet for "sel" - "sel" split ? 7:  volume = 10.041
+Surfnet for "sel" - "sel" split ? 2:  volume = 8.7847
+Surfnet for "sel" - "sel" split ? 8:  volume = 7.1608
 Surfnet for "sel" - "sel" split ? 3:  volume = 4.4035
 

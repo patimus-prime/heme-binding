@@ -5,15 +5,15 @@ warning: cannot find LINK/SSBOND residue  NO (1902 )
 2FC2.pdb.mono.pdb opened
 1858 spheres
 Surfnet for "sel" - "sel":  volume = 1252.6
-Surfnet for "sel" - "sel" split ? 4:  volume = 2.6434
-Surfnet for "sel" - "sel" split ? 6:  volume = 2.7831
-Surfnet for "sel" - "sel" split ? 3:  volume = 2.2105
-Surfnet for "sel" - "sel" split ? 7:  volume = 60.838
+Surfnet for "sel" - "sel" split ? 9:  volume = 22.086
 Surfnet for "sel" - "sel" split ? 1:  volume = 32.642
-Surfnet for "sel" - "sel" split ? 5:  volume = 7.7218
-Surfnet for "sel" - "sel" split ? 10:  volume = 24.691
-Surfnet for "sel" - "sel" split ? 2:  volume = 1091.4
 Surfnet for "sel" - "sel" split ? 8:  volume = 2.3018
 Surfnet for "sel" - "sel" split ? 11:  volume = 3.2158
-Surfnet for "sel" - "sel" split ? 9:  volume = 22.086
+Surfnet for "sel" - "sel" split ? 5:  volume = 7.7218
+Surfnet for "sel" - "sel" split ? 2:  volume = 1091.4
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.2105
+Surfnet for "sel" - "sel" split ? 7:  volume = 60.838
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.6434
+Surfnet for "sel" - "sel" split ? 10:  volume = 24.691
+Surfnet for "sel" - "sel" split ? 6:  volume = 2.7831
 

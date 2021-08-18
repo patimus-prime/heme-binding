@@ -8,10 +8,10 @@ warning: cannot find LINK/SSBOND residue CYS (467 )
 1ZJ8.pdb.mono.pdb opened
 2320 spheres
 Surfnet for "sel" - "sel":  volume = 2011
-Surfnet for "sel" - "sel" split ? 5:  volume = 3.0472
-Surfnet for "sel" - "sel" split ? 2:  volume = 6.5755
 Surfnet for "sel" - "sel" split ? 1:  volume = 1960.2
-Surfnet for "sel" - "sel" split ? 3:  volume = 12.948
+Surfnet for "sel" - "sel" split ? 2:  volume = 6.5755
 Surfnet for "sel" - "sel" split ? 6:  volume = 21.81
+Surfnet for "sel" - "sel" split ? 5:  volume = 3.0472
 Surfnet for "sel" - "sel" split ? 4:  volume = 6.4547
+Surfnet for "sel" - "sel" split ? 3:  volume = 12.948
 

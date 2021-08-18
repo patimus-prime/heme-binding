@@ -7,66 +7,66 @@ warning: cannot find LINK/SSBOND residue NAG (1 )
 warning: cannot find LINK/SSBOND residue MAN (1 )
 #0, chain A: chloroperoxidase
 2CJ0.pdb.mono.pdb opened
-currently processing residue...PRO 28.A
-stipped to only code...PRO
-stripped to only the number, this is residue 28
-ResID: PRO 28.A
-Angle #0:28.A@CA #0:28.A@CB #0:1300.A@FE: 76.4322
-currently processing residue...ALA 71.A
-stipped to only code...ALA
-stripped to only the number, this is residue 71
-ResID: ALA 71.A
-Angle #0:71.A@CA #0:71.A@CB #0:1300.A@FE: 140.192
-currently processing residue...CYS 29.A
-stipped to only code...CYS
-stripped to only the number, this is residue 29
-ResID: CYS 29.A
-Angle #0:29.A@CA #0:29.A@CB #0:1300.A@FE: 117.566
-currently processing residue...NO3 1323.A
-stipped to only code...NO3
-SHIT! Weird molecule, do nothing.
-currently processing residue...PHE 57.A
-stipped to only code...PHE
-stripped to only the number, this is residue 57
-ResID: PHE 57.A
-Angle #0:57.A@CA #0:57.A@CB #0:1300.A@FE: 126.165
-currently processing residue...LEU 32.A
-stipped to only code...LEU
-stripped to only the number, this is residue 32
-ResID: LEU 32.A
-Angle #0:32.A@CA #0:32.A@CB #0:1300.A@FE: 97.6039
-currently processing residue...PHE 103.A
-stipped to only code...PHE
-stripped to only the number, this is residue 103
-ResID: PHE 103.A
-Angle #0:103.A@CA #0:103.A@CB #0:1300.A@FE: 112.26
-currently processing residue...TRP 213.A
-stipped to only code...TRP
-stripped to only the number, this is residue 213
-ResID: TRP 213.A
-Angle #0:213.A@CA #0:213.A@CB #0:1300.A@FE: 116.478
-currently processing residue...ALA 31.A
-stipped to only code...ALA
-stripped to only the number, this is residue 31
-ResID: ALA 31.A
-Angle #0:31.A@CA #0:31.A@CB #0:1300.A@FE: 114.871
-currently processing residue...PHE 186.A
-stipped to only code...PHE
-stripped to only the number, this is residue 186
-ResID: PHE 186.A
-Angle #0:186.A@CA #0:186.A@CB #0:1300.A@FE: 170.836
 currently processing residue...GLU 183.A
 stipped to only code...GLU
 stripped to only the number, this is residue 183
 ResID: GLU 183.A
 Angle #0:183.A@CA #0:183.A@CB #0:1300.A@FE: 106.081
+currently processing residue...ALA 71.A
+stipped to only code...ALA
+stripped to only the number, this is residue 71
+ResID: ALA 71.A
+Angle #0:71.A@CA #0:71.A@CB #0:1300.A@FE: 140.192
+currently processing residue...LEU 32.A
+stipped to only code...LEU
+stripped to only the number, this is residue 32
+ResID: LEU 32.A
+Angle #0:32.A@CA #0:32.A@CB #0:1300.A@FE: 97.6039
+currently processing residue...PHE 57.A
+stipped to only code...PHE
+stripped to only the number, this is residue 57
+ResID: PHE 57.A
+Angle #0:57.A@CA #0:57.A@CB #0:1300.A@FE: 126.165
+currently processing residue...ALA 31.A
+stipped to only code...ALA
+stripped to only the number, this is residue 31
+ResID: ALA 31.A
+Angle #0:31.A@CA #0:31.A@CB #0:1300.A@FE: 114.871
 currently processing residue...PRO 30.A
 stipped to only code...PRO
 stripped to only the number, this is residue 30
 ResID: PRO 30.A
 Angle #0:30.A@CA #0:30.A@CB #0:1300.A@FE: 65.8824
+currently processing residue...CYS 29.A
+stipped to only code...CYS
+stripped to only the number, this is residue 29
+ResID: CYS 29.A
+Angle #0:29.A@CA #0:29.A@CB #0:1300.A@FE: 117.566
+currently processing residue...TRP 213.A
+stipped to only code...TRP
+stripped to only the number, this is residue 213
+ResID: TRP 213.A
+Angle #0:213.A@CA #0:213.A@CB #0:1300.A@FE: 116.478
+currently processing residue...PRO 28.A
+stipped to only code...PRO
+stripped to only the number, this is residue 28
+ResID: PRO 28.A
+Angle #0:28.A@CA #0:28.A@CB #0:1300.A@FE: 76.4322
 currently processing residue...HEM 1300.A
 stipped to only code...HEM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
+currently processing residue...NO3 1323.A
+stipped to only code...NO3
+SHIT! Weird molecule, do nothing.
+currently processing residue...PHE 186.A
+stipped to only code...PHE
+stripped to only the number, this is residue 186
+ResID: PHE 186.A
+Angle #0:186.A@CA #0:186.A@CB #0:1300.A@FE: 170.836
+currently processing residue...PHE 103.A
+stipped to only code...PHE
+stripped to only the number, this is residue 103
+ResID: PHE 103.A
+Angle #0:103.A@CA #0:103.A@CB #0:1300.A@FE: 112.26
 

@@ -11,13 +11,13 @@ warning: cannot find LINK/SSBOND residue HIS (83 )
 3QZN.pdb.mono.pdb opened
 910 spheres
 Surfnet for "sel" - "sel":  volume = 794.79
-Surfnet for "sel" - "sel" split ? 6:  volume = 6.1073
-Surfnet for "sel" - "sel" split ? 1:  volume = 14.145
-Surfnet for "sel" - "sel" split ? 9:  volume = 1.9003
-Surfnet for "sel" - "sel" split ? 2:  volume = 10.833
-Surfnet for "sel" - "sel" split ? 3:  volume = 15.275
-Surfnet for "sel" - "sel" split ? 7:  volume = 2.5863
 Surfnet for "sel" - "sel" split ? 4:  volume = 726.52
 Surfnet for "sel" - "sel" split ? 5:  volume = 2.0409
 Surfnet for "sel" - "sel" split ? 8:  volume = 15.388
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.5863
+Surfnet for "sel" - "sel" split ? 1:  volume = 14.145
+Surfnet for "sel" - "sel" split ? 9:  volume = 1.9003
+Surfnet for "sel" - "sel" split ? 6:  volume = 6.1073
+Surfnet for "sel" - "sel" split ? 3:  volume = 15.275
+Surfnet for "sel" - "sel" split ? 2:  volume = 10.833
 

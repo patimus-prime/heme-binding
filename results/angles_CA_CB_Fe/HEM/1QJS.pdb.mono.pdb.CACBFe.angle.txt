@@ -22,35 +22,11 @@ warning: cannot find LINK/SSBOND residue  NA (523 )
 warning: cannot find LINK/SSBOND residue  NA (523 )
 #0, chain A: hemopexin
 1QJS.pdb.mono.pdb opened
-currently processing residue...GLU 226.A
-stipped to only code...GLU
-stripped to only the number, this is residue 226
-ResID: GLU 226.A
-Angle #0:226.A@CA #0:226.A@CB #0:500.A@FE: 155.674
-currently processing residue...TYR 204.A
-stipped to only code...TYR
-stripped to only the number, this is residue 204
-ResID: TYR 204.A
-Angle #0:204.A@CA #0:204.A@CB #0:500.A@FE: 82.0806
-currently processing residue...TRP 171.A
-stipped to only code...TRP
-stripped to only the number, this is residue 171
-ResID: TRP 171.A
-Angle #0:171.A@CA #0:171.A@CB #0:500.A@FE: 138.276
-currently processing residue...ASP 203.A
-stipped to only code...ASP
-stripped to only the number, this is residue 203
-ResID: ASP 203.A
-Angle #0:203.A@CA #0:203.A@CB #0:500.A@FE: 70.4888
 currently processing residue...TRP 268.A
 stipped to only code...TRP
 stripped to only the number, this is residue 268
 ResID: TRP 268.A
 Angle #0:268.A@CA #0:268.A@CB #0:500.A@FE: 64.5387
-currently processing residue...HEM 500.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
 currently processing residue...SER 267.A
 stipped to only code...SER
 stripped to only the number, this is residue 267
@@ -61,14 +37,38 @@ stipped to only code...HIS
 stripped to only the number, this is residue 266
 ResID: HIS 266.A
 Angle #0:266.A@CA #0:266.A@CB #0:500.A@FE: 120.993
+currently processing residue...ASP 203.A
+stipped to only code...ASP
+stripped to only the number, this is residue 203
+ResID: ASP 203.A
+Angle #0:203.A@CA #0:203.A@CB #0:500.A@FE: 70.4888
 currently processing residue...ARG 214.A
 stipped to only code...ARG
 stripped to only the number, this is residue 214
 ResID: ARG 214.A
 Angle #0:214.A@CA #0:214.A@CB #0:500.A@FE: 70.2144
+currently processing residue...TRP 171.A
+stipped to only code...TRP
+stripped to only the number, this is residue 171
+ResID: TRP 171.A
+Angle #0:171.A@CA #0:171.A@CB #0:500.A@FE: 138.276
 currently processing residue...HIS 213.A
 stipped to only code...HIS
 stripped to only the number, this is residue 213
 ResID: HIS 213.A
 Angle #0:213.A@CA #0:213.A@CB #0:500.A@FE: 122.093
+currently processing residue...HEM 500.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...TYR 204.A
+stipped to only code...TYR
+stripped to only the number, this is residue 204
+ResID: TYR 204.A
+Angle #0:204.A@CA #0:204.A@CB #0:500.A@FE: 82.0806
+currently processing residue...GLU 226.A
+stipped to only code...GLU
+stripped to only the number, this is residue 226
+ResID: GLU 226.A
+Angle #0:226.A@CA #0:226.A@CB #0:500.A@FE: 155.674
 

@@ -5,55 +5,55 @@ stipped to only code...ARG
 stripped to only the number, this is residue 83
 ResID: ARG 83.A
 Angle #0:83.A@CA #0:83.A@CB #0:580.A@FE: 162.193
-currently processing residue...GLN 121.A
-stipped to only code...GLN
-stripped to only the number, this is residue 121
-ResID: GLN 121.A
-Angle #0:121.A@CA #0:121.A@CB #0:580.A@FE: 146.948
-currently processing residue...GLY 482.A
-stipped to only code...GLY
-SHIT! Weird molecule, do nothing.
-currently processing residue...ARG 153.A
-stipped to only code...ARG
-stripped to only the number, this is residue 153
-ResID: ARG 153.A
-Angle #0:153.A@CA #0:153.A@CB #0:580.A@FE: 144.712
-currently processing residue...LYS 217.A
-stipped to only code...LYS
-stripped to only the number, this is residue 217
-ResID: LYS 217.A
-Angle #0:217.A@CA #0:217.A@CB #0:580.A@FE: 135.748
-currently processing residue...ASN 481.A
-stipped to only code...ASN
-stripped to only the number, this is residue 481
-ResID: ASN 481.A
-Angle #0:481.A@CA #0:481.A@CB #0:580.A@FE: 121.76
-currently processing residue...LYS 215.A
-stipped to only code...LYS
-stripped to only the number, this is residue 215
-ResID: LYS 215.A
-Angle #0:215.A@CA #0:215.A@CB #0:580.A@FE: 157.38
-currently processing residue...ASN 116.A
-stipped to only code...ASN
-stripped to only the number, this is residue 116
-ResID: ASN 116.A
-Angle #0:116.A@CA #0:116.A@CB #0:580.A@FE: 95.1407
 currently processing residue...CYS 483.A
 stipped to only code...CYS
 stripped to only the number, this is residue 483
 ResID: CYS 483.A
 Angle #0:483.A@CA #0:483.A@CB #0:580.A@FE: 115.665
+currently processing residue...GLN 121.A
+stipped to only code...GLN
+stripped to only the number, this is residue 121
+ResID: GLN 121.A
+Angle #0:121.A@CA #0:121.A@CB #0:580.A@FE: 146.948
 currently processing residue...GLY 484.A
 stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
 currently processing residue...SF4 575.A
 stipped to only code...SF4
 SHIT! Weird molecule, do nothing.
+currently processing residue...PO4 585.A
+stipped to only code...PO4
+SHIT! Weird molecule, do nothing.
 currently processing residue...SRM 580.A
 stipped to only code...SRM
 Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
-currently processing residue...PO4 585.A
-stipped to only code...PO4
+currently processing residue...ASN 116.A
+stipped to only code...ASN
+stripped to only the number, this is residue 116
+ResID: ASN 116.A
+Angle #0:116.A@CA #0:116.A@CB #0:580.A@FE: 95.1407
+currently processing residue...LYS 215.A
+stipped to only code...LYS
+stripped to only the number, this is residue 215
+ResID: LYS 215.A
+Angle #0:215.A@CA #0:215.A@CB #0:580.A@FE: 157.38
+currently processing residue...ARG 153.A
+stipped to only code...ARG
+stripped to only the number, this is residue 153
+ResID: ARG 153.A
+Angle #0:153.A@CA #0:153.A@CB #0:580.A@FE: 144.712
+currently processing residue...ASN 481.A
+stipped to only code...ASN
+stripped to only the number, this is residue 481
+ResID: ASN 481.A
+Angle #0:481.A@CA #0:481.A@CB #0:580.A@FE: 121.76
+currently processing residue...LYS 217.A
+stipped to only code...LYS
+stripped to only the number, this is residue 217
+ResID: LYS 217.A
+Angle #0:217.A@CA #0:217.A@CB #0:580.A@FE: 135.748
+currently processing residue...GLY 482.A
+stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
 

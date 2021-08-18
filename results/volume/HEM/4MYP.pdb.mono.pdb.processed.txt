@@ -7,7 +7,7 @@ warning: cannot find LINK/SSBOND residue TYR (280 )
 4MYP.pdb.mono.pdb opened
 454 spheres
 Surfnet for "sel" - "sel":  volume = 623.37
-Surfnet for "sel" - "sel" split ? 1:  volume = 9.3691
-Surfnet for "sel" - "sel" split ? 3:  volume = 3.2839
 Surfnet for "sel" - "sel" split ? 2:  volume = 610.72
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.2839
+Surfnet for "sel" - "sel" split ? 1:  volume = 9.3691
 

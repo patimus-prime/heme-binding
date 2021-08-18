@@ -6,10 +6,10 @@ warning: cannot find LINK/SSBOND residue NAG (1 )
 1520 spheres
 Surfnet for "sel" - "sel":  volume = 1117.2
 Surfnet for "sel" - "sel" split ? 5:  volume = 5.3686
+Surfnet for "sel" - "sel" split ? 6:  volume = 3.5333
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.5524
+Surfnet for "sel" - "sel" split ? 1:  volume = 1083.4
 Surfnet for "sel" - "sel" split ? 3:  volume = 7.5253
 Surfnet for "sel" - "sel" split ? 2:  volume = 8.3211
-Surfnet for "sel" - "sel" split ? 4:  volume = 2.5524
-Surfnet for "sel" - "sel" split ? 6:  volume = 3.5333
-Surfnet for "sel" - "sel" split ? 1:  volume = 1083.4
 Surfnet for "sel" - "sel" split ? 7:  volume = 6.5195
 

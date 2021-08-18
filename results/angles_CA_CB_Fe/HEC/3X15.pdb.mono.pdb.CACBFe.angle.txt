@@ -14,6 +14,10 @@ warning: cannot find LINK/SSBOND residue CYS (15 )
 warning: cannot find LINK/SSBOND residue CYS (15 )
 #0, chain A: cytochrome C552
 3X15.pdb.mono.pdb opened
+currently processing residue...HEC 200.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
 currently processing residue...PRO 25.A
 stipped to only code...PRO
 stripped to only the number, this is residue 25
@@ -47,8 +51,4 @@ stipped to only code...CYS
 stripped to only the number, this is residue 15
 ResID: CYS 15.A
 Angle #0:15.A@CA #0:15.A@CB #0:200.A@FE: 124.513
-currently processing residue...HEC 200.A
-stipped to only code...HEC
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
 

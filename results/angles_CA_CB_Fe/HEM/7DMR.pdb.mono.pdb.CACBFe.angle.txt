@@ -3,41 +3,11 @@ warning: cannot find LINK/SSBOND residue NAG (1 )
 warning: cannot find LINK/SSBOND residue NAG (1 )
 #0, chain A: lactoperoxidase
 7DMR.pdb.mono.pdb opened
-currently processing residue...HEM 605.A
-stipped to only code...HEM
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
 currently processing residue...ASP 108.A
 stipped to only code...ASP
 stripped to only the number, this is residue 108
 ResID: ASP 108.A
 Angle #0:108.A@CA #0:108.A@CB #0:605.A@FE: 151.624
-currently processing residue...ASN 437.A
-stipped to only code...ASN
-stripped to only the number, this is residue 437
-ResID: ASN 437.A
-Angle #0:437.A@CA #0:437.A@CB #0:605.A@FE: 110.571
-currently processing residue...HIS 109.A
-stipped to only code...HIS
-stripped to only the number, this is residue 109
-ResID: HIS 109.A
-Angle #0:109.A@CA #0:109.A@CB #0:605.A@FE: 93.5665
-currently processing residue...GLY 350.A
-stipped to only code...GLY
-SHIT! Weird molecule, do nothing.
-currently processing residue...ARG 348.A
-stipped to only code...ARG
-stripped to only the number, this is residue 348
-ResID: ARG 348.A
-Angle #0:348.A@CA #0:348.A@CB #0:605.A@FE: 82.5509
-currently processing residue...HIS 351.A
-stipped to only code...HIS
-stripped to only the number, this is residue 351
-ResID: HIS 351.A
-Angle #0:351.A@CA #0:351.A@CB #0:605.A@FE: 96.7615
-currently processing residue...K 609.A
-stipped to only code...K 6
-SHIT! Weird molecule, do nothing.
 currently processing residue...LEU 433.A
 stipped to only code...LEU
 stripped to only the number, this is residue 433
@@ -58,4 +28,34 @@ stipped to only code...PHE
 stripped to only the number, this is residue 347
 ResID: PHE 347.A
 Angle #0:347.A@CA #0:347.A@CB #0:605.A@FE: 87.2067
+currently processing residue...ARG 348.A
+stipped to only code...ARG
+stripped to only the number, this is residue 348
+ResID: ARG 348.A
+Angle #0:348.A@CA #0:348.A@CB #0:605.A@FE: 82.5509
+currently processing residue...HEM 605.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...ASN 437.A
+stipped to only code...ASN
+stripped to only the number, this is residue 437
+ResID: ASN 437.A
+Angle #0:437.A@CA #0:437.A@CB #0:605.A@FE: 110.571
+currently processing residue...HIS 109.A
+stipped to only code...HIS
+stripped to only the number, this is residue 109
+ResID: HIS 109.A
+Angle #0:109.A@CA #0:109.A@CB #0:605.A@FE: 93.5665
+currently processing residue...GLY 350.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 351.A
+stipped to only code...HIS
+stripped to only the number, this is residue 351
+ResID: HIS 351.A
+Angle #0:351.A@CA #0:351.A@CB #0:605.A@FE: 96.7615
+currently processing residue...K 609.A
+stipped to only code...K 6
+SHIT! Weird molecule, do nothing.
 

@@ -11,36 +11,45 @@ warning: cannot find LINK/SSBOND residue HIS (18 )
 warning: cannot find LINK/SSBOND residue LYS (79 )
 #0, chain A: cytochrome C
 6XNK.pdb.mono.pdb opened
-currently processing residue...PRO 30.A
-stipped to only code...PRO
-stripped to only the number, this is residue 30
-ResID: PRO 30.A
-Angle #0:30.A@CA #0:30.A@CB #0:201.A@FE: 78.3181
-currently processing residue...LEU 32.A
-stipped to only code...LEU
-stripped to only the number, this is residue 32
-ResID: LEU 32.A
-Angle #0:32.A@CA #0:32.A@CB #0:201.A@FE: 119.562
-currently processing residue...LYS 79.A
-stipped to only code...LYS
-stripped to only the number, this is residue 79
-ResID: LYS 79.A
-Angle #0:79.A@CA #0:79.A@CB #0:201.A@FE: 132.906
-currently processing residue...CYS 17.A
+currently processing residue...CYS 14.A
 stipped to only code...CYS
-stripped to only the number, this is residue 17
-ResID: CYS 17.A
-Angle #0:17.A@CA #0:17.A@CB #0:201.A@FE: 129.139
+stripped to only the number, this is residue 14
+ResID: CYS 14.A
+Angle #0:14.A@CA #0:14.A@CB #0:201.A@FE: 94.7801
 currently processing residue...ILE 75.A
 stipped to only code...ILE
 stripped to only the number, this is residue 75
 ResID: ILE 75.A
 Angle #0:75.A@CA #0:75.A@CB #0:201.A@FE: 119.295
+currently processing residue...LEU 32.A
+stipped to only code...LEU
+stripped to only the number, this is residue 32
+ResID: LEU 32.A
+Angle #0:32.A@CA #0:32.A@CB #0:201.A@FE: 119.562
 currently processing residue...HIS 18.A
 stipped to only code...HIS
 stripped to only the number, this is residue 18
 ResID: HIS 18.A
 Angle #0:18.A@CA #0:18.A@CB #0:201.A@FE: 122.197
+currently processing residue...TYR 67.A
+stipped to only code...TYR
+stripped to only the number, this is residue 67
+ResID: TYR 67.A
+Angle #0:67.A@CA #0:67.A@CB #0:201.A@FE: 126.97
+currently processing residue...THR 28.A
+stipped to only code...THR
+stripped to only the number, this is residue 28
+ResID: THR 28.A
+Angle #0:28.A@CA #0:28.A@CB #0:201.A@FE: 95.9136
+currently processing residue...HEC 201.A
+stipped to only code...HEC
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...PRO 30.A
+stipped to only code...PRO
+stripped to only the number, this is residue 30
+ResID: PRO 30.A
+Angle #0:30.A@CA #0:30.A@CB #0:201.A@FE: 78.3181
 currently processing residue...VAL 83.A
 stipped to only code...VAL
 stripped to only the number, this is residue 83
@@ -49,23 +58,14 @@ Angle #0:83.A@CA #0:83.A@CB #0:201.A@FE: 114.682
 currently processing residue...GLY 29.A
 stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
-currently processing residue...THR 28.A
-stipped to only code...THR
-stripped to only the number, this is residue 28
-ResID: THR 28.A
-Angle #0:28.A@CA #0:28.A@CB #0:201.A@FE: 95.9136
-currently processing residue...CYS 14.A
+currently processing residue...CYS 17.A
 stipped to only code...CYS
-stripped to only the number, this is residue 14
-ResID: CYS 14.A
-Angle #0:14.A@CA #0:14.A@CB #0:201.A@FE: 94.7801
-currently processing residue...TYR 67.A
-stipped to only code...TYR
-stripped to only the number, this is residue 67
-ResID: TYR 67.A
-Angle #0:67.A@CA #0:67.A@CB #0:201.A@FE: 126.97
-currently processing residue...HEC 201.A
-stipped to only code...HEC
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
+stripped to only the number, this is residue 17
+ResID: CYS 17.A
+Angle #0:17.A@CA #0:17.A@CB #0:201.A@FE: 129.139
+currently processing residue...LYS 79.A
+stipped to only code...LYS
+stripped to only the number, this is residue 79
+ResID: LYS 79.A
+Angle #0:79.A@CA #0:79.A@CB #0:201.A@FE: 132.906
 

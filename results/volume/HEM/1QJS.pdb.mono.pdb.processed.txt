@@ -24,8 +24,8 @@ warning: cannot find LINK/SSBOND residue  NA (523 )
 1QJS.pdb.mono.pdb opened
 1000 spheres
 Surfnet for "sel" - "sel":  volume = 1128.3
-Surfnet for "sel" - "sel" split ? 2:  volume = 2.1371
 Surfnet for "sel" - "sel" split ? 3:  volume = 11.953
-Surfnet for "sel" - "sel" split ? 4:  volume = 11.893
 Surfnet for "sel" - "sel" split ? 1:  volume = 1102.3
+Surfnet for "sel" - "sel" split ? 4:  volume = 11.893
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.1371
 

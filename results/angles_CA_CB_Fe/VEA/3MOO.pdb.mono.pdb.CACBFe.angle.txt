@@ -6,55 +6,55 @@ warning: cannot find LINK/SSBOND residue AZI (217 )
 warning: cannot find LINK/SSBOND residue AZI (217 )
 #0, chain A: heme oxygenase
 3MOO.pdb.mono.pdb opened
-currently processing residue...PHE 201.A
-stipped to only code...PHE
-stripped to only the number, this is residue 201
-ResID: PHE 201.A
-Angle #0:201.A@CA #0:201.A@CB #0:911.A@FE: 104.217
-currently processing residue...VEA 911.A
-stipped to only code...VEA
-Oops! HEM shouldn't be compared to itself, Do nothing.
-SHIT! Weird molecule, do nothing.
 currently processing residue...SER 138.A
 stipped to only code...SER
 stripped to only the number, this is residue 138
 ResID: SER 138.A
 Angle #0:138.A@CA #0:138.A@CB #0:911.A@FE: 125.312
-currently processing residue...LEU 134.A
-stipped to only code...LEU
-stripped to only the number, this is residue 134
-ResID: LEU 134.A
-Angle #0:134.A@CA #0:134.A@CB #0:911.A@FE: 77.1733
 currently processing residue...HIS 20.A
 stipped to only code...HIS
 stripped to only the number, this is residue 20
 ResID: HIS 20.A
 Angle #0:20.A@CA #0:20.A@CB #0:911.A@FE: 111.089
-currently processing residue...VAL 131.A
-stipped to only code...VAL
-stripped to only the number, this is residue 131
-ResID: VAL 131.A
-Angle #0:131.A@CA #0:131.A@CB #0:911.A@FE: 60.1702
-currently processing residue...GLY 135.A
-stipped to only code...GLY
-SHIT! Weird molecule, do nothing.
-currently processing residue...AZI 217.A
-stipped to only code...AZI
-SHIT! Weird molecule, do nothing.
-currently processing residue...GLU 24.A
-stipped to only code...GLU
-stripped to only the number, this is residue 24
-ResID: GLU 24.A
-Angle #0:24.A@CA #0:24.A@CB #0:911.A@FE: 110.643
+currently processing residue...PHE 201.A
+stipped to only code...PHE
+stripped to only the number, this is residue 201
+ResID: PHE 201.A
+Angle #0:201.A@CA #0:201.A@CB #0:911.A@FE: 104.217
 currently processing residue...ASP 136.A
 stipped to only code...ASP
 stripped to only the number, this is residue 136
 ResID: ASP 136.A
 Angle #0:136.A@CA #0:136.A@CB #0:911.A@FE: 23.6316
+currently processing residue...GLY 135.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...LEU 134.A
+stipped to only code...LEU
+stripped to only the number, this is residue 134
+ResID: LEU 134.A
+Angle #0:134.A@CA #0:134.A@CB #0:911.A@FE: 77.1733
+currently processing residue...GLU 24.A
+stipped to only code...GLU
+stripped to only the number, this is residue 24
+ResID: GLU 24.A
+Angle #0:24.A@CA #0:24.A@CB #0:911.A@FE: 110.643
+currently processing residue...VAL 131.A
+stipped to only code...VAL
+stripped to only the number, this is residue 131
+ResID: VAL 131.A
+Angle #0:131.A@CA #0:131.A@CB #0:911.A@FE: 60.1702
+currently processing residue...AZI 217.A
+stipped to only code...AZI
+SHIT! Weird molecule, do nothing.
 currently processing residue...GLY 140.A
 stipped to only code...GLY
 SHIT! Weird molecule, do nothing.
 currently processing residue...GLY 139.A
 stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...VEA 911.A
+stipped to only code...VEA
+Oops! HEM shouldn't be compared to itself, Do nothing.
 SHIT! Weird molecule, do nothing.
 
