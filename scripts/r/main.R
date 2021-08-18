@@ -103,6 +103,9 @@ for(ligand in 1:(length(ligandList)))
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    planar_angles_list <- aaAnglesFn(activeLigand,activeResultPath)
    assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
+   assign(paste(activeLigand,"_planar_angles_DF",sep=""),planar_angles_list$angleDF)
+   assign(paste(activeLigand,"_coord_Res_df",sep=""),planar_angles_list$coord_Res_df)
+   assign(paste(activeLigand,"_min_dist_df",sep=""),planar_angles_list$min_dist_df)
 }
 HEM_planar_angles_list$angleDF #DANK
 
@@ -222,8 +225,9 @@ VERDOHEME_MERGED_DF %>%
 
 # GGET THE ANGLES, EASY JUST RBIND
 VERDOHEME_CACBFe_DF <- rbind(VEA_CACBFe_DF,VER_CACBFe_DF)
-
-
+VERDOHEME_planar_angles_DF <- rbind(VEA_planar_angles_DF,VER_planar_angles_DF)
+VERDOHEME_coord_Res_df <- rbind(VEA_coord_Res_df,VER_coord_Res_df)
+VERDOHEME_min_dist_df <- rbind(VEA_min_dist_df, VER_min_dist_df)
 # === ALL OF THE BELOW JUST TO MERGE THESE TWO LOLOLOL JUST FOR AMINO ACID...
 # amino acid must be rebound... may be the case for the planar df's also.
 VERDOHEME_aaFreqDf <- rbind(VEA_aaFreqDf,VER_aaFreqDf)
@@ -242,9 +246,9 @@ VERDOHEME_aaFreqDf %>%
 VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
 
 
-clean_tbl <- clean_tbl[order(clean_tbl$Freq, decreasing = TRUE), ] #this comma is necessary
+#clean_tbl <- clean_tbl[order(clean_tbl$Freq, decreasing = TRUE), ] #this comma is necessary
 
-clean_tbl -> aa_freq_df
+#clean_tbl -> aa_freq_df
 
 
 
@@ -412,6 +416,58 @@ for(ligand in 1:(length(ligandList)))
                        aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   geom_violin(trim=FALSE) +
       labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe within pocket",sep=''), x="Residue",y="Angle")
    print(cabplot)
+   
+   VER_planar_angles_DF
+   
+   angleplot <- ggplot(eval(parse(text=paste(activeLigand,"_planar_angles_DF",sep=""))), aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
+      geom_violin(trim=FALSE) +
+      labs(title = paste("Angles of Residues v. ",activeLigand," (defined as axis) in each PDB",sep = ""), x="Residue",y="Angle")
+   print(angleplot)
+   #angleplot #ENSURE YOU CONVERT TO NUMERIC DATA TYPES ABOVE
+   
+   #welp, that's not conclusive, at all.
+   
+   # let's look at the angles of the closest residues:
+   # those are: Cys, His, and Tyr, as the exclusive residues picked up by minimum distance
+   coord_Res_ls <- c("CYS","HIS","TYR")
+   #VER_planar_angles_DF
+   VER_coord_Res_df
+   tmp_coord_Res_df <- subset(eval(parse(text=paste(activeLigand,"_coord_Res_df",sep = ""))), Residue_Code %in% coord_Res_ls)
+   
+   coord_angle_plot <- ggplot(tmp_coord_Res_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Angles of Residues MOST LIKELY to coordinate. 
+           Does not select for residues that are actually confirmed as coordinating",sep=''),
+           x="Residue",y="Angle") +
+      stat_summary(fun.data = mean_sdl, mult =1,geom="pointrange")
+   paste(coord_angle_plot)
+   # 
+   # Distance_and_Angles_df %>%
+   #    group_by(PDB_ID) %>% slice(which.min(Distance)) -> min_dist_df
+   # 
+   #VER_min_dist_df
+   
+   min_dist_angles_plot <- ggplot(eval(parse(text=paste(activeLigand,"_min_dist_df",sep=""))), aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ligand, where ligand is defined as an axis", sep=''),
+           x = "Residue",y="Angle") +
+      stat_summary(fun.data = mean_sdl, mult=1,geom="pointrange")
+   print(min_dist_angles_plot)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    #    #stat_summary(fun.data = mean_sdl, mult=1, geom="pointrange")
    # 
    # CACBFE_plot <- ggplot(CACBFE_df,

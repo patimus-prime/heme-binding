@@ -196,10 +196,12 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    )
    #return stuff ----------
    distAngleList <- list(
-      "angleplot" = angleplot,
-      "coordinating_res_plot" = coord_angle_plot,
+      #"angleplot" = angleplot,
+      #"coordinating_res_plot" = coord_angle_plot,
       "angleDF" = Distance_and_Angles_df,
-      "min_dist_angles_plot" = min_dist_angles_plot
+      "coord_Res_df" = coord_Res_df,
+      "min_dist_df" = min_dist_df
+      #"min_dist_angles_plot" = min_dist_angles_plot
    )
    
    return(distAngleList)
