@@ -1,33 +1,34 @@
-# This is the main R file for this project. Launches other scripts used
+# This is the main R file for this project. It was intended to launch other scripts used.
+# However, I'm now crunched and would rather only hit one button to run everything.
+# 22 August 2021 main.R for Pat's heme-binding project!
+#
+# So, it does the following:
+# 0. Specify ligands and angstromDistance to be used
+# 1. Launches all scripts to acquire the data from .txt result files
+# 2. Merges those results and makes some stately dataframes
+# 3. Constructs plots, which must be manually saved.
+# 4. Outputs tables in latex format, which must be manually copied over.
+# might end up doing that part by itself
+# -------------------------------------------------------------
+#  Packages used ---------------
 library(dplyr) 
 library(data.table)
 library(tidyr)
-library(ggplot2) #thus far not used 22 June 2021
+library(ggplot2) 
 library(stringr)
 
 source("~/heme-binding/scripts/r/addpdbcol.R")
-#source("C:/Users/nobody/Documents/R/MyScript.R")
 
-
-# for the pdb-Titles_codes script, YOU MUST NOT HAVE ANYTHING THAT COULD INTERFERE
-# WITH THE REGEXP '.pdb' in the folder!!!! this will throw errors!
-# now still throws an error but minor. I think it doesn't like the source dataframe only having 1 column
-#source("~/heme-binding/scripts/r/metal_coordination.R") #garbage
-# ok let's reorder
 
 # DECLARATIONS --------------
 # warning: ligandList is altered at the end of merging dataframes below
 # this is because VER and VEA are merged to 'VERDOHEME'
 ligandList = list("HEM","HEC","SRM","VER","VEA")
-angstromDistance = 7.0 #not sure if used here, maybe useful for figures!
+angstromDistance = 7.0 # used in figure naming but not much else
 
-# Initialize list of DFs/lists, add results in each for loop
-# FIXME! The automated naming doesn't like this lol, for lists in particular
-# moving ahead with fixed results and merging in a few steps. 
-# shitty list code in VOLUME for loop
 
-# need a different loop for each script, as the result paths are different for all
-#------ VOLUME ---------
+# 1. LAUNCH SCRIPTS, ACQUIRE DATA --------------------------
+# Volume ---------
 source("~/heme-binding/scripts/r/volume.R")
 resultPath = "~/heme-binding/results/volume/"
 for(ligand in 1:(length(ligandList)))
@@ -36,24 +37,11 @@ for(ligand in 1:(length(ligandList)))
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    
    volume_dfs <- volumeFn(activeLigand,activeResultPath)
-   #rrrt <- volumeFn(activeLigand,activeResultPath)
+   
    #this line is freaky fresh
    # paste() automates df name creation, second arg is the df assigned. BAM!
    assign(paste(activeLigand,"_maxVolDf",sep=""), volume_dfs$maxVolDf)
-
-   #eval(parse(text=(paste(activeLigand,"_dfList",sep = "")))) <- list(volume_dfs$maxVolDf, volume_dfs$allVolDf)
-   # xx <- list(volume_dfs$maxVolDf)
-   #  eval(parse(text = paste(activeLigand,"_dfList",sep = ""))) <- xx
-   # "yy" = list(volume_dfs$allVolDf) 
    }
-# FUCK YES THAT'S VOLUME AUTOMATED BABY! Merging will be funky, require another loop
-# loop for ea. ligand to create unique mega DFs. Similar process as this.
-# bam! that's all the thinking required. the rest is typing and changing
-# to accomodate for HEM v. activeLigand. Bing bang boom!
-
-# after that, adding data, testing, and otherwise doneeeeeee omg lol
-# finish tonight omg fuck yess brooooo! call peeps even jesus awesomeeeee
-
 
 # AA Frequency -----------------
 source("~/heme-binding/scripts/r/aa_frequency.R")
@@ -66,8 +54,7 @@ for(ligand in 1:(length(ligandList)))
    aa_freq_df <- aaFreq_fn(activeLigand,activeResultPath)
    aa_freq_df
    assign(paste(activeLigand,"_aaFreqDf",sep=""), aaFreq_fn(activeLigand,activeResultPath))
-   #if(activeLigand=="HEC"){stop()}
-   }
+}
    
 # Ligand surface area ----------------------
 source("~/heme-binding/scripts/r/ligandSA.R")
@@ -93,7 +80,7 @@ for(ligand in 1:(length(ligandList)))
    assign(paste(activeLigand,"_pocketSA_df",sep = ""), pocketSA_df)
 }
 
-# AA to ligand plane -------------
+# AA angles to ligand PLANE -------------
 source("~/heme-binding/scripts/r/dist_angles.R")
 resultPath = "~/heme-binding/results/distances_and_angles/"
 
@@ -107,7 +94,6 @@ for(ligand in 1:(length(ligandList)))
    assign(paste(activeLigand,"_coord_Res_df",sep=""),planar_angles_list$coord_Res_df)
    assign(paste(activeLigand,"_min_dist_df",sep=""),planar_angles_list$min_dist_df)
 }
-HEM_planar_angles_list$angleDF #DANK
 
 # Distances of AA atoms to Fe ------------------
 source("~/heme-binding/scripts/r/only_distances.R")
@@ -119,10 +105,7 @@ for(ligand in 1:(length(ligandList)))
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    distancesList <- distancesFn(activeLigand,activeResultPath)
    assign(paste(activeLigand,"_distances_list",sep=""),distancesList)
-   #planar_angles_list <- aaAnglesFn(activeLigand,activeResultPath)
-   #assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
 }
-distancesList$dataframe #NOTE: DO NOT FORGET TO NAME STUFF LMAO
 
 #  Angles CACBFe -------------------------------
 source("~/heme-binding/scripts/r/anglesCACBFE.R")
@@ -134,18 +117,10 @@ for(ligand in 1:(length(ligandList)))
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    CACBFE_df <- CACBFE_fn(activeLigand,activeResultPath)
    assign(paste(activeLigand,"_CACBFe_DF",sep = ""),CACBFE_df)
-  # distancesList <- distancesFn(activeLigand,activeResultPath)
-   #assign(paste(activeLigand,"_distances_list",sep=""),distancesList)
-   #planar_angles_list <- aaAnglesFn(activeLigand,activeResultPath)
-   #assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
 }
-#CACBFE_df
-#FIXME! ERROR FROM HERE R STOPPED GIVING CORRECT FEEDBACK
-# yeahp, just restart the computer fuuuuuuck R
 
 # PDBs titles codes ---------------
-# bullshit ones, put below I guess Idk
-source("~/heme-binding/scripts/r/pdb_titles_codes.R") #error here investigate 15 July 2021
+source("~/heme-binding/scripts/r/pdb_titles_codes.R") 
 resultPath = "~/heme-binding/pdb_source_data/0_raw_download/"
 for(ligand in 1:(length(ligandList)))
 {
@@ -155,35 +130,26 @@ for(ligand in 1:(length(ligandList)))
    assign(paste(activeLigand,"_pdbCodesDf",sep=""),pdbCodeDf)
 }
 
-#sourceOrganismDf <- c("")
 # PDB source organism ---------------------
 source("~/heme-binding/scripts/r/source_organism.R")
 resultPath = "~/heme-binding/pdb_source_data/0_raw_download/"
 for(ligand in 1:(length(ligandList)))
 {
-   #sourceOrganismDf <- c("")
    paste(activeLigand,"source org processing...")
    activeLigand = ligandList[[ligand]]
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    sourceOrganismDf <- sourceOrganismFn(activeLigand,activeResultPath)
    assign(paste(activeLigand,"_sourceOrganismDf",sep=""),sourceOrganismDf)
-   #sourceOrganismDf <- sourceOrganismDf[0,]
-#   pdbCodeDf <- pdbTitlesCodesFn(activeLigand,activeResultPath)
- #  assign(paste(activeLigand,"_pdbCodesDf",sep=""),pdbCodeDf)
 }
-#eval(parse(text="sourceOrganismDf"))
-# merge all dataframes reported (not produced by functions) into mega dataframe: -----
-# MERGEEEEEEE
-# NOTE: Perhaps adding DFs to a list and slowly merging may be easier.
-# but uncertain if merge functions for lists of DF would produce intended results
-# A LIST WOULD END UP BEING PREFERABLE IF WE WERE TO EXPAND/ADD MORE RESULTS
-# BUT I'M GETTING TIRED OF THIS AND JUST WANT THE THESIS DONE AHHHHHHH
+
+
+
+# 2. Merge dataframes (includes VER/VEA merging) ------------
+
 for(ligand in 1:(length(ligandList)))
 {
    activeLigand = ligandList[[ligand]]
-   # zDF <- merge(HEM_pdbCodesDf,
-   #              HEM_sourceOrganismDf,
-   #              by.x = "PDB_ID")
+   
    mergedDF <- merge(eval(parse(text = paste(activeLigand,"_pdbCodesDf",sep = ""))),
                 eval(parse(text = paste(activeLigand,"_sourceOrganismDf",sep = ""))),
                 by.x = "PDB_ID")
@@ -201,8 +167,9 @@ for(ligand in 1:(length(ligandList)))
                      by.x = "PDB_ID")
 
    assign(paste(activeLigand,"_MERGED_DF",sep = ""),mergedDF)
-   }
+}
 
+# merging VER/VEA --------
 VEA_MERGED_DF %>%
    rename(
       VXX_Excluded_SA = VEA_Excluded_SA,
@@ -223,16 +190,15 @@ VERDOHEME_MERGED_DF %>%
       VERDOHEME_Accessible_SA = VXX_Accessible_SA
    ) -> VERDOHEME_MERGED_DF
 
-# GGET THE ANGLES, EASY JUST RBIND
+# angle stuff:
 VERDOHEME_CACBFe_DF <- rbind(VEA_CACBFe_DF,VER_CACBFe_DF)
 VERDOHEME_planar_angles_DF <- rbind(VEA_planar_angles_DF,VER_planar_angles_DF)
 VERDOHEME_coord_Res_df <- rbind(VEA_coord_Res_df,VER_coord_Res_df)
 VERDOHEME_min_dist_df <- rbind(VEA_min_dist_df, VER_min_dist_df)
-# === ALL OF THE BELOW JUST TO MERGE THESE TWO LOLOLOL JUST FOR AMINO ACID...
-# amino acid must be rebound... may be the case for the planar df's also.
+
+# === ALL OF THE BELOW JUST TO MERGE THESE TWO FOR AMINO ACID...
+
 VERDOHEME_aaFreqDf <- rbind(VEA_aaFreqDf,VER_aaFreqDf)
-#aggregate(Var1 ~ Freq, data = VERDOHEME_aaFreqDf, sum)
-#volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data))
 VERDOHEME_aaFreqDf$Freq <- as.numeric(as.character(VERDOHEME_aaFreqDf$Freq))
 VERDOHEME_aaFreqDf$Var1 <- as.character(VERDOHEME_aaFreqDf$Var1)
 verdotemp <- tapply(VERDOHEME_aaFreqDf$Freq,VERDOHEME_aaFreqDf$Var1,FUN=sum)
@@ -246,251 +212,89 @@ VERDOHEME_aaFreqDf %>%
 VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
 
 
-#clean_tbl <- clean_tbl[order(clean_tbl$Freq, decreasing = TRUE), ] #this comma is necessary
-
-#clean_tbl -> aa_freq_df
-
-
-
-#df <- tibble::rownames_to_column(df, "VALUE")
-
-# #other stuff:
-# HEM_distances_list$dataframe
-# HEM_CACBFe_DF
-# HEM_planar_angles_list$angleDF
-# those two lists contain plots!
-# shit ------
-# 
-# mega_df <- merge(pdb_code_df,source_organism_df,by.x = "PDB_ID")
-# #this is the way. but first must only take largest volume pocket from volume data
-# mega_df <- merge(mega_df, max_volume_df,by.x = "PDB_ID")
-# mega_df <- merge(mega_df,hemeSA_df,by.x = "PDB_ID")
-# mega_df <- merge(mega_df, pocketSA_df,by.x = "PDB_ID")
-
-
-# NOTE!!! The line immediately below cannot occur. There are multiple entries in each PDB. This is what
-# necessitates grabbing the top 2 or 3 residues, and listing them. 
-#mega_df <- merge(mega_df, Distance_and_Angles_df, by.x = "PDB_ID")
-
-
-#WE ALSO CANNOT MERGE METAL_COORDINATION. NOT YET.
-
-# so it's easy to see:
-
-# the four lines below acquire the dataframes produced by functions...
-# temp_list <- anglesFn()
-# Distance_and_Angles_df <- temp_list$angleDF
-# 
-# metal_list <- metal_coordinating_fn()
-# Metal_Coordination_df <- metal_list$Metal_coordination_df
-# 
-# CACBFE_df <- CACBFE_fn()
-
-# put into the easily visibile DF 
-# mega_df -> AAAA_MEGA_DF
-# Distance_and_Angles_df -> AAAA_DISTANG_DF
-# Metal_Coordination_df -> AAAA_METAL_DF
-# 
-# Graphs: ----------------------------------
+# 3. Construct Plots/Graphs (NOTE: ligandList is altered here!!!) ----------------------------------
 ligandList = list("HEM","HEC","SRM","VERDOHEME")
 for(ligand in 1:(length(ligandList)))
    {
    activeLigand = ligandList[[ligand]]
-   # declare a list to add all plots to, makes exporting easier
-   #plots <- list()
-   
-   # AA FREQ PLOT --------------------
-   
-   #eval(parse(text = "HEM_aaFreqPlot")) <- hist(HEM_aaFreqDf$Freq)
-   
    aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
-                main = paste("Frequency of Residues within 7A of ",activeLigand,sep = ""),
+                main = paste(activeLigand, ": Frequency of Residues within ",angstromDistance,"Å of ",activeLigand,sep = ""),
                 xlab = "Residues",
                 ylab = "Frequency",
                 col = "orange",
                 names.arg = 
                    eval(parse(text = (paste(activeLigand,"_aaFreqDf$Var1",sep="")))))
 
-   HEM_maxVolDf$volume_data
-   HEM_MERGED_DF$volume_data
-   # Histograms/barplots of the MEGA dataframe data --------------------
-   # see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
+   #see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
    
    volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
-                       main = paste(activeLigand," Volume of Pockets in ea PDB, A^3", sep=""),
-                       xlab = "Volume, A^3",
+                       main = paste(activeLigand,": Volume of Pockets in ea PDB, Å³", sep=""),
+                       xlab = "Volume, Å³",
                        ylab = "Frequency",
                        col = "darkmagenta")
-   # volume_hist <- hist(mega_df$volume_data,
-   #      main = "Volume of Pockets in ea PDB, A^3",
-   #      xlab = "Volume, A^3",
-   #      #ylab = "Frequency",
-   #      col = "darkmagenta"
-   #      )
-   #plots <- volume_hist
-   #HEM_MERGED_DF$HEM_Excluded_SA
    
    LigExcSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Excluded_SA",sep = ""))),
-                    main = paste(activeLigand," Excluded Surface Area in ea PDB, square A",sep = ""),
-                    xlab = "Excluded Surface Area, A^2",
+                    main = paste(activeLigand,": Excluded Surface Area in ea PDB, Å²",sep = ""),
+                    xlab = "Excluded Surface Area, Å²",
                     col = "blue")
     
-   
-   # volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
-   #                  
-   # heme_excSA <- hist(mega_df$Heme_Excluded_SA,
-   #      main = "Heme Excluded Surface Area in ea PDB, square A",
-   #      xlab = "Excluded Surface Area, A^2",
-   #      col = "blue"
-   #      )
-   # plots <- heme_excSA
-   #HEM_MERGED_DF$HEM_Accessible_SA
    LigAccSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Accessible_SA",sep = ""))),
-        main = paste(activeLigand," Accessible Surface Area, A^2",sep = ""),
-        xlab = "Accessible Surface Area, A^2",
+        main = paste(activeLigand,": Accessible Surface Area, Å²",sep = ""),
+        xlab = "Accessible Surface Area, Å²",
         col = "lightblue")
-   #plots <- heme_accSA
-   # eval(parse(text = paste(activeLigand,"damn",sep="")))
-   # eval(parse(text = paste(activeLigand,"damn"))) <- LigAccSA
    
    HEM_MERGED_DF$Pocket_Excluded_SA
    pocket_excSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Excluded_SA",sep = ""))),
-        main = paste(activeLigand," Pocket Excluded Surface Area, A^2", sep=''),
-        xlab = "Excluded Surface Area, A^2",
+        main = paste(activeLigand,": Pocket Excluded Surface Area, Å²", sep=''),
+        xlab = "Excluded Surface Area, Å²",
         col = "green"
         )
-   plots <- pocket_excSA
    
    pocket_accSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Accessible_SA",sep = ""))),
-        main = paste(activeLigand, " Pocket Accessible Surface Area, A^2", sep = ''),
-        xlab = "Accessible Surface Area, A^2",
+        main = paste(activeLigand, ": Pocket Accessible Surface Area, Å²", sep = ''),
+        xlab = "Accessible Surface Area, Å²",
         col = "lightgreen"
         )
-   # 
-   # plots <- pocket_accSA
-   # 
-   # 
-   # # distance plots ------------------
-   # # return from that shit!
-   # distance_plots <- onlyDist() # returns of all fancy plots to put in
-   # # print the dank plots!
-   # distance_plots
-   # plots <- distance_plots
-   # 
-   # # angle plots -------------------
-   # # we return a dataframe from angles also, so we use this protocol.
-   # # found here. may be applied above: https://stackoverflow.com/questions/8936099/returning-multiple-objects-in-an-r-function
-   
-   #NEED TO MAYBE ASSIGN PER LIGAND... IDK MAN THIS IS FUNKY STUFF RIGHT HERE LOL
-   # HEM_planar_angles_list$angleplot
-   # HEM_planar_angles_list$coordinating_res_plot
-   # HEM_planar_angles_list$min_dist_angles_plot
-   
-   
-   # FIXME!!! UNCOMMENT XXXX HERE WHEN THE DATA EXIST!
-   # qq <- eval(parse(text = paste(activeLigand,"_planar_angles_list$angleplot",sep='')))
-   # print(qq)
-   # ww <- eval(parse(text = paste(activeLigand,"_planar_angles_list$coordinating_res_plot",sep = '')))
-   # print(ww)
-   # ee <- eval(parse(text = paste(activeLigand,"_planar_angles_list$min_dist_angles_plot",sep='')))
-   # print(ee)
-   # 
-   
-   
-   # 
-   # angle_plots <- anglesFn()
-   # angle_plots$angleplot
-   # angle_plots$coordinating_res_plot
-   # plots <- angle_plots
-   
-   # line below confirms this is a shit way to find distance
-   #angle_plots$min_dist_angles_plot #THIS USES DISTANCES FROM AXES PROTOCOL
-   
-   
-   
-   # CACBFE angle plots --------------------------
-   # we have CACBFE_df
-   # only one figure to make we can do it here
    
    cabplot <- ggplot(eval(parse(text=paste(activeLigand,"_CACBFe_DF",sep=''))),
                        aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe within pocket",sep=''), x="Residue",y="Angle")
+      labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
    print(cabplot)
-   
-   VER_planar_angles_DF
    
    angleplot <- ggplot(eval(parse(text=paste(activeLigand,"_planar_angles_DF",sep=""))), aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
       geom_violin(trim=FALSE) +
-      labs(title = paste("Angles of Residues v. ",activeLigand," (defined as axis) in each PDB",sep = ""), x="Residue",y="Angle")
+      labs(title = paste(activeLigand,": Angles of Residues v. ",activeLigand," (defined as an axis) in each PDB",sep = ""), x="Residue",y="Angle")
    print(angleplot)
-   #angleplot #ENSURE YOU CONVERT TO NUMERIC DATA TYPES ABOVE
    
-   #welp, that's not conclusive, at all.
-   
-   # let's look at the angles of the closest residues:
-   # those are: Cys, His, and Tyr, as the exclusive residues picked up by minimum distance
+# coordinating residue declaration (maybe change by ligand) -------------------
    coord_Res_ls <- c("CYS","HIS","TYR")
-   #VER_planar_angles_DF
-   VER_coord_Res_df
-   tmp_coord_Res_df <- subset(eval(parse(text=paste(activeLigand,"_coord_Res_df",sep = ""))), Residue_Code %in% coord_Res_ls)
    
+   tmp_coord_Res_df <- subset(eval(parse(text=paste(activeLigand,"_coord_Res_df",sep = ""))), Residue_Code %in% coord_Res_ls)
+   tmp_coord_Res_df
    coord_angle_plot <- ggplot(tmp_coord_Res_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles of Residues MOST LIKELY to coordinate. 
-           Does not select for residues that are actually confirmed as coordinating",sep=''),
+      labs(title = paste(activeLigand,": Angles of Cys, His, Tyr Residues to ",activeLigand," (defined as an axis)",sep=''),
            x="Residue",y="Angle") +
       stat_summary(fun.data = mean_sdl, mult =1,geom="pointrange")
-   paste(coord_angle_plot)
-   # 
-   # Distance_and_Angles_df %>%
-   #    group_by(PDB_ID) %>% slice(which.min(Distance)) -> min_dist_df
-   # 
-   #VER_min_dist_df
+   print(coord_angle_plot)
    
    min_dist_angles_plot <- ggplot(eval(parse(text=paste(activeLigand,"_min_dist_df",sep=""))), aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ligand, where ligand is defined as an axis", sep=''),
+      labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ",activeLigand," (defined as an axis)", sep=''),
            x = "Residue",y="Angle") +
       stat_summary(fun.data = mean_sdl, mult=1,geom="pointrange")
    print(min_dist_angles_plot)
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   #    #stat_summary(fun.data = mean_sdl, mult=1, geom="pointrange")
-   # 
-   # CACBFE_plot <- ggplot(CACBFE_df,
-   #                       aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
-   #    geom_violin(trim=FALSE) +
-   #    labs(title = "Angles CA-CB-Fe per type of residue to Fe within pocket", x="Residue",y="Angle")
-   #    #stat_summary(fun.data = mean_sdl, mult=1, geom="pointrange")
-   # CACBFE_plot
-   
-   # 
-   # nonpolar_plot <- ggplot(nonpolar_res_df,aes(x=Residue_Code,y=Distance, fill=Residue_Code)) +
-   #    geom_violin(trim=FALSE) +
-   #    labs(title = "Nonpolar Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
-   #    stat_summary(fun.data = mean_sdl, mult =1,geom = "pointrange")
-   # # 
-   #readline(prompt="Press [enter] to continue") # to stop and save the graphs lol
-}
-
-# FIXME!!! UNCOMMENT HERE IF YOU WISH TO USE THIS SOLUTION TO FIGURE SAVING
+   }
 
 
 
-# # EXPORTING ALL PLOTS, AS IN THE ORDER THEY APPEAR IN THE IDE TO THE RIGHT: ------------
+# 4. Export to LaTeX --------------------------
+
+
+# alternative solution to plot saving, but they look poor quality -----------
+
+# # EXPORTING ALL PLOTS, AS IN THE ORDER THEY APPEAR IN THE IDE TO THE RIGHT:
 # # from: https://stackoverflow.com/questions/35321775/save-all-plots-already-present-in-the-panel-of-rstudio/53809715
 # # another solution that might preserve plot name: https://stackoverflow.com/questions/24182349/r-plot-saving-and-file-name
 # # 
