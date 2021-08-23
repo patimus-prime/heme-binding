@@ -55,6 +55,10 @@ aaFreq_fn <- function(activeLigand,activeResultPath)
   
   clean_tbl -> aa_freq_df
   
+  rownames(aa_freq_df) <- NULL
+  aa_freq_df <- rename(aa_freq_df, Residue = Var1)
+  #rownames(HEM_aaFreqDf) <- NULL
+  #HEM_aaFreqDf <- rename(HEM_aaFreqDf, Residue = Var1)
   # this 100% works and plots everything
   # NOTE: just zoom + maximize to see ALL NAMES
   

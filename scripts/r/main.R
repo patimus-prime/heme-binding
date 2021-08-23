@@ -8,17 +8,30 @@
 # 2. Merges those results and makes some stately dataframes
 # 3. Constructs plots, which must be manually saved.
 # 4. Outputs tables in latex format, which must be manually copied over.
+   # This part might need to be done AFTER the graphs have been produced.
+   # Therefore latex code is commented by default until needed
 # might end up doing that part by itself
 # -------------------------------------------------------------
-#  Packages used ---------------
+#  Packages used; and comments if kableExtra gives problems ---------------
 library(dplyr) 
 library(data.table)
 library(tidyr)
 library(ggplot2) 
 library(stringr)
-
+library(knitr)
 source("~/heme-binding/scripts/r/addpdbcol.R")
 
+# this last one was tricky, see comments underneath:
+library(kableExtra) 
+#install.packages("kableExtra")
+# I had to download more stuff, in ubuntu terminal:
+# sudo apt-get install libxml2-dev
+# sudo apt-get install libssl-dev
+# sudo apt-get install libcurl4-openssl-dev #not sure if competely necessary
+# sudo apt-get install libfontconfig1-dev
+
+# you could probably also tease out what you're missing from the error messages
+# just keep trying to install kableExtra and download what you need, until it works
 
 # DECLARATIONS --------------
 # warning: ligandList is altered at the end of merging dataframes below
@@ -52,7 +65,6 @@ for(ligand in 1:(length(ligandList)))
    activeLigand = ligandList[[ligand]]
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    aa_freq_df <- aaFreq_fn(activeLigand,activeResultPath)
-   aa_freq_df
    assign(paste(activeLigand,"_aaFreqDf",sep=""), aaFreq_fn(activeLigand,activeResultPath))
 }
    
@@ -200,10 +212,10 @@ VERDOHEME_min_dist_df <- rbind(VEA_min_dist_df, VER_min_dist_df)
 
 VERDOHEME_aaFreqDf <- rbind(VEA_aaFreqDf,VER_aaFreqDf)
 VERDOHEME_aaFreqDf$Freq <- as.numeric(as.character(VERDOHEME_aaFreqDf$Freq))
-VERDOHEME_aaFreqDf$Var1 <- as.character(VERDOHEME_aaFreqDf$Var1)
-verdotemp <- tapply(VERDOHEME_aaFreqDf$Freq,VERDOHEME_aaFreqDf$Var1,FUN=sum)
+VERDOHEME_aaFreqDf$Residue <- as.character(VERDOHEME_aaFreqDf$Residue)
+verdotemp <- tapply(VERDOHEME_aaFreqDf$Freq,VERDOHEME_aaFreqDf$Residue,FUN=sum)
 verdotemp <- as.data.frame(verdotemp)
-VERDOHEME_aaFreqDf <- tibble::rownames_to_column(verdotemp, "Var1")
+VERDOHEME_aaFreqDf <- tibble::rownames_to_column(verdotemp, "Residue")
 VERDOHEME_aaFreqDf %>%
    rename(
       Freq = verdotemp
@@ -223,7 +235,7 @@ for(ligand in 1:(length(ligandList)))
                 ylab = "Frequency",
                 col = "orange",
                 names.arg = 
-                   eval(parse(text = (paste(activeLigand,"_aaFreqDf$Var1",sep="")))))
+                   eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
 
    #see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
    
@@ -290,6 +302,29 @@ for(ligand in 1:(length(ligandList)))
 
 
 # 4. Export to LaTeX --------------------------
+# I guess highlight below and replace the ligand each time you run
+ligandList # to check what to replace
+
+# kable(HEM_aaFreqDf, booktabs = T) %>%
+#    kable_styling(latex_options = "striped")
+# 
+# kbl(HEM_MERGED_DF, booktabs = T, "latex") %>%
+#    kable_styling(latex_options = "striped")
+# kbl(VERDOHEME_aaFreqDf, booktabs = T) %>%
+#    kable_styling(latex_options = "striped")
+
+# latex attempt to automate, not too much sense in it and doesn't seem to work...
+# for(ligand in 1:(length(ligandList)))
+# {
+#    activeLigand = ligandList[[ligand]]
+#    kable(eval(parse(text = (paste(activeLigand,"_aaFreqDf",sep="")))),
+#          booktabs = T,
+#          "latex") %>%
+#       kable_styling(latex_options = "striped")
+#   # aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
+#                          
+# }
+
 
 
 # alternative solution to plot saving, but they look poor quality -----------
