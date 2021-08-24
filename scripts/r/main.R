@@ -19,6 +19,7 @@ library(tidyr)
 library(ggplot2) 
 library(stringr)
 library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
 source("~/heme-binding/scripts/r/addpdbcol.R")
 
 # this last one was tricky, see comments underneath:
@@ -234,36 +235,37 @@ for(ligand in 1:(length(ligandList)))
                 xlab = "Residues",
                 ylab = "Frequency",
                 col = "orange",
+                cex.axis =  = 0.7,
                 names.arg = 
                    eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
 
    #see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
    
    volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
-                       main = paste(activeLigand,": Volume of Pockets in ea PDB, Å³", sep=""),
+                       main = paste(activeLigand,": Volume of Binding Pocket (Å³)", sep=""),
                        xlab = "Volume, Å³",
                        ylab = "Frequency",
                        col = "darkmagenta")
    
    LigExcSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Excluded_SA",sep = ""))),
-                    main = paste(activeLigand,": Excluded Surface Area in ea PDB, Å²",sep = ""),
+                    main = paste(activeLigand,": Excluded Surface Area of ",activeLigand," (Å²)",sep = ""),
                     xlab = "Excluded Surface Area, Å²",
                     col = "blue")
     
    LigAccSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Accessible_SA",sep = ""))),
-        main = paste(activeLigand,": Accessible Surface Area, Å²",sep = ""),
+        main = paste(activeLigand,": Accessible Surface Area of ",activeLigand," (Å²)",sep = ""),
         xlab = "Accessible Surface Area, Å²",
         col = "lightblue")
    
    HEM_MERGED_DF$Pocket_Excluded_SA
    pocket_excSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Excluded_SA",sep = ""))),
-        main = paste(activeLigand,": Pocket Excluded Surface Area, Å²", sep=''),
+        main = paste(activeLigand,": Pocket Excluded Surface Area (Å²)", sep=''),
         xlab = "Excluded Surface Area, Å²",
         col = "green"
         )
    
    pocket_accSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Accessible_SA",sep = ""))),
-        main = paste(activeLigand, ": Pocket Accessible Surface Area, Å²", sep = ''),
+        main = paste(activeLigand, ": Pocket Accessible Surface Area (Å²)", sep = ''),
         xlab = "Accessible Surface Area, Å²",
         col = "lightgreen"
         )
@@ -275,7 +277,7 @@ for(ligand in 1:(length(ligandList)))
    
    angleplot <- ggplot(eval(parse(text=paste(activeLigand,"_planar_angles_DF",sep=""))), aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles of Residues v. ",activeLigand," (defined as an axis) in each PDB",sep = ""), x="Residue",y="Angle")
+      labs(title = paste(activeLigand,": Angles of Residues v. ",activeLigand," in each PDB",sep = ""), x="Residue",y="Angle")
    print(angleplot)
    
 # coordinating residue declaration (maybe change by ligand) -------------------
@@ -285,14 +287,14 @@ for(ligand in 1:(length(ligandList)))
    tmp_coord_Res_df
    coord_angle_plot <- ggplot(tmp_coord_Res_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles of Cys, His, Tyr Residues to ",activeLigand," (defined as an axis)",sep=''),
+      labs(title = paste(activeLigand,": Angles of Cys, His, Tyr Residues to ",activeLigand,"",sep=''),
            x="Residue",y="Angle") +
       stat_summary(fun.data = mean_sdl, mult =1,geom="pointrange")
    print(coord_angle_plot)
    
    min_dist_angles_plot <- ggplot(eval(parse(text=paste(activeLigand,"_min_dist_df",sep=""))), aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ",activeLigand," (defined as an axis)", sep=''),
+      labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ",activeLigand,"", sep=''),
            x = "Residue",y="Angle") +
       stat_summary(fun.data = mean_sdl, mult=1,geom="pointrange")
    print(min_dist_angles_plot)
@@ -303,15 +305,16 @@ for(ligand in 1:(length(ligandList)))
 
 # 4. Export to LaTeX --------------------------
 # I guess highlight below and replace the ligand each time you run
-ligandList # to check what to replace
+#ligandList # to check what to replace
 
 # kable(HEM_aaFreqDf, booktabs = T) %>%
 #    kable_styling(latex_options = "striped")
 # 
 # kbl(HEM_MERGED_DF, booktabs = T, "latex") %>%
 #    kable_styling(latex_options = "striped")
-# kbl(VERDOHEME_aaFreqDf, booktabs = T) %>%
-#    kable_styling(latex_options = "striped")
+omg <- kable(HEM_aaFreqDf, booktabs = T, "latex") %>%
+   kable_styling(latex_options = "striped")
+write_clip(as.character(omg))
 
 # latex attempt to automate, not too much sense in it and doesn't seem to work...
 # for(ligand in 1:(length(ligandList)))

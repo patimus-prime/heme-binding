@@ -22,8 +22,9 @@
 
 %FIXME!! GRAPHICSPATH DOESNT WORK
 %\graphicspath{ {/home/pat/heme-binding/thesis/figures/} } % specify path to images
-%\graphicspath{figures/}
-%\graphicspath{./figures/}
+\graphicspath{{./figures/}}
+%\makeatletter\typeout{\Ginput@path}\makeatother
+%\graphicspath{c_Back_Matter/figures/}
 % none of these work. manually specifying figures/figuretitle works...
 
 
@@ -36,6 +37,8 @@
 
 
 \usepackage[toc,page]{appendix} % for the appendix ofc.
+
+\usepackage{subfig} %idk why this one is brackets lol just based off stackexchange
 
 
 %=== WARNING %===: IF ISSUES PRESENTED WITH BIBLIOGRAPHY, IN TERMINAL, IN DIRECTORY OF MAIN.TEX, RUN THE COMMAND "biber filename" with no ext in filename.ext. If you run with .ext it will not work.
@@ -148,7 +151,7 @@
 		%https://www.youtube.com/watch?v=NfF3bThOW0Q
 	
 	
-	
+	%BLANK PAGE
 	\chapter*{}
 	%TOC
 	\tableofcontents
@@ -163,32 +166,31 @@
 	
 	\input{b_Chapters/Introduction.tex}	
 	\input{b_Chapters/Methods.tex}
+	%add something like see pat's github for algorithms in methods
 	\input{b_Chapters/Equipment.tex}
 	\input{b_Chapters/Results.tex}
 	\input{b_Chapters/Discussion}
-	\input{b_Chapters/Conclusion}	
-	% eventually figure out how we get algorithms up in here
-	
+	\input{b_Chapters/Conclusion}
 	
 	\printbibliography % by convention, references before appendices
 	
+	
+	
 	\begin{appendices}
-	%uncomment next line if you wish section names not to appear
+	%uncomment next line if you wish section names not to appear in toc
 	%\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
-		\chapter{AA Frequency}
-			\section{Tables}
-				\input{tables/aafreqtables}
-			\section{Figures}
-				%\input{figures/aafreqfigs}
-				%\%begin{figure}
-					%\includegraphics{figures/fuckinghell}
-				\include{figures/aafreqfigs}
-				%\end{figure}
-				
-		\chapter{Volume}
-			\section{Tables}
-			\section{Figures}
-		% etc...
+	
+		\chapter{Figures}
+			\input{figures/figures.tex}
+			
+		\chapter{Tables}
+			\include{tables/tables.tex}
+			\section{AA Frequency}
+			\section{CACBFe Data}
+			\section{Likely coordinating residues data}
+			\section{Minimum Distance Residues Data}
+			\section{Planar Angles Data}
+			\section{Other Data}
 	\end{appendices}
 	
 	%[heading=subbibintoc]
