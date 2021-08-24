@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.29)  24 AUG 2021 22:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.29)  24 AUG 2021 22:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,26 +722,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [5
 
-] (./main.lof)
+] [6] (./main.lof [7
+
+])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [6
-
-] (./main.lot)
+ [8] (./main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [7
+ [9
 
 ]
 (./b_Chapters/Introduction.tex
 Chapter 1.
-) (./b_Chapters/Methods.tex [8
+) (./b_Chapters/Methods.tex [10
 
 ]
 Chapter 2.
-[9
+[11
 
 ]
 Overfull \hbox (101.82133pt too wide) in paragraph at lines 26--27
@@ -749,233 +749,303 @@ Overfull \hbox (101.82133pt too wide) in paragraph at lines 26--27
 ether HEM/HEC/SRM/VER/VEA
  []
 
-[10] [11]) (./b_Chapters/Equipment.tex [12]
+[12] [13]) (./b_Chapters/Equipment.tex [14]
 Chapter 3.
-) (./b_Chapters/Results.tex [13
+) (./b_Chapters/Results.tex [15
 
 ]
 Chapter 4.
 
-LaTeX Warning: Reference `tbl:HEM_AAfreq' on page 14 undefined on input line 2.
+LaTeX Warning: Reference `tbl:HEM_AAfreq' on page 16 undefined on input line 2.
 
 
 
-LaTeX Warning: Reference `figs:HEM_aafreq' on page 14 undefined on input line 3
+LaTeX Warning: Reference `figs:HEM_aafreq' on page 16 undefined on input line 3
 .
 
-) (./b_Chapters/Discussion.tex [14
+) (./b_Chapters/Discussion.tex [16
 
 ]
 Chapter 5.
-) (./b_Chapters/Conclusion.tex [15
+) (./b_Chapters/Conclusion.tex [17
 
 ]
 Chapter 6.
-) [16
+) [18
 
-] [17
+] [19
 
-] [18
+] [20
 
 
 ]
 Appendix A.
 (./figures/figures.tex
-<./figures/7A/HEM_aaFreq.png, id=70, 770.88pt x 493.845pt>
+<./figures/7A/HEM_aaFreq.png, id=76, 770.88pt x 493.845pt>
 File: ./figures/7A/HEM_aaFreq.png Graphic file (type png)
 <use ./figures/7A/HEM_aaFreq.png>
 Package pdftex.def Info: ./figures/7A/HEM_aaFreq.png  used on input line 8.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEC_aaFreq.png, id=71, 770.88pt x 493.845pt>
+<./figures/7A/HEC_aaFreq.png, id=77, 770.88pt x 493.845pt>
 File: ./figures/7A/HEC_aaFreq.png Graphic file (type png)
 <use ./figures/7A/HEC_aaFreq.png>
 Package pdftex.def Info: ./figures/7A/HEC_aaFreq.png  used on input line 15.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/SRM_aaFreq.png, id=72, 770.88pt x 493.845pt>
+<./figures/7A/SRM_aaFreq.png, id=78, 770.88pt x 493.845pt>
 File: ./figures/7A/SRM_aaFreq.png Graphic file (type png)
 <use ./figures/7A/SRM_aaFreq.png>
 Package pdftex.def Info: ./figures/7A/SRM_aaFreq.png  used on input line 21.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/VERDOHEME_aaFreq.png, id=73, 770.88pt x 493.845pt>
+<./figures/7A/VERDOHEME_aaFreq.png, id=79, 770.88pt x 493.845pt>
 File: ./figures/7A/VERDOHEME_aaFreq.png Graphic file (type png)
 <use ./figures/7A/VERDOHEME_aaFreq.png>
 Package pdftex.def Info: ./figures/7A/VERDOHEME_aaFreq.png  used on input line 
 27.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEM_cab.png, id=74, 770.88pt x 493.845pt>
+<./figures/7A/HEM_cab.png, id=80, 770.88pt x 493.845pt>
 File: ./figures/7A/HEM_cab.png Graphic file (type png)
 <use ./figures/7A/HEM_cab.png>
 Package pdftex.def Info: ./figures/7A/HEM_cab.png  used on input line 37.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEC_cab.png, id=75, 770.88pt x 493.845pt>
+<./figures/7A/HEC_cab.png, id=81, 770.88pt x 493.845pt>
 File: ./figures/7A/HEC_cab.png Graphic file (type png)
 <use ./figures/7A/HEC_cab.png>
 Package pdftex.def Info: ./figures/7A/HEC_cab.png  used on input line 43.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/SRM_cab.png, id=76, 770.88pt x 493.845pt>
+<./figures/7A/SRM_cab.png, id=82, 770.88pt x 493.845pt>
 File: ./figures/7A/SRM_cab.png Graphic file (type png)
 <use ./figures/7A/SRM_cab.png>
 Package pdftex.def Info: ./figures/7A/SRM_cab.png  used on input line 49.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/VERDOHEME_cab.png, id=77, 770.88pt x 493.845pt>
+<./figures/7A/VERDOHEME_cab.png, id=83, 770.88pt x 493.845pt>
 File: ./figures/7A/VERDOHEME_cab.png Graphic file (type png)
 <use ./figures/7A/VERDOHEME_cab.png>
 Package pdftex.def Info: ./figures/7A/VERDOHEME_cab.png  used on input line 55.
 
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEM_closestRes.png, id=78, 770.88pt x 493.845pt>
+<./figures/7A/HEM_closestRes.png, id=84, 770.88pt x 493.845pt>
 File: ./figures/7A/HEM_closestRes.png Graphic file (type png)
 <use ./figures/7A/HEM_closestRes.png>
 Package pdftex.def Info: ./figures/7A/HEM_closestRes.png  used on input line 62
 .
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEC_closestRes.png, id=79, 770.88pt x 493.845pt>
+<./figures/7A/HEC_closestRes.png, id=85, 770.88pt x 493.845pt>
 File: ./figures/7A/HEC_closestRes.png Graphic file (type png)
 <use ./figures/7A/HEC_closestRes.png>
 Package pdftex.def Info: ./figures/7A/HEC_closestRes.png  used on input line 68
 .
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/SRM_closestRes.png, id=80, 233.37187pt x 249.18094pt>
+<./figures/7A/SRM_closestRes.png, id=86, 233.37187pt x 249.18094pt>
 File: ./figures/7A/SRM_closestRes.png Graphic file (type png)
 <use ./figures/7A/SRM_closestRes.png>
 Package pdftex.def Info: ./figures/7A/SRM_closestRes.png  used on input line 75
 .
 (pdftex.def)             Requested size: 390.0pt x 416.46526pt.
-<./figures/7A/VERDOHEME_closestRes.png, id=81, 770.88pt x 493.845pt>
+<./figures/7A/VERDOHEME_closestRes.png, id=87, 770.88pt x 493.845pt>
 File: ./figures/7A/VERDOHEME_closestRes.png Graphic file (type png)
 <use ./figures/7A/VERDOHEME_closestRes.png>
 Package pdftex.def Info: ./figures/7A/VERDOHEME_closestRes.png  used on input l
 ine 82.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEM_coordRes.png, id=82, 770.88pt x 493.845pt>
+<./figures/7A/HEM_coordRes.png, id=88, 770.88pt x 493.845pt>
 File: ./figures/7A/HEM_coordRes.png Graphic file (type png)
 <use ./figures/7A/HEM_coordRes.png>
 Package pdftex.def Info: ./figures/7A/HEM_coordRes.png  used on input line 90.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEC_coordRes.png, id=83, 770.88pt x 493.845pt>
+<./figures/7A/HEC_coordRes.png, id=89, 770.88pt x 493.845pt>
 File: ./figures/7A/HEC_coordRes.png Graphic file (type png)
 <use ./figures/7A/HEC_coordRes.png>
 Package pdftex.def Info: ./figures/7A/HEC_coordRes.png  used on input line 96.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/SRM_coordRes.png, id=84, 770.88pt x 493.845pt>
+<./figures/7A/SRM_coordRes.png, id=90, 770.88pt x 493.845pt>
 File: ./figures/7A/SRM_coordRes.png Graphic file (type png)
 <use ./figures/7A/SRM_coordRes.png>
 Package pdftex.def Info: ./figures/7A/SRM_coordRes.png  used on input line 102.
 
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/VERDOHEME_coordRes.png, id=85, 770.88pt x 493.845pt>
+<./figures/7A/VERDOHEME_coordRes.png, id=91, 770.88pt x 493.845pt>
 File: ./figures/7A/VERDOHEME_coordRes.png Graphic file (type png)
 <use ./figures/7A/VERDOHEME_coordRes.png>
 Package pdftex.def Info: ./figures/7A/VERDOHEME_coordRes.png  used on input lin
 e 108.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEM_ligandAccSA.png, id=86, 770.88pt x 493.845pt>
+<./figures/7A/HEM_ligandAccSA.png, id=92, 770.88pt x 493.845pt>
 File: ./figures/7A/HEM_ligandAccSA.png Graphic file (type png)
 <use ./figures/7A/HEM_ligandAccSA.png>
 Package pdftex.def Info: ./figures/7A/HEM_ligandAccSA.png  used on input line 1
 16.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEC_ligandAccSA.png, id=87, 770.88pt x 493.845pt>
+<./figures/7A/HEC_ligandAccSA.png, id=93, 770.88pt x 493.845pt>
 File: ./figures/7A/HEC_ligandAccSA.png Graphic file (type png)
 <use ./figures/7A/HEC_ligandAccSA.png>
 Package pdftex.def Info: ./figures/7A/HEC_ligandAccSA.png  used on input line 1
 22.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/SRM_ligandAccSA.png, id=88, 770.88pt x 493.845pt>
+<./figures/7A/SRM_ligandAccSA.png, id=94, 770.88pt x 493.845pt>
 File: ./figures/7A/SRM_ligandAccSA.png Graphic file (type png)
 <use ./figures/7A/SRM_ligandAccSA.png>
 Package pdftex.def Info: ./figures/7A/SRM_ligandAccSA.png  used on input line 1
 28.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/VERDOHEME_ligandAccSA.png, id=89, 770.88pt x 493.845pt>
+<./figures/7A/VERDOHEME_ligandAccSA.png, id=95, 770.88pt x 493.845pt>
 File: ./figures/7A/VERDOHEME_ligandAccSA.png Graphic file (type png)
 <use ./figures/7A/VERDOHEME_ligandAccSA.png>
 Package pdftex.def Info: ./figures/7A/VERDOHEME_ligandAccSA.png  used on input 
 line 134.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEM_ligandExcSA.png, id=90, 770.88pt x 493.845pt>
+<./figures/7A/HEM_ligandExcSA.png, id=96, 770.88pt x 493.845pt>
 File: ./figures/7A/HEM_ligandExcSA.png Graphic file (type png)
 <use ./figures/7A/HEM_ligandExcSA.png>
 Package pdftex.def Info: ./figures/7A/HEM_ligandExcSA.png  used on input line 1
 41.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEC_ligandExcSA.png, id=91, 770.88pt x 493.845pt>
+<./figures/7A/HEC_ligandExcSA.png, id=97, 770.88pt x 493.845pt>
 File: ./figures/7A/HEC_ligandExcSA.png Graphic file (type png)
 <use ./figures/7A/HEC_ligandExcSA.png>
 Package pdftex.def Info: ./figures/7A/HEC_ligandExcSA.png  used on input line 1
 47.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/SRM_ligandExcSA.png, id=92, 770.88pt x 493.845pt>
+<./figures/7A/SRM_ligandExcSA.png, id=98, 770.88pt x 493.845pt>
 File: ./figures/7A/SRM_ligandExcSA.png Graphic file (type png)
 <use ./figures/7A/SRM_ligandExcSA.png>
 Package pdftex.def Info: ./figures/7A/SRM_ligandExcSA.png  used on input line 1
 53.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/VERDOHEME_ligandExcSA.png, id=93, 770.88pt x 493.845pt>
+<./figures/7A/VERDOHEME_ligandExcSA.png, id=99, 770.88pt x 493.845pt>
 File: ./figures/7A/VERDOHEME_ligandExcSA.png Graphic file (type png)
 <use ./figures/7A/VERDOHEME_ligandExcSA.png>
 Package pdftex.def Info: ./figures/7A/VERDOHEME_ligandExcSA.png  used on input 
 line 159.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEM_planarAngles.png, id=94, 770.88pt x 493.845pt>
+<./figures/7A/HEM_planarAngles.png, id=100, 770.88pt x 493.845pt>
 File: ./figures/7A/HEM_planarAngles.png Graphic file (type png)
 <use ./figures/7A/HEM_planarAngles.png>
 Package pdftex.def Info: ./figures/7A/HEM_planarAngles.png  used on input line 
 166.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEC_planarAngles.png, id=95, 770.88pt x 493.845pt>
+<./figures/7A/HEC_planarAngles.png, id=101, 770.88pt x 493.845pt>
 File: ./figures/7A/HEC_planarAngles.png Graphic file (type png)
 <use ./figures/7A/HEC_planarAngles.png>
 Package pdftex.def Info: ./figures/7A/HEC_planarAngles.png  used on input line 
 172.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/SRM_planarAngles.png, id=96, 770.88pt x 493.845pt>
+<./figures/7A/SRM_planarAngles.png, id=102, 770.88pt x 493.845pt>
 File: ./figures/7A/SRM_planarAngles.png Graphic file (type png)
 <use ./figures/7A/SRM_planarAngles.png>
 Package pdftex.def Info: ./figures/7A/SRM_planarAngles.png  used on input line 
 178.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/VERDOHEME_planarAngles.png, id=97, 770.88pt x 493.845pt>
+<./figures/7A/VERDOHEME_planarAngles.png, id=103, 770.88pt x 493.845pt>
 File: ./figures/7A/VERDOHEME_planarAngles.png Graphic file (type png)
 <use ./figures/7A/VERDOHEME_planarAngles.png>
 Package pdftex.def Info: ./figures/7A/VERDOHEME_planarAngles.png  used on input
  line 184.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-<./figures/7A/HEM_pocketAccSA.png, id=98, 770.88pt x 493.845pt>
+<./figures/7A/HEM_pocketAccSA.png, id=104, 770.88pt x 493.845pt>
 File: ./figures/7A/HEM_pocketAccSA.png Graphic file (type png)
 <use ./figures/7A/HEM_pocketAccSA.png>
 Package pdftex.def Info: ./figures/7A/HEM_pocketAccSA.png  used on input line 1
 91.
 (pdftex.def)             Requested size: 390.0pt x 249.8381pt.
-) [19
+<./figures/7A/HEC_pocketAccSA.png, id=105, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_pocketAccSA.png Graphic file (type png)
+<use ./figures/7A/HEC_pocketAccSA.png>
+Package pdftex.def Info: ./figures/7A/HEC_pocketAccSA.png  used on input line 1
+97.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_pocketAccSA.png, id=106, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_pocketAccSA.png Graphic file (type png)
+<use ./figures/7A/SRM_pocketAccSA.png>
+Package pdftex.def Info: ./figures/7A/SRM_pocketAccSA.png  used on input line 2
+03.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_pocketAccSA.png, id=107, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_pocketAccSA.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_pocketAccSA.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_pocketAccSA.png  used on input 
+line 209.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_pocketExcSA.png, id=108, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_pocketExcSA.png Graphic file (type png)
+<use ./figures/7A/HEM_pocketExcSA.png>
+Package pdftex.def Info: ./figures/7A/HEM_pocketExcSA.png  used on input line 2
+16.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_pocketExcSA.png, id=109, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_pocketExcSA.png Graphic file (type png)
+<use ./figures/7A/HEC_pocketExcSA.png>
+Package pdftex.def Info: ./figures/7A/HEC_pocketExcSA.png  used on input line 2
+22.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_pocketExcSA.png, id=110, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_pocketExcSA.png Graphic file (type png)
+<use ./figures/7A/SRM_pocketExcSA.png>
+Package pdftex.def Info: ./figures/7A/SRM_pocketExcSA.png  used on input line 2
+28.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_pocketExcSA.png, id=111, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_pocketExcSA.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_pocketExcSA.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_pocketExcSA.png  used on input 
+line 234.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_volume.png, id=112, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_volume.png Graphic file (type png)
+<use ./figures/7A/HEM_volume.png>
+Package pdftex.def Info: ./figures/7A/HEM_volume.png  used on input line 241.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_volume.png, id=113, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_volume.png Graphic file (type png)
+<use ./figures/7A/HEC_volume.png>
+Package pdftex.def Info: ./figures/7A/HEC_volume.png  used on input line 248.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_volume.png, id=114, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_volume.png Graphic file (type png)
+<use ./figures/7A/SRM_volume.png>
+Package pdftex.def Info: ./figures/7A/SRM_volume.png  used on input line 255.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_volume.png, id=115, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_volume.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_volume.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_volume.png  used on input line 
+262.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+) [21
 
-] [20 <./figures/7A/HEM_aaFreq.png (PNG copy)> <./figures/7A/HEC_aaFreq.png (PN
-G copy)>] [21 <./figures/7A/SRM_aaFreq.png (PNG copy)> <./figures/7A/VERDOHEME_
-aaFreq.png (PNG copy)>] [22 <./figures/7A/HEM_cab.png (PNG copy)> <./figures/7A
-/HEC_cab.png (PNG copy)>] [23 <./figures/7A/SRM_cab.png (PNG copy)> <./figures/
-7A/VERDOHEME_cab.png (PNG copy)>] [24 <./figures/7A/HEM_closestRes.png (PNG cop
+] [22 <./figures/7A/HEM_aaFreq.png (PNG copy)> <./figures/7A/HEC_aaFreq.png (PN
+G copy)>] [23 <./figures/7A/SRM_aaFreq.png (PNG copy)> <./figures/7A/VERDOHEME_
+aaFreq.png (PNG copy)>] [24 <./figures/7A/HEM_cab.png (PNG copy)> <./figures/7A
+/HEC_cab.png (PNG copy)>] [25 <./figures/7A/SRM_cab.png (PNG copy)> <./figures/
+7A/VERDOHEME_cab.png (PNG copy)>] [26 <./figures/7A/HEM_closestRes.png (PNG cop
 y)> <./figures/7A/HEC_closestRes.png (PNG copy)>]
-[25 <./figures/7A/SRM_closestRes.png (PNG copy)>] [26 <./figures/7A/VERDOHEME_c
-losestRes.png (PNG copy)> <./figures/7A/HEM_coordRes.png (PNG copy)>] [27 <./fi
+[27 <./figures/7A/SRM_closestRes.png (PNG copy)>] [28 <./figures/7A/VERDOHEME_c
+losestRes.png (PNG copy)> <./figures/7A/HEM_coordRes.png (PNG copy)>] [29 <./fi
 gures/7A/HEC_coordRes.png (PNG copy)> <./figures/7A/SRM_coordRes.png (PNG copy)
->] [28 <./figures/7A/VERDOHEME_coordRes.png (PNG copy)> <./figures/7A/HEM_ligan
-dAccSA.png (PNG copy)>] [29 <./figures/7A/HEC_ligandAccSA.png (PNG copy)> <./fi
-gures/7A/SRM_ligandAccSA.png (PNG copy)>] [30 <./figures/7A/VERDOHEME_ligandAcc
-SA.png (PNG copy)> <./figures/7A/HEM_ligandExcSA.png (PNG copy)>] [31 <./figure
+>] [30 <./figures/7A/VERDOHEME_coordRes.png (PNG copy)> <./figures/7A/HEM_ligan
+dAccSA.png (PNG copy)>] [31 <./figures/7A/HEC_ligandAccSA.png (PNG copy)> <./fi
+gures/7A/SRM_ligandAccSA.png (PNG copy)>] [32 <./figures/7A/VERDOHEME_ligandAcc
+SA.png (PNG copy)> <./figures/7A/HEM_ligandExcSA.png (PNG copy)>] [33 <./figure
 s/7A/HEC_ligandExcSA.png (PNG copy)> <./figures/7A/SRM_ligandExcSA.png (PNG cop
-y)>] [32 <./figures/7A/VERDOHEME_ligandExcSA.png (PNG copy)> <./figures/7A/HEM_
-planarAngles.png (PNG copy)>] [33 <./figures/7A/HEC_planarAngles.png (PNG copy)
-> <./figures/7A/SRM_planarAngles.png (PNG copy)>] [34 <./figures/7A/VERDOHEME_p
+y)>] [34 <./figures/7A/VERDOHEME_ligandExcSA.png (PNG copy)> <./figures/7A/HEM_
+planarAngles.png (PNG copy)>] [35 <./figures/7A/HEC_planarAngles.png (PNG copy)
+> <./figures/7A/SRM_planarAngles.png (PNG copy)>] [36 <./figures/7A/VERDOHEME_p
 lanarAngles.png (PNG copy)> <./figures/7A/HEM_pocketAccSA.png (PNG copy)>]
+[37 <./figures/7A/HEC_pocketAccSA.png (PNG copy)> <./figures/7A/SRM_pocketAccSA
+.png (PNG copy)>] [38 <./figures/7A/VERDOHEME_pocketAccSA.png (PNG copy)> <./fi
+gures/7A/HEM_pocketExcSA.png (PNG copy)>] [39 <./figures/7A/HEC_pocketExcSA.png
+ (PNG copy)> <./figures/7A/SRM_pocketExcSA.png (PNG copy)>] [40 <./figures/7A/V
+ERDOHEME_pocketExcSA.png (PNG copy)> <./figures/7A/HEM_volume.png (PNG copy)>]
+[41 <./figures/7A/HEC_volume.png (PNG copy)> <./figures/7A/SRM_volume.png (PNG 
+copy)>] [42 <./figures/7A/VERDOHEME_volume.png (PNG copy)>]
 Appendix B.
-[35
+[43
 
 ]
 \openout2 = `tables/tables.tex.aux'.
 
 
 No file tables/tables.tex.tex.
-[36
+[44
 
 
 ] (./main.aux (./tables/tables.tex.aux))
@@ -987,13 +1057,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14298 strings out of 481239
- 255327 string characters out of 5920377
- 1004346 words of memory out of 5000000
- 29303 multiletter control sequences out of 15000+600000
+ 14397 strings out of 481239
+ 258059 string characters out of 5920377
+ 1008478 words of memory out of 5000000
+ 29391 multiletter control sequences out of 15000+600000
  539372 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,7n,48p,1979b,1665s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,7n,48p,1979b,1705s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-di
@@ -1002,10 +1072,10 @@ s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200
 .pfb>
-Output written on main.pdf (37 pages, 1257170 bytes).
+Output written on main.pdf (45 pages, 1462059 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 220 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
