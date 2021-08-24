@@ -39,14 +39,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {B}Tables}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}AA Frequency}{44}%
+\contentsline {section}{\numberline {B.1}AA Frequency}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}CACBFe Data}{44}%
+\contentsline {section}{\numberline {B.2}CACBFe Data}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Likely coordinating residues data}{44}%
+\contentsline {section}{\numberline {B.3}Coordinating Residue Data}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.4}Minimum Distance Residues Data}{44}%
+\contentsline {section}{\numberline {B.4}Merged Data}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.5}Planar Angles Data}{44}%
+\contentsline {section}{\numberline {B.5}Minimum Distance Data}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.6}Other Data}{44}%
+\contentsline {section}{\numberline {B.6}Planar Angles}{43}%
