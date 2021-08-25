@@ -347,11 +347,6 @@ for(ligand in 1:(length(ligandList)))
 # kbl(HEM_MERGED_DF, booktabs = T, "latex") %>%
 #    kable_styling(latex_options = "striped")
 
-
-omg <- kable(HEM_planar_angles_DF, booktabs = T, "latex") %>%
-   kable_styling(latex_options = c("striped","scale_down"))
-write_clip(as.character(omg))
-
 #dealing with verdoheme
 v1df <- VERDOHEME_MERGED_DF$PDB_ID
 v1df <- cbind(v1df,VERDOHEME_MERGED_DF$`Molecule Name`)
@@ -374,8 +369,23 @@ v2df <- as.data.frame(v2df)
 v2df %>%
    rename(
       PDB_ID = v2df,
-      Volume_Data = V2,v
-   )
+      Volume_Data = V2,
+      VERDOHEME_EXCLUDED_SA = V3,
+      VERDOHEME_ACCESSIBLE_SA = V4,
+      POCKET_EXCLUDED_SA = V5,
+      POCKET_ACCESSIBLE_SA = V6
+   ) -> v2df
+
+VERDOHEME_p1DF <- v1df
+VERDOHEME_p2DF <- v2df
+
+## EXPORT TO LATEX ---------------------
+# splitting shit up worked!!!
+
+omg <- kable(HEC_p1DF, booktabs = T, "latex") %>%
+   kable_styling(latex_options = c("striped","scale_down"))
+write_clip(as.character(omg))
+
 # latex attempt to automate, not too much sense in it and doesn't seem to work...
 # for(ligand in 1:(length(ligandList)))
 # {

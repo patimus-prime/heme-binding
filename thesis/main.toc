@@ -45,8 +45,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {B.3}Coordinating Residue Data}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.4}Merged Data}{43}%
+\contentsline {section}{\numberline {B.4}Molecule and Organism Data}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.5}Minimum Distance Data}{43}%
+\contentsline {section}{\numberline {B.5}Merged Data}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.6}Planar Angles}{43}%
+\contentsline {section}{\numberline {B.6}Minimum Distance Data}{43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.7}Planar Angles}{43}%
