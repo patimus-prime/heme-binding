@@ -163,23 +163,57 @@ for(ligand in 1:(length(ligandList)))
 {
    activeLigand = ligandList[[ligand]]
    
+   
    mergedDF <- merge(eval(parse(text = paste(activeLigand,"_pdbCodesDf",sep = ""))),
                 eval(parse(text = paste(activeLigand,"_sourceOrganismDf",sep = ""))),
                 by.x = "PDB_ID")
-
+   ##### DECLARE REPORTED DFs ###
+   p1DF <- mergedDF #just codes and source orgs, done
+   p2DF <- eval(parse(text = paste(activeLigand,"_pdbCodesDf$PDB_ID",sep = "")))
+   p2DF <- as.data.frame(p2DF)
+   p2DF %>%
+      rename(PDB_ID = p2DF) -> p2DF #takes care of how R names stuff by default
+   
+   # V
    mergedDF <- merge(mergedDF,
                      eval(parse(text = paste(activeLigand,"_maxVolDf",sep = ""))),
                      by.x= "PDB_ID")
    
+   p2DF <- merge(p2DF,
+                 eval(parse(text = paste(activeLigand,"_maxVolDf",sep = ""))),
+                 by.x= "PDB_ID")
+   # ligandSA
+   
    mergedDF <- merge(mergedDF,
                      eval(parse(text = paste(activeLigand,"_ligandSA_df",sep = ""))),
                      by.x = "PDB_ID")
+   p2DF <- merge(p2DF,
+                 eval(parse(text = paste(activeLigand,"_ligandSA_df",sep = ""))),
+                 by.x = "PDB_ID")
+   #pocketSA
    
    mergedDF <- merge(mergedDF,
                      eval(parse(text = paste(activeLigand,"_pocketSA_df",sep = ""))),
                      by.x = "PDB_ID")
+   p2DF <- merge(p2DF,
+                 eval(parse(text = paste(activeLigand,"_pocketSA_df",sep = ""))),
+                 by.x = "PDB_ID")
 
+   # rename a little so we can be presentable, still avoid spaces no time for debugging
+   p1DF %>%
+      rename(
+         Molecule_Name = 'Molecule Name'
+      ) -> p1DF
+   
+   p2DF %>%
+      rename(
+         Volume_Data = volume_data
+      ) -> p2DF
+   
    assign(paste(activeLigand,"_MERGED_DF",sep = ""),mergedDF)
+   assign(paste(activeLigand,"_p1DF",sep = ""),p1DF) #this gets printed in LaTeX, merged v big
+   assign(paste(activeLigand,"_p2DF",sep = ""),p2DF) #this gets printed in LaTeX, merged v big
+  
 }
 
 # merging VER/VEA --------
@@ -235,7 +269,7 @@ for(ligand in 1:(length(ligandList)))
                 xlab = "Residues",
                 ylab = "Frequency",
                 col = "orange",
-                cex.axis =  = 0.7,
+                cex.names = 0.8, #to fit the screen of my poor laptop
                 names.arg = 
                    eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
 
@@ -312,10 +346,36 @@ for(ligand in 1:(length(ligandList)))
 # 
 # kbl(HEM_MERGED_DF, booktabs = T, "latex") %>%
 #    kable_styling(latex_options = "striped")
-omg <- kable(HEM_aaFreqDf, booktabs = T, "latex") %>%
-   kable_styling(latex_options = "striped")
+
+
+omg <- kable(HEM_planar_angles_DF, booktabs = T, "latex") %>%
+   kable_styling(latex_options = c("striped","scale_down"))
 write_clip(as.character(omg))
 
+#dealing with verdoheme
+v1df <- VERDOHEME_MERGED_DF$PDB_ID
+v1df <- cbind(v1df,VERDOHEME_MERGED_DF$`Molecule Name`)
+v1df <- cbind(v1df,VERDOHEME_MERGED_DF$Source_Organism)
+v1df <- as.data.frame(v1df)
+v1df %>%
+   rename(
+      PDB_ID = v1df,
+      Molecule_Name = V2,
+      Source_Organism = V3
+   ) -> v1df
+
+v2df <- VERDOHEME_MERGED_DF$PDB_ID
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$volume_data)
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$VERDOHEME_Excluded_SA)
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$VERDOHEME_Accessible_SA)
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$Pocket_Excluded_SA)
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$Pocket_Accessible_SA)
+v2df <- as.data.frame(v2df)
+v2df %>%
+   rename(
+      PDB_ID = v2df,
+      Volume_Data = V2,v
+   )
 # latex attempt to automate, not too much sense in it and doesn't seem to work...
 # for(ligand in 1:(length(ligandList)))
 # {
