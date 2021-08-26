@@ -382,8 +382,9 @@ VERDOHEME_p2DF <- v2df
 ## EXPORT TO LATEX ---------------------
 # splitting shit up worked!!!
 
-omg <- kable(HEC_p1DF, booktabs = T, "latex") %>%
-   kable_styling(latex_options = c("striped","scale_down"))
+rownames(HEM_coord_Res_df) <- NULL
+omg <- kable(HEM_coord_Res_df, longtable = T, booktabs = T, caption = "perhaps","latex") %>%
+   kable_styling(full_width = T, latex_options = c("striped","repeat_header"))
 write_clip(as.character(omg))
 
 # latex attempt to automate, not too much sense in it and doesn't seem to work...

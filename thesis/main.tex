@@ -33,6 +33,18 @@
 \usepackage [english]{babel}
 \usepackage [autostyle, english = american]{csquotes}
 
+
+% for the page number problem
+\usepackage{fancyhdr}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\fancyfoot[C]{\iffloatpage{}{\thepage}}
+	\renewcommand{\headrulewidth}{0pt}}
+\pagestyle{plain}
+
+
+
 \MakeOuterQuote{"} % or `` and " or ` and '
 
 

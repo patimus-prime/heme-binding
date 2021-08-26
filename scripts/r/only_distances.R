@@ -90,6 +90,7 @@ distancesFn <- function(activeLigand,activeResultPath)
                        "THR","TRP","TYR","VAL")
   
   # FIXME!!! CHANGE HERE TO ERRRRRADICATE THE NON-RES DATAPOINTS
+  # 26 Aug 2021, to clarify below DOES NOW remove non residues, which seems good
   OnlyDistance_df <- subset(OnlyDistance_df, Residue_Code %in% residues_ref_ls)
   
   
