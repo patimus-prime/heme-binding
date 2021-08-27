@@ -30,6 +30,8 @@ import calc_SA_pocket
 ligandList = settings.setLigandList
 #"HEM"#,HEC,SRM,VER,VEA"
 # desired distance from Fe to examine:
+angstromDistance = str(7.0) #changes after we run once for 7A
+
 
 #
 # begin calling scripts, likely one loop per script:
@@ -54,7 +56,7 @@ resultPath = "~/heme-binding/results/volume/"
 for activeLigand in ligandList:
     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-    calc_volume.calculate_volume(activeLigand,activeSourcePath,activeResultPath)
+    calc_volume.calculate_volume(activeLigand,activeSourcePath,activeResultPath,angstromDistance)
 
 #### GET RESIDUES WITHIN angstromDistance ##############
 sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
@@ -63,7 +65,7 @@ resultPath = "~/heme-binding/results/aa_frequency/"
 for activeLigand in ligandList:
     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-    get_residues_within_xA.fn(activeLigand,activeSourcePath,activeResultPath)
+    get_residues_within_xA.fn(activeLigand,activeSourcePath,activeResultPath,angstromDistance)
 
 #### CALCULATE CA-CB-FE ANGLEs ####################
 sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
@@ -72,17 +74,17 @@ resultPath = "~/heme-binding/results/angles_CA_CB_Fe/"
 for activeLigand in ligandList:
     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-    calc_CA_CB_Fe_angle.ccf(activeLigand,activeSourcePath,activeResultPath)
+    calc_CA_CB_Fe_angle.ccf(activeLigand,activeSourcePath,activeResultPath,angstromDistance)
 
 
-##### CALCULATE HEME SA ######
+##### CALCULATE LIGAND SA ######
 sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
 resultPath = "~/heme-binding/results/ligandSA/"
 
 for activeLigand in ligandList:
     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-    calc_SA_ligand.SA_ligand(activeLigand,activeSourcePath,activeResultPath)
+    calc_SA_ligand.SA_ligand(activeLigand,activeSourcePath,activeResultPath)#,angstromDistance) not needed
 
 ##### CALCULATE POCKET SA #######
 sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
@@ -91,7 +93,7 @@ resultPath = "~/heme-binding/results/pocketSA/"
 for activeLigand in ligandList:
     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-    calc_SA_pocket.SA_pocket(activeLigand,activeSourcePath,activeResultPath)
+    calc_SA_pocket.SA_pocket(activeLigand,activeSourcePath,activeResultPath,angstromDistance) #yes needed
 
 #### CALCULATE DISTANCES ########
 sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
@@ -100,7 +102,7 @@ resultPath = "~/heme-binding/results/only_distances/"
 for activeLigand in ligandList:
     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-    calc_distances.d(activeLigand,activeSourcePath,activeResultPath)
+    calc_distances.d(activeLigand,activeSourcePath,activeResultPath,angstromDistance)
 
 ### CALCULATE ANGLES WHOLE AA TO HEME PLANE #######
 ### KEEP AT BOTTOM, TAKES FOREVER TO RUN #######
@@ -110,7 +112,52 @@ resultPath = "~/heme-binding/results/distances_and_angles/"
 for activeLigand in ligandList:
     activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
     activeResultPath = os.path.expanduser(resultPath + activeLigand)
-    calc_planar_angles.angle_aa_ligand_plane(activeLigand,activeSourcePath,activeResultPath)
+    calc_planar_angles.angle_aa_ligand_plane(activeLigand,activeSourcePath,activeResultPath,angstromDistance)
+
+
+#### NOTE BELOW RE-PRODUCE ONLY SOME OF THE RESULTS USING 5A.######
+#### DISTANCES AND ANGLES REMAIN USING 7A, AND THEREFORE INCLUDE EVERYTHING OF INTEREST.
+#### 5A WOULD PERHAPS SERVE AS ANOTHER UPPER CUTOFF..... FUCK IDK.
+
+angstromDistance = str(5.0)
+
+
+##### CALCULATE VOLUME OF POCKETS #######
+sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
+resultPath = "~/heme-binding/results/volume/5A/"
+
+for activeLigand in ligandList:
+    activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
+    activeResultPath = os.path.expanduser(resultPath + activeLigand)
+    calc_volume.calculate_volume(activeLigand,activeSourcePath,activeResultPath,angstromDistance)
+
+#### GET RESIDUES WITHIN angstromDistance ##############
+sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
+resultPath = "~/heme-binding/results/aa_frequency/5A/"
+
+for activeLigand in ligandList:
+    activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
+    activeResultPath = os.path.expanduser(resultPath + activeLigand)
+    get_residues_within_xA.fn(activeLigand,activeSourcePath,activeResultPath,angstromDistance)
+
+##### CALCULATE LIGAND SA ######
+sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
+resultPath = "~/heme-binding/results/ligandSA/5A/"
+
+for activeLigand in ligandList:
+    activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
+    activeResultPath = os.path.expanduser(resultPath + activeLigand)
+    calc_SA_ligand.SA_ligand(activeLigand,activeSourcePath,activeResultPath)#,angstromDistance) not needed
+
+##### CALCULATE POCKET SA #######
+sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
+resultPath = "~/heme-binding/results/pocketSA/5A/"
+
+for activeLigand in ligandList:
+    activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
+    activeResultPath = os.path.expanduser(resultPath + activeLigand)
+    calc_SA_pocket.SA_pocket(activeLigand,activeSourcePath,activeResultPath,angstromDistance) #yes needed
+
 
 #rc("pause")
 rc("stop now")

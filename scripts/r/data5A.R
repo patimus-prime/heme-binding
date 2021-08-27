@@ -44,7 +44,7 @@ angstromDistance = 5.0 # used in figure naming but not much else
 # 1. LAUNCH SCRIPTS, ACQUIRE DATA --------------------------
 # Volume ---------
 source("~/heme-binding/scripts/r/volume.R")
-resultPath = "~/heme-binding/results/volume/5A"
+resultPath = "~/heme-binding/results/volume/5A/"
 for(ligand in 1:(length(ligandList)))
 {
   activeLigand = ligandList[[ligand]]
@@ -59,7 +59,7 @@ for(ligand in 1:(length(ligandList)))
 
 # AA Frequency -----------------
 source("~/heme-binding/scripts/r/aa_frequency.R")
-resultPath = "~/heme-binding/results/aa_frequency/"
+resultPath = "~/heme-binding/results/aa_frequency/5A/"
 
 for(ligand in 1:(length(ligandList)))
 {
@@ -71,7 +71,7 @@ for(ligand in 1:(length(ligandList)))
 
 # Ligand surface area ----------------------
 source("~/heme-binding/scripts/r/ligandSA.R")
-resultPath = "~/heme-binding/results/ligandSA/"
+resultPath = "~/heme-binding/results/ligandSA/5A/"
 
 for(ligand in 1:(length(ligandList)))
 {
@@ -83,7 +83,7 @@ for(ligand in 1:(length(ligandList)))
 
 # Pocket Surface Area ------------------------
 source("~/heme-binding/scripts/r/pocketSA.R")
-resultPath = "~/heme-binding/results/pocketSA/"
+resultPath = "~/heme-binding/results/pocketSA/5A/"
 
 for(ligand in 1:(length(ligandList)))
 {
@@ -92,6 +92,11 @@ for(ligand in 1:(length(ligandList)))
   pocketSA_df <- pocketSA_fn(activeLigand,activeResultPath)
   assign(paste(activeLigand,"_pocketSA_df",sep = ""), pocketSA_df)
 }
+
+# FIXME! Maybe not FIXME. Just a note
+# likely don't need to comment out below... just report what you want.
+# slower, but avoid some errors if I comment shit out that shouldn't be
+
 
 # AA angles to ligand PLANE -------------
 source("~/heme-binding/scripts/r/dist_angles.R")
@@ -133,7 +138,7 @@ for(ligand in 1:(length(ligandList)))
 }
 
 # PDBs titles codes ---------------
-source("~/heme-binding/scripts/r/pdb_titles_codes.R") 
+source("~/heme-binding/scripts/r/pdb_titles_codes.R")
 resultPath = "~/heme-binding/pdb_source_data/0_raw_download/"
 for(ligand in 1:(length(ligandList)))
 {
@@ -262,3 +267,15 @@ VERDOHEME_aaFreqDf %>%
   ) -> VERDOHEME_aaFreqDf
 #almost done, have to order it:
 VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
+
+
+# now we have a lot of extra dataframes that already exist, which we will NOT
+# be returning...
+
+# this part I'm just going to hard code, which is sad, but I don't wanna fuck this up.
+# just CTRL+F replace over HEM and do it for all portions of the list
+
+# strucutre will be:
+# list5A$HEM_xxx
+# list5A$VERDOHEME_xxxxx 
+# etc. so just one big ass list :)

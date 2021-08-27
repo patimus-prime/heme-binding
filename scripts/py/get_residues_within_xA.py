@@ -1,4 +1,4 @@
-def fn(activeLigand,activeSourcePath,activeResultPath):
+def fn(activeLigand,activeSourcePath,activeResultPath,angstromDistance):
     import os #necessary to define file path
     import os.path #this is necessary to overcome python not recognizing ~
     import chimera
@@ -58,7 +58,7 @@ def fn(activeLigand,activeSourcePath,activeResultPath):
         rc("del ions")
 
         # GET RESIDUES.
-        rc("sel :"+activeLigand+" zr < "+settings.angstromDistance)#7.0")
+        rc("sel :"+activeLigand+" zr < "+angstromDistance)#7.0")
         for i in chimera.selection.currentResidues():
             print i
 

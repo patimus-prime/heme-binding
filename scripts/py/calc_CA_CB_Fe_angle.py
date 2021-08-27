@@ -1,4 +1,4 @@
-def ccf(activeLigand,activeSourcePath,activeResultPath):
+def ccf(activeLigand,activeSourcePath,activeResultPath,angstromDistance):
     import os #necessary to define file path
     import os.path #this is necessary to overcome python not recognizing ~
     import chimera
@@ -73,7 +73,7 @@ def ccf(activeLigand,activeSourcePath,activeResultPath):
         allResidueString = "ALA,ARG,ASN,ASP,CYS,GLU,GLN,HIS,ILE,LEU,LYS,MET,PHE,PRO,SER,THR,TRP,TYR,VAL"
         FEstr = "FE"
         ########## CHANG HERE ##################
-        rc("sel :"+activeLigand+"@Fe zr < "+settings.angstromDistance)#5.0") # uncrease to 7, maybe, but unlikely coordinaton
+        rc("sel :"+activeLigand+"@Fe zr < "+angstromDistance)#5.0") # uncrease to 7, maybe, but unlikely coordinaton
 
         for currentResidue in chimera.selection.currentResidues():
             #this will loop through all residues within 7A, so

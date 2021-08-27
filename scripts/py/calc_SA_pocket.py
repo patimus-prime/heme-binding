@@ -1,4 +1,4 @@
-def SA_pocket(activeLigand,activeSourcePath,activeResultPath):
+def SA_pocket(activeLigand,activeSourcePath,activeResultPath,angstromDistance):
     import os #necessary to define file path
     import os.path #this is necessary to overcome python not recognizing ~
     import chimera
@@ -67,7 +67,7 @@ def SA_pocket(activeLigand,activeSourcePath,activeResultPath):
         # this is potentially inaccurate, but a more case-specific A-distance study can be conducted in not a Master's
 
 
-        rc("sel :"+activeLigand+" za <"+settings.angstromDistance)#7.0")
+        rc("sel :"+activeLigand+" za <"+angstromDistance)#7.0")
         rc("del :"+activeLigand)#HEM")
         rc("surf sel")
         rc("center")

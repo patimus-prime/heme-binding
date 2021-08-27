@@ -1,4 +1,4 @@
-def calculate_volume(activeLigand,activeSourcePath,activeResultPath):
+def calculate_volume(activeLigand,activeSourcePath,activeResultPath,angstromDistance):
     import os #necessary to define file path
     import os.path #this is necessary to overcome python not recognizing ~
     import chimera
@@ -73,7 +73,7 @@ def calculate_volume(activeLigand,activeSourcePath,activeResultPath):
 
         # OK NOW GO TO GET THE VOLUME.
         # Select the atoms within 7A of heme. Then, of that selection, keep everything but heme.
-        rc("sel :"+activeLigand+" za < "+settings.angstromDistance)#7.0")
+        rc("sel :"+activeLigand+" za < "+angstromDistance)#7.0")
         rc("sel sel &~:"+activeLigand)
         # weird way to specify heme and vol around heme without selecting heme
         interface_surfnet("sel","sel")

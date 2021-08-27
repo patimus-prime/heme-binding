@@ -1,4 +1,4 @@
-def angle_aa_ligand_plane(activeLigand,activeSourcePath,activeResultPath):
+def angle_aa_ligand_plane(activeLigand,activeSourcePath,activeResultPath,angstromDistance):
     import os #necessary to define file path
     import os.path #this is necessary to overcome python not recognizing ~
     import chimera
@@ -69,7 +69,7 @@ def angle_aa_ligand_plane(activeLigand,activeSourcePath,activeResultPath):
         #HEMstr = "HEM"
         allResidueString = "ALA,ARG,ASN,ASP,ASX,CYS,GLU,GLN,GLX,GLY,HIS,ILE,LEU,LYS,MET,PHE,PRO,SER,THR,TRP,TYR,VAL"
 
-        rc("sel :"+activeLigand+" zr < "+settings.angstromDistance)#7.0")
+        rc("sel :"+activeLigand+" zr < "+angstromDistance)#7.0")
 
         for currentResidue in chimera.selection.currentResidues():
             #this will loop through all residues within 7A, so
