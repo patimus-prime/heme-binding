@@ -1,0 +1,12 @@
+#0, chain A: periplasmic HEME-binding protein RHUT
+5GJ3.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 5GJ3.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 756.603
+  Total solvent accessible surface area = 1131.67
+

@@ -1,0 +1,55 @@
+#0, chain A: hemoglobin
+4UZV.pdb.mono.pdb opened
+currently processing residue...PHE 119.A
+stipped to only code...PHE
+stripped to only the number, this is residue 119
+ResID: PHE 119.A
+Angle #0:119.A@CA #0:119.A@CB #0:1157.A@FE: 139.823
+currently processing residue...HIS 106.A
+stipped to only code...HIS
+stripped to only the number, this is residue 106
+ResID: HIS 106.A
+Angle #0:106.A@CA #0:106.A@CB #0:1157.A@FE: 110.243
+currently processing residue...ARG 105.A
+stipped to only code...ARG
+stripped to only the number, this is residue 105
+ResID: ARG 105.A
+Angle #0:105.A@CA #0:105.A@CB #0:1157.A@FE: 101.693
+currently processing residue...LEU 79.A
+stipped to only code...LEU
+stripped to only the number, this is residue 79
+ResID: LEU 79.A
+Angle #0:79.A@CA #0:79.A@CB #0:1157.A@FE: 105.235
+currently processing residue...PHE 67.A
+stipped to only code...PHE
+stripped to only the number, this is residue 67
+ResID: PHE 67.A
+Angle #0:67.A@CA #0:67.A@CB #0:1157.A@FE: 105.736
+currently processing residue...LEU 102.A
+stipped to only code...LEU
+stripped to only the number, this is residue 102
+ResID: LEU 102.A
+Angle #0:102.A@CA #0:102.A@CB #0:1157.A@FE: 85.204
+currently processing residue...PHE 53.A
+stipped to only code...PHE
+stripped to only the number, this is residue 53
+ResID: PHE 53.A
+Angle #0:53.A@CA #0:53.A@CB #0:1157.A@FE: 134.23
+currently processing residue...MET 151.A
+stipped to only code...MET
+stripped to only the number, this is residue 151
+ResID: MET 151.A
+Angle #0:151.A@CA #0:151.A@CB #0:1157.A@FE: 159.162
+currently processing residue...ILE 111.A
+stipped to only code...ILE
+stripped to only the number, this is residue 111
+ResID: ILE 111.A
+Angle #0:111.A@CA #0:111.A@CB #0:1157.A@FE: 140.393
+currently processing residue...ACT 1160.A
+stipped to only code...ACT
+SHIT! Weird molecule, do nothing.
+currently processing residue...HEM 1157.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+

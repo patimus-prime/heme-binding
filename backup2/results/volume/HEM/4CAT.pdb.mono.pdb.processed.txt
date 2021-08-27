@@ -1,0 +1,10 @@
+#0, chain A: catalase
+4CAT.pdb.mono.pdb opened
+900 spheres
+Surfnet for "sel" - "sel":  volume = 2457.8
+Surfnet for "sel" - "sel" split ? 1:  volume = 7.9276
+Surfnet for "sel" - "sel" split ? 3:  volume = 23.675
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.0715
+Surfnet for "sel" - "sel" split ? 2:  volume = 1933.9
+Surfnet for "sel" - "sel" split ? 4:  volume = 490.29
+

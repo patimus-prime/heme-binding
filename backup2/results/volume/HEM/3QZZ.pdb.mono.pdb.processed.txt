@@ -1,0 +1,15 @@
+#0, chain A: methanosarcina acetivorans protoglobin
+3QZZ.pdb.mono.pdb opened
+1420 spheres
+Surfnet for "sel" - "sel":  volume = 1041.4
+Surfnet for "sel" - "sel" split ? 10:  volume = 8.1573
+Surfnet for "sel" - "sel" split ? 5:  volume = 3.1653
+Surfnet for "sel" - "sel" split ? 6:  volume = 12.478
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.2884
+Surfnet for "sel" - "sel" split ? 9:  volume = 2.55
+Surfnet for "sel" - "sel" split ? 8:  volume = 6.3343
+Surfnet for "sel" - "sel" split ? 2:  volume = 3.0309
+Surfnet for "sel" - "sel" split ? 1:  volume = 977.3
+Surfnet for "sel" - "sel" split ? 3:  volume = 22.837
+Surfnet for "sel" - "sel" split ? 7:  volume = 3.31
+

@@ -1,0 +1,41 @@
+The following problems occurred while reading PDB file for 3RTL.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue ASP (428 )
+warning: cannot find LINK/SSBOND residue ASP (428 )
+warning: cannot find LINK/SSBOND residue GLU (354 )
+warning: cannot find LINK/SSBOND residue TYR (440 )
+warning: cannot find LINK/SSBOND residue GLU (354 )
+warning: cannot find LINK/SSBOND residue TYR (440 )
+warning: cannot find LINK/SSBOND residue GLU (354 )
+warning: cannot find LINK/SSBOND residue TYR (440 )
+warning: cannot find LINK/SSBOND residue MET (362 )
+warning: cannot find LINK/SSBOND residue MET (362 )
+warning: cannot find LINK/SSBOND residue MET (362 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue HOH (503 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue HOH (606 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+Center of rotation: 0.1825 0.4775 -0.7595
+#0, chain A: iron-regulated surface determinant protein B
+3RTL.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+GLU 354.A OE2
+HOH 614.A O
+HOH 87.A O
+HOH 229.A O
+HOH 51.A O
+

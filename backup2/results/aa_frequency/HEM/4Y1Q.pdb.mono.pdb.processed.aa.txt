@@ -1,0 +1,37 @@
+#0, chain A: extracellular heme acquisition hemophore hasa
+4Y1Q.pdb.mono.pdb opened
+ILE 57.A
+TYR 55.A
+MET 147.A
+GLY 41.A
+GLY 145.A
+LEU 49.A
+LYS 74.A
+ARG 40.A
+ARG 144.A
+HIS 84.A
+PHE 43.A
+SER 42.A
+VAL 143.A
+SER 142.A
+LYS 141.A
+LYS 38.A
+MET 139.A
+PHE 50.A
+LYS 148.A
+HIS 140.A
+HIS 135.A
+THR 82.A
+HEM 301.A
+PHE 83.A
+MET 131.A
+HIS 81.A
+ILE 30.A
+GLN 80.A
+PRO 79.A
+SER 76.A
+ALA 75.A
+ASP 31.A
+MET 78.A
+PHE 77.A
+

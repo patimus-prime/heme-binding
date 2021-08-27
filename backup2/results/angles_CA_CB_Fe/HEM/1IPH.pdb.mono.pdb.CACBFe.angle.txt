@@ -1,0 +1,61 @@
+The following problems occurred while reading PDB file for 1IPH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (754 )
+warning: cannot find LINK/SSBOND residue HEM (754 )
+warning: cannot find LINK/SSBOND residue HEM (754 )
+#0, chain A: catalase hpii
+1IPH.pdb.mono.pdb opened
+currently processing residue...HEM 754.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...PHE 206.A
+stipped to only code...PHE
+stripped to only the number, this is residue 206
+ResID: PHE 206.A
+Angle #0:206.A@CA #0:206.A@CB #0:754.A@FE: 134.553
+currently processing residue...VAL 199.A
+stipped to only code...VAL
+stripped to only the number, this is residue 199
+ResID: VAL 199.A
+Angle #0:199.A@CA #0:199.A@CB #0:754.A@FE: 124.095
+currently processing residue...VAL 127.A
+stipped to only code...VAL
+stripped to only the number, this is residue 127
+ResID: VAL 127.A
+Angle #0:127.A@CA #0:127.A@CB #0:754.A@FE: 129.551
+currently processing residue...ARG 411.A
+stipped to only code...ARG
+stripped to only the number, this is residue 411
+ResID: ARG 411.A
+Angle #0:411.A@CA #0:411.A@CB #0:754.A@FE: 108.263
+currently processing residue...SER 414.A
+stipped to only code...SER
+stripped to only the number, this is residue 414
+ResID: SER 414.A
+Angle #0:414.A@CA #0:414.A@CB #0:754.A@FE: 141.791
+currently processing residue...TYR 415.A
+stipped to only code...TYR
+stripped to only the number, this is residue 415
+ResID: TYR 415.A
+Angle #0:415.A@CA #0:415.A@CB #0:754.A@FE: 114.271
+currently processing residue...ASN 201.A
+stipped to only code...ASN
+stripped to only the number, this is residue 201
+ResID: ASN 201.A
+Angle #0:201.A@CA #0:201.A@CB #0:754.A@FE: 101.286
+currently processing residue...PRO 393.A
+stipped to only code...PRO
+stripped to only the number, this is residue 393
+ResID: PRO 393.A
+Angle #0:393.A@CA #0:393.A@CB #0:754.A@FE: 126.781
+currently processing residue...HIS 128.A
+stipped to only code...HIS
+stripped to only the number, this is residue 128
+ResID: HIS 128.A
+Angle #0:128.A@CA #0:128.A@CB #0:754.A@FE: 129.218
+currently processing residue...PHE 214.A
+stipped to only code...PHE
+stripped to only the number, this is residue 214
+ResID: PHE 214.A
+Angle #0:214.A@CA #0:214.A@CB #0:754.A@FE: 138.455
+

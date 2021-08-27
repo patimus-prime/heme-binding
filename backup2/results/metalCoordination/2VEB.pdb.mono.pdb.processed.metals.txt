@@ -1,0 +1,12 @@
+Center of rotation: 10.72 49.409 8.1735
+#0, chain A: protoglobin
+2VEB.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+These are the coordinating residues in the file...
+HEM 200.A NB
+HEM 200.A NC
+HEM 200.A NA
+HEM 200.A ND
+HIS 120.A NE2
+OXY 350.A O1
+

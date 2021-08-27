@@ -1,0 +1,115 @@
+The following problems occurred while reading PDB file for 6WZA.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue HIS (73 )
+warning: cannot find LINK/SSBOND residue HIS (77 )
+warning: cannot find LINK/SSBOND residue HIS (73 )
+warning: cannot find LINK/SSBOND residue HIS (77 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+warning: cannot find LINK/SSBOND residue ASP (2 )
+warning: cannot find LINK/SSBOND residue GLU (4 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue GLU (8 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+warning: cannot find LINK/SSBOND residue HEC (201 )
+warning: cannot find LINK/SSBOND residue  NA (202 )
+warning: cannot find LINK/SSBOND residue  NA (202 )
+warning: cannot find LINK/SSBOND residue  NA (202 )
+#0, chain A: cytochrome B-562
+6WZA.pdb.mono.pdb opened
+Atom being analyzed... HEC 201.A CBB ... Distance to Fe... 6.7705753079
+Atom being analyzed... MPD 207.A C2 ... Distance to Fe... 6.76680175563
+Atom being analyzed... MPD 206.A H53 ... Distance to Fe... 4.75896827054
+Atom being analyzed... MPD 206.A H52 ... Distance to Fe... 5.70551619049
+Atom being analyzed... LEU 3.A CG ... Distance to Fe... 6.51732260978
+Atom being analyzed... MPD 206.A H51 ... Distance to Fe... 4.43336102748
+Atom being analyzed... MPD 206.A HO4 ... Distance to Fe... 6.457925828
+Atom being analyzed... MPD 206.A H4 ... Distance to Fe... 6.2749378483
+Atom being analyzed... PHE 65.A CZ ... Distance to Fe... 6.2550825734
+Atom being analyzed... MET 7.A CG ... Distance to Fe... 3.48092516438
+Atom being analyzed... HIS 102.A CE1 ... Distance to Fe... 3.35936541627
+Atom being analyzed... LEU 3.A O ... Distance to Fe... 6.6353333752
+Atom being analyzed... MPD 206.A C5 ... Distance to Fe... 5.12541403206
+Atom being analyzed... HIS 102.A NE2 ... Distance to Fe... 2.32073458198
+Atom being analyzed... MPD 206.A C4 ... Distance to Fe... 6.26043736491
+Atom being analyzed... HIS 102.A CD2 ... Distance to Fe... 3.18985438539
+Atom being analyzed... LEU 10.A CG ... Distance to Fe... 6.54297378873
+Atom being analyzed... LEU 10.A CB ... Distance to Fe... 6.31114743925
+Atom being analyzed... HIS 102.A CB ... Distance to Fe... 5.7533206933
+Atom being analyzed... MET 7.A O ... Distance to Fe... 5.91722080034
+Atom being analyzed... HIS 102.A ND1 ... Distance to Fe... 4.43513697646
+Atom being analyzed... HIS 102.A CA ... Distance to Fe... 6.04474730655
+Atom being analyzed... HIS 102.A N ... Distance to Fe... 6.03841320216
+Atom being analyzed... CYS 101.A SG ... Distance to Fe... 6.28860692046
+Atom being analyzed... CYS 101.A CB ... Distance to Fe... 6.32107221917
+Atom being analyzed... HIS 102.A CG ... Distance to Fe... 4.383044718
+Atom being analyzed... MET 7.A CB ... Distance to Fe... 4.28026073972
+Atom being analyzed... CYS 101.A C ... Distance to Fe... 6.75744137969
+Atom being analyzed... LEU 10.A CD1 ... Distance to Fe... 5.34923723534
+Atom being analyzed... MET 7.A N ... Distance to Fe... 6.10066914363
+Atom being analyzed... HEC 201.A CAD ... Distance to Fe... 5.62514008714
+Atom being analyzed... HEC 201.A CMD ... Distance to Fe... 5.61539838302
+Atom being analyzed... MET 7.A CA ... Distance to Fe... 5.0629314631
+Atom being analyzed... HEC 201.A C4D ... Distance to Fe... 3.01038020855
+Atom being analyzed... HEC 201.A C3D ... Distance to Fe... 4.21923701633
+Atom being analyzed... HEC 201.A C2D ... Distance to Fe... 4.21568381167
+Atom being analyzed... HEC 201.A C1D ... Distance to Fe... 3.00706917114
+Atom being analyzed... HEC 201.A ND ... Distance to Fe... 1.99313496783
+Atom being analyzed... HEC 201.A CBC ... Distance to Fe... 6.74832401415
+Atom being analyzed... HEC 201.A CAC ... Distance to Fe... 5.66964575613
+Atom being analyzed... HEC 201.A CMC ... Distance to Fe... 5.76746157334
+Atom being analyzed... HEC 201.A C4C ... Distance to Fe... 3.04993655672
+Atom being analyzed... HEC 201.A C3C ... Distance to Fe... 4.28259220566
+Atom being analyzed... HEC 201.A C2C ... Distance to Fe... 4.32401271969
+Atom being analyzed... MET 7.A CE ... Distance to Fe... 3.59689435486
+Atom being analyzed... HEC 201.A C1C ... Distance to Fe... 3.13120951072
+Atom being analyzed... HEC 201.A NC ... Distance to Fe... 2.08378069863
+Atom being analyzed... CYS 98.A CA ... Distance to Fe... 5.72551595928
+Atom being analyzed... MET 7.A SD ... Distance to Fe... 2.49264939372
+Atom being analyzed... HEC 201.A CMB ... Distance to Fe... 5.75227885277
+Atom being analyzed... HEC 201.A CAB ... Distance to Fe... 5.76169514987
+Atom being analyzed... HEC 201.A C4B ... Distance to Fe... 3.14623282673
+Atom being analyzed... HEC 201.A C3B ... Distance to Fe... 4.35273029259
+Atom being analyzed... HEC 201.A C2B ... Distance to Fe... 4.35050859096
+Atom being analyzed... MPD 206.A O4 ... Distance to Fe... 6.47155437279
+Atom being analyzed... HEC 201.A C1B ... Distance to Fe... 3.12663557198
+Atom being analyzed... HEC 201.A NB ... Distance to Fe... 2.12829344781
+Atom being analyzed... HEC 201.A CBA ... Distance to Fe... 6.23783367845
+Atom being analyzed... HEC 201.A CAA ... Distance to Fe... 5.61452482406
+Atom being analyzed... HEC 201.A CMA ... Distance to Fe... 5.68346989083
+Atom being analyzed... HEC 201.A C4A ... Distance to Fe... 3.07086193112
+Atom being analyzed... HEC 201.A C3A ... Distance to Fe... 4.26336697928
+Atom being analyzed... HEC 201.A C2A ... Distance to Fe... 4.23484616013
+Atom being analyzed... HEC 201.A C1A ... Distance to Fe... 3.02017168386
+Atom being analyzed... HEC 201.A NA ... Distance to Fe... 2.03973282564
+Atom being analyzed... HEC 201.A CHD ... Distance to Fe... 3.38165876457
+Atom being analyzed... HEC 201.A CHC ... Distance to Fe... 3.51238864592
+Atom being analyzed... MPD 207.A O4 ... Distance to Fe... 6.54993938903
+Atom being analyzed... HEC 201.A CHB ... Distance to Fe... 3.45323645295
+Atom being analyzed... HEC 201.A CHA ... Distance to Fe... 3.37621755816
+Atom being analyzed... HEC 201.A FE ... Distance to Fe... 0.0
+Atom being analyzed... CYS 98.A SG ... Distance to Fe... 6.37154502456
+Atom being analyzed... PHE 65.A CE1 ... Distance to Fe... 6.11349768954
+Atom being analyzed... ARG 106.A CG ... Distance to Fe... 6.66513893329
+Atom being analyzed... ARG 106.A CB ... Distance to Fe... 6.5982252917
+Atom being analyzed... MPD 207.A HO4 ... Distance to Fe... 6.18860315419
+Atom being analyzed... CYS 98.A CB ... Distance to Fe... 5.53774322265
+Atom being analyzed... LEU 3.A CD2 ... Distance to Fe... 6.80969962627
+Atom being analyzed... LEU 3.A CD1 ... Distance to Fe... 6.82834247823
+Atom being analyzed... MPD 207.A H31 ... Distance to Fe... 6.66805946284
+Atom being analyzed... MPD 207.A HM3 ... Distance to Fe... 5.07388086183
+Atom being analyzed... MPD 207.A HM2 ... Distance to Fe... 6.69906478548
+Atom being analyzed... MPD 207.A HM1 ... Distance to Fe... 6.53073939152
+Atom being analyzed... MET 7.A C ... Distance to Fe... 5.96131243939
+Atom being analyzed... CYS 98.A O ... Distance to Fe... 5.32872292393
+Atom being analyzed... MPD 207.A H4 ... Distance to Fe... 5.41550145416
+Atom being analyzed... CYS 98.A C ... Distance to Fe... 5.90798662829
+Atom being analyzed... HEC 201.A CBD ... Distance to Fe... 6.07978766077
+Atom being analyzed... MPD 207.A C4 ... Distance to Fe... 6.43684899621
+Atom being analyzed... MPD 207.A C3 ... Distance to Fe... 6.90938955335
+Atom being analyzed... MPD 207.A CM ... Distance to Fe... 6.15636589231
+Atom being analyzed... MPD 207.A O2 ... Distance to Fe... 6.44836770043
+

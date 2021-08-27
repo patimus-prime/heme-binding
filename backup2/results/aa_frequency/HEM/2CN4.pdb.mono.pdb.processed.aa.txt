@@ -1,0 +1,32 @@
+The following problems occurred while reading PDB file for 2CN4.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (32 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue HEM (1175 )
+#0, chain A: hemophore hasa
+2CN4.pdb.mono.pdb opened
+ALA 56.A
+TYR 55.A
+HOH 2028.A
+HOH 2076.A
+HIS 128.A
+HIS 83.A
+LEU 50.A
+VAL 136.A
+HEM 1175.A
+MET 140.A
+GLY 138.A
+HOH 2057.A
+TYR 137.A
+LEU 85.A
+THR 84.A
+GLN 134.A
+ALA 82.A
+HIS 133.A
+VAL 132.A
+PHE 78.A
+LEU 77.A
+PO4 1176.A
+TYR 75.A
+THR 74.A
+LEU 73.A
+

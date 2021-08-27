@@ -1,0 +1,14 @@
+The following problems occurred while reading PDB file for 4NL5.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (75 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+Center of rotation: -2.5015 -5.283 20.274
+#0, chain A: heme-degrading monooxygenase hmob
+4NL5.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+These are the coordinating residues in the file...
+HEM 201.A NC
+HEM 201.A NA
+HEM 201.A ND
+HEM 201.A NB
+HIS 75.A NE2
+

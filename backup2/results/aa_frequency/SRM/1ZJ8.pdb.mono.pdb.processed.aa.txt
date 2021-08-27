@@ -1,0 +1,79 @@
+The following problems occurred while reading PDB file for 1ZJ8.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (69 )
+warning: cannot find LINK/SSBOND residue CYS (417 )
+warning: cannot find LINK/SSBOND residue CYS (423 )
+warning: cannot find LINK/SSBOND residue CYS (463 )
+warning: cannot find LINK/SSBOND residue CYS (467 )
+#0, chain A: sulfite reductase NIRA
+1ZJ8.pdb.mono.pdb opened
+GLN 71.A
+ARG 72.A
+LEU 425.A
+PRO 377.A
+GLN 379.A
+ASP 126.A
+THR 70.A
+ILE 127.A
+SER 128.A
+GLY 246.A
+ASP 129.A
+SER 418.A
+ASN 223.A
+ARG 130.A
+GLN 131.A
+ASN 132.A
+VAL 133.A
+GLN 134.A
+SER 248.A
+TYR 135.A
+GLY 245.A
+HIS 136.A
+ARG 166.A
+GLY 351.A
+ARG 64.A
+MET 95.A
+CYS 423.A
+VAL 218.A
+PHE 94.A
+HOH 610.A
+THR 249.A
+ARG 290.A
+LEU 247.A
+VAL 98.A
+ALA 350.A
+ARG 99.A
+CYS 463.A
+PHE 293.A
+LYS 292.A
+PHE 422.A
+SRM 557.A
+HOH 602.A
+LYS 207.A
+PRO 464.A
+LYS 209.A
+ALA 287.A
+ARG 286.A
+SF4 556.A
+ALA 160.A
+CYS 161.A
+MET 415.A
+ILE 472.A
+ASN 465.A
+SER 466.A
+ARG 97.A
+CYS 417.A
+CYS 467.A
+ARG 431.A
+ALA 468.A
+ILE 222.A
+GLY 419.A
+ARG 469.A
+VAL 167.A
+ALA 219.A
+ALA 416.A
+LEU 169.A
+ASP 224.A
+TYR 69.A
+LYS 424.A
+ARG 206.A
+

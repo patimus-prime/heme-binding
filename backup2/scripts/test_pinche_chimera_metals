@@ -1,0 +1,81 @@
+Python 2.7.14 (default, Dec 18 2020, 01:07:27)
+[GCC 4.8.2 20140120 (Red Hat 4.8.2-15)] on linux2
+Type "copyright", "credits" or "license()" for more information.
+==== No Subprocess ====
+>>>
+>>> import chimera
+>>> from chimera import dialogs
+>>> from MetalGeom.gui import MetalsDialog
+>>> dlg = dialogs.find(MetalDialog.name, create=True)
+Traceback (most recent call last):
+  File "<pyshell#3>", line 1, in <module>
+    dlg = dialogs.find(MetalDialog.name, create=True)
+NameError: name 'MetalDialog' is not defined
+>>> dlg = dialogs.find(MetalsDialog.name, create=True)
+>>> metals = dlg.metalsMenu.valueMap.keys()
+>>> print metals
+[<_molecule.Atom object at 0x7fa705b5ea08>]
+>>> for i in metals:
+	print i
+
+
+HEM 201.A FE
+>>> mol = metals[0].molecule
+>>> print mol
+#0
+>>> for coordSet in mol.coordSets:
+	mol.activeCoordSet = coordSet
+
+
+Traceback (most recent call last):
+  File "<pyshell#14>", line 2, in <module>
+    mol.activeCoordSet = coordSet
+TypeError: argument 1 should be a (CoordSet|None)
+>>> x = metals[0].atom
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    x = metals[0].atom
+AttributeError: '_molecule.Atom' object has no attribute 'atom'
+>>> print metals[0]
+HEM 201.A FE
+>>> print metals[0].molecule
+#0
+>>> print mol.coordSets
+{0: <_molecule.CoordSet object at 0x7fa7059ae198>}
+>>> stupidcoord = mol.coordSets[0]
+>>> dlg.metalsMenu.invoke(metals[0])
+Center of rotation: 15.1921 9.82689 29.3922
+
+>>> # this centers us on the Fe and highlights the 2 coordinating residues. obviously nothing is printed
+>>> stupendous = dlg.coordinationTable.data
+>>> for j in stupendous:
+	print j
+
+
+HEM 201.A NC
+HEM 201.A NB
+HEM 201.A NA
+HEM 201.A ND
+HIS 149.A NE2
+HIS 72.A NE2
+>>> for j in stupendous:
+	dist = metal.coord().distance(coordinator.coord())
+	rmsd = dlg._avgError[j]
+	geom = dlg._bestGeom[j]
+
+
+Traceback (most recent call last):
+  File "<pyshell#30>", line 2, in <module>
+    dist = metal.coord().distance(coordinator.coord())
+NameError: name 'metal' is not defined
+>>> for j in stupendous:
+	dist = metal[0].coord().distance(coordinator.coord())
+	rmsd = dlg._avgError[j]
+	geom = dlg._bestGeom[j]
+
+
+Traceback (most recent call last):
+  File "<pyshell#32>", line 2, in <module>
+    dist = metal[0].coord().distance(coordinator.coord())
+NameError: name 'metal' is not defined
+>>> 

@@ -1,0 +1,27 @@
+The following problems occurred while reading PDB file for 1ICC.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HOH (203 )
+warning: cannot find LINK/SSBOND residue HOH (203 )
+warning: cannot find LINK/SSBOND residue HOH (202 )
+warning: cannot find LINK/SSBOND residue HOH (202 )
+warning: cannot find LINK/SSBOND residue HOH (204 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+#0, chain A: cytochrome B5 outer mitochondrial membrane isoform
+1ICC.pdb.mono.pdb opened
+1034 spheres
+Surfnet for "sel" - "sel":  volume = 1053.1
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.5488
+Surfnet for "sel" - "sel" split ? 1:  volume = 39.211
+Surfnet for "sel" - "sel" split ? 4:  volume = 9.9342
+Surfnet for "sel" - "sel" split ? 2:  volume = 1000.4
+

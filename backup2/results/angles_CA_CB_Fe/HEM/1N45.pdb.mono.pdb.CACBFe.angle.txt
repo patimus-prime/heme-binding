@@ -1,0 +1,61 @@
+The following problems occurred while reading PDB file for 1N45.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (25 )
+warning: cannot find LINK/SSBOND residue HEM (300 )
+#0, chain A: Ho-1
+1N45.pdb.mono.pdb opened
+currently processing residue...HEM 300.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLY 143.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...SER 142.A
+stipped to only code...SER
+stripped to only the number, this is residue 142
+ResID: SER 142.A
+Angle #0:142.A@CA #0:142.A@CB #0:300.A@FE: 110.066
+currently processing residue...LEU 147.A
+stipped to only code...LEU
+stripped to only the number, this is residue 147
+ResID: LEU 147.A
+Angle #0:147.A@CA #0:147.A@CB #0:300.A@FE: 123.967
+currently processing residue...ASP 140.A
+stipped to only code...ASP
+stripped to only the number, this is residue 140
+ResID: ASP 140.A
+Angle #0:140.A@CA #0:140.A@CB #0:300.A@FE: 35.736
+currently processing residue...GLU 29.A
+stipped to only code...GLU
+stripped to only the number, this is residue 29
+ResID: GLU 29.A
+Angle #0:29.A@CA #0:29.A@CB #0:300.A@FE: 93.8698
+currently processing residue...ALA 28.A
+stipped to only code...ALA
+stripped to only the number, this is residue 28
+ResID: ALA 28.A
+Angle #0:28.A@CA #0:28.A@CB #0:300.A@FE: 133.18
+currently processing residue...GLY 139.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...LEU 138.A
+stipped to only code...LEU
+stripped to only the number, this is residue 138
+ResID: LEU 138.A
+Angle #0:138.A@CA #0:138.A@CB #0:300.A@FE: 68.2659
+currently processing residue...HIS 25.A
+stipped to only code...HIS
+stripped to only the number, this is residue 25
+ResID: HIS 25.A
+Angle #0:25.A@CA #0:25.A@CB #0:300.A@FE: 112.76
+currently processing residue...THR 135.A
+stipped to only code...THR
+stripped to only the number, this is residue 135
+ResID: THR 135.A
+Angle #0:135.A@CA #0:135.A@CB #0:300.A@FE: 60.407
+currently processing residue...PHE 207.A
+stipped to only code...PHE
+stripped to only the number, this is residue 207
+ResID: PHE 207.A
+Angle #0:207.A@CA #0:207.A@CB #0:300.A@FE: 104.617
+

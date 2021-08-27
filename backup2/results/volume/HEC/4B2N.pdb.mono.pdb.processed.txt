@@ -1,0 +1,33 @@
+The following problems occurred while reading PDB file for 4B2N.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (32 )
+warning: cannot find LINK/SSBOND residue CYS (574 )
+warning: cannot find LINK/SSBOND residue HEC (700 )
+warning: cannot find LINK/SSBOND residue HEC (700 )
+warning: cannot find LINK/SSBOND residue HEC (700 )
+warning: cannot find LINK/SSBOND residue HEC (700 )
+warning: cannot find LINK/SSBOND residue HEC (701 )
+warning: cannot find LINK/SSBOND residue HEC (701 )
+warning: cannot find LINK/SSBOND residue HEC (701 )
+#0, chain A: ROXA
+4B2N.pdb.mono.pdb opened
+2960 spheres
+Surfnet for "sel" - "sel":  volume = 2064
+Surfnet for "sel" - "sel" split ? 12:  volume = 59.569
+Surfnet for "sel" - "sel" split ? 4:  volume = 105.39
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.3712
+Surfnet for "sel" - "sel" split ? 11:  volume = 748.63
+Surfnet for "sel" - "sel" split ? 1:  volume = 23.378
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.801
+Surfnet for "sel" - "sel" split ? 18:  volume = 11.171
+Surfnet for "sel" - "sel" split ? 8:  volume = 11.438
+Surfnet for "sel" - "sel" split ? 17:  volume = 6.3131
+Surfnet for "sel" - "sel" split ? 16:  volume = 2.2461
+Surfnet for "sel" - "sel" split ? 15:  volume = 3.468
+Surfnet for "sel" - "sel" split ? 9:  volume = 5.2701
+Surfnet for "sel" - "sel" split ? 7:  volume = 5.0936
+Surfnet for "sel" - "sel" split ? 6:  volume = 33.138
+Surfnet for "sel" - "sel" split ? 14:  volume = 6.3817
+Surfnet for "sel" - "sel" split ? 3:  volume = 934.13
+Surfnet for "sel" - "sel" split ? 13:  volume = 2.3125
+Surfnet for "sel" - "sel" split ? 10:  volume = 100.86
+

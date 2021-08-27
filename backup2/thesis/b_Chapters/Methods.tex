@@ -1,0 +1,96 @@
+\chapter{Methods}
+	% see in Project bookmark folder for multiple columns in your doc, broken up by section:
+	% https://tex.stackexchange.com/questions/17949/twocolumn-part-in-document
+	
+	
+	\section*{Datasets}
+	**Remember to alter how this header's size appears... later.
+	Several datasets were constructed to examine the full ... (this sentence belongs in the intro, I think)
+	The primary dataset of heme-containing proteins (HEM) was composed by finding approximately 30 (specify exact number) of types of proteins that are present in the PDB. This included heme oxygenase, myoglobin, cytochrome P450, among many others.
+	
+	Datasets: HEM, HEC(?), SRM, VER/VEA.
+	
+	Four datasets were constructed for this study.
+	
+	The primary dataset of heme-containing proteins (HEM) was constructed by searching for 30 different classes of proteins; this enabled a dataset of diverse proteins to account for any structural deltas to achieve different chemistry. Additional samples of each class of protein were then added to the dataset, bringing the total to XX. The PDBs were restricted to the following criteria to ensure quality: XX. A full list of proteins and their source organism used in the study is available in table XX.
+	
+	The heme-c dataset followed the same criteria (XX). Similar proteins were searched for as HEM, depending on availability in the PDB/possibility with chemistry. This dataset was anticipated to be fairly similar to HEM, and so only contains XX samples. The full table is available in table XX. 
+	
+	The siroheme dataset (SRM) contains fewer samples than HEM or HEC due to the limited structures available. A search for 'SRM' as of 26 July 2021 produced 52 structures. Not all of these structures contain siroheme. A full-text search for "siroheme" produces many more results, but very few are complex with siroheme. SAH appears commonly used to complex the relevant siroheme proteins, however examination of whether this guarantees acceptable results/estimates of SA/V etc. is outside the scope of this study. No quality criteria were employed, but all proteins are within: XX.
+	
+	The verdoheme dataset (VER/VEA) is very limited. A search for "verdoheme" as of 26 July 2021 produces 12 results. From these results only 4 usable proteins are available. All PDBs fall within XX criteria. 
+	
+	
+	Some PDBs in HEM-dataset contain PDBs where there is a double-molecule representation of heme. If this has not been taken care of ** FIX ME!!!* then write something here.
+	
+	The scripts used in this study were modified depending whether HEM/HEC/SRM/VER/VEA were being processed, and depending on the distance from the ligand of interest being examined (i.e. 5-7A). This is discussed in further detail below MAYBE (FIXME!).
+	
+	\section*{Confirming data quality and details/PDB detail table}
+	All PDBs used in the study were scanned/text-parsed with a python script. This script grabbed a bunch of relevant qualities, like molecule purpose, source organism, resolution (XX FIX), and PDB code to confirm. The data produced are in table X. 
+	%this last line will likely be repeated a bunch so maybe just note it at the begining or below. yeah it's above, last line in previous section.
+	
+	\section*{Preprocessing/before chimera/monomers}
+	Many of the PDBS downloaded are multimeric structures. These were all processed into monomeric structures, by selecting a single chain (chain A) and eliminating all others chains in each PDB. This makes examination easier and more representative when data are aggregated; multimers with more pockets would otherwise skew the data and be the majority represented in the results. 
+	
+	All scripts below were paused while running for visual examination; in rare cases the process of conversion to monomers resulted in errors processing, especially for volume measurements. This is discussed below if this issue was not corrected (FIXME!! XX).
+	
+	\section*{Examination in Chimera/acquiring results}
+	Multiple scripts were written and applied in Chimera. These scripts are divided up based on what results are produced. 
+	
+	In the scripts the choice of 5A or 7A as a distance from the ligand is arbitrarily chosen. This is a distance that generally accounts for all residues able to interact with the ligand. The results are presented in both 5A and 7A sets to account for the variability introduced by these cutoffs. 
+	
+		\subsection*{Volume}
+		
+		Volume of the binding pockets for each ligand are calculated using surfnet. Atoms within 5-7A of the ligand are selected and the pocket volume they form with the ligand is calculated. The surfnet algorithm works by... making triangles along the molecular surface, I guess, until the distance cutoff.
+		
+		Volume of the ligands is also calculated, using a different method; the above method with surfnet is not possible to employ for single molecules outside the pocket. First the ligands were isolated from their pdb. The molecular solvent/surface area was calculated (Accesible and excluded). The surface area and the volume of the resulting... blob, is given by Chimera. This is not the same method as employed by surfnet to acquire volume and represents a limitation in the study (FIXME! IDK IF THIS SHOULD GET DISCUSSED HERE)
+		
+		Images of this operation are available in XX.
+		
+		\subsection*{Surface Area}
+		Surface area of the pockets is calculated using a similar method as above. The atoms within 5-7A of the ligand are selected. The 'surf' operation is applied. This creates a surface... IDK how this algorithm works (FIXME!). Both accessible and excluded solvent area are outputted.
+		
+		Surface area of the ligands is calculated as noted above in Volume section.
+	
+		Images of this operation are available in XX. 
+		
+		\subsection*{Distances}
+		
+		Distances (NOT THE ANGLEDIST stuff) were calculated by selecting all atoms within 5-7A of Fe in the ligands. Each atom's distance to the Fe was calculated by using the distance operation in Chimera (confirm this is precisely what we do), which simply draws a line between the atom and the Fe atom. (FIXME! IN DISCUSSION, DISCUSS WHY METAL COORDINATION IS GARBAGE) 
+		
+		%%%%% FIXME Must redo this part in R and get the relevant data lollollololol
+		The residue each atom is in is reported. Therefore, each
+		
+		\subsection*{Angles Residues - Heme Plane}
+		
+		\subsection*{Angles Fe-CA-CB}
+		
+		\subsection*{Amino Acid Frequency in Pockets}
+		
+		\subsection*{title}
+	
+	
+	\section*{Importing to R and stastical analysis}
+	
+	FIgures wer also made in R. 
+	
+	
+	\begin{itemize}
+		
+		
+		
+		
+		\item Download from PDB using the script they’ve provided at RCSB for many, many files
+		
+		\item Use UCSF Chimera to determine:
+		\begin{itemize}
+			\item Volume
+			\item SA
+			\item Nearby AA
+		\end{itemize}
+		
+		\item R to process raw data and produce tables
+		\item Whatever other software we use to achieve the other results. E.g. E, or availability to solvent etc. likely will stick w Chimera I suspect. Or somehow implement the Python script to open both chimera for the first part of what we’ve done or for something else later. The script we’ve written is a python script, not a chimera script. We’re initializing it with chimera and excluding the necessary code… to initialize chimera and specify chimera to receive the commands
+		
+	\end{itemize}
+

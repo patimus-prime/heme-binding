@@ -1,0 +1,11 @@
+Center of rotation: 12.5105 -28.879 13.563
+#0, chain A: myoglobin
+5CN5.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+These are the coordinating residues in the file...
+HEM 201.A NA
+HEM 201.A NB
+HEM 201.A ND
+HEM 201.A NC
+HIS 93.A NE2
+

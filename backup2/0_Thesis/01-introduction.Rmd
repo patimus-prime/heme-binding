@@ -1,0 +1,66 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+    citation_package: biblatex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+# Introduction {.unnumbered}
+
+```{=tex}
+\adjustmtc
+\markboth{Introduction}{}
+```
+<!-- For PDF output, include these two LaTeX commands after unnumbered chapter headings, otherwise the mini table of contents and the running header will show the previous chapter -->
+<!-- Note, future Pat, that tabs are significant here and will fuck your text -->
+
+Proteins may catalyze reactions, and many require ligands to enable their chemistry. A significant portion of all proteins, approximately 40\%, require a metallic group as a ligand in order to function correctly - these proteins are known as metalloproteins. 
+	
+One of these metallic groups is heme. Heme is a member of the porphyrin family, a group of molecules capable of catalyzing a broad range of reactions. Heme can catalyze many different reactions and is present in many proteins. However, the underlying structural requirements to host heme in a protein are not well understood. [MAY ADD CITATIONS]
+	
+There have only been a handful of studies dedicated to understanding the structure-chemical relationship between heme and the proteins that use heme for their chemistry (these proteins are known as hemoproteins). 
+
+In the most significant previous work, approximately ~125 hemoproteins were studied(@Li2011). Although pdbs were thoroughly examined and the datasets were culled, the sample size of this study is very small compared to the amount of hemoproteins available in the pdb a decade later (~10,000 HEM-containing proteins and xx). The dataset is also limited in that there is a somewhat homogenous group of proteins examined (?). The characteristics examined were limited to: xx. 
+
+It is hypothesized that the following characteristics all have an impact on the binding of heme and function of the hemoprotein: XXXXXXXXX.
+	
+In this study, some of these characteristics were examined. They include: XX. The remainder are thus far not feasible to calculate.
+	
+All of these characteristics have implications in the field of protein engineering or basic research into hemoproteins. Examples of the uses of these results include [SUPER BLOOD STUDY] and [OTHER PROTEIN ENGINEERING STUFF]. Not sure how much we can reference those other papers besides doing that besides in the conclusion.
+	
+Notable results from some of the prior studies include: xx and xx. These characteristics are also examined in this dataset, while some are not due to different study approaches. 
+
+
+
+
+<!-- Below you will find the author's original intro -->
+
+<!-- Welcome to `oxforddown` [@lyngsOxforddown2019], a thesis template for R Markdown that I created when writing [my own PhD thesis](https://ulyngs.github.io/phd-thesis/) at the University of Oxford. -->
+<!-- This template allows you to write in R Markdown, while formatting the PDF output with the beautiful and time-tested [OxThesis LaTeX template](https://github.com/mcmanigle/OxThesis). -->
+<!-- The sample content is partly adapted from [`thesisdown`](https://github.com/ismayc/thesisdown) . -->
+
+<!-- Hopefully, writing your thesis in R Markdown will provide a nicer interface to the OxThesis template if you haven't used TeX or LaTeX before. -->
+<!-- More importantly, *R Markdown* allows you to embed chunks of code within your thesis and generate plots and tables directly from the underlying data, avoiding copy-paste steps. -->
+<!-- This gets you into the habit of doing reproducible research, which will benefit you long-term as a researcher, and also help anyone that is trying to reproduce or build upon your results down the road. -->
+
+<!-- ## Why use it? {.unnumbered} -->
+
+<!-- *R Markdown* creates a simple and straightforward way to interface with the beauty of LaTeX. -->
+<!-- Packages have been written in **R** to work directly with LaTeX to produce nicely formatting tables and paragraphs. -->
+<!-- In addition to creating a user friendly interface to LaTeX, *R Markdown* allows you to read in your data, analyze it and to visualize it using **R**, **Python** or other languages, and provide documentation and commentary on the results of your project.\ -->
+<!-- Further, it allows for results of code output to be passed inline to the commentary of your results. -->
+<!-- You'll see more on this later, focusing on **R**. If you are more into **Python** or something else, you can still use *R Markdown* - see ['Other language engines'](https://bookdown.org/yihui/rmarkdown/language-engines.html) in Yihui Xie's [*R Markdown: The Definitive Guide*](https://bookdown.org/yihui/rmarkdown/language-engines.html). -->
+
+<!-- Using LaTeX together with *Markdown* is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file.  -->
+<!-- While you may never have had problems using Word in the past, your thesis is likely going to be about twice as large and complex as anything you've written before, taxing Word's capabilities. -->
+
+<!-- ## Who should use it? {-} -->
+<!-- Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about reproducibility in research can benefit from using *R Markdown*.  -->
+<!-- If you are working in 'softer' fields, the user-friendly nature of the *Markdown* syntax and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should still make it of great benefit to your thesis project. -->

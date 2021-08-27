@@ -1,0 +1,1138 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.29)  26 AUG 2021 02:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count176
+\U@D=\dimen135
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count177
+)
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language69) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language69) on input line 108.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box45
+\beforetitleunit=\skip49
+\aftertitleunit=\skip50
+\ttl@plus=\dimen136
+\ttl@minus=\dimen137
+\ttl@toksa=\toks16
+\titlewidth=\dimen138
+\titlewidthlast=\dimen139
+\titlewidthfirst=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count178
+\l__pdf_internal_box=\box46
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count179
+\g__xparse_grabber_int=\count180
+\l__xparse_m_args_int=\count181
+\l__xparse_v_nesting_int=\count182
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+)
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count183
+)
+\csq@reset=\count184
+\csq@gtype=\count185
+\csq@glevel=\count186
+\csq@qlevel=\count187
+\csq@maxlvl=\count188
+\csq@tshold=\count189
+\csq@ltx@everypar=\toks18
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Enabling multilingual quotes.
+Package csquotes Info: Redefining alias 'english' -> 'english/american'.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip51
+\f@nch@O@elh=\skip52
+\f@nch@O@erh=\skip53
+\f@nch@O@olh=\skip54
+\f@nch@O@orh=\skip55
+\f@nch@O@elf=\skip56
+\f@nch@O@erf=\skip57
+\f@nch@O@olf=\skip58
+\f@nch@O@orf=\skip59
+)
+Package csquotes Info: Allocating character ".
+
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count190
+\c@@ppsavesec=\count191
+\c@@ppsaveapp=\count192
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen143
+\captionmargin@=\dimen144
+\captionwidth=\dimen145
+\caption@tempdima=\dimen146
+\caption@indent=\dimen147
+\caption@parindent=\dimen148
+\caption@hangindent=\dimen149
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count193
+\c@continuedfloat=\count194
+)
+\c@KVtest=\count195
+\sf@farskip=\skip60
+\sf@captopadj=\dimen150
+\sf@capskip=\skip61
+\sf@nearskip=\skip62
+\c@subfigure=\count196
+\c@subfigure@save=\count197
+\c@lofdepth=\count198
+\c@subtable=\count199
+\c@subtable@save=\count266
+\c@lotdepth=\count267
+\sf@top=\skip63
+\sf@bottom=\skip64
+)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count268
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count269
+\c@listtotal=\count270
+\c@listcount=\count271
+\c@liststart=\count272
+\c@liststop=\count273
+\c@citecount=\count274
+\c@citetotal=\count275
+\c@multicitecount=\count276
+\c@multicitetotal=\count277
+\c@instcount=\count278
+\c@maxnames=\count279
+\c@minnames=\count280
+\c@maxitems=\count281
+\c@minitems=\count282
+\c@citecounter=\count283
+\c@maxcitecounter=\count284
+\c@savedcitecounter=\count285
+\c@uniquelist=\count286
+\c@uniquename=\count287
+\c@refsection=\count288
+\c@refsegment=\count289
+\c@maxextratitle=\count290
+\c@maxextratitleyear=\count291
+\c@maxextraname=\count292
+\c@maxextradate=\count293
+\c@maxextraalpha=\count294
+\c@abbrvpenalty=\count295
+\c@highnamepenalty=\count296
+\c@lownamepenalty=\count297
+\c@maxparens=\count298
+\c@parenlevel=\count299
+\blx@tempcnta=\count300
+\blx@tempcntb=\count301
+\blx@tempcntc=\count302
+\blx@maxsection=\count303
+\blx@maxsegment@0=\count304
+\blx@notetype=\count305
+\blx@parenlevel@text=\count306
+\blx@parenlevel@foot=\count307
+\blx@sectionciteorder@0=\count308
+\blx@entrysetcounter=\count309
+\labelnumberwidth=\skip65
+\labelalphawidth=\skip66
+\biblabelsep=\skip67
+\bibitemsep=\skip68
+\bibnamesep=\skip69
+\bibinitsep=\skip70
+\bibparsep=\skip71
+\bibhang=\skip72
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language85
+\c@mincomprange=\count310
+\c@maxcomprange=\count311
+\c@mincompwidth=\count312
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count313
+\c@savedafterword=\count314
+\c@annotator=\count315
+\c@savedannotator=\count316
+\c@author=\count317
+\c@savedauthor=\count318
+\c@bookauthor=\count319
+\c@savedbookauthor=\count320
+\c@commentator=\count321
+\c@savedcommentator=\count322
+\c@editor=\count323
+\c@savededitor=\count324
+\c@editora=\count325
+\c@savededitora=\count326
+\c@editorb=\count327
+\c@savededitorb=\count328
+\c@editorc=\count329
+\c@savededitorc=\count330
+\c@foreword=\count331
+\c@savedforeword=\count332
+\c@holder=\count333
+\c@savedholder=\count334
+\c@introduction=\count335
+\c@savedintroduction=\count336
+\c@namea=\count337
+\c@savednamea=\count338
+\c@nameb=\count339
+\c@savednameb=\count340
+\c@namec=\count341
+\c@savednamec=\count342
+\c@translator=\count343
+\c@savedtranslator=\count344
+\c@shortauthor=\count345
+\c@savedshortauthor=\count346
+\c@shorteditor=\count347
+\c@savedshorteditor=\count348
+\c@labelname=\count349
+\c@savedlabelname=\count350
+\c@institution=\count351
+\c@savedinstitution=\count352
+\c@lista=\count353
+\c@savedlista=\count354
+\c@listb=\count355
+\c@savedlistb=\count356
+\c@listc=\count357
+\c@savedlistc=\count358
+\c@listd=\count359
+\c@savedlistd=\count360
+\c@liste=\count361
+\c@savedliste=\count362
+\c@listf=\count363
+\c@savedlistf=\count364
+\c@location=\count365
+\c@savedlocation=\count366
+\c@organization=\count367
+\c@savedorganization=\count368
+\c@origlocation=\count369
+\c@savedoriglocation=\count370
+\c@origpublisher=\count371
+\c@savedorigpublisher=\count372
+\c@publisher=\count373
+\c@savedpublisher=\count374
+\c@language=\count375
+\c@savedlanguage=\count376
+\c@origlanguage=\count377
+\c@savedoriglanguage=\count378
+\c@pageref=\count379
+\c@savedpageref=\count380
+\shorthandwidth=\skip73
+\shortjournalwidth=\skip74
+\shortserieswidth=\skip75
+\shorttitlewidth=\skip76
+\shortauthorwidth=\skip77
+\shorteditorwidth=\skip78
+\locallabelnumberwidth=\skip79
+\locallabelalphawidth=\skip80
+\localshorthandwidth=\skip81
+\localshortjournalwidth=\skip82
+\localshortserieswidth=\skip83
+\localshorttitlewidth=\skip84
+\localshortauthorwidth=\skip85
+\localshorteditorwidth=\skip86
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+\c@textcitecount=\count381
+\c@textcitetotal=\count382
+\c@textcitemaxnames=\count383
+\c@biburlbigbreakpenalty=\count384
+\c@biburlbreakpenalty=\count385
+\c@biburlnumpenalty=\count386
+\c@biburlucpenalty=\count387
+\c@biburllcpenalty=\count388
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count389
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count390
+\c@bbx:relatedtotal=\count391
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen151
+\lightrulewidth=\dimen152
+\cmidrulewidth=\dimen153
+\belowrulesep=\dimen154
+\belowbottomsep=\dimen155
+\aboverulesep=\dimen156
+\abovetopsep=\dimen157
+\cmidrulesep=\dimen158
+\cmidrulekern=\dimen159
+\defaultaddspace=\dimen160
+\@cmidla=\count392
+\@cmidlb=\count393
+\@aboverulesep=\dimen161
+\@belowrulesep=\dimen162
+\@thisruleclass=\count394
+\@lastruleclass=\count395
+\@thisrulewidth=\dimen163
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip87
+\LTright=\skip88
+\LTpre=\skip89
+\LTpost=\skip90
+\LTchunksize=\count396
+\LTcapwidth=\dimen164
+\LT@head=\box47
+\LT@firsthead=\box48
+\LT@foot=\box49
+\LT@lastfoot=\box50
+\LT@cols=\count397
+\LT@rows=\count398
+\c@LT@tables=\count399
+\c@LT@chunks=\count400
+\LT@p@ftn=\toks19
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen165
+\ar@mcellbox=\box51
+\extrarowheight=\dimen166
+\NC@list=\toks20
+\extratabsurround=\skip91
+\backup@length=\skip92
+\ar@cellbox=\box52
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip93
+\multirow@cntb=\count401
+\multirow@dima=\skip94
+\bigstrutjot=\dimen167
+)
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen168
+\WF@size=\dimen169
+\c@WF@wrappedlines=\count402
+\WF@box=\box53
+\WF@everypar=\toks21
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count403
+\float@exts=\toks22
+\float@box=\box54
+\@float@everytoks=\toks23
+\@floatcapt=\box55
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+\everycr=\toks24
+\minrowclearance=\skip95
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed) + inter
+mediate FMi
+
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box56
+\sift@deathcycles=\count404
+\@vwid@loff=\dimen170
+\@vwid@roff=\dimen171
+)
+\c@taburow=\count405
+\tabu@nbcols=\count406
+\tabu@cnt=\count407
+\tabu@Xcol=\count408
+\tabu@alloc=\count409
+\tabu@nested=\count410
+\tabu@target=\dimen172
+\tabu@spreadtarget=\dimen173
+\tabu@naturalX=\dimen174
+\tabucolX=\dimen175
+\tabu@Xsum=\dimen176
+\extrarowdepth=\dimen177
+\abovetabulinesep=\dimen178
+\belowtabulinesep=\dimen179
+\tabustrutrule=\dimen180
+\tabu@thebody=\toks25
+\tabu@footnotes=\toks26
+\tabu@box=\box57
+\tabu@arstrutbox=\box58
+\tabu@hleads=\box59
+\tabu@vleads=\box60
+\tabu@cellskip=\skip96
+)
+(/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box61
+)
+(/usr/share/texlive/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks27
+)
+\TPTL@width=\skip97
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box62
+\UL@hyphenbox=\box63
+\UL@skip=\skip98
+\UL@hook=\toks28
+\UL@height=\dimen181
+\UL@pe=\count411
+\UL@pixel=\dimen182
+\ULC@box=\box64
+Package: ulem 2019/11/18
+\ULdepth=\dimen183
+)
+(/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen184
+\c@nlinenum=\count412
+\TeXr@lab=\toks29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count413
+\rotFPtop=\skip99
+\rotFPbot=\skip100
+\rot@float@box=\box65
+\rot@mess@toks=\toks30
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
+Package: subfiles 2020/02/14 v1.6 Multi-file projects (package)
+
+(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2009/03/23  v 5.1
+))
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+ (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count414
+\scratchdimen=\dimen185
+\scratchbox=\box66
+\nofMPsegments=\count415
+\nofMParguments=\count416
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count417
+\MPscratchDim=\dimen186
+\MPnumerator=\count418
+\makeMPintoPDFobject=\count419
+\everyMPtoPDFconversion=\toks32
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package csquotes Info: Making character " active on input line 110.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
+Package biblatex Info: Reference section=0 on input line 110.
+Package biblatex Info: Reference segment=0 on input line 110.
+(./a_Front_Matter/titlepage.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 8.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [1
+
+] [2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 157--162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--162
+
+ []
+
+[3
+
+] [4
+
+] (./main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 20.
+ [5
+
+])
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [6] (./main.lof [7
+
+])
+\tf@lof=\write5
+\openout5 = `main.lof'.
+
+ [8] (./main.lot)
+\tf@lot=\write6
+\openout6 = `main.lot'.
+
+ [9
+
+]
+(./b_Chapters/Introduction.tex
+Chapter 1.
+) (./b_Chapters/Methods.tex [10
+
+]
+Chapter 2.
+[11
+
+]
+Overfull \hbox (101.82133pt too wide) in paragraph at lines 26--27
+[]\OT1/cmr/m/n/12 The scripts used in this study were mod-i-fied de-pend-ing wh
+ether HEM/HEC/SRM/VER/VEA
+ []
+
+[12] [13]) (./b_Chapters/Equipment.tex [14]
+Chapter 3.
+) (./b_Chapters/Results.tex [15
+
+]
+Chapter 4.
+
+LaTeX Warning: Reference `tbl:HEM_AAfreq' on page 16 undefined on input line 2.
+
+
+
+LaTeX Warning: Reference `figs:HEM_aafreq' on page 16 undefined on input line 3
+.
+
+) (./b_Chapters/Discussion.tex [16
+
+]
+Chapter 5.
+) (./b_Chapters/Conclusion.tex [17
+
+]
+Chapter 6.
+) [18
+
+] [19
+
+] [20
+
+
+]
+Appendix A.
+(./figures/figures.tex
+<./figures/7A/HEM_aaFreq.png, id=76, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_aaFreq.png Graphic file (type png)
+<use ./figures/7A/HEM_aaFreq.png>
+Package pdftex.def Info: ./figures/7A/HEM_aaFreq.png  used on input line 8.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_aaFreq.png, id=77, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_aaFreq.png Graphic file (type png)
+<use ./figures/7A/HEC_aaFreq.png>
+Package pdftex.def Info: ./figures/7A/HEC_aaFreq.png  used on input line 15.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_aaFreq.png, id=78, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_aaFreq.png Graphic file (type png)
+<use ./figures/7A/SRM_aaFreq.png>
+Package pdftex.def Info: ./figures/7A/SRM_aaFreq.png  used on input line 21.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_aaFreq.png, id=79, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_aaFreq.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_aaFreq.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_aaFreq.png  used on input line 
+27.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_cab.png, id=80, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_cab.png Graphic file (type png)
+<use ./figures/7A/HEM_cab.png>
+Package pdftex.def Info: ./figures/7A/HEM_cab.png  used on input line 37.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_cab.png, id=81, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_cab.png Graphic file (type png)
+<use ./figures/7A/HEC_cab.png>
+Package pdftex.def Info: ./figures/7A/HEC_cab.png  used on input line 43.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_cab.png, id=82, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_cab.png Graphic file (type png)
+<use ./figures/7A/SRM_cab.png>
+Package pdftex.def Info: ./figures/7A/SRM_cab.png  used on input line 49.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_cab.png, id=83, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_cab.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_cab.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_cab.png  used on input line 55.
+
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_closestRes.png, id=84, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_closestRes.png Graphic file (type png)
+<use ./figures/7A/HEM_closestRes.png>
+Package pdftex.def Info: ./figures/7A/HEM_closestRes.png  used on input line 62
+.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_closestRes.png, id=85, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_closestRes.png Graphic file (type png)
+<use ./figures/7A/HEC_closestRes.png>
+Package pdftex.def Info: ./figures/7A/HEC_closestRes.png  used on input line 68
+.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_closestRes.png, id=86, 233.37187pt x 249.18094pt>
+File: ./figures/7A/SRM_closestRes.png Graphic file (type png)
+<use ./figures/7A/SRM_closestRes.png>
+Package pdftex.def Info: ./figures/7A/SRM_closestRes.png  used on input line 75
+.
+(pdftex.def)             Requested size: 390.0pt x 416.46526pt.
+<./figures/7A/VERDOHEME_closestRes.png, id=87, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_closestRes.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_closestRes.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_closestRes.png  used on input l
+ine 82.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_coordRes.png, id=88, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_coordRes.png Graphic file (type png)
+<use ./figures/7A/HEM_coordRes.png>
+Package pdftex.def Info: ./figures/7A/HEM_coordRes.png  used on input line 90.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_coordRes.png, id=89, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_coordRes.png Graphic file (type png)
+<use ./figures/7A/HEC_coordRes.png>
+Package pdftex.def Info: ./figures/7A/HEC_coordRes.png  used on input line 96.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_coordRes.png, id=90, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_coordRes.png Graphic file (type png)
+<use ./figures/7A/SRM_coordRes.png>
+Package pdftex.def Info: ./figures/7A/SRM_coordRes.png  used on input line 102.
+
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_coordRes.png, id=91, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_coordRes.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_coordRes.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_coordRes.png  used on input lin
+e 108.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_ligandAccSA.png, id=92, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_ligandAccSA.png Graphic file (type png)
+<use ./figures/7A/HEM_ligandAccSA.png>
+Package pdftex.def Info: ./figures/7A/HEM_ligandAccSA.png  used on input line 1
+16.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_ligandAccSA.png, id=93, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_ligandAccSA.png Graphic file (type png)
+<use ./figures/7A/HEC_ligandAccSA.png>
+Package pdftex.def Info: ./figures/7A/HEC_ligandAccSA.png  used on input line 1
+22.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_ligandAccSA.png, id=94, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_ligandAccSA.png Graphic file (type png)
+<use ./figures/7A/SRM_ligandAccSA.png>
+Package pdftex.def Info: ./figures/7A/SRM_ligandAccSA.png  used on input line 1
+28.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_ligandAccSA.png, id=95, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_ligandAccSA.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_ligandAccSA.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_ligandAccSA.png  used on input 
+line 134.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_ligandExcSA.png, id=96, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_ligandExcSA.png Graphic file (type png)
+<use ./figures/7A/HEM_ligandExcSA.png>
+Package pdftex.def Info: ./figures/7A/HEM_ligandExcSA.png  used on input line 1
+41.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_ligandExcSA.png, id=97, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_ligandExcSA.png Graphic file (type png)
+<use ./figures/7A/HEC_ligandExcSA.png>
+Package pdftex.def Info: ./figures/7A/HEC_ligandExcSA.png  used on input line 1
+47.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_ligandExcSA.png, id=98, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_ligandExcSA.png Graphic file (type png)
+<use ./figures/7A/SRM_ligandExcSA.png>
+Package pdftex.def Info: ./figures/7A/SRM_ligandExcSA.png  used on input line 1
+53.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_ligandExcSA.png, id=99, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_ligandExcSA.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_ligandExcSA.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_ligandExcSA.png  used on input 
+line 159.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_planarAngles.png, id=100, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_planarAngles.png Graphic file (type png)
+<use ./figures/7A/HEM_planarAngles.png>
+Package pdftex.def Info: ./figures/7A/HEM_planarAngles.png  used on input line 
+166.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_planarAngles.png, id=101, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_planarAngles.png Graphic file (type png)
+<use ./figures/7A/HEC_planarAngles.png>
+Package pdftex.def Info: ./figures/7A/HEC_planarAngles.png  used on input line 
+172.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_planarAngles.png, id=102, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_planarAngles.png Graphic file (type png)
+<use ./figures/7A/SRM_planarAngles.png>
+Package pdftex.def Info: ./figures/7A/SRM_planarAngles.png  used on input line 
+178.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_planarAngles.png, id=103, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_planarAngles.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_planarAngles.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_planarAngles.png  used on input
+ line 184.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_pocketAccSA.png, id=104, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_pocketAccSA.png Graphic file (type png)
+<use ./figures/7A/HEM_pocketAccSA.png>
+Package pdftex.def Info: ./figures/7A/HEM_pocketAccSA.png  used on input line 1
+91.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_pocketAccSA.png, id=105, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_pocketAccSA.png Graphic file (type png)
+<use ./figures/7A/HEC_pocketAccSA.png>
+Package pdftex.def Info: ./figures/7A/HEC_pocketAccSA.png  used on input line 1
+97.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_pocketAccSA.png, id=106, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_pocketAccSA.png Graphic file (type png)
+<use ./figures/7A/SRM_pocketAccSA.png>
+Package pdftex.def Info: ./figures/7A/SRM_pocketAccSA.png  used on input line 2
+03.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_pocketAccSA.png, id=107, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_pocketAccSA.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_pocketAccSA.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_pocketAccSA.png  used on input 
+line 209.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_pocketExcSA.png, id=108, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_pocketExcSA.png Graphic file (type png)
+<use ./figures/7A/HEM_pocketExcSA.png>
+Package pdftex.def Info: ./figures/7A/HEM_pocketExcSA.png  used on input line 2
+16.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_pocketExcSA.png, id=109, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_pocketExcSA.png Graphic file (type png)
+<use ./figures/7A/HEC_pocketExcSA.png>
+Package pdftex.def Info: ./figures/7A/HEC_pocketExcSA.png  used on input line 2
+22.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_pocketExcSA.png, id=110, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_pocketExcSA.png Graphic file (type png)
+<use ./figures/7A/SRM_pocketExcSA.png>
+Package pdftex.def Info: ./figures/7A/SRM_pocketExcSA.png  used on input line 2
+28.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_pocketExcSA.png, id=111, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_pocketExcSA.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_pocketExcSA.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_pocketExcSA.png  used on input 
+line 234.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEM_volume.png, id=112, 770.88pt x 493.845pt>
+File: ./figures/7A/HEM_volume.png Graphic file (type png)
+<use ./figures/7A/HEM_volume.png>
+Package pdftex.def Info: ./figures/7A/HEM_volume.png  used on input line 241.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/HEC_volume.png, id=113, 770.88pt x 493.845pt>
+File: ./figures/7A/HEC_volume.png Graphic file (type png)
+<use ./figures/7A/HEC_volume.png>
+Package pdftex.def Info: ./figures/7A/HEC_volume.png  used on input line 248.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/SRM_volume.png, id=114, 770.88pt x 493.845pt>
+File: ./figures/7A/SRM_volume.png Graphic file (type png)
+<use ./figures/7A/SRM_volume.png>
+Package pdftex.def Info: ./figures/7A/SRM_volume.png  used on input line 255.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+<./figures/7A/VERDOHEME_volume.png, id=115, 770.88pt x 493.845pt>
+File: ./figures/7A/VERDOHEME_volume.png Graphic file (type png)
+<use ./figures/7A/VERDOHEME_volume.png>
+Package pdftex.def Info: ./figures/7A/VERDOHEME_volume.png  used on input line 
+262.
+(pdftex.def)             Requested size: 390.0pt x 249.8381pt.
+) [21
+
+] [22 <./figures/7A/HEM_aaFreq.png (PNG copy)> <./figures/7A/HEC_aaFreq.png (PN
+G copy)>] [23 <./figures/7A/SRM_aaFreq.png (PNG copy)> <./figures/7A/VERDOHEME_
+aaFreq.png (PNG copy)>] [24 <./figures/7A/HEM_cab.png (PNG copy)> <./figures/7A
+/HEC_cab.png (PNG copy)>] [25 <./figures/7A/SRM_cab.png (PNG copy)> <./figures/
+7A/VERDOHEME_cab.png (PNG copy)>] [26 <./figures/7A/HEM_closestRes.png (PNG cop
+y)> <./figures/7A/HEC_closestRes.png (PNG copy)>]
+[27 <./figures/7A/SRM_closestRes.png (PNG copy)>] [28 <./figures/7A/VERDOHEME_c
+losestRes.png (PNG copy)> <./figures/7A/HEM_coordRes.png (PNG copy)>] [29 <./fi
+gures/7A/HEC_coordRes.png (PNG copy)> <./figures/7A/SRM_coordRes.png (PNG copy)
+>] [30 <./figures/7A/VERDOHEME_coordRes.png (PNG copy)> <./figures/7A/HEM_ligan
+dAccSA.png (PNG copy)>] [31 <./figures/7A/HEC_ligandAccSA.png (PNG copy)> <./fi
+gures/7A/SRM_ligandAccSA.png (PNG copy)>] [32 <./figures/7A/VERDOHEME_ligandAcc
+SA.png (PNG copy)> <./figures/7A/HEM_ligandExcSA.png (PNG copy)>] [33 <./figure
+s/7A/HEC_ligandExcSA.png (PNG copy)> <./figures/7A/SRM_ligandExcSA.png (PNG cop
+y)>] [34 <./figures/7A/VERDOHEME_ligandExcSA.png (PNG copy)> <./figures/7A/HEM_
+planarAngles.png (PNG copy)>] [35 <./figures/7A/HEC_planarAngles.png (PNG copy)
+> <./figures/7A/SRM_planarAngles.png (PNG copy)>] [36 <./figures/7A/VERDOHEME_p
+lanarAngles.png (PNG copy)> <./figures/7A/HEM_pocketAccSA.png (PNG copy)>]
+[37 <./figures/7A/HEC_pocketAccSA.png (PNG copy)> <./figures/7A/SRM_pocketAccSA
+.png (PNG copy)>] [38 <./figures/7A/VERDOHEME_pocketAccSA.png (PNG copy)> <./fi
+gures/7A/HEM_pocketExcSA.png (PNG copy)>] [39 <./figures/7A/HEC_pocketExcSA.png
+ (PNG copy)> <./figures/7A/SRM_pocketExcSA.png (PNG copy)>] [40 <./figures/7A/V
+ERDOHEME_pocketExcSA.png (PNG copy)> <./figures/7A/HEM_volume.png (PNG copy)>]
+[41 <./figures/7A/HEC_volume.png (PNG copy)> <./figures/7A/SRM_volume.png (PNG 
+copy)>] [42 <./figures/7A/VERDOHEME_volume.png (PNG copy)>]
+Appendix B.
+(./tables/tables.tex
+
+LaTeX Warning: Float too large for page by 7027.80412pt on input line 733.
+
+
+LaTeX Warning: Float too large for page by 1384.81401pt on input line 891.
+
+
+LaTeX Warning: Float too large for page by 693.94023pt on input line 996.
+
+
+Overfull \hbox (19.72217pt too wide) in paragraph at lines 1437--1437
+ []\OT1/cmr/m/n/12 Residue[]Number|
+ []
+
+
+Overfull \hbox (4.7126pt too wide) in paragraph at lines 1437--1437
+[]\OT1/cmr/m/n/12 Residue[]Code|  
+ []
+
+
+Overfull \hbox (19.72217pt too wide) in paragraph at lines 1437--1437
+ []\OT1/cmr/m/n/12 Residue[]Number|
+ []
+
+
+Overfull \hbox (4.7126pt too wide) in paragraph at lines 1437--1437
+[]\OT1/cmr/m/n/12 Residue[]Code|  
+ []
+
+[43
+
+] [44] [45] [46] [47] [48] [49] [50] [51]
+
+LaTeX Warning: Float too large for page by 821.68999pt on input line 1552.
+
+
+LaTeX Warning: Float too large for page by 458.81564pt on input line 1641.
+
+
+LaTeX Warning: Float too large for page by 34.3454pt on input line 1916.
+
+
+LaTeX Warning: Float too large for page by 486.57008pt on input line 2075.
+
+[52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]) [66]
+[67] [68] [69] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 15246 strings out of 481239
+ 267552 string characters out of 5920377
+ 1489428 words of memory out of 5000000
+ 30235 multiletter control sequences out of 15000+600000
+ 539372 words of font info for 48 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 50i,12n,51p,1979b,1862s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200
+.pfb>
+Output written on main.pdf (70 pages, 1524146 bytes).
+PDF statistics:
+ 299 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+

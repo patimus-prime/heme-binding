@@ -1,0 +1,73 @@
+The following problems occurred while reading PDB file for 6XNK.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue CYS (17 )
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue LYS (79 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue LYS (79 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue LYS (79 )
+#0, chain A: cytochrome C
+6XNK.pdb.mono.pdb opened
+PHE 10.A
+ILE 9.A
+HOH 303.A
+LYS 55.A
+HEC 201.A
+GLN 42.A
+LYS 53.A
+ASN 52.A
+TYR 67.A
+ALA 51.A
+ALA 50.A
+HOH 307.A
+THR 49.A
+TYR 48.A
+SER 47.A
+TYR 46.A
+LEU 32.A
+ALA 43.A
+GLU 90.A
+GLY 41.A
+THR 40.A
+LYS 39.A
+ARG 38.A
+LYS 87.A
+LYS 86.A
+HOH 301.A
+ILE 85.A
+LEU 35.A
+GLY 84.A
+VAL 83.A
+PHE 82.A
+ASN 31.A
+ILE 81.A
+MET 80.A
+GLY 29.A
+THR 28.A
+LYS 13.A
+THR 78.A
+LYS 27.A
+GLY 77.A
+PRO 76.A
+ILE 75.A
+TYR 74.A
+LYS 79.A
+HOH 316.A
+PRO 71.A
+VAL 20.A
+HOH 313.A
+PRO 30.A
+LEU 68.A
+HIS 18.A
+CYS 17.A
+GLN 16.A
+SER 15.A
+LEU 64.A
+CYS 14.A
+THR 63.A
+MET 12.A
+TRP 59.A
+

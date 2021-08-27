@@ -1,0 +1,17 @@
+The following problems occurred while reading PDB file for 5KPF.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue CYS (17 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue MET (80 )
+#0, chain A: cytochrome C iso-1
+5KPF.pdb.mono.pdb opened
+1346 spheres
+Surfnet for "sel" - "sel":  volume = 841.52
+Surfnet for "sel" - "sel" split ? 5:  volume = 17.572
+Surfnet for "sel" - "sel" split ? 4:  volume = 5.0217
+Surfnet for "sel" - "sel" split ? 1:  volume = 8.0461
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.4539
+Surfnet for "sel" - "sel" split ? 6:  volume = 8.9228
+Surfnet for "sel" - "sel" split ? 2:  volume = 778.79
+Surfnet for "sel" - "sel" split ? 3:  volume = 20.711
+

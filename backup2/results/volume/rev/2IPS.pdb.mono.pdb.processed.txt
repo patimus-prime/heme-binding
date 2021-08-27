@@ -1,0 +1,20 @@
+The following problems occurred while reading PDB file for 2IPS.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+#0, chain A: LPO
+2IPS.pdb.mono.pdb opened
+1684 spheres
+Surfnet for "sel" - "sel":  volume = 1256.9
+Surfnet for "sel" - "sel" split ? 2:  volume = 4.5269
+Surfnet for "sel" - "sel" split ? 1:  volume = 1242.4
+Surfnet for "sel" - "sel" split ? 3:  volume = 7.6642
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.3217
+

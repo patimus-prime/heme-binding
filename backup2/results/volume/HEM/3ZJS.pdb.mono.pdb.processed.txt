@@ -1,0 +1,19 @@
+The following problems occurred while reading PDB file for 3ZJS.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (200 )
+warning: cannot find LINK/SSBOND residue AZI (201 )
+#0, chain A: protoglobin
+3ZJS.pdb.mono.pdb opened
+1300 spheres
+Surfnet for "sel" - "sel":  volume = 878.67
+Surfnet for "sel" - "sel" split ? 8:  volume = 21.714
+Surfnet for "sel" - "sel" split ? 5:  volume = 18.713
+Surfnet for "sel" - "sel" split ? 11:  volume = 17.614
+Surfnet for "sel" - "sel" split ? 2:  volume = 788.74
+Surfnet for "sel" - "sel" split ? 6:  volume = 3.0332
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.7978
+Surfnet for "sel" - "sel" split ? 10:  volume = 4.8079
+Surfnet for "sel" - "sel" split ? 9:  volume = 7.1385
+Surfnet for "sel" - "sel" split ? 3:  volume = 5.6494
+Surfnet for "sel" - "sel" split ? 1:  volume = 2.1207
+Surfnet for "sel" - "sel" split ? 4:  volume = 6.3433
+

@@ -1,0 +1,14 @@
+#0, chain A: HASA
+1DKH.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 1DKH.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  12 connected surface components
+  Total solvent excluded surface area = 7402.34
+    component areas = 6968.74, 60.0321, 55.8807, 48.92, 48.9053, 35.8873, 35.4475, 34.5786, 34.2919, 28.4306, 26.0063, 25.2207
+  Total solvent accessible surface area = 8175.94
+    component areas = 8159.12, 5.00748, 4.30367, 2.63253, 3.03681, 0.41703, 0.524255, 0.584572, 0.206088, 0.0890979, 0.00833539, 0.00188179
+

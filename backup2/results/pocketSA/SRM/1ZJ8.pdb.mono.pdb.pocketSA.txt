@@ -1,0 +1,77 @@
+The following problems occurred while reading PDB file for 1ZJ8.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (69 )
+warning: cannot find LINK/SSBOND residue CYS (417 )
+warning: cannot find LINK/SSBOND residue CYS (423 )
+warning: cannot find LINK/SSBOND residue CYS (463 )
+warning: cannot find LINK/SSBOND residue CYS (467 )
+#0, chain A: sulfite reductase NIRA
+1ZJ8.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: check_SES_edge: weird case, 1 probe full1 and not full2
+WARNING: class_arete2: warning hole in a reentrant face 3188
+RESTART FROM TRI: 1
+radius of atom 605 goes from 1.880000 to 1.980000
+radius of atom 607 goes from 1.880000 to 1.980000
+radius of atom 3285 goes from 1.880000 to 1.980000
+Partial mode
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 0
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: check_SES_edge: weird case, 1 probe full1 and not full2
+WARNING: class_arete2: warning hole in a reentrant face 3188
+RESTART FROM TRI: 1
+radius of atom 605 goes from 1.880000 to 1.980000
+radius of atom 607 goes from 1.880000 to 1.980000
+radius of atom 3285 goes from 1.880000 to 1.980000
+Partial mode
+Calculation of some surface components failed.
+
+A single component of the surface was calculated correctly - the failure occurred for disconnected  additional components such as inside bubbles.  If the desired surface is already shown, there is no need for concern.  However, if it is not shown, see below for possible fixes.
+
+Surface calculation frequently fails for large, multi-chain structures. The calculation may be successful if the chains are treated individually, by using the "split" command before generating a surface.  If splitting is not desired or the structure is already a single chain, changing molecular surface parameters in the Selection Inspector or (before surface creation) the New Surfaces category of Preferences may allow the calculation to succeed. More details are given at
+
+http://www.cgl.ucsf.edu/chimera/docs/UsersGuide/surfprobs.html
+
+Surface 1ZJ8.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 20388.7
+  Total solvent accessible surface area = 21432.8
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 1ZJ8.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 130.736
+  Total solvent accessible surface area = 283.672
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 0
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: check_SES_edge: weird case, 1 probe full1 and not full2
+WARNING: class_arete2: warning hole in a reentrant face 3188
+RESTART FROM TRI: 1
+radius of atom 605 goes from 1.880000 to 1.980000
+radius of atom 607 goes from 1.880000 to 1.980000
+radius of atom 3285 goes from 1.880000 to 1.980000
+Partial mode
+
+Surface 1ZJ8.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 20388.7
+  Total solvent accessible surface area = 21432.8
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 1ZJ8.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 130.736
+  Total solvent accessible surface area = 283.672
+

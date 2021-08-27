@@ -1,0 +1,13 @@
+#0, chain A: heme oxygenase
+5KZL.pdb.mono.pdb opened
+814 spheres
+Surfnet for "sel" - "sel":  volume = 960.83
+Surfnet for "sel" - "sel" split ? 2:  volume = 1.9071
+Surfnet for "sel" - "sel" split ? 1:  volume = 914.22
+Surfnet for "sel" - "sel" split ? 6:  volume = 9.0645
+Surfnet for "sel" - "sel" split ? 7:  volume = 21.022
+Surfnet for "sel" - "sel" split ? 4:  volume = 3.541
+Surfnet for "sel" - "sel" split ? 3:  volume = 5.111
+Surfnet for "sel" - "sel" split ? 8:  volume = 2.4979
+Surfnet for "sel" - "sel" split ? 5:  volume = 3.4589
+

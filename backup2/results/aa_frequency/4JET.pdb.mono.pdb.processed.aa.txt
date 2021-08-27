@@ -1,0 +1,55 @@
+The following problems occurred while reading PDB file for 4JET.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+#0, chain A: secreted hemophore
+4JET.pdb.mono.pdb opened
+MET 131.A
+HOH 363.A
+LYS 148.A
+LYS 74.A
+HOH 388.A
+TYR 75.A
+PHE 77.A
+MET 78.A
+PRO 79.A
+ILE 30.A
+GLN 80.A
+ASP 31.A
+HOH 352.A
+THR 82.A
+PHE 83.A
+HIS 135.A
+HOH 355.A
+HOH 305.A
+HOH 366.A
+MET 139.A
+HIS 140.A
+ARG 40.A
+SER 142.A
+SER 42.A
+PHE 43.A
+GLY 145.A
+HEM 201.A
+MET 147.A
+HOH 315.A
+ASP 39.A
+LEU 49.A
+PHE 50.A
+HIS 81.A
+LYS 141.A
+TYR 55.A
+ALA 56.A
+ARG 144.A
+ILE 57.A
+HOH 327.A
+GLY 41.A
+HOH 370.A
+VAL 143.A
+

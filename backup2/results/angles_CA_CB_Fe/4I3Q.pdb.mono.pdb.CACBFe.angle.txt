@@ -1,0 +1,25 @@
+#0, chain A: cytochrome P450 3A4
+4I3Q.pdb.mono.pdb opened
+currently processing residue...ILE 443.A
+stipped to only code...ILE
+stripped to only the number, this is residue 443
+ResID: ILE 443.A
+Angle #0:443.A@CA #0:443.A@CB #0:601.A@FE: 55.5209
+currently processing residue...GLY 444.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...ALA 305.A
+stipped to only code...ALA
+stripped to only the number, this is residue 305
+ResID: ALA 305.A
+Angle #0:305.A@CA #0:305.A@CB #0:601.A@FE: 115.605
+currently processing residue...HEM 601.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...CYS 442.A
+stipped to only code...CYS
+stripped to only the number, this is residue 442
+ResID: CYS 442.A
+Angle #0:442.A@CA #0:442.A@CB #0:601.A@FE: 103.995
+

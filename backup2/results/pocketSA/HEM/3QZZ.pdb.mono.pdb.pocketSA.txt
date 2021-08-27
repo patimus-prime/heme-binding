@@ -1,0 +1,33 @@
+#0, chain A: methanosarcina acetivorans protoglobin
+3QZZ.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+RESTART FROM TRI: 1
+radius of atom 5 goes from 1.880000 to 1.980000
+radius of atom 700 goes from 1.880000 to 1.980000
+radius of atom 702 goes from 1.640000 to 1.740000
+Partial mode
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 0
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+RESTART FROM TRI: 1
+radius of atom 5 goes from 1.880000 to 1.980000
+radius of atom 700 goes from 1.880000 to 1.980000
+radius of atom 702 goes from 1.640000 to 1.740000
+Partial mode
+Calculation of some surface components failed.
+
+A single component of the surface was calculated correctly - the failure occurred for disconnected  additional components such as inside bubbles.  If the desired surface is already shown, there is no need for concern.  However, if it is not shown, see below for possible fixes.
+
+Surface calculation frequently fails for large, multi-chain structures. The calculation may be successful if the chains are treated individually, by using the "split" command before generating a surface.  If splitting is not desired or the structure is already a single chain, changing molecular surface parameters in the Selection Inspector or (before surface creation) the New Surfaces category of Preferences may allow the calculation to succeed. More details are given at
+
+http://www.cgl.ucsf.edu/chimera/docs/UsersGuide/surfprobs.html
+
+Surface 3QZZ.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 8523.59
+  Total solvent accessible surface area = 9708.28
+

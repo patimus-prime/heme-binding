@@ -1,0 +1,30 @@
+The following problems occurred while reading PDB file for 1ICC.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HOH (203 )
+warning: cannot find LINK/SSBOND residue HOH (203 )
+warning: cannot find LINK/SSBOND residue HOH (202 )
+warning: cannot find LINK/SSBOND residue HOH (202 )
+warning: cannot find LINK/SSBOND residue HOH (204 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+warning: cannot find LINK/SSBOND residue  MG (88 )
+#0, chain A: cytochrome B5 outer mitochondrial membrane isoform
+1ICC.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 1ICC.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 499.585
+  Total solvent accessible surface area = 811.357
+

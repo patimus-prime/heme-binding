@@ -1,0 +1,30 @@
+The following problems occurred while reading PDB file for 6WZA.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue CYS (98 )
+warning: cannot find LINK/SSBOND residue CYS (101 )
+warning: cannot find LINK/SSBOND residue HIS (73 )
+warning: cannot find LINK/SSBOND residue HIS (77 )
+warning: cannot find LINK/SSBOND residue HIS (73 )
+warning: cannot find LINK/SSBOND residue HIS (77 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+warning: cannot find LINK/SSBOND residue ASP (2 )
+warning: cannot find LINK/SSBOND residue GLU (4 )
+warning: cannot find LINK/SSBOND residue MET (7 )
+warning: cannot find LINK/SSBOND residue GLU (8 )
+warning: cannot find LINK/SSBOND residue HIS (102 )
+warning: cannot find LINK/SSBOND residue HEC (201 )
+warning: cannot find LINK/SSBOND residue  NA (202 )
+warning: cannot find LINK/SSBOND residue  NA (202 )
+warning: cannot find LINK/SSBOND residue  NA (202 )
+#0, chain A: cytochrome B-562
+6WZA.pdb.mono.pdb opened
+1532 spheres
+Surfnet for "sel" - "sel":  volume = 1070.2
+Surfnet for "sel" - "sel" split ? 4:  volume = 23.389
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.2113
+Surfnet for "sel" - "sel" split ? 5:  volume = 1.858
+Surfnet for "sel" - "sel" split ? 1:  volume = 1040.1
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.7054
+

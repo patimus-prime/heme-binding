@@ -1,0 +1,10 @@
+#0, chain A: periplasmic HEME-binding protein RHUT
+5GJ3.pdb.mono.pdb opened
+574 spheres
+Surfnet for "sel" - "sel":  volume = 1213.9
+Surfnet for "sel" - "sel" split ? 1:  volume = 1108.2
+Surfnet for "sel" - "sel" split ? 5:  volume = 3.0197
+Surfnet for "sel" - "sel" split ? 2:  volume = 6.3291
+Surfnet for "sel" - "sel" split ? 3:  volume = 93.666
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.6389
+

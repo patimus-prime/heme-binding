@@ -1,0 +1,20 @@
+#0, chain A: hemoglobin
+4UZV.pdb.mono.pdb opened
+currently processing residue...HEM 1157.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...ACT 1160.A
+stipped to only code...ACT
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 106.A
+stipped to only code...HIS
+stripped to only the number, this is residue 106
+ResID: HIS 106.A
+Angle #0:106.A@CA #0:106.A@CB #0:1157.A@FE: 110.243
+currently processing residue...PHE 119.A
+stipped to only code...PHE
+stripped to only the number, this is residue 119
+ResID: PHE 119.A
+Angle #0:119.A@CA #0:119.A@CB #0:1157.A@FE: 139.823
+

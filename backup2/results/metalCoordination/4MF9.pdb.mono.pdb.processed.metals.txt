@@ -1,0 +1,16 @@
+The following problems occurred while reading PDB file for 4MF9.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (209 )
+warning: cannot find LINK/SSBOND residue HEM (400 )
+Center of rotation: 10.372 -33.8585 22.899
+#0, chain A: hemin degrading factor
+4MF9.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+These are the coordinating residues in the file...
+HEM 400.A ND
+HEM 400.A NA
+HEM 400.A NC
+HEM 400.A NB
+HIS 209.A NE2
+HOH 689.A O
+ARG 112.A NE
+

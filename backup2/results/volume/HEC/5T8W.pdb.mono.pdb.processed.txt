@@ -1,0 +1,21 @@
+The following problems occurred while reading PDB file for 5T8W.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (14 )
+warning: cannot find LINK/SSBOND residue CYS (17 )
+warning: cannot find LINK/SSBOND residue HIS (18 )
+warning: cannot find LINK/SSBOND residue MET (80 )
+#0, chain A: cytochrome C
+5T8W.pdb.mono.pdb opened
+1396 spheres
+Surfnet for "sel" - "sel":  volume = 942.35
+Surfnet for "sel" - "sel" split ? 8:  volume = 6.9846
+Surfnet for "sel" - "sel" split ? 7:  volume = 17.885
+Surfnet for "sel" - "sel" split ? 6:  volume = 13.714
+Surfnet for "sel" - "sel" split ? 2:  volume = 3.2912
+Surfnet for "sel" - "sel" split ? 10:  volume = 7.5623
+Surfnet for "sel" - "sel" split ? 11:  volume = 2.2719
+Surfnet for "sel" - "sel" split ? 4:  volume = 7.0328
+Surfnet for "sel" - "sel" split ? 5:  volume = 4.5647
+Surfnet for "sel" - "sel" split ? 9:  volume = 14.718
+Surfnet for "sel" - "sel" split ? 3:  volume = 5.594
+Surfnet for "sel" - "sel" split ? 1:  volume = 858.74
+

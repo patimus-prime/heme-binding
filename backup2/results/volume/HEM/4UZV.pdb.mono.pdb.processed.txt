@@ -1,0 +1,11 @@
+#0, chain A: hemoglobin
+4UZV.pdb.mono.pdb opened
+1110 spheres
+Surfnet for "sel" - "sel":  volume = 1226.8
+Surfnet for "sel" - "sel" split ? 5:  volume = 19.028
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.602
+Surfnet for "sel" - "sel" split ? 6:  volume = 5.4509
+Surfnet for "sel" - "sel" split ? 1:  volume = 1184.1
+Surfnet for "sel" - "sel" split ? 4:  volume = 6.6515
+Surfnet for "sel" - "sel" split ? 3:  volume = 8.8927
+

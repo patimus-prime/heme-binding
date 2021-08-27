@@ -1,0 +1,20 @@
+#0, chain A: nitrite reductase
+3VLZ.pdb.mono.pdb opened
+1692 spheres
+Surfnet for "sel" - "sel":  volume = 1244.2
+Surfnet for "sel" - "sel" split ? 4:  volume = 1123.2
+Surfnet for "sel" - "sel" split ? 15:  volume = 32.678
+Surfnet for "sel" - "sel" split ? 11:  volume = 2.2651
+Surfnet for "sel" - "sel" split ? 10:  volume = 3.6311
+Surfnet for "sel" - "sel" split ? 9:  volume = 3.256
+Surfnet for "sel" - "sel" split ? 12:  volume = 23.288
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.4828
+Surfnet for "sel" - "sel" split ? 13:  volume = 1.6387
+Surfnet for "sel" - "sel" split ? 1:  volume = 3.4
+Surfnet for "sel" - "sel" split ? 8:  volume = 6.8733
+Surfnet for "sel" - "sel" split ? 2:  volume = 15.108
+Surfnet for "sel" - "sel" split ? 7:  volume = 5.6117
+Surfnet for "sel" - "sel" split ? 6:  volume = 6.2509
+Surfnet for "sel" - "sel" split ? 14:  volume = 11.83
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.6212
+

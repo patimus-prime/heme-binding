@@ -1,0 +1,21 @@
+The following problems occurred while reading PDB file for 2J18.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+#0, chain A: chloroperoxidase
+2J18.pdb.mono.pdb opened
+1502 spheres
+Surfnet for "sel" - "sel":  volume = 950.11
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.483
+Surfnet for "sel" - "sel" split ? 6:  volume = 2.0584
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.7992
+Surfnet for "sel" - "sel" split ? 5:  volume = 4.6706
+Surfnet for "sel" - "sel" split ? 1:  volume = 90.225
+Surfnet for "sel" - "sel" split ? 3:  volume = 841.67
+Surfnet for "sel" - "sel" split ? 2:  volume = 3.2773
+Surfnet for "sel" - "sel" split ? 8:  volume = 2.9264
+

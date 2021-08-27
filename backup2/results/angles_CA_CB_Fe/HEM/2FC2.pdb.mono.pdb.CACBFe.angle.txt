@@ -1,0 +1,67 @@
+The following problems occurred while reading PDB file for 2FC2.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (62 )
+warning: cannot find LINK/SSBOND residue  NO (1902 )
+#0, chain A: nitric oxide synthase
+2FC2.pdb.mono.pdb opened
+currently processing residue...SER 59.A
+stipped to only code...SER
+stripped to only the number, this is residue 59
+ResID: SER 59.A
+Angle #0:59.A@CA #0:59.A@CB #0:901.A@FE: 146.056
+currently processing residue...GLY 64.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...HEM 901.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...TRP 234.A
+stipped to only code...TRP
+stripped to only the number, this is residue 234
+ResID: TRP 234.A
+Angle #0:234.A@CA #0:234.A@CB #0:901.A@FE: 40.3488
+currently processing residue...ILE 63.A
+stipped to only code...ILE
+stripped to only the number, this is residue 63
+ResID: ILE 63.A
+Angle #0:63.A@CA #0:63.A@CB #0:901.A@FE: 55.1533
+currently processing residue...GLY 233.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...CYS 62.A
+stipped to only code...CYS
+stripped to only the number, this is residue 62
+ResID: CYS 62.A
+Angle #0:62.A@CA #0:62.A@CB #0:901.A@FE: 112.582
+currently processing residue...NO 1901.A
+stipped to only code...NO 
+SHIT! Weird molecule, do nothing.
+currently processing residue...ARG 61.A
+stipped to only code...ARG
+stripped to only the number, this is residue 61
+ResID: ARG 61.A
+Angle #0:61.A@CA #0:61.A@CB #0:901.A@FE: 76.2562
+currently processing residue...PHE 231.A
+stipped to only code...PHE
+stripped to only the number, this is residue 231
+ResID: PHE 231.A
+Angle #0:231.A@CA #0:231.A@CB #0:901.A@FE: 115.055
+currently processing residue...TRP 56.A
+stipped to only code...TRP
+stripped to only the number, this is residue 56
+ResID: TRP 56.A
+Angle #0:56.A@CA #0:56.A@CB #0:901.A@FE: 91.6643
+currently processing residue...ILE 214.A
+stipped to only code...ILE
+stripped to only the number, this is residue 214
+ResID: ILE 214.A
+Angle #0:214.A@CA #0:214.A@CB #0:901.A@FE: 136.693
+currently processing residue...ARG 65.A
+stipped to only code...ARG
+stripped to only the number, this is residue 65
+ResID: ARG 65.A
+Angle #0:65.A@CA #0:65.A@CB #0:901.A@FE: 70.9521
+currently processing residue...HAR 909.A
+stipped to only code...HAR
+SHIT! Weird molecule, do nothing.
+

@@ -1,0 +1,50 @@
+#0, chain A: NP4
+3MVF.pdb.mono.pdb opened
+currently processing residue...THR 121.A
+stipped to only code...THR
+stripped to only the number, this is residue 121
+ResID: THR 121.A
+Angle #0:121.A@CA #0:121.A@CB #0:185.A@FE: 151.063
+currently processing residue...LEU 57.A
+stipped to only code...LEU
+stripped to only the number, this is residue 57
+ResID: LEU 57.A
+Angle #0:57.A@CA #0:57.A@CB #0:185.A@FE: 143.005
+currently processing residue...PHE 68.A
+stipped to only code...PHE
+stripped to only the number, this is residue 68
+ResID: PHE 68.A
+Angle #0:68.A@CA #0:68.A@CB #0:185.A@FE: 102.861
+currently processing residue...LEU 123.A
+stipped to only code...LEU
+stripped to only the number, this is residue 123
+ResID: LEU 123.A
+Angle #0:123.A@CA #0:123.A@CB #0:185.A@FE: 147.985
+currently processing residue...ALA 42.A
+stipped to only code...ALA
+stripped to only the number, this is residue 42
+ResID: ALA 42.A
+Angle #0:42.A@CA #0:42.A@CB #0:185.A@FE: 147.379
+currently processing residue...TYR 40.A
+stipped to only code...TYR
+stripped to only the number, this is residue 40
+ResID: TYR 40.A
+Angle #0:40.A@CA #0:40.A@CB #0:185.A@FE: 155.456
+currently processing residue...NO2 186.A
+stipped to only code...NO2
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 59.A
+stipped to only code...HIS
+stripped to only the number, this is residue 59
+ResID: HIS 59.A
+Angle #0:59.A@CA #0:59.A@CB #0:185.A@FE: 126.077
+currently processing residue...HEM 185.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...LEU 133.A
+stipped to only code...LEU
+stripped to only the number, this is residue 133
+ResID: LEU 133.A
+Angle #0:133.A@CA #0:133.A@CB #0:185.A@FE: 176.873
+

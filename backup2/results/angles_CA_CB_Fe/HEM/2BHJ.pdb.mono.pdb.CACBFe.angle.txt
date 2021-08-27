@@ -1,0 +1,66 @@
+#0, chain A: nitric oxide synthase
+2BHJ.pdb.mono.pdb opened
+currently processing residue...TRP 366.A
+stipped to only code...TRP
+stripped to only the number, this is residue 366
+ResID: TRP 366.A
+Angle #0:366.A@CA #0:366.A@CB #0:1500.A@FE: 39.6654
+currently processing residue...ILE 195.A
+stipped to only code...ILE
+stripped to only the number, this is residue 195
+ResID: ILE 195.A
+Angle #0:195.A@CA #0:195.A@CB #0:1500.A@FE: 54.9628
+currently processing residue...CYS 194.A
+stipped to only code...CYS
+stripped to only the number, this is residue 194
+ResID: CYS 194.A
+Angle #0:194.A@CA #0:194.A@CB #0:1500.A@FE: 118.05
+currently processing residue...ARG 193.A
+stipped to only code...ARG
+stripped to only the number, this is residue 193
+ResID: ARG 193.A
+Angle #0:193.A@CA #0:193.A@CB #0:1500.A@FE: 61.6429
+currently processing residue...VAL 346.A
+stipped to only code...VAL
+stripped to only the number, this is residue 346
+ResID: VAL 346.A
+Angle #0:346.A@CA #0:346.A@CB #0:1500.A@FE: 125.102
+currently processing residue...ALA 191.A
+stipped to only code...ALA
+stripped to only the number, this is residue 191
+ResID: ALA 191.A
+Angle #0:191.A@CA #0:191.A@CB #0:1500.A@FE: 163.966
+currently processing residue...TRP 188.A
+stipped to only code...TRP
+stripped to only the number, this is residue 188
+ResID: TRP 188.A
+Angle #0:188.A@CA #0:188.A@CB #0:1500.A@FE: 95.4808
+currently processing residue...PHE 363.A
+stipped to only code...PHE
+stripped to only the number, this is residue 363
+ResID: PHE 363.A
+Angle #0:363.A@CA #0:363.A@CB #0:1500.A@FE: 116.495
+currently processing residue...HEM 1500.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLY 365.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...FC1 1499.A
+stipped to only code...FC1
+SHIT! Weird molecule, do nothing.
+currently processing residue...ARG 197.A
+stipped to only code...ARG
+stripped to only the number, this is residue 197
+ResID: ARG 197.A
+Angle #0:197.A@CA #0:197.A@CB #0:1500.A@FE: 67.639
+currently processing residue...ASN 364.A
+stipped to only code...ASN
+stripped to only the number, this is residue 364
+ResID: ASN 364.A
+Angle #0:364.A@CA #0:364.A@CB #0:1500.A@FE: 23.4362
+currently processing residue...GLY 196.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+

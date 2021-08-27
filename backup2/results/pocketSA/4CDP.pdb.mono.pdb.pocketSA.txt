@@ -1,0 +1,47 @@
+#0, chain A: putative heme/hemoglobin transport protein
+4CDP.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: class_arete2: warning hole in a reentrant face 2397
+WARNING: compute_SES_area: ERROR: Solide angle (-0.000042) for contact face 45 too large or too small
+
+Surface 4CDP.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  17 connected surface components
+  Total solvent excluded surface area = 14733.5
+    component areas = 14127.8, 85.7146, 42.8401, 41.5493, 39.9501, 39.8493, 38.9653, 38.622, 35.016, 33.7884, 33.3058, 30.7009, 30.4055, 29.9007, 28.9992, 28.6077, 27.4369
+  Total solvent accessible surface area = 15887.4
+    component areas = 15864, 14.0246, 1.2366, 1.5597, 0.976768, 1.4049, 1.17079, 0.853929, 0.553484, 0.28391, 0.45287, 0.23242, 0.208856, 0.133397, 0.102455, 0.0818489, 0.0442191
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 4CDP.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 53.1702
+  Total solvent accessible surface area = 152.671
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: class_arete2: warning hole in a reentrant face 2397
+WARNING: compute_SES_area: ERROR: Solide angle (-0.000042) for contact face 45 too large or too small
+
+Surface 4CDP.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  17 connected surface components
+  Total solvent excluded surface area = 14733.5
+    component areas = 14127.8, 85.7146, 42.8401, 41.5493, 39.9501, 39.8493, 38.9653, 38.622, 35.016, 33.7884, 33.3058, 30.7009, 30.4055, 29.9007, 28.9992, 28.6077, 27.4369
+  Total solvent accessible surface area = 15887.4
+    component areas = 15864, 14.0246, 1.2366, 1.5597, 0.976768, 1.4049, 1.17079, 0.853929, 0.553484, 0.28391, 0.45287, 0.23242, 0.208856, 0.133397, 0.102455, 0.0818489, 0.0442191
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 4CDP.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 53.1702
+  Total solvent accessible surface area = 152.671
+

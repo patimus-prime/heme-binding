@@ -1,0 +1,64 @@
+The following problems occurred while reading PDB file for 2O6P.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (190 )
+warning: cannot find LINK/SSBOND residue HEM (190 )
+warning: cannot find LINK/SSBOND residue  ZN (1001 )
+warning: cannot find LINK/SSBOND residue  ZN (1001 )
+warning: cannot find LINK/SSBOND residue  ZN (1002 )
+warning: cannot find LINK/SSBOND residue  ZN (1002 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1005 )
+warning: cannot find LINK/SSBOND residue  ZN (1005 )
+warning: cannot find LINK/SSBOND residue  ZN (1005 )
+#0, chain A: iron-regulated surface determinant protein C
+2O6P.pdb.mono.pdb opened
+HOH 1053.A
+ASN 50.A
+ALA 49.A
+ILE 48.A
+SER 47.A
+THR 46.A
+ASP 45.A
+THR 43.A
+HOH 1044.A
+TYR 41.A
+HOH 1043.A
+LYS 40.A
+THR 139.A
+ILE 138.A
+ASN 137.A
+TYR 136.A
+HIS 135.A
+HOH 1036.A
+HIS 134.A
+TYR 132.A
+ILE 121.A
+PHE 130.A
+ILE 78.A
+TRP 77.A
+VAL 125.A
+HIS 74.A
+ASN 73.A
+VAL 38.A
+VAL 72.A
+HOH 1075.A
+HOH 1074.A
+TYR 120.A
+VAL 119.A
+HOH 1071.A
+ILE 117.A
+HOH 1019.A
+HOH 1047.A
+HOH 1017.A
+HOH 1013.A
+HOH 1061.A
+HOH 1059.A
+ASP 118.A
+TYR 39.A
+HEM 190.A
+PHE 53.A
+TYR 52.A
+ASP 51.A
+

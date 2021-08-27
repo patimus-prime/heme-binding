@@ -1,0 +1,25 @@
+The following problems occurred while reading PDB file for 3X15.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue HEC (200 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+#0, chain A: cytochrome C552
+3X15.pdb.mono.pdb opened
+450 spheres
+Surfnet for "sel" - "sel":  volume = 888.26
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.1701
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.7708
+Surfnet for "sel" - "sel" split ? 1:  volume = 39.069
+Surfnet for "sel" - "sel" split ? 3:  volume = 823.59
+Surfnet for "sel" - "sel" split ? 6:  volume = 3.6195
+Surfnet for "sel" - "sel" split ? 5:  volume = 17.04
+

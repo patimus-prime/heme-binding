@@ -1,0 +1,43 @@
+#0, chain A: catalase
+4CAT.pdb.mono.pdb opened
+Atom being analyzed... UNK 61.A N ... Distance to Fe... 6.92530122089
+Atom being analyzed... HEM 660.A FE ... Distance to Fe... 0.0
+Atom being analyzed... HEM 660.A ND ... Distance to Fe... 1.9753546517
+Atom being analyzed... UNK 60.A CA ... Distance to Fe... 6.79122890205
+Atom being analyzed... HEM 660.A NB ... Distance to Fe... 2.07135559477
+Atom being analyzed... HEM 660.A NA ... Distance to Fe... 2.03112013431
+Atom being analyzed... UNK 128.A O ... Distance to Fe... 6.27142711032
+Atom being analyzed... HEM 660.A CBD ... Distance to Fe... 6.23108216925
+Atom being analyzed... HEM 660.A CAD ... Distance to Fe... 5.61567324548
+Atom being analyzed... HEM 660.A CMD ... Distance to Fe... 5.63214781411
+Atom being analyzed... HEM 660.A C4D ... Distance to Fe... 2.98355593211
+Atom being analyzed... HEM 660.A C3D ... Distance to Fe... 4.23070514217
+Atom being analyzed... HEM 660.A C2D ... Distance to Fe... 4.23990955092
+Atom being analyzed... HEM 660.A C1D ... Distance to Fe... 3.00451576797
+Atom being analyzed... HEM 660.A CBC ... Distance to Fe... 6.72261243863
+Atom being analyzed... HEM 660.A CAC ... Distance to Fe... 5.63968447699
+Atom being analyzed... HEM 660.A CMC ... Distance to Fe... 5.68528108364
+Atom being analyzed... HEM 660.A C4C ... Distance to Fe... 3.00096417839
+Atom being analyzed... HEM 660.A C3C ... Distance to Fe... 4.26216107157
+Atom being analyzed... HEM 660.A C2C ... Distance to Fe... 4.28906912978
+Atom being analyzed... HEM 660.A C1C ... Distance to Fe... 3.06234126119
+Atom being analyzed... HEM 660.A CBB ... Distance to Fe... 6.06392331746
+Atom being analyzed... HEM 660.A NC ... Distance to Fe... 2.01706469901
+Atom being analyzed... HEM 660.A CAB ... Distance to Fe... 5.70318095452
+Atom being analyzed... HEM 660.A CMB ... Distance to Fe... 5.72836669566
+Atom being analyzed... HEM 660.A C4B ... Distance to Fe... 3.06817290908
+Atom being analyzed... HEM 660.A C3B ... Distance to Fe... 4.32289995258
+Atom being analyzed... HEM 660.A C2B ... Distance to Fe... 4.3368222237
+Atom being analyzed... HEM 660.A C1B ... Distance to Fe... 3.09978854118
+Atom being analyzed... HEM 660.A CBA ... Distance to Fe... 6.11667009083
+Atom being analyzed... HEM 660.A CAA ... Distance to Fe... 5.67460465583
+Atom being analyzed... HEM 660.A CMA ... Distance to Fe... 5.6803395145
+Atom being analyzed... HEM 660.A C4A ... Distance to Fe... 3.04972211849
+Atom being analyzed... HEM 660.A C3A ... Distance to Fe... 4.29139767442
+Atom being analyzed... HEM 660.A C2A ... Distance to Fe... 4.28852072398
+Atom being analyzed... HEM 660.A C1A ... Distance to Fe... 3.04252148719
+Atom being analyzed... HEM 660.A CHD ... Distance to Fe... 3.36814919503
+Atom being analyzed... HEM 660.A CHC ... Distance to Fe... 3.43482706988
+Atom being analyzed... HEM 660.A CHB ... Distance to Fe... 3.39255154714
+Atom being analyzed... HEM 660.A CHA ... Distance to Fe... 3.37824732665
+

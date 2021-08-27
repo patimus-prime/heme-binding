@@ -1,0 +1,16 @@
+The following problems occurred while reading PDB file for 1SI8.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (337 )
+warning: cannot find LINK/SSBOND residue TYR (337 )
+warning: cannot find LINK/SSBOND residue TYR (337 )
+#0, chain A: catalase/peroxidase
+1SI8.pdb.mono.pdb opened
+1530 spheres
+Surfnet for "sel" - "sel":  volume = 1027.7
+Surfnet for "sel" - "sel" split ? 1:  volume = 965.57
+Surfnet for "sel" - "sel" split ? 3:  volume = 4.0674
+Surfnet for "sel" - "sel" split ? 6:  volume = 3.9461
+Surfnet for "sel" - "sel" split ? 2:  volume = 19.331
+Surfnet for "sel" - "sel" split ? 7:  volume = 3.0923
+Surfnet for "sel" - "sel" split ? 5:  volume = 16.99
+Surfnet for "sel" - "sel" split ? 4:  volume = 14.683
+

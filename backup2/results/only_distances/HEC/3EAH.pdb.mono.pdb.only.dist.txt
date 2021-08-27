@@ -1,0 +1,85 @@
+The following problems occurred while reading PDB file for 3EAH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (63 )
+warning: cannot find LINK/SSBOND residue CYS (68 )
+warning: cannot find LINK/SSBOND residue CYS (150 )
+#0, chain A: nitric oxide synthase, endothelial
+3EAH.pdb.mono.pdb opened
+Atom being analyzed... 327 864.A O1 ... Distance to Fe... 3.86495368666
+Atom being analyzed... 327 864.A C6 ... Distance to Fe... 4.05080905499
+Atom being analyzed... TRP 144.A CZ2 ... Distance to Fe... 5.89709852385
+Atom being analyzed... 327 864.A S1 ... Distance to Fe... 4.61617547327
+Atom being analyzed... TRP 144.A CE2 ... Distance to Fe... 5.51017658519
+Atom being analyzed... TRP 144.A NE1 ... Distance to Fe... 4.66509013846
+Atom being analyzed... TRP 144.A CD2 ... Distance to Fe... 6.41166951737
+Atom being analyzed... TRP 144.A CD1 ... Distance to Fe... 5.1790015447
+Atom being analyzed... TRP 144.A CG ... Distance to Fe... 6.22402683156
+Atom being analyzed... 327 864.A C8 ... Distance to Fe... 6.681579005
+Atom being analyzed... 327 864.A C7 ... Distance to Fe... 4.31762075685
+Atom being analyzed... 327 864.A C3 ... Distance to Fe... 3.69332519554
+Atom being analyzed... 327 864.A C2 ... Distance to Fe... 4.47769427273
+Atom being analyzed... 327 864.A C1 ... Distance to Fe... 5.47193649451
+Atom being analyzed... ARG 153.A CG ... Distance to Fe... 6.3718587555
+Atom being analyzed... 327 864.A N2 ... Distance to Fe... 4.80650559138
+Atom being analyzed... HEC 861.A CBD ... Distance to Fe... 6.01680787461
+Atom being analyzed... HEC 861.A CAD ... Distance to Fe... 5.77956278623
+Atom being analyzed... HEC 861.A CMD ... Distance to Fe... 5.79130814238
+Atom being analyzed... HEC 861.A C4D ... Distance to Fe... 3.07238116125
+Atom being analyzed... HEC 861.A C3D ... Distance to Fe... 4.41266019539
+Atom being analyzed... HEC 861.A C2D ... Distance to Fe... 4.42500768361
+Atom being analyzed... HEC 861.A C1D ... Distance to Fe... 3.14787880961
+Atom being analyzed... HEC 861.A ND ... Distance to Fe... 2.07545320352
+Atom being analyzed... HEC 861.A CAC ... Distance to Fe... 5.75412982127
+Atom being analyzed... HEC 861.A CMC ... Distance to Fe... 5.76162919668
+Atom being analyzed... HEC 861.A C4C ... Distance to Fe... 3.13390379559
+Atom being analyzed... HEC 861.A C3C ... Distance to Fe... 4.38063054822
+Atom being analyzed... HEC 861.A C2C ... Distance to Fe... 4.36515211648
+Atom being analyzed... HEC 861.A C1C ... Distance to Fe... 3.07827614096
+Atom being analyzed... HEC 861.A NC ... Distance to Fe... 2.05164470608
+Atom being analyzed... HEC 861.A CBB ... Distance to Fe... 6.32707942103
+Atom being analyzed... HEC 861.A CAB ... Distance to Fe... 5.71225051972
+Atom being analyzed... PHE 319.A CE1 ... Distance to Fe... 5.98458737091
+Atom being analyzed... HEC 861.A C4B ... Distance to Fe... 3.04960210519
+Atom being analyzed... HEC 861.A C3B ... Distance to Fe... 4.30676166046
+Atom being analyzed... HEC 861.A C2B ... Distance to Fe... 4.31340144202
+Atom being analyzed... ARG 153.A CA ... Distance to Fe... 6.95656502881
+Atom being analyzed... HEC 861.A C1B ... Distance to Fe... 3.04724153949
+Atom being analyzed... HEC 861.A NB ... Distance to Fe... 1.98671084962
+Atom being analyzed... HEC 861.A C1A ... Distance to Fe... 2.94395074687
+Atom being analyzed... HEC 861.A CBA ... Distance to Fe... 6.14146651867
+Atom being analyzed... HEC 861.A CAA ... Distance to Fe... 5.6477097128
+Atom being analyzed... HEC 861.A CMA ... Distance to Fe... 5.67733432167
+Atom being analyzed... CYS 150.A CB ... Distance to Fe... 3.25240234288
+Atom being analyzed... HEC 861.A C4A ... Distance to Fe... 3.03125716494
+Atom being analyzed... HEC 861.A C3A ... Distance to Fe... 4.24932100458
+Atom being analyzed... HEC 861.A C2A ... Distance to Fe... 4.22099064202
+Atom being analyzed... ARG 153.A N ... Distance to Fe... 6.21520281246
+Atom being analyzed... HEC 861.A NA ... Distance to Fe... 1.94752150181
+Atom being analyzed... GLY 152.A O ... Distance to Fe... 6.1706298706
+Atom being analyzed... HEC 861.A CHD ... Distance to Fe... 3.53179543575
+Atom being analyzed... GLY 152.A CA ... Distance to Fe... 5.46746760393
+Atom being analyzed... GLY 152.A N ... Distance to Fe... 5.04242094633
+Atom being analyzed... GLY 152.A C ... Distance to Fe... 5.82833818511
+Atom being analyzed... VAL 151.A CG1 ... Distance to Fe... 6.22648777402
+Atom being analyzed... HEC 861.A CMB ... Distance to Fe... 5.71766333392
+Atom being analyzed... VAL 151.A CB ... Distance to Fe... 6.87372540912
+Atom being analyzed... 327 864.A C5 ... Distance to Fe... 4.48372813627
+Atom being analyzed... VAL 151.A C ... Distance to Fe... 6.13412104543
+Atom being analyzed... VAL 151.A CA ... Distance to Fe... 6.21794966207
+Atom being analyzed... VAL 151.A N ... Distance to Fe... 5.06743465671
+Atom being analyzed... CYS 150.A SG ... Distance to Fe... 2.36678727392
+Atom being analyzed... TRP 322.A O ... Distance to Fe... 6.52925623636
+Atom being analyzed... CYS 150.A O ... Distance to Fe... 5.77037000547
+Atom being analyzed... CYS 150.A C ... Distance to Fe... 4.90898360152
+Atom being analyzed... CYS 150.A CA ... Distance to Fe... 4.04502311489
+Atom being analyzed... CYS 150.A N ... Distance to Fe... 5.14097160078
+Atom being analyzed... PHE 319.A CD1 ... Distance to Fe... 6.29006685179
+Atom being analyzed... 327 864.A C4 ... Distance to Fe... 3.95455193416
+Atom being analyzed... HEC 861.A CHB ... Distance to Fe... 3.44414880631
+Atom being analyzed... ARG 149.A O ... Distance to Fe... 5.76026431685
+Atom being analyzed... ARG 149.A C ... Distance to Fe... 5.84636374168
+Atom being analyzed... HEC 861.A CHA ... Distance to Fe... 3.30501195157
+Atom being analyzed... 327 864.A N1 ... Distance to Fe... 5.21493221432
+Atom being analyzed... HEC 861.A CHC ... Distance to Fe... 3.42350974878
+Atom being analyzed... ALA 147.A CB ... Distance to Fe... 6.2408420105
+Atom being analyzed... HEC 861.A FE ... Distance to Fe... 0.0
+

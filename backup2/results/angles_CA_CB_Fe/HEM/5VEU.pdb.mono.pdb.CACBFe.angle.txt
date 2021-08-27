@@ -1,0 +1,77 @@
+The following problems occurred while reading PDB file for 5VEU.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue HEM (601 )
+warning: cannot find LINK/SSBOND residue HEM (601 )
+#0, chain A: cytochrome P450 3A5
+5VEU.pdb.mono.pdb opened
+currently processing residue...THR 309.A
+stipped to only code...THR
+stripped to only the number, this is residue 309
+ResID: THR 309.A
+Angle #0:309.A@CA #0:309.A@CB #0:601.A@FE: 174.859
+currently processing residue...ASN 440.A
+stipped to only code...ASN
+stripped to only the number, this is residue 440
+ResID: ASN 440.A
+Angle #0:440.A@CA #0:440.A@CB #0:601.A@FE: 56.4019
+currently processing residue...CYS 441.A
+stipped to only code...CYS
+stripped to only the number, this is residue 441
+ResID: CYS 441.A
+Angle #0:441.A@CA #0:441.A@CB #0:601.A@FE: 106.769
+currently processing residue...ILE 442.A
+stipped to only code...ILE
+stripped to only the number, this is residue 442
+ResID: ILE 442.A
+Angle #0:442.A@CA #0:442.A@CB #0:601.A@FE: 59.4678
+currently processing residue...ALA 305.A
+stipped to only code...ALA
+stripped to only the number, this is residue 305
+ResID: ALA 305.A
+Angle #0:305.A@CA #0:305.A@CB #0:601.A@FE: 130.582
+currently processing residue...MET 444.A
+stipped to only code...MET
+stripped to only the number, this is residue 444
+ResID: MET 444.A
+Angle #0:444.A@CA #0:444.A@CB #0:601.A@FE: 65.6856
+currently processing residue...VAL 369.A
+stipped to only code...VAL
+stripped to only the number, this is residue 369
+ResID: VAL 369.A
+Angle #0:369.A@CA #0:369.A@CB #0:601.A@FE: 120.708
+currently processing residue...HEM 601.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...PRO 433.A
+stipped to only code...PRO
+stripped to only the number, this is residue 433
+ResID: PRO 433.A
+Angle #0:433.A@CA #0:433.A@CB #0:601.A@FE: 65.9573
+currently processing residue...PHE 434.A
+stipped to only code...PHE
+stripped to only the number, this is residue 434
+ResID: PHE 434.A
+Angle #0:434.A@CA #0:434.A@CB #0:601.A@FE: 82.5712
+currently processing residue...ALA 447.A
+stipped to only code...ALA
+stripped to only the number, this is residue 447
+ResID: ALA 447.A
+Angle #0:447.A@CA #0:447.A@CB #0:601.A@FE: 149.404
+currently processing residue...GLY 443.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...RIT 602.A
+stipped to only code...RIT
+SHIT! Weird molecule, do nothing.
+

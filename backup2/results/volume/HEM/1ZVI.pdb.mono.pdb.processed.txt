@@ -1,0 +1,9 @@
+#0, chain A: nitric-oxide synthase, brain
+1ZVI.pdb.mono.pdb opened
+1588 spheres
+Surfnet for "sel" - "sel":  volume = 1451.9
+Surfnet for "sel" - "sel" split ? 1:  volume = 6.0256
+Surfnet for "sel" - "sel" split ? 2:  volume = 1435.9
+Surfnet for "sel" - "sel" split ? 3:  volume = 5.6104
+Surfnet for "sel" - "sel" split ? 4:  volume = 4.3638
+

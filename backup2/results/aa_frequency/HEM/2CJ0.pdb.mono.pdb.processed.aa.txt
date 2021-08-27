@@ -1,0 +1,82 @@
+The following problems occurred while reading PDB file for 2CJ0.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+#0, chain A: chloroperoxidase
+2CJ0.pdb.mono.pdb opened
+HOH 2073.A
+THR 73.A
+LEU 72.A
+HEM 1300.A
+ALA 71.A
+HOH 2167.A
+GLU 69.A
+ILE 68.A
+VAL 67.A
+PHE 214.A
+HOH 2253.A
+TRP 213.A
+ALA 64.A
+ASP 113.A
+ILE 63.A
+PHE 135.A
+TRP 210.A
+ARG 111.A
+MET 61.A
+HOH 2331.A
+PHE 109.A
+LYS 112.A
+CYS 29.A
+SER 108.A
+GLY 185.A
+HIS 107.A
+PHE 57.A
+SER 138.A
+ASP 106.A
+HIS 105.A
+GLN 54.A
+HOH 2174.A
+PHE 103.A
+LEU 53.A
+ALA 102.A
+PHE 186.A
+EDO 1322.A
+PRO 30.A
+GLU 99.A
+ALA 98.A
+LEU 97.A
+ASN 127.A
+LEU 96.A
+HOH 2175.A
+ALA 189.A
+LEU 94.A
+LEU 35.A
+LEU 190.A
+LEU 91.A
+SER 110.A
+ILE 187.A
+VAL 182.A
+VAL 237.A
+HOH 2330.A
+NO3 1323.A
+SER 184.A
+GLU 183.A
+EDO 1321.A
+THR 134.A
+GLN 180.A
+ILE 179.A
+ALA 31.A
+HOH 2176.A
+PHE 130.A
+HOH 2329.A
+PRO 28.A
+ALA 27.A
+LEU 32.A
+PHE 76.A
+ALA 75.A
+ASN 74.A
+GLU 104.A
+

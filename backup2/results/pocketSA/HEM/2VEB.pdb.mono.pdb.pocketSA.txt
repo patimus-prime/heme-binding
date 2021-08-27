@@ -1,0 +1,49 @@
+#0, chain A: protoglobin
+2VEB.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: class_arete2: warning hole in a reentrant face 395
+
+Surface 2VEB.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  8 connected surface components
+  Total solvent excluded surface area = 9840.72
+    component areas = 9546.88, 54.7729, 52.7534, 48.5607, 43.0523, 33.6797, 33.2787, 27.7395
+  Total solvent accessible surface area = 10401.8
+    component areas = 10391.6, 2.26535, 3.62782, 2.46301, 1.45731, 0.187166, 0.200453, 0.0445874
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 2VEB.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  4 connected surface components
+  Total solvent excluded surface area = 284.149
+    component areas = 97.8998, 75.4132, 74.8698, 35.9665
+  Total solvent accessible surface area = 730.859
+    component areas = 228.37, 191.075, 190.046, 121.369
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: class_arete2: warning hole in a reentrant face 395
+
+Surface 2VEB.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  8 connected surface components
+  Total solvent excluded surface area = 9840.72
+    component areas = 9546.88, 54.7729, 52.7534, 48.5607, 43.0523, 33.6797, 33.2787, 27.7395
+  Total solvent accessible surface area = 10401.8
+    component areas = 10391.6, 2.26535, 3.62782, 2.46301, 1.45731, 0.187166, 0.200453, 0.0445874
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 2VEB.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  4 connected surface components
+  Total solvent excluded surface area = 284.149
+    component areas = 97.8998, 75.4132, 74.8698, 35.9665
+  Total solvent accessible surface area = 730.859
+    component areas = 228.37, 191.075, 190.046, 121.369
+

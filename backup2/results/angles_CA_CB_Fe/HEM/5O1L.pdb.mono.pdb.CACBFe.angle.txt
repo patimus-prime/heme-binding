@@ -1,0 +1,58 @@
+The following problems occurred while reading PDB file for 5O1L.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (198 )
+warning: cannot find LINK/SSBOND residue HEM (501 )
+#0, chain A: rubber oxygenase
+5O1L.pdb.mono.pdb opened
+currently processing residue...THR 230.A
+stipped to only code...THR
+stripped to only the number, this is residue 230
+ResID: THR 230.A
+Angle #0:230.A@CA #0:230.A@CB #0:501.A@FE: 168.067
+currently processing residue...VAL 152.A
+stipped to only code...VAL
+stripped to only the number, this is residue 152
+ResID: VAL 152.A
+Angle #0:152.A@CA #0:152.A@CB #0:501.A@FE: 97.531
+currently processing residue...GLU 148.A
+stipped to only code...GLU
+stripped to only the number, this is residue 148
+ResID: GLU 148.A
+Angle #0:148.A@CA #0:148.A@CB #0:501.A@FE: 94.5791
+currently processing residue...HIS 198.A
+stipped to only code...HIS
+stripped to only the number, this is residue 198
+ResID: HIS 198.A
+Angle #0:198.A@CA #0:198.A@CB #0:501.A@FE: 102.441
+currently processing residue...ILE 227.A
+stipped to only code...ILE
+stripped to only the number, this is residue 227
+ResID: ILE 227.A
+Angle #0:227.A@CA #0:227.A@CB #0:501.A@FE: 87.0131
+currently processing residue...VAL 197.A
+stipped to only code...VAL
+stripped to only the number, this is residue 197
+ResID: VAL 197.A
+Angle #0:197.A@CA #0:197.A@CB #0:501.A@FE: 117.065
+currently processing residue...LEU 171.A
+stipped to only code...LEU
+stripped to only the number, this is residue 171
+ResID: LEU 171.A
+Angle #0:171.A@CA #0:171.A@CB #0:501.A@FE: 140.517
+currently processing residue...ILE 222.A
+stipped to only code...ILE
+stripped to only the number, this is residue 222
+ResID: ILE 222.A
+Angle #0:222.A@CA #0:222.A@CB #0:501.A@FE: 133.409
+currently processing residue...THR 194.A
+stipped to only code...THR
+stripped to only the number, this is residue 194
+ResID: THR 194.A
+Angle #0:194.A@CA #0:194.A@CB #0:501.A@FE: 104.602
+currently processing residue...HEM 501.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...IMD 502.A
+stipped to only code...IMD
+SHIT! Weird molecule, do nothing.
+

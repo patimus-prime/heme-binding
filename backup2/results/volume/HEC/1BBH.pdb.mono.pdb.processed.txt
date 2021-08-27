@@ -1,0 +1,18 @@
+The following problems occurred while reading PDB file for 1BBH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (121 )
+warning: cannot find LINK/SSBOND residue CYS (124 )
+warning: cannot find LINK/SSBOND residue HIS (125 )
+#0, chain A: cytochrome C'
+1BBH.pdb.mono.pdb opened
+1292 spheres
+Surfnet for "sel" - "sel":  volume = 1061.4
+Surfnet for "sel" - "sel" split ? 7:  volume = 2.0234
+Surfnet for "sel" - "sel" split ? 8:  volume = 10.755
+Surfnet for "sel" - "sel" split ? 4:  volume = 969.51
+Surfnet for "sel" - "sel" split ? 6:  volume = 27.68
+Surfnet for "sel" - "sel" split ? 1:  volume = 28.997
+Surfnet for "sel" - "sel" split ? 9:  volume = 13.919
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.1547
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.8703
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.5186
+

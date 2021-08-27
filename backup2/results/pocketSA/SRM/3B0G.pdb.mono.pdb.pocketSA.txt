@@ -1,0 +1,45 @@
+#0, chain A: NII3
+3B0G.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: class_arete2: warning hole in a reentrant face 835
+
+Surface 3B0G.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  41 connected surface components
+  Total solvent excluded surface area = 21496.8
+    component areas = 19841, 117.091, 107.607, 84.2482, 73.1467, 72.0724, 55.362, 50.7302, 50.698, 49.9626, 48.3069, 42.9054, 42.4011, 40.7684, 38.164, 37.6692, 37.3954, 37.1966, 34.3305, 33.9824, 33.1601, 32.9477, 32.7913, 32.3397, 30.2867, 29.3393, 29.1545, 29.0612, 28.9365, 28.3429, 28.2864, 28.0559, 27.6952, 27.4442, 27.1859, 26.5667, 26.4013, 26.1324, 26.084, 25.9742, 25.6465
+  Total solvent accessible surface area = 21033.9
+    component areas = 20947.2, 21.3599, 12.9819, 12.6041, 9.58298, 6.70759, 2.77403, 3.13553, 1.92288, 1.91424, 2.3956, 1.2568, 1.71613, 1.44844, 0.988715, 0.988766, 0.542349, 0.793179, 0.493361, 0.460671, 0.452672, 0.422163, 0.402675, 0.360933, 0.192651, 0.123673, 0.105372, 0.0748962, 0.101755, 0.0785882, 0.0793387, 0.0536868, 0.0552853, 0.029295, 0.0402164, 0.0166052, 0.0164505, 0.00725119, 0.0136129, 0.0108603, 0.00413008
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3B0G.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 130.838
+  Total solvent accessible surface area = 283.856
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: class_arete2: warning hole in a reentrant face 835
+
+Surface 3B0G.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  41 connected surface components
+  Total solvent excluded surface area = 21496.8
+    component areas = 19841, 117.091, 107.607, 84.2482, 73.1467, 72.0724, 55.362, 50.7302, 50.698, 49.9626, 48.3069, 42.9054, 42.4011, 40.7684, 38.164, 37.6692, 37.3954, 37.1966, 34.3305, 33.9824, 33.1601, 32.9477, 32.7913, 32.3397, 30.2867, 29.3393, 29.1545, 29.0612, 28.9365, 28.3429, 28.2864, 28.0559, 27.6952, 27.4442, 27.1859, 26.5667, 26.4013, 26.1324, 26.084, 25.9742, 25.6465
+  Total solvent accessible surface area = 21033.9
+    component areas = 20947.2, 21.3599, 12.9819, 12.6041, 9.58298, 6.70759, 2.77403, 3.13553, 1.92288, 1.91424, 2.3956, 1.2568, 1.71613, 1.44844, 0.988715, 0.988766, 0.542349, 0.793179, 0.493361, 0.460671, 0.452672, 0.422163, 0.402675, 0.360933, 0.192651, 0.123673, 0.105372, 0.0748962, 0.101755, 0.0785882, 0.0793387, 0.0536868, 0.0552853, 0.029295, 0.0402164, 0.0166052, 0.0164505, 0.00725119, 0.0136129, 0.0108603, 0.00413008
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3B0G.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 130.838
+  Total solvent accessible surface area = 283.856
+

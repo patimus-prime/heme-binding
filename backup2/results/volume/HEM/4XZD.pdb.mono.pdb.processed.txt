@@ -1,0 +1,11 @@
+The following problems occurred while reading PDB file for 4XZD.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue HEM (301 )
+#0, chain A: extracellular heme acquisition hemophore hasa
+4XZD.pdb.mono.pdb opened
+1302 spheres
+Surfnet for "sel" - "sel":  volume = 940
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.7303
+Surfnet for "sel" - "sel" split ? 1:  volume = 932.14
+Surfnet for "sel" - "sel" split ? 2:  volume = 4.128
+

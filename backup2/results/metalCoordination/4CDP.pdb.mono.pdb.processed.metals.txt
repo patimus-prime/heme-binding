@@ -1,0 +1,12 @@
+Center of rotation: 40.8555 -16.6245 2.257
+#0, chain A: putative heme/hemoglobin transport protein
+4CDP.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+These are the coordinating residues in the file...
+HEM 402.A ND
+HEM 402.A NA
+HEM 402.A NC
+HEM 402.A NB
+FMT 401.A O2
+HIS 193.A NE2
+

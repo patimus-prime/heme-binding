@@ -1,0 +1,47 @@
+#0, chain A: cytochrome oxidase subunit II
+1W2L.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 1W2L.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  2 connected surface components
+  Total solvent excluded surface area = 5042.58
+    component areas = 5016.68, 25.9012
+  Total solvent accessible surface area = 5485.5
+    component areas = 5485.49, 0.00984375
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 1W2L.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  2 connected surface components
+  Total solvent excluded surface area = 193.045
+    component areas = 120.848, 72.1964
+  Total solvent accessible surface area = 447.445
+    component areas = 262.518, 184.927
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 1W2L.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  2 connected surface components
+  Total solvent excluded surface area = 5042.58
+    component areas = 5016.68, 25.9012
+  Total solvent accessible surface area = 5485.5
+    component areas = 5485.49, 0.00984375
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 1W2L.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  2 connected surface components
+  Total solvent excluded surface area = 193.045
+    component areas = 120.848, 72.1964
+  Total solvent accessible surface area = 447.445
+    component areas = 262.518, 184.927
+

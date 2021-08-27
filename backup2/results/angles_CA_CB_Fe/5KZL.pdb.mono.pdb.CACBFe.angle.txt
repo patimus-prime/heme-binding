@@ -1,0 +1,15 @@
+#0, chain A: heme oxygenase
+5KZL.pdb.mono.pdb opened
+currently processing residue...HEM 301.A
+stipped to only code...HEM
+Oops! HEM shouldn't be compared to itself, Do nothing.
+SHIT! Weird molecule, do nothing.
+currently processing residue...GLY 128.A
+stipped to only code...GLY
+SHIT! Weird molecule, do nothing.
+currently processing residue...HIS 15.A
+stipped to only code...HIS
+stripped to only the number, this is residue 15
+ResID: HIS 15.A
+Dihedral #0:15.A@CA #0:15.A@CB #0:301.A@FE.A #0:301.A@FE.B: 69.6066
+

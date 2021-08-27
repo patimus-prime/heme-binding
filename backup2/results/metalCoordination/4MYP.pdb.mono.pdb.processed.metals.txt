@@ -1,0 +1,16 @@
+The following problems occurred while reading PDB file for 4MYP.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (277 )
+warning: cannot find LINK/SSBOND residue ASP (294 )
+warning: cannot find LINK/SSBOND residue  ZN (402 )
+warning: cannot find LINK/SSBOND residue TYR (280 )
+Center of rotation: -14.3135 6.4025 10.342
+#0, chain A: P64 protein
+4MYP.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+These are the coordinating residues in the file...
+HEM 401.A NA
+HEM 401.A NB
+HEM 401.A NC
+HEM 401.A ND
+TYR 280.A OH
+

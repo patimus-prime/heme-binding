@@ -1,0 +1,89 @@
+The following problems occurred while reading PDB file for 3RTL.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue ASP (428 )
+warning: cannot find LINK/SSBOND residue ASP (428 )
+warning: cannot find LINK/SSBOND residue GLU (354 )
+warning: cannot find LINK/SSBOND residue TYR (440 )
+warning: cannot find LINK/SSBOND residue GLU (354 )
+warning: cannot find LINK/SSBOND residue TYR (440 )
+warning: cannot find LINK/SSBOND residue GLU (354 )
+warning: cannot find LINK/SSBOND residue TYR (440 )
+warning: cannot find LINK/SSBOND residue MET (362 )
+warning: cannot find LINK/SSBOND residue MET (362 )
+warning: cannot find LINK/SSBOND residue MET (362 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue HOH (503 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue HOH (606 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue  MG (56 )
+warning: cannot find LINK/SSBOND residue  MG (4 )
+warning: cannot find LINK/SSBOND residue  MG (18 )
+warning: cannot find LINK/SSBOND residue  MG (1 )
+#0, chain A: iron-regulated surface determinant protein B
+3RTL.pdb.mono.pdb opened
+HOH 62.A
+HOH 51.A
+GLN 443.A
+THR 365.A
+ASP 364.A
+HOH 87.A
+MET 363.A
+HOH 34.A
+HOH 33.A
+VAL 367.A
+GLU 360.A
+HOH 332.A
+ASN 359.A
+HOH 15.A
+HOH 11.A
+VAL 356.A
+PHE 366.A
+SER 355.A
+GLU 354.A
+ASP 441.A
+TYR 353.A
+VAL 352.A
+HOH 537.A
+HOH 465.A
+ASP 389.A
+HOH 10.A
+HOH 470.A
+VAL 446.A
+HIS 445.A
+TYR 444.A
+TRP 392.A
+TYR 391.A
+GLY 442.A
+ASP 390.A
+HOH 476.A
+TYR 440.A
+ASN 388.A
+THR 387.A
+ILE 438.A
+HOH 229.A
+HOH 480.A
+HOH 2.A
+VAL 435.A
+HIS 434.A
+VAL 433.A
+MET 362.A
+LYS 432.A
+VAL 431.A
+HOH 487.A
+SER 361.A
+HOH 492.A
+HEM 200.A
+HOH 493.A
+HOH 306.A
+HOH 308.A
+

@@ -1,0 +1,12 @@
+Center of rotation: 11.71 1.717 -2.3175
+#0, chain A: cytochrome B5
+1U9U.pdb.mono.pdb opened
+This is the metal(s) present in this file...
+These are the coordinating residues in the file...
+HEM 90.A NC
+HEM 90.A NA
+HEM 90.A ND
+HEM 90.A NB
+HIS 63.A NE2
+HIS 39.A NE2
+
