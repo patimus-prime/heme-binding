@@ -1,0 +1,54 @@
+The following problems occurred while reading PDB file for 2FC2.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (62 )
+warning: cannot find LINK/SSBOND residue  NO (1902 )
+#0, chain A: nitric oxide synthase
+2FC2.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: class_arete2: warning hole in a reentrant face 3340
+WARNING: class_arete2: warning hole in a reentrant face 8761
+
+Surface 2FC2.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  29 connected surface components
+  Total solvent excluded surface area = 18383.5
+    component areas = 17152.8, 134.22, 93.676, 65.5654, 56.6336, 51.4551, 50.1403, 49.6505, 46.7804, 45.9849, 45.5358, 45.1506, 43.752, 40.4319, 36.2023, 35.9448, 35.8093, 35.1426, 34.5986, 33.3116, 31.1527, 30.819, 28.6227, 28.2597, 28.0127, 26.7891, 26.3978, 25.6376, 25.051
+  Total solvent accessible surface area = 18552.1
+    component areas = 18485.6, 19.5098, 15.5769, 6.89993, 4.28797, 1.55984, 2.2848, 2.3885, 2.47624, 1.51385, 1.58958, 1.51404, 2.16062, 1.03213, 0.333201, 0.672022, 0.731611, 0.566941, 0.369281, 0.37608, 0.256026, 0.15663, 0.0912816, 0.0723462, 0.0398588, 0.0247852, 0.0223567, 0.00755868, 0.000954738
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 2FC2.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  3 connected surface components
+  Total solvent excluded surface area = 599.057
+    component areas = 213.631, 200.428, 184.998
+  Total solvent accessible surface area = 1192.06
+    component areas = 425.445, 388.218, 378.4
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: class_arete2: warning hole in a reentrant face 3340
+WARNING: class_arete2: warning hole in a reentrant face 8761
+
+Surface 2FC2.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  29 connected surface components
+  Total solvent excluded surface area = 18383.5
+    component areas = 17152.8, 134.22, 93.676, 65.5654, 56.6336, 51.4551, 50.1403, 49.6505, 46.7804, 45.9849, 45.5358, 45.1506, 43.752, 40.4319, 36.2023, 35.9448, 35.8093, 35.1426, 34.5986, 33.3116, 31.1527, 30.819, 28.6227, 28.2597, 28.0127, 26.7891, 26.3978, 25.6376, 25.051
+  Total solvent accessible surface area = 18552.1
+    component areas = 18485.6, 19.5098, 15.5769, 6.89993, 4.28797, 1.55984, 2.2848, 2.3885, 2.47624, 1.51385, 1.58958, 1.51404, 2.16062, 1.03213, 0.333201, 0.672022, 0.731611, 0.566941, 0.369281, 0.37608, 0.256026, 0.15663, 0.0912816, 0.0723462, 0.0398588, 0.0247852, 0.0223567, 0.00755868, 0.000954738
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 2FC2.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  3 connected surface components
+  Total solvent excluded surface area = 599.057
+    component areas = 213.631, 200.428, 184.998
+  Total solvent accessible surface area = 1192.06
+    component areas = 425.445, 388.218, 378.4
+

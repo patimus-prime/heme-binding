@@ -1,0 +1,23 @@
+The following problems occurred while reading PDB file for 3QZN.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (83 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (83 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (83 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (83 )
+#0, chain A: iron-regulated surface determinant protein A
+3QZN.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3QZN.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  3 connected surface components
+  Total solvent excluded surface area = 664.858
+    component areas = 495.084, 98.0151, 71.7588
+  Total solvent accessible surface area = 1221.33
+    component areas = 805.555, 228.758, 187.018
+

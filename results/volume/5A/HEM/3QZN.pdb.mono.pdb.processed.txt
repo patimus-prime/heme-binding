@@ -1,0 +1,17 @@
+The following problems occurred while reading PDB file for 3QZN.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (83 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (83 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (83 )
+warning: cannot find LINK/SSBOND residue HIS (168 )
+warning: cannot find LINK/SSBOND residue HIS (83 )
+#0, chain A: iron-regulated surface determinant protein A
+3QZN.pdb.mono.pdb opened
+798 spheres
+Surfnet for "sel" - "sel":  volume = 733.07
+Surfnet for "sel" - "sel" split ? 1:  volume = 724.66
+Surfnet for "sel" - "sel" split ? 2:  volume = 8.4144
+The angstrom stuff was 5.0
+

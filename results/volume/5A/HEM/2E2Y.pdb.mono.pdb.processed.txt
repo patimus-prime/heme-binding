@@ -1,0 +1,7 @@
+#0, chain A: myoglobin
+2E2Y.pdb.mono.pdb opened
+1046 spheres
+Surfnet for "sel" - "sel":  volume = 902.38
+Surfnet for "sel" - "sel" split ? 1:  volume = 902.38
+The angstrom stuff was 5.0
+

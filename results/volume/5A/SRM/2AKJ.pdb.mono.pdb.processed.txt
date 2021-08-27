@@ -1,0 +1,8 @@
+#0, chain A: ferredoxin--nitrite reductase, chloroplast
+2AKJ.pdb.mono.pdb opened
+1338 spheres
+Surfnet for "sel" - "sel":  volume = 1547.8
+Surfnet for "sel" - "sel" split ? 2:  volume = 8.0232
+Surfnet for "sel" - "sel" split ? 1:  volume = 1539.8
+The angstrom stuff was 5.0
+

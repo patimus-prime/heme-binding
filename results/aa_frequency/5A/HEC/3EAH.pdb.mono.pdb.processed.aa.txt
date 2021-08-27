@@ -1,0 +1,38 @@
+The following problems occurred while reading PDB file for 3EAH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (63 )
+warning: cannot find LINK/SSBOND residue CYS (68 )
+warning: cannot find LINK/SSBOND residue CYS (150 )
+#0, chain A: nitric oxide synthase, endothelial
+3EAH.pdb.mono.pdb opened
+ARG 149.A
+SER 192.A
+TYR 323.A
+HOH 1888.A
+TRP 322.A
+GLY 321.A
+SER 320.A
+PHE 319.A
+VAL 384.A
+HOH 1880.A
+MET 324.A
+HOH 1878.A
+TRP 413.A
+ILE 194.A
+LEU 159.A
+GLN 155.A
+MET 305.A
+GLY 152.A
+MPD 1866.A
+ALA 147.A
+CYS 150.A
+HOH 1912.A
+327 864.A
+HOH 1870.A
+HEC 861.A
+TRP 144.A
+ALA 140.A
+TYR 441.A
+PHE 439.A
+VAL 151.A
+GLU 327.A
+

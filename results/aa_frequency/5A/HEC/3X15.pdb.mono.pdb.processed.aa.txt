@@ -1,0 +1,46 @@
+The following problems occurred while reading PDB file for 3X15.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue HIS (16 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue MET (61 )
+warning: cannot find LINK/SSBOND residue HEC (200 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (12 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+warning: cannot find LINK/SSBOND residue CYS (15 )
+#0, chain A: cytochrome C552
+3X15.pdb.mono.pdb opened
+PHE 7.A
+ASP 54.A
+VAL 53.A
+ILE 52.A
+ALA 51.A
+PRO 50.A
+HOH 304.A
+LEU 45.A
+PHE 44.A
+LEU 41.A
+HOH 419.A
+HOH 319.A
+TYR 34.A
+ILE 30.A
+HOH 357.A
+PRO 25.A
+GLY 24.A
+HEC 200.A
+VAL 23.A
+HOH 350.A
+HOH 399.A
+HOH 345.A
+HIS 16.A
+CYS 15.A
+SER 14.A
+CYS 12.A
+GLY 11.A
+LYS 10.A
+HOH 306.A
+

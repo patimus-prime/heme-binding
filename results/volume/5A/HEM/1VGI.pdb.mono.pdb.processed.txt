@@ -1,0 +1,7 @@
+#0, chain A: heme oxygenase 1
+1VGI.pdb.mono.pdb opened
+838 spheres
+Surfnet for "sel" - "sel":  volume = 820.91
+Surfnet for "sel" - "sel" split ? 1:  volume = 820.91
+The angstrom stuff was 5.0
+

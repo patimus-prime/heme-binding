@@ -1,0 +1,8 @@
+#0, chain A: HEMS
+2J0P.pdb.mono.pdb opened
+682 spheres
+Surfnet for "sel" - "sel":  volume = 940.47
+Surfnet for "sel" - "sel" split ? 1:  volume = 925.87
+Surfnet for "sel" - "sel" split ? 2:  volume = 14.603
+The angstrom stuff was 5.0
+

@@ -1,0 +1,8 @@
+#0, chain A: nitrite reductase
+3VLZ.pdb.mono.pdb opened
+1518 spheres
+Surfnet for "sel" - "sel":  volume = 1165.6
+Surfnet for "sel" - "sel" split ? 1:  volume = 3.2485
+Surfnet for "sel" - "sel" split ? 2:  volume = 1162.3
+The angstrom stuff was 5.0
+

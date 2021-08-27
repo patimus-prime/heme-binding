@@ -1,0 +1,12 @@
+The following problems occurred while reading PDB file for 2CN4.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (32 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue HEM (1175 )
+#0, chain A: hemophore hasa
+2CN4.pdb.mono.pdb opened
+578 spheres
+Surfnet for "sel" - "sel":  volume = 479.3
+Surfnet for "sel" - "sel" split ? 2:  volume = 39.486
+Surfnet for "sel" - "sel" split ? 1:  volume = 439.81
+The angstrom stuff was 5.0
+

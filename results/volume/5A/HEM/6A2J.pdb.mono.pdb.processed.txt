@@ -1,0 +1,8 @@
+#0, chain A: heme A synthase
+6A2J.pdb.mono.pdb opened
+1206 spheres
+Surfnet for "sel" - "sel":  volume = 859.83
+Surfnet for "sel" - "sel" split ? 1:  volume = 857.55
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.2832
+The angstrom stuff was 5.0
+

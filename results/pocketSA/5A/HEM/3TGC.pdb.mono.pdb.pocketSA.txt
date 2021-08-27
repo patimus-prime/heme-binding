@@ -1,0 +1,43 @@
+#0, chain A: NP4
+3TGC.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3TGC.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  13 connected surface components
+  Total solvent excluded surface area = 8712.77
+    component areas = 8299.38, 76.961, 48.6206, 35.5415, 31.8334, 31.6172, 30.9795, 29.128, 26.726, 26.1429, 25.8451, 25.0415, 24.9469
+  Total solvent accessible surface area = 9181.94
+    component areas = 9170.5, 7.22204, 2.65367, 0.687776, 0.28282, 0.223363, 0.202483, 0.116617, 0.0318733, 0.0146149, 0.00735862, 0.000571809, 0.000255315
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3TGC.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 53.0972
+  Total solvent accessible surface area = 153.486
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3TGC.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  13 connected surface components
+  Total solvent excluded surface area = 8712.77
+    component areas = 8299.38, 76.961, 48.6206, 35.5415, 31.8334, 31.6172, 30.9795, 29.128, 26.726, 26.1429, 25.8451, 25.0415, 24.9469
+  Total solvent accessible surface area = 9181.94
+    component areas = 9170.5, 7.22204, 2.65367, 0.687776, 0.28282, 0.223363, 0.202483, 0.116617, 0.0318733, 0.0146149, 0.00735862, 0.000571809, 0.000255315
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3TGC.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 53.0972
+  Total solvent accessible surface area = 153.486
+

@@ -1,0 +1,34 @@
+The following problems occurred while reading PDB file for 4B8N.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+#0, chain A: cytochrome B5-host origin
+4B8N.pdb.mono.pdb opened
+PHE 58.A
+ILE 55.A
+ALA 54.A
+GLY 50.A
+PRO 49.A
+HIS 48.A
+HOH 2049.A
+PHE 44.A
+HEM 201.A
+LEU 41.A
+HOH 2028.A
+ILE 34.A
+LEU 80.A
+TYR 79.A
+VAL 32.A
+LEU 76.A
+VAL 75.A
+HOH 2018.A
+PRO 72.A
+HIS 71.A
+LEU 70.A
+PHE 67.A
+GLU 66.A
+ALA 63.A
+

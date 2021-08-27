@@ -1,0 +1,40 @@
+The following problems occurred while reading PDB file for 1BBH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (121 )
+warning: cannot find LINK/SSBOND residue CYS (124 )
+warning: cannot find LINK/SSBOND residue HIS (125 )
+#0, chain A: cytochrome C'
+1BBH.pdb.mono.pdb opened
+HOH 409.A
+GLY 20.A
+HOH 405.A
+TYR 128.A
+GLU 17.A
+TYR 16.A
+GLN 13.A
+HIS 125.A
+ALA 88.A
+ARG 12.A
+ALA 120.A
+VAL 84.A
+THR 71.A
+HOH 768.A
+ARG 129.A
+ARG 72.A
+TYR 58.A
+PHE 77.A
+ILE 46.A
+HOH 407.A
+HOH 769.A
+HOH 770.A
+CYS 124.A
+MET 19.A
+MET 23.A
+ILE 87.A
+VAL 117.A
+PHE 91.A
+LYS 70.A
+CYS 121.A
+HEC 132.A
+ILE 9.A
+VAL 73.A
+

@@ -1,0 +1,30 @@
+#0, chain A: catalase
+4CAT.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+WARNING: classe_aretes2: No cycle in face 6958 (nba=-2)
+
+WARNING: classe_aretes2: No cycle in face 6965 (nba=-3)
+
+WARNING: class_arete2: warning hole in a reentrant face 7024
+WARNING: class_arete2: warning hole in a reentrant face 9738
+WARNING: class_arete2: warning hole in a reentrant face 11937
+WARNING: class_arete2: warning hole in a reentrant face 12599
+WARNING: classe_aretes2: No cycle in face 20384 (nba=6)
+
+RESTART FROM SES: 1
+radius of atom 1785 goes from 1.880000 to 1.980000
+radius of atom 1787 goes from 1.420000 to 1.520000
+radius of atom 1917 goes from 1.880000 to 1.980000
+radius of atom 1920 goes from 1.640000 to 1.740000
+Partial mode
+WARNING: class_arete2: warning hole in a reentrant face 20518
+WARNING: compute_SES_area: ERROR: Solide angle (-0.698120) for contact face 20847 too large or too small
+
+Surface 4CAT.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 28372.4
+  Total solvent accessible surface area = 36788.3
+

@@ -1,0 +1,9 @@
+#0, chain A: hemopexin
+1QHU.pdb.mono.pdb opened
+870 spheres
+Surfnet for "sel" - "sel":  volume = 1217.9
+Surfnet for "sel" - "sel" split ? 1:  volume = 1214
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.0794
+Surfnet for "sel" - "sel" split ? 2:  volume = 1.785
+The angstrom stuff was 5.0
+

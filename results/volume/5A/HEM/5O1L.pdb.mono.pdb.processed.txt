@@ -1,0 +1,10 @@
+The following problems occurred while reading PDB file for 5O1L.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (198 )
+warning: cannot find LINK/SSBOND residue HEM (501 )
+#0, chain A: rubber oxygenase
+5O1L.pdb.mono.pdb opened
+996 spheres
+Surfnet for "sel" - "sel":  volume = 1111.8
+Surfnet for "sel" - "sel" split ? 1:  volume = 1111.8
+The angstrom stuff was 5.0
+

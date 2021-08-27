@@ -1,0 +1,11 @@
+The following problems occurred while reading PDB file for 3EAH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (63 )
+warning: cannot find LINK/SSBOND residue CYS (68 )
+warning: cannot find LINK/SSBOND residue CYS (150 )
+#0, chain A: nitric oxide synthase, endothelial
+3EAH.pdb.mono.pdb opened
+1442 spheres
+Surfnet for "sel" - "sel":  volume = 1022.7
+Surfnet for "sel" - "sel" split ? 1:  volume = 1022.7
+The angstrom stuff was 5.0
+

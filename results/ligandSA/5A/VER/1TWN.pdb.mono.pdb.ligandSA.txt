@@ -1,0 +1,14 @@
+The following problems occurred while reading PDB file for 1TWN.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (25 )
+#0, chain A: Ho-1
+1TWN.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 1TWN.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 448.81
+  Total solvent accessible surface area = 759.632
+

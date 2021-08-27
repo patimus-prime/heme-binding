@@ -1,0 +1,11 @@
+The following problems occurred while reading PDB file for 1IPH.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (754 )
+warning: cannot find LINK/SSBOND residue HEM (754 )
+warning: cannot find LINK/SSBOND residue HEM (754 )
+#0, chain A: catalase hpii
+1IPH.pdb.mono.pdb opened
+1282 spheres
+Surfnet for "sel" - "sel":  volume = 976.97
+Surfnet for "sel" - "sel" split ? 1:  volume = 976.97
+The angstrom stuff was 5.0
+

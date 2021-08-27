@@ -1,0 +1,14 @@
+The following problems occurred while reading PDB file for 4B8N.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+warning: cannot find LINK/SSBOND residue HEM (201 )
+#0, chain A: cytochrome B5-host origin
+4B8N.pdb.mono.pdb opened
+786 spheres
+Surfnet for "sel" - "sel":  volume = 812.96
+Surfnet for "sel" - "sel" split ? 1:  volume = 812.96
+The angstrom stuff was 5.0
+

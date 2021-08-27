@@ -1,0 +1,10 @@
+#0, chain A: cytochrome oxidase subunit II
+1W2L.pdb.mono.pdb opened
+908 spheres
+Surfnet for "sel" - "sel":  volume = 776.34
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.0593
+Surfnet for "sel" - "sel" split ? 1:  volume = 715.73
+Surfnet for "sel" - "sel" split ? 2:  volume = 31.093
+Surfnet for "sel" - "sel" split ? 4:  volume = 26.461
+The angstrom stuff was 5.0
+

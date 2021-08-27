@@ -1,0 +1,8 @@
+#0, chain A: 3-methyl-L-tyrosine peroxygenase
+6VDQ.pdb.mono.pdb opened
+620 spheres
+Surfnet for "sel" - "sel":  volume = 792.01
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.3065
+Surfnet for "sel" - "sel" split ? 1:  volume = 789.7
+The angstrom stuff was 5.0
+

@@ -1,0 +1,22 @@
+The following problems occurred while reading PDB file for 2O6P.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (190 )
+warning: cannot find LINK/SSBOND residue HEM (190 )
+warning: cannot find LINK/SSBOND residue  ZN (1001 )
+warning: cannot find LINK/SSBOND residue  ZN (1001 )
+warning: cannot find LINK/SSBOND residue  ZN (1002 )
+warning: cannot find LINK/SSBOND residue  ZN (1002 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1003 )
+warning: cannot find LINK/SSBOND residue  ZN (1005 )
+warning: cannot find LINK/SSBOND residue  ZN (1005 )
+warning: cannot find LINK/SSBOND residue  ZN (1005 )
+#0, chain A: iron-regulated surface determinant protein C
+2O6P.pdb.mono.pdb opened
+690 spheres
+Surfnet for "sel" - "sel":  volume = 691.19
+Surfnet for "sel" - "sel" split ? 1:  volume = 675.4
+Surfnet for "sel" - "sel" split ? 2:  volume = 15.785
+The angstrom stuff was 5.0
+

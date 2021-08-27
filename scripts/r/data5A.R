@@ -1,3 +1,5 @@
+data5A_fn <- function() {
+
 # This is the main R file for this project. It was intended to launch other scripts used.
 # However, I'm now crunched and would rather only hit one button to run everything.
 # 22 August 2021 main.R for Pat's heme-binding project!
@@ -54,7 +56,7 @@ for(ligand in 1:(length(ligandList)))
   
   #this line is freaky fresh
   # paste() automates df name creation, second arg is the df assigned. BAM!
-  assign(paste(activeLigand,"_",angstromDistance,"_maxVolDf",sep=""), volume_dfs$maxVolDf)
+  assign(paste(activeLigand,"_maxVolDf",sep=""), volume_dfs$maxVolDf)
 }
 
 # AA Frequency -----------------
@@ -279,3 +281,19 @@ VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
 # list5A$HEM_xxx
 # list5A$VERDOHEME_xxxxx 
 # etc. so just one big ass list :)
+
+ls5A <- list(
+  "HEM_5A_aaFreqDf" = HEM_aaFreqDf,
+  "HEM_5A_MERGED_DF" = HEM_MERGED_DF,
+  
+  "HEC_5A_aaFreqDf" = HEC_aaFreqDf,
+  "HEC_5A_MERGED_DF" = HEC_MERGED_DF,
+  
+  "SRM_5A_aaFreqDf" = SRM_aaFreqDf,
+  "SRM_5A_MERGED_DF" = SRM_MERGED_DF,
+  
+  "VERDOHEME_5A_aaFreqDf" = VERDOHEME_aaFreqDf,
+  "VERDOHEME_5A_MERGED_DF" = VERDOHEME_MERGED_DF
+)
+return(ls5A)
+}

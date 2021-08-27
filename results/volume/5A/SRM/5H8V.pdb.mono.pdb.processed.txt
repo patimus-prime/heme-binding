@@ -1,0 +1,24 @@
+The following problems occurred while reading PDB file for 5H8V.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (106 )
+warning: cannot find LINK/SSBOND residue VAL (424 )
+warning: cannot find LINK/SSBOND residue ASN (453 )
+warning: cannot find LINK/SSBOND residue CYS (494 )
+warning: cannot find LINK/SSBOND residue CYS (500 )
+warning: cannot find LINK/SSBOND residue CYS (540 )
+warning: cannot find LINK/SSBOND residue CYS (544 )
+warning: cannot find LINK/SSBOND residue CYS (544 )
+warning: cannot find LINK/SSBOND residue  MG (704 )
+warning: cannot find LINK/SSBOND residue  MG (704 )
+warning: cannot find LINK/SSBOND residue  MG (705 )
+#0, chain A: zmsir
+5H8V.pdb.mono.pdb opened
+1610 spheres
+Surfnet for "sel" - "sel":  volume = 1183.2
+Surfnet for "sel" - "sel" split ? 2:  volume = 3.6755
+Surfnet for "sel" - "sel" split ? 5:  volume = 10.321
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.6024
+Surfnet for "sel" - "sel" split ? 1:  volume = 1153.7
+Surfnet for "sel" - "sel" split ? 6:  volume = 2.4422
+Surfnet for "sel" - "sel" split ? 4:  volume = 10.452
+The angstrom stuff was 5.0
+

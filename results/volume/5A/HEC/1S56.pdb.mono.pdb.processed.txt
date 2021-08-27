@@ -1,0 +1,11 @@
+The following problems occurred while reading PDB file for 1S56.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (81 )
+warning: cannot find LINK/SSBOND residue HEM (144 )
+warning: cannot find LINK/SSBOND residue HEM (144 )
+#0, chain A: flavohemoglobin
+1S56.pdb.mono.pdb opened
+880 spheres
+Surfnet for "sel" - "sel":  volume = 1012.1
+Surfnet for "sel" - "sel" split ? 1:  volume = 1012.1
+The angstrom stuff was 5.0
+

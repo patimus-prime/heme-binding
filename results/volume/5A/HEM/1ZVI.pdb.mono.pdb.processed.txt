@@ -1,0 +1,7 @@
+#0, chain A: nitric-oxide synthase, brain
+1ZVI.pdb.mono.pdb opened
+1112 spheres
+Surfnet for "sel" - "sel":  volume = 994.62
+Surfnet for "sel" - "sel" split ? 1:  volume = 994.62
+The angstrom stuff was 5.0
+

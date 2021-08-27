@@ -1,0 +1,21 @@
+The following problems occurred while reading PDB file for 5VEU.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue CYS (441 )
+warning: cannot find LINK/SSBOND residue HEM (601 )
+warning: cannot find LINK/SSBOND residue HEM (601 )
+#0, chain A: cytochrome P450 3A5
+5VEU.pdb.mono.pdb opened
+1244 spheres
+Surfnet for "sel" - "sel":  volume = 838.05
+Surfnet for "sel" - "sel" split ? 1:  volume = 838.05
+The angstrom stuff was 5.0
+

@@ -1,0 +1,7 @@
+#0, chain A: putative heme/hemoglobin transport protein
+4CDP.pdb.mono.pdb opened
+882 spheres
+Surfnet for "sel" - "sel":  volume = 996.51
+Surfnet for "sel" - "sel" split ? 1:  volume = 996.51
+The angstrom stuff was 5.0
+

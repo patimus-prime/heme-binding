@@ -1,0 +1,11 @@
+The following problems occurred while reading PDB file for 1TWR.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (25 )
+warning: cannot find LINK/SSBOND residue VER (300 )
+#0, chain A: Ho-1
+1TWR.pdb.mono.pdb opened
+708 spheres
+Surfnet for "sel" - "sel":  volume = 1013.5
+Surfnet for "sel" - "sel" split ? 1:  volume = 1002.9
+Surfnet for "sel" - "sel" split ? 2:  volume = 10.551
+The angstrom stuff was 5.0
+

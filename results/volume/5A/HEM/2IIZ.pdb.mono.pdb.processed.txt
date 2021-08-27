@@ -1,0 +1,8 @@
+#0, chain A: melanin biosynthesis protein tyra, putative
+2IIZ.pdb.mono.pdb opened
+1160 spheres
+Surfnet for "sel" - "sel":  volume = 928.4
+Surfnet for "sel" - "sel" split ? 1:  volume = 925.88
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.5191
+The angstrom stuff was 5.0
+

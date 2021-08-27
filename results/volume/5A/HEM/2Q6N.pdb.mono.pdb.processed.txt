@@ -1,0 +1,18 @@
+The following problems occurred while reading PDB file for 2Q6N.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue CYS (436 )
+warning: cannot find LINK/SSBOND residue HEM (500 )
+warning: cannot find LINK/SSBOND residue HEM (500 )
+warning: cannot find LINK/SSBOND residue HEM (500 )
+warning: cannot find LINK/SSBOND residue HEM (500 )
+#0, chain A: cytochrome P450 2B4
+2Q6N.pdb.mono.pdb opened
+1448 spheres
+Surfnet for "sel" - "sel":  volume = 975.57
+Surfnet for "sel" - "sel" split ? 2:  volume = 4.4906
+Surfnet for "sel" - "sel" split ? 1:  volume = 971.08
+The angstrom stuff was 5.0
+

@@ -1,0 +1,10 @@
+The following problems occurred while reading PDB file for 3ZJS.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HEM (200 )
+warning: cannot find LINK/SSBOND residue AZI (201 )
+#0, chain A: protoglobin
+3ZJS.pdb.mono.pdb opened
+1166 spheres
+Surfnet for "sel" - "sel":  volume = 842.79
+Surfnet for "sel" - "sel" split ? 1:  volume = 842.79
+The angstrom stuff was 5.0
+

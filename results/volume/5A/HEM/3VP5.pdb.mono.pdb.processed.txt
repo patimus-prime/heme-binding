@@ -1,0 +1,8 @@
+#0, chain A: transcriptional regulator
+3VP5.pdb.mono.pdb opened
+992 spheres
+Surfnet for "sel" - "sel":  volume = 876.73
+Surfnet for "sel" - "sel" split ? 2:  volume = 1.7159
+Surfnet for "sel" - "sel" split ? 1:  volume = 875.01
+The angstrom stuff was 5.0
+

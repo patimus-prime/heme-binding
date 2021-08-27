@@ -1,0 +1,41 @@
+The following problems occurred while reading PDB file for 3HX9.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (75 )
+#0, chain A: protein RV3592
+3HX9.pdb.mono.pdb opened
+ARG 22.A
+ALA 71.A
+LEU 19.A
+ALA 67.A
+TRP 66.A
+ALA 29.A
+PHE 63.A
+ILE 9.A
+HOH 127.A
+ASN 7.A
+HEM 200.A
+THR 55.A
+HEM 300.A
+VAL 53.A
+HOH 191.A
+LYS 5.A
+HOH 181.A
+LEU 89.A
+PHE 39.A
+ALA 87.A
+GLY 86.A
+THR 85.A
+PHE 36.A
+ALA 84.A
+VAL 83.A
+PRO 82.A
+ASN 81.A
+ALA 80.A
+VAL 30.A
+HOH 178.A
+HIS 78.A
+HIS 75.A
+ARG 26.A
+ALA 74.A
+HOH 134.A
+PHE 23.A
+

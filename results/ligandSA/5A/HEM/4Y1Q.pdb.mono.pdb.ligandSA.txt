@@ -1,0 +1,12 @@
+#0, chain A: extracellular heme acquisition hemophore hasa
+4Y1Q.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 4Y1Q.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  1 connected surface components
+  Total solvent excluded surface area = 494.939
+  Total solvent accessible surface area = 806.96
+

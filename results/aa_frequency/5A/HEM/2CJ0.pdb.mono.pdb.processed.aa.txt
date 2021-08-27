@@ -1,0 +1,48 @@
+The following problems occurred while reading PDB file for 2CJ0.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue MAN (1 )
+#0, chain A: chloroperoxidase
+2CJ0.pdb.mono.pdb opened
+LEU 97.A
+HOH 2073.A
+ALA 189.A
+ILE 187.A
+PHE 186.A
+HOH 2167.A
+GLU 183.A
+LEU 32.A
+ALA 31.A
+PRO 30.A
+CYS 29.A
+PRO 28.A
+ALA 75.A
+GLN 180.A
+LEU 72.A
+ALA 71.A
+NO3 1323.A
+ILE 68.A
+PHE 214.A
+VAL 67.A
+LEU 190.A
+TRP 213.A
+ILE 63.A
+ARG 111.A
+SER 110.A
+MET 61.A
+PHE 109.A
+SER 108.A
+ASP 106.A
+PHE 57.A
+HIS 105.A
+GLU 104.A
+PHE 103.A
+HEM 1300.A
+LEU 53.A
+HOH 2331.A
+HOH 2330.A
+HOH 2329.A
+

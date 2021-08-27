@@ -1,0 +1,9 @@
+#0, chain A: NP4
+3MVF.pdb.mono.pdb opened
+852 spheres
+Surfnet for "sel" - "sel":  volume = 1096.2
+Surfnet for "sel" - "sel" split ? 3:  volume = 4.1985
+Surfnet for "sel" - "sel" split ? 1:  volume = 1087.9
+Surfnet for "sel" - "sel" split ? 2:  volume = 4.1305
+The angstrom stuff was 5.0
+

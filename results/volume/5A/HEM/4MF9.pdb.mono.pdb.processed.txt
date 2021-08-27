@@ -1,0 +1,10 @@
+The following problems occurred while reading PDB file for 4MF9.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (209 )
+warning: cannot find LINK/SSBOND residue HEM (400 )
+#0, chain A: hemin degrading factor
+4MF9.pdb.mono.pdb opened
+606 spheres
+Surfnet for "sel" - "sel":  volume = 1041.7
+Surfnet for "sel" - "sel" split ? 1:  volume = 1041.7
+The angstrom stuff was 5.0
+

@@ -1,0 +1,8 @@
+#0, chain A: bacterial heme binding protein
+2R7A.pdb.mono.pdb opened
+848 spheres
+Surfnet for "sel" - "sel":  volume = 891.64
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.1436
+Surfnet for "sel" - "sel" split ? 1:  volume = 889.5
+The angstrom stuff was 5.0
+

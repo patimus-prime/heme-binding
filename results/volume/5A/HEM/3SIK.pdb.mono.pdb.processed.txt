@@ -1,0 +1,9 @@
+The following problems occurred while reading PDB file for 3SIK.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (136 )
+#0, chain A: IRON transport-associated domain protein
+3SIK.pdb.mono.pdb opened
+426 spheres
+Surfnet for "sel" - "sel":  volume = 478.73
+Surfnet for "sel" - "sel" split ? 1:  volume = 478.73
+The angstrom stuff was 5.0
+

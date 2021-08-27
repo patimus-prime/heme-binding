@@ -1,0 +1,8 @@
+#0, chain A: nitric oxide synthase
+2BHJ.pdb.mono.pdb opened
+1392 spheres
+Surfnet for "sel" - "sel":  volume = 1187
+Surfnet for "sel" - "sel" split ? 2:  volume = 3.3735
+Surfnet for "sel" - "sel" split ? 1:  volume = 1183.7
+The angstrom stuff was 5.0
+

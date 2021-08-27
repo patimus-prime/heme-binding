@@ -1,0 +1,17 @@
+The following problems occurred while reading PDB file for 4JET.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+warning: cannot find LINK/SSBOND residue TYR (75 )
+#0, chain A: secreted hemophore
+4JET.pdb.mono.pdb opened
+1030 spheres
+Surfnet for "sel" - "sel":  volume = 908.16
+Surfnet for "sel" - "sel" split ? 1:  volume = 908.16
+The angstrom stuff was 5.0
+

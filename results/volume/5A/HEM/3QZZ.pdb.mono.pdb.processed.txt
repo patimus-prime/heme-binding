@@ -1,0 +1,7 @@
+#0, chain A: methanosarcina acetivorans protoglobin
+3QZZ.pdb.mono.pdb opened
+1144 spheres
+Surfnet for "sel" - "sel":  volume = 903.93
+Surfnet for "sel" - "sel" split ? 1:  volume = 903.93
+The angstrom stuff was 5.0
+

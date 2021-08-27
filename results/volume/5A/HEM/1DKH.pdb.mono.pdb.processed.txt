@@ -1,0 +1,7 @@
+#0, chain A: HASA
+1DKH.pdb.mono.pdb opened
+868 spheres
+Surfnet for "sel" - "sel":  volume = 910.74
+Surfnet for "sel" - "sel" split ? 1:  volume = 910.74
+The angstrom stuff was 5.0
+

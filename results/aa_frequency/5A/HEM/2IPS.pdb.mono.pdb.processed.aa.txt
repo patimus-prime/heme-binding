@@ -1,0 +1,50 @@
+The following problems occurred while reading PDB file for 2IPS.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+warning: cannot find LINK/SSBOND residue NAG (2 )
+warning: cannot find LINK/SSBOND residue NAG (1 )
+#0, chain A: LPO
+2IPS.pdb.mono.pdb opened
+SCN 702.A
+THR 344.A
+PHE 347.A
+LEU 376.A
+ARG 348.A
+PHE 349.A
+GLY 350.A
+HOH 757.A
+HEM 708.A
+VAL 354.A
+ARG 255.A
+GLU 258.A
+GLN 259.A
+TYR 312.A
+HOH 872.A
+LEU 417.A
+ALA 114.A
+PHE 113.A
+PHE 380.A
+ASP 112.A
+HIS 351.A
+LEU 421.A
+HOH 828.A
+GLN 423.A
+HIS 109.A
+ASP 108.A
+GLN 105.A
+GLY 104.A
+HOH 753.A
+MET 101.A
+LEU 433.A
+HOH 841.A
+ILE 436.A
+ASN 437.A
+HOH 744.A
+ARG 440.A
+

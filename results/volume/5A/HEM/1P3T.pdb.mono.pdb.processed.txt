@@ -1,0 +1,7 @@
+#0, chain A: Ho-1; HEME oxygenase (decyclizing) 1
+1P3T.pdb.mono.pdb opened
+950 spheres
+Surfnet for "sel" - "sel":  volume = 930.51
+Surfnet for "sel" - "sel" split ? 1:  volume = 930.51
+The angstrom stuff was 5.0
+

@@ -1,0 +1,29 @@
+The following problems occurred while reading PDB file for 1QJS.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue CYS (27 )
+warning: cannot find LINK/SSBOND residue CYS (126 )
+warning: cannot find LINK/SSBOND residue CYS (165 )
+warning: cannot find LINK/SSBOND residue CYS (230 )
+warning: cannot find LINK/SSBOND residue CYS (339 )
+warning: cannot find LINK/SSBOND residue CYS (391 )
+warning: cannot find LINK/SSBOND residue HIS (213 )
+warning: cannot find LINK/SSBOND residue  NA (512 )
+warning: cannot find LINK/SSBOND residue  NA (512 )
+warning: cannot find LINK/SSBOND residue  NA (512 )
+warning: cannot find LINK/SSBOND residue  NA (513 )
+warning: cannot find LINK/SSBOND residue  NA (513 )
+warning: cannot find LINK/SSBOND residue  NA (513 )
+warning: cannot find LINK/SSBOND residue  NA (513 )
+warning: cannot find LINK/SSBOND residue  NA (522 )
+warning: cannot find LINK/SSBOND residue  NA (522 )
+warning: cannot find LINK/SSBOND residue  NA (522 )
+warning: cannot find LINK/SSBOND residue  NA (523 )
+warning: cannot find LINK/SSBOND residue  NA (523 )
+warning: cannot find LINK/SSBOND residue  NA (523 )
+warning: cannot find LINK/SSBOND residue  NA (523 )
+#0, chain A: hemopexin
+1QJS.pdb.mono.pdb opened
+646 spheres
+Surfnet for "sel" - "sel":  volume = 1093.2
+Surfnet for "sel" - "sel" split ? 1:  volume = 1093.2
+The angstrom stuff was 5.0
+

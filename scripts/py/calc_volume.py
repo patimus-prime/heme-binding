@@ -88,7 +88,7 @@ def calculate_volume(activeLigand,activeSourcePath,activeResultPath,angstromDist
         #copy png file ~/bullshit.png #only change "bullshit"
         #rc("pause")
 
-
+        print "The angstrom stuff was " + angstromDistance
         # specifying path to the results folder!
         #results_path = "~/heme-binding/results/volume"
         #full_results_path = os.path.expanduser(results_path)

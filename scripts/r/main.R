@@ -34,6 +34,11 @@ library(kableExtra)
 # you could probably also tease out what you're missing from the error messages
 # just keep trying to install kableExtra and download what you need, until it works
 
+#get 5A data real quick so we overwrite all DFs it uses, below:
+source("~/heme-binding/scripts/r/data5A.R") 
+ls5A <- data5A_fn()
+
+
 # DECLARATIONS --------------
 # warning: ligandList is altered at the end of merging dataframes below
 # this is because VER and VEA are merged to 'VERDOHEME'
@@ -349,9 +354,69 @@ for(ligand in 1:(length(ligandList)))
 #                      by.x = "PDB_ID")
 #    
 
+# 2.9) Get the 5A data so we can make some cool histogram graphs, woo!
 
+# works lol
+
+
+
+# 2.99 Attempt overlapping histograms, HEM Vol first
+# HEM vol very similar - but not so for verdoheme
+# therefore let us see how these work for those ifrst
+# vol7A <- data.frame(v = HEM_MERGED_DF$volume_data)
+# vol5A <- data.frame(v = ls5A$HEM_5A_MERGED_DF$volume_data)
+# vol7A$ang = '7'
+# vol5A$ang = '5'
+# vboth <- rbind(vol7A,vol5A)
+# ggplot(vboth, aes(v,fill=ang)) +
+#    geom_density(alpha=0.2)
+# # i like the density better, the histogram can distort and hide
+# # the differences...
+# ggplot(vboth,aes(v,fill=ang)) +
+#    geom_histogram(alpha = 0.5, aes(y = ..density..), position = 'identity')
+#    
+# p1 <- hist(vol5A$v)
+# p2 <- hist(vol7A$v)
+# plot( p1, col=rgb(0,0,1,1/4))  # first histogram
+# plot( p2, col=rgb(1,0,0,1/4), add=T)  # second
 
 # 3. Construct Plots/Graphs (NOTE: ligandList is altered here!!!) ----------------------------------
+# 
+# library(ggplot2)
+# ggplot(diamonds, aes(clarity, fill = cut)) + 
+#    geom_bar(position = 'identity', alpha = .3)
+
+# vol7A <- data.frame(v = HEM_MERGED_DF$volume_data)
+# vol5A <- data.frame(v = ls5A$HEM_5A_MERGED_DF$volume_data)
+# vol7A$ang = '7'
+# vol5A$ang = '5'
+# vboth <- rbind(vol7A,vol5A)
+
+tmp7A <- data.frame(dd = HEM_aaFreqDf)
+tmp5A <- data.frame(dd = ls5A$HEM_5A_aaFreqDf)
+tmp7A$ang = '7'
+tmp5A$ang = '5'
+tmpBoth <- rbind(tmp7A,tmp5A)
+activeLigand = "HEM"
+
+ggplot(tmpBoth,aes(dd.Residue,dd.Freq)) +
+   geom_bar()#aes(fill=ang))#,position = 'identity', alpha=.3)
+
+
+# ggplot(diamonds, aes(clarity, fill = cut)) + 
+#    geom_bar(position = 'identity', alpha = .3)
+
+
+z_aafreqplotXtreme <- barplot(tmpBoth,
+                      main = paste(activeLigand, ": Frequency of Residues within ",angstromDistance,"Å of ",activeLigand,sep = ""),
+                      xlab = "Residues",
+                      ylab = "Frequency",
+                      #col = "orange",
+                      cex.names = 0.8, #to fit the screen of my poor laptop
+                      names.arg = 
+                         eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
+
+
 ligandList = list("HEM","HEC","SRM","VERDOHEME")
 for(ligand in 1:(length(ligandList)))
 {
@@ -364,7 +429,16 @@ for(ligand in 1:(length(ligandList)))
                 cex.names = 0.8, #to fit the screen of my poor laptop
                 names.arg = 
                    eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
-
+   
+   
+   # vol7A <- data.frame(v = HEM_MERGED_DF$volume_data)
+   # vol5A <- data.frame(v = ls5A$HEM_5A_MERGED_DF$volume_data)
+   # vol7A$ang = '7'
+   # vol5A$ang = '5'
+   # vboth <- rbind(vol7A,vol5A)
+   # ggplot(vboth, aes(v,fill=ang)) +
+   #    geom_density(alpha=0.2)
+   
    #see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
    
    volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),

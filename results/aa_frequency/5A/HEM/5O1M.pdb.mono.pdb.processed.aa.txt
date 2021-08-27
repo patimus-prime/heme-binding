@@ -1,0 +1,35 @@
+The following problems occurred while reading PDB file for 5O1M.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue LYS (167 )
+warning: cannot find LINK/SSBOND residue HIS (198 )
+#0, chain A: rubber oxygenase
+5O1M.pdb.mono.pdb opened
+VAL 197.A
+ALA 397.A
+THR 194.A
+LEU 234.A
+TRP 231.A
+THR 230.A
+LEU 268.A
+ILE 227.A
+ALA 151.A
+ASP 226.A
+ILE 398.A
+ILE 222.A
+LEU 171.A
+THR 168.A
+LYS 167.A
+ARG 164.A
+HOH 708.A
+ALA 159.A
+GLY 158.A
+LYS 156.A
+SER 155.A
+ARG 147.A
+VAL 152.A
+HEM 600.A
+VAL 201.A
+LEU 205.A
+GLU 148.A
+ASP 399.A
+HIS 198.A
+

@@ -1,0 +1,53 @@
+The following problems occurred while reading PDB file for 3MOO.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue GLC (1 )
+warning: cannot find LINK/SSBOND residue GLC (1 )
+warning: cannot find LINK/SSBOND residue HIS (20 )
+warning: cannot find LINK/SSBOND residue AZI (217 )
+warning: cannot find LINK/SSBOND residue AZI (217 )
+#0, chain A: heme oxygenase
+3MOO.pdb.mono.pdb opened
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3MOO.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  9 connected surface components
+  Total solvent excluded surface area = 9371.88
+    component areas = 8941.34, 88.1137, 85.1396, 63.4139, 54.0474, 42.9998, 34.5349, 32.9494, 29.3348
+  Total solvent accessible surface area = 10170.3
+    component areas = 10138.2, 10.4276, 12.7919, 4.31113, 2.48276, 1.26076, 0.396394, 0.28702, 0.137935
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3MOO.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  6 connected surface components
+  Total solvent excluded surface area = 416.715
+    component areas = 71.9806, 71.9456, 71.8272, 71.776, 71.7234, 57.4625
+  Total solvent accessible surface area = 1096.43
+    component areas = 187.439, 187.373, 187.148, 187.05, 186.951, 160.465
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3MOO.pdb.mono.pdb, category main, probe radius 1.4, vertex density 2
+  9 connected surface components
+  Total solvent excluded surface area = 9371.88
+    component areas = 8941.34, 88.1137, 85.1396, 63.4139, 54.0474, 42.9998, 34.5349, 32.9494, 29.3348
+  Total solvent accessible surface area = 10170.3
+    component areas = 10138.2, 10.4276, 12.7919, 4.31113, 2.48276, 1.26076, 0.396394, 0.28702, 0.137935
+/home/pat/.local/UCSF-Chimera64-1.15rc/bin/mscalc 1.400000 2.000000 1
+MSMSLIB 1.3 started on pat-Surface-Pro-3
+Copyright M.F. Sanner (March 2000)
+Compilation flags  
+
+Surface 3MOO.pdb.mono.pdb, category ligand, probe radius 1.4, vertex density 2
+  6 connected surface components
+  Total solvent excluded surface area = 416.715
+    component areas = 71.9806, 71.9456, 71.8272, 71.776, 71.7234, 57.4625
+  Total solvent accessible surface area = 1096.43
+    component areas = 187.439, 187.373, 187.148, 187.05, 186.951, 160.465
+

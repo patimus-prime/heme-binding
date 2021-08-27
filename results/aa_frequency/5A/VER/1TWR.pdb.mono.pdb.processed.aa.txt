@@ -1,0 +1,32 @@
+The following problems occurred while reading PDB file for 1TWR.pdb.mono.pdb
+warning: cannot find LINK/SSBOND residue HIS (25 )
+warning: cannot find LINK/SSBOND residue VER (300 )
+#0, chain A: Ho-1
+1TWR.pdb.mono.pdb opened
+NO 400.A
+VER 300.A
+LEU 147.A
+TYR 134.A
+GLY 143.A
+SER 142.A
+GLY 139.A
+LEU 138.A
+ARG 136.A
+THR 135.A
+GLN 38.A
+MET 34.A
+HOH 476.A
+GLU 29.A
+ALA 28.A
+ARG 183.A
+HIS 25.A
+LYS 18.A
+PHE 214.A
+HOH 439.A
+HOH 440.A
+ASN 210.A
+HOH 481.A
+SER 14.A
+PHE 207.A
+ALA 206.A
+

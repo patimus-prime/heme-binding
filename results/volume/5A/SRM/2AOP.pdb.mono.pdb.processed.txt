@@ -1,0 +1,12 @@
+#0, chain A: sirhp
+2AOP.pdb.mono.pdb opened
+1352 spheres
+Surfnet for "sel" - "sel":  volume = 1069.3
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.1079
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.1427
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.0271
+Surfnet for "sel" - "sel" split ? 6:  volume = 2.2511
+Surfnet for "sel" - "sel" split ? 1:  volume = 1057.2
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.6201
+The angstrom stuff was 5.0
+

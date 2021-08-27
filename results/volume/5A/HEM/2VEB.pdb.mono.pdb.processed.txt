@@ -1,0 +1,7 @@
+#0, chain A: protoglobin
+2VEB.pdb.mono.pdb opened
+1142 spheres
+Surfnet for "sel" - "sel":  volume = 845.18
+Surfnet for "sel" - "sel" split ? 1:  volume = 845.18
+The angstrom stuff was 5.0
+
