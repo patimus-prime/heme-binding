@@ -408,15 +408,56 @@ for(ligand in 1:(length(ligandList)))
          Residue_Code = Residue_Code.x
       ) -> ztmp
    ztmp
-   zp <- ggplot(ztmp,aes(x=Residue_Code,y=Angle,fill=Residue_Code)) + geom_violin()
+   ztmp <- subset(ztmp,select = -c(Residue_Code.y))
+   ztmp
+   ztmp <- subset(ztmp,select = -c(Mean_Distance))
+   ztmp
+   ztmp <- subset(ztmp,selct = -c(Residue_Number))
+   #somehow Residue_Code converted back to chr type?
+   
+   ztmp <- mutate_if(ztmp, is.character,as.factor)
+   
+   cols <- names(mydf)[1:2]
+   mydf[,(cols) := round(.SD,1), .SDcols=cols]
+   mydf
+   #try rounding...
+   ztmp$Mean_Distance <- as.numeric(as.character(ztmp$Mean_Distance))
+   ztmp$Mean_Distance <- round(ztmp$Mean_Distance,2)
+   #nope
+   ztmp
+   znew <- subset(ztmp,select=c(Residue_Code,Angle))
+   rownames(znew) <- NULL
+   znew
+   
+   znew %>%
+      group_by(Residue_Code) -> zlist
+   ggplot(znew,aes(x=Residue_Code,y=as.numeric(as.character(Angle)), fill=Residue_Code)) + 
+      geom_violin(trim = FALSE) #+
+      #geom_path(aes(group = Residue_Code))
+   
+   ztmp <- mutate_if(ztmp, is.character,as.factor)
+   
+   zp <- ggplot(ztmp,
+                aes(x=Residue_Code,y=Angle,fill=Residue_Code)) + geom_violin() +
+      labs(title = paste(activeLigand,":horrible plot ",activeLigand,sep=''), x="Residue",y="Angle")
    print(zp)
    
    ztmp <- mutate_if(ztmp,is.character,as.factor)
+   ztmp
+   ggplot(ztmp, aes(factor(Angle),factor(Residue_Code),fill=Residue_Code)) +
+      geom_violin()
+   ggplot(ztmp,aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
+      geom_boxplot()
+   
    zx <- ggplot(ztmp,
           aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   
       geom_violin(trim=FALSE) +
       labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
    print(zx)
+   
+   
+   
+   
    planarAllPlot <- ggplot(eval(parse(text=paste(activeLigand,"_allDistPlanarDf",sep=''))),
                            aes(x=Residue_Code.x,y=Angle,fill=Residue_Code.x)) +   
       geom_violin(trim=FALSE) +
