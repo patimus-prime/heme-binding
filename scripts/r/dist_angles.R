@@ -127,10 +127,12 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    # SO THAT THE MERGE BELOW CAN ACTUALLY OCCUR.
    
    # 6. Merge ---------------------------
-   omega_df <- merge(Distance_df,Angles_df,by = c("PDB_ID","Residue_Number"))#,"Residue_Number"))
-   omega_df <- merge(omega_df,ResCode_ResNum_df, by = c("PDB_ID","Residue_Number"))
+   #FIXME!! HERE IF THERE'S ISSUES 27 aUG 2021
+   #omega_df <- merge(Distance_df,Angles_df,by = c("PDB_ID","Residue_Number"))#,"Residue_Number"))
+   omega_df <- merge(Angles_df,ResCode_ResNum_df, by = c("PDB_ID","Residue_Number"))
+   planarAnglesDF <- omega_df
    
-   Distance_and_Angles_df <- omega_df
+   #Distance_and_Angles_df <- omega_df
    
    # 7. Plotting ---------------------------
    
@@ -138,42 +140,42 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    # btw we can probably revert to'plane' for HEM. Since only interested in angles
    
    # we must convert type to factor, for this plot
-   
-   Distance_and_Angles_df$Angle <- as.numeric(as.character(Distance_and_Angles_df$Angle))
-   Distance_and_Angles_df$Residue_Number <- as.numeric(as.character(Distance_and_Angles_df$Residue_Number))
-   
-   Distance_and_Angles_df$Residue_Code <- as.factor(Distance_and_Angles_df$Residue_Code)
-   #head(Distance_and_Angles_df)
-   angleplot <- ggplot(Distance_and_Angles_df, aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
-      geom_violin(trim=FALSE) +
-      labs(title = paste("Angles of Residues v. ",activeLigand," (defined as axis) in each PDB",sep = ""), x="Residue",y="Angle")
-   #angleplot #ENSURE YOU CONVERT TO NUMERIC DATA TYPES ABOVE
-   
-   #welp, that's not conclusive, at all.
-   
+   # 
+   # Distance_and_Angles_df$Angle <- as.numeric(as.character(Distance_and_Angles_df$Angle))
+   # Distance_and_Angles_df$Residue_Number <- as.numeric(as.character(Distance_and_Angles_df$Residue_Number))
+   # 
+   # Distance_and_Angles_df$Residue_Code <- as.factor(Distance_and_Angles_df$Residue_Code)
+   # #head(Distance_and_Angles_df)
+   # angleplot <- ggplot(Distance_and_Angles_df, aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
+   #    geom_violin(trim=FALSE) +
+   #    labs(title = paste("Angles of Residues v. ",activeLigand," (defined as axis) in each PDB",sep = ""), x="Residue",y="Angle")
+   # #angleplot #ENSURE YOU CONVERT TO NUMERIC DATA TYPES ABOVE
+   # 
+   # #welp, that's not conclusive, at all.
+   # 
    # let's look at the angles of the closest residues:
    # those are: Cys, His, and Tyr, as the exclusive residues picked up by minimum distance
-   coord_Res_ls <- c("CYS","HIS","TYR")
-   coord_Res_df <- subset(Distance_and_Angles_df, Residue_Code %in% coord_Res_ls)
-   
-   coord_angle_plot <- ggplot(coord_Res_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
-      geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles of Residues MOST LIKELY to coordinate. 
-           Does not select for residues that are actually confirmed as coordinating",sep=''),
-           x="Residue",y="Angle") +
-      stat_summary(fun.data = mean_sdl, mult =1,geom="pointrange")
-      
-   Distance_and_Angles_df %>%
-      group_by(PDB_ID) %>% slice(which.min(Distance)) -> min_dist_df
-   
-   min_dist_angles_plot <- ggplot(min_dist_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
-      geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ligand, where ligand is defined as an axis", sep=''),
-           x = "Residue",y="Angle") +
-      stat_summary(fun.data = mean_sdl, mult=1,geom="pointrange")
-   
-   # nonpolar_plot <- ggplot(nonpolar_res_df,aes(x=Residue_Code,y=Distance, fill=Residue_Code)) +
+   # coord_Res_ls <- c("CYS","HIS","TYR")
+   # coord_Res_df <- subset(Distance_and_Angles_df, Residue_Code %in% coord_Res_ls)
+   # 
+   # coord_angle_plot <- ggplot(coord_Res_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
    #    geom_violin(trim=FALSE) +
+   #    labs(title = paste(activeLigand,": Angles of Residues MOST LIKELY to coordinate. 
+   #         Does not select for residues that are actually confirmed as coordinating",sep=''),
+   #         x="Residue",y="Angle") +
+   #    stat_summary(fun.data = mean_sdl, mult =1,geom="pointrange")
+   #    
+   # Distance_and_Angles_df %>%
+   #    group_by(PDB_ID) %>% slice(which.min(Distance)) -> min_dist_df
+   # 
+   # min_dist_angles_plot <- ggplot(min_dist_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
+   #    geom_violin(trim=FALSE) +
+   #    labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ligand, where ligand is defined as an axis", sep=''),
+   #         x = "Residue",y="Angle") +
+   #    stat_summary(fun.data = mean_sdl, mult=1,geom="pointrange")
+   # 
+   # # nonpolar_plot <- ggplot(nonpolar_res_df,aes(x=Residue_Code,y=Distance, fill=Residue_Code)) +
+   # #    geom_violin(trim=FALSE) +
    #    labs(title = "Nonpolar Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
    #    stat_summary(fun.data = mean_sdl, mult =1,geom = "pointrange")
    # 
@@ -195,16 +197,16 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
       angle_raw_df
    )
    #return stuff ----------
-   distAngleList <- list(
-      #"angleplot" = angleplot,
-      #"coordinating_res_plot" = coord_angle_plot,
-      "angleDF" = Distance_and_Angles_df,
-      "coord_Res_df" = coord_Res_df,
-      "min_dist_df" = min_dist_df
-      #"min_dist_angles_plot" = min_dist_angles_plot
-   )
+   # distAngleList <- list(
+   #    #"angleplot" = angleplot,
+   #    #"coordinating_res_plot" = coord_angle_plot,
+   #    "angleDF" = Distance_and_Angles_df
+   #    # "coord_Res_df" = coord_Res_df,
+   #    # "min_dist_df" = min_dist_df
+   #    #"min_dist_angles_plot" = min_dist_angles_plot
+   # )
    
-   return(distAngleList)
+   return(planarAnglesDF)
    # return(list(
    # angleplot,
    # coord_angle_plot,

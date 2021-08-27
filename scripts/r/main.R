@@ -101,11 +101,11 @@ for(ligand in 1:(length(ligandList)))
 {
    activeLigand = ligandList[[ligand]]
    activeResultPath = paste(resultPath,activeLigand,sep = "")
-   planar_angles_list <- aaAnglesFn(activeLigand,activeResultPath)
-   assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
-   assign(paste(activeLigand,"_planar_angles_DF",sep=""),planar_angles_list$angleDF)
-   assign(paste(activeLigand,"_coord_Res_df",sep=""),planar_angles_list$coord_Res_df)
-   assign(paste(activeLigand,"_min_dist_df",sep=""),planar_angles_list$min_dist_df)
+   planar_angles_df <- aaAnglesFn(activeLigand,activeResultPath)
+   #assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
+   assign(paste(activeLigand,"_planar_angles_DF",sep=""),planar_angles_df)
+   #assign(paste(activeLigand,"_coord_Res_df",sep=""),planar_angles_list$coord_Res_df)
+   #assign(paste(activeLigand,"_min_dist_df",sep=""),planar_angles_list$min_dist_df)
 }
 
 # Distances of AA atoms to Fe ------------------
@@ -117,7 +117,7 @@ for(ligand in 1:(length(ligandList)))
    activeLigand = ligandList[[ligand]]
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    distancesList <- distancesFn(activeLigand,activeResultPath)
-   assign(paste(activeLigand,"_distances_list",sep=""),distancesList)
+   assign(paste(activeLigand,"_distList",sep=""),distancesList)
 }
 
 #  Angles CACBFe -------------------------------
@@ -240,8 +240,13 @@ VERDOHEME_MERGED_DF %>%
 # angle stuff:
 VERDOHEME_CACBFe_DF <- rbind(VEA_CACBFe_DF,VER_CACBFe_DF)
 VERDOHEME_planar_angles_DF <- rbind(VEA_planar_angles_DF,VER_planar_angles_DF)
-VERDOHEME_coord_Res_df <- rbind(VEA_coord_Res_df,VER_coord_Res_df)
-VERDOHEME_min_dist_df <- rbind(VEA_min_dist_df, VER_min_dist_df)
+VERDOHEME_distList <- list(
+   "mean_distances" = rbind(VEA_distList$mean_distances,VER_distList$mean_distances),
+   "closest3Res" = rbind(VEA_distList$closest3Res,VER_distList$closest3Res)
+)
+#VERDOHEME_distList$mean_distances
+#VERDOHEME_coord_Res_df <- rbind(VEA_coord_Res_df,VER_coord_Res_df)
+#VERDOHEME_min_dist_df <- rbind(VEA_min_dist_df, VER_min_dist_df)
 
 # === ALL OF THE BELOW JUST TO MERGE THESE TWO FOR AMINO ACID...
 
@@ -257,12 +262,89 @@ VERDOHEME_aaFreqDf %>%
    ) -> VERDOHEME_aaFreqDf
 #almost done, have to order it:
 VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
+# 2.5) Distances stuff, merging the distances/angles DF's --------------------
+   # for use below in plots
+
+#nonpolar for sure
+nonpolar_ref_ls <- c("LEU", "PHE", "ALA", "VAL", "ILE", "TYR", "GLY","GLX")
+#polar... the rest. some very weakly polar and more just spicy
+polar_ref_ls <- c("ARG","ASN","ASP","ASX","CYS","GLU","GLN","HIS","LYS",
+                  "MET","PRO","SER","THR","TRP")
+
+# v <- as.data.frame(HEM_distList$mean_distances)
+# w <- as.data.frame(HEM_distList$all_distances)
+# w
+# z <- v
+ligandList = list("HEM","HEC","SRM","VERDOHEME")
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   # may need to set shit as factor etc.
+   #activeLigand = "HEM"
+   print(activeLigand)
+   #assign(paste(activeLigand,"_sourceOrganismDf",sep=""),sourceOrganismDf)
+   #eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
+   #activeLigand = "SRM"
+   
+   tmp_meanDist <- eval(parse(text = (paste(activeLigand,"_distList$mean_distances",sep=""))))
+   tmp_CAB <-  eval(parse(text = (paste(activeLigand,"_CACBFe_DF",sep=""))))
+   tmp_closest3 <-  eval(parse(text = (paste(activeLigand,"_distList$closest3Res",sep=""))))
+   # careful not to use accidentally use distance on the planar angles DF until we've removed it!
+   tmp_planar <-  eval(parse(text = (paste(activeLigand,"_planar_angles_DF",sep=""))))
+   print("tmps set")
+   #HEM_planar_angles_DF
+   #    HEM_distList$closest3Res
+   # HEM_CACBFe_DF
+   # # w0 <- HEM_distList$all_distances
+   # w1 <- HEM_distList$mean_distances
+   # w2 <- HEM_CACBFe_DF
+   #HEM_distList$closest3Res
+   
+   # use inner_join I think, I loooked through ?inner_join and see a way by mult vectors
+   #tmp_meanDist
+   print("start second temps")
+   allDistCab <- inner_join(tmp_meanDist,tmp_CAB,by=c("PDB_ID","Residue_Number")) #keep = FALSE does squat here
+   minDistCab <- inner_join(tmp_closest3,tmp_CAB,by=c("PDB_ID","Residue_Number"))
+   allDistPlanar <- inner_join(tmp_meanDist,tmp_planar,by=c("PDB_ID","Residue_Number"))
+   minDistPlanar <- inner_join(tmp_closest3,tmp_planar,by=c("PDB_ID","Residue_Number"))
+   print("start assigns")
+   assign(paste(activeLigand,"_allDistCabDf",sep=""),allDistCab)
+   assign(paste(activeLigand,"_minDistCabDf",sep=""),minDistCab)
+   assign(paste(activeLigand,"_allDistPlanarDf",sep = ""),allDistPlanar)
+   assign(paste(activeLigand,"_minDistPlanarDf",sep = ""),minDistPlanar)
+   print("fin")
+   print(activeLigand)
+   rm(tmp_CAB)
+   rm(tmp_closest3)
+   rm(tmp_meanDist)
+   rm(tmp_planar)
+}
+#assign(paste(activeLigand,"_sourceOrganismDf",sep=""),sourceOrganismDf)
+
+# DON'T USE BELOW JUST LEAVING SO YOU KNOW NOT TO USE THIS UNTIL WE DONE FAM....-----
+
+# keep irrelevant, just need to drop one of the Residue_Code columns and rename
+# 
+# w3 <- merge(w1,w2,by.x = "Residue_Code")
+# xboth = intersect(rownames(w1),rownames(w2)) #good, gets all common residue names I guess
+# yy = cbind(w1[xboth,],w2[xboth,])
+# yboth = rbin
+# 
+# InBoth = intersect(colnames(df1), colnames(df2))
+# df3=rbind(df1[,InBoth], df2[,InBoth])
+# df3
+#   
+#    mergedDF <- merge(eval(parse(text = paste(activeLigand,"_pdbCodesDf",sep = ""))),
+#                      eval(parse(text = paste(activeLigand,"_sourceOrganismDf",sep = ""))),
+#                      by.x = "PDB_ID")
+#    
+
 
 
 # 3. Construct Plots/Graphs (NOTE: ligandList is altered here!!!) ----------------------------------
 ligandList = list("HEM","HEC","SRM","VERDOHEME")
 for(ligand in 1:(length(ligandList)))
-   {
+{
    activeLigand = ligandList[[ligand]]
    aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
                 main = paste(activeLigand, ": Frequency of Residues within ",angstromDistance,"Å of ",activeLigand,sep = ""),
@@ -309,30 +391,30 @@ for(ligand in 1:(length(ligandList)))
       labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
    print(cabplot)
    
-   angleplot <- ggplot(eval(parse(text=paste(activeLigand,"_planar_angles_DF",sep=""))), aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
-      geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles of Residues v. ",activeLigand," in each PDB",sep = ""), x="Residue",y="Angle")
-   print(angleplot)
-   
-# coordinating residue declaration (maybe change by ligand) -------------------
-   coord_Res_ls <- c("CYS","HIS","TYR")
-   
-   tmp_coord_Res_df <- subset(eval(parse(text=paste(activeLigand,"_coord_Res_df",sep = ""))), Residue_Code %in% coord_Res_ls)
-   tmp_coord_Res_df
-   coord_angle_plot <- ggplot(tmp_coord_Res_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
-      geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles of Cys, His, Tyr Residues to ",activeLigand,"",sep=''),
-           x="Residue",y="Angle") +
-      stat_summary(fun.data = mean_sdl, mult =1,geom="pointrange")
-   print(coord_angle_plot)
-   
-   min_dist_angles_plot <- ggplot(eval(parse(text=paste(activeLigand,"_min_dist_df",sep=""))), aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
-      geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ",activeLigand,"", sep=''),
-           x = "Residue",y="Angle") +
-      stat_summary(fun.data = mean_sdl, mult=1,geom="pointrange")
-   print(min_dist_angles_plot)
-   
+   # angleplot <- ggplot(eval(parse(text=paste(activeLigand,"_planar_angles_DF",sep=""))), aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
+   #    geom_violin(trim=FALSE) +
+   #    labs(title = paste(activeLigand,": Angles of Residues v. ",activeLigand," in each PDB",sep = ""), x="Residue",y="Angle")
+   # print(angleplot)
+   # 
+# # coordinating residue declaration (maybe change by ligand) -------------------
+#    coord_Res_ls <- c("CYS","HIS","TYR")
+#    
+#    tmp_coord_Res_df <- subset(eval(parse(text=paste(activeLigand,"_coord_Res_df",sep = ""))), Residue_Code %in% coord_Res_ls)
+#    tmp_coord_Res_df
+#    coord_angle_plot <- ggplot(tmp_coord_Res_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
+#       geom_violin(trim=FALSE) +
+#       labs(title = paste(activeLigand,": Angles of Cys, His, Tyr Residues to ",activeLigand,"",sep=''),
+#            x="Residue",y="Angle") +
+#       stat_summary(fun.data = mean_sdl, mult =1,geom="pointrange")
+#    print(coord_angle_plot)
+#    
+#    min_dist_angles_plot <- ggplot(eval(parse(text=paste(activeLigand,"_min_dist_df",sep=""))), aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
+#       geom_violin(trim=FALSE) +
+#       labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ",activeLigand,"", sep=''),
+#            x = "Residue",y="Angle") +
+#       stat_summary(fun.data = mean_sdl, mult=1,geom="pointrange")
+#    print(min_dist_angles_plot)
+#    
    }
 
 

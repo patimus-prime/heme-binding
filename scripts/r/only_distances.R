@@ -4,10 +4,12 @@ library(tidyr)
 library(ggplot2) #thus far not used 22 June 2021
 library(stringr)
 source("~/heme-binding/scripts/r/addpdbcol.R")
-
+ 
 distancesFn <- function(activeLigand,activeResultPath)
 {
-    
+    activeLigand = "HEM"
+    activeResultPath = "~/heme-binding/results/only_distances/HEM"
+
   # data acquisition ----------------------------------
   setwd(activeResultPath)
   setwd("~/heme-binding/results/only_distances")
@@ -114,13 +116,18 @@ distancesFn <- function(activeLigand,activeResultPath)
   # no it's not: https://stackoverflow.com/questions/21982987/mean-per-group-in-a-data-frame
   
   # 3. Average distance to Fe
-  mean_dist_df <- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID), mean)
+  mean_dist_df <- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID,OnlyDistance_df$Residue_Number,OnlyDistance_df$Residue_Code), mean)
   # rename nasty defaults
   mean_dist_df %>%
     rename(
       PDB_ID = Group.1,
+      Residue_Number = Group.2,
+      Residue_Code = Group.3,
       Mean_Distance = x
     ) -> mean_dist_df
+  
+  
+  
   #hist(mean_dist_df$Mean_Distance) #so, the mean distance across all PDBs
   
   # 4. Median distance to Fe
@@ -233,51 +240,27 @@ distancesFn <- function(activeLigand,activeResultPath)
     geom_violin(trim=FALSE) +
     labs(title = "Nonpolar Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
     stat_summary(fun.data = mean_sdl, mult =1,geom = "pointrange")
-  # 
-  # nonpolar_plot + stat_summary(fun.data = mean_sdl, mult =1, 
-  #                                  geom = "pointrange")
-  # 
-  #
-  # ggplot(nonpolar_res_df,aes(x=Residue_Code,y=Distance, fill=Residue_Code)) +
-  #   geom_violin(trim=FALSE) +
-  #   labs(title = "SUPER Nonpolar Residues to Fe in each PDB - Mean+SD", x="Residue", y="Distance") +
-  #   stat_summary(fun.data = mean_sdl, mult =1, 
-  #                              geom = "pointrange")
-  # 
-  #return(nonpolar_plot)
-  
-  # OPTIonS FOR VIOLIN PLOTS: -----------------------------
-  
-  # p + scale_x_discrete(limits=c("2", "0.5", "1")) #where p is the plot you <- into
-  # could add groups per residue, e.g. full spread v. just minimum
-  
-  #  full example of code:
-  # # Basic violin plot
-  # ggplot(ToothGrowth, aes(x=dose, y=len)) +
-  #   geom_violin(trim=FALSE, fill="gray")+
-  #   labs(title="Plot of length  by dose",x="Dose (mg)", y = "Length")+
-  #   geom_boxplot(width=0.1)+
-  #   theme_classic()
-  # # Change color by groups
-  # dp <- ggplot(ToothGrowth, aes(x=dose, y=len, fill=dose)) +
-  #   geom_violin(trim=FALSE)+
-  #   geom_boxplot(width=0.1, fill="white")+
-  #   labs(title="Plot of length  by dose",x="Dose (mg)", y = "Length")
-  # dp + theme_classic()
   
   
-  
-  
-  # yaaaaaaaay
-  # not going to clean the data yet. But you may use this code from th amino acid freq script: -----------------
+# begin returning ------------
+  #arrange sorts by ascending by default; therefore we get 3 min vals
+  closest3Res_df <- mean_dist_df %>%
+    arrange((Mean_Distance)) %>% 
+    group_by(PDB_ID) %>%
+    slice(1:3)
+  closest3Res_df
   
   # here is why this has become a function: here, we can return all plots and call in main.
   return(list(
-    "dataframe" = OnlyDistance_df,
-    "nonpolar_plot" = nonpolar_plot,
-    "min_dist_violin" = min_dist_violin,
-    "mean_SD_of_minimum_dist_df" = mean_SD_of_min_df,
-    "mean_SD_of_minimum_dist_plot" = mean_SD_distPlot,
-    "distance_Plot" = distancePlot
+    all_distances = OnlyDistance_df,
+    mean_distances = mean_dist_df,
+    closest3Res = closest3Res_df
+    # what we returned before
+    # "dataframe" = OnlyDistance_df,
+    # "nonpolar_plot" = nonpolar_plot,
+    # "min_dist_violin" = min_dist_violin,
+    # "mean_SD_of_minimum_dist_df" = mean_SD_of_min_df,
+    # "mean_SD_of_minimum_dist_plot" = mean_SD_distPlot,
+    # "distance_Plot" = distancePlot
   ))
 }
