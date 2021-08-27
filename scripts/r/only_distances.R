@@ -7,12 +7,12 @@ source("~/heme-binding/scripts/r/addpdbcol.R")
  
 distancesFn <- function(activeLigand,activeResultPath)
 {
-    activeLigand = "HEM"
-    activeResultPath = "~/heme-binding/results/only_distances/HEM"
+    #activeLigand = "HEM"
+    #activeResultPath = "~/heme-binding/results/only_distances/HEM"
 
   # data acquisition ----------------------------------
   setwd(activeResultPath)
-  setwd("~/heme-binding/results/only_distances")
+  #setwd("~/heme-binding/results/only_distances")
   
   # import all the shit that's been processed
   # currently using results specific file, all of type .txt; therefore:
@@ -249,6 +249,19 @@ distancesFn <- function(activeLigand,activeResultPath)
     group_by(PDB_ID) %>%
     slice(1:3)
   closest3Res_df
+  
+# convert everything to factors before returning
+  # nope do it in main, other DFs' are also not factors
+  # but they're also able to changed??
+  
+  closest3Res_df <- mutate_if(closest3Res_df, is.character,as.factor)
+  closest3Res_df <- mutate_if(closest3Res_df, is.numeric,as.factor)
+  
+  mean_dist_df <- mutate_if(mean_dist_df, is.numeric,as.factor)
+  mean_dist_df <- mutate_if(mean_dist_df, is.numeric,as.factor)
+  
+  OnlyDistance_df <- mutate_if(OnlyDistance_df, is.numeric,as.factor)
+  OnlyDistance_df <- mutate_if(OnlyDistance_df, is.numeric,as.factor)
   
   # here is why this has become a function: here, we can return all plots and call in main.
   return(list(

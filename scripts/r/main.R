@@ -275,12 +275,16 @@ polar_ref_ls <- c("ARG","ASN","ASP","ASX","CYS","GLU","GLN","HIS","LYS",
 # w <- as.data.frame(HEM_distList$all_distances)
 # w
 # z <- v
+
+HEM_distList$closest3Res
+HEC_distList$closest3Res
 ligandList = list("HEM","HEC","SRM","VERDOHEME")
 for(ligand in 1:(length(ligandList)))
 {
    activeLigand = ligandList[[ligand]]
    # may need to set shit as factor etc.
    #activeLigand = "HEM"
+   #activeLigand = "HEC"
    print(activeLigand)
    #assign(paste(activeLigand,"_sourceOrganismDf",sep=""),sourceOrganismDf)
    #eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
@@ -289,6 +293,9 @@ for(ligand in 1:(length(ligandList)))
    tmp_meanDist <- eval(parse(text = (paste(activeLigand,"_distList$mean_distances",sep=""))))
    tmp_CAB <-  eval(parse(text = (paste(activeLigand,"_CACBFe_DF",sep=""))))
    tmp_closest3 <-  eval(parse(text = (paste(activeLigand,"_distList$closest3Res",sep=""))))
+   tmp_closest3
+   HEM_distList$closest3Res
+   HEC_distList$closest3Res
    # careful not to use accidentally use distance on the planar angles DF until we've removed it!
    tmp_planar <-  eval(parse(text = (paste(activeLigand,"_planar_angles_DF",sep=""))))
    print("tmps set")
@@ -386,10 +393,46 @@ for(ligand in 1:(length(ligandList)))
         col = "lightgreen"
         )
    
+   # dubious if this continues to be included Aug 27 2021
    cabplot <- ggplot(eval(parse(text=paste(activeLigand,"_CACBFe_DF",sep=''))),
                        aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   geom_violin(trim=FALSE) +
       labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
    print(cabplot)
+   
+   # below can be traced via reliable distance 
+   # note on Residue_Code.x below: easier v. renaming 4 dataframes above lololol
+   activeLigand = "HEM"
+   ztmp <- eval(parse(text=paste(activeLigand,"_allDistPlanarDf",sep='')))
+   ztmp %>%
+      rename(
+         Residue_Code = Residue_Code.x
+      ) -> ztmp
+   ztmp
+   zp <- ggplot(ztmp,aes(x=Residue_Code,y=Angle,fill=Residue_Code)) + geom_violin()
+   print(zp)
+   
+   ztmp <- mutate_if(ztmp,is.character,as.factor)
+   zx <- ggplot(ztmp,
+          aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
+   print(zx)
+   planarAllPlot <- ggplot(eval(parse(text=paste(activeLigand,"_allDistPlanarDf",sep=''))),
+                           aes(x=Residue_Code.x,y=Angle,fill=Residue_Code.x)) +   
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
+   print(planarAllPlot)
+   
+   
+   planarMinPlot <-ggplot(eval(parse(text = paste(activeLigand,"_")))) 
+   
+   # 
+   # cabAllPlot <-
+   # cabMinPlot <- 
+   # 
+   # 
+   # 
+   #HEM_allDistPlanarDf
    
    # angleplot <- ggplot(eval(parse(text=paste(activeLigand,"_planar_angles_DF",sep=""))), aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
    #    geom_violin(trim=FALSE) +

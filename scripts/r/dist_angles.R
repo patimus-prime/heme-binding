@@ -65,11 +65,11 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    
    # aa_num_raw_df contains all lines with the residues and residue number.
    combined_results_df %>%
-     filter(grepl('currently processing residue...', V1)) -> aa_num_raw_df
+      filter(grepl('currently processing residue...', V1)) -> aa_num_raw_df
    
    # angle_raw_df contains all lines listing residue num and angle
    combined_results_df %>%
-     filter(grepl('Angle', V1)) -> angle_raw_df
+      filter(grepl('Angle', V1)) -> angle_raw_df
    # 'and a" can be used to get the residue number.
    
    # PDB ID will be needed to correctly link results/avoid doubling up on the residue #s
@@ -81,9 +81,9 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    # angle row # == dist row #, so we're doing great so far. GJ me.
    
    distance_raw_df %>%
-     separate(V1, c(NA,"Residue_Number"), "to a") -> Distance_df
+      separate(V1, c(NA,"Residue_Number"), "to a") -> Distance_df
    Distance_df %>%
-     separate(Residue_Number, c('Residue_Number', 'Distance'), "is ") -> Distance_df
+      separate(Residue_Number, c('Residue_Number', 'Distance'), "is ") -> Distance_df
    #volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data))
    Distance_df$Distance <- as.numeric(as.character(Distance_df$Distance))
    Distance_df$Residue_Number <- as.numeric(as.character(Distance_df$Residue_Number))
@@ -96,9 +96,9 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    #aa and num: same thing as above. use '...' to get the line. Then split by ' '
    # NOTE: DO NOT SPLIT BY '...' ALONE. IT FUCKS EVERYTHING UP, likely due to regular expressions
    aa_num_raw_df %>%
-     separate(V1, c(NA,"another_step_req"), "processing residue...") -> aa_num_raw_df
+      separate(V1, c(NA,"another_step_req"), "processing residue...") -> aa_num_raw_df
    aa_num_raw_df %>%
-     separate(another_step_req, c('Residue_Code','Residue_Number'),' ') -> aa_num_raw_df
+      separate(another_step_req, c('Residue_Code','Residue_Number'),' ') -> aa_num_raw_df
    # next two lines to get JUST the number in the second column.
    regexp <- "[[:digit:]]+"
    str_extract(aa_num_raw_df$Residue_Number,regexp) -> aa_num_raw_df$Residue_Number
@@ -110,10 +110,10 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    # FINALLY! We get angle!
    # delimiter ' and ' to get the: aNN and angle.
    angle_raw_df %>%
-     separate(V1, c(NA,'raw_angle_lines'), 'and ') -> angle_raw_df
+      separate(V1, c(NA,'raw_angle_lines'), 'and ') -> angle_raw_df
    #split by ' is '
    angle_raw_df %>%
-     separate(raw_angle_lines, c('Residue_Number','Angle'),' is ') -> Angles_df
+      separate(raw_angle_lines, c('Residue_Number','Angle'),' is ') -> Angles_df
    
    str_extract(Angles_df$Residue_Number,regexp) -> Angles_df$Residue_Number
    Angles_df$Residue_Number <- as.numeric(as.character(Angles_df$Residue_Number))
@@ -131,6 +131,11 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    #omega_df <- merge(Distance_df,Angles_df,by = c("PDB_ID","Residue_Number"))#,"Residue_Number"))
    omega_df <- merge(Angles_df,ResCode_ResNum_df, by = c("PDB_ID","Residue_Number"))
    planarAnglesDF <- omega_df
+   planarAnglesDF <- mutate_if(planarAnglesDF, is.character,as.factor)
+   planarAnglesDF <- mutate_if(planarAnglesDF, is.numeric,as.factor)
+   # 
+   # closest3Res_df <- mutate_if(closest3Res_df, is.character,as.factor)
+   # closest3Res_df <- mutate_if(closest3Res_df, is.numeric,as.factor)
    
    #Distance_and_Angles_df <- omega_df
    
@@ -181,7 +186,7 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    # 
    
    
-
+   
    # CLEANUP ---------------------------
    rm(awesome_df,
       combined_results_df,

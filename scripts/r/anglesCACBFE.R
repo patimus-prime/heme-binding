@@ -63,5 +63,10 @@ CACBFE_fn <- function(activeLigand,activeResultPath)
   
   CACBFE_df <- merge(ResID_df,Angle_df,by = c("PDB_ID","Residue_Number"))
 
+  CACBFE_df <- mutate_if(CACBFE_df, is.character,as.factor)
+  CACBFE_df <- mutate_if(CACBFE_df, is.numeric,as.factor)
+  # closest3Res_df <- mutate_if(closest3Res_df, is.character,as.factor)
+  # closest3Res_df <- mutate_if(closest3Res_df, is.numeric,as.factor)
+  # 
   return(CACBFE_df)  
 }
