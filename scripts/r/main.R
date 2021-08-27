@@ -392,29 +392,56 @@ for(ligand in 1:(length(ligandList)))
 # vol5A$ang = '5'
 # vboth <- rbind(vol7A,vol5A)
 
-tmp7A <- data.frame(dd = HEM_aaFreqDf)
-tmp5A <- data.frame(dd = ls5A$HEM_5A_aaFreqDf)
+tmp7A <- data.frame(df7A = HEM_aaFreqDf)
+tmp5A <- data.frame(df5A = ls5A$HEM_5A_aaFreqDf)
 tmp7A$ang = '7'
 tmp5A$ang = '5'
-tmpBoth <- rbind(tmp7A,tmp5A)
-activeLigand = "HEM"
+head(tmp7A)
+tmp7A %>%
+   rename(
+      df5A.Residue = df7A.Residue
+   ) -> tmp7A
+merge(tmp5A,tmp7A,by.x = 'df5A.Residue') -> tmpBoth
+tmpBoth %>%
+   rename(
+      Residue = df5A.Residue
+   ) -> tmpBoth
+tmpBoth
+library(reshape)
+to_plot <- melt((data.frame(x=tmpBoth$Residue,y1=tmpBoth$df5A.Freq,y2=tmpBoth$df7A.Freq)),id="x")
 
-ggplot(tmpBoth,aes(dd.Residue,dd.Freq)) +
-   geom_bar()#aes(fill=ang))#,position = 'identity', alpha=.3)
+to_plot <- arrange(to_plot, desc(value))
+to_plot
 
+VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
+
+print(ggplot(to_plot,aes(x= reorder(x,-value),y=value,fill=variable)) + 
+         geom_bar(stat="identity",position = "dodge", alpha=.3))
+#position = dodge alt
+
+# head(tmp7A)
+# tmpBoth <- rbind(tmp7A,tmp5A)
+# activeLigand = "HEM"
+# zuperduper <- data.frame(HEM_aaFreqDf)
+# 
+# ggplot(tmpBoth,aes(dd.Residue,dd.Freq)) +
+#    geom_bar()#aes(fill=ang))#,position = 'identity', alpha=.3)
+# 
+# print(ggplot(melted,aes(x=x,y=value,fill=variable)) + 
+#          geom_bar(stat="identity",position = "identity", alpha=.3))
 
 # ggplot(diamonds, aes(clarity, fill = cut)) + 
 #    geom_bar(position = 'identity', alpha = .3)
 
-
-z_aafreqplotXtreme <- barplot(tmpBoth,
-                      main = paste(activeLigand, ": Frequency of Residues within ",angstromDistance,"Å of ",activeLigand,sep = ""),
-                      xlab = "Residues",
-                      ylab = "Frequency",
-                      #col = "orange",
-                      cex.names = 0.8, #to fit the screen of my poor laptop
-                      names.arg = 
-                         eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
+# 
+# z_aafreqplotXtreme <- barplot(tmpBoth,
+#                       main = paste(activeLigand, ": Frequency of Residues within ",angstromDistance,"Å of ",activeLigand,sep = ""),
+#                       xlab = "Residues",
+#                       ylab = "Frequency",
+#                       #col = "orange",
+#                       cex.names = 0.8, #to fit the screen of my poor laptop
+#                       names.arg = 
+#                          eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
 
 
 ligandList = list("HEM","HEC","SRM","VERDOHEME")
