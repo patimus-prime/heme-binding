@@ -132,7 +132,7 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    omega_df <- merge(Angles_df,ResCode_ResNum_df, by = c("PDB_ID","Residue_Number"))
    planarAnglesDF <- omega_df
    planarAnglesDF <- mutate_if(planarAnglesDF, is.character,as.factor)
-   planarAnglesDF <- mutate_if(planarAnglesDF, is.numeric,as.factor)
+   #planarAnglesDF <- mutate_if(planarAnglesDF, is.numeric,as.factor)
    # 
    # closest3Res_df <- mutate_if(closest3Res_df, is.character,as.factor)
    # closest3Res_df <- mutate_if(closest3Res_df, is.numeric,as.factor)

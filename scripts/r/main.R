@@ -275,9 +275,12 @@ polar_ref_ls <- c("ARG","ASN","ASP","ASX","CYS","GLU","GLN","HIS","LYS",
 # w <- as.data.frame(HEM_distList$all_distances)
 # w
 # z <- v
+# 
+# HEM_distList$closest3Res
+# HEC_distList$closest3Res
 
-HEM_distList$closest3Res
-HEC_distList$closest3Res
+
+# INTERSECTING DISTANCES AND ANGLES --------------------
 ligandList = list("HEM","HEC","SRM","VERDOHEME")
 for(ligand in 1:(length(ligandList)))
 {
@@ -399,106 +402,38 @@ for(ligand in 1:(length(ligandList)))
       labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
    print(cabplot)
    
-   # below can be traced via reliable distance 
-   # note on Residue_Code.x below: easier v. renaming 4 dataframes above lololol
-   activeLigand = "HEM"
-   ztmp <- eval(parse(text=paste(activeLigand,"_allDistPlanarDf",sep='')))
-   ztmp %>%
-      rename(
-         Residue_Code = Residue_Code.x
-      ) -> ztmp
-   ztmp
-   ztmp <- subset(ztmp,select = -c(Residue_Code.y))
-   ztmp
-   ztmp <- subset(ztmp,select = -c(Mean_Distance))
-   ztmp
-   ztmp <- subset(ztmp,selct = -c(Residue_Number))
-   #somehow Residue_Code converted back to chr type?
+# plots of intersected distances with...
    
-   ztmp <- mutate_if(ztmp, is.character,as.factor)
-   
-   cols <- names(mydf)[1:2]
-   mydf[,(cols) := round(.SD,1), .SDcols=cols]
-   mydf
-   #try rounding...
-   ztmp$Mean_Distance <- as.numeric(as.character(ztmp$Mean_Distance))
-   ztmp$Mean_Distance <- round(ztmp$Mean_Distance,2)
-   #nope
-   ztmp
-   znew <- subset(ztmp,select=c(Residue_Code,Angle))
-   rownames(znew) <- NULL
-   znew
-   
-   znew %>%
-      group_by(Residue_Code) -> zlist
-   ggplot(znew,aes(x=Residue_Code,y=as.numeric(as.character(Angle)), fill=Residue_Code)) + 
-      geom_violin(trim = FALSE) #+
-      #geom_path(aes(group = Residue_Code))
-   
-   ztmp <- mutate_if(ztmp, is.character,as.factor)
-   
-   zp <- ggplot(ztmp,
-                aes(x=Residue_Code,y=Angle,fill=Residue_Code)) + geom_violin() +
-      labs(title = paste(activeLigand,":horrible plot ",activeLigand,sep=''), x="Residue",y="Angle")
-   print(zp)
-   
-   ztmp <- mutate_if(ztmp,is.character,as.factor)
-   ztmp
-   ggplot(ztmp, aes(factor(Angle),factor(Residue_Code),fill=Residue_Code)) +
-      geom_violin()
-   ggplot(ztmp,aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
-      geom_boxplot()
-   
-   zx <- ggplot(ztmp,
-          aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   
-      geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
-   print(zx)
-   
-   
-   
-   
+   # all planar angles   
+   # yeah keep the as.numeric(as.character),easiest way to solve the problem
    planarAllPlot <- ggplot(eval(parse(text=paste(activeLigand,"_allDistPlanarDf",sep=''))),
-                           aes(x=Residue_Code.x,y=Angle,fill=Residue_Code.x)) +   
+                           aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +   
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
+      labs(title = paste(activeLigand,": allPLanar Plot ",activeLigand,sep=''), x="Residue",y="Angle")
    print(planarAllPlot)
    
+   # closest residues' planar angles
+   planarMinPlot <- ggplot(eval(parse(text=paste(activeLigand,"_minDistPlanarDf",sep=''))),
+                           aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +
+      geom_violin(trim = FALSE) +
+      labs(title = paste(activeLigand,": minPlanar Plot",activeLigand,sep = ''),x="Residue",y="Angle")
+   print(planarMinPlot)
    
-   planarMinPlot <-ggplot(eval(parse(text = paste(activeLigand,"_")))) 
+   # all cabs with distance intersect
+   cabAllPlot <- ggplot(eval(parse(text=paste(activeLigand,"_allDistCabDf",sep=''))),
+                        aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +   
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": allCab Plot ",activeLigand,sep=''), x="Residue",y="Angle")
+   print(cabAllPlot)
    
-   # 
-   # cabAllPlot <-
-   # cabMinPlot <- 
-   # 
-   # 
-   # 
-   #HEM_allDistPlanarDf
+   # cabs for closest 3 residues
+   cabMinPlot <- ggplot(eval(parse(text=paste(activeLigand,"_minDistCabDf",sep=''))),
+                        aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +   
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": minCab Plot ",activeLigand,sep=''), x="Residue",y="Angle")
+   print(cabMinPlot)
    
-   # angleplot <- ggplot(eval(parse(text=paste(activeLigand,"_planar_angles_DF",sep=""))), aes(x=Residue_Code, y=Angle, fill = Residue_Code)) +
-   #    geom_violin(trim=FALSE) +
-   #    labs(title = paste(activeLigand,": Angles of Residues v. ",activeLigand," in each PDB",sep = ""), x="Residue",y="Angle")
-   # print(angleplot)
-   # 
-# # coordinating residue declaration (maybe change by ligand) -------------------
-#    coord_Res_ls <- c("CYS","HIS","TYR")
-#    
-#    tmp_coord_Res_df <- subset(eval(parse(text=paste(activeLigand,"_coord_Res_df",sep = ""))), Residue_Code %in% coord_Res_ls)
-#    tmp_coord_Res_df
-#    coord_angle_plot <- ggplot(tmp_coord_Res_df, aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
-#       geom_violin(trim=FALSE) +
-#       labs(title = paste(activeLigand,": Angles of Cys, His, Tyr Residues to ",activeLigand,"",sep=''),
-#            x="Residue",y="Angle") +
-#       stat_summary(fun.data = mean_sdl, mult =1,geom="pointrange")
-#    print(coord_angle_plot)
-#    
-#    min_dist_angles_plot <- ggplot(eval(parse(text=paste(activeLigand,"_min_dist_df",sep=""))), aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +
-#       geom_violin(trim=FALSE) +
-#       labs(title = paste(activeLigand, ": Angles of each PDB's closest residue to ",activeLigand,"", sep=''),
-#            x = "Residue",y="Angle") +
-#       stat_summary(fun.data = mean_sdl, mult=1,geom="pointrange")
-#    print(min_dist_angles_plot)
-#    
+   
    }
 
 
