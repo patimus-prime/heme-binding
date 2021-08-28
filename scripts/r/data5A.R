@@ -179,7 +179,7 @@ for(ligand in 1:(length(ligandList)))
   p2DF <- eval(parse(text = paste(activeLigand,"_pdbCodesDf$PDB_ID",sep = "")))
   p2DF <- as.data.frame(p2DF)
   p2DF %>%
-    rename(PDB_ID = p2DF) -> p2DF #takes care of how R names stuff by default
+    dplyr::rename(PDB_ID = p2DF) -> p2DF #takes care of how R names stuff by default
   
   # V
   mergedDF <- merge(mergedDF,
@@ -206,14 +206,14 @@ for(ligand in 1:(length(ligandList)))
                 eval(parse(text = paste(activeLigand,"_pocketSA_df",sep = ""))),
                 by.x = "PDB_ID")
   
-  # rename a little so we can be presentable, still avoid spaces no time for debugging
+  # dplyr::rename a little so we can be presentable, still avoid spaces no time for debugging
   p1DF %>%
-    rename(
+    dplyr::rename(
       Molecule_Name = 'Molecule Name'
     ) -> p1DF
   
   p2DF %>%
-    rename(
+    dplyr::rename(
       Volume_Data = volume_data
     ) -> p2DF
   
@@ -225,13 +225,13 @@ for(ligand in 1:(length(ligandList)))
 
 # merging VER/VEA --------
 VEA_MERGED_DF %>%
-  rename(
+  dplyr::rename(
     VXX_Excluded_SA = VEA_Excluded_SA,
     VXX_Accessible_SA = VEA_Accessible_SA
   ) -> VEA_MERGED_DF
 
 VER_MERGED_DF %>%
-  rename(
+  dplyr::rename(
     VXX_Excluded_SA = VER_Excluded_SA,
     VXX_Accessible_SA = VER_Accessible_SA
   ) -> VER_MERGED_DF
@@ -239,7 +239,7 @@ VER_MERGED_DF %>%
 VERDOHEME_MERGED_DF <- rbind(VEA_MERGED_DF,VER_MERGED_DF)
 
 VERDOHEME_MERGED_DF %>%
-  rename(
+  dplyr::rename(
     VERDOHEME_Excluded_SA = VXX_Excluded_SA,
     VERDOHEME_Accessible_SA = VXX_Accessible_SA
   ) -> VERDOHEME_MERGED_DF
@@ -264,7 +264,7 @@ verdotemp <- tapply(VERDOHEME_aaFreqDf$Freq,VERDOHEME_aaFreqDf$Residue,FUN=sum)
 verdotemp <- as.data.frame(verdotemp)
 VERDOHEME_aaFreqDf <- tibble::rownames_to_column(verdotemp, "Residue")
 VERDOHEME_aaFreqDf %>%
-  rename(
+  dplyr::rename(
     Freq = verdotemp
   ) -> VERDOHEME_aaFreqDf
 #almost done, have to order it:

@@ -13,6 +13,9 @@
 # might end up doing that part by itself
 # -------------------------------------------------------------
 #  Packages used; and comments if kableExtra gives problems ---------------
+
+#detach("package:reshape", unload=TRUE) #maybe avoid the problem anyway lol
+
 library(dplyr) 
 library(data.table)
 library(tidyr)
@@ -38,7 +41,6 @@ library(kableExtra)
 source("~/heme-binding/scripts/r/data5A.R") 
 ls5A <- data5A_fn()
 
-
 # DECLARATIONS --------------
 # warning: ligandList is altered at the end of merging dataframes below
 # this is because VER and VEA are merged to 'VERDOHEME'
@@ -61,7 +63,6 @@ for(ligand in 1:(length(ligandList)))
    # paste() automates df name creation, second arg is the df assigned. BAM!
    assign(paste(activeLigand,"_maxVolDf",sep=""), volume_dfs$maxVolDf)
    }
-
 # AA Frequency -----------------
 source("~/heme-binding/scripts/r/aa_frequency.R")
 resultPath = "~/heme-binding/results/aa_frequency/"
@@ -73,7 +74,7 @@ for(ligand in 1:(length(ligandList)))
    aa_freq_df <- aaFreq_fn(activeLigand,activeResultPath)
    assign(paste(activeLigand,"_aaFreqDf",sep=""), aaFreq_fn(activeLigand,activeResultPath))
 }
-   
+
 # Ligand surface area ----------------------
 source("~/heme-binding/scripts/r/ligandSA.R")
 resultPath = "~/heme-binding/results/ligandSA/"
@@ -176,8 +177,8 @@ for(ligand in 1:(length(ligandList)))
    p1DF <- mergedDF #just codes and source orgs, done
    p2DF <- eval(parse(text = paste(activeLigand,"_pdbCodesDf$PDB_ID",sep = "")))
    p2DF <- as.data.frame(p2DF)
-   p2DF %>%
-      rename(PDB_ID = p2DF) -> p2DF #takes care of how R names stuff by default
+   p2DF %>% 
+      dplyr::rename(PDB_ID = p2DF) -> p2DF #takes care of how R names stuff by default
    
    # V
    mergedDF <- merge(mergedDF,
@@ -206,12 +207,12 @@ for(ligand in 1:(length(ligandList)))
 
    # rename a little so we can be presentable, still avoid spaces no time for debugging
    p1DF %>%
-      rename(
+      dplyr::rename(
          Molecule_Name = 'Molecule Name'
       ) -> p1DF
    
    p2DF %>%
-      rename(
+      dplyr::rename(
          Volume_Data = volume_data
       ) -> p2DF
    
@@ -223,13 +224,13 @@ for(ligand in 1:(length(ligandList)))
 
 # merging VER/VEA --------
 VEA_MERGED_DF %>%
-   rename(
+   dplyr::rename(
       VXX_Excluded_SA = VEA_Excluded_SA,
       VXX_Accessible_SA = VEA_Accessible_SA
    ) -> VEA_MERGED_DF
 
 VER_MERGED_DF %>%
-   rename(
+   dplyr::rename(
       VXX_Excluded_SA = VER_Excluded_SA,
       VXX_Accessible_SA = VER_Accessible_SA
    ) -> VER_MERGED_DF
@@ -237,7 +238,7 @@ VER_MERGED_DF %>%
 VERDOHEME_MERGED_DF <- rbind(VEA_MERGED_DF,VER_MERGED_DF)
 
 VERDOHEME_MERGED_DF %>%
-   rename(
+   dplyr::rename(
       VERDOHEME_Excluded_SA = VXX_Excluded_SA,
       VERDOHEME_Accessible_SA = VXX_Accessible_SA
    ) -> VERDOHEME_MERGED_DF
@@ -262,7 +263,7 @@ verdotemp <- tapply(VERDOHEME_aaFreqDf$Freq,VERDOHEME_aaFreqDf$Residue,FUN=sum)
 verdotemp <- as.data.frame(verdotemp)
 VERDOHEME_aaFreqDf <- tibble::rownames_to_column(verdotemp, "Residue")
 VERDOHEME_aaFreqDf %>%
-   rename(
+   dplyr::rename(
       Freq = verdotemp
    ) -> VERDOHEME_aaFreqDf
 #almost done, have to order it:
@@ -381,81 +382,55 @@ for(ligand in 1:(length(ligandList)))
 # plot( p2, col=rgb(1,0,0,1/4), add=T)  # second
 
 # 3. Construct Plots/Graphs (NOTE: ligandList is altered here!!!) ----------------------------------
-# 
-# library(ggplot2)
-# ggplot(diamonds, aes(clarity, fill = cut)) + 
-#    geom_bar(position = 'identity', alpha = .3)
 
-# vol7A <- data.frame(v = HEM_MERGED_DF$volume_data)
-# vol5A <- data.frame(v = ls5A$HEM_5A_MERGED_DF$volume_data)
-# vol7A$ang = '7'
-# vol5A$ang = '5'
-# vboth <- rbind(vol7A,vol5A)
-
-tmp7A <- data.frame(df7A = HEM_aaFreqDf)
-tmp5A <- data.frame(df5A = ls5A$HEM_5A_aaFreqDf)
-tmp7A$ang = '7'
-tmp5A$ang = '5'
-head(tmp7A)
-tmp7A %>%
-   rename(
-      df5A.Residue = df7A.Residue
-   ) -> tmp7A
-merge(tmp5A,tmp7A,by.x = 'df5A.Residue') -> tmpBoth
-tmpBoth %>%
-   rename(
-      Residue = df5A.Residue
-   ) -> tmpBoth
-tmpBoth
-library(reshape)
-to_plot <- melt((data.frame(x=tmpBoth$Residue,y1=tmpBoth$df5A.Freq,y2=tmpBoth$df7A.Freq)),id="x")
-
-to_plot <- arrange(to_plot, desc(value))
-to_plot
-
-VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
-
-print(ggplot(to_plot,aes(x= reorder(x,-value),y=value,fill=variable)) + 
-         geom_bar(stat="identity",position = "dodge", alpha=.3))
-#position = dodge alt
-
-# head(tmp7A)
-# tmpBoth <- rbind(tmp7A,tmp5A)
-# activeLigand = "HEM"
-# zuperduper <- data.frame(HEM_aaFreqDf)
-# 
-# ggplot(tmpBoth,aes(dd.Residue,dd.Freq)) +
-#    geom_bar()#aes(fill=ang))#,position = 'identity', alpha=.3)
-# 
-# print(ggplot(melted,aes(x=x,y=value,fill=variable)) + 
-#          geom_bar(stat="identity",position = "identity", alpha=.3))
-
-# ggplot(diamonds, aes(clarity, fill = cut)) + 
-#    geom_bar(position = 'identity', alpha = .3)
-
-# 
-# z_aafreqplotXtreme <- barplot(tmpBoth,
-#                       main = paste(activeLigand, ": Frequency of Residues within ",angstromDistance,"Å of ",activeLigand,sep = ""),
-#                       xlab = "Residues",
-#                       ylab = "Frequency",
-#                       #col = "orange",
-#                       cex.names = 0.8, #to fit the screen of my poor laptop
-#                       names.arg = 
-#                          eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
 
 
 ligandList = list("HEM","HEC","SRM","VERDOHEME")
 for(ligand in 1:(length(ligandList)))
 {
    activeLigand = ligandList[[ligand]]
-   aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
-                main = paste(activeLigand, ": Frequency of Residues within ",angstromDistance,"Å of ",activeLigand,sep = ""),
-                xlab = "Residues",
-                ylab = "Frequency",
-                col = "orange",
-                cex.names = 0.8, #to fit the screen of my poor laptop
-                names.arg = 
-                   eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
+   # aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
+   #              main = paste(activeLigand, ": Frequency of Residues within ",angstromDistance,"Å of ",activeLigand,sep = ""),
+   #              xlab = "Residues",
+   #              ylab = "Frequency",
+   #              col = "orange",
+   #              cex.names = 0.8, #to fit the screen of my poor laptop
+   #              names.arg = 
+   #                 eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
+   # 
+   # AA FReq ----
+   rm(tmp5A,tmp7A,tmpBoth)
+   head(HEM_aaFreqDf)
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_aaFreqDf",sep="")))))
+                          #HEM_aaFreqDf)
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_aaFreqDf",sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   head(tmp7A)
+   tmp7A
+   tmp7A %>%
+      dplyr::rename(
+         df5A.Residue = df7A.Residue
+      ) -> tmp7A
+   merge(tmp5A,tmp7A,by = 'df5A.Residue') -> tmpBoth
+   #alternative: left_join(tmp5A,tmp7A,by='df5A.Residue')
+   tmpBoth %>%
+      dplyr::rename(
+         Residue = df5A.Residue
+      ) -> tmpBoth
+   tmpBoth
+   
+   library(reshape) #ONLY LOAD THIS HERE. IF YOU LOAD EALIER,
+   # ALL CASE OF RENAME() FROM DPLYR PACKAGE IN ALL SCRIPTS GETS FUCKED UP.
+   # PUTTING IT HERE, ONLY BELOW THIS LIBRARY LOAD DO YOU NEED NEED TO SPECIFY DPLYR::XXX
+   
+   to_plot <- reshape::melt((data.frame(x=tmpBoth$Residue,y1=tmpBoth$df5A.Freq,y2=tmpBoth$df7A.Freq)),id="x")
+#   detach("package:reshape", unload=TRUE) #maybe avoid the problem anyway lol
+   
+   print(ggplot(to_plot,aes(x= reorder(x,-value),y=value,fill=variable)) + 
+            geom_bar(stat="identity",position = "identity", alpha=.4) +
+            labs(title = activeLigand))
+   
    
    
    # vol7A <- data.frame(v = HEM_MERGED_DF$volume_data)
@@ -554,8 +529,8 @@ v1df <- VERDOHEME_MERGED_DF$PDB_ID
 v1df <- cbind(v1df,VERDOHEME_MERGED_DF$`Molecule Name`)
 v1df <- cbind(v1df,VERDOHEME_MERGED_DF$Source_Organism)
 v1df <- as.data.frame(v1df)
-v1df %>%
-   rename(
+v1df %>% 
+   dplyr::rename(
       PDB_ID = v1df,
       Molecule_Name = V2,
       Source_Organism = V3
@@ -569,7 +544,7 @@ v2df <- cbind(v2df,VERDOHEME_MERGED_DF$Pocket_Excluded_SA)
 v2df <- cbind(v2df,VERDOHEME_MERGED_DF$Pocket_Accessible_SA)
 v2df <- as.data.frame(v2df)
 v2df %>%
-   rename(
+   dplyr::rename(
       PDB_ID = v2df,
       Volume_Data = V2,
       VERDOHEME_EXCLUDED_SA = V3,

@@ -119,7 +119,7 @@ distancesFn <- function(activeLigand,activeResultPath)
   mean_dist_df <- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID,OnlyDistance_df$Residue_Number,OnlyDistance_df$Residue_Code), mean)
   # rename nasty defaults
   mean_dist_df %>%
-    rename(
+    dplyr::rename(
       PDB_ID = Group.1,
       Residue_Number = Group.2,
       Residue_Code = Group.3,
@@ -134,7 +134,7 @@ distancesFn <- function(activeLigand,activeResultPath)
   median_dist_df <- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID), median)
   #rename
   median_dist_df %>%
-    rename(
+    dplyr::rename(
       PDB_ID = Group.1,
       Median_Distance = x
     ) -> median_dist_df
