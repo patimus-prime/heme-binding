@@ -250,9 +250,6 @@ VERDOHEME_distList <- list(
    "mean_distances" = rbind(VEA_distList$mean_distances,VER_distList$mean_distances),
    "closest3Res" = rbind(VEA_distList$closest3Res,VER_distList$closest3Res)
 )
-#VERDOHEME_distList$mean_distances
-#VERDOHEME_coord_Res_df <- rbind(VEA_coord_Res_df,VER_coord_Res_df)
-#VERDOHEME_min_dist_df <- rbind(VEA_min_dist_df, VER_min_dist_df)
 
 # === ALL OF THE BELOW JUST TO MERGE THESE TWO FOR AMINO ACID...
 
@@ -277,14 +274,6 @@ nonpolar_ref_ls <- c("LEU", "PHE", "ALA", "VAL", "ILE", "TYR", "GLY","GLX")
 polar_ref_ls <- c("ARG","ASN","ASP","ASX","CYS","GLU","GLN","HIS","LYS",
                   "MET","PRO","SER","THR","TRP")
 
-# v <- as.data.frame(HEM_distList$mean_distances)
-# w <- as.data.frame(HEM_distList$all_distances)
-# w
-# z <- v
-# 
-# HEM_distList$closest3Res
-# HEC_distList$closest3Res
-
 
 # INTERSECTING DISTANCES AND ANGLES --------------------
 ligandList = list("HEM","HEC","SRM","VERDOHEME")
@@ -292,12 +281,7 @@ for(ligand in 1:(length(ligandList)))
 {
    activeLigand = ligandList[[ligand]]
    # may need to set shit as factor etc.
-   #activeLigand = "HEM"
-   #activeLigand = "HEC"
    print(activeLigand)
-   #assign(paste(activeLigand,"_sourceOrganismDf",sep=""),sourceOrganismDf)
-   #eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
-   #activeLigand = "SRM"
    
    tmp_meanDist <- eval(parse(text = (paste(activeLigand,"_distList$mean_distances",sep=""))))
    tmp_CAB <-  eval(parse(text = (paste(activeLigand,"_CACBFe_DF",sep=""))))
@@ -308,16 +292,7 @@ for(ligand in 1:(length(ligandList)))
    # careful not to use accidentally use distance on the planar angles DF until we've removed it!
    tmp_planar <-  eval(parse(text = (paste(activeLigand,"_planar_angles_DF",sep=""))))
    print("tmps set")
-   #HEM_planar_angles_DF
-   #    HEM_distList$closest3Res
-   # HEM_CACBFe_DF
-   # # w0 <- HEM_distList$all_distances
-   # w1 <- HEM_distList$mean_distances
-   # w2 <- HEM_CACBFe_DF
-   #HEM_distList$closest3Res
    
-   # use inner_join I think, I loooked through ?inner_join and see a way by mult vectors
-   #tmp_meanDist
    print("start second temps")
    allDistCab <- inner_join(tmp_meanDist,tmp_CAB,by=c("PDB_ID","Residue_Number")) #keep = FALSE does squat here
    minDistCab <- inner_join(tmp_closest3,tmp_CAB,by=c("PDB_ID","Residue_Number"))
@@ -335,51 +310,6 @@ for(ligand in 1:(length(ligandList)))
    rm(tmp_meanDist)
    rm(tmp_planar)
 }
-#assign(paste(activeLigand,"_sourceOrganismDf",sep=""),sourceOrganismDf)
-
-# DON'T USE BELOW JUST LEAVING SO YOU KNOW NOT TO USE THIS UNTIL WE DONE FAM....-----
-
-# keep irrelevant, just need to drop one of the Residue_Code columns and rename
-# 
-# w3 <- merge(w1,w2,by.x = "Residue_Code")
-# xboth = intersect(rownames(w1),rownames(w2)) #good, gets all common residue names I guess
-# yy = cbind(w1[xboth,],w2[xboth,])
-# yboth = rbin
-# 
-# InBoth = intersect(colnames(df1), colnames(df2))
-# df3=rbind(df1[,InBoth], df2[,InBoth])
-# df3
-#   
-#    mergedDF <- merge(eval(parse(text = paste(activeLigand,"_pdbCodesDf",sep = ""))),
-#                      eval(parse(text = paste(activeLigand,"_sourceOrganismDf",sep = ""))),
-#                      by.x = "PDB_ID")
-#    
-
-# 2.9) Get the 5A data so we can make some cool histogram graphs, woo!
-
-# works lol
-
-
-
-# 2.99 Attempt overlapping histograms, HEM Vol first
-# HEM vol very similar - but not so for verdoheme
-# therefore let us see how these work for those ifrst
-# vol7A <- data.frame(v = HEM_MERGED_DF$volume_data)
-# vol5A <- data.frame(v = ls5A$HEM_5A_MERGED_DF$volume_data)
-# vol7A$ang = '7'
-# vol5A$ang = '5'
-# vboth <- rbind(vol7A,vol5A)
-# ggplot(vboth, aes(v,fill=ang)) +
-#    geom_density(alpha=0.2)
-# # i like the density better, the histogram can distort and hide
-# # the differences...
-# ggplot(vboth,aes(v,fill=ang)) +
-#    geom_histogram(alpha = 0.5, aes(y = ..density..), position = 'identity')
-#    
-# p1 <- hist(vol5A$v)
-# p2 <- hist(vol7A$v)
-# plot( p1, col=rgb(0,0,1,1/4))  # first histogram
-# plot( p2, col=rgb(1,0,0,1/4), add=T)  # second
 
 # 3. Construct Plots/Graphs (NOTE: ligandList is altered here!!!) ----------------------------------
 
@@ -389,16 +319,6 @@ ligandList = list("HEM","HEC","SRM","VERDOHEME")
 for(ligand in 1:(length(ligandList)))
 {
    activeLigand = ligandList[[ligand]]
-   # aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
-   #              main = paste(activeLigand, ": Frequency of Residues within ",angstromDistance,"Å of ",activeLigand,sep = ""),
-   #              xlab = "Residues",
-   #              ylab = "Frequency",
-   #              col = "orange",
-   #              cex.names = 0.8, #to fit the screen of my poor laptop
-   #              names.arg = 
-   #                 eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
-   # 
-   
    
    # AA FReq ----
    rm(tmp5A,tmp7A,tmpBoth)
@@ -434,27 +354,7 @@ for(ligand in 1:(length(ligandList)))
             labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep='')) +
             scale_fill_discrete(name = "Distance Cutoff"))
    
-   
-   
-   # vol7A <- data.frame(v = HEM_MERGED_DF$volume_data)
-   # vol5A <- data.frame(v = ls5A$HEM_5A_MERGED_DF$volume_data)
-   # vol7A$ang = '7'
-   # vol5A$ang = '5'
-   # vboth <- rbind(vol7A,vol5A)
-   # ggplot(vboth, aes(v,fill=ang)) +
-   #    geom_density(alpha=0.2)
-   
-   #see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
-   
-   
    # ### VOLUME ####
-   
-   # volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
-   #                     main = paste(activeLigand,": Volume of Binding Pocket (Å³)", sep=""),
-   #                     xlab = "Volume, Å³",
-   #                     ylab = "Frequency",
-   #                     col = "darkmagenta")
-   # 
    
    rm(tmp5A,tmp7A,tmpBoth)
    colName = 'volume_data'
@@ -475,14 +375,6 @@ for(ligand in 1:(length(ligandList)))
    
    # Ligand Excluded Surface Area 
    
-   
-   # LigExcSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Excluded_SA",sep = ""))),
-   #                  main = paste(activeLigand,": Excluded Surface Area of ",activeLigand," (Å²)",sep = ""),
-   #                  xlab = "Excluded Surface Area, Å²",
-   #                  col = "blue")
-   #  
-   
-   #HEM_MERGED_DF$HEM_Excluded_SA
    rm(tmp5A,tmp7A,tmpBoth)
    colName = paste(activeLigand,"_Excluded_SA",sep="")
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
@@ -502,12 +394,7 @@ for(ligand in 1:(length(ligandList)))
    
    
    # Ligand Accessible Surface Area 
-   # LigAccSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Accessible_SA",sep = ""))),
-   #      main = paste(activeLigand,": Accessible Surface Area of ",activeLigand," (Å²)",sep = ""),
-   #      xlab = "Accessible Surface Area, Å²",
-   #      col = "lightblue")
-   # 
-   #HEM_MERGED_DF$HEM_Accessible_SA
+   
    rm(tmp5A,tmp7A,tmpBoth)
    colName = paste(activeLigand,"_Accessible_SA",sep="")
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
@@ -526,14 +413,7 @@ for(ligand in 1:(length(ligandList)))
    )
    
    # Pocket Excluded SA
-   # 
-   # HEM_MERGED_DF$Pocket_Excluded_SA
-   # pocket_excSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Excluded_SA",sep = ""))),
-   #      main = paste(activeLigand,": Pocket Excluded Surface Area (Å²)", sep=''),
-   #      xlab = "Excluded Surface Area, Å²",
-   #      col = "green"
-   #      )
-   # 
+    
    rm(tmp5A,tmp7A,tmpBoth)
    colName = "Pocket_Excluded_SA"
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
@@ -553,13 +433,6 @@ for(ligand in 1:(length(ligandList)))
    
    
    # Pocket Acessible histo
-   # pocket_accSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Accessible_SA",sep = ""))),
-   #      main = paste(activeLigand, ": Pocket Accessible Surface Area (Å²)", sep = ''),
-   #      xlab = "Accessible Surface Area, Å²",
-   #      col = "lightgreen"
-   #      )
-   # 
-   #HEM_MERGED_DF$Pocket_Accessible_SA
    rm(tmp5A,tmp7A,tmpBoth)
    colName = "Pocket_Accessible_SA"
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
@@ -578,12 +451,6 @@ for(ligand in 1:(length(ligandList)))
    )
    
    
-   # dubious if this continues to be included Aug 27 2021, untraceable distance
-   # cabplot <- ggplot(eval(parse(text=paste(activeLigand,"_CACBFe_DF",sep=''))),
-   #                     aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   geom_violin(trim=FALSE) +
-   #    labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
-   # print(cabplot)
-   # 
 # plots of intersected distances with...
    
    # all planar angles   
@@ -620,15 +487,7 @@ for(ligand in 1:(length(ligandList)))
 
 
 
-# 4. Export to LaTeX --------------------------
-# I guess highlight below and replace the ligand each time you run
-#ligandList # to check what to replace
-
-# kable(HEM_aaFreqDf, booktabs = T) %>%
-#    kable_styling(latex_options = "striped")
-# 
-# kbl(HEM_MERGED_DF, booktabs = T, "latex") %>%
-#    kable_styling(latex_options = "striped")
+# 4. Create VERDOHEME PRESENTABLE TABLES
 
 #dealing with verdoheme
 v1df <- VERDOHEME_MERGED_DF$PDB_ID
@@ -664,80 +523,11 @@ VERDOHEME_p2DF <- v2df
 
 ## EXPORT TO LATEX ---------------------
 # splitting shit up worked!!!
+# irrelevant as of discovery of Rmd
+# 
 
-rownames(HEM_coord_Res_df) <- NULL
-omg <- kable(HEM_coord_Res_df, longtable = T, booktabs = T, caption = "perhaps","latex") %>%
-   kable_styling(full_width = T, latex_options = c("striped","repeat_header"))
-write_clip(as.character(omg))
-
-# latex attempt to automate, not too much sense in it and doesn't seem to work...
-# for(ligand in 1:(length(ligandList)))
-# {
-#    activeLigand = ligandList[[ligand]]
-#    kable(eval(parse(text = (paste(activeLigand,"_aaFreqDf",sep="")))),
-#          booktabs = T,
-#          "latex") %>%
-#       kable_styling(latex_options = "striped")
-#   # aafreqplot <- barplot(eval(parse(text=(paste(activeLigand,"_aaFreqDf$Freq",sep="")))),
-#                          
-# }
-
-
-
-# alternative solution to plot saving, but they look poor quality -----------
-
-# # EXPORTING ALL PLOTS, AS IN THE ORDER THEY APPEAR IN THE IDE TO THE RIGHT:
-# # from: https://stackoverflow.com/questions/35321775/save-all-plots-already-present-in-the-panel-of-rstudio/53809715
-# # another solution that might preserve plot name: https://stackoverflow.com/questions/24182349/r-plot-saving-and-file-name
-# # 
-# 
-# # BIG NOTE: WAIT LIKE 30 SEC BEFORE RUNNING THIS CODE. IT SEEMS TO WAIT FOR STUFF
-# # TO PROPERLY LOAD AT THE PANEL ON THE RIGHT. IDK MAN.
-# 
-# plots.dir.path <- list.files(tempdir(), pattern="rs-graphics", full.names = TRUE);
-# plots.png.paths <- list.files(plots.dir.path, pattern=".png", full.names = TRUE)
-# 
-# file.copy(from=plots.png.paths, to="~/heme-binding/results/0_figures_and_tables/")
-# 
-# #ordering:
-# plots.png.details <- file.info(plots.png.paths)
-# plots.png.details <- plots.png.details[order(plots.png.details$mtime),]
-# sorted.png.names <- gsub(plots.dir.path, "~/heme-binding/results/0_figures_and_tables/", row.names(plots.png.details), fixed=TRUE)
-# numbered.png.names <- paste0("~/heme-binding/results/0_figures_and_tables/", 1:length(sorted.png.names), ".png")
-# 
-# # Rename all the .png files as: 1.png, 2.png, 3.png, and so on.
-# file.rename(from=sorted.png.names, to=numbered.png.names)
-# 
-# # for(i in 1:(length(plots)))
-# #    {
-# #    print(plots[[i]]) #<- ggplot() + geom_point(aes(x=runif(10), y=runif(10))))
-# #    #print(plots[[2]] <- ggplot() + geom_point(aes(x=runif(10), y=runif(10))))
-# #    #print(plots[[3]] <- ggplot() + geom_point(aes(x=runif(10), y=runif(10))))
-# # #    }
-# # invisible(
-# #    lapply(
-# #       seq_along(plots), 
-# #       function(x) ggsave(filename=paste0("myplot", x, ".png"), plot=plots[[x]])
-# #    ) )
-# 
-# 
-# # TIDY UP! ------------------
-# rm(result_files_df,
-#    combined_results_df,
-#    temp_df,
-#    volume_data_clean,
-#    no_quest,
-#    line_w_code,
-#    #clean_tbl,
-#    residue_table_prelim,
-#    result_files_df,
-#    combined_results_df,
-#    residue_table_prelim_df_w_crap,
-#    residues_data_df,
-#    #hemeSA_df,
-#    #max_volume_df,
-#    accessible_df,
-#    excluded_df,
-#    max_accessible_df,
-#    max_excluded_df
-# )
+#FIXME!!! GOOD KNITR/KABLE OPTIONS HERE HOMIE
+# rownames(HEM_coord_Res_df) <- NULL
+# omg <- kable(HEM_coord_Res_df, longtable = T, booktabs = T, caption = "perhaps","latex") %>%
+#    kable_styling(full_width = T, latex_options = c("striped","repeat_header"))
+# write_clip(as.character(omg))
