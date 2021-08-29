@@ -129,6 +129,7 @@ knitr::kable(cars[1:5,],
 
 We refer to this table with `\@ref(tab:cars-table2)`. 
 So Table \@ref(tab:cars-table2) is [this table](#tab:cars-table2).
+\@ref(tab:cars-table2) magic reference
 
 And in Table \@ref(tab:cars-table) we saw more or less [the same cars table](#tab:cars-table).
 

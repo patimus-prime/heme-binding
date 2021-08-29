@@ -12,7 +12,7 @@ volumeFn <- function(activeLigand, activeResultPath)
   
   #activeResultPath = "~/heme-binding/results/volume/VEA"
   #for filtering: https://www.youtube.com/watch?v=PsSqn0pxouM
-  paste(activeLigand,"Volume data processing...")
+  #paste(activeLigand,"Volume data processing...")
   
   # 0. Notes on global variables...---------------------------
   
@@ -31,10 +31,9 @@ volumeFn <- function(activeLigand, activeResultPath)
   #activeResultPath
   # may need to add path = whatever from wd into the parentheses
   # result_files_ls is now a list of all the fuckin txt files
-  result_files_ls
+  #result_files_ls
   # now read them from the list into a dataframe 
-  result_files_df <- lapply(result_files_ls, function(x) {print (x)
-    read.delim(file = x, header = FALSE,encoding="UTF-8")})
+  result_files_df <- lapply(result_files_ls, function(x) {read.delim(file = x, header = FALSE,encoding="UTF-8")})
   #rrrrr <- lapply(result_files_ls, function(y) {data.table::fread(file = y)})
   # add source pdb column
   result_files_df <- addpdbcol(result_files_df)

@@ -40,7 +40,7 @@ library(kableExtra)
 #get 5A data real quick so we overwrite all DFs it uses, below:
 source("~/heme-binding/scripts/r/data5A.R") 
 ls5A <- data5A_fn()
-
+print("the pdbs shouldnt be printed yet")
 # DECLARATIONS --------------
 # warning: ligandList is altered at the end of merging dataframes below
 # this is because VER and VEA are merged to 'VERDOHEME'

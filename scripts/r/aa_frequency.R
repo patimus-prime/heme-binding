@@ -6,7 +6,7 @@ library(ggplot2) #thus far not used 22 June 2021
 
 aaFreq_fn <- function(activeLigand,activeResultPath)
 {
-  paste(activeLigand,"AA_freq data processing...")
+  #paste(activeLigand,"AA_freq data processing...")
   setwd(activeResultPath)
   #set working directory to the folder w files!
   #aa_freq_path = "~/heme-binding/results/aa_frequency" 
