@@ -426,12 +426,13 @@ for(ligand in 1:(length(ligandList)))
    # ALL CASE OF RENAME() FROM DPLYR PACKAGE IN ALL SCRIPTS GETS FUCKED UP.
    # PUTTING IT HERE, ONLY BELOW THIS LIBRARY LOAD DO YOU NEED NEED TO SPECIFY DPLYR::XXX
    
-   to_plot <- reshape::melt((data.frame(x=tmpBoth$Residue,y1=tmpBoth$df5A.Freq,y2=tmpBoth$df7A.Freq)),id="x")
+   to_plot <- reshape::melt((data.frame(x=tmpBoth$Residue,`Distance_5Å`=tmpBoth$df5A.Freq,`Distance_7Å`=tmpBoth$df7A.Freq)),id="x")
 #   detach("package:reshape", unload=TRUE) #maybe avoid the problem anyway lol
    
    print(ggplot(to_plot,aes(x= reorder(x,-value),y=value,fill=variable)) + 
             geom_bar(stat="identity",position = "identity", alpha=.4) +
-            labs(title = activeLigand))
+            labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep='')) +
+            scale_fill_discrete(name = "Distance Cutoff"))
    
    
    
@@ -459,17 +460,17 @@ for(ligand in 1:(length(ligandList)))
    colName = 'volume_data'
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
    tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
-   tmp7A$ang = '7'
-   tmp5A$ang = '5'
+   tmp7A$Distance_Cutoff = '7Å'
+   tmp5A$Distance_Cutoff = '5Å'
    tmp7A %>%
       dplyr::rename(
          df5A = df7A #hopefuly does not append, rm() should take care of that
       ) -> tmp7A
    tmpBoth <- rbind(tmp5A,tmp7A)
    print(
-      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
          geom_histogram(position="identity",alpha=0.4)
-      + labs(title = paste(activeLigand,"Volume Hist"))
+      + labs(x="Volume (Å³)",y="Frequency",title = paste(activeLigand,": Volume (Å³)"))
    )
    
    # Ligand Excluded Surface Area 
@@ -481,22 +482,22 @@ for(ligand in 1:(length(ligandList)))
    #                  col = "blue")
    #  
    
-   HEM_MERGED_DF$HEM_Excluded_SA
+   #HEM_MERGED_DF$HEM_Excluded_SA
    rm(tmp5A,tmp7A,tmpBoth)
    colName = paste(activeLigand,"_Excluded_SA",sep="")
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
    tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
-   tmp7A$ang = '7'
-   tmp5A$ang = '5'
+   tmp7A$Distance_Cutoff = '7Å'
+   tmp5A$Distance_Cutoff = '5Å'
    tmp7A %>%
       dplyr::rename(
          df5A = df7A #hopefuly does not append, rm() should take care of that
       ) -> tmp7A
    tmpBoth <- rbind(tmp5A,tmp7A)
    print(
-      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
          geom_histogram(position="identity",alpha=0.4)
-      + labs(title = paste(activeLigand,"Ligand Excluded Hist"))
+      + labs(x="Surface Area (Å²)",y="Frequency",title = paste(activeLigand,": Ligand Excluded SA (Å²)"))
    )
    
    
@@ -511,43 +512,43 @@ for(ligand in 1:(length(ligandList)))
    colName = paste(activeLigand,"_Accessible_SA",sep="")
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
    tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
-   tmp7A$ang = '7'
-   tmp5A$ang = '5'
+   tmp7A$Distance_Cutoff = '7Å'
+   tmp5A$Distance_Cutoff = '5Å'
    tmp7A %>%
       dplyr::rename(
          df5A = df7A #hopefuly does not append, rm() should take care of that
       ) -> tmp7A
    tmpBoth <- rbind(tmp5A,tmp7A)
    print(
-      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
          geom_histogram(position="identity",alpha=0.4)
-      + labs(title = paste(activeLigand,"Ligand Accessible Hist"))
+      + labs(x="Surface Area (Å²)",y="Frequency",title = paste(activeLigand,": Ligand Accessible SA (Å²)"))
    )
    
    # Pocket Excluded SA
-   
-   HEM_MERGED_DF$Pocket_Excluded_SA
-   pocket_excSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Excluded_SA",sep = ""))),
-        main = paste(activeLigand,": Pocket Excluded Surface Area (Å²)", sep=''),
-        xlab = "Excluded Surface Area, Å²",
-        col = "green"
-        )
-   
+   # 
+   # HEM_MERGED_DF$Pocket_Excluded_SA
+   # pocket_excSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Excluded_SA",sep = ""))),
+   #      main = paste(activeLigand,": Pocket Excluded Surface Area (Å²)", sep=''),
+   #      xlab = "Excluded Surface Area, Å²",
+   #      col = "green"
+   #      )
+   # 
    rm(tmp5A,tmp7A,tmpBoth)
    colName = "Pocket_Excluded_SA"
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
    tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
-   tmp7A$ang = '7'
-   tmp5A$ang = '5'
+   tmp7A$Distance_Cutoff = '7Å'
+   tmp5A$Distance_Cutoff = '5Å'
    tmp7A %>%
       dplyr::rename(
          df5A = df7A #hopefuly does not append, rm() should take care of that
       ) -> tmp7A
    tmpBoth <- rbind(tmp5A,tmp7A)
    print(
-      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
          geom_histogram(position="identity",alpha=0.4)
-      + labs(title = paste(activeLigand,"Pocket Excluded Hist"))
+      + labs(x="Surface Area Å²",y="Frequency",title = paste(activeLigand,": Pocket Excluded SA (Å²)"))
    )
    
    
@@ -558,22 +559,22 @@ for(ligand in 1:(length(ligandList)))
    #      col = "lightgreen"
    #      )
    # 
-   HEM_MERGED_DF$Pocket_Accessible_SA
+   #HEM_MERGED_DF$Pocket_Accessible_SA
    rm(tmp5A,tmp7A,tmpBoth)
    colName = "Pocket_Accessible_SA"
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
    tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
-   tmp7A$ang = '7'
-   tmp5A$ang = '5'
+   tmp7A$Distance_Cutoff = '7Å'
+   tmp5A$Distance_Cutoff = '5Å'
    tmp7A %>%
       dplyr::rename(
          df5A = df7A #hopefuly does not append, rm() should take care of that
       ) -> tmp7A
    tmpBoth <- rbind(tmp5A,tmp7A)
    print(
-      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
          geom_histogram(position="identity",alpha=0.4)
-      + labs(title = paste(activeLigand,"Pocket Acessible Hist"))
+      + labs(title = paste(activeLigand,"Pocket Acessible SA (Å²)"))
    )
    
    
@@ -590,28 +591,28 @@ for(ligand in 1:(length(ligandList)))
    planarAllPlot <- ggplot(eval(parse(text=paste(activeLigand,"_allDistPlanarDf",sep=''))),
                            aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +   
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": allPLanar Plot ",activeLigand,sep=''), x="Residue",y="Angle")
+      labs(title = paste(activeLigand,": All Planar Angles",sep=''), x="Residue",y="Angle")
    print(planarAllPlot)
    
    # closest residues' planar angles
    planarMinPlot <- ggplot(eval(parse(text=paste(activeLigand,"_minDistPlanarDf",sep=''))),
                            aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +
       geom_violin(trim = FALSE) +
-      labs(title = paste(activeLigand,": minPlanar Plot",activeLigand,sep = ''),x="Residue",y="Angle")
+      labs(title = paste(activeLigand,": Planar Angles of Closest Residues",sep = ''),x="Residue",y="Angle")
    print(planarMinPlot)
    
    # all cabs with distance intersect
    cabAllPlot <- ggplot(eval(parse(text=paste(activeLigand,"_allDistCabDf",sep=''))),
                         aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +   
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": allCab Plot ",activeLigand,sep=''), x="Residue",y="Angle")
+      labs(title = paste(activeLigand,": All CA-CB-Fe Angles",sep=''), x="Residue",y="Angle")
    print(cabAllPlot)
    
    # cabs for closest 3 residues
    cabMinPlot <- ggplot(eval(parse(text=paste(activeLigand,"_minDistCabDf",sep=''))),
                         aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +   
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": minCab Plot ",activeLigand,sep=''), x="Residue",y="Angle")
+      labs(title = paste(activeLigand,": CA-CB-Fe Angles of Closest Residues",sep=''), x="Residue",y="Angle")
    print(cabMinPlot)
    
    
