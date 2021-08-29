@@ -398,6 +398,8 @@ for(ligand in 1:(length(ligandList)))
    #              names.arg = 
    #                 eval(parse(text = (paste(activeLigand,"_aaFreqDf$Residue",sep="")))))
    # 
+   
+   
    # AA FReq ----
    rm(tmp5A,tmp7A,tmpBoth)
    head(HEM_aaFreqDf)
@@ -443,21 +445,86 @@ for(ligand in 1:(length(ligandList)))
    
    #see this link for adding more stats: https://www.stattutorials.com/R/R_Describe_data2,%20Histograms.html
    
-   volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
-                       main = paste(activeLigand,": Volume of Binding Pocket (Å³)", sep=""),
-                       xlab = "Volume, Å³",
-                       ylab = "Frequency",
-                       col = "darkmagenta")
    
-   LigExcSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Excluded_SA",sep = ""))),
-                    main = paste(activeLigand,": Excluded Surface Area of ",activeLigand," (Å²)",sep = ""),
-                    xlab = "Excluded Surface Area, Å²",
-                    col = "blue")
-    
-   LigAccSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Accessible_SA",sep = ""))),
-        main = paste(activeLigand,": Accessible Surface Area of ",activeLigand," (Å²)",sep = ""),
-        xlab = "Accessible Surface Area, Å²",
-        col = "lightblue")
+   # ### VOLUME ####
+   
+   # volume_hist <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$volume_data",sep = ""))),
+   #                     main = paste(activeLigand,": Volume of Binding Pocket (Å³)", sep=""),
+   #                     xlab = "Volume, Å³",
+   #                     ylab = "Frequency",
+   #                     col = "darkmagenta")
+   # 
+   
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = 'volume_data'
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(title = paste(activeLigand,"Volume Hist"))
+   )
+   
+   # Ligand Excluded Surface Area 
+   
+   
+   # LigExcSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Excluded_SA",sep = ""))),
+   #                  main = paste(activeLigand,": Excluded Surface Area of ",activeLigand," (Å²)",sep = ""),
+   #                  xlab = "Excluded Surface Area, Å²",
+   #                  col = "blue")
+   #  
+   
+   HEM_MERGED_DF$HEM_Excluded_SA
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = paste(activeLigand,"_Excluded_SA",sep="")
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(title = paste(activeLigand,"Ligand Excluded Hist"))
+   )
+   
+   
+   # Ligand Accessible Surface Area 
+   # LigAccSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$",activeLigand,"_Accessible_SA",sep = ""))),
+   #      main = paste(activeLigand,": Accessible Surface Area of ",activeLigand," (Å²)",sep = ""),
+   #      xlab = "Accessible Surface Area, Å²",
+   #      col = "lightblue")
+   # 
+   #HEM_MERGED_DF$HEM_Accessible_SA
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = paste(activeLigand,"_Accessible_SA",sep="")
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(title = paste(activeLigand,"Ligand Accessible Hist"))
+   )
+   
+   # Pocket Excluded SA
    
    HEM_MERGED_DF$Pocket_Excluded_SA
    pocket_excSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Excluded_SA",sep = ""))),
@@ -466,18 +533,56 @@ for(ligand in 1:(length(ligandList)))
         col = "green"
         )
    
-   pocket_accSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Accessible_SA",sep = ""))),
-        main = paste(activeLigand, ": Pocket Accessible Surface Area (Å²)", sep = ''),
-        xlab = "Accessible Surface Area, Å²",
-        col = "lightgreen"
-        )
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = "Pocket_Excluded_SA"
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(title = paste(activeLigand,"Pocket Excluded Hist"))
+   )
    
-   # dubious if this continues to be included Aug 27 2021
-   cabplot <- ggplot(eval(parse(text=paste(activeLigand,"_CACBFe_DF",sep=''))),
-                       aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
-   print(cabplot)
    
+   # Pocket Acessible histo
+   # pocket_accSA <- hist(eval(parse(text = paste(activeLigand,"_MERGED_DF$","Pocket_Accessible_SA",sep = ""))),
+   #      main = paste(activeLigand, ": Pocket Accessible Surface Area (Å²)", sep = ''),
+   #      xlab = "Accessible Surface Area, Å²",
+   #      col = "lightgreen"
+   #      )
+   # 
+   HEM_MERGED_DF$Pocket_Accessible_SA
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = "Pocket_Accessible_SA"
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=ang,color=ang)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(title = paste(activeLigand,"Pocket Acessible Hist"))
+   )
+   
+   
+   # dubious if this continues to be included Aug 27 2021, untraceable distance
+   # cabplot <- ggplot(eval(parse(text=paste(activeLigand,"_CACBFe_DF",sep=''))),
+   #                     aes(x=Residue_Code,y=Angle,fill=Residue_Code)) +   geom_violin(trim=FALSE) +
+   #    labs(title = paste(activeLigand,": Angles CA-CB-Fe per type of residue to Fe atom of ",activeLigand,sep=''), x="Residue",y="Angle")
+   # print(cabplot)
+   # 
 # plots of intersected distances with...
    
    # all planar angles   
