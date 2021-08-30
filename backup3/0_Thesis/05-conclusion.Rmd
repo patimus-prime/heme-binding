@@ -1,0 +1,26 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+    citation_package: biblatex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+
+```{=tex}
+\adjustmtc
+\markboth{Methods}{}
+```
+
+
+# Conclusion {#conclusion}
+Multiple qualities were predicted and data gathered from representative or whole population (FIXME! better way to put this?) datasets of ligands for hemoproteins. Some qualities per ligand follow very tight distributions and suggest a requirement for ligand binding, e.g. specific volume of binding pockets. 
+
+This is not the case for all qualities. Surface areas and angles of residues in relation to the ligands appear to diverge greately. This suggests the binding pockets, while having some useful trends (e.g. high populations of nonpolar amino acids), may still be highly variable. 
+The results of this study are limited by the small sample size, but suggest that binding pockets for hemoproteins have some requirements for binding that may be overlooked, e.g. a high population of nonpolar amino acids. These results may be useful in the design of hemoproteins in the future, in combination with other approaches, to at least narrow down screening efforts and determine realistic designs and modifications.

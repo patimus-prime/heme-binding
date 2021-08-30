@@ -5,11 +5,11 @@
 <!-- If you feel it necessary to include an appendix, it goes here. The first appendix should include the commands above. -->
 
 
-# Figures
+# Figures{#a-figures}
 
 <!-- Figures begin here  -->
 
-## AA Frequency
+## AA Frequency {#figs-aaFreq}
 ```{r HEM-AAfreq,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEM"
@@ -211,7 +211,7 @@ library(kableExtra)
 ```
 
 
-## Volume
+## Volume{#figs-vol}
 
 
 ```{r HEM-Volume,fig.cap="HEM: Volume",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
@@ -350,7 +350,7 @@ library(kableExtra)
     
 ```
 
-## Ligand Excluded Surface Area
+## Ligand Excluded Surface Area{#figs-ligExcSA}
 
 ```{r HEM-Ligand-ExcludedSA,fig.cap="HEM: Ligand Excluded Suface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
@@ -485,7 +485,8 @@ library(kableExtra)
 ```
 
 
-## Ligand Accessible Surface Area
+## Ligand Accessible Surface Area{#figs-ligAccSA}
+
 ```{r HEM-Ligand-AccessibleSA,fig.cap="HEM: Ligand Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
    # Ligand Accessible Surface Area
 load("mainData.RData")
@@ -615,7 +616,7 @@ library(kableExtra)
 ```
 
 
-## Pocket Excluded Surface Area
+## Pocket Excluded Surface Area{#figs-pocketExcSA}
 
 ```{r HEM-Pocket-ExcludedSA,fig.cap="HEM: Pocket Excluded Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
    # Pocket Excluded SA
@@ -746,7 +747,7 @@ library(kableExtra)
 ```
 
 
-## Pocket Accessible Surface Area
+## Pocket Accessible Surface Area{#figs-pocketAccSA}
 
 ```{r HEM-Pocket-AccessibleSA,fig.cap="HEM: Pocket Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
    # Pocket Acessible histo
@@ -881,7 +882,7 @@ library(kableExtra)
 ```
 
 
-## All Planar Angles
+## All Planar Angles{#figs-planarAll}
 
 ```{r HEM-planarAll,fig.cap="HEM: All Planar Angles",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
@@ -983,7 +984,8 @@ library(kableExtra)
    print(planarAllPlot)
 ```
 
-## Planar Angles of Closest Residues
+## Planar Angles of Closest Residues{#figs-planarClosest}
+
 ```{r HEM-planarClosest,fig.cap="HEM: Planar Angles of Closest Residues",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
    # closest residues' planar angles
 load("mainData.RData")
@@ -1076,7 +1078,8 @@ library(kableExtra)
  
 ```
 
-## All CA-CB-Fe Angles
+## All CA-CB-Fe Angles {#figs-cabAll}
+
 ```{r HEM-cab-All,fig.cap="HEM: All CA-CB-Fe Angles",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
    # all cabs with distance intersect
@@ -1173,7 +1176,7 @@ library(kableExtra)
    
 ```
 
-## CA-CB-Fe Angles of Closest Residues
+## CA-CB-Fe Angles of Closest Residues{#figs-cabClosest}
 
 ```{r HEM-cabClosest,fig.cap="HEM: CACBFe Angles of Closest Residues",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
@@ -1276,12 +1279,12 @@ library(kableExtra)
 
 
 
-# Tables
+# Tables{#a-tables}
 
 <!-- Tables begin here  -->
 
 
-## Molecule Names and Source Organisms
+## Molecule Names and Source Organisms{#molOrgSec}
 ```{r HEM-molOrg,echo=FALSE, message= FALSE, warning=FALSE}
 # declarations
 

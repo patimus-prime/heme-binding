@@ -1,0 +1,117 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  bookdown::pdf_document2:
+    template: templates/brief_template.tex
+    citation_package: biblatex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+
+```{=tex}
+\adjustmtc
+\markboth{Methods}{}
+```
+
+
+# Discussion {#discussion}
+\minitoc
+
+This section is organized by type of result; figures and tables referenced are within the appendices.
+
+## AA Frequency Discussion
+Amino acid frequencies within the 5A and 7A distance cutoffs of the ligand reported in Appendix \@ref(AA-Frequency) and (FIXME! Missing amino acid tables.
+For HEM and HEC, nonpolar amino acids are the most frequent. This may indicate that nonpolar amino acids are extremely important to stabilizing the binding pocket.
+
+For SRM, this is not the case. HEM and HEC are very similar, but SRM is quite different. For SRM we find that arginine is extremely frequent to find in the pocket (amongst n=9). This is perhaps expected given the exposure of charged groups on SRM, but the degree of the effect is very notable. Glycine and Lysine and other small residues are also highly present. Perhaps this indicates a selection for small residues in the binding pocket to accomodate SRM. 
+
+Verdoheme, again, has a very small sample size (n=4). But the results appear to follow trends seen in other ligands; a preference for nonpolar, charged, or small residues. Leucine is the most preferred of these, along with alanine - two small nonpolar amino acids. These results, although limited, reinforce the trend of an especially important composition of amino acids in the binding pocket rather than the coordinating amino acids.
+
+## Volume Discussion
+Besides HEM, much of the volume data   for the different ligands did not closely agree between different distance cutoffs. Most of the data did however fall within reasonable bounds, regardless of distance cutoffs.
+
+HEM appears to require a pocket volume of between 800 and 1200 A³. Data reported for this quality range between 500 and 2000 A³. These outliers can perhaps be explained by proteins with exceptionally large binding pockets, but are more likely an indication of the imperfections in the volume calculation algorithm, highlighting the need for studies that take into account a multiplicity of PDBs to evaluate the size of a binding pocket.
+
+HEC volume data centers around 800-1100A³. This molecule is very similar to HEM and these results are somewhat expected. Outliers again can perhaps be explained by the volume calculation algorithm.
+
+SRM and Verdoheme suffer from a low number of sample data. SRM appears to center at 1000-1200 A³, again somewhat confirmed by other ligands examined in the study. 
+
+But Verdoheme has a near equal distribution of samples from 700-1450 A³; this lack of agreement precludes a range that may be suspected to be the "real" volume. 
+
+## Ligand Solvent Excluded Surface Area Discussion
+The limitations of the limited sample size can be seen in this quality as well.
+
+HEM appears to have a ligand surface area of approximately 500-700 A². HEC follows a similar trend.
+
+However, for SRM and Verdoheme, data are more scattered. Trends cannot be derived from these data.
+
+## Ligand Solvent Accessible Surface Area Discussion
+HEM has a strong agreement of data at approximately 1000-1250 A². HEC, slightly more scattered, appears to agree from 750-1250 A². 
+
+SRM, despite its limited sample size, has strong agreement for this quality: it ranges from about 1000-1050 A².
+
+VERDOHEME is highly scattered for this measure.  Verdoheme ranges from 750-1800 A². 
+
+
+## Pocket Solvent Excluded Surface Area
+HEM data has poor agreement for this measure. Data is concentrated from 5000-15000 A², but this is a very large range and not very useful.
+
+HEC agrees in a somewhat tighter range: most data fall within 5000-7500 A²; still not very useful but better than HEM.
+
+Most SRM data fall within 21000-22000 A². 
+
+Verdoheme data range from 9200 to 10000 A². 
+
+For this measure, then, we find that SRM and Verdoheme have a fairly specific range of predicted solvent excluded surface area for their binding pockets.
+
+## Pocket Solvent Accessible Surface Area
+The results for this measure follow the trends for the previous section.
+
+Most HEM data fall from 5000-15000 A². HEC data mostly fall from 5000-7500 A².
+
+SRM data is highly concentrated at approximately 21000 A², more specific than the pocket solvent excluded surface area. 
+
+Verdoheme data range from 10000-11000 A².
+
+## All Planar Angles
+These data, for all ligands, largely serve to compare as noise for the next section. The planar angles of all residues falling within the upper distance cutoff are plotted. 
+
+A notable exception is HEC; the plot for this ligand seems to suggest that GLU and LYS have fairly specific planar angles with the ligand. (FIXME! Check out the distance tables to drill down further)
+
+## Planar Angles of Closest Residues
+Here, the three closest residues to the ligand in each PDDB and their planar angle to the ligand are plotted.
+
+HEM has a fairly inconclusive set of data for this measure. GLU and GLN nearby HEM do appear to fall within a tight range, though, of approximately 75 degrees and 80 degrees respectively.
+
+The data for residues nearby HEC diverge from what is found for all residues around HEC. The most agreement is found for ILE and LYS, with angles concentrated about 50 degrees and 75 degrees, respectively.
+
+Only three types of residues appear nearby SRM: CYS, LYS, and ARG. Although their angles vary wildly, these data suggest these residues are important to the coordination fo SRM. (FIXME! Add reasoning)
+
+Verdoheme also has a small selection of residues that are close to the ligand. GLY and HIS are the only residues that are close to the ligand in the PDBs used in this study. (FIXME! Add reasoning... or qualifier statement n=2)
+
+## All CA-CB-Fe Angles
+All residues have a broad range of angles in relation to HEM.
+
+Most residues have a broad range of angles for HEC, with the exception of THR, which has a tight distribution around 100 degrees. This result only appears here and does not follow for the closest residues, and therefore may be due to a small sample size of THR residues.
+
+SRM appears to have tight distributions of angles when considering all residues; the residues closest to SRM do not echo this. Although likely attributable to a small sample size, there appear several residues with specific angles: ALA around 50 degrees, GLN around 140-150 degrees, and SER around 50 degrees.
+
+Verdoheme... (FIXME! Confer with JeanDi before we report more of these angles. Not sure I'm going about it in an informative way. Also add figure numbers.)
+
+## CA-CB-Fe Angles of Closest Residues
+Most notably, HIS is the only residue that appears closeby Verdoheme, and falls within a range of 106-116 degrees. 
+
+# Limitations of the Study
+	Limited sample size
+	Limited experimental data to reference to verify
+	NO experimental data in this study to verify, all theoretical
+	Only one software package/few algorithms used to calculate all these properties. Others were evaluated but none are compared w.
+	Algorithms may introduce bias based on how they work e.g. all the bubbles
+	Arbitrary selection of parameters; some based on rule of thumb or visual evaluation but all or almost all arbitrary
+	Unknown if the qualities measured are truly the most critical for the heme binding. Some papers suggest other properties may also be important but cannot be calculated, at least right now, e.g. ionic bonding strength etc.
+	Visual examination itself to OK the parameters/algorithms can introduce bias

@@ -12,9 +12,11 @@ documentclass: book
 #bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
 ---
 
-# Results {#results}
-
 ```{=tex}
 \adjustmtc
 \markboth{Introduction}{}
 ```
+
+
+# Results {#results}
+Data are reported as figures in Appendix \@ref(a-figures) and tables in Appendix \@ref(a-tables). Data are organized by result e.g. Volume, and then by ligand. 
