@@ -31,6 +31,23 @@ In the most significant previous work, approximately 125 hemoproteins were studi
 
 In this study, structures of hemoproteins with bound ligands were examined. Multiple ligands and their binding protein were examined: heme (HEM), heme-c (HEC), siroheme (SER), and verdoheme (VEA/VER).
 
+<!-- They look like this and hopefully I can make these all kinda be side to side homie yo: -->
+<!-- <!-- knitr::include_graphics("figures/HEM-b") --> -->
+<!-- ![testing-with-hem-b](figures/HEM-b.png) -->
+<!-- We include an external image with the R function: -->
+
+<!-- ```{r, echo=FALSE, out.width="50%", fig.cap="A nice image."} -->
+<!-- knitr::include_graphics("figures/HEM-b.png") -->
+<!-- ``` -->
+
+<!-- Another attempt homie: -->
+
+```{r, echo=FALSE,out.width="49%", out.height="20%",fig.cap=c("HEM","HEC","SRM","VEA","VER"),fig.align='center'}
+knitr::include_graphics(c("figures/HEM-b.png","figures/HEM-c.png",
+                          "figures/SRM.png","figures/VEApubchem.png",
+                          "figures/VERpuchem.png"))
+``` 
+<!-- fig.show='hold', -->
 Of particular interest were any qualities that may suggest a requirement for ligand binding. In addition, with several ligands studied, the similarities and differences for binding pockets for the different ligands could be elucidated. Properties of the binding pockets were both predicted and observed from their respective PDB files.
 
 ## other stuff to consider adding to the introduction
