@@ -6,6 +6,7 @@ output:
   bookdown::pdf_document2:
     template: templates/brief_template.tex
     citation_package: biblatex
+    extra_dependencies: 
   bookdown::html_document2: default
   bookdown::word_document2: default
 documentclass: book
@@ -20,53 +21,68 @@ documentclass: book
 ```
 <!-- For PDF output, include these two LaTeX commands after unnumbered chapter headings, otherwise the mini table of contents and the running header will show the previous chapter -->
 
-How we wanna do this? We gonna assume a base level of biochemistry amongst our peers, what we had in the last semester. 
+Proteins that contain metal ion cofactor(s) are known as metalloproteins, and they compose approximately 40\% of all proteins. The metal ion can be free, or bound within a ligand. One such ligand is heme, a complex of iron and a porphyrin ring (**should I go deeper about porphyrins?**). Heme is employed by many metalloproteins to catalyze a broad range of reactions. 
 
-Proteins that require metallic groups as their ligands are known as metalloproteins, and they compose approximately 40\% of all proteins. One such ligand is heme. Heme is employed by many metalloproteins to catalyze a broad range of reactions. 
+Hemoglobin and myoglboin are likely familiar proteins, and use heme to store and transport oxygen. Other examples of enzymes that employ heme are peroxidases, catalases (a type of peroxidase), nitric oxide synthases, heme oxygenases, and cytochrome p450s. Peroxidases and catalases catalyze oxidation-reduction reactions using a histidine-bound heme, with catalases in particular specializing in the decomposition of hydrogen peroxide. Nitric oxide synthases catalyze the reaction of L-arginine into nitric oxide, which is vitally important to cellular signaling (@Poulos2014). Free heme molecules may be released upon degradation of hemoproteins (especially hemoglobin), however, heme is prooxidative and therefore toxic to cells and must be cleared. Heme oxygenases assist in the degradation of heme, and are regarded as potential therapeutics, due to anti-inflammatory effects[@Araujo2012].
 
-Hemoglobin and myoglboin are likely familiar proteins, and use heme to store and transport oxygen. Other examples of the enzymes that employ heme are peroxidases, catalases (a type of peroxidase), nitric oxide synthases, heme oxygenases, and cytochrome p450s. Peroxidases and catalases catalyze oxidation-reduction reactions using a histidine-bound heme, with catalases in particular specializing in the decomposition of hydrogen peroxide. Nitric oxide synthases catalyze the reaction of L-arginine into nitric oxide, which is vitally important to cellular signaling. Free heme molecules may be released upon degradation of hemoproteins, but heme is highly oxidative (??) and therefore toxic to cells; heme oxygenases serve to degrade heme, protecting the cell and forming products preventing vascular inflamation. Heme oxygenases are regarded as potential therapeutics, because of their anti-inflammatory effects. 
+The enzyme with arguably the most potential applications, cytochrome P450s function as powerful monooxygenases. They are participate in many reactions: capable oxidizing a fantastic amount of substrates, serving to oxidize carbohydrates, steroids, fatty acids; catalyzing hormone degradation and synthesis; and degrading the vast majority of drugs(@Poulos2014). Due to their extraordinary utility and range of reactions, cytochrome p450s are of great interest in the protein engineering field. Cytochrome p450s have the potential to be used  in industrial biocatalysis, e.g. in pharmaceutical production, bioremediation of environmental pollutants[@Du2017; @Lalonde2016]. The limiting factor preventing its deployment has been the struggle to increase enzymatic efficiency and therefore yield of processes employing the enzyme[@Girvan2016; @Li2020]. 
 
-Last but not least, cytochrome p450 function as powerful monooxygenases. They are capable oxidizing, inserting oxygen into a fanastic amount of substrates, serving to oxidize carbohydrates, steroids, fatty acids; hormone degradation and synthesis; and degrade the vast majority of drugs. Due to their extraordinary utility and range of reactions, cytochrome p450s are of great interest in the protein engineering field. Cytochrome p450s have the potential to be used  in industrial biocatalysis, e.g. in pharmaceutical production, bioremediation of environmental pollutants. The limiting factor preventing its deployment has been the struggle to increase enzymatic efficiency and therefore yield of processes employing the enzyme. The struggle to increase enzymatic efficiency, in turn, is due to an incomplete understanding of the binding environment for heme; indeed, the binding environment for *hemes*. 
-
-The heme molecule itself has its own variety. There are several "hemes", structurally and chemically different, that are used to achieve different chemical reactions; in this study, we examined heme-b, heme-c, siroheme, and verdoheme. Their structures are shown below.
-
-```{r, echo=FALSE,out.width="49%", out.height="20%",fig.cap=c("HEM","HEC","SRM","VEA","VER"),fig.align='center'}
-knitr::include_graphics(c("figures/HEM-b.png","figures/HEM-c.png",
-                          "figures/SRM.png","figures/VEApubchem.png",
-                          "figures/VERpuchem.png"))
-``` 
+Echoing its many applications, the heme molecule itself has its own variety. There are several "hemes", structurally and chemically different, that are used to achieve different chemical reactions; in this study, we examined heme-b, heme-c, siroheme, and verdoheme. Their structures are shown in Figures 1-5. 
 
 
-The most common, "heme", or heme-b, has been discussed above. It binds principally via noncovalent interactions with its binding pocket. Heme-c is derived from heme-b; it binds, with few exceptions, covalently to cysteine residues in the binding pocket, forming thioester bonds between the residues and heme-c vinyl groups. Its function is much more specific than heme-b, mostly serving as an elctron carrier. The reason for this is not abundantly clear, but several studies suggest that because of its covalent bonding, heme-chas an electronic potential that is broader and more specifiable than heme-b. 
+```{r structHEM, echo=FALSE,out.width="50%",fig.cap="Heme-b (HEM)",fig.show="hold",fig.align='center'}
+knitr::include_graphics("figures/HEM-b.png")
+```
+```{r structHEC, echo=FALSE,out.width="50%",fig.cap="Heme-c (HEC)",fig.show="hold",fig.align='center'}
+knitr::include_graphics("figures/HEM-c.png")
+```
+
+```{r structSRM, echo=FALSE,out.width="50%",fig.cap="Siroheme (SRM)",fig.show="hold",fig.align='center'}
+knitr::include_graphics("figures/SRM.png")
+```
+
+```{r structVEA, echo=FALSE,out.width="50%",fig.cap="Verdoheme, VEA",fig.align='center'}
+knitr::include_graphics("figures/VEApubchem.png")
+```
+```{r structVER, echo=FALSE,out.width="50%",fig.cap="Verdoheme, VER",fig.align='center'}
+knitr::include_graphics("figures/VERpubchem.png")
+```
+
+
+The most common "heme", heme-b, has been discussed above. It binds principally via noncovalent interactions with its binding pocket. Heme-c is derived from heme-b; it binds, with few exceptions, covalently to cysteine residues in the binding pocket, forming thioester bonds between the residues and heme-c vinyl groups. Its function is much more specific than heme-b, mostly serving as an elctron carrier. The reason for this is not abundantly clear, but several studies suggest that because of its covalent bonding, heme-c has an electronic potential that is broader and more specifiable than heme-b. [@Avula2014; @Kleingardner2015]
 
 <!-- Work here homie I'm not clear on specifics -->
-Siroheme is even more limted in its applications but arguably of greater signifiance in nature. It is used exclusively in XXX, which in turn is responsible for XX and therefore Y.. Siroheme uniquely is able to transfer 6 eletrons or something; one study suggests this is due to its structure of blablabla.
+Siroheme is even more limted in its applications but arguably of greater signifiance in nature. It is used exclusively in sulfite and nitrite reductases, which catalyze the reduction of the sulfates and nitrates plants uptake from the ground, and ultimately use to produce nitrogen and sulfur-containing amino acids(@Tripathy2010). The reason for the use of siroheme in this reaction rather than heme is not completely understood, but one study suggests that, along with other cofactors involved in the reaction, siroheme forms a bridge to the catalyic iron atom in the porphyrin ring that is more efficient at channeling electrons than the bridge that could be formed by heme.[@Branzanic2019] FIXME DEFINITELY CUT THIS DOWN IN WORDS.
 
-Verdoheme is an intermediate product in the degradation of heme-b by heme oxygenase. When heme oxygenase degrades heme-b, balblabla are produced; verdoheme is the precusor to xx. And while an intermediate, the way verdoheme is at least briefly bound in heme oxygenase (CHECK!!!) is not well documented and may be of interest.  
+Lastly, verdoheme is an intermediate product in the degradation of heme-b by heme oxygenase. When heme oxygenase degrades heme-b, biliverdin, carbon monoxide, and iron are produced; verdoheme is the precusor to bilverdin[@Lai2010; @Sato2007]. While a product of prior reactions wthin heme oxygenase, verdoheme appears to be oriented and bound differently [@Lad2004].
+<!-- idk - i dont think this is the spot to say AHA! and so we're studying it -->
 
 <!-- alright now go in for the kill -->
-As discussed above, the potential for engineered proteins is yuge for these molecules. However, binding environments are not well udnerstood and form a crucial part of the puzzle. Studies have been done engineering hemoproteins, and have concluded the binding environemnt highyl important. Another stud blablbla
+In summary, heme molecules are used in a many reactions and several enzymes have the potential to be of great value either in biocatalysis or pharmaceutical applications. Efforts to engineer useful molecules have lead to x and y I think like yeast and drugs and stuff. Methods used to engineer these molecules include x and y. Rational design in particular is at least partially hampered by an incomplete understanding of the binding environment for hemes. 
+
+ 
+The importance of the binding environment is not limited to HEM; another study was engineering HEC and found the binding environment likely to be muy importante[@Ishida2004].
 
 
-There have only been a handful of studies dedicated to understanding the structure-chemical relationship between heme and the proteins that use heme for their chemistry (these proteins are known as hemoproteins). 
+A fairly recent study conducted a structural analysis of 125 hemoprotein chains(@Li2011). They found that hemoproteins appear to undergo small conformational changes and that apo-form (ligand-containing) proteins may be suitable for bioinformatics-based prediction and protein design (REWORD THIS LOL). Additionally they examined the heme binding environment and found that aromatic and nonpolar amino acids were... more populous than others. (I NEED SLEEP). 
 
-In the most significant previous work, approximately 125 hemoproteins were studied(@Li2011). The study focused on the structural differences between hemoproteins with bound and unbound ligands.
+That study was limited in its dataset - they used 125 hemoprotein chains (which I need to check if were from the same proteins or if that meant 125 proteins -- the former I think, check out their Table 2). The approach was also limited to demonstrating apo v. holo structures, rather than a focus on elucidating the binding environment of the heme. V and SA were collected, which are significant!!
+
+In this study we sought to go further, where no man has gone before. That study was conducted in 2011. Since then, many, many more hemoproteins have been added to the PDB, including hemoproteins contaning HEC, SRM, ver/vea. In this study we were more focused on elucidating the binding environment not just of hem but other hemes, and comparing the binding environments of different hemes. 
 
 In this study, structures of hemoproteins with bound ligands were examined. Multiple ligands and their binding protein were examined: heme (HEM), heme-c (HEC), siroheme (SER), and verdoheme (VEA/VER).
 
-Yeah so below we get 'em. But no sure how I'd go about stacking em side by side and keeping a caption. So far this gets the job done let's move on homie!
+Now talk very briefly and frame what we did, then go into methods and rejoice that those are mostly ok:
 
-<!-- fig.show='hold', -->
+In this study, UCSF Chimera was used to both xamine and predict properties of the molecules. A fantastic framework was constructed to process all proteins etc. We were interested in blablabla. dont talk too much about methods. yeah, time to stop, go off their intro a little but this should be all you need to power through tomorrow morning
 
-
+Likely caca below:
 
 
 Of particular interest were any qualities that may suggest a requirement for ligand binding. In addition, with several ligands studied, the similarities and differences for binding pockets for the different ligands could be elucidated. Properties of the binding pockets were both predicted and observed from their respective PDB files.
 
-## other stuff to consider adding to the introduction
-Although pdbs were thoroughly examined and the datasets were culled, the sample size of this study is very small compared to the amount of hemoproteins available in the pdb a decade later (~10,000 HEM-containing proteins and xx). The dataset is also limited in that there is a somewhat homogenous group of proteins examined (?). The characteristics examined were limited to: xx. 
 
-It is hypothesized that the following characteristics all have an impact on the binding of heme and function of the hemoprotein: XXXXXXXXX.
+It is hypothesized that the following characteristics all have an impact on the binding of heme and function of the hemoprotein: XXXXXXXXX. (THIS ONE IS FROM THE OLDER STUFF, REALLY NO POINT IN MENTIONING IT IMO JUST KINDA HAUGHTY ABOUT IONIC BONDING LOL)
 	
 In this study, some of these characteristics were examined. They include: XX. The remainder are thus far not feasible to calculate.
 	ss
