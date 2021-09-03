@@ -75,11 +75,7 @@ library(kableExtra)
 HEM_aaFreqDf %>%
   kable(longtable = T, booktabs = T, caption = "HEM AA Freq") %>%
   kable_styling(latex_options = c("striped","repeat_header"))
-# SRM_minDistCabDf %>%
-#   kable(longtable = T, booktabs = T, caption = "SRM: CA-CB-Fe Angles of Closest Residues") %>%
-#    kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
-#                     row_spec(0,angle=45)
-  
+
 ```
 
 ```{r HEM-AAdist,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
@@ -105,8 +101,212 @@ eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
 
    print(distanceDist)
    
+```
+
+### Heme-c
+
+```{r HEC-AAfreq,fig.cap="HEC: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
+
+```{r HEC-t-AAfreq,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+HEC_aaFreqDf %>%
+  kable(longtable = T, booktabs = T, caption = "HEC AA Freq") %>%
+  kable_styling(latex_options = c("striped","repeat_header"))
+
+```
+
+```{r HEC-AAdist,fig.cap="HEC: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Distance) -> tmpDist 
+   
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (Å)") +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
+   print(distanceDist)
+   
+```
+
+### Verdoheme
+
+```{r VERDOHEME-AAfreq,fig.cap="VERDOHEME: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+
+```{r VERDOHEME-t-AAfreq,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+VERDOHEME_aaFreqDf %>%
+  kable(longtable = T, booktabs = T, caption = "VERDOHEME AA Freq") %>%
+  kable_styling(latex_options = c("striped","repeat_header"))
+
+```
+
+```{r VERDOHEME-AAdist,fig.cap="VERDOHEME: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Distance) -> tmpDist 
+   
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (Å)") +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
+   print(distanceDist)
+   
+```
+
+### Siroheme
+```{r SRM-AAfreq,fig.cap="SRM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+
+```{r SRM-t-AAfreq,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+SRM_aaFreqDf %>%
+  kable(longtable = T, booktabs = T, caption = "SRM AA Freq") %>%
+  kable_styling(latex_options = c("striped","repeat_header"))
+
+```
+
+```{r SRM-AAdist,fig.cap="SRM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Distance) -> tmpDist 
+   
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (Å)") +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
+   print(distanceDist)
+   
+```
+
+
 
 
 <!-- For the sake of this report, both sets of data are overlaid in the same figures in (section). However, the general tendencies are very similar and only the 7A data will be discussed. -->
