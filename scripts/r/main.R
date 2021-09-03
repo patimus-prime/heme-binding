@@ -248,7 +248,8 @@ VERDOHEME_CACBFe_DF <- rbind(VEA_CACBFe_DF,VER_CACBFe_DF)
 VERDOHEME_planar_angles_DF <- rbind(VEA_planar_angles_DF,VER_planar_angles_DF)
 VERDOHEME_distList <- list(
    "mean_distances" = rbind(VEA_distList$mean_distances,VER_distList$mean_distances),
-   "closest3Res" = rbind(VEA_distList$closest3Res,VER_distList$closest3Res)
+   "closest3Res" = rbind(VEA_distList$closest3Res,VER_distList$closest3Res),
+   "all_distances" = rbind(VEA_distList$all_distances,VER_distList$all_distances)
 )
 
 # === ALL OF THE BELOW JUST TO MERGE THESE TWO FOR AMINO ACID...
@@ -321,6 +322,14 @@ for(ligand in 1:(length(ligandList)))
    activeLigand = ligandList[[ligand]]
    
    # AA FReq ----
+   zx <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep='')) 
+   
+   print(zx)
+   
+   
+   # AA Freq but with 5A and 7A overlaid
    rm(tmp5A,tmp7A,tmpBoth)
    head(HEM_aaFreqDf)
    tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_aaFreqDf",sep="")))))
@@ -353,6 +362,17 @@ for(ligand in 1:(length(ligandList)))
             geom_bar(stat="identity",position = "identity", alpha=.4) +
             labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep='')) +
             scale_fill_discrete(name = "Distance Cutoff"))
+   
+   ### DISTANCES ####
+   eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
+      select(Residue_Code,Distance) -> tmpDist 
+   
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (A)")
+   print(distanceDist)
+   
+   
    
    # ### VOLUME ####
    
@@ -392,6 +412,11 @@ for(ligand in 1:(length(ligandList)))
       + labs(x="Surface Area (Å²)",y="Frequency",title = paste(activeLigand,": Ligand Excluded SA (Å²)"))
    )
    
+   zx <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf$Freq",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep=''))
+   
+   print(zx)
    
    # Ligand Accessible Surface Area 
    
