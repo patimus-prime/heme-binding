@@ -1827,8 +1827,8 @@ VERDOHEME_minDistCabDf %>%
 ```
 
 
-This is an attempt at referencing the tables above. 
+<!-- This is an attempt at referencing the tables above.  -->
 
-<!-- These do work, but only when knitting from Index -->
-figure reference \@ref(fig:super-figs)
-table reference \@ref(tab:HEM-p1DF)
+<!-- <!-- These do work, but only when knitting from Index --> 
+<!-- figure reference \@ref(fig:super-figs) -->
+<!-- table reference \@ref(tab:HEM-p1DF) -->

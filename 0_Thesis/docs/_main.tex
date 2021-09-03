@@ -359,85 +359,82 @@ I investigated how heme, a molecule involved in many biological processes, binds
 \adjustmtc
 \markboth{Introduction}{}
 
-How we wanna do this? We gonna assume a base level of biochemistry amongst our peers, what we had in the last semester.
+Proteins that contain metal ion cofactor(s) are known as metalloproteins, and they compose approximately 40\% of all proteins. The metal ion can be free, or bound within a ligand. One such ligand is heme, a complex of iron and a porphyrin ring (\textbf{should I go deeper about porphyrins?}). Heme is employed by many metalloproteins to catalyze a broad range of reactions.
 
-Proteins that require metallic groups as their ligands are known as metalloproteins, and they compose approximately 40\% of all proteins. One such ligand is heme. Heme is employed by many metalloproteins to catalyze a broad range of reactions.
+Hemoglobin and myoglboin are likely familiar proteins, and use heme to store and transport oxygen. Other examples of enzymes that employ heme are peroxidases, catalases (a type of peroxidase), nitric oxide synthases, heme oxygenases, and cytochrome p450s. Peroxidases and catalases catalyze oxidation-reduction reactions using a histidine-bound heme, with catalases in particular specializing in the decomposition of hydrogen peroxide. Nitric oxide synthases catalyze the reaction of L-arginine into nitric oxide, which is vitally important to cellular signaling (\textcite{Poulos2014}). Free heme molecules may be released upon degradation of hemoproteins (especially hemoglobin), however, heme is prooxidative and therefore toxic to cells and must be cleared. Heme oxygenases assist in the degradation of heme, and are regarded as potential therapeutics, due to anti-inflammatory effects\autocite{Araujo2012}.
 
-Hemoglobin and myoglboin are likely familiar proteins, and use heme to store and transport oxygen. Other examples of the enzymes that employ heme are peroxidases, catalases (a type of peroxidase), nitric oxide synthases, heme oxygenases, and cytochrome p450s. Peroxidases and catalases catalyze oxidation-reduction reactions using a histidine-bound heme, with catalases in particular specializing in the decomposition of hydrogen peroxide. Nitric oxide synthases catalyze the reaction of L-arginine into nitric oxide, which is vitally important to cellular signaling. Free heme molecules may be released upon degradation of hemoproteins, but heme is highly oxidative (??) and therefore toxic to cells; heme oxygenases serve to degrade heme, protecting the cell and forming products preventing vascular inflamation. Heme oxygenases are regarded as potential therapeutics, because of their anti-inflammatory effects.
+The enzymes with arguably the most potential applications, cytochrome P450s function as powerful monooxygenases. They participate in many reactions: capable oxidizing a wide range of substrates, serving to oxidize carbohydrates, steroids, fatty acids; catalyzing hormone degradation and synthesis; and degrading the majority of drugs(\textcite{Poulos2014}). Due to their extraordinary utility and range of reactions, cytochrome p450s are of great interest in the protein engineering field. Cytochrome P450s have the potential to be used in industrial biocatalysis, e.g.~in pharmaceutical production, bioremediation of environmental pollutants\autocite{Du2017,Lalonde2016}. The limiting factor preventing its deployment has been the struggle to increase enzymatic efficiency and therefore yield of processes employing the enzyme\autocite{Girvan2016,Li2020}.
 
-Last but not least, cytochrome p450 function as powerful monooxygenases. They are capable oxidizing, inserting oxygen into a fanastic amount of substrates, serving to oxidize carbohydrates, steroids, fatty acids; hormone degradation and synthesis; and degrade the vast majority of drugs. Due to their extraordinary utility and range of reactions, cytochrome p450s are of great interest in the protein engineering field. Cytochrome p450s have the potential to be used in industrial biocatalysis, e.g.~in pharmaceutical production, bioremediation of environmental pollutants. The limiting factor preventing its deployment has been the struggle to increase enzymatic efficiency and therefore yield of processes employing the enzyme. The struggle to increase enzymatic efficiency, in turn, is due to an incomplete understanding of the binding environment for heme; indeed, the binding environment for \emph{hemes}.
-
-The heme molecule itself has its own variety. There are several ``hemes'', structurally and chemically different, that are used to achieve different chemical reactions; in this study, we examined heme-b, heme-c, siroheme, and verdoheme. Their structures are shown below.
+Echoing the many applications of its host enzymes, the heme molecule itself has its own variety. There are several ``hemes'', structurally and chemically different, that are used to achieve different chemical reactions: in this study, we examined heme-b, heme-c, siroheme, and verdoheme. Their structures are shown in Figures 1-5.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.49\linewidth,height=0.2\textheight]{figures/HEM-b} 
+{\centering \includegraphics[width=0.5\linewidth]{figures/HEM-b} 
 
 }
 
-\caption{HEM}\label{fig:unnamed-chunk-1-1}
+\caption{Heme-b (HEM)}\label{fig:structHEM}
 \end{figure}
 \begin{figure}
 
-{\centering \includegraphics[width=0.49\linewidth,height=0.2\textheight]{figures/HEM-c} 
+{\centering \includegraphics[width=0.5\linewidth]{figures/HEM-c} 
 
 }
 
-\caption{HEC}\label{fig:unnamed-chunk-1-2}
+\caption{Heme-c (HEC)}\label{fig:structHEC}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/SRM} 
+
+}
+
+\caption{Siroheme (SRM)}\label{fig:structSRM}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/VEApubchem} 
+
+}
+
+\caption{Verdoheme, VEA}\label{fig:structVEA}
 \end{figure}
 \begin{figure}
 
-{\centering \includegraphics[width=0.49\linewidth,height=0.2\textheight]{figures/SRM} 
+{\centering \includegraphics[width=0.5\linewidth]{figures/VERpubchem} 
 
 }
 
-\caption{SRM}\label{fig:unnamed-chunk-1-3}
-\end{figure}
-\begin{figure}
-
-{\centering \includegraphics[width=0.49\linewidth,height=0.2\textheight]{figures/VEApubchem} 
-
-}
-
-\caption{VEA}\label{fig:unnamed-chunk-1-4}
-\end{figure}
-\begin{figure}
-
-{\centering \includegraphics[width=0.49\linewidth,height=0.2\textheight]{figures/VERpuchem} 
-
-}
-
-\caption{VER}\label{fig:unnamed-chunk-1-5}
+\caption{Verdoheme, VER}\label{fig:structVER}
 \end{figure}
 
-The most common, ``heme'', or heme-b, has been discussed above. It binds principally via noncovalent interactions with its binding pocket. Heme-c is derived from heme-b; it binds, with few exceptions, covalently to cysteine residues in the binding pocket, forming thioester bonds between the residues and heme-c vinyl groups. Its function is much more specific than heme-b, mostly serving as an elctron carrier. The reason for this is not abundantly clear, but several studies suggest that because of its covalent bonding, heme-chas an electronic potential that is broader and more specifiable than heme-b.
+The most common ``heme'', heme-b, has been discussed above. It binds principally via noncovalent interactions with its binding pocket. Heme-c is derived from heme-b; it binds, with few exceptions, covalently to cysteine residues in the binding pocket, forming thioester bonds between the residues and heme-c vinyl groups. Its function is much more specific than heme-b, mostly serving as an elctron carrier. The reason for this is not abundantly clear, but several studies suggest that because of its covalent bonding, heme-c has an electronic potential that is broader and more specifiable than heme-b. \autocite{Bowman2008,Kleingardner2015}
 
-Siroheme is even more limted in its applications but arguably of greater signifiance in nature. It is used exclusively in XXX, which in turn is responsible for XX and therefore Y.. Siroheme uniquely is able to transfer 6 eletrons or something; one study suggests this is due to its structure of blablabla.
+Siroheme is even more limted in its applications but arguably of greater signifiance in nature. It is used exclusively in sulfite and nitrite reductases, which catalyze the reduction of the sulfates and nitrates plants uptake from the ground, and ultimately use to produce nitrogen and sulfur-containing amino acids(\textcite{Tripathy2010}). The reason for the use of siroheme in this reaction rather than heme is not completely understood, but one study suggests that, along with other cofactors involved in the reaction, siroheme forms a bridge to the catalyic iron atom in the porphyrin ring that is more efficient at channeling electrons than the bridge that could be formed by heme.\autocite{Branzanic2019} FIXME DEFINITELY CUT THIS DOWN IN WORDS.
 
-Verdoheme is an intermediate product in the degradation of heme-b by heme oxygenase. When heme oxygenase degrades heme-b, balblabla are produced; verdoheme is the precusor to xx. And while an intermediate, the way verdoheme is at least briefly bound in heme oxygenase (CHECK!!!) is not well documented and may be of interest.
+Lastly, verdoheme is an intermediate product in the degradation of heme-b by heme oxygenase. When heme oxygenase degrades heme-b, biliverdin, carbon monoxide, and iron are produced; verdoheme is the precusor to bilverdin\autocite{Lai2010,Sato2007}. While a product of prior reactions wthin heme oxygenase, verdoheme appears to be oriented and bound differently \autocite{Lad2004}.
 
-As discussed above, the potential for engineered proteins is yuge for these molecules. However, binding environments are not well udnerstood and form a crucial part of the puzzle. Studies have been done engineering hemoproteins, and have concluded the binding environemnt highyl important. Another stud blablbla
+In summary, heme molecules are used in a many reactions and several enzymes have the potential to be of great value either in biocatalysis or pharmaceutical applications. There are multiple methods employed to design molecules, but rational design in particular (basically, the mutation of certain residues based on an understanding of the structure-function relationships) is at least partially hampered by an incomplete understanding of the binding environment for heme. The importance of the binding environment was noted in a study seeking to design \emph{de novo} heme-c based enzymes, and found the binding environment likely to be of importance in modulating redox potential \autocite{Ishida2004}.
 
-There have only been a handful of studies dedicated to understanding the structure-chemical relationship between heme and the proteins that use heme for their chemistry (these proteins are known as hemoproteins).
+A fairly recent study conducted a structural analysis of 125 hemoprotein chains(\textcite{Li2011}). The study suggested hemoproteins undergo small conformational changes during binding; and that apo-form (ligand-containing) proteins may therefore be suitable for bioinformatics-based prediction and protein design. Additionally, the heme binding environment of the protein dataset used in the study was found to be rich in aromatic and nonpolar residues.
 
-In the most significant previous work, approximately 125 hemoproteins were studied(\textcite{Li2011}). The study focused on the structural differences between hemoproteins with bound and unbound ligands.
+The aforementioned study was published in 2011 - since then the PDB has been populated with far more hemoproteins. The 125 protein chains used in the study were sourced from a small dataset of proteins (FIXME: Double check but their Table 2 is like 20 proteins), compared to the amount of hemoproteins now available in the PDB. The focus of the study was on conformational differences induced by heme-binding. \textbf{make note of their definition of distances\ldots{} although I somewhat wonder if our definiton of distance is a bit arbitrary too}
 
-In this study, structures of hemoproteins with bound ligands were examined. Multiple ligands and their binding protein were examined: heme (HEM), heme-c (HEC), siroheme (SER), and verdoheme (VEA/VER).
+\textbf{need a better transition here}
 
-Yeah so below we get 'em. But no sure how I'd go about stacking em side by side and keeping a caption. So far this gets the job done let's move on homie!
+In this study, we focus on elucidating the binding environment for multiple heme molecules: heme-b (HEM), heme-c (HEC), siroheme (SER), and verdoheme (VEA/VER). UCSF Chimera was used to both extract and predict properties of a diverse set of hemoproteins. A robust and high-throughput framework was constructed to process the datasets for each heme molecule, requiring only inputs of which ligand is to be examined per dataset.
 
-Of particular interest were any qualities that may suggest a requirement for ligand binding. In addition, with several ligands studied, the similarities and differences for binding pockets for the different ligands could be elucidated. Properties of the binding pockets were both predicted and observed from their respective PDB files.
+The properties extracted and predicted of the heme molecules were (I need to figure out how to do a bullet list in this format):
++Volumes
++Solvent accessible and excluded surface areas of ligands and binding pockets
++Amino acid frequencies within binding pockets
++Planar angles of amino acids in binding pocket v. the ligand
++CA-CB-Fe angles of amino acids in binding pocket v. the ligand
++Distances of amino acids from the Fe atom of the ligand
 
-\hypertarget{other-stuff-to-consider-adding-to-the-introduction}{%
-\section{other stuff to consider adding to the introduction}\label{other-stuff-to-consider-adding-to-the-introduction}}
-
-Although pdbs were thoroughly examined and the datasets were culled, the sample size of this study is very small compared to the amount of hemoproteins available in the pdb a decade later (\textasciitilde10,000 HEM-containing proteins and xx). The dataset is also limited in that there is a somewhat homogenous group of proteins examined (?). The characteristics examined were limited to: xx.
-
-It is hypothesized that the following characteristics all have an impact on the binding of heme and function of the hemoprotein: XXXXXXXXX.
-
-In this study, some of these characteristics were examined. They include: XX. The remainder are thus far not feasible to calculate.
-ss
-All of these characteristics have implications in the field of protein engineering or basic research into hemoproteins. Examples of the uses of these results include {[}SUPER BLOOD STUDY{]} and {[}OTHER PROTEIN ENGINEERING STUFF{]}. Not sure how much we can reference those other papers besides doing that besides in the conclusion.
+These results may be of use in rational design of hemoproteins in future studies, or at least improve the understanding of the heme binding environment. \textbf{probably put something more\ldots{} salesman-like here later}
 
 \adjustmtc
 \markboth{Methods}{}
@@ -514,136 +511,94 @@ All data were imported to R and processed from text files into organized data fo
 \adjustmtc
 \markboth{Introduction}{}
 
-\hypertarget{results}{%
-\chapter{Results}\label{results}}
-
-Data are reported as figures in Appendix \ref{a-figures} and tables in Appendix \ref{a-tables}. Data are organized by result e.g.~Volume, and then by ligand.
-
 \adjustmtc
 \markboth{Methods}{}
 
 \hypertarget{discussion}{%
-\chapter{Discussion}\label{discussion}}
+\chapter{Results and Discussion}\label{discussion}}
+
+Data are reported as figures in Appendix \ref{a-figures} and tables in Appendix \ref{a-tables}. Data are organized by result e.g.~Volume, and then listed per ligand.
 
 This section is organized by type of result; figures and tables referenced are within the appendices.
 
 \hypertarget{aa-frequency-discussion}{%
 \section{AA Frequency Discussion}\label{aa-frequency-discussion}}
 
-Amino acid frequencies within the 5A and 7A distance cutoffs of the ligand are reported in Appendix \ref{figs-aaFreq} and (FIXME! Missing amino acid tables).
-For HEM and HEC, nonpolar amino acids are the most frequent. This may indicate that nonpolar amino acids are extremely important to stabilizing the binding pocket.
+Amino acid frequencies within the 5A and 7A distance cutoffs of the ligand are reported in Appendix \ref{figs-aaFreq} and \textbf{(FIXME! Missing amino acid tables)}
 
-For SRM, this is not the case. HEM and HEC are very similar, but SRM is quite different. For SRM we find that arginine is extremely frequent to find in the pocket (amongst n=9). This is perhaps expected given the exposure of charged groups on SRM, but the degree of the effect is very notable. Glycine and Lysine and other small residues are also highly present. Perhaps this indicates a selection for small residues in the binding pocket to accomodate SRM.
+\hypertarget{heme-b-and-heme-c}{%
+\subsection{Heme-b and Heme-c}\label{heme-b-and-heme-c}}
 
-Verdoheme, again, has a very small sample size (n=4). But the results appear to follow trends seen in other ligands; a preference for nonpolar, charged, or small residues. Leucine is the most preferred of these, along with alanine - two small nonpolar amino acids. These results, although limited, reinforce the trend of an especially important composition of amino acids in the binding pocket rather than the coordinating amino acids.
+The top 5 residues for HEM and HEC both include leucine, phenylalanine, alanine, and isoleucine; valine and glycine are the other for each ligand respectively. Thus, we confirm with (\textcite{Li2011}) that the binding site for heme-b, and now additionally heme-c, is enriched with nonpolar amino acids. This strongly suggests that the nonpolar amino acids are crucial to the binding of heme, likely due to the favorable interaction between the nonpolar amino acids and the porphyrin ring of heme-b and heme-c.~The degree to which the percentage of nonpolar acids in the binding pocket may affect the binding of heme cannot be determined in this analysis. But the agreement with the residues closest to heme (and therefore likely to coordinate) is discussed below.
+\#\#\# Siroheme
+
+The binding pocket for siroheme is highly enriched with arginine, in addition to other charged residues such as lysine and cysteine. Given the function of siroheme is to transfer multiple electrons per reaction, the enrichment of the binding environment with charged residues is perhaps not surprising. Addtionally, for siroheme in particular, the geometry, the placement of these residues in order to coordinate the movement of electrons may be of interest; however this is beyond the scope of this study.
+
+\hypertarget{verdoheme}{%
+\subsection{Verdoheme}\label{verdoheme}}
+
+Verdoheme is an intermediate formed within the binding pocket of heme oxygenase during the degradation of heme; this is the same environment that binds heme at the beginning of the reaction. Verdoheme is oriented differently in the pocket, however overall the amino acid composition of the pocket should be quite similar if not the same. But this is not reflected in our results. Rather, relative to the amino acid\ldots{} profile (?) of heme-b and heme-c, arginine is in greater abundance in the binding pocket. Leucine, alanine and phenylalanine are still amongst the most frequent amino acids, again providing nonpolar interactions.
+
+These results may suggest that verdoheme is reoriented, and potentially spatially relocated, to interact with more arginine residues than would be possible if the original heme orientation were maintained; the amount of space verdoheme would have to move within the binding pocket is discussed below. However, it is also possible, likely, this is an artefact of the very small sample size of verdoheme PDBs used in this study (n=4). Upon the availability of additional verdoheme-containing PDBs in the future this result may be reexamined.
 
 \hypertarget{volume-discussion}{%
 \section{Volume Discussion}\label{volume-discussion}}
 
-Figures can be found in Appendix \ref{figs-vol}
-Besides HEM, much of the volume data for the different ligands did not closely agree between different distance cutoffs. Most of the data did however fall within reasonable bounds, regardless of distance cutoffs.
+Figures can be found in Appendix \ref{figs-vol}..
 
-HEM appears to require a pocket volume of between 800 and 1200 A³. Data reported for this quality range between 500 and 2000 A³. These outliers can perhaps be explained by proteins with exceptionally large binding pockets, but are more likely an indication of the imperfections in the volume calculation algorithm, highlighting the need for studies that take into account a multiplicity of PDBs to evaluate the size of a binding pocket.
+Besides HEM, much of the volume data for the different ligands did not closely agree between different distance cutoffs. The degree to which the method used to determine the volume of the binding pocket, Surfnet as implemented in UCSF Chimera, is affected by the distance cutoff is therefore demonstrated to be quite great. Most of the data did however fall within reasonable bounds, regardless of distance cutoffs.
 
-HEC volume data centers around 800-1100A³. This molecule is very similar to HEM and these results are somewhat expected. Outliers again can perhaps be explained by the volume calculation algorithm.
+Data for heme-b, heme-c and siroheme somewhat agree within a tight range of volumes, with heme-b in particular showing the best agreement of data at approximately 800-1200A³. However, the \emph{range} of the volume data, for all ligands, is considerable, approximately 1000A³.
 
-SRM and Verdoheme suffer from a low number of sample data. SRM appears to center at 1000-1200 A³, again somewhat confirmed by other ligands examined in the study.
+There are then at two conflicting conclusions from these data.
 
-But Verdoheme has a near equal distribution of samples from 700-1450 A³; this lack of agreement precludes a range that may be suspected to be the ``real'' volume.
+The the volumes of the binding pocket, as determined by calculation, are shown to not require uniform size. This suggests that the binding pocket need not be a perfect fit for each protein's respective ligand. As far as implications for protein engineering, these results suggest that de novo design of a hemoprotein may not require significant work as far as sizing of a binding pocket.
 
-\hypertarget{ligand-solvent-excluded-surface-area-discussion}{%
-\section{Ligand Solvent Excluded Surface Area Discussion}\label{ligand-solvent-excluded-surface-area-discussion}}
+Alternatively, the results demonstrate the difficulty of calculating molecular volumes, and how error-prone at least this method may be. Comparison with other methods of calculating molecular volumes, or with experimental data, would be warranted in future study.
 
-Figures can be found in Appendix \ref{figs-ligExcSA}.
+\textbf{also need to highlight differences in excluded v. accessible}
+\#\# Surface Area of Ligands
+Figures can be found in Appendix \ref{figs-ligExcSA} for ligands' solvent excluded surface area, and
+in Appendix \ref{figs-ligAccSA} for ligands' solvent accessible surface area.
 
-The limitations of the limited sample size can be seen in this quality as well.
+This measure, and also the solvent accessible surface area of the ligands, is effectively of the surface area of each ligand itself - distance cutoffs and binding environments are not expected to affect the results. Significant variability in the data may therefore suggest problems in calculation.
 
-HEM appears to have a ligand surface area of approximately 500-700 A². HEC follows a similar trend.
-
-However, for SRM and Verdoheme, data are more scattered. Trends cannot be derived from these data.
-
-\hypertarget{ligand-solvent-accessible-surface-area-discussion}{%
-\section{Ligand Solvent Accessible Surface Area Discussion}\label{ligand-solvent-accessible-surface-area-discussion}}
-
-Figures can be found in Appendix \ref{figs-ligAccSA}.
-
-HEM has a strong agreement of data at approximately 1000-1250 A². HEC, slightly more scattered, appears to agree from 750-1250 A².
-
-SRM, despite its limited sample size, has strong agreement for this quality: it ranges from about 1000-1050 A².
-
-VERDOHEME is highly scattered for this measure. Verdoheme ranges from 750-1800 A².
+Both accessible and excluded surface area data are fairly well centered around some value for all ligands, except for verdoheme. For the latter this may be attributed to the small sample size. But for other ligands, and also for verdoheme, the outliers in the data may suggest errors in calculation and potential inclusion of parts of the binding pocket itself in calculation.
 
 \hypertarget{pocket-solvent-excluded-surface-area}{%
 \section{Pocket Solvent Excluded Surface Area}\label{pocket-solvent-excluded-surface-area}}
 
+\textbf{We'll do same treatment for pocket surface areas, skipping ahead to angles/distances}
+
 Figures can be found in \ref{figs-pocketExcSA}
 
-HEM data has poor agreement for this measure. Data is concentrated from 5000-15000 A², but this is a very large range and not very useful.
-
-HEC agrees in a somewhat tighter range: most data fall within 5000-7500 A²; still not very useful but better than HEM.
-
-Most SRM data fall within 21000-22000 A².
-
-Verdoheme data range from 9200 to 10000 A².
-
-For this measure, then, we find that SRM and Verdoheme have a fairly specific range of predicted solvent excluded surface area for their binding pockets.
-
-\hypertarget{pocket-solvent-accessible-surface-area}{%
-\section{Pocket Solvent Accessible Surface Area}\label{pocket-solvent-accessible-surface-area}}
-
 Figures can be found in Appendix \ref{figs-pocketAccSA}.
-
-The results for this measure follow the trends for the previous section.
-
-Most HEM data fall from 5000-15000 A². HEC data mostly fall from 5000-7500 A².
-
-SRM data is highly concentrated at approximately 21000 A², more specific than the pocket solvent excluded surface area.
-
-Verdoheme data range from 10000-11000 A².
 
 \hypertarget{all-planar-angles}{%
 \section{All Planar Angles}\label{all-planar-angles}}
 
 Figures can be found in \ref{figs-planarAll}
 
-These data, for all ligands, largely serve to compare as noise for the next section. The planar angles of all residues falling within the upper distance cutoff are plotted.
+These data, for all ligands, except potentially for heme-c, largely serve to compare as noise for the next section. The planar angles of all residues, falling within the upper distance cutoff of 7A, are plotted.
 
-A notable exception is HEC; the plot for this ligand seems to suggest that GLU and LYS have fairly specific planar angles with the ligand. (FIXME! Check out the distance tables to drill down further)
+In the notable exception of heme-c (HEC), Figure \textbf{FIXME: insert figure name} for this ligand seems to suggest that GLU, MET and LYS have fairly specific planar angles with the ligand. However, heme-c is not coordinated to achieve its chemistry but rather covalently bound, to histidine. Lysine is effectively the median of amino acid frequency for heme-c, methionine is even less frequent and glutamine is the least frequent amino acid. For the latter two amino acids their tight range of planar angles is therefore likely an artefact of a small sample size of amino acids. However, for lysine the tight range of angles may be significant; this is dicussed further below.
 
 \hypertarget{planar-angles-of-closest-residues}{%
 \section{Planar Angles of Closest Residues}\label{planar-angles-of-closest-residues}}
 
 Figures can be found in \ref{figs-planarClosest}
 
-Here, the three closest residues to the ligand in each PDDB and their planar angle to the ligand are plotted.
-
-HEM has a fairly inconclusive set of data for this measure. GLU and GLN nearby HEM do appear to fall within a tight range, though, of approximately 75 degrees and 80 degrees respectively.
-
-The data for residues nearby HEC diverge from what is found for all residues around HEC. The most agreement is found for ILE and LYS, with angles concentrated about 50 degrees and 75 degrees, respectively.
-
-Only three types of residues appear nearby SRM: CYS, LYS, and ARG. Although their angles vary wildly, these data suggest these residues are important to the coordination fo SRM. (FIXME! Add reasoning)
-
-Verdoheme also has a small selection of residues that are close to the ligand. GLY and HIS are the only residues that are close to the ligand in the PDBs used in this study. (FIXME! Add reasoning\ldots{} or qualifier statement n=2)
-
 \hypertarget{all-ca-cb-fe-angles}{%
 \section{All CA-CB-Fe Angles}\label{all-ca-cb-fe-angles}}
 
 Figures can be found in \ref{figs-cabAll}
-
-All residues have a broad range of angles in relation to HEM.
-
-Most residues have a broad range of angles for HEC, with the exception of THR, which has a tight distribution around 100 degrees. This result only appears here and does not follow for the closest residues, and therefore may be due to a small sample size of THR residues.
-
-SRM appears to have tight distributions of angles when considering all residues; the residues closest to SRM do not echo this. Although likely attributable to a small sample size, there appear several residues with specific angles: ALA around 50 degrees, GLN around 140-150 degrees, and SER around 50 degrees.
-
-Verdoheme\ldots{} (FIXME! Confer with JeanDi before we report more of these angles. Not sure I'm going about it in an informative way. Also add figure numbers.)
 
 \hypertarget{ca-cb-fe-angles-of-closest-residues}{%
 \section{CA-CB-Fe Angles of Closest Residues}\label{ca-cb-fe-angles-of-closest-residues}}
 
 Figures can be found in \ref{figs-cabClosest}
 
-Most notably, HIS is the only residue that appears closeby Verdoheme, and falls within a range of 106-116 degrees.
+Most notably, HIS is the only residue that appears near verdoheme.
 
 \hypertarget{limitations-of-the-study}{%
 \section{Limitations of the Study}\label{limitations-of-the-study}}
@@ -3968,11 +3923,6 @@ The results of this study are limited by the small sample size, but suggest that
 \cellcolor{gray!6}{1TWN} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.673370} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{113.516}\\
 1TWR & 25 & HIS & 4.786588 & HIS & 108.864\\*
 \end{longtabu}
-
-This is an attempt at referencing the tables above.
-
-figure reference \ref{fig:super-figs}
-table reference \ref{tab:HEM-p1DF}
 
 
 %%%%% REFERENCES
