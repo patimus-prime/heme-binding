@@ -324,7 +324,7 @@ for(ligand in 1:(length(ligandList)))
    # AA FReq ----
    zx <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
       geom_bar(stat="identity",position = "identity", alpha=1) +
-      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep='')) 
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency at 7A",sep='')) 
    
    print(zx)
    
@@ -365,11 +365,11 @@ for(ligand in 1:(length(ligandList)))
    
    ### DISTANCES ####
    eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
-      select(Residue_Code,Distance) -> tmpDist 
+      dplyr::select(Residue_Code,Distance) -> tmpDist 
    
    distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (A)")
+      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (Å)")
    print(distanceDist)
    
    
@@ -412,11 +412,6 @@ for(ligand in 1:(length(ligandList)))
       + labs(x="Surface Area (Å²)",y="Frequency",title = paste(activeLigand,": Ligand Excluded SA (Å²)"))
    )
    
-   zx <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf$Freq",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
-      geom_bar(stat="identity",position = "identity", alpha=1) +
-      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep=''))
-   
-   print(zx)
    
    # Ligand Accessible Surface Area 
    

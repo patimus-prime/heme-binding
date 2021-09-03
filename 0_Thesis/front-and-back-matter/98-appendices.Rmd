@@ -10,7 +10,7 @@
 <!-- Figures begin here  -->
 
 ## AA Frequency {#figs-aaFreq}
-```{r HEM-AAfreq,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r HEM-AAfreqOverlaid,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEM"
 library(dplyr) 
