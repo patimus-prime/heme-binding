@@ -517,21 +517,237 @@ All data were imported to R and processed from text files into organized data fo
 \hypertarget{discussion}{%
 \chapter{Results and Discussion}\label{discussion}}
 
-Data are reported as figures in Appendix \ref{a-figures} and tables in Appendix \ref{a-tables}. Data are organized by result e.g.~Volume, and then listed per ligand.
-
-This section is organized by type of result; figures and tables referenced are within the appendices.
+--\textgreater{}
 
 \hypertarget{analysis-of-nearby-residues-of-natural-porphyrins}{%
 \section{Analysis of Nearby Residues of Natural Porphyrins}\label{analysis-of-nearby-residues-of-natural-porphyrins}}
 
-The first part of the study aimed at providing statistics on the amino acid propensity to interact with hemes in natural proteins. We started with heme-b, heme-c, siroheme and verdoheme. Because we are not looking only at the iron environment, but instead at the environment of the entire microcycle, we did the analysis for any amino acid in contact with the heme. This was done AA having at least one atom within the cutoff distances of 5 and 7 Angtroms (A). For the sake of this report, both sets of data are overlaid in the same figures in (section). However, the general tendencies are very similar and only the 7A data will be discussed.
+The first part of the study aimed at providing statistics on the amino acid propensity to interact with hemes in natural proteins. We started with heme-b, heme-c, siroheme and verdoheme. Because we are not looking only at the iron environment, but instead at the environment of the entire microcycle, we did the analysis for any amino acid in contact with the heme. This was done AA having at least one atom within the cutoff distances of 5 and 7 Angtroms (A).
 
-For the main
+Amino acid frequencies were obtained for distance cutoffs of 5A and 7A - these figures and data are shown in \textbf{FIXME ADD APPENDICES LATER} The trends in these data are very similar and therefore only the data pertaining to the 7A distance cutoff are discussed below.
 
-Amino acid frequencies within the 5A and 7A distance cutoffs of the ligand are reported in Appendix \ref{figs-aaFreq} and \textbf{(FIXME! Missing amino acid tables)}
+\hypertarget{heme-b}{%
+\subsection{Heme-b}\label{heme-b}}
 
-\hypertarget{heme-b-and-heme-c}{%
-\subsection{Heme-b and Heme-c}\label{heme-b-and-heme-c}}
+\hypertarget{figs-aaFreq}{%
+\section{AA Frequency}\label{figs-aaFreq}}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEM-AAfreq-1.pdf}
+\caption{\label{fig:HEM-AAfreq}HEM: AA Frequency}
+\end{figure}
+
+\begin{longtable}[t]{lr}
+\caption{\label{tab:HEM-t-AAfreq}HEM AA Freq}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:HEM-t-AAfreq}HEM AA Freq \textit{(continued)}}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{261}\\
+PHE & 224\\
+\cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{188}\\
+ILE & 161\\
+\cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{158}\\
+\addlinespace
+TYR & 156\\
+\cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{146}\\
+HIS & 142\\
+\cellcolor{gray!6}{THR} & \cellcolor{gray!6}{142}\\
+GLY & 133\\
+\addlinespace
+\cellcolor{gray!6}{SER} & \cellcolor{gray!6}{129}\\
+GLU & 104\\
+\cellcolor{gray!6}{ASP} & \cellcolor{gray!6}{99}\\
+LYS & 95\\
+\cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{84}\\
+\addlinespace
+ASN & 78\\
+\cellcolor{gray!6}{GLN} & \cellcolor{gray!6}{78}\\
+MET & 72\\
+\cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{60}\\
+CYS & 17\\*
+\end{longtable}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEM-AAdist-1.pdf}
+\caption{\label{fig:HEM-AAdist}HEM: AA Distances}
+\end{figure}
+
+\hypertarget{heme-c}{%
+\subsection{Heme-c}\label{heme-c}}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEC-AAfreq-1.pdf}
+\caption{\label{fig:HEC-AAfreq}HEC: AA Frequency}
+\end{figure}
+
+\begin{longtable}[t]{lr}
+\caption{\label{tab:HEC-t-AAfreq}HEC AA Freq}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:HEC-t-AAfreq}HEC AA Freq \textit{(continued)}}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{62}\\
+ALA & 47\\
+\cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{39}\\
+LYS & 38\\
+\cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{35}\\
+\addlinespace
+VAL & 35\\
+\cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{34}\\
+THR & 34\\
+\cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{30}\\
+ARG & 26\\
+\addlinespace
+\cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{26}\\
+CYS & 24\\
+\cellcolor{gray!6}{MET} & \cellcolor{gray!6}{23}\\
+HIS & 21\\
+\cellcolor{gray!6}{SER} & \cellcolor{gray!6}{21}\\
+\addlinespace
+ASN & 20\\
+\cellcolor{gray!6}{GLN} & \cellcolor{gray!6}{17}\\
+ASP & 14\\
+\cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{12}\\
+GLU & 11\\*
+\end{longtable}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEC-AAdist-1.pdf}
+\caption{\label{fig:HEC-AAdist}HEC: AA Distances}
+\end{figure}
+
+\hypertarget{verdoheme}{%
+\subsection{Verdoheme}\label{verdoheme}}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/VERDOHEME-AAfreq-1.pdf}
+\caption{\label{fig:VERDOHEME-AAfreq}VERDOHEME: AA Frequency}
+\end{figure}
+
+\begin{longtable}[t]{lr}
+\caption{\label{tab:VERDOHEME-t-AAfreq}VERDOHEME AA Freq}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:VERDOHEME-t-AAfreq}VERDOHEME AA Freq \textit{(continued)}}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{16}\\
+ALA & 13\\
+\cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{13}\\
+ARG & 11\\
+\cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{11}\\
+\addlinespace
+PHE & 11\\
+\cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{10}\\
+SER & 10\\
+\cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{9}\\
+LYS & 8\\
+\addlinespace
+\cellcolor{gray!6}{ASN} & \cellcolor{gray!6}{7}\\
+HIS & 7\\
+\cellcolor{gray!6}{MET} & \cellcolor{gray!6}{7}\\
+THR & 7\\
+\cellcolor{gray!6}{GLN} & \cellcolor{gray!6}{6}\\
+\addlinespace
+ILE & 6\\
+\cellcolor{gray!6}{ASP} & \cellcolor{gray!6}{4}\\*
+\end{longtable}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/VERDOHEME-AAdist-1.pdf}
+\caption{\label{fig:VERDOHEME-AAdist}VERDOHEME: AA Distances}
+\end{figure}
+
+\hypertarget{siroheme}{%
+\subsection{Siroheme}\label{siroheme}}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/SRM-AAfreq-1.pdf}
+\caption{\label{fig:SRM-AAfreq}SRM: AA Frequency}
+\end{figure}
+
+\begin{longtable}[t]{lr}
+\caption{\label{tab:SRM-t-AAfreq}SRM AA Freq}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:SRM-t-AAfreq}SRM AA Freq \textit{(continued)}}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{83}\\
+GLN & 51\\
+\cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{43}\\
+LYS & 42\\
+\cellcolor{gray!6}{THR} & \cellcolor{gray!6}{40}\\
+\addlinespace
+ASN & 39\\
+\cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{37}\\
+ALA & 35\\
+\cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{31}\\
+VAL & 31\\
+\addlinespace
+\cellcolor{gray!6}{ASP} & \cellcolor{gray!6}{30}\\
+LEU & 20\\
+\cellcolor{gray!6}{SER} & \cellcolor{gray!6}{20}\\
+MET & 18\\
+\cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{17}\\
+\addlinespace
+PRO & 17\\
+\cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{15}\\
+TRP & 10\\
+\cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{6}\\
+GLU & 2\\*
+\end{longtable}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/SRM-AAdist-1.pdf}
+\caption{\label{fig:SRM-AAdist}SRM: AA Distances}
+\end{figure}
+
+\hypertarget{heme-c-1}{%
+\subsection{Heme-c}\label{heme-c-1}}
 
 Interacts with the propionates, the polar groups within the porphyrin -
 1.
@@ -541,8 +757,8 @@ Thus, we confirm with (\textcite{Li2011}) that the binding site for heme-b, and 
 
 The binding pocket for siroheme is highly enriched with arginine, in addition to other charged residues such as lysine and cysteine. Given the function of siroheme is to transfer multiple electrons per reaction, the enrichment of the binding environment with charged residues is perhaps not surprising. Addtionally, for siroheme in particular, the geometry, the placement of these residues in order to coordinate the movement of electrons may be of interest; however this is beyond the scope of this study.
 
-\hypertarget{verdoheme}{%
-\subsection{Verdoheme}\label{verdoheme}}
+\hypertarget{verdoheme-1}{%
+\subsection{Verdoheme}\label{verdoheme-1}}
 
 Verdoheme is an intermediate formed within the binding pocket of heme oxygenase during the degradation of heme; this is the same environment that binds heme at the beginning of the reaction. Verdoheme is oriented differently in the pocket, however overall the amino acid composition of the pocket should be quite similar if not the same. But this is not reflected in our results. Rather, relative to the amino acid\ldots{} profile (?) of heme-b and heme-c, arginine is in greater abundance in the binding pocket. Leucine, alanine and phenylalanine are still amongst the most frequent amino acids, again providing nonpolar interactions.
 
@@ -642,31 +858,31 @@ The results of this study are limited by the small sample size, but suggest that
 \hypertarget{a-figures}{%
 \chapter{Figures}\label{a-figures}}
 
-\hypertarget{figs-aaFreq}{%
-\section{AA Frequency}\label{figs-aaFreq}}
+\hypertarget{figs-aaFreqOverlaid}{%
+\section{AA Frequency}\label{figs-aaFreqOverlaid}}
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/HEM-AAfreq-1.pdf}
-\caption{\label{fig:HEM-AAfreq}HEM: AA Frequency}
+\includegraphics{_main_files/figure-latex/HEM-AAfreqOverlaid-1.pdf}
+\caption{\label{fig:HEM-AAfreqOverlaid}HEM: AA Frequency}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/HEC-AAfreq-1.pdf}
-\caption{\label{fig:HEC-AAfreq}HEC: AA Frequency}
+\includegraphics{_main_files/figure-latex/HEC-AAfreqOverlaid-1.pdf}
+\caption{\label{fig:HEC-AAfreqOverlaid}HEC: AA Frequency}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/SRM-AAfreq-1.pdf}
-\caption{\label{fig:SRM-AAfreq}SRM: AA Frequency}
+\includegraphics{_main_files/figure-latex/SRM-AAfreqOverlaid-1.pdf}
+\caption{\label{fig:SRM-AAfreqOverlaid}SRM: AA Frequency}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{_main_files/figure-latex/VERDOHEME-AAfreq-1.pdf}
-\caption{\label{fig:VERDOHEME-AAfreq}VERDOHEME: AA Frequency}
+\includegraphics{_main_files/figure-latex/VERDOHEME-AAfreqOverlaid-1.pdf}
+\caption{\label{fig:VERDOHEME-AAfreqOverlaid}VERDOHEME: AA Frequency}
 \end{figure}
 
 \hypertarget{figs-vol}{%
@@ -1027,14 +1243,13 @@ The results of this study are limited by the small sample size, but suggest that
 \addlinespace
 3EAH & NITRIC OXIDE SYNTHASE, ENDOTHELIAL; & HOMO SAPIENS;\\
 \cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{CYTOCHROME C552;} & \cellcolor{gray!6}{AQUIFEX AEOLICUS VF5;}\\
-4B2N & 70 KDA PROTEIN; & XANTHOMONAS SP.;\\
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{CYTOCHROME C ISO-1;} & \cellcolor{gray!6}{SACCHAROMYCES CEREVISIAE;}\\
-5LFT & CYTOCHROME C ISO-1; & SACCHAROMYCES CEREVISIAE;\\
+5KPF & CYTOCHROME C ISO-1; & SACCHAROMYCES CEREVISIAE;\\
+\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{CYTOCHROME C ISO-1;} & \cellcolor{gray!6}{SACCHAROMYCES CEREVISIAE;}\\
+5T8W & CYC1P; & SACCHAROMYCES CEREVISIAE;\\
 \addlinespace
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{CYC1P;} & \cellcolor{gray!6}{SACCHAROMYCES CEREVISIAE;}\\
-6VDQ & 3-METHYL-L-TYROSINE PEROXYGENASE; & STREPTOMYCES LAVENDULAE;\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{SOLUBLE CYTOCHROME B562;} & \cellcolor{gray!6}{ESCHERICHIA COLI;}\\
-6XNK & CYTOCHROME C; & HOMO SAPIENS;\\*
+\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{3-METHYL-L-TYROSINE PEROXYGENASE;} & \cellcolor{gray!6}{STREPTOMYCES LAVENDULAE;}\\
+6WZA & SOLUBLE CYTOCHROME B562; & ESCHERICHIA COLI;\\
+\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{CYTOCHROME C;} & \cellcolor{gray!6}{HOMO SAPIENS;}\\*
 \end{longtabu}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X}
@@ -1197,14 +1412,13 @@ The results of this study are limited by the small sample size, but suggest that
 \addlinespace
 3EAH & 1280.90 & 993.430 & 1697.130 & 18413.40 & 19313.80\\
 \cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{823.59} & \cellcolor{gray!6}{496.328} & \cellcolor{gray!6}{802.584} & \cellcolor{gray!6}{5722.90} & \cellcolor{gray!6}{7493.62}\\
-4B2N & 934.13 & 1255.940 & 2122.260 & 21914.30 & 22455.80\\
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{778.79} & \cellcolor{gray!6}{568.036} & \cellcolor{gray!6}{1007.680} & \cellcolor{gray!6}{5485.51} & \cellcolor{gray!6}{6155.84}\\
-5LFT & 809.40 & 1720.870 & 2719.000 & 5539.47 & 6315.96\\
+5KPF & 778.79 & 568.036 & 1007.680 & 5485.51 & 6155.84\\
+\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{809.40} & \cellcolor{gray!6}{1720.870} & \cellcolor{gray!6}{2719.000} & \cellcolor{gray!6}{5539.47} & \cellcolor{gray!6}{6315.96}\\
+5T8W & 858.74 & 511.519 & 848.952 & 5755.48 & 6458.40\\
 \addlinespace
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{858.74} & \cellcolor{gray!6}{511.519} & \cellcolor{gray!6}{848.952} & \cellcolor{gray!6}{5755.48} & \cellcolor{gray!6}{6458.40}\\
-6VDQ & 977.52 & 510.534 & 846.299 & 13399.60 & 14076.40\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{1040.10} & \cellcolor{gray!6}{713.997} & \cellcolor{gray!6}{1095.240} & \cellcolor{gray!6}{5529.40} & \cellcolor{gray!6}{6385.75}\\
-6XNK & 2214.40 & 499.687 & 835.610 & 6737.92 & 8143.17\\*
+\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{977.52} & \cellcolor{gray!6}{510.534} & \cellcolor{gray!6}{846.299} & \cellcolor{gray!6}{13399.60} & \cellcolor{gray!6}{14076.40}\\
+6WZA & 1040.10 & 713.997 & 1095.240 & 5529.40 & 6385.75\\
+\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{2214.40} & \cellcolor{gray!6}{499.687} & \cellcolor{gray!6}{835.610} & \cellcolor{gray!6}{6737.92} & \cellcolor{gray!6}{8143.17}\\*
 \end{longtabu}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
@@ -1952,185 +2166,157 @@ The results of this study are limited by the small sample size, but suggest that
 5LFT & 81 & ALA & 6.400723 & 27.359 & ALA\\
 \cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{81} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{6.484127} & \cellcolor{gray!6}{17.792} & \cellcolor{gray!6}{ALA}\\
 3EAH & 147 & ALA & 6.240842 & 65.476 & ALA\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{251} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{22.497312} & \cellcolor{gray!6}{70.131} & \cellcolor{gray!6}{ALA}\\
+\cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{106} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.961420} & \cellcolor{gray!6}{72.519} & \cellcolor{gray!6}{ARG}\\
 \addlinespace
-4B2N & 288 & ALA & 16.661485 & 22.769 & ALA\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{503} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{5.801904} & \cellcolor{gray!6}{60.592} & \cellcolor{gray!6}{ALA}\\
-2BC5 & 106 & ARG & 5.961420 & 72.519 & ARG\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{106} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{6.631682} & \cellcolor{gray!6}{36.834} & \cellcolor{gray!6}{ARG}\\
-1BBH & 129 & ARG & 5.790808 & 84.690 & ARG\\
+6WZA & 106 & ARG & 6.631682 & 36.834 & ARG\\
+\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{129} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.790808} & \cellcolor{gray!6}{84.690} & \cellcolor{gray!6}{ARG}\\
+3EAH & 149 & ARG & 5.803314 & 30.280 & ARG\\
+\cellcolor{gray!6}{3EAH} & \cellcolor{gray!6}{153} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{6.514542} & \cellcolor{gray!6}{31.482} & \cellcolor{gray!6}{ARG}\\
+2BC5 & 99 & ASN & 6.936196 & 74.457 & ASN\\
 \addlinespace
-\cellcolor{gray!6}{3EAH} & \cellcolor{gray!6}{149} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.803314} & \cellcolor{gray!6}{30.280} & \cellcolor{gray!6}{ARG}\\
-3EAH & 153 & ARG & 6.514542 & 31.482 & ARG\\
-\cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{99} & \cellcolor{gray!6}{ASN} & \cellcolor{gray!6}{6.936196} & \cellcolor{gray!6}{74.457} & \cellcolor{gray!6}{ASN}\\
-3X15 & 12 & CYS & 6.451594 & 75.877 & CYS\\
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.631432} & \cellcolor{gray!6}{78.361} & \cellcolor{gray!6}{CYS}\\
+\cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.451594} & \cellcolor{gray!6}{75.877} & \cellcolor{gray!6}{CYS}\\
+5KPF & 14 & CYS & 6.631432 & 78.361 & CYS\\
+\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.598389} & \cellcolor{gray!6}{78.924} & \cellcolor{gray!6}{CYS}\\
+5T8W & 14 & CYS & 6.647516 & 80.130 & CYS\\
+\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.275930} & \cellcolor{gray!6}{83.242} & \cellcolor{gray!6}{CYS}\\
 \addlinespace
-5LFT & 14 & CYS & 6.598389 & 78.924 & CYS\\
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.647516} & \cellcolor{gray!6}{80.130} & \cellcolor{gray!6}{CYS}\\
-6XNK & 14 & CYS & 6.275930 & 83.242 & CYS\\
-\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.513509} & \cellcolor{gray!6}{80.908} & \cellcolor{gray!6}{CYS}\\
-3X15 & 15 & CYS & 6.178945 & 60.268 & CYS\\
+2BH5 & 15 & CYS & 6.513509 & 80.908 & CYS\\
+\cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.178945} & \cellcolor{gray!6}{60.268} & \cellcolor{gray!6}{CYS}\\
+5KPF & 17 & CYS & 6.098545 & 57.159 & CYS\\
+\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.056595} & \cellcolor{gray!6}{55.965} & \cellcolor{gray!6}{CYS}\\
+5T8W & 17 & CYS & 6.188739 & 57.751 & CYS\\
 \addlinespace
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.098545} & \cellcolor{gray!6}{57.159} & \cellcolor{gray!6}{CYS}\\
-5LFT & 17 & CYS & 6.056595 & 55.965 & CYS\\
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.188739} & \cellcolor{gray!6}{57.751} & \cellcolor{gray!6}{CYS}\\
-6XNK & 17 & CYS & 5.903640 & 67.256 & CYS\\
-\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.554906} & \cellcolor{gray!6}{79.901} & \cellcolor{gray!6}{CYS}\\
+\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{5.903640} & \cellcolor{gray!6}{67.256} & \cellcolor{gray!6}{CYS}\\
+1W2L & 18 & CYS & 6.554906 & 79.901 & CYS\\
+\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.369197} & \cellcolor{gray!6}{56.447} & \cellcolor{gray!6}{CYS}\\
+1W2L & 21 & CYS & 6.223591 & 50.740 & CYS\\
+\cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{98} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{5.957326} & \cellcolor{gray!6}{62.529} & \cellcolor{gray!6}{CYS}\\
 \addlinespace
-2BH5 & 18 & CYS & 6.369197 & 56.447 & CYS\\
-\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.223591} & \cellcolor{gray!6}{50.740} & \cellcolor{gray!6}{CYS}\\
-2BC5 & 98 & CYS & 5.957326 & 62.529 & CYS\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{98} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{5.774303} & \cellcolor{gray!6}{65.838} & \cellcolor{gray!6}{CYS}\\
-2BC5 & 101 & CYS & 6.394766 & 89.234 & CYS\\
+6WZA & 98 & CYS & 5.774303 & 65.838 & CYS\\
+\cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{101} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.394766} & \cellcolor{gray!6}{89.234} & \cellcolor{gray!6}{CYS}\\
+6WZA & 101 & CYS & 6.455707 & 88.190 & CYS\\
+\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{121} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{5.737156} & \cellcolor{gray!6}{69.070} & \cellcolor{gray!6}{CYS}\\
+1BBH & 124 & CYS & 6.272059 & 73.170 & CYS\\
 \addlinespace
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{101} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.455707} & \cellcolor{gray!6}{88.190} & \cellcolor{gray!6}{CYS}\\
-1BBH & 121 & CYS & 5.737156 & 69.070 & CYS\\
-\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{124} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.272059} & \cellcolor{gray!6}{73.170} & \cellcolor{gray!6}{CYS}\\
-3EAH & 150 & CYS & 4.247423 & 47.992 & CYS\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{191} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{25.771945} & \cellcolor{gray!6}{51.391} & \cellcolor{gray!6}{CYS}\\
-\addlinespace
-4B2N & 194 & CYS & 22.141582 & 46.261 & CYS\\
-\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{317} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.231170} & \cellcolor{gray!6}{64.036} & \cellcolor{gray!6}{CYS}\\
-4B2N & 390 & CYS & 6.417356 & 58.866 & CYS\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{393} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.405178} & \cellcolor{gray!6}{49.659} & \cellcolor{gray!6}{CYS}\\
-1S56 & 58 & GLN & 6.005777 & 46.505 & GLN\\
-\addlinespace
-\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{6.940695} & \cellcolor{gray!6}{44.648} & \cellcolor{gray!6}{GLU}\\
-4B2N & 314 & GLU & 25.693463 & 52.073 & GLU\\
+\cellcolor{gray!6}{3EAH} & \cellcolor{gray!6}{150} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.247423} & \cellcolor{gray!6}{47.992} & \cellcolor{gray!6}{CYS}\\
+6VDQ & 317 & CYS & 6.231170 & 64.036 & CYS\\
+\cellcolor{gray!6}{1S56} & \cellcolor{gray!6}{58} & \cellcolor{gray!6}{GLN} & \cellcolor{gray!6}{6.005777} & \cellcolor{gray!6}{46.505} & \cellcolor{gray!6}{GLN}\\
+1BBH & 17 & GLU & 6.940695 & 44.648 & GLU\\
 \cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{24} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{6.352237} & \cellcolor{gray!6}{71.150} & \cellcolor{gray!6}{GLY}\\
+\addlinespace
 5KPF & 29 & GLY & 6.052599 & 68.487 & GLY\\
 \cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{29} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{6.048126} & \cellcolor{gray!6}{64.422} & \cellcolor{gray!6}{GLY}\\
-\addlinespace
 5T8W & 29 & GLY & 6.153313 & 65.660 & GLY\\
 \cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{29} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.786913} & \cellcolor{gray!6}{67.542} & \cellcolor{gray!6}{GLY}\\
 1W2L & 31 & GLY & 6.565877 & 60.959 & GLY\\
+\addlinespace
 \cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{36} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{6.126048} & \cellcolor{gray!6}{68.830} & \cellcolor{gray!6}{GLY}\\
 3EAH & 152 & GLY & 5.627214 & 19.760 & GLY\\
-\addlinespace
 \cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{16} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.360557} & \cellcolor{gray!6}{56.339} & \cellcolor{gray!6}{HIS}\\
 5KPF & 18 & HIS & 4.310334 & 57.026 & HIS\\
 \cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.342999} & \cellcolor{gray!6}{57.434} & \cellcolor{gray!6}{HIS}\\
+\addlinespace
 5T8W & 18 & HIS & 4.334295 & 56.673 & HIS\\
 \cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.599701} & \cellcolor{gray!6}{53.280} & \cellcolor{gray!6}{HIS}\\
-\addlinespace
 2BH5 & 19 & HIS & 4.283790 & 56.825 & HIS\\
 \cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{22} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.350769} & \cellcolor{gray!6}{62.051} & \cellcolor{gray!6}{HIS}\\
 1S56 & 81 & HIS & 4.475028 & 80.865 & HIS\\
+\addlinespace
 \cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{102} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.186908} & \cellcolor{gray!6}{82.850} & \cellcolor{gray!6}{HIS}\\
 6WZA & 102 & HIS & 4.440577 & 87.413 & HIS\\
-\addlinespace
 \cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{125} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.218890} & \cellcolor{gray!6}{89.456} & \cellcolor{gray!6}{HIS}\\
-4B2N & 195 & HIS & 20.771196 & 82.691 & HIS\\
-\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{274} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.500421} & \cellcolor{gray!6}{76.928} & \cellcolor{gray!6}{HIS}\\
-6VDQ & 313 & HIS & 4.120545 & 68.371 & HIS\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{394} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.305333} & \cellcolor{gray!6}{86.758} & \cellcolor{gray!6}{HIS}\\
+6VDQ & 274 & HIS & 4.500421 & 76.928 & HIS\\
+\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{313} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.120545} & \cellcolor{gray!6}{68.371} & \cellcolor{gray!6}{HIS}\\
 \addlinespace
-4B2N & 641 & HIS & 4.333835 & 78.315 & HIS\\
-\cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{30} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{6.412845} & \cellcolor{gray!6}{48.363} & \cellcolor{gray!6}{ILE}\\
-1W2L & 61 & ILE & 6.839545 & 86.856 & ILE\\
-\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{6.412701} & \cellcolor{gray!6}{20.309} & \cellcolor{gray!6}{ILE}\\
-1S56 & 86 & ILE & 5.878780 & 46.879 & ILE\\
+3X15 & 30 & ILE & 6.412845 & 48.363 & ILE\\
+\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{61} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{6.839545} & \cellcolor{gray!6}{86.856} & \cellcolor{gray!6}{ILE}\\
+6XNK & 75 & ILE & 6.412701 & 20.309 & ILE\\
+\cellcolor{gray!6}{1S56} & \cellcolor{gray!6}{86} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.878780} & \cellcolor{gray!6}{46.879} & \cellcolor{gray!6}{ILE}\\
+6VDQ & 278 & ILE & 5.358791 & 51.036 & ILE\\
 \addlinespace
-\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{278} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.358791} & \cellcolor{gray!6}{51.036} & \cellcolor{gray!6}{ILE}\\
-4B2N & 426 & ILE & 6.266877 & 62.886 & ILE\\
 \cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{6.742954} & \cellcolor{gray!6}{75.724} & \cellcolor{gray!6}{LEU}\\
 6WZA & 3 & LEU & 6.697674 & 65.670 & LEU\\
 \cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{6.154091} & \cellcolor{gray!6}{81.531} & \cellcolor{gray!6}{LEU}\\
-\addlinespace
 6WZA & 10 & LEU & 6.067786 & 77.978 & LEU\\
 \cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{6.145036} & \cellcolor{gray!6}{62.380} & \cellcolor{gray!6}{LEU}\\
+\addlinespace
 5LFT & 32 & LEU & 6.106815 & 62.454 & LEU\\
 \cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.994375} & \cellcolor{gray!6}{61.079} & \cellcolor{gray!6}{LEU}\\
 6XNK & 32 & LEU & 6.085909 & 58.350 & LEU\\
-\addlinespace
 \cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{39} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.728784} & \cellcolor{gray!6}{68.293} & \cellcolor{gray!6}{LEU}\\
 1S56 & 54 & LEU & 5.947501 & 53.661 & LEU\\
+\addlinespace
 \cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{68} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{6.268124} & \cellcolor{gray!6}{82.295} & \cellcolor{gray!6}{LEU}\\
 5LFT & 68 & LEU & 6.315525 & 79.956 & LEU\\
 \cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{68} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{6.123569} & \cellcolor{gray!6}{78.343} & \cellcolor{gray!6}{LEU}\\
-\addlinespace
 6VDQ & 238 & LEU & 6.409586 & 33.875 & LEU\\
 \cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{277} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{6.506868} & \cellcolor{gray!6}{55.119} & \cellcolor{gray!6}{LEU}\\
-4B2N & 506 & LEU & 6.039568 & 49.192 & LEU\\
-\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{79} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{3.938274} & \cellcolor{gray!6}{74.591} & \cellcolor{gray!6}{LYS}\\
-2BH5 & 100 & LYS & 4.313747 & 77.818 & LYS\\
 \addlinespace
-\cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{7} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.661903} & \cellcolor{gray!6}{78.629} & \cellcolor{gray!6}{MET}\\
-6WZA & 7 & MET & 4.611608 & 76.023 & MET\\
-\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{19} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{6.049470} & \cellcolor{gray!6}{76.193} & \cellcolor{gray!6}{MET}\\
-1W2L & 76 & MET & 4.403618 & 74.807 & MET\\
-\cellcolor{gray!6}{1S56} & \cellcolor{gray!6}{77} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{6.187616} & \cellcolor{gray!6}{82.400} & \cellcolor{gray!6}{MET}\\
+6XNK & 79 & LYS & 3.938274 & 74.591 & LYS\\
+\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{100} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{4.313747} & \cellcolor{gray!6}{77.818} & \cellcolor{gray!6}{LYS}\\
+2BC5 & 7 & MET & 4.661903 & 78.629 & MET\\
+\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{7} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.611608} & \cellcolor{gray!6}{76.023} & \cellcolor{gray!6}{MET}\\
+1BBH & 19 & MET & 6.049470 & 76.193 & MET\\
 \addlinespace
-5KPF & 80 & MET & 4.692154 & 69.191 & MET\\
-\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.757864} & \cellcolor{gray!6}{70.970} & \cellcolor{gray!6}{MET}\\
-5T8W & 80 & MET & 4.693021 & 71.981 & MET\\
-\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{34} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.935685} & \cellcolor{gray!6}{47.542} & \cellcolor{gray!6}{PHE}\\
-3X15 & 44 & PHE & 6.024333 & 88.840 & PHE\\
+\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{76} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.403618} & \cellcolor{gray!6}{74.807} & \cellcolor{gray!6}{MET}\\
+1S56 & 77 & MET & 6.187616 & 82.400 & MET\\
+\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.692154} & \cellcolor{gray!6}{69.191} & \cellcolor{gray!6}{MET}\\
+5LFT & 80 & MET & 4.757864 & 70.970 & MET\\
+\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.693021} & \cellcolor{gray!6}{71.981} & \cellcolor{gray!6}{MET}\\
 \addlinespace
-\cellcolor{gray!6}{1S56} & \cellcolor{gray!6}{46} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.938368} & \cellcolor{gray!6}{40.237} & \cellcolor{gray!6}{PHE}\\
-2BC5 & 65 & PHE & 6.201901 & 7.130 & PHE\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{65} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.184290} & \cellcolor{gray!6}{8.954} & \cellcolor{gray!6}{PHE}\\
-5KPF & 82 & PHE & 6.311357 & 54.389 & PHE\\
-\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{82} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.466458} & \cellcolor{gray!6}{54.125} & \cellcolor{gray!6}{PHE}\\
+1W2L & 34 & PHE & 5.935685 & 47.542 & PHE\\
+\cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{44} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.024333} & \cellcolor{gray!6}{88.840} & \cellcolor{gray!6}{PHE}\\
+1S56 & 46 & PHE & 5.938368 & 40.237 & PHE\\
+\cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{65} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.201901} & \cellcolor{gray!6}{7.130} & \cellcolor{gray!6}{PHE}\\
+6WZA & 65 & PHE & 6.184290 & 8.954 & PHE\\
 \addlinespace
-5T8W & 82 & PHE & 6.527249 & 55.006 & PHE\\
-\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{102} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.736126} & \cellcolor{gray!6}{35.502} & \cellcolor{gray!6}{PHE}\\
-4B2N & 301 & PHE & 19.922468 & 12.160 & PHE\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{317} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{26.178570} & \cellcolor{gray!6}{38.911} & \cellcolor{gray!6}{PHE}\\
-3EAH & 319 & PHE & 6.137327 & 43.608 & PHE\\
+\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{82} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.311357} & \cellcolor{gray!6}{54.389} & \cellcolor{gray!6}{PHE}\\
+5LFT & 82 & PHE & 6.466458 & 54.125 & PHE\\
+\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{82} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.527249} & \cellcolor{gray!6}{55.006} & \cellcolor{gray!6}{PHE}\\
+2BH5 & 102 & PHE & 6.736126 & 35.502 & PHE\\
+\cellcolor{gray!6}{3EAH} & \cellcolor{gray!6}{319} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.137327} & \cellcolor{gray!6}{43.608} & \cellcolor{gray!6}{PHE}\\
 \addlinespace
-\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{320} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.121894} & \cellcolor{gray!6}{69.729} & \cellcolor{gray!6}{PHE}\\
-4B2N & 516 & PHE & 6.311594 & 10.661 & PHE\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{643} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.463962} & \cellcolor{gray!6}{31.002} & \cellcolor{gray!6}{PHE}\\
-3X15 & 25 & PRO & 6.252857 & 53.365 & PRO\\
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{30} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.184028} & \cellcolor{gray!6}{58.382} & \cellcolor{gray!6}{PRO}\\
+6VDQ & 320 & PHE & 6.121894 & 69.729 & PHE\\
+\cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.252857} & \cellcolor{gray!6}{53.365} & \cellcolor{gray!6}{PRO}\\
+5KPF & 30 & PRO & 6.184028 & 58.382 & PRO\\
+\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{30} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.179273} & \cellcolor{gray!6}{58.317} & \cellcolor{gray!6}{PRO}\\
+5T8W & 30 & PRO & 6.138272 & 60.452 & PRO\\
 \addlinespace
-5LFT & 30 & PRO & 6.179273 & 58.317 & PRO\\
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{30} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.138272} & \cellcolor{gray!6}{60.452} & \cellcolor{gray!6}{PRO}\\
-6XNK & 30 & PRO & 5.900245 & 78.500 & PRO\\
-\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.457693} & \cellcolor{gray!6}{61.577} & \cellcolor{gray!6}{PRO}\\
-2BH5 & 37 & PRO & 6.202537 & 54.969 & PRO\\
+\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{30} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{5.900245} & \cellcolor{gray!6}{78.500} & \cellcolor{gray!6}{PRO}\\
+1W2L & 32 & PRO & 6.457693 & 61.577 & PRO\\
+\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{37} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.202537} & \cellcolor{gray!6}{54.969} & \cellcolor{gray!6}{PRO}\\
+5KPF & 71 & PRO & 6.976183 & 22.212 & PRO\\
+\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{71} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.983064} & \cellcolor{gray!6}{24.358} & \cellcolor{gray!6}{PRO}\\
 \addlinespace
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{71} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.976183} & \cellcolor{gray!6}{22.212} & \cellcolor{gray!6}{PRO}\\
-5LFT & 71 & PRO & 6.983064 & 24.358 & PRO\\
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{71} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.909375} & \cellcolor{gray!6}{23.188} & \cellcolor{gray!6}{PRO}\\
-1W2L & 77 & PRO & 6.071845 & 79.721 & PRO\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{289} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{15.414267} & \cellcolor{gray!6}{83.945} & \cellcolor{gray!6}{PRO}\\
-\addlinespace
-4B2N & 504 & PRO & 6.506858 & 70.993 & PRO\\
-\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{SER} & \cellcolor{gray!6}{6.470812} & \cellcolor{gray!6}{29.839} & \cellcolor{gray!6}{SER}\\
-4B2N & 313 & SER & 24.688185 & 49.651 & SER\\
+5T8W & 71 & PRO & 6.909375 & 23.188 & PRO\\
+\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{77} & \cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{6.071845} & \cellcolor{gray!6}{79.721} & \cellcolor{gray!6}{PRO}\\
+1W2L & 60 & SER & 6.470812 & 29.839 & SER\\
 \cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{28} & \cellcolor{gray!6}{THR} & \cellcolor{gray!6}{6.983672} & \cellcolor{gray!6}{89.881} & \cellcolor{gray!6}{THR}\\
 6VDQ & 309 & THR & 6.443589 & 76.554 & THR\\
 \addlinespace
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{644} & \cellcolor{gray!6}{THR} & \cellcolor{gray!6}{6.056698} & \cellcolor{gray!6}{22.953} & \cellcolor{gray!6}{THR}\\
-3EAH & 144 & TRP & 5.647844 & 55.208 & TRP\\
-\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{271} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{5.880644} & \cellcolor{gray!6}{62.992} & \cellcolor{gray!6}{TRP}\\
-4B2N & 291 & TRP & 21.741747 & 22.462 & TRP\\
+\cellcolor{gray!6}{3EAH} & \cellcolor{gray!6}{144} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{5.647844} & \cellcolor{gray!6}{55.208} & \cellcolor{gray!6}{TRP}\\
+6VDQ & 271 & TRP & 5.880644 & 62.992 & TRP\\
 \cellcolor{gray!6}{3EAH} & \cellcolor{gray!6}{322} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{6.529256} & \cellcolor{gray!6}{31.513} & \cellcolor{gray!6}{TRP}\\
-\addlinespace
 1BBH & 16 & TYR & 4.795494 & 83.790 & TYR\\
 \cellcolor{gray!6}{1S56} & \cellcolor{gray!6}{33} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{6.252015} & \cellcolor{gray!6}{73.693} & \cellcolor{gray!6}{TYR}\\
+\addlinespace
 1BBH & 58 & TYR & 6.554347 & 74.986 & TYR\\
 \cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.922923} & \cellcolor{gray!6}{73.698} & \cellcolor{gray!6}{TYR}\\
 5LFT & 67 & TYR & 5.919346 & 72.327 & TYR\\
-\addlinespace
 \cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.858639} & \cellcolor{gray!6}{72.392} & \cellcolor{gray!6}{TYR}\\
 6XNK & 67 & TYR & 5.613420 & 78.584 & TYR\\
+\addlinespace
 \cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{79} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.535216} & \cellcolor{gray!6}{66.731} & \cellcolor{gray!6}{TYR}\\
 1W2L & 80 & TYR & 6.249808 & 80.939 & TYR\\
 \cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{310} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{6.768220} & \cellcolor{gray!6}{38.505} & \cellcolor{gray!6}{TYR}\\
-\addlinespace
 1W2L & 75 & VAL & 6.753821 & 70.180 & VAL\\
 \cellcolor{gray!6}{1S56} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{6.205932} & \cellcolor{gray!6}{89.256} & \cellcolor{gray!6}{VAL}\\
+\addlinespace
 2BH5 & 80 & VAL & 6.887770 & 66.644 & VAL\\
 \cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{83} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{6.004096} & \cellcolor{gray!6}{49.708} & \cellcolor{gray!6}{VAL}\\
 1S56 & 94 & VAL & 6.626107 & 47.118 & VAL\\
-\addlinespace
 \cellcolor{gray!6}{1S56} & \cellcolor{gray!6}{126} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{6.029592} & \cellcolor{gray!6}{82.902} & \cellcolor{gray!6}{VAL}\\
-3EAH & 151 & VAL & 6.103944 & 46.478 & VAL\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{527} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{6.028491} & \cellcolor{gray!6}{21.483} & \cellcolor{gray!6}{VAL}\\*
+3EAH & 151 & VAL & 6.103944 & 46.478 & VAL\\*
 \end{longtabu}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X}
@@ -2577,31 +2763,27 @@ The results of this study are limited by the small sample size, but suggest that
 3X15 & 44 & PHE & 6.024333 & 88.840 & PHE\\
 \addlinespace
 \cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.178945} & \cellcolor{gray!6}{60.268} & \cellcolor{gray!6}{CYS}\\
-4B2N & 394 & HIS & 4.305333 & 86.758 & HIS\\
-\cellcolor{gray!6}{4B2N} & \cellcolor{gray!6}{641} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.333835} & \cellcolor{gray!6}{78.315} & \cellcolor{gray!6}{HIS}\\
-4B2N & 643 & PHE & 5.463962 & 31.002 & PHE\\
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.310334} & \cellcolor{gray!6}{57.026} & \cellcolor{gray!6}{HIS}\\
+5KPF & 18 & HIS & 4.310334 & 57.026 & HIS\\
+\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.692154} & \cellcolor{gray!6}{69.191} & \cellcolor{gray!6}{MET}\\
+5KPF & 67 & TYR & 5.922923 & 73.698 & TYR\\
+\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.342999} & \cellcolor{gray!6}{57.434} & \cellcolor{gray!6}{HIS}\\
 \addlinespace
-5KPF & 80 & MET & 4.692154 & 69.191 & MET\\
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.922923} & \cellcolor{gray!6}{73.698} & \cellcolor{gray!6}{TYR}\\
-5LFT & 18 & HIS & 4.342999 & 57.434 & HIS\\
-\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.757864} & \cellcolor{gray!6}{70.970} & \cellcolor{gray!6}{MET}\\
-5LFT & 67 & TYR & 5.919346 & 72.327 & TYR\\
+5LFT & 80 & MET & 4.757864 & 70.970 & MET\\
+\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.919346} & \cellcolor{gray!6}{72.327} & \cellcolor{gray!6}{TYR}\\
+5T8W & 18 & HIS & 4.334295 & 56.673 & HIS\\
+\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.693021} & \cellcolor{gray!6}{71.981} & \cellcolor{gray!6}{MET}\\
+5T8W & 67 & TYR & 5.858639 & 72.392 & TYR\\
 \addlinespace
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.334295} & \cellcolor{gray!6}{56.673} & \cellcolor{gray!6}{HIS}\\
-5T8W & 80 & MET & 4.693021 & 71.981 & MET\\
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.858639} & \cellcolor{gray!6}{72.392} & \cellcolor{gray!6}{TYR}\\
-6VDQ & 313 & HIS & 4.120545 & 68.371 & HIS\\
-\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{274} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.500421} & \cellcolor{gray!6}{76.928} & \cellcolor{gray!6}{HIS}\\
+\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{313} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.120545} & \cellcolor{gray!6}{68.371} & \cellcolor{gray!6}{HIS}\\
+6VDQ & 274 & HIS & 4.500421 & 76.928 & HIS\\
+\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{278} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.358791} & \cellcolor{gray!6}{51.036} & \cellcolor{gray!6}{ILE}\\
+6WZA & 102 & HIS & 4.440577 & 87.413 & HIS\\
+\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{7} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.611608} & \cellcolor{gray!6}{76.023} & \cellcolor{gray!6}{MET}\\
 \addlinespace
-6VDQ & 278 & ILE & 5.358791 & 51.036 & ILE\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{102} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.440577} & \cellcolor{gray!6}{87.413} & \cellcolor{gray!6}{HIS}\\
-6WZA & 7 & MET & 4.611608 & 76.023 & MET\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{98} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{5.774303} & \cellcolor{gray!6}{65.838} & \cellcolor{gray!6}{CYS}\\
-6XNK & 79 & LYS & 3.938274 & 74.591 & LYS\\
-\addlinespace
-\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.599701} & \cellcolor{gray!6}{53.280} & \cellcolor{gray!6}{HIS}\\
-6XNK & 67 & TYR & 5.613420 & 78.584 & TYR\\*
+6WZA & 98 & CYS & 5.774303 & 65.838 & CYS\\
+\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{79} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{3.938274} & \cellcolor{gray!6}{74.591} & \cellcolor{gray!6}{LYS}\\
+6XNK & 18 & HIS & 4.599701 & 53.280 & HIS\\
+\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.613420} & \cellcolor{gray!6}{78.584} & \cellcolor{gray!6}{TYR}\\*
 \end{longtabu}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X}

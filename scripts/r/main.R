@@ -364,7 +364,7 @@ for(ligand in 1:(length(ligandList)))
             scale_fill_discrete(name = "Distance Cutoff"))
    
    ### DISTANCES ####
-   eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
+   eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
       dplyr::select(Residue_Code,Distance) -> tmpDist 
    
    distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 

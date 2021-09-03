@@ -78,7 +78,7 @@ HEM_aaFreqDf %>%
 
 ```
 
-```{r HEM-AAdist,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r HEM-AAdist,fig.cap="HEM: AA Distances",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEM"
 library(dplyr) 
@@ -91,12 +91,12 @@ library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr
 source("~/heme-binding/scripts/r/addpdbcol.R")
 library(kableExtra) 
 
-eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
-      dplyr::select(Residue_Code,Distance) -> tmpDist 
+eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Mean_Distance) -> tmpDist 
    
-   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Mean_Distance))),fill=Residue_Code)) + 
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (Å)") +
+      labs(title = paste(activeLigand,": Distribution of Residues by Mean_Distance",sep=''), x="Residue",y="Mean_Distance (Å)") +
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 
    print(distanceDist)
@@ -146,7 +146,7 @@ HEC_aaFreqDf %>%
 
 ```
 
-```{r HEC-AAdist,fig.cap="HEC: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r HEC-AAdist,fig.cap="HEC: AA Distances",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEC"
 library(dplyr) 
@@ -159,12 +159,12 @@ library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr
 source("~/heme-binding/scripts/r/addpdbcol.R")
 library(kableExtra) 
 
-eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
-      dplyr::select(Residue_Code,Distance) -> tmpDist 
+eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Mean_Distance) -> tmpDist 
    
-   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Mean_Distance))),fill=Residue_Code)) + 
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (Å)") +
+      labs(title = paste(activeLigand,": Distribution of Residues by Mean_Distance",sep=''), x="Residue",y="Mean_Distance (Å)") +
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 
    print(distanceDist)
@@ -214,7 +214,7 @@ VERDOHEME_aaFreqDf %>%
 
 ```
 
-```{r VERDOHEME-AAdist,fig.cap="VERDOHEME: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r VERDOHEME-AAdist,fig.cap="VERDOHEME: AA Distances",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "VERDOHEME"
 library(dplyr) 
@@ -227,12 +227,12 @@ library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr
 source("~/heme-binding/scripts/r/addpdbcol.R")
 library(kableExtra) 
 
-eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
-      dplyr::select(Residue_Code,Distance) -> tmpDist 
+eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Mean_Distance) -> tmpDist 
    
-   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Mean_Distance))),fill=Residue_Code)) + 
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (Å)") +
+      labs(title = paste(activeLigand,": Distribution of Residues by Mean_Distance",sep=''), x="Residue",y="Mean_Distance (Å)") +
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 
    print(distanceDist)
@@ -281,7 +281,7 @@ SRM_aaFreqDf %>%
 
 ```
 
-```{r SRM-AAdist,fig.cap="SRM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r SRM-AAdist,fig.cap="SRM: AA Distances",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
 library(dplyr) 
@@ -294,12 +294,12 @@ library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr
 source("~/heme-binding/scripts/r/addpdbcol.R")
 library(kableExtra) 
 
-eval(parse(text=paste(activeLigand,"_distList$all_distances",sep=""))) %>%
-      dplyr::select(Residue_Code,Distance) -> tmpDist 
+eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Mean_Distance) -> tmpDist 
    
-   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Mean_Distance))),fill=Residue_Code)) + 
       geom_violin(trim=FALSE) +
-      labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (Å)") +
+      labs(title = paste(activeLigand,": Distribution of Residues by Mean_Distance",sep=''), x="Residue",y="Mean_Distance (Å)") +
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 
    print(distanceDist)

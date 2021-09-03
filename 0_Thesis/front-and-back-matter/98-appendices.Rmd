@@ -60,7 +60,7 @@ library(kableExtra)
    
 ```
 
-```{r HEC-AAfreq,fig.cap="HEC: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r HEC-AAfreqOverlaid,fig.cap="HEC: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEC"
 library(dplyr) 
@@ -110,7 +110,7 @@ library(kableExtra)
    
 ```
 
-```{r SRM-AAfreq,fig.cap="SRM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r SRM-AAfreqOverlaid,fig.cap="SRM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
 library(dplyr) 
@@ -160,7 +160,7 @@ library(kableExtra)
    
 ```
 
-```{r VERDOHEME-AAfreq,fig.cap="VERDOHEME: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r VERDOHEME-AAfreqOverlaid,fig.cap="VERDOHEME: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "VERDOHEME"
 library(dplyr) 
