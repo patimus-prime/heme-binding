@@ -63,7 +63,7 @@ for(ligand in 1:(length(ligandList)))
    # paste() automates df name creation, second arg is the df assigned. BAM!
    assign(paste(activeLigand,"_maxVolDf",sep=""), volume_dfs$maxVolDf)
    }
-# AA Frequency Pocket -----------------
+# AA Frequency -----------------
 source("~/heme-binding/scripts/r/aa_frequency.R")
 resultPath = "~/heme-binding/results/aa_frequency/"
 
@@ -74,19 +74,6 @@ for(ligand in 1:(length(ligandList)))
    aa_freq_df <- aaFreq_fn(activeLigand,activeResultPath)
    assign(paste(activeLigand,"_aaFreqDf",sep=""), aaFreq_fn(activeLigand,activeResultPath))
 }
-
-# AA Frequency All in PDB -----------------
-source("~/heme-binding/scripts/r/aa_frequency.R")
-resultPath = "~/heme-binding/results/aa_freq_all/"
-
-for(ligand in 1:(length(ligandList)))
-{
-   activeLigand = ligandList[[ligand]]
-   activeResultPath = paste(resultPath,activeLigand,sep = "")
-   aa_freq_all_df <- aaFreq_fn(activeLigand,activeResultPath) #not really used but not in the mood to debug
-   assign(paste(activeLigand,"_aaFreqAllDf",sep=""), aaFreq_fn(activeLigand,activeResultPath))
-}
-
 
 # Ligand surface area ----------------------
 source("~/heme-binding/scripts/r/ligandSA.R")
@@ -277,19 +264,6 @@ VERDOHEME_aaFreqDf %>%
    dplyr::rename(
       Freq = verdotemp
    ) -> VERDOHEME_aaFreqDf
-
-## do it again for the ALL amino acids dataframe
-VERDOHEME_aaFreqAllDf <- rbind(VER_aaFreqAllDf,VEA_aaFreqAllDf)
-VERDOHEME_aaFreqAllDf$Freq <- as.numeric(as.character(VERDOHEME_aaFreqAllDf$Freq))
-VERDOHEME_aaFreqAllDf$Residue <- as.character(VERDOHEME_aaFreqAllDf$Residue)
-verdotemp <- tapply(VERDOHEME_aaFreqAllDf$Freq,VERDOHEME_aaFreqAllDf$Residue,FUN=sum)
-verdotemp <- as.data.frame(verdotemp)
-VERDOHEME_aaFreqAllDf <- tibble::rownames_to_column(verdotemp, "Residue")
-VERDOHEME_aaFreqAllDf %>%
-   dplyr::rename(
-      Freq = verdotemp
-   ) -> VERDOHEME_aaFreqAllDf
-
 #almost done, have to order it:
 VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
 # 2.5) Distances stuff, merging the distances/angles DF's --------------------
@@ -354,14 +328,6 @@ for(ligand in 1:(length(ligandList)))
    
    print(zx)
    
-   # AA Freq All ----
-   zy <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
-      geom_bar(stat="identity",position = "identity", alpha=1) +
-      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Entire PDB",sep='')) 
-   
-   print(zy)
-   
-   
    
    # AA Freq but with 5A and 7A overlaid
    rm(tmp5A,tmp7A,tmpBoth)
@@ -399,9 +365,9 @@ for(ligand in 1:(length(ligandList)))
    
    ### DISTANCES ####
    eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
-      dplyr::select(Residue_Code,Mean_Distance) -> tmpDist 
+      dplyr::select(Residue_Code,Distance) -> tmpDist 
    
-   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Mean_Distance))),fill=Residue_Code)) + 
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Distance))),fill=Residue_Code)) + 
       geom_violin(trim=FALSE) +
       labs(title = paste(activeLigand,": Distribution of Residues by Distance",sep=''), x="Residue",y="Distance (Å)")
    print(distanceDist)
