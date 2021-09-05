@@ -1,7 +1,0 @@
-#0, chain A: extracellular heme acquisition hemophore hasa
-4Y1Q.pdb.mono.pdb opened
-836 spheres
-Surfnet for "sel" - "sel":  volume = 961.66
-Surfnet for "sel" - "sel" split ? 2:  volume = 9.4312
-Surfnet for "sel" - "sel" split ? 1:  volume = 952.23
-
