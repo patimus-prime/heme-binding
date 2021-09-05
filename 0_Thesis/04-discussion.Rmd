@@ -371,7 +371,7 @@ Siroheme, with a structure highly dissimilar to the other heme molecules examine
 
 Nonpolar residues are not the  most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket - what is striking, however is the extreme preference for arginine; such a profile does not exist for the other hemes. 
 
-Arginine is followed by other polar amino acids: glutamine, cystine, lysine (positively charged), threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that there are no nonpolar residues at all in this first... group of frequencies. **reword**. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and very low pKa; lysine also has a positive charge and a low pKa (~10.5), but arginine's is much, much lower (~13.8) **fixme add citation** and it is able to form an additional hydrogen bond, and therefore reasonably dominates amongst the polar amino acids. 
+Arginine is followed by other polar amino acids: glutamine, cystine, lysine (positively charged), threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that there are no nonpolar residues at all in this first... group of frequencies. **reword**. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and very low pKa; lysine also has a positive charge and a low pKa (~10.5), but arginine's is much, much lower (~13.8) **fixme add citation** and it is able to form an additional hydrogen bond, and therefore reasonably dominates amongst the polar amino acids. Cysteine is used to coordinate the iron of siroheme, and while this did not significantly affect the frequency for other heme molecules, it is still possible this inflates the value for cysteine for siroheme.
 
 After this group of polar amino acids, glycine is the next most frequent. Glycine has been situated at about a median frequency for other heme molecules, so perhaps its frequency here, slightly above the median, is of note. Only speculation is possible; perhaps ensuring the dominance of polar amino acids in the binding pocket requires extenive folding in the protein, therefore favoring glycine residues.
 
@@ -382,10 +382,15 @@ After these nonpolar residues the remaining frequencies do not follow a clear tr
 Aspartate appears next most frequently; it is a polar, negatively charged amino acid (at pH 7). Siroheme is saturated with other electronegative groups, and the repulsion of htese charges perhaps explains while aspartate, despite being a polar residue, appears not very frequently in the binding pocket. 
 
 
-Leucine is the first of the residues of diminished frequency. It is nonpolar. It, and, skipping a frequency, methionine, isoleucine, and proline, may be disfavored from forming the few nonpolar interactions that do occur. Why is not clear - other small, nonpolar residues, and other lengthy nonpolar residues appear in the pocket in greater frequency.  do to their small size and weak nonpolarity (proline) or do to their steric hindrance Then serine, (polar), methionine (nonpolar), isoleucine(nonpolar), proline (nonpolar), histidine (polar), tryptophan (nonpolar), tyrosine (polar) and glutamate (polar). **ok, here I could discuss as I did with heme-b every residue, but I feel like here it's unreasonable... maybe just say no clear trend. Or for individual residues say why they're probs disfavored idk.** 
-then tyr!! interesting it's so so low v. the other pockets
+Leucine is the first of the residues of diminished frequency. It is nonpolar. It, and, skipping a frequency, methionine, isoleucine, and proline, appear less frequently, and therefore are likely disfavored from forming the relatively few nonpolar interactions that do occur. Why is not clear - other small, nonpolar residues, and other lengthy nonpolar residues appear in the pocket in greater frequency. **double check pKa?**
 
-finally, glutamine way, way down. It's polar, but negatively chaged; but asp is @ median ish wtf??
+Serine appears just less frequently than leucine, and in this context may likely be considered a polar residue that is not as strongly polar or positively charged and therefore less preferred to include in the binding pocket to form polar interactions with siroheme as other residues.
+
+Histidine appears quite infrequently. As with siroheme, other, more strongly polar and perhaps less bulky residues are likely preferred. 
+
+Tryptophan is the least frequent nonpolar residue. The presence of a weak hydrogen bond and its size may preclude its inclusion in the binding pocket in lieu of more uniformly nonpolar residues that take up less space.
+
+Tyrosine and glutamate are the least frequent polar residues. This is in stark opposition to the other heme molecules - tyrosine seemed to be favored for other heme molecules to form interactions with the propionate groups. Glutamate is also extremely infrequent, even in spite of its similarity to aspartate. Both are electronegative at pH 7 - glutamate's extra carbon may provide sufficient steric hindrance to render it less favored. In either case, the infrequency of these residues and the tendencies of other, more intensely polar or nonpolar amino acids to be more populous, suggests tyrosine and glutamate, in the siroheme binding environment, do not interact strongly enough to be favored over other polar residues.   **I'm gonna need to get the pka table and go back through these smh**
 
 
 ```{r SRM-AAfreq,fig.cap="SRM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
@@ -407,6 +412,15 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reo
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
+
+#### Comparing to SRM AA Background Freq
+
+Compared to the other heme molecules, siroheme's binding pocket amino acid frequencies are even more different than the background frequencies. Arginine is far and away the most frequent amino acid in the binding pocket - leucine is the most populous amino acid in the monomer overall, seeming to follow a trend amongst the hemoproteins examined so far. Again discussing the remainder of the frequencies of the monomer would be pure conjecture, but it is worthwhile to note that the pocket frequencies certainly appear unique against the background.  
+
+
+#### Distance stuff
+
+Residues appear less uniformly distributed over distance for siroheme binding pockets when compared against the distribution for other heme molecules. Cysteine is the only residue that comes within 5A of siroheme; it is used to coordinate the iron in siroheme, so this result is expected. The lack of other residues being within 5A, differing from other heme molecules, suggests the many carboxyl and propionate groups on siroheme prevent closer interaction except for coordinating residues. 
 
 ```{r SRM-AAfreqAll,fig.cap="SRM: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -484,28 +498,22 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
 <!-- Amino acid frequencies within the 5A and 7A distance cutoffs of the ligand are reported in Appendix \@ref(figs-aaFreq) and **(FIXME! Missing amino acid tables)** -->
 
 <!-- ### Heme-b and Heme-c -->
-### Heme-c
+<!-- ### Heme-c -->
 
 
 
 <!-- The top 5 residues for HEM and HEC both include leucine, phenylalanine, alanine, and isoleucine; valine and glycine are the other for each ligand respectively. -->
 <!-- Do not over generalize, but discuss mucho -->
-
-Interacts with the propionates, the polar groups within the porphyrin - 
-1.    
-
-
-Thus, we confirm with (@Li2011) that the binding site for heme-b, and now additionally heme-c, is enriched with nonpolar amino acids. This strongly suggests that the nonpolar amino acids are crucial to the binding of heme, likely due to the favorable interaction between the nonpolar amino acids and the porphyrin ring of heme-b and heme-c. The degree to which the percentage of nonpolar acids in the binding pocket may affect the binding of heme cannot be determined in this analysis. But the agreement with the residues closest to heme (and therefore likely to coordinate) is discussed below.
 <!-- FIXME: DO FUCKING DISCUSS IT -->
-### Siroheme
+<!-- ### Siroheme -->
 
-The binding pocket for siroheme is highly enriched with arginine, in addition to other charged residues such as lysine and cysteine. Given  the function of siroheme is to transfer multiple electrons per reaction, the enrichment of the binding environment with charged residues is perhaps not surprising. Addtionally, for siroheme in particular, the geometry, the placement of these residues in order to coordinate the movement of electrons may be of interest; however this is beyond the scope of this study.  
+<!-- The binding pocket for siroheme is highly enriched with arginine, in addition to other charged residues such as lysine and cysteine. Given  the function of siroheme is to transfer multiple electrons per reaction, the enrichment of the binding environment with charged residues is perhaps not surprising. Addtionally, for siroheme in particular, the geometry, the placement of these residues in order to coordinate the movement of electrons may be of interest; however this is beyond the scope of this study.   -->
 
-### Verdoheme
+<!-- ### Verdoheme -->
 
-Verdoheme is an intermediate formed within the binding pocket of heme oxygenase during the degradation of heme; this is the same environment that binds heme at the beginning of the reaction. Verdoheme is oriented differently in the pocket, however overall the amino acid composition of the pocket should be quite similar if not the same. But this is not reflected in our results. Rather, relative to the amino acid... profile (?) of heme-b and heme-c, arginine is in greater abundance in the binding pocket. Leucine, alanine and phenylalanine are still amongst the most frequent amino acids, again providing nonpolar interactions. 
+<!-- Verdoheme is an intermediate formed within the binding pocket of heme oxygenase during the degradation of heme; this is the same environment that binds heme at the beginning of the reaction. Verdoheme is oriented differently in the pocket, however overall the amino acid composition of the pocket should be quite similar if not the same. But this is not reflected in our results. Rather, relative to the amino acid... profile (?) of heme-b and heme-c, arginine is in greater abundance in the binding pocket. Leucine, alanine and phenylalanine are still amongst the most frequent amino acids, again providing nonpolar interactions.  -->
 
-These results may suggest that verdoheme is reoriented, and potentially spatially relocated, to interact with more arginine residues than would be possible if the original heme orientation were maintained; the amount of space verdoheme would have to move within the binding pocket is discussed below. However, it is also possible, likely, this is an artefact of  the very small sample size of verdoheme PDBs used in this study (n=4). Upon the availability of additional verdoheme-containing PDBs in the future this result may be reexamined.
+<!-- These results may suggest that verdoheme is reoriented, and potentially spatially relocated, to interact with more arginine residues than would be possible if the original heme orientation were maintained; the amount of space verdoheme would have to move within the binding pocket is discussed below. However, it is also possible, likely, this is an artefact of  the very small sample size of verdoheme PDBs used in this study (n=4). Upon the availability of additional verdoheme-containing PDBs in the future this result may be reexamined. -->
 
 
 ## Volume Discussion
