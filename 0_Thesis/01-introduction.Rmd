@@ -34,10 +34,10 @@ All types of heme are a coordination complex composed of an iron atom coordinate
 
 
 ```{r structHEM, echo=FALSE,out.width="50%",fig.cap="Heme-b (HEM)",fig.show="hold",fig.align='center'}
-knitr::include_graphics("figures/HEM-b.png")
+knitr::include_graphics("figures/HEM.png")
 ```
 ```{r structHEC, echo=FALSE,out.width="50%",fig.cap="Heme-c (HEC)",fig.show="hold",fig.align='center'}
-knitr::include_graphics("figures/HEM-c.png")
+knitr::include_graphics("figures/HEC.png")
 ```
 
 ```{r structSRM, echo=FALSE,out.width="50%",fig.cap="Siroheme (SRM)",fig.show="hold",fig.align='center'}
@@ -45,10 +45,10 @@ knitr::include_graphics("figures/SRM.png")
 ```
 
 ```{r structVEA, echo=FALSE,out.width="50%",fig.cap="Verdoheme, VEA",fig.align='center'}
-knitr::include_graphics("figures/VEApubchem.png")
+knitr::include_graphics("figures/VEA.png")
 ```
 ```{r structVER, echo=FALSE,out.width="50%",fig.cap="Verdoheme, VER",fig.align='center'}
-knitr::include_graphics("figures/VERpubchem.png")
+knitr::include_graphics("figures/VER.png")
 ```
 
 
