@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.29)  5 SEP 2021 02:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.29)  5 SEP 2021 02:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1532,168 +1532,182 @@ Overfull \hbox (38.6159pt too wide) in paragraph at lines 198--199
  [][] 
  []
 
+<04-discussion_files/figure-latex/HEM-AAfreqAll-1.pdf, id=69, 459.7175pt x 313.
+17pt>
+File: 04-discussion_files/figure-latex/HEM-AAfreqAll-1.pdf Graphic file (type p
+df)
+<use 04-discussion_files/figure-latex/HEM-AAfreqAll-1.pdf>
+Package pdftex.def Info: 04-discussion_files/figure-latex/HEM-AAfreqAll-1.pdf  
+used on input line 204.
+(pdftex.def)             Requested size: 459.71637pt x 313.16922pt.
+
+Overfull \hbox (38.6159pt too wide) in paragraph at lines 204--205
+ [][] 
+ []
+
 [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./04-discussion_files/
 figure-latex/HEM-AAfreq-1.pdf>]
-<04-discussion_files/figure-latex/HEM-AAdist-1.pdf, id=97, 427.5975pt x 325.215
+<04-discussion_files/figure-latex/HEM-AAdist-1.pdf, id=98, 427.5975pt x 325.215
 pt>
 File: 04-discussion_files/figure-latex/HEM-AAdist-1.pdf Graphic file (type pdf)
 
 <use 04-discussion_files/figure-latex/HEM-AAdist-1.pdf>
 Package pdftex.def Info: 04-discussion_files/figure-latex/HEM-AAdist-1.pdf  use
-d on input line 244.
+d on input line 250.
 (pdftex.def)             Requested size: 427.59645pt x 325.2142pt.
 
-Overfull \hbox (6.49599pt too wide) in paragraph at lines 244--245
+Overfull \hbox (6.49599pt too wide) in paragraph at lines 250--251
  [][] 
  []
 
-<04-discussion_files/figure-latex/HEC-AAfreq-1.pdf, id=98, 459.7175pt x 313.17p
+<04-discussion_files/figure-latex/HEC-AAfreq-1.pdf, id=99, 459.7175pt x 313.17p
 t>
 File: 04-discussion_files/figure-latex/HEC-AAfreq-1.pdf Graphic file (type pdf)
 
 <use 04-discussion_files/figure-latex/HEC-AAfreq-1.pdf>
 Package pdftex.def Info: 04-discussion_files/figure-latex/HEC-AAfreq-1.pdf  use
-d on input line 253.
+d on input line 259.
 (pdftex.def)             Requested size: 459.71637pt x 313.16922pt.
 
-Overfull \hbox (38.6159pt too wide) in paragraph at lines 253--254
+Overfull \hbox (38.6159pt too wide) in paragraph at lines 259--260
  [][] 
  []
 
-<04-discussion_files/figure-latex/HEC-AAdist-1.pdf, id=99, 457.71pt x 313.17pt>
-
+<04-discussion_files/figure-latex/HEC-AAdist-1.pdf, id=100, 457.71pt x 313.17pt
+>
 File: 04-discussion_files/figure-latex/HEC-AAdist-1.pdf Graphic file (type pdf)
 
 <use 04-discussion_files/figure-latex/HEC-AAdist-1.pdf>
 Package pdftex.def Info: 04-discussion_files/figure-latex/HEC-AAdist-1.pdf  use
-d on input line 299.
+d on input line 305.
 (pdftex.def)             Requested size: 457.7089pt x 313.16922pt.
 
-Overfull \hbox (36.60843pt too wide) in paragraph at lines 299--300
+Overfull \hbox (36.60843pt too wide) in paragraph at lines 305--306
  [][] 
  []
 
-<04-discussion_files/figure-latex/VERDOHEME-AAfreq-1.pdf, id=100, 459.7175pt x 
+<04-discussion_files/figure-latex/VERDOHEME-AAfreq-1.pdf, id=101, 459.7175pt x 
 313.17pt>
 File: 04-discussion_files/figure-latex/VERDOHEME-AAfreq-1.pdf Graphic file (typ
 e pdf)
 <use 04-discussion_files/figure-latex/VERDOHEME-AAfreq-1.pdf>
 Package pdftex.def Info: 04-discussion_files/figure-latex/VERDOHEME-AAfreq-1.pd
-f  used on input line 308.
+f  used on input line 314.
 (pdftex.def)             Requested size: 459.71637pt x 313.16922pt.
 
-Overfull \hbox (38.6159pt too wide) in paragraph at lines 308--309
+Overfull \hbox (38.6159pt too wide) in paragraph at lines 314--315
  [][] 
  []
 
 [3]
-<04-discussion_files/figure-latex/VERDOHEME-AAdist-1.pdf, id=110, 457.71pt x 31
+<04-discussion_files/figure-latex/VERDOHEME-AAdist-1.pdf, id=111, 457.71pt x 31
 3.17pt>
 File: 04-discussion_files/figure-latex/VERDOHEME-AAdist-1.pdf Graphic file (typ
 e pdf)
 <use 04-discussion_files/figure-latex/VERDOHEME-AAdist-1.pdf>
 Package pdftex.def Info: 04-discussion_files/figure-latex/VERDOHEME-AAdist-1.pd
-f  used on input line 351.
+f  used on input line 357.
 (pdftex.def)             Requested size: 457.7089pt x 313.16922pt.
 
-Overfull \hbox (36.60843pt too wide) in paragraph at lines 351--352
+Overfull \hbox (36.60843pt too wide) in paragraph at lines 357--358
  [][] 
  []
 
-<04-discussion_files/figure-latex/SRM-AAfreq-1.pdf, id=111, 459.7175pt x 313.17
+<04-discussion_files/figure-latex/SRM-AAfreq-1.pdf, id=112, 459.7175pt x 313.17
 pt>
 File: 04-discussion_files/figure-latex/SRM-AAfreq-1.pdf Graphic file (type pdf)
 
 <use 04-discussion_files/figure-latex/SRM-AAfreq-1.pdf>
 Package pdftex.def Info: 04-discussion_files/figure-latex/SRM-AAfreq-1.pdf  use
-d on input line 360.
+d on input line 366.
 (pdftex.def)             Requested size: 459.71637pt x 313.16922pt.
 
-Overfull \hbox (38.6159pt too wide) in paragraph at lines 360--361
+Overfull \hbox (38.6159pt too wide) in paragraph at lines 366--367
  [][] 
  []
 
 [4]
-<04-discussion_files/figure-latex/SRM-AAdist-1.pdf, id=118, 457.71pt x 313.17pt
+<04-discussion_files/figure-latex/SRM-AAdist-1.pdf, id=119, 457.71pt x 313.17pt
 >
 File: 04-discussion_files/figure-latex/SRM-AAdist-1.pdf Graphic file (type pdf)
 
 <use 04-discussion_files/figure-latex/SRM-AAdist-1.pdf>
 Package pdftex.def Info: 04-discussion_files/figure-latex/SRM-AAdist-1.pdf  use
-d on input line 406.
+d on input line 412.
 (pdftex.def)             Requested size: 457.7089pt x 313.16922pt.
 
-Overfull \hbox (36.60843pt too wide) in paragraph at lines 406--407
+Overfull \hbox (36.60843pt too wide) in paragraph at lines 412--413
  [][] 
  []
 
 
-LaTeX Warning: Citation 'Li2011' on page 5 undefined on input line 416.
+LaTeX Warning: Citation 'Li2011' on page 5 undefined on input line 422.
 
 [5]
 
-LaTeX Warning: Reference `figs-vol' on page 6 undefined on input line 431.
+LaTeX Warning: Reference `figs-vol' on page 6 undefined on input line 437.
 
-[6 <./04-discussion_files/figure-latex/HEM-AAdist-1.pdf>]
+[6 <./04-discussion_files/figure-latex/HEM-AAfreqAll-1.pdf>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-35.
+41.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [7 <./04-discussion_files/figure-latex/HEC-AAfreq-1.pdf>]
+) [7 <./04-discussion_files/figure-latex/HEM-AAdist-1.pdf>]
 
-LaTeX Warning: Reference `figs-ligExcSA' on page 8 undefined on input line 445.
-
-
-
-LaTeX Warning: Reference `figs-ligAccSA' on page 8 undefined on input line 446.
+LaTeX Warning: Reference `figs-ligExcSA' on page 8 undefined on input line 451.
 
 
-[8 <./04-discussion_files/figure-latex/HEC-AAdist-1.pdf>]
+
+LaTeX Warning: Reference `figs-ligAccSA' on page 8 undefined on input line 452.
+
+
+[8 <./04-discussion_files/figure-latex/HEC-AAfreq-1.pdf>]
 
 LaTeX Warning: Reference `figs-pocketExcSA' on page 9 undefined on input line 4
-57.
+63.
 
 
 LaTeX Warning: Reference `figs-pocketAccSA' on page 9 undefined on input line 4
-59.
+65.
 
 
-LaTeX Warning: Reference `figs-planarAll' on page 9 undefined on input line 464
+LaTeX Warning: Reference `figs-planarAll' on page 9 undefined on input line 470
 .
 
-[9 <./04-discussion_files/figure-latex/VERDOHEME-AAfreq-1.pdf>]
+[9 <./04-discussion_files/figure-latex/HEC-AAdist-1.pdf>]
 
 LaTeX Warning: Reference `figs-planarClosest' on page 10 undefined on input lin
-e 473.
+e 479.
 
-[10 <./04-discussion_files/figure-latex/VERDOHEME-AAdist-1.pdf>]
+[10 <./04-discussion_files/figure-latex/VERDOHEME-AAfreq-1.pdf>]
 
-LaTeX Warning: Reference `figs-cabAll' on page 11 undefined on input line 478.
+LaTeX Warning: Reference `figs-cabAll' on page 11 undefined on input line 484.
 
 
 LaTeX Warning: Reference `figs-cabClosest' on page 11 undefined on input line 4
-83.
+89.
 
-[11 <./04-discussion_files/figure-latex/SRM-AAfreq-1.pdf>]
+[11 <./04-discussion_files/figure-latex/VERDOHEME-AAdist-1.pdf>]
 
-LaTeX Warning: Empty bibliography on input line 518.
+LaTeX Warning: Empty bibliography on input line 524.
 
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the 04-discussion.maf file.
 \openout3 = `04-discussion.maf'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 520.
-[12 <./04-discussion_files/figure-latex/SRM-AAdist-1.pdf>] [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 520.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 526.
+[12 <./04-discussion_files/figure-latex/SRM-AAfreq-1.pdf>] [13 <./04-discussion
+_files/figure-latex/SRM-AAdist-1.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 526.
 (./04-discussion.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 520.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 520.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 526.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 526.
 Package rerunfilecheck Info: File `04-discussion.out' has not changed.
-(rerunfilecheck)             Checksum: 23410D0D82FCAED82EDE4C300307E3FF;1082.
+(rerunfilecheck)             Checksum: DCFEA7F65263AD0A75BEE742465B2748;1082.
 
 LaTeX Warning: There were undefined references.
 
@@ -1710,10 +1724,10 @@ Package logreq Info: Writing requests to '04-discussion.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26109 strings out of 481239
- 437701 string characters out of 5920377
- 1209477 words of memory out of 5000000
- 40636 multiletter control sequences out of 15000+600000
+ 26117 strings out of 481239
+ 438058 string characters out of 5920377
+ 1210540 words of memory out of 5000000
+ 40642 multiletter control sequences out of 15000+600000
  582255 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,10n,53p,821b,1649s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1725,10 +1739,10 @@ are/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 adobe/utopia/putb8a.pfb>
-Output written on 04-discussion.pdf (13 pages, 450784 bytes).
+Output written on 04-discussion.pdf (13 pages, 457007 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 15017 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 15022 words of extra memory for PDF output out of 17280 (max. 10000000)
 

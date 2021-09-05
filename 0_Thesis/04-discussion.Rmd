@@ -40,7 +40,7 @@ Amino acid frequencies were obtained for distance cutoffs of 5A and 7A - these f
 
 ### Heme-b
 
-```{r HEM-AAfreq,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r HEM-AAfreq,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEM"
 library(dplyr) 
@@ -60,7 +60,8 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reo
 
 ```
 
-```{r HEM-AAfreq,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+after the aa freq in the pocket!! 
+```{r HEM-AAfreqAll,fig.cap="HEM: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEM"
 library(dplyr) 
@@ -73,13 +74,14 @@ library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr
 source("~/heme-binding/scripts/r/addpdbcol.R")
 library(kableExtra) 
 
-print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
-      geom_bar(stat="identity",position = "identity", alpha=1) +
-      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=0.65) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",activeLigand,sep='')) +
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
 
+now we be after the aa freq of monomer and about to go into the awesome table yay
 
 ```{r HEM-t-AAfreq,echo=FALSE, message= FALSE, warning=FALSE}
 # declarations
