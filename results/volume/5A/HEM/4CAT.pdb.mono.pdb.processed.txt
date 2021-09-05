@@ -2,8 +2,8 @@
 4CAT.pdb.mono.pdb opened
 94 spheres
 Surfnet for "sel" - "sel":  volume = 1030.8
-Surfnet for "sel" - "sel" split ? 2:  volume = 42.051
-Surfnet for "sel" - "sel" split ? 1:  volume = 404.92
 Surfnet for "sel" - "sel" split ? 3:  volume = 583.88
+Surfnet for "sel" - "sel" split ? 1:  volume = 404.92
+Surfnet for "sel" - "sel" split ? 2:  volume = 42.051
 The angstrom stuff was 5.0
 

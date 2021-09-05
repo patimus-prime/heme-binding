@@ -34,9 +34,12 @@ The first part of the study aimed at providing statistics on the amino acid prop
 
 Amino acid frequencies were obtained for distance cutoffs of 5A and 7A - these figures and data are shown in **FIXME ADD APPENDICES LATER** The trends in these data are very similar and therefore only the data pertaining to the 7A distance cutoff are discussed below.
 
+
+## AA Frequency {#disc-aaFreq}
+
+
 ### Heme-b
 
-## AA Frequency {#figs-aaFreq}
 ```{r HEM-AAfreq,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEM"
@@ -56,6 +59,27 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reo
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
+
+```{r HEM-AAfreq,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+
 
 ```{r HEM-t-AAfreq,echo=FALSE, message= FALSE, warning=FALSE}
 # declarations
@@ -77,6 +101,9 @@ HEM_aaFreqDf %>%
   kable_styling(latex_options = c("striped","repeat_header"))
 
 ```
+
+
+
 
 ```{r HEM-AAdist,fig.cap="HEM: AA Distances",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")

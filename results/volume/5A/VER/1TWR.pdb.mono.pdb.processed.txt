@@ -5,7 +5,7 @@ warning: cannot find LINK/SSBOND residue VER (300 )
 1TWR.pdb.mono.pdb opened
 708 spheres
 Surfnet for "sel" - "sel":  volume = 1013.5
-Surfnet for "sel" - "sel" split ? 1:  volume = 1002.9
 Surfnet for "sel" - "sel" split ? 2:  volume = 10.551
+Surfnet for "sel" - "sel" split ? 1:  volume = 1002.9
 The angstrom stuff was 5.0
 

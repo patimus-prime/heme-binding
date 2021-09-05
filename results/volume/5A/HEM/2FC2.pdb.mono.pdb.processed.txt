@@ -5,8 +5,8 @@ warning: cannot find LINK/SSBOND residue  NO (1902 )
 2FC2.pdb.mono.pdb opened
 1362 spheres
 Surfnet for "sel" - "sel":  volume = 1057.5
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.6737
 Surfnet for "sel" - "sel" split ? 2:  volume = 5.4281
 Surfnet for "sel" - "sel" split ? 1:  volume = 1048.4
-Surfnet for "sel" - "sel" split ? 3:  volume = 3.6737
 The angstrom stuff was 5.0
 

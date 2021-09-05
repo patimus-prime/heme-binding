@@ -20,29 +20,29 @@ warning: cannot find LINK/SSBOND residue  NA (202 )
 warning: cannot find LINK/SSBOND residue  NA (202 )
 #0, chain A: cytochrome B-562
 6WZA.pdb.mono.pdb opened
-HEC 201.A
-ARG 106.A
-TYR 105.A
-HIS 102.A
-CYS 101.A
-GLY 64.A
-CYS 98.A
-THR 97.A
-PRO 46.A
-PRO 45.A
 LEU 14.A
 ASN 11.A
 LEU 10.A
 GLU 8.A
+MET 33.A
 MET 7.A
 GLU 4.A
 LEU 3.A
 HOH 305.A
 LEU 68.A
-PHE 65.A
-HOH 301.A
 MPD 207.A
+HOH 301.A
+PHE 65.A
+GLY 64.A
 MPD 206.A
 PHE 61.A
-MET 33.A
+HEC 201.A
+ARG 106.A
+TYR 105.A
+HIS 102.A
+CYS 101.A
+CYS 98.A
+THR 97.A
+PRO 46.A
+PRO 45.A
 

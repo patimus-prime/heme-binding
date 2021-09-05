@@ -16,8 +16,8 @@ warning: cannot find LINK/SSBOND residue CYS (15 )
 3X15.pdb.mono.pdb opened
 314 spheres
 Surfnet for "sel" - "sel":  volume = 647.25
-Surfnet for "sel" - "sel" split ? 1:  volume = 37.616
 Surfnet for "sel" - "sel" split ? 2:  volume = 600.12
 Surfnet for "sel" - "sel" split ? 3:  volume = 9.5145
+Surfnet for "sel" - "sel" split ? 1:  volume = 37.616
 The angstrom stuff was 5.0
 

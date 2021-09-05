@@ -13,27 +13,27 @@ warning: cannot find LINK/SSBOND residue MET (7 )
 warning: cannot find LINK/SSBOND residue HIS (102 )
 #0, chain A: cytochrome B-562
 2BC5.pdb.mono.pdb opened
+GLU 4.A
+LEU 3.A
+CYS 98.A
+THR 97.A
 LEU 94.A
+HOH 525.A
+MET 33.A
+PRO 46.A
+PRO 45.A
 LEU 68.A
 PHE 65.A
 GLY 64.A
-LEU 14.A
-PHE 61.A
-HOH 525.A
-ASN 11.A
-LEU 10.A
-GLU 8.A
-MET 7.A
-GLU 4.A
-LEU 3.A
-PRO 46.A
-PRO 45.A
 HEC 150.A
+PHE 61.A
+LEU 14.A
 ARG 106.A
 TYR 105.A
-MET 33.A
+ASN 11.A
+LEU 10.A
 HIS 102.A
+GLU 8.A
 CYS 101.A
-CYS 98.A
-THR 97.A
+MET 7.A
 

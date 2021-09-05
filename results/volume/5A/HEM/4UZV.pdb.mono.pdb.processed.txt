@@ -2,7 +2,7 @@
 4UZV.pdb.mono.pdb opened
 840 spheres
 Surfnet for "sel" - "sel":  volume = 1117.3
-Surfnet for "sel" - "sel" split ? 2:  volume = 2.2041
 Surfnet for "sel" - "sel" split ? 1:  volume = 1115.1
+Surfnet for "sel" - "sel" split ? 2:  volume = 2.2041
 The angstrom stuff was 5.0
 

@@ -8,9 +8,9 @@ warning: cannot find LINK/SSBOND residue AZI (217 )
 3MOO.pdb.mono.pdb opened
 702 spheres
 Surfnet for "sel" - "sel":  volume = 715.08
+Surfnet for "sel" - "sel" split ? 1:  volume = 705.2
+Surfnet for "sel" - "sel" split ? 3:  volume = 5.0833
 Surfnet for "sel" - "sel" split ? 4:  volume = 2.3815
 Surfnet for "sel" - "sel" split ? 2:  volume = 2.4157
-Surfnet for "sel" - "sel" split ? 3:  volume = 5.0833
-Surfnet for "sel" - "sel" split ? 1:  volume = 705.2
 The angstrom stuff was 5.0
 

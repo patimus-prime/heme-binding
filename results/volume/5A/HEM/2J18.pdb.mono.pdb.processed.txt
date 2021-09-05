@@ -11,7 +11,7 @@ warning: cannot find LINK/SSBOND residue MAN (1 )
 1340 spheres
 Surfnet for "sel" - "sel":  volume = 799.79
 Surfnet for "sel" - "sel" split ? 2:  volume = 788.31
-Surfnet for "sel" - "sel" split ? 1:  volume = 3.1627
 Surfnet for "sel" - "sel" split ? 3:  volume = 8.318
+Surfnet for "sel" - "sel" split ? 1:  volume = 3.1627
 The angstrom stuff was 5.0
 

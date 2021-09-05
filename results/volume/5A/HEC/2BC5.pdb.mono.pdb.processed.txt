@@ -15,9 +15,9 @@ warning: cannot find LINK/SSBOND residue HIS (102 )
 2BC5.pdb.mono.pdb opened
 870 spheres
 Surfnet for "sel" - "sel":  volume = 944.37
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.5713
 Surfnet for "sel" - "sel" split ? 4:  volume = 5.1644
 Surfnet for "sel" - "sel" split ? 2:  volume = 2.9633
-Surfnet for "sel" - "sel" split ? 3:  volume = 2.5713
 Surfnet for "sel" - "sel" split ? 1:  volume = 933.67
 The angstrom stuff was 5.0
 

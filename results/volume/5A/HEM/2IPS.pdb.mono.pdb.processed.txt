@@ -15,7 +15,7 @@ warning: cannot find LINK/SSBOND residue NAG (1 )
 Surfnet for "sel" - "sel":  volume = 943.79
 Surfnet for "sel" - "sel" split ? 2:  volume = 3.0991
 Surfnet for "sel" - "sel" split ? 1:  volume = 935.82
-Surfnet for "sel" - "sel" split ? 3:  volume = 3.0085
 Surfnet for "sel" - "sel" split ? 4:  volume = 1.8686
+Surfnet for "sel" - "sel" split ? 3:  volume = 3.0085
 The angstrom stuff was 5.0
 

@@ -14,32 +14,32 @@ warning: cannot find LINK/SSBOND residue  ZN (1005 )
 warning: cannot find LINK/SSBOND residue  ZN (1005 )
 #0, chain A: iron-regulated surface determinant protein C
 2O6P.pdb.mono.pdb opened
+PHE 53.A
 TYR 52.A
-TRP 77.A
+ALA 49.A
 ILE 48.A
 SER 47.A
 THR 46.A
 HOH 1047.A
-HOH 1044.A
 TYR 41.A
 LYS 40.A
+HOH 1044.A
 TYR 39.A
+ILE 138.A
 ASN 137.A
 TYR 136.A
-ALA 49.A
 TYR 132.A
 PHE 130.A
 ILE 78.A
-ILE 138.A
+TRP 77.A
 VAL 125.A
 HOH 1075.A
 ILE 121.A
+VAL 119.A
 HOH 1071.A
 ILE 117.A
 HOH 1019.A
 HOH 1013.A
-VAL 119.A
 HOH 1059.A
 HEM 190.A
-PHE 53.A
 
