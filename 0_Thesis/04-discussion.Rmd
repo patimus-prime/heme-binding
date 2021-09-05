@@ -30,7 +30,7 @@ documentclass: book
 
 ## Analysis of Nearby Residues of Natural Porphyrins
 
-The first part of the study aimed at providing statistics on the amino acid propensity to interact with hemes in natural proteins. We started with heme-b, heme-c, siroheme and verdoheme. Because we are not looking only at the iron environment, but instead at the  environment of the entire microcycle, we did the analysis for any amino acid in contact with the heme. This was done  AA having at least one atom within the cutoff distances of 5 and 7 Angtroms (A). 
+The first part of the study aimed at providing statistics on the amino acid propensity to interact with hemes in natural proteins. We studied heme-b, heme-c, siroheme and verdoheme. Because we are not looking only at the iron environment, but instead at the  environment of the entire microcycle, we did the analysis for any amino acid with potential contact with the heme. This was defined as any AA having at least one atom within the cutoff distances of 5 and 7 Angtroms (A). 
 
 Amino acid frequencies were obtained for distance cutoffs of 5A and 7A - these figures and data are shown in **FIXME ADD APPENDICES LATER** The trends in these data are very similar and therefore only the data pertaining to the 7A distance cutoff are discussed below.
 
@@ -40,7 +40,35 @@ Amino acid frequencies were obtained for distance cutoffs of 5A and 7A - these f
 
 ### Heme-b
 
-How now said the crafty celsetial object
+Figure \@ref(fig:HEM-AAfreq) plots the frequency of each residue within 7A of heme-b. Immediately below is Figure \@ref(fig:HEM-AAfreqAll), which plots the frequency of each residue within the entire monomer. **I'm thinking put tables in back they dont add much value here** Data tables are available in Appendix...
+
+<!-- Actually lets do the pocket first. They're not super duper similar after all.  -->
+**We gotta fuck ton of shit to discuss! Don't try to keep this short homie. You've put in WORK.**
+
+Beginning at the left of the figure and moving right, large, nonpolar amino acids appear most frequently within 7A: LEU and PHE; ILE appears less frequently than these two amino acids but nonetheless is in high frequency. Small, nonpolar amino acids ALA and VAL also appear very frequently. As the majority of the heme-b molecule is made up of the nonpolar porphyrin ring, these amino acids are therefore likely in such high frequency to provide the nonpolar interactions/environment with the pyrole groups and methyl and vinyl groups. 
+
+Tyrosine, arginine, histidine appear next most frequently. The two propionate groups on heme are used to coordinate the heme in the binding pocket. These polar residues are therefore likely interact with the propionate groups, providing the polar interactions necessary, in addition to the nonpolar interactions above, to provide as hospitable of a binding environment as possible to coordinate the heme. In additon, the arginine and histidine groups are positively charged (at pH 7), **further facilitating interaction with the electronegative proprionate groups on the porphyrin ring of heme-b.** GOTTA FACT CHECK THIS HOMIE-YO.
+
+Glycine is a small residue and cannot form significant interactions within its environment; however, its frequency, or lack thereof (compared to background frequency, discused later), suggests the binding pocket may not require as much flexibility or... spatial considerations as in the rest of the protein. This would logically follow from the need for conserved binding sites.
+
+ser, glu, asp, lys, pro, asn, gln, met, trp, cys
+
+Serine glu asp*
+Next appear serine, glutamate (glutamic acid) and aspartate (aspartic acid) and lysine. These are polar residues, and glutamate and aspartate are negatively charged; lysine is polarpositively charged. The negative charge is unlikely of importance in interaction with heme-b, however these polar amino acids likely again interact with the propionate groups on heme; only, infrequently. What is most interesting is why lysine is in such low abundance relative to the other polar, positively charged residues, arginine and histidine. Perhaps lysine's fairly linear structure prevents it from fitting into the binding pocket; however, arginine is also somewhat linear and features prominently. The exact reason for why this could be is beyond the scope of this study.  
+
+proline are nonpolar 
+
+asn gln
+
+met, trp
+
+cys
+
+What is especially notable is that nonpolar residues appear in much greater frequency than polar residues. This suggests that the nonpolar interactions with heme may be of greater importance than the coordination of polar residues in the binding pocket; at the least, more important than previously thought.  
+
+
+It is immediately striking that some amino acids, e.g. LEU and ALA, are among the most populous amino acids for both the binding pocket and in the entire monomer.
+
 
 ```{r HEM-AAfreq,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -79,7 +107,7 @@ library(kableExtra)
 
 print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
       geom_bar(stat="identity",position = "identity", alpha=0.65) +
-      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",activeLigand,sep='')) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",sep='')) +
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
