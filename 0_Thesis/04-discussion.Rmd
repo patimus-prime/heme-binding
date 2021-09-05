@@ -40,6 +40,8 @@ Amino acid frequencies were obtained for distance cutoffs of 5A and 7A - these f
 
 ### Heme-b
 
+How now said the crafty celsetial object
+
 ```{r HEM-AAfreq,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEM"
@@ -61,6 +63,7 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reo
 ```
 
 after the aa freq in the pocket!! 
+
 ```{r HEM-AAfreqAll,fig.cap="HEM: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEM"

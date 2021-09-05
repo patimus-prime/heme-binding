@@ -149,6 +149,12 @@ output:
     template: templates/template.tex
     keep_tex: true
     pandoc_args: "--lua-filter=scripts_and_filters/colour_and_highlight.lua"
+    # We redefine the figure environment to avoid floating, per: https://stackoverflow.com/questions/16626462/figure-position-in-markdown-when-converting-to-pdf-with-knitr-and-pandoc
+    # Only affects pdf output upon running index.Rmd
+    # Comment out the next three lines to return to default 'float' behavior of figures
+    fig_caption: yes 
+    includes:
+      in_header: preamble-latex.tex
   bookdown::bs4_book: 
     css: 
       - templates/bs4_style.css
@@ -182,7 +188,7 @@ source('scripts_and_filters/wrap_lines.R')
 ```
 
 <!--
-Include the create_chunk_options chunk above at the top of your index.Rmd file
+  Include the create_chunk_options chunk above at the top of your index.Rmd file
 This will include code to create additional chunk options (e.g. for adding author references to savequotes)
 and to make sure lines in code soft wrap
 If you need to create your own additional chunk options, edit the file scripts/create_chunk_options.R
