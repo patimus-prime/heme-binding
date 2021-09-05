@@ -369,7 +369,25 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
 
 Siroheme, with a structure highly dissimilar to the other heme molecules examined, should be expected to have a different amino acid frequency profile - and indeed we confirm this in our results. 
 
-Rather than nonpolar residues being most abundant, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups, the entire porphyrin ring surrounded by polar, electronegative groups. 
+Nonpolar residues are not the  most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket - what is striking, however is the extreme preference for arginine; such a profile does not exist for the other hemes. 
+
+Arginine is followed by other polar amino acids: glutamine, cystine, lysine (positively charged), threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that there are no nonpolar residues at all in this first... group of frequencies. **reword**. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and very low pKa; lysine also has a positive charge and a low pKa (~10.5), but arginine's is much, much lower (~13.8) **fixme add citation** and it is able to form an additional hydrogen bond, and therefore reasonably dominates amongst the polar amino acids. 
+
+After this group of polar amino acids, glycine is the next most frequent. Glycine has been situated at about a median frequency for other heme molecules, so perhaps its frequency here, slightly above the median, is of note. Only speculation is possible; perhaps ensuring the dominance of polar amino acids in the binding pocket requires extenive folding in the protein, therefore favoring glycine residues.
+
+Finally we come to several nonpolar amino acids: alanine, phenylalanine, and valine. These amino acids define roughly the median of the frequency data. With all the polar groups on siroheme, it might be expected that only polar interactions would be desirable. However, the not miniscule frequency of these residues suggests nonpolar interactions still occur in the binding pocket; the porphyrin ring remains, as well as methyl groups and the small nonpolar portion of the carboxyl and propionate groups. It is perhaps in these areas that the nonpolar residues interact.
+
+After these nonpolar residues the remaining frequencies do not follow a clear trend but regardless are discussed. After aspartate the remaining frequencies are considerably lower. This may be an artefact of a small sample size, or may suggest the remaining residues form, if any, less favorable interactions with the heme. 
+
+Aspartate appears next most frequently; it is a polar, negatively charged amino acid (at pH 7). Siroheme is saturated with other electronegative groups, and the repulsion of htese charges perhaps explains while aspartate, despite being a polar residue, appears not very frequently in the binding pocket. 
+
+
+Leucine is the first of the residues of diminished frequency. It is nonpolar. It, and, skipping a frequency, methionine, isoleucine, and proline, may be disfavored from forming the few nonpolar interactions that do occur. Why is not clear - other small, nonpolar residues, and other lengthy nonpolar residues appear in the pocket in greater frequency.  do to their small size and weak nonpolarity (proline) or do to their steric hindrance Then serine, (polar), methionine (nonpolar), isoleucine(nonpolar), proline (nonpolar), histidine (polar), tryptophan (nonpolar), tyrosine (polar) and glutamate (polar). **ok, here I could discuss as I did with heme-b every residue, but I feel like here it's unreasonable... maybe just say no clear trend. Or for individual residues say why they're probs disfavored idk.** 
+then tyr!! interesting it's so so low v. the other pockets
+
+finally, glutamine way, way down. It's polar, but negatively chaged; but asp is @ median ish wtf??
+
+
 ```{r SRM-AAfreq,fig.cap="SRM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
