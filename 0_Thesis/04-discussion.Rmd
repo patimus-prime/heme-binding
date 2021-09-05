@@ -147,7 +147,9 @@ HEM_aaFreqDf %>%
 
 After an exhaustive exploration of the relative frequencies of amino acids in the binding pocket, the figure below likely appears fairly straightfoward. Figure \@ref(HEM-AAdist) plots the distribution of amino acids in the binding pocket against their distance from the iron of the heme. 
 
-We may find that only a few residues come in close contact (<4A) of the heme: Cys, His, Tyr. Most residues center their distribution at around 6A, although Lys seems more biased than the remaining residues to be a bit closer. 
+We find that only a few residues come in close contact (<4A) of the heme: Cys, His, Tyr. Most residues center their distribution at around 6A, although Lys seems more biased than the remaining residues to be a bit closer. Cystidine and histidine may be at least in part explained to be close due to their use as coordnating residues; histidine, being in greater frequency, may also be this close due to favorable interactions with the porphyrin ring. 
+
+The proximity of tyrosine  however, is lkely more notable. It cannot form coordination bonds with the heme iron, but tyrosine residues do interact with the propionate groups; and these results suggest that of all potentially interacting polar/positively charged residues, tyrosine is the most likely at least to be in close proximity to the heme molecule. Whether this illustrates an extreme imortance of tyrosine to interact with propionate groups, or instead the need for tyrosine to be in close proximity in order to form such interactions, is beyond the scope of this study. 
 
 ```{r HEM-AAdist,fig.cap="HEM: AA Distances",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -176,6 +178,8 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
 
 ### Heme-c
 
+Leucine and alanine again are highly frequent for HEC, followed by quite similar trends and therfore HEC will not be as thoroughly discussed as HEM. The most notable differences may be that GLY and CYS are in far higher frequency than in heme. Heme-c almost always covalently binds to CYS, and this may explain that frequency: but as for glycine, perhaps the covalent binding of CYS is sufficient for other interactions to be of lower priority, and the flexibility and shape of the binding pocket to be prioritized, therefore leading to more glycines being included in order to shape the pocket favorably. **I feel like this is grasping at straws without much support, add more qualifiers or just leave it at not discussing much**
+
 ```{r HEC-AAfreq,fig.cap="HEC: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEC"
@@ -195,6 +199,28 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reo
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
+
+```{r HEC-AAfreqAll,fig.cap="HEC: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=0.65) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+
+Generally, heme-c mirrors heme-b in a strong showing of alanine and leucine, followed by a divergence in the frequency of amino acids and therefore a struggle to form any meaningful discussion when it comes to comparing the binding pocket frequencies against background frequencies.  
 
 ```{r HEC-t-AAfreq,echo=FALSE, message= FALSE, warning=FALSE}
 # declarations
@@ -242,7 +268,15 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
    
 ```
 
+The distribution of amino acids over distance from the heme iron for HEC is similar to HEM, with some exceptions. Cys, His, Tyr again are amongst the closest residues to HEC, likely for the same reasons of very strong polar interactions or coordination. Additionally, cysteine covalently bonds to HEC's iron atom, providing further justification for its proximity. However, for HEC, Lys and Met also are very proximal. The methionine residues... for thioester bonds?? **HELP** Lysine is polar and positively charged, and therefore in the case of HEC being covalently bonded, and therefore reliably, specifically, positioned, the environment may be such that a lengthy, polar, charged residue may also be positioned well enough to be consistently nearby and forming interactions with the propionate groups.
+**review this one home dawg**
+
+
 ### Verdoheme
+
+Verdoheme is dissimilar from HEM and HEC above. This is fairly surprising, given that verdoheme is an intermediate in the binding pocket for heme within heme oxygenases. The results discussed below may be attributable to the small sample size of verdoheme PDBs (n=4, combining VEA and VER), and should be appreciated with some skepticism. Nonetheless, the results will be discussed.
+
+Leucine and alanine are again most frequent, but after this results diverge. Tyrosine is next most frequent - surprising, given that this is still the same pocket that bound heme. It is possible that heme's reorientation during its degradation moves it closer to another region of the binding pocket. Chemically, it may be that as heme is oxidized, there is greater need to  and arginine are next most frequent;  **looking ahead, the residue by distance looks baaaaad. So gonna hold off on discussing this until after siroheme. But, do finish the amino acid discussion, after this we're in the home stretch lol**
 
 ```{r VERDOHEME-AAfreq,fig.cap="VERDOHEME: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -263,6 +297,27 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reo
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
+
+```{r VERDOHEME-AAfreqAll,fig.cap="VERDOHEME: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=0.65) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+
 
 ```{r VERDOHEME-t-AAfreq,echo=FALSE, message= FALSE, warning=FALSE}
 # declarations
@@ -311,6 +366,10 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
 ```
 
 ### Siroheme
+
+Siroheme, with a structure highly dissimilar to the other heme molecules examined, should be expected to have a different amino acid frequency profile - and indeed we confirm this in our results. 
+
+Rather than nonpolar residues being most abundant, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups, the entire porphyrin ring surrounded by polar, electronegative groups. 
 ```{r SRM-AAfreq,fig.cap="SRM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -330,6 +389,27 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reo
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
+
+```{r SRM-AAfreqAll,fig.cap="SRM: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=0.65) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+
 
 ```{r SRM-t-AAfreq,echo=FALSE, message= FALSE, warning=FALSE}
 # declarations
