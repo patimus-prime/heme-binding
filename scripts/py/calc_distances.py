@@ -70,7 +70,7 @@ def d(activeLigand,activeSourcePath,activeResultPath,angstromDistance):
         rc("sel :"+activeLigand+"@Fe") #select the Fe atom. DO NOT del ions above.
         fe = chimera.selection.currentAtoms()[0] # index to acquire the one atom selected; manual sel defines a list
 
-        rc("sel sel za < "+angstromDistance)#7") # select all atoms within 5A of Fe (also de-selects Fe)
+        rc("sel sel za < "+angstromDistance)
         nearbyAtoms = chimera.selection.currentAtoms()
 
         for i in nearbyAtoms:
