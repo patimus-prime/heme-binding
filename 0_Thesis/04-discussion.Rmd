@@ -558,25 +558,25 @@ The surface area of binding pockets is more varied than the heme surface areas.
 
 Heme-b and verdoheme, being highly similar molecules, with the same propionate groups, and one the derivative of the other, have quite similar surface areas, centering around 10,000-11,000 A². This is useful as a baseline to discuss the surface area of the binding pockets of the other two heme molecules below.
 
-The surface area of heme-c is considerably lower than that of heme-b and verdoheme. Its values center around 7500 A². Heme-c is bound covalently to the hemoprotein, forming thioether bonds with cysteine residues at two sites, excluding these sites from interacting with water molecules. **is this all that explains the reduction in SA? forgive my ignorance!**
+The surface area of the binding pocket of heme-c is considerably lower than that of heme-b and verdoheme. Its values center around 7500 A². Heme-c is bound covalently to the hemoprotein, forming thioether bonds with cysteine residues at two sites, excluding these sites from interacting with water molecules. **is this all that explains the reduction in SA? forgive my ignorance!**
 
-The surface area of siroheme is far greater than that for other heme molecules - values center around 21000 A². 
+The surface area of siroheme's binding pocket is far greater than that for other heme molecules - values center around 21000 A². Siroheme's extra groups do not appear to affect its own surface area, per above. However, it is effectively a very polar molecule and appropriately the binding pocket is highly saturated with very polar amino acids, as seen in the amino acid frequency analysis. The binding pocket is therefore completely different from the other heme molecules, and these populous, polar amino acids favorably interact with aqueous solvent, negating the need to bury any hydrophobic residues and reduce surface area.
 
 <!-- just combine 'em lol discussion will be the same -->
-Figures can be found in Appendix \@ref(figs-ligExcSA) for ligands' solvent excluded surface area, and 
- in Appendix \@ref(figs-ligAccSA) for ligands' solvent accessible surface area. 
+<!-- Figures can be found in Appendix \@ref(figs-ligExcSA) for ligands' solvent excluded surface area, and  -->
+<!--  in Appendix \@ref(figs-ligAccSA) for ligands' solvent accessible surface area.  -->
 
 
-This measure, and also the solvent accessible surface area of the ligands, is effectively of the surface area of each ligand itself - distance cutoffs and binding environments are not expected to affect the results. Significant variability in the data may therefore suggest problems in calculation.
+<!-- This measure, and also the solvent accessible surface area of the ligands, is effectively of the surface area of each ligand itself - distance cutoffs and binding environments are not expected to affect the results. Significant variability in the data may therefore suggest problems in calculation. -->
 
-Both accessible and excluded surface area data are fairly well centered around some value for all ligands, except for verdoheme. For the latter this may be attributed to the small sample size. But for other ligands, and also for verdoheme, the outliers in the data may suggest errors in calculation and potential inclusion of parts of the binding pocket itself in calculation.
+<!-- Both accessible and excluded surface area data are fairly well centered around some value for all ligands, except for verdoheme. For the latter this may be attributed to the small sample size. But for other ligands, and also for verdoheme, the outliers in the data may suggest errors in calculation and potential inclusion of parts of the binding pocket itself in calculation. -->
 
 
-## Pocket Solvent Excluded Surface Area
+<!-- ## Pocket Solvent Excluded Surface Area -->
 
-**We'll do same treatment for pocket surface areas, skipping ahead to angles/distances**
+<!-- **We'll do same treatment for pocket surface areas, skipping ahead to angles/distances** -->
 
-Figures can be found in \@ref(figs-pocketExcSA)
+<!-- Figures can be found in \@ref(figs-pocketExcSA) -->
 
 <!-- HEM data has poor agreement for this measure. Data is concentrated from 5000-15000 A², but this is a very large range and not very useful. -->
 
@@ -590,7 +590,7 @@ Figures can be found in \@ref(figs-pocketExcSA)
 
 <!-- ## Pocket Solvent Accessible Surface Area -->
 
-Figures can be found in Appendix \@ref(figs-pocketAccSA).
+<!-- Figures can be found in Appendix \@ref(figs-pocketAccSA). -->
 
 <!-- The results for this measure follow the trends for the previous section. -->
 
@@ -600,23 +600,25 @@ Figures can be found in Appendix \@ref(figs-pocketAccSA).
 
 <!-- Verdoheme data range from 10000-11000 A². -->
 
-## All Planar Angles
+## Angular Data
+
+**I think I'll just stick all of this in the appendix, including highlighting the clusters of data. Nothing can be discussed from it - it is interesting to note and perhaps I'll include some examples below very briefly, but otherwise, I don't know what value would be added to the report of "verdoheme always has his interact with a planar angle of 116 degrees"
 
 Figures can be found in \@ref(figs-planarAll)
 
 These data, for all ligands, except potentially for heme-c, largely serve to compare as noise for the next section. The planar angles of all residues, falling within the upper distance cutoff of 7A, are plotted. 
 
-In the notable exception of heme-c  (HEC), Figure **FIXME: insert figure name** for this ligand seems to suggest that GLU, MET and LYS have fairly specific planar angles with the ligand. However, heme-c is not coordinated to achieve its chemistry but rather covalently bound, to histidine. Lysine is effectively the median of amino acid frequency for heme-c, methionine is even less frequent and glutamine is the least frequent amino acid. For the latter two amino acids their tight range of planar angles is therefore likely an artefact of a small sample size of amino acids. However, for lysine the tight range of angles may be significant; this is dicussed further below. 
+In the notable exception of heme-c, Figure **FIXME: insert figure name** seems to suggest that GLU, MET and LYS have fairly specific planar angles with the ligand. Lysine is effectively the median of amino acid frequency for heme-c, methionine is even less frequent and glutamine is the least frequent amino acid. For the latter two amino acids their tight range of planar angles is therefore likely an artefact of a small sample size of amino acids. However, for lysine the tight range of angles may be significant; this is dicussed further below. 
 
 ## Planar Angles of Closest Residues
 
 Figures can be found in \@ref(figs-planarClosest)
 
-<!-- Here, the three closest residues to the ligand in each PDDB and their planar angle to the ligand are plotted. -->
+Here, the three closest residues to the ligand in each PDDB and their planar angle to the ligand are plotted. Data are summarized below, and discussed below.
 
-<!-- HEM has a fairly inconclusive set of data for this measure. GLU and GLN nearby HEM do appear to fall within a tight range, though, of approximately 75 degrees and 80 degrees respectively. -->
+HEM has a fairly inconclusive set of data for this measure. GLU and GLN nearby HEM do appear to fall within a tight range, though, of approximately 75 degrees and 80 degrees respectively.
 
-<!-- The data for residues nearby HEC diverge from what is found for all residues around HEC. The most agreement is found for ILE and LYS, with angles concentrated about 50 degrees and 75 degrees, respectively. -->
+The data for residues nearby HEC diverge from what is found for all residues around HEC. The most agreement is found for ILE and LYS, with angles concentrated about 50 degrees and 75 degrees, respectively.
 
 <!-- Only three types of residues appear nearby SRM: CYS, LYS, and ARG. Although their angles vary wildly, these data suggest these residues are important to the coordination fo SRM. (FIXME! Add reasoning) -->
 
@@ -638,7 +640,7 @@ Figures can be found in \@ref(figs-cabAll)
 
 Figures can be found in \@ref(figs-cabClosest)
 
-Most notably, HIS is the only residue that appears near verdoheme.
+<!-- Most notably, HIS is the only residue that appears near verdoheme. -->
 
 ## Limitations of the Study
 Limited sample size
