@@ -19,7 +19,7 @@ documentclass: book
 ```
 
 # Methods {#methods}
-\minitoc
+<!-- \minitoc -->
 
 ## Datasets
 \noindent A list of PDBs was assembled that represented either a representative sample of a variety of proteins, with a resolution better than 3A, (HEM and HEC) or, all proteins containing these ligands were downloaded from the PDB (in the case of SRM, VER, VEA). Not all downloaded PDBs were appropriate for this study (e.g. contained "wobble" structures) and therefore the amount of PDBs was culled. The datasets are current as of 16 August 2021. 
