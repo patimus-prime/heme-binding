@@ -518,20 +518,50 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
 
 ## Volume Discussion
 
-Figures can be found in Appendix \@ref(figs-vol)..
+Figures can be found in Appendix \@ref(figs-vol).
 
-Besides HEM, much of the volume data for the different ligands did not closely agree between different distance cutoffs. The degree to which the  method used to determine the volume of the binding pocket, Surfnet as implemented in UCSF Chimera, is affected by the distance cutoff is therefore demonstrated to be quite great. Most of the data did however fall within reasonable bounds, regardless of distance cutoffs. 
+**worthwhile to add SD measures? 'x% values fall within...**
+The utility of this result is somewhat dubious, at least within the context of this study. Volume results were rather spread out, with close agreement only found for heme-b. In general, volume for all heme molecules regardless of distance cutoff averaged about 1200 A³. This is somewhat contrived, and the result is not useful for elucidating the binding environment further; perhaps for other studies this result, or its lack of precision, may be informative.
 
-Data for heme-b, heme-c and siroheme somewhat agree within a tight range of volumes, with heme-b in particular showing the best agreement of data at approximately 800-1200A³. However, the *range* of the volume data, for all ligands, is considerable, approximately 1000A³. 
 
-There are then at two conflicting conclusions from these data.
+<!-- **old shit** -->
+<!-- Besides HEM, much of the volume data for the different ligands did not closely agree between different distance cutoffs. The degree to which the  method used to determine the volume of the binding pocket, Surfnet as implemented in UCSF Chimera, is affected by the distance cutoff is therefore demonstrated to be quite great. Most of the data did however fall within reasonable bounds, regardless of distance cutoffs.  -->
 
-The the volumes of the binding pocket, as determined by calculation, are shown to not require uniform size. This suggests that the binding pocket need not be a perfect fit for each protein's respective ligand. As far as implications for protein engineering, these results suggest that de novo design of a hemoprotein may not require significant work as far as sizing of a binding pocket.
+<!-- Data for heme-b, heme-c and siroheme somewhat agree within a tight range of volumes, with heme-b in particular showing the best agreement of data at approximately 800-1200A³. However, the *range* of the volume data, for all ligands, is considerable, approximately 1000A³.  -->
 
-Alternatively, the results demonstrate the difficulty of calculating molecular volumes, and how error-prone at least this method may be. Comparison with other methods of calculating molecular volumes, or with experimental data, would be warranted in future study.
+<!-- There are then at two conflicting conclusions from these data. -->
 
-**also need to highlight differences in excluded v. accessible**
-## Surface Area of Ligands
+<!-- The the volumes of the binding pocket, as determined by calculation, are shown to not require uniform size. This suggests that the binding pocket need not be a perfect fit for each protein's respective ligand. As far as implications for protein engineering, these results suggest that de novo design of a hemoprotein may not require significant work as far as sizing of a binding pocket. -->
+
+<!-- Alternatively, the results demonstrate the difficulty of calculating molecular volumes, and how error-prone at least this method may be. Comparison with other methods of calculating molecular volumes, or with experimental data, would be warranted in future study. -->
+
+
+<!-- **also need to highlight differences in excluded v. accessible** -->
+
+## Surface Areas
+
+### Surface Area of Heme Molecules
+
+**Just going off solvent accessible, since that's really all that's of chemical importance. Can mention the excluded data is in the appendix**
+
+
+Both solvent accessible and solvent excluded surface areas were calculated for heme molecules and binding pockets. The results are extremely similar and only solvent accesible surface area, a measure more practically interpreted into chemical phenonema, is discussed; figures and data for solvent excluded surface areas are available in Appendix (FIXME: insert reference) 
+
+**worth it to add SD etc? I think maybe, if time. Would leave raw data in appendix and add summary statistics in this section**
+
+The solvent accessible surface area for all heme molecules themselves centers around values of 1000 A². This result is reasonable, given the similarity in size and structure of all heme molecules, in spite of the attached groups. Figures are shown below; extreme outliers have been removed from these figures but full data tables are available in (FIXME add appendix number). The outliers are likely artefacts of the method used to calculate surface area and potential conflicts with the method used to convert multimeric proteins to monomers. **worth to include this last statement?**
+
+## Surface Area of Binding Pockets
+
+
+The surface area of binding pockets is more varied than the heme surface areas. 
+
+Heme-b and verdoheme, being highly similar molecules, with the same propionate groups, and one the derivative of the other, have quite similar surface areas, centering around 10,000-11,000 A². This is useful as a baseline to discuss the surface area of the binding pockets of the other two heme molecules below.
+
+The surface area of heme-c is considerably lower than that of heme-b and verdoheme. Its values center around 7500 A². Heme-c is bound covalently to the hemoprotein, forming thioether bonds with cysteine residues at two sites, excluding these sites from interacting with water molecules. **is this all that explains the reduction in SA? forgive my ignorance!**
+
+The surface area of siroheme is far greater than that for other heme molecules - values center around 21000 A². 
+
 <!-- just combine 'em lol discussion will be the same -->
 Figures can be found in Appendix \@ref(figs-ligExcSA) for ligands' solvent excluded surface area, and 
  in Appendix \@ref(figs-ligAccSA) for ligands' solvent accessible surface area. 

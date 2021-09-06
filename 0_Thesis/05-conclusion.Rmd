@@ -20,6 +20,11 @@ documentclass: book
 
 
 # Conclusion {#conclusion}
+
+If you want to include it:...
+Thus, we confirm with (@Li2011) that the binding site for heme-b, and now additionally heme-c, is enriched with nonpolar amino acids. This strongly suggests that the nonpolar amino acids are crucial to the binding of heme, likely due to the favorable interaction between the nonpolar amino acids and the porphyrin ring of heme-b and heme-c. The degree to which the percentage of nonpolar acids in the binding pocket may affect the binding of heme cannot be determined in this analysis. But the agreement with the residues closest to heme (and therefore likely to coordinate) is discussed below.
+
+
 Multiple qualities were predicted and data gathered from representative or whole population (FIXME! better way to put this?) datasets of ligands for hemoproteins. Some qualities per ligand follow very tight distributions and suggest a requirement for ligand binding, e.g. specific volume of binding pockets. 
 
 This is not the case for all qualities. Surface areas and angles of residues in relation to the ligands appear to diverge greately. This suggests the binding pockets, while having some useful trends (e.g. high populations of nonpolar amino acids), may still be highly variable. 
