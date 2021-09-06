@@ -6,7 +6,7 @@
 
 
 # Figures{#a-figures}
-
+\minitoc
 <!-- Figures begin here  -->
 
 ## AA Frequency {#figs-aaFreqOverlaid}
@@ -1280,7 +1280,7 @@ library(kableExtra)
 
 
 # Tables{#a-tables}
-
+\minitoc
 <!-- Tables begin here  -->
 
 
@@ -1380,6 +1380,57 @@ VERDOHEME_p1DF %>%
    kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
                     row_spec(0,angle=45)
 ```
+
+## Distances 
+
+### All Distances from Heme Fe to Atoms of Residues in Binding Pocket 
+```{r HEM-t-distancesAll,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+HEM_distList$all_distances %>%
+  kable(longtable = T, booktabs = T, caption = "HEM: All Distances, Atoms to Fe") %>%
+   kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
+                    row_spec(0,angle=45)
+  
+```
+
+### Mean Distances of Each Residue in Binding Pocket
+
+```{r HEM-t-distancesMean,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+HEM_distList$mean_distances %>%
+  kable(longtable = T, booktabs = T, caption = "HEM: Mean Distances of Each Residue in Pocket") %>%
+   kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
+                    row_spec(0,angle=45)
+  
+```
+
+
 
 ## Volume and Surface Areas
 ```{r HEM-volSA,echo=FALSE, message= FALSE, warning=FALSE}
