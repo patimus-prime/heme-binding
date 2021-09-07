@@ -28,11 +28,13 @@ documentclass: book
 
 <!-- This section is organized by type of result; figures and tables referenced are within the appendices. -->
 
-## Analysis of Nearby Residues of Natural Porphyrins
+## Analysis of Residues Nearby the Porphyrin Ring
 
-The first part of the study aimed at providing statistics on the amino acid propensity to interact with hemes in natural proteins. We studied heme-b, heme-c, siroheme and verdoheme. Because we are not looking only at the iron environment, but instead at the  environment of the entire microcycle, we did the analysis for any amino acid with potential contact with the heme. This was defined as any AA having at least one atom within the cutoff distances of 5 and 7 Angtroms (A). 
+We began the study by acquiring data to elucidate and quantify the propensity of amino acids to interact with heme (HEM, HEC, SRM, VEA/VER) in its binding environment. This study focused on potential interactions with the entire heme molecule, including the porphyrin ring and attached groups; therefore, any amino acids with potential interactons with the heme iron, porphyrin ring, or groups on the porphyrin ring (e.g. vinyl, propionate groups), were included in the data gathered for this section. A potentially interacting amino acid was therefore defined as any amino acid with at least one atom within the distance cutoffs (5 and 7 Angstroms (A)) from the heme *molecule*. 
 
-Amino acid frequencies were obtained for distance cutoffs of 5A and 7A - these figures and data are shown in **FIXME ADD APPENDICES LATER** The trends in these data are very similar and therefore only the data pertaining to the 7A distance cutoff are discussed below.
+See Section **INSERT SECTION** in Methods to see how this looks within the script.
+
+Amino acid frequencies were obtained for residues within the distance cutoffs of 5A and 7A - these figures and data are shown in **FIXME ADD APPENDICES LATER** The trends in these data are very similar and therefore only the data pertaining to the 7A distance cutoff are discussed below.
 
 
 ## AA Frequency {#disc-aaFreq}
@@ -42,8 +44,7 @@ Amino acid frequencies were obtained for distance cutoffs of 5A and 7A - these f
 
 #### Amino Acid Frequencies in Binding Pocket
 
-Figure \@ref(fig:HEM-AAfreq) plots the frequency of each residue within 7A of heme-b. Immediately below is Figure \@ref(fig:HEM-AAfreqAll), which plots the frequency of each residue within the entire monomer. **I'm thinking put tables in back they dont add much value here** Data tables are available in Appendix...
-
+Figure \@ref(fig:HEM-AAfreq) plots the frequency of each residue within 7A of heme-b. Immediately below is Figure \@ref(fig:HEM-AAfreqAll), which plots the frequency of each residue within the entire monomer. 
 
 ```{r HEM-AAfreq,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -94,33 +95,31 @@ HEM_aaFreqDf %>%
 
 Beginning at the left of the figure and moving right, large, nonpolar amino acids appear most frequently within 7A: LEU and PHE; ILE appears less frequently than these two amino acids but nonetheless is in high frequency. Small, nonpolar amino acids ALA and VAL also appear very frequently. As the majority of the heme-b molecule is made up of the nonpolar porphyrin ring, these amino acids are therefore likely in such high frequency to provide the nonpolar interactions/environment with the pyrole groups and methyl and vinyl groups. 
 
-<!-- **Note hisitidine is highly evolutionarily conserved to coordinate Fe, and it may be affected by the molecules we've chosen based on what they used to coordinate - I don't want to examine that right now though so moving on** -->
-Tyrosine, arginine, histidine appear next most frequently. The two propionate groups on heme are used to coordinate the heme in the binding pocket. These polar residues are therefore likely interact with the propionate groups, providing the polar interactions necessary, in addition to the nonpolar interactions above, to provide as hospitable of a binding environment as possible to coordinate the heme. In additon, the arginine and histidine groups are positively charged (at pH 7),further facilitating interaction with the electronegative proprionate groups of heme-b. It should be noted histidine is one of the residues that coordinates the iron atom, and this may therefore inflate its frequency in the binding pocket.
+Tyrosine, arginine, histidine appear next most frequently. The two propionate groups on heme make polar interactions with salt bridges formed between arginine groups within the binding environment[@Barrows2005]. Therefore, the tyrosine and histidine likely form polar interactions with the portion of the propionate groups not interacting with the arginine salt bridges. This, in addition to the nonpolar interactions above, likely provides as hospitable of a binding environment as possible to coordinate the heme. It should be noted histidine is one of the residues that coordinates the iron atom, and this may therefore increase its frequency in the binding pocket.
 
-Glycine is a small residue and cannot form significant interactions within its environment; however, its frequency, or lack thereof (compared to background frequency, discused later), suggests the binding pocket may not require as much flexibility or... spatial considerations as in the rest of the protein. This would logically follow from the need for conserved binding sites.
+Glycine is a small residue and cannot form significant interactions within its environment; however, its frequency, or lack thereof (compared to background frequency, discussed later), suggests the binding pocket may not require as much flexibility or spatial considerations as in the rest of the protein. This would logically follow from the need for conserved binding sites.
 
-Next appear serine, glutamate (glutamic acid) and aspartate (aspartic acid) and lysine. These are polar residues, and glutamate and aspartate are negatively charged; lysine is polarpositively charged. The negative charge is unlikely of importance in interaction with heme-b, however these polar amino acids likely again interact with the propionate groups on heme; only, infrequently. What is most interesting is why lysine is in such low abundance relative to the other polar, positively charged residues, arginine and histidine. Perhaps lysine's fairly linear structure prevents it from fitting into the binding pocket; however, arginine is also somewhat linear and features prominently. The exact reason for why this could be is beyond the scope of this study. 
+Next appear serine, glutamate (glutamic acid) and aspartate (aspartic acid) and lysine. These are polar residues, and glutamate and aspartate are negatively charged; lysine is polar too, but positively charged. The negative charge is unlikely of importance in interaction with heme-b, however these polar amino acids likely again interact with the propionate groups on heme; only, infrequently. What is most interesting is why lysine is in such low abundance relative to the other polar, positively charged residues, arginine and histidine. Perhaps lysine's fairly linear structure prevents it from fitting into the binding pocket; however, arginine is also somewhat linear and features prominently, but this can be ascribed to its necessary formation and provision of salt bridges for polar interactions. The exact reason for why lysine would therefore be of low frequency could be is beyond the scope of this study. 
 
 Proline is a small nonpolar amino acid in low frequency; the trend for heme-b, at least, appears to be to favor large nonpolar amino acids in the binding pocket. This may suggest that a large amount of nonpolar interactions, per residue, is favored in the binding pocket, perhaps because of the limited space available to position residues to interact with heme.
 
-Asparagine and glutamine are both medium-sized polar amino acids; given the trends already discussed it is surprising these are not in greater abundance. But as with proline, it may simply be a matter of maximizing the benefit of the interactions that may be formed with the heme; while asparagine and glutamine are polar, amino acids like arginine and histidine are both polar and positively charged, capable of stronger interactions with the electronegative propionate groups.
+Asparagine and glutamine are both medium-sized polar amino acids; given the trends already discussed it is surprising these are not in greater abundance. But as with proline, it may simply be a matter of maximizing the benefit of the interactions that may be formed with the heme; while asparagine and glutamine are polar, amino acids like arginine and histidine are both polar and positively charged (and arginine forms salt bridges), capable of stronger interactions with the electronegative propionate groups.
 
-Methionine and tryptophan appear very infrequently in the binding pocket. All nonpolar amino acids already mentioned do not possess a sulfur (thio something?) bond in their structure; perhaps it is less favorable for the sulfur atom to interact with the porphyrin ring than another carbon **HELP I'M AT A LOSS ON EXPLAINING THIS ONE**. Tryptophan is very surprising to find as second-to-least frequent. It is a large nonpolar amino acid - but perhaps its single, potential hydrogen bond, although weak, is enough to prefer completely nonpolar residues. Or, with its size, it is preferable to have more numerous, smaller nonpolar residues that can favorably interact with the porphyrin while reducing steric hindrance of other residues in the environment (taking up less space).
+Methionine and tryptophan appear very infrequently in the binding pocket. Tryptophan is very surprising to find as second-to-least frequent. It is a large nonpolar amino acid - but perhaps its single, potential hydrogen bond, although weak, is enough to prefer completely nonpolar residues. Or, with its size, it is preferable to have more numerous, smaller nonpolar residues that can favorably interact with the porphyrin while reducing steric hindrance of other residues in the environment (taking up less space). The reason for methionine's low frequency is not clear, perhaps for similar reasons as with proline, where more nonpolar residues are preferred, rather than less nonpolar residues being  unfavorable.
 
-Cystine appears most infrequently of all the amino acids in the binding pocket. This is quite  surprising - cystine is highly evolutionarily conserved to coordinate the iron in the binding pocket. Perhaps the sample of PDBs used in this study mostly use histidine to coordinate the iron - but this would only account for one residue in the binding pocket per pdb. Therefore these results suggest that while cystidine may be well suited to coordinate the iron in heme, it is poorly suited to form any nonpolar interactions with the porphyrin ring, leaving the task up to other, more suitably/intensely nonpolar amino acids.
+Cystine appears most infrequently of all the amino acids in the binding pocket. This is quite  surprising - cystine is highly evolutionarily conserved to coordinate the iron in the binding pocket. Perhaps the sample of PDBs used in this study mostly use histidine to coordinate the iron - but this would only account for one residue in the binding pocket per pdb. Therefore these results suggest that while cystidine may be well suited to coordinate the iron in heme, it is poorly suited to form any nonpolar interactions with the porphyrin ring, leaving the task up to other, more suitably, intensely nonpolar amino acids.
 
 Moving away from discussing individual amino acid populations, what is especially notable of the data for heme-b is that nonpolar residues appear in much greater frequency than polar residues. Nonpolar interactions with heme are therefore more numerous than polar interactions; quite logical, given there are only two polar propionate groups on a large porphyrin ring that is otherwise nonpolar. Their multiplicity may also suggest that they are potentially of greater importance than previously thought. At the very least, these results suggest that polar interactions and coordination of the iron atom, while necessary for heme binding, are insufficient, and that nonpolar intercations and the population of nopolar residues in the binding pocket should be considered when examining the binding environment of heme.
 
 #### Comparison with Background Amino Acid Frequencies
 
-While the frequencies of amino acids in the binding pocket have been discussed, it may also be of interest to compare against the background amino acid frequency, the general frequency of amino acids within the entire monomer. The degree to which this may affect the significance of the frequencies of the amino acids in the binding pocket is unclear - those amino acids are still employed and placed such as to bind the heme, rather than being a random assortment of residues. However, a in depth examination of simlarities and differences may reveal that some amino acids may simply be extremely highly conserved by chance and by virtue of their numerous population, rather than some chemical benefit.
+While the frequencies of amino acids in the binding pocket have been discussed, it may also be of interest to compare against the background amino acid frequency, the general frequency of amino acids within the entire monomer. The degree to which this may affect the significance of the frequencies of the amino acids in the binding pocket is unclear - those amino acids are still employed and placed such as to bind the heme, rather than being a random assortment of residues. However, an in depth examination of simlarities and differences may reveal that some amino acids may simply be extremely highly conserved by chance and by virtue of their numerous population, rather than some chemical benefit.
 
 Figure \@ref(HEM-AAfreqAll) documents the frequencies of amino acids overall within the monomer.
 
-Leucine and alanine as in the binding pocket frequencies are highly frequent in the overall monomer. This may suggest their prevalence in the binding pocket may simply be due to a high pulation of leucine and alanine in hemoproteins.
+Leucine and alanine as in the binding pocket frequencies are highly frequent in the overall monomer. This may suggest their prevalence in the binding pocket may simply be due to a high population of leucine and alanine in hemoproteins.
 
 However, after these two amino acids the tendencies in frequency for the binding pocket and the monomer at large diverge. 
-
 Glycine is in high frequency - likely due to more complex geometry e.g. helices outside the binding pocket. In interest of brevity, the remaining frequencies are summed up thus: the same trends that appear to exist in the binding pocket do not appear to exist in the monomer at large. While the order of frequencies in conserved binding pockets can be rationalized, justifying the overall frequencies in monomers invites significant speculation. 
 
 ```{r HEM-AAfreqAll,fig.cap="HEM: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
@@ -148,9 +147,9 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= 
 
 After an exhaustive exploration of the relative frequencies of amino acids in the binding pocket, the figure below is fairly straightfoward. Figure \@ref(fig:HEM-AAdist) plots the distribution of amino acids in the binding pocket against their distance from the iron of the heme. 
 
-We find that only a few residues come in close contact (<4A) of the heme: Cys, His, Tyr. Most residues center their distribution at around 6A, although Lys seems more biased than the remaining residues to be a bit closer. Cystidine and histidine may be at least in part explained to be close due to their use as coordnating residues; histidine, being in greater frequency, may also be this close due to favorable interactions with the porphyrin ring. 
+We find that only a few residues come in close contact (<4A) of the heme: Cys, His, Tyr. Most residues center their distribution at around 6A, although Lys seems more biased than the remaining residues to be a bit closer. Cysteine and histidine may be at least in part explained to be close due to their use as coordinating residues; histidine, being in greater frequency, may also be this close due to favorable interactions with the porphyrin ring. 
 
-The proximity of tyrosine  however, is lkely more notable. It cannot form coordination bonds with the heme iron, but tyrosine residues do interact with the propionate groups; and these results suggest that of all potentially interacting polar/positively charged residues, tyrosine is the most likely at least to be in close proximity to the heme molecule. Whether this illustrates an extreme imortance of tyrosine to interact with propionate groups, or instead the need for tyrosine to be in close proximity in order to form such interactions, is beyond the scope of this study. 
+The proximity of tyrosine  however, is more notable. It cannot form coordination bonds with the heme iron, but tyrosine residues do interact with the propionate groups. Tyrosine is also required for redox reactions, and part of the population of tyrosine residues may therefore be in close proximity to heme to facilitate electron transfer in various enzymes[@Poulos2014]. These results suggest that of all potentially interacting polar/positively charged residues, tyrosine is the most likely at least to be in close proximity to the heme molecule. Whether this illustrates an extreme importance of tyrosine to interact with propionate groups, or instead the need for tyrosine to be in close proximity in order to form such interactions, or simply demonstrates coordination of oxidation/reduction reactions, is beyond the scope of this study. 
 
 ```{r HEM-AAdist,fig.cap="HEM: AA Distances",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -179,8 +178,6 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
 
 ### Heme-c
 
-
-
 ```{r HEC-AAfreq,fig.cap="HEC: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEC"
@@ -200,7 +197,6 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reo
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
-
 
 ```{r HEC-t-AAfreq,echo=FALSE, message= FALSE, warning=FALSE}
 # declarations
@@ -223,9 +219,9 @@ HEC_aaFreqDf %>%
 
 ```
 
+Leucine and alanine again are highly frequent for HEC, followed by quite similar trends, and therefore HEC will not be as thoroughly discussed as HEM. The most notable differences may be that GLY and CYS are in far higher frequency than in heme. Heme-c almost always forms covalent bonds with cysteine residues, and this may explain that frequency. But as for the high frequency of glycine, the reason for its abundance is unclear, although it seems it has an important role in heme-c pockets. 
 
-
-Leucine and alanine again are highly frequent for HEC, followed by quite similar trends and therfore HEC will not be as thoroughly discussed as HEM. The most notable differences may be that GLY and CYS are in far higher frequency than in heme. Heme-c almost always covalently binds to CYS, and this may explain that frequency: but as for the high frequency of glycine, perhaps the covalent binding of CYS is sufficient for other interactions to be of 'lower priority', and the flexibility and shape of the binding pocket to be prioritized, therefore leading to more glycines being included in order to shape the pocket favorably. A note on this last part: **I feel like this is grasping at straws without much support, add more qualifiers or remove**
+<!-- perhaps the covalent binding of CYS is sufficient for other interactions to be of lesser importance, to be unnecessary to stabilize the heme-c, and therefore the shape of the binding pocket may become of greater importance, and rather than maximizing other favorable interactions, more glycines are included in order to shape the pocket correctly. -->
 
 #### Comparison to background frequency
 
@@ -279,14 +275,9 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
    
 ```
 
-The distribution of amino acids over distance from the heme iron for HEC is similar to HEM, with some exceptions. Cys, His, Tyr again are amongst the closest residues to HEC, likely for the same reasons of very strong polar interactions or coordination. Additionally, cysteine forms covalent, thioester bonds with heme-c, providing further justification for its proximity. However, for heme-c, lysine and methionine also are very proximal. The methionine residues are nonpolar and **HELP, NOT SO SURE WHY THEY'D BE SO CLOSE** Lysine is polar and positively charged, and therefore in the case of HEC being covalently bonded, and therefore reliably, specifically, positioned, the environment may be such that a lengthy, polar, charged residue may also be positioned well enough to be consistently nearby and forming interactions with the propionate groups.
-**GRASPING AT STRAWS AGAIN** 
-.... Maybe just leave it that for heme-c in particular, lysine and methionine appear favored. For good reason, they're nonpolar. But it's unclear why for heme-c these residues are employed but others aren't.  I've left other sections like that.
-
+The distribution of amino acids over distance from the heme iron for HEC is similar to HEM, with some exceptions. Cys, His, Tyr again are amongst the closest residues to HEC, likely for the same reasons of very strong polar interactions or coordination. Additionally, cysteine forms covalent, thioester bonds with heme-c, providing further justification for its proximity. However, for heme-c, lysine and methionine also are very proximal. The methionine residues are nonpolar, small, neutral; lysine is polar and positively charged; neither of these residues are favored to be included in the heme-b binding environment despite very similar structures. The reason for their inclusion so close to the binding pocket is therefore unclear, but based on their distribution, and lysine being even more close proximity than heme, the results suggest these two residues may have important roles.
 
 ### Verdoheme
-
-**Got some conflicting stuff here**
 
 ```{r VERDOHEME-AAfreq,fig.cap="VERDOHEME: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -331,9 +322,9 @@ VERDOHEME_aaFreqDf %>%
 
 Verdoheme is dissimilar from HEM and HEC above. This is fairly surprising, given that verdoheme is an intermediate in the binding pocket for heme within heme oxygenases. The results discussed below may be attributable to the small sample size of verdoheme PDBs (n=4, combining VEA and VER), and should be appreciated with some skepticism. Nonetheless, the results will be discussed.
 
-Leucine and alanine are again most frequent, but after this results diverge. Tyrosine and arginine are next most frequent - surprising, given that this is still the same pocket that bound heme. The data for heme-b indicate more frequent nonpolar residues before tyrosine. It is possible that heme's reorientation during its degradation moves it closer to another region of the binding pocket. Chemically, it may be that as heme is oxidized, there is greater need for polar interactions; this would help to explain the high frequency of polar residues. 
+Leucine and alanine are again most frequent, but after these, results diverge. Tyrosine and arginine are next most frequent - surprising, given that this is still the same pocket that bound heme. The data for heme-b indicate more frequent nonpolar residues before tyrosine. Chemically, it may be that as heme is oxidized, there is greater need for polar interactions; this would help to explain the high frequency of polar residues, but does not explain the shift in amino acid frequencies within what should be a similar binding pocket - all verdoheme PDBs in this in study were sourced from heme oxgenase proteins. Some heme oxygenases are included for heme-b, but they are amongst a diverse set of proteins. Therefore, the heme oxygenase environment may simply be host to more polar residues than normal for hemoproteins. This also agrees with tyrosine's inclusion in redox reactions, and it may be favored to be present in heme oxygenase. A dedicated investigation to the heme binding environment for heme oxygenase may therefore be warranted in future study. 
 
-Glycine is the next most frequent - it is in lower frequency, relatively, for heme-b.... **I'm gonna hold off on discussing this further until I double check the paper that described heme's reorientation.**  
+Glycine is the next most frequent - it is in lower frequency, relatively, for heme-b. As with other heme molecules, it is not clear as to what the role of glycine is in binding verdoheme. 
 
 #### Comparison to background freq
 
@@ -357,12 +348,13 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= 
 
 ```
 
+Besides the frequencies of leucine and alanine, which have been found for heme-b and heme-c above to be highly frequent in hemoproteins at large, the frequency profiles for the verdoheme binding environment and monomers is shown to be quite dissimilar, supporting the results for the binding environment as unique, not simply due to background frequency. 
+
 #### AA Distribution over distance
 
-**I'll double check why so few data appear here. I suspect it may be simply that there is not enough data/atoms to pull and form a decent enough graph.**
-The highly conserved histidine for hemoproteins is exclusively within 5A for verdoheme. This result again suggests that at least some of the data for verdoheme may be highly biased because of the small sample size - heme-b data included a greater range for histidine. Nonetheless, this data suggests that verdoheme may be of different orientation during heme-b degradation, but is not spatially displaced far from the conserved binding site.
+The low sample size for verdoheme leads here to a poor figure with few residues plotted. This is likely attributable to an insufficient amount of distances and residues to cross-reference against each other, as occurs for all similar graphs. Regardless, the data that are plotted will be discussed.
 
-Glycine's proximity to verdoheme is just weird WTF.
+The highly conserved histidine for hemoproteins is exclusively within 5A for verdoheme. This result again suggests that at least some of the data for verdoheme may be highly biased because of the small sample size - heme-b data included a greater range for histidine. The close proximity of glycine to verdoheme is also unexpected and unable to be explained without further study. The remainder of the residues plotted appear to follow the trends seen in for the other types of heme, distance values centered around 6A.
 
 ```{r VERDOHEME-AAdist,fig.cap="VERDOHEME: AA Distances",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -436,20 +428,19 @@ SRM_aaFreqDf %>%
 
 Siroheme, with a structure highly dissimilar to the other heme molecules examined, should be expected to have a different amino acid frequency profile - and indeed we confirm this in our results. 
 
-Nonpolar residues are not the  most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket - what is striking, however is the extreme preference for arginine; such a profile does not exist for the other hemes. 
+Nonpolar residues are not the  most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket - what is striking, however is the extreme preference for arginine; such a profile does not exist for the other hemes. This is, however, sensible, siroheme contains propionate groups that likely still form polar interactions with arginine salt bridges, and the carboxyl groups may also form polar interactions with arginine.
 
-Arginine is followed by other polar amino acids: glutamine, cystine, lysine (positively charged), threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that there are no nonpolar residues at all in this first... group of frequencies. **reword**. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and very low pKa; lysine also has a positive charge and a low pKa (~10.5), but arginine's is much, much lower (~13.8) **fixme add citation** and it is able to form an additional hydrogen bond, and therefore reasonably dominates amongst the polar amino acids. Cysteine is used to coordinate the iron of siroheme, and while this did not significantly affect the frequency for other heme molecules, it is still possible this inflates the value for cysteine for siroheme.
+Arginine is followed by other polar amino acids: glutamine, cystine, lysine, threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that the trend is not interrupted as for other types of heme. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and ability to form salt bridges that interact with the propionate groups; lysine also has a positive charge and a low pKa but is not capable of the latter interaction. Cysteine is used to coordinate the iron of siroheme, and while this did not significantly affect the frequency for other heme molecules, it is still possible this increases the value for cysteine for siroheme.
 
-After this group of polar amino acids, glycine is the next most frequent. Glycine has been situated at about a median frequency for other heme molecules, so perhaps its frequency here, slightly above the median, is of note. Only speculation is possible; perhaps ensuring the dominance of polar amino acids in the binding pocket requires extenive folding in the protein, therefore favoring glycine residues.
+After this group of polar amino acids, glycine is the next most frequent. Glycine has been situated at about a median frequency for other heme molecules, so perhaps its frequency here, slightly above the median, is of note. Again, for glycine in particular, the reason for its particular frequency cannot be determined from this data, but it appears to have some role.
 
 Finally we come to several nonpolar amino acids: alanine, phenylalanine, and valine. These amino acids define roughly the median of the frequency data. With all the polar groups on siroheme, it might be expected that only polar interactions would be desirable. However, the not miniscule frequency of these residues suggests nonpolar interactions still occur in the binding pocket; the porphyrin ring remains, as well as methyl groups and the small nonpolar portion of the carboxyl and propionate groups. It is perhaps in these areas that the nonpolar residues interact.
 
 After these nonpolar residues the remaining frequencies do not follow a clear trend but regardless are discussed. After aspartate the remaining frequencies are considerably lower. This may be an artefact of a small sample size, or may suggest the remaining residues form, if any, less favorable interactions with the heme. 
 
-Aspartate appears next most frequently; it is a polar, negatively charged amino acid (at pH 7). Siroheme is saturated with other electronegative groups, and the repulsion of htese charges perhaps explains while aspartate, despite being a polar residue, appears not very frequently in the binding pocket. 
+Aspartate appears next most frequently; it is a polar, negatively charged amino acid (at pH 7). Siroheme is saturated with other electronegative groups; perhaps there is some repulsion between these groups and aspartate -- this could explain why, despite being a polar residue, arginine does not appear very frequently in the binding pocket. 
 
-
-Leucine is the first of the residues of diminished frequency. It is nonpolar. It, and, skipping a frequency, methionine, isoleucine, and proline, appear less frequently, and therefore are likely disfavored from forming the relatively few nonpolar interactions that do occur. Why is not clear - other small, nonpolar residues, and other lengthy nonpolar residues appear in the pocket in greater frequency. **double check pKa?**
+Leucine is the first of the residues of diminished frequency. It is nonpolar. It, and, skipping a frequency, methionine, isoleucine, and proline, appear less frequently, and therefore are likely disfavored from forming the relatively few nonpolar interactions that do occur. Why is not clear - other small, nonpolar residues, and other lengthy nonpolar residues appear in the pocket in greater frequency.      
 
 Serine appears just less frequently than leucine, and in this context may likely be considered a polar residue that is not as strongly polar or positively charged and therefore less preferred to include in the binding pocket to form polar interactions with siroheme as other residues.
 
@@ -457,7 +448,7 @@ Histidine appears quite infrequently. As with siroheme, other, more strongly pol
 
 Tryptophan is the least frequent nonpolar residue. The presence of a weak hydrogen bond and its size may preclude its inclusion in the binding pocket in lieu of more uniformly nonpolar residues that take up less space.
 
-Tyrosine and glutamate are the least frequent polar residues. This is in stark opposition to the other heme molecules - tyrosine seemed to be favored for other heme molecules to form interactions with the propionate groups. Glutamate is also extremely infrequent, even in spite of its similarity to aspartate. Both are electronegative at pH 7 - glutamate's extra carbon may provide sufficient steric hindrance to render it less favored. In either case, the infrequency of these residues and the tendencies of other, more intensely polar or nonpolar amino acids to be more populous, suggests tyrosine and glutamate, in the siroheme binding environment, do not interact strongly enough to be favored over other polar residues.   **I'm gonna need to get the pka table maybe**
+Tyrosine and glutamate are the least frequent polar residues. This is in stark opposition to the other heme molecules - tyrosine seemed to be favored for other heme molecules to form interactions with the propionate groups. Glutamate is also extremely infrequent, even in spite of its similarity to aspartate. Both are electronegative at pH 7 - glutamate's extra carbon may provide sufficient steric hindrance to render it less favored. In either case, the infrequency of these residues and the tendencies of other, more intensely polar or nonpolar amino acids to be more populous, suggests tyrosine and glutamate, in the siroheme binding environment, do not interact strongly enough to be favored over other polar residues.
 
 
 #### Comparing to SRM AA Background Freq
@@ -482,7 +473,7 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= 
 
 ```
 
-Compared to the other heme molecules, siroheme's binding pocket amino acid frequencies are even more different than the background frequencies. Arginine is far and away the most frequent amino acid in the binding pocket - leucine is the most populous amino acid in the monomer overall, seeming to follow a trend amongst the hemoproteins examined so far. Again discussing the remainder of the frequencies of the monomer would be pure conjecture, but it is worthwhile to note that the pocket frequencies certainly appear unique against the background.  
+Compared to the other heme molecules, siroheme's binding pocket amino acid frequencies are even more different than the background frequencies. Arginine is far and away the most frequent amino acid in the binding pocket; leucine is the most populous amino acid in the monomer overall, seeming to follow a trend amongst the hemoproteins examined so far. Again, discussing the remainder of the frequencies of the monomer would be pure conjecture, but it is worthwhile to note that the pocket frequencies appear unique against the background.  
 
 
 #### Distance stuff
@@ -516,165 +507,44 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
 ```
 
 
-
-
-<!-- For the sake of this report, both sets of data are overlaid in the same figures in (section). However, the general tendencies are very similar and only the 7A data will be discussed. -->
-
-
-<!-- Amino acid frequencies within the 5A and 7A distance cutoffs of the ligand are reported in Appendix \@ref(figs-aaFreq) and **(FIXME! Missing amino acid tables)** -->
-
-<!-- ### Heme-b and Heme-c -->
-<!-- ### Heme-c -->
-
-
-
-<!-- The top 5 residues for HEM and HEC both include leucine, phenylalanine, alanine, and isoleucine; valine and glycine are the other for each ligand respectively. -->
-<!-- Do not over generalize, but discuss mucho -->
-<!-- FIXME: DO FUCKING DISCUSS IT -->
-<!-- ### Siroheme -->
-
-<!-- The binding pocket for siroheme is highly enriched with arginine, in addition to other charged residues such as lysine and cysteine. Given  the function of siroheme is to transfer multiple electrons per reaction, the enrichment of the binding environment with charged residues is perhaps not surprising. Addtionally, for siroheme in particular, the geometry, the placement of these residues in order to coordinate the movement of electrons may be of interest; however this is beyond the scope of this study.   -->
-
-<!-- ### Verdoheme -->
-
-<!-- Verdoheme is an intermediate formed within the binding pocket of heme oxygenase during the degradation of heme; this is the same environment that binds heme at the beginning of the reaction. Verdoheme is oriented differently in the pocket, however overall the amino acid composition of the pocket should be quite similar if not the same. But this is not reflected in our results. Rather, relative to the amino acid... profile (?) of heme-b and heme-c, arginine is in greater abundance in the binding pocket. Leucine, alanine and phenylalanine are still amongst the most frequent amino acids, again providing nonpolar interactions.  -->
-
-<!-- These results may suggest that verdoheme is reoriented, and potentially spatially relocated, to interact with more arginine residues than would be possible if the original heme orientation were maintained; the amount of space verdoheme would have to move within the binding pocket is discussed below. However, it is also possible, likely, this is an artefact of  the very small sample size of verdoheme PDBs used in this study (n=4). Upon the availability of additional verdoheme-containing PDBs in the future this result may be reexamined. -->
-
-
 ## Volume Discussion
 
 Figures can be found in Appendix \@ref(figs-vol).
 
-**worthwhile to add SD measures? 'x% values fall within...**
-The utility of this result is somewhat dubious, at least within the context of this study. Volume results were rather spread out, with close agreement only found for heme-b. In general, volume for all heme molecules regardless of distance cutoff averaged about 1200 A³. This is somewhat contrived, and the result is not useful for elucidating the binding environment further; perhaps for other studies this result, or its lack of precision, may be informative.
-
-
-<!-- **old shit** -->
-<!-- Besides HEM, much of the volume data for the different ligands did not closely agree between different distance cutoffs. The degree to which the  method used to determine the volume of the binding pocket, Surfnet as implemented in UCSF Chimera, is affected by the distance cutoff is therefore demonstrated to be quite great. Most of the data did however fall within reasonable bounds, regardless of distance cutoffs.  -->
-
-<!-- Data for heme-b, heme-c and siroheme somewhat agree within a tight range of volumes, with heme-b in particular showing the best agreement of data at approximately 800-1200A³. However, the *range* of the volume data, for all ligands, is considerable, approximately 1000A³.  -->
-
-<!-- There are then at two conflicting conclusions from these data. -->
-
-<!-- The the volumes of the binding pocket, as determined by calculation, are shown to not require uniform size. This suggests that the binding pocket need not be a perfect fit for each protein's respective ligand. As far as implications for protein engineering, these results suggest that de novo design of a hemoprotein may not require significant work as far as sizing of a binding pocket. -->
-
-<!-- Alternatively, the results demonstrate the difficulty of calculating molecular volumes, and how error-prone at least this method may be. Comparison with other methods of calculating molecular volumes, or with experimental data, would be warranted in future study. -->
-
-
-<!-- **also need to highlight differences in excluded v. accessible** -->
+Volume results were rather spread out, with close agreement only found for heme-b. In general, volume for all heme molecules regardless of distance cutoff averaged about 1200 A³. This result may be useful in protein engineering efforts, especially for selection or design of binding pockets. 
 
 ## Surface Areas
 
 ### Surface Area of Heme Molecules
 
-**Just going off solvent accessible, since that's really all that's of chemical importance. Can mention the excluded data is in the appendix**
+Both solvent accessible and solvent excluded surface areas were calculated for heme molecules and binding pockets. The differences between these two measures was discussed in Section (FIXME). The results are extremely similar for solvent accessible and solvent excluded surface areas; and therefore only solvent accessible surface area, a measure more practically interpreted into chemical phenomena, is discussed below. Figures and data for solvent excluded surface areas are available in Appendix (FIXME: insert reference). 
 
-
-Both solvent accessible and solvent excluded surface areas were calculated for heme molecules and binding pockets. The results are extremely similar and only solvent accesible surface area, a measure more practically interpreted into chemical phenonema, is discussed; figures and data for solvent excluded surface areas are available in Appendix (FIXME: insert reference) 
-
-**worth it to add SD etc? I think maybe, if time. Would leave raw data in appendix and add summary statistics in this section**
-
-The solvent accessible surface area for all heme molecules themselves centers around values of 1000 A². This result is reasonable, given the similarity in size and structure of all heme molecules, in spite of the attached groups. Figures are shown below; extreme outliers have been removed from these figures but full data tables are available in (FIXME add appendix number). The outliers are likely artefacts of the method used to calculate surface area and potential conflicts with the method used to convert multimeric proteins to monomers. **worth to include this last statement?**
+The solvent accessible surface area for all heme *molecules* themselves centers around values of 1000 A². This result is reasonable, given the similarity in size and structure of all heme molecules, in spite of the attached groups. Figures are shown below; extreme outliers have been removed from these figures but full data tables are available in (FIXME add appendix number). The outliers are likely artefacts of the method used to calculate surface area and potential conflicts with the method used to convert multimeric proteins to monomers. 
 
 ## Surface Area of Binding Pockets
-
 
 The surface area of binding pockets is more varied than the heme surface areas. 
 
 Heme-b and verdoheme, being highly similar molecules, with the same propionate groups, and one the derivative of the other, have quite similar surface areas, centering around 10,000-11,000 A². This is useful as a baseline to discuss the surface area of the binding pockets of the other two heme molecules below.
 
-The surface area of the binding pocket of heme-c is considerably lower than that of heme-b and verdoheme. Its values center around 7500 A². Heme-c is bound covalently to the hemoprotein, forming thioether bonds with cysteine residues at two sites, excluding these sites from interacting with water molecules. **is this all that explains the reduction in SA? forgive my ignorance!**
+The surface area of the binding pocket of heme-c is considerably lower than that of heme-b and verdoheme. Its values center around 7500 A². Heme-c is bound covalently to the hemoprotein, forming thioether bonds with cysteine residues at two sites; this result suggests that the covalent bonds may exclude these sites from interacting with water molecules. Further study would be required to confirm this phenomenon.
 
-The surface area of siroheme's binding pocket is far greater than that for other heme molecules - values center around 21000 A². Siroheme's extra groups do not appear to affect its own surface area, per above. However, it is effectively a very polar molecule and appropriately the binding pocket is highly saturated with very polar amino acids, as seen in the amino acid frequency analysis. The binding pocket is therefore completely different from the other heme molecules, and these populous, polar amino acids favorably interact with aqueous solvent, negating the need to bury any hydrophobic residues and reduce surface area.
+The surface area of siroheme's binding pocket is far greater than that for other heme molecules: values center around 21000 A². Siroheme's extra groups on the porphyrin ring do not appear to affect its own surface area, per above. However, it is effectively a very polar molecule and appropriately the binding pocket is highly saturated with very polar amino acids, as seen in the amino acid frequency analysis. The binding pocket is therefore completely different from the other heme molecules, and these populous, polar amino acids favorably interact with aqueous solvent, negating the need to bury any hydrophobic residues and reduce surface area.
 
-<!-- just combine 'em lol discussion will be the same -->
-<!-- Figures can be found in Appendix \@ref(figs-ligExcSA) for ligands' solvent excluded surface area, and  -->
-<!--  in Appendix \@ref(figs-ligAccSA) for ligands' solvent accessible surface area.  -->
-
-
-<!-- This measure, and also the solvent accessible surface area of the ligands, is effectively of the surface area of each ligand itself - distance cutoffs and binding environments are not expected to affect the results. Significant variability in the data may therefore suggest problems in calculation. -->
-
-<!-- Both accessible and excluded surface area data are fairly well centered around some value for all ligands, except for verdoheme. For the latter this may be attributed to the small sample size. But for other ligands, and also for verdoheme, the outliers in the data may suggest errors in calculation and potential inclusion of parts of the binding pocket itself in calculation. -->
-
-
-<!-- ## Pocket Solvent Excluded Surface Area -->
-
-<!-- **We'll do same treatment for pocket surface areas, skipping ahead to angles/distances** -->
-
-<!-- Figures can be found in \@ref(figs-pocketExcSA) -->
-
-<!-- HEM data has poor agreement for this measure. Data is concentrated from 5000-15000 A², but this is a very large range and not very useful. -->
-
-<!-- HEC agrees in a somewhat tighter range: most data fall within 5000-7500 A²; still not very useful but better than HEM. -->
-
-<!-- Most SRM data fall within 21000-22000 A².  -->
-
-<!-- Verdoheme data range from 9200 to 10000 A².  -->
-
-<!-- For this measure, then, we find that SRM and Verdoheme have a fairly specific range of predicted solvent excluded surface area for their binding pockets. -->
-
-<!-- ## Pocket Solvent Accessible Surface Area -->
-
-<!-- Figures can be found in Appendix \@ref(figs-pocketAccSA). -->
-
-<!-- The results for this measure follow the trends for the previous section. -->
-
-<!-- Most HEM data fall from 5000-15000 A². HEC data mostly fall from 5000-7500 A². -->
-
-<!-- SRM data is highly concentrated at approximately 21000 A², more specific than the pocket solvent excluded surface area.  -->
-
-<!-- Verdoheme data range from 10000-11000 A². -->
 
 ## Angular Data
 
-**I think I'll just stick all of this in the appendix, including highlighting the clusters of data. Nothing can be discussed from it - it is interesting to note and perhaps I'll include some examples below very briefly, but otherwise, I don't know what value would be added to the report of "verdoheme always has his interact with a planar angle of 116 degrees"
-
-Figures can be found in \@ref(figs-planarAll)
-
-These data, for all ligands, except potentially for heme-c, largely serve to compare as noise for the next section. The planar angles of all residues, falling within the upper distance cutoff of 7A, are plotted. 
-
-In the notable exception of heme-c, Figure **FIXME: insert figure name** seems to suggest that GLU, MET and LYS have fairly specific planar angles with the ligand. Lysine is effectively the median of amino acid frequency for heme-c, methionine is even less frequent and glutamine is the least frequent amino acid. For the latter two amino acids their tight range of planar angles is therefore likely an artefact of a small sample size of amino acids. However, for lysine the tight range of angles may be significant; this is dicussed further below. 
-
-## Planar Angles of Closest Residues
-
-Figures can be found in \@ref(figs-planarClosest)
-
-Here, the three closest residues to the ligand in each PDDB and their planar angle to the ligand are plotted. Data are summarized below, and discussed below.
-
-HEM has a fairly inconclusive set of data for this measure. GLU and GLN nearby HEM do appear to fall within a tight range, though, of approximately 75 degrees and 80 degrees respectively.
-
-The data for residues nearby HEC diverge from what is found for all residues around HEC. The most agreement is found for ILE and LYS, with angles concentrated about 50 degrees and 75 degrees, respectively.
-
-<!-- Only three types of residues appear nearby SRM: CYS, LYS, and ARG. Although their angles vary wildly, these data suggest these residues are important to the coordination fo SRM. (FIXME! Add reasoning) -->
-
-<!-- Verdoheme also has a small selection of residues that are close to the ligand. GLY and HIS are the only residues that are close to the ligand in the PDBs used in this study. (FIXME! Add reasoning... or qualifier statement n=2) -->
-
-## All CA-CB-Fe Angles
-
-Figures can be found in \@ref(figs-cabAll)
-
-<!-- All residues have a broad range of angles in relation to HEM. -->
-
-<!-- Most residues have a broad range of angles for HEC, with the exception of THR, which has a tight distribution around 100 degrees. This result only appears here and does not follow for the closest residues, and therefore may be due to a small sample size of THR residues. -->
-
-<!-- SRM appears to have tight distributions of angles when considering all residues; the residues closest to SRM do not echo this. Although likely attributable to a small sample size, there appear several residues with specific angles: ALA around 50 degrees, GLN around 140-150 degrees, and SER around 50 degrees. -->
-
-<!-- Verdoheme... (FIXME! Confer with JeanDi before we report more of these angles. Not sure I'm going about it in an informative way. Also add figure numbers.) -->
-
-## CA-CB-Fe Angles of Closest Residues
-
-Figures can be found in \@ref(figs-cabClosest)
-
-<!-- Most notably, HIS is the only residue that appears near verdoheme. -->
+As briefly mentioned in the introduction, angular data was generated but will not be discussed extensively. Figures and data tables may be found in Appendix (FIXME). Amongst the results are tight distributions of planar angles and CA-CB-Fe angles for some residues nearby and far away from heme; but much of the data demonstrates a broad range of angles that may be formed. The data may be useful for protein engineering and residue placement, but cannot be productively discussed and are therefore relegated to the appendices.
 
 ## Limitations of the Study
-Limited sample size
 
-Limited experimental data to reference to verify
+A high throughput framework was built to conduct this study. However, guaranteeing the quality of PDBs to enable the scripts to functon properly proved challenging, and the sample size is small, although diverse. This problem only exists for heme-b and heme-c -- for siroheme and verdoheme, all structures in the PDB capable of being used, were used. Heme-b and heme-c would only require more trial and error, or preprocessing, to be input to the framework that has been built.
 
-NO experimental data in this study to verify, all theoretical
+Although many hypotheses have been suggested in the discussion to explain the data, limited experimental data exists to confirm them. Future work may include wet lab experiments to confirm these hypotheses, such as mutating several hemoproteins to contain higher or lower pecentages of nonpolar residues in the binding pocket, and observing how the binding of heme is affected. 
 
+Some of these data could also be analyzed more thoroughly, for example eliminating the coordinating amino acids from the amino acid frequency data. This was not possible here due to how the framework is constructed: coordinating residues are not identified, nor is a definition proposed to identify coordinating residues. Manual input of known coordinating residues would be necessary to be certain that they could be eliminated from the final dataset analyzed, but this was beyond the scope of this study. 
+
+UCSF-Chimera was used to generate all data used in this study; many algorithms have remained unchanged for some time (surface area calculations are sourced from MSMS (1996) and volume calculations from surfnet (1995)). Comparison with any new algorithms that are developed to calculate surface area or volume would be ideal. 
 Only one software package/few algorithms used to calculate all these properties. Others were evaluated but none are compared w.
 
 Algorithms may introduce bias based on how they work e.g. all the bubbles

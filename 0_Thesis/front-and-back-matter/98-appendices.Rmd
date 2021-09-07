@@ -1406,6 +1406,73 @@ HEM_distList$all_distances %>%
   
 ```
 
+```{r HEC-t-distancesAll,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+HEC_distList$all_distances %>%
+  kable(longtable = T, booktabs = T, caption = "HEC: All Distances, Atoms to Fe") %>%
+   kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
+                    row_spec(0,angle=45)
+  
+```
+
+```{r SRM-t-distancesAll,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+SRM_distList$all_distances %>%
+  kable(longtable = T, booktabs = T, caption = "SRM: All Distances, Atoms to Fe") %>%
+   kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
+                    row_spec(0,angle=45)
+  
+```
+
+```{r VERDOHEME-t-distancesAll,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+VERDOHEME_distList$all_distances %>%
+  kable(longtable = T, booktabs = T, caption = "VERDOHEME: All Distances, Atoms to Fe") %>%
+   kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
+                    row_spec(0,angle=45)
+  
+```
+
+
 ### Mean Distances of Each Residue in Binding Pocket
 
 ```{r HEM-t-distancesMean,echo=FALSE, message= FALSE, warning=FALSE}
@@ -1430,6 +1497,74 @@ HEM_distList$mean_distances %>%
   
 ```
 
+
+```{r HEC-t-distancesMean,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+HEC_distList$mean_distances %>%
+  kable(longtable = T, booktabs = T, caption = "HEC: Mean Distances of Each Residue in Pocket") %>%
+   kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
+                    row_spec(0,angle=45)
+  
+```
+
+
+```{r SRM-t-distancesMean,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+SRM_distList$mean_distances %>%
+  kable(longtable = T, booktabs = T, caption = "SRM: Mean Distances of Each Residue in Pocket") %>%
+   kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
+                    row_spec(0,angle=45)
+  
+```
+
+
+```{r VERDOHEME-t-distancesMean,echo=FALSE, message= FALSE, warning=FALSE}
+# declarations
+
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+VERDOHEME_distList$mean_distances %>%
+  kable(longtable = T, booktabs = T, caption = "VERDOHEME: Mean Distances of Each Residue in Pocket") %>%
+   kable_styling(full_width = T, latex_options = c("striped","repeat_header")) %>%
+                    row_spec(0,angle=45)
+  
+```
 
 
 ## Volume and Surface Areas
