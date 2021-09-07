@@ -1,0 +1,13 @@
+# YAML 1.2
+---
+abstract: "This repo contains my Master's thesis - the thesis itself as well as all scripts, raw data, an results used to produce my thesis. See the README.md for more info."
+authors: 
+  -
+    family-names: Finnerty
+    given-names: Patrick
+cff-version: "1.1.0"
+date-released: 2021-09-07
+message: "If you use this software, please cite it using these metadata."
+repository-code: "https://github.com/patimus-prime/heme-binding.git"
+title: "heme-binding"
+...
