@@ -271,6 +271,38 @@ VERDOHEME_aaFreqDf %>%
 VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
 
 
+v1df <- VERDOHEME_MERGED_DF$PDB_ID
+v1df <- cbind(v1df,VERDOHEME_MERGED_DF$`Molecule Name`)
+v1df <- cbind(v1df,VERDOHEME_MERGED_DF$Source_Organism)
+v1df <- as.data.frame(v1df)
+v1df %>% 
+  dplyr::rename(
+    PDB_ID = v1df,
+    Molecule_Name = V2,
+    Source_Organism = V3
+  ) -> v1df
+
+v2df <- VERDOHEME_MERGED_DF$PDB_ID
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$volume_data)
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$VERDOHEME_Excluded_SA)
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$VERDOHEME_Accessible_SA)
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$Pocket_Excluded_SA)
+v2df <- cbind(v2df,VERDOHEME_MERGED_DF$Pocket_Accessible_SA)
+v2df <- as.data.frame(v2df)
+v2df %>%
+  dplyr::rename(
+    PDB_ID = v2df,
+    Volume_Data = V2,
+    VERDOHEME_EXCLUDED_SA = V3,
+    VERDOHEME_ACCESSIBLE_SA = V4,
+    POCKET_EXCLUDED_SA = V5,
+    POCKET_ACCESSIBLE_SA = V6
+  ) -> v2df
+
+VERDOHEME_p1DF <- v1df
+VERDOHEME_p2DF <- v2df
+
+
 # now we have a lot of extra dataframes that already exist, which we will NOT
 # be returning...
 
@@ -285,15 +317,16 @@ VERDOHEME_aaFreqDf <- arrange(VERDOHEME_aaFreqDf,desc(Freq))
 ls5A <- list(
   "HEM_5A_aaFreqDf" = HEM_aaFreqDf,
   "HEM_5A_MERGED_DF" = HEM_MERGED_DF,
-  
+  "HEM_5A_p2DF" = HEM_p2DF, #realistically we only need p2df to plot...
   "HEC_5A_aaFreqDf" = HEC_aaFreqDf,
   "HEC_5A_MERGED_DF" = HEC_MERGED_DF,
-  
+  "HEC_5A_p2DF" = HEC_p2DF,
   "SRM_5A_aaFreqDf" = SRM_aaFreqDf,
   "SRM_5A_MERGED_DF" = SRM_MERGED_DF,
-  
+  "SRM_5A_p2DF" = SRM_p2DF,
   "VERDOHEME_5A_aaFreqDf" = VERDOHEME_aaFreqDf,
-  "VERDOHEME_5A_MERGED_DF" = VERDOHEME_MERGED_DF
+  "VERDOHEME_5A_MERGED_DF" = VERDOHEME_MERGED_DF,
+  "VERDOHEME_5A_p2DF" = VERDOHEME_p2DF
 )
 return(ls5A)
 }

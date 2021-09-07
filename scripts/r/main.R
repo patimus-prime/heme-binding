@@ -587,3 +587,11 @@ VERDOHEME_p2DF <- v2df
 # omg <- kable(HEM_coord_Res_df, longtable = T, booktabs = T, caption = "perhaps","latex") %>%
 #    kable_styling(full_width = T, latex_options = c("striped","repeat_header"))
 # write_clip(as.character(omg))
+
+
+# volume_data_df$volume_data <- as.numeric(as.character(volume_data_df$volume_data))
+# # therefore, below code filters >50, conv back to df, filter <= 1000, conv back to df
+# volume_data_df <- volume_data_df[volume_data_df$volume_data >= 50, ]
+# volume_data_df <- as.data.frame(volume_data_df)
+# 
+

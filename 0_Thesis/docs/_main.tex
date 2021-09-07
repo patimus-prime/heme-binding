@@ -234,8 +234,8 @@
 % Oxford University logo on title page
 %
 \def\crest{{\includegraphics[width=8cm]{templates/UABlogo.pdf}}}
-\renewcommand{\university}{Universtat Autonoma de Barcelona}
-\renewcommand{\submittedtext}{Academic Tutor, JeanDi, Dept of Chemistry; A thesis submitted for the degree of}
+\renewcommand{\university}{Universtat Autònoma de Barcelona}
+\renewcommand{\submittedtext}{Academic Tutor -- Prof.~Jean-Didier Maréchal, Dept. of Chemistry Thesis submitted for the degree of}
 
 
 % Leave this line alone; it gets things started for the real document.
@@ -269,21 +269,21 @@
 
 %%%%% ACKNOWLEDGEMENTS -- Nothing to do here except comment out if you don't want it.
 \begin{acknowledgements}
- 	In case anyone reads this in the future, some context may be appreciated: I attended and completed this Master's during the COVID-19 global pandemic from September 2020 to September 2021.
+ 	In case anyone reads this in the future, some context may be appreciated: I attended and (hopefully) completed this Master's program during the COVID-19 global pandemic from September 2020 to September 2021.
 
-  Thanks professors
+  Thanks to everyone who taught me something during this program.
 
-  Thanks lab
+  Thanks to those in the research group who helped me understand what a heme is and got me this far; they tolerated and attempted to alleviate my ignorance: Laura Tiessler Sala, José Emilio Sánchez Aparicio and JeanDi.
 
-  Thanks UAB
+  Thanks to the UAB for having me; and thanks to our professors for providing a mercilessly thorough education.
 
-  Thanks Spain, and Catalonia, allowing me in and then also having public health measures unlike Donny's America
+  Thanks to Spain, and Catalonia, for even allowing me into the country, and, I emphasize, thanks for implementing public health measures.
 
-  Thanks classmates
+  Thanks to my classmates for also attempting to alleviate my gross incompetence and at least sharing in the suffering.
 
-  Thanks fam, friends
+  Thanks to my family and friends for supporting me, often over the phone, throughout this program and interesting time.
 
-  Thanks to the media and the creators of media that facilitated the survival of my sanity through the pandemic.
+  Thanks to whatever media I consumed and the creators of that media that facilitated the survival of my sanity through the pandemic.
 
   Finally, I'd like to quote a well-known artist from California. He was referencing his own work, but I wholly identify with his appreciation for the subject of his esteem:
 
@@ -294,9 +294,9 @@
 
 %%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
 \begin{abstract}
-	Hemoproteins are able to catalyze an extraordinarily broad range of reactions. This class of proteins includes cytochrome P450s and peroxidases, among many others. Hemoproteins by definition include heme to achieve their chemistry; but heme molecules themselves vary considerably, and different heme molecules are employed depending on the function of the hemoprotein. At present, there is a knowledge gap in the literature of the structural features required to bind heme in hemoprotein binding sites.
+	Hemoproteins are able to catalyze an extraordinarily broad range of reactions. This class of proteins includes cytochrome P450s and peroxidases, among many others. Hemoproteins by definition include heme to achieve their chemistry; but heme molecules themselves vary considerably, and different heme molecules are employed depending on the function of a particular hemoprotein. At present, there is a knowledge gap in the literature of the structural features required to bind heme in hemoprotein binding sites.
 
- In this study, we investigated the binding environments of heme-b, heme-c, siroheme, and verdoheme. A high-throughput framework was developed to generate, process, and analyze data derived from the Protein Data Bank (PDB) files used in the study. Amino acid frequency, volume, surface areas, and angular relations within the heme binding sites were all examined for a diverse set of hemoproteins. Overall, we find that nonpolar residues and their interactions with heme may be of greater importance to heme binding than previously thought, suggesting that polar interactions, while necessary, are insufficient to efficiently bind heme. We also report several values for binding pocket volumes, surface areas, and angular data that may be of utility in artificial metalloenzyme design. The framework developed for this study is highly adaptable and may facilitate similar investigations for other proteins and ligands.
+ In this study, we investigated the binding environments of heme-b, heme-c, siroheme, and verdoheme. A high-throughput framework was developed to generate, process, and analyze data derived from the Protein Data Bank (PDB) files used in the study. Amino acid frequencies, volume, surface areas, and angular relations within the heme binding sites were all obtained and examined for a diverse set of hemoproteins. Overall, we find that nonpolar residues and their interactions with heme may be of greater importance to heme binding than previously thought, suggesting that polar interactions, while necessary, are insufficient to efficiently bind heme. We also report several values for binding pocket volumes, surface areas, and angular data that may be of utility in artificial metalloenzyme design. The framework developed for this study is highly adaptable and may facilitate similar investigations for other proteins and ligands.
 \end{abstract}
 
 %%%%% MINI TABLES
@@ -322,24 +322,6 @@
 % This example includes a list of abbreviations.  Look at text/abbreviations.tex to see how that file is
 % formatted.  The template can handle any kind of list though, so this might be a good place for a
 % glossary, etc.
-% First parameter can be changed eg to "Glossary" or something.
-% Second parameter is the max length of bold terms.
-\begin{mclistof}{List of Abbreviations}{3.2cm}
-
-\item[1-D, 2-D]
-
-One- or two-dimensional, referring \textbf{in this thesis} to spatial dimensions in an image.
-
-\item[Otter]
-
-One of the finest of water mammals.
-
-\item[Hedgehog]
-
-Quite a nice prickly friend.
-
-\end{mclistof} 
-
 
 % The Roman pages, like the Roman Empire, must come to its inevitable close.
 \end{romanpages}
@@ -356,7 +338,9 @@ Quite a nice prickly friend.
 \adjustmtc
 \markboth{Lay Summary}{}
 
-I investigated how heme, a molecule involved in many biological processes, binds to proteins. I did this by\ldots{}
+We investigated how heme, a molecule involved in many biological processes, binds to proteins. The study was conducted computationally. 3D structures of proteins were downloaded from a database, and run through software specialized for viewing molecules. This software was used to examine the region on the protein where heme binds (binding pocket). The software also predicted the volume and surface areas of the binding pocket. The data produced were analyzed using statistical software.
+
+We found that a greater proportion of the binding pocket associates with the hydrophobic and uncharged parts of the heme molecules more frequently, and therefore likely more strongly, than previously thought. These results suggest that these hydrophobic, electrically inert parts of the pockets may be very important to consider when studying, or designing proteins containing heme. We also report the volume and surface area data that were predicted, which support the above conclusion and may also be of help when studying or designing these proteins.
 
 \hypertarget{introduction}{%
 \chapter*{Introduction}\label{introduction}}
@@ -365,17 +349,18 @@ I investigated how heme, a molecule involved in many biological processes, binds
 \adjustmtc
 \markboth{Introduction}{}
 
-Proteins that contain metal ion cofactor(s) are known as metalloproteins, and they compose approximately 40\% of all proteins. The metal ion can be free, or complexed with another molecule. One such molecule is heme, a complex of iron and a porphyrin ring. Heme is employed by many metalloproteins to catalyze a broad range of reactions.
+Proteins that contain metal ion cofactor(s) are known as metalloproteins, and they compose approximately 40\% of all proteins. The metal ion can be free, or complexed with another molecule. One such molecule is heme, a complex of iron and a porphyrin ring. Heme is employed by many metalloproteins to catalyze a broad range of reactions\autocite{Poulos2014}.
 
-There are many types of heme; but all of them are a coordination complex composed of an iron atom coordinated and bound to a modified porphyrin ring. Porphyins are composed of four pyrrole subunits (pentagonal structures of four carbons and a nitrogen) that are bound together via methine (i.e.~carbon) bridges (FIXME get a citation for this stuff). Porphyrins are considered macrocycles, molecules with large ring structures. The ring within porphyrins is heterocyclic, and considered aromatic, and therefore acts as a large resonant structure capable of transferring electrons. Coupled with an iron atom to enable reduction-oxidation reactions and the macrocycle of the porphyrin ring, the overall heme complex is therefore highly suited for reactions involving electron transfer.
+There are many types of heme; but all of them are a coordination complex composed of an iron atom coordinated and bound to a modified porphyrin ring. Porphyins are composed of four pyrrole subunits (pentagonal structures of four carbons and a nitrogen) that are bound together via methine (i.e.~carbon) bridges. Porphyrins are considered macrocycles, molecules with large ring structures. The ring within porphyrins is heterocyclic, and considered aromatic, and therefore acts as a large resonant structure capable of transferring electrons. Coupled with an iron atom to enable reduction-oxidation reactions and the macrocycle of the porphyrin ring, the overall heme complex is therefore highly suited for reactions involving electron transfer\autocite{Kleingardner2015}.
 
-Proteins containing heme are known as hemoproteins - hemoglobin and myoglobin are well-known examples, using heme to store and transport oxygen. Other examples of hemoproteins are peroxidases, catalases (a type of peroxidase), nitric oxide synthases, heme oxygenases, and cytochrome p450s. Peroxidases and catalases catalyze oxidation-reduction reactions using a histidine-bound heme, with catalases in particular specializing in the decomposition of hydrogen peroxide. Nitric oxide synthases catalyze the reaction of L-arginine into nitric oxide, which is vitally important to cellular signaling (\textcite{Poulos2014}). Free heme molecules may be released upon degradation of hemoproteins (especially hemoglobin), however, heme is prooxidative and therefore toxic to cells and must be cleared. Heme oxygenases assist in the degradation of heme, and are regarded as potential therapeutics, due to anti-inflammatory effects\autocite{Araujo2012}.
+Proteins containing heme are known as hemoproteins - hemoglobin and myoglobin are well-known examples, using heme to store and transport oxygen. Other examples of hemoproteins are peroxidases, catalases (a type of peroxidase), nitric oxide synthases, heme oxygenases, and cytochrome p450s. Peroxidases and catalases catalyze oxidation-reduction reactions using a histidine-bound heme, with catalases in particular specializing in the decomposition of hydrogen peroxide. Nitric oxide synthases catalyze the reaction of L-arginine into nitric oxide, which is vitally important to cellular signaling \autocite{Poulos2014}. Free heme molecules may be released upon degradation of hemoproteins (especially hemoglobin), however, heme is prooxidative and therefore toxic to cells and must be cleared. Heme oxygenases assist in the degradation of heme, and are regarded as potential therapeutics, due to anti-inflammatory effects\autocite{Araujo2012}.
 
-The enzymes with arguably the most potential applications, cytochrome P450s function as powerful monooxygenases. They participate in many reactions: capable oxidizing a wide range of substrates, including carbohydrates, steroids, fatty acids; catalyzing hormone degradation and synthesis; and degrading the majority of drugs(\textcite{Poulos2014}). Due to their extraordinary utility and range of reactions, cytochrome p450s are of great interest in the protein engineering field. Cytochrome P450s have the potential to be used in industrial biocatalysis, e.g.~in pharmaceutical production, bioremediation of environmental pollutants\autocite{Du2017,Lalonde2016}. The limiting factor preventing its deployment has been the struggle to increase enzymatic efficiency and therefore yield of processes employing the enzyme\autocite{Girvan2016,Li2020}.
+The enzymes with arguably the most potential applications, cytochrome P450s function as powerful monooxygenases. They participate in many reactions: capable oxidizing a wide range of substrates, including carbohydrates, steroids, fatty acids; catalyzing hormone degradation and synthesis; and degrading the majority of drugs\autocite{Poulos2014}. Due to their extraordinary utility and range of reactions, cytochrome p450s are of great interest in the protein engineering field. Cytochrome P450s have the potential to be used in industrial biocatalysis, e.g.~in pharmaceutical production, bioremediation of environmental pollutants\autocite{Du2017,Lalonde2016}. The limiting factor preventing its deployment has been the struggle to increase enzymatic efficiency and therefore yield of processes employing the enzyme\autocite{Girvan2016,Li2020}.
 
 Thus far, only heme-b and its respective hemoproteins have been discussed (although heme-b is the most abundant and most employed type of heme). Other types of heme are structurally and chemically different, and are used to achieve different chemical reactions. In this study, we examined heme-b, heme-c, verdoheme, and siroheme. Their structures are shown in Figures 1-5, and each heme is individually discussed below.
 
-\#\#Types of Heme
+\hypertarget{types-of-heme}{%
+\section{Types of Heme}\label{types-of-heme}}
 
 \hypertarget{heme-b}{%
 \subsection{Heme-b}\label{heme-b}}
@@ -389,9 +374,9 @@ Thus far, only heme-b and its respective hemoproteins have been discussed (altho
 \caption{Heme-b (HEM)}\label{fig:structHEM}
 \end{figure}
 
-The most common heme is heme-b. It is employed by the vast majority of hemoproteins. It is composed of an iron and porphyrin ring complex with attached vinyl and ethyl groups(FIXME?\ldots{} when we get the citation), and with the addition of two propionate groups. The iron atom is usually coordinated to a histidine or cysteine, depending on the enzyme.
+The most common heme is heme-b. It is employed by the vast majority of hemoproteins. It is composed of an iron and porphyrin ring complex with attached vinyl and ethyl groups, and with the addition of two propionate groups. The iron atom is usually coordinated to a histidine or cysteine, depending on the enzyme\autocite{Poulos2014,Kleingardner2015}.
 
-The two propionate groups stabilize the heme in the pocket by forming polar interactions with salt bridges formed by arginine residues in the binding environment (Barrows). This behavior is the same for heme-b and likely verdoheme. It has also been suggested that the propionate groups may also serve to exclude solvent from the binding environment, potentially acting to expel and repel water molecules (Hayashi).
+The two propionate groups stabilize the heme in the pocket by forming polar interactions with salt bridges formed by arginine residues in the binding environment\autocite{Barrows2005}. This behavior is the same for heme-b and likely verdoheme. It has also been suggested that the propionate groups may also serve to exclude solvent from the binding environment, potentially acting to expel and repel water molecules \autocite{Hayashi2009}.
 
 \hypertarget{heme-c}{%
 \subsection{Heme-c}\label{heme-c}}
@@ -405,7 +390,7 @@ The two propionate groups stabilize the heme in the pocket by forming polar inte
 \caption{Heme-c (HEC)}\label{fig:structHEC}
 \end{figure}
 
-Heme-c is derived from heme-b. It is fairly similar to heme, with two notable differences: the iron atom binds, with few exceptions, covalently to cysteine residues in the binding pocket; and its two vinyl groups form thioester bonds with amino acids in the protein binding pocket. Its function is much more specific than heme-b, mostly serving as an electron carrier rather than catalyzing a plethora of reactions. The reason for this is not abundantly clear, but several studies suggest that because of its covalent bonding, heme-c has an electronic potential that is can be far lower and in general more broad, and more specifiable, than heme-b. \autocite{Bowman2008,Kleingardner2015}
+Heme-c is derived from heme-b. It is fairly similar to heme, with two notable differences: the iron atom binds, with few exceptions, covalently to cysteine residues in the binding pocket; and its two vinyl groups form thioether bonds with amino acids in the protein binding pocket. Its function is much more specific than heme-b, mostly serving as an electron carrier rather than catalyzing a plethora of reactions. The reason for this is not abundantly clear, but several studies suggest that because of its covalent bonding, heme-c has an electronic potential that is can be far lower and in general more broad, and more specifiable, than heme-b. \autocite{Bowman2008,Kleingardner2015}
 
 \hypertarget{siroheme}{%
 \subsection{Siroheme}\label{siroheme}}
@@ -419,7 +404,7 @@ Heme-c is derived from heme-b. It is fairly similar to heme, with two notable di
 \caption{Siroheme (SRM)}\label{fig:structSRM}
 \end{figure}
 
-Siroheme is even more limited in its applications, but highly specialized for its role. It is still an iron atom-porphyrin coordination complex, but it contains far more carboxyl and propionate groups than the other types of heme, making it highly polar. It is used exclusively in sulfite and nitrite reductases, which catalyze the reduction of the sulfates and nitrates plants uptake from the ground, providing the sources of nitrogen and sulfur used to produce nitrogen and sulfur-containing amino acids(\textcite{Tripathy2010}). The reason for the use of siroheme in this reaction rather than heme-b is not completely understood. But one study suggests that the bridge that siroheme forms between its catalyic iron atom, and the protein matrix environment (which also necessarily involves another cofactor, a cluster of cubane for electron transfer and provision) is more efficient at channeling electrons than the bridge that could be formed by heme.\autocite{Branzanic2019}
+Siroheme is even more limited in its applications, but highly specialized for its role. It is still an iron atom-porphyrin coordination complex, but it contains far more carboxyl and propionate groups than the other types of heme, making it highly polar. It is used exclusively in sulfite and nitrite reductases, which catalyze the reduction of the sulfates and nitrates plants uptake from the ground, providing the sources of nitrogen and sulfur used to produce nitrogen and sulfur-containing amino acids\autocite{Tripathy2010}. The reason for the use of siroheme in this reaction rather than heme-b is not completely understood. But one study suggests that the bridge that siroheme forms between its catalyic iron atom, and the protein matrix environment (which also necessarily involves another cofactor, a cluster of cubane for electron transfer and provision) is more efficient at channeling electrons than the bridge that could be formed by heme.\autocite{Branzanic2019}
 
 \hypertarget{verdoheme}{%
 \subsection{Verdoheme}\label{verdoheme}}
@@ -430,7 +415,7 @@ Siroheme is even more limited in its applications, but highly specialized for it
 
 }
 
-\caption{Verdoheme, VEA}\label{fig:structVEA}
+\caption{Verdoheme (VEA)}\label{fig:structVEA}
 \end{figure}
 \begin{figure}
 
@@ -438,7 +423,7 @@ Siroheme is even more limited in its applications, but highly specialized for it
 
 }
 
-\caption{Verdoheme, VER}\label{fig:structVER}
+\caption{Verdoheme (VER)}\label{fig:structVER}
 \end{figure}
 
 Lastly, verdoheme is an intermediate product in the degradation of heme-b by heme oxygenase. When heme oxygenase degrades heme-b, biliverdin, carbon monoxide, and iron are produced; verdoheme is the precusor to bilverdin\autocite{Lai2010,Sato2007}. While a product of prior reactions wthin heme oxygenase, verdoheme appears to be oriented and bound differently \autocite{Lad2004}. The two structures used in the study, VEA and VER, are verdoheme at different stages of degradation, either partially oxidized or containing one less propionate group.
@@ -449,9 +434,9 @@ There is a significant barrier to the employment of hemoproteins in these areas,
 
 There are multiple methods employed to design these molecules, but rational design in particular (basically, the mutation of certain residues based on an understanding of the structure-function relationships) is at least partially hampered by an incomplete understanding of the binding environment for heme. For example, the importance of the binding environment was noted in a study seeking to design \emph{de novo} heme-c based enzymes, and found the binding environment likely to be of importance in modulating redox potential \autocite{Ishida2004}.
 
-A fairly recent study conducted a structural analysis of 125 hemoprotein chains(\textcite{Li2011}). The study suggested hemoproteins undergo small conformational changes during binding; and that apo-form (ligand-containing) proteins may therefore be suitable for bioinformatics-based prediction and protein design. Additionally, the heme binding environments for both heme-b and heme-c were analyzed, and relative frequencies per amino acid were reported. Cysteine, histidine, phenylalanine, methionine, and tyrosine were found to be the most abundant residues within the binding environments of both heme-b and heme-c.~
+A fairly recent study conducted a structural analysis of 125 hemoprotein chains\autocite{Li2011}. The study suggested hemoproteins undergo small conformational changes during binding; and that apo-form (ligand-containing) proteins may therefore be suitable for bioinformatics-based prediction and protein design. Additionally, the heme binding environments for both heme-b and heme-c were analyzed, and relative frequencies per amino acid were reported. Cysteine, histidine, phenylalanine, methionine, and tyrosine were found to be the most abundant residues within the binding environments of both heme-b and heme-c.~
 
-The aforementioned study was published in 2011 - since then the PDB has been populated with far more hemoproteins. The focus of the study was on conformational differences induced by heme-binding, rather than the binding environment, although the relative frequencies of amino acids were reported. Interactions of the more abundant residues with heme-b or heme-c, including interactions with the porphyrin ring, were briefly discussed and this discussion will not be reproduced here.
+The aforementioned study was published in 2011 -- since then the PDB has been populated with far more hemoproteins. The focus of the study was on conformational differences induced by heme-binding, rather than the binding environment, although the relative frequencies of amino acids were reported. Interactions of the more abundant residues with heme-b or heme-c, including interactions with the porphyrin ring, were briefly discussed and this discussion will not be reproduced here.
 
 In this study, we present research focused on elucidating the binding environment of multiple heme molecules: heme-b (HEM), heme-c (HEC), siroheme (SER), and verdoheme (VEA/VER). A diverse set of PDBs was assembled. UCSF Chimera was used to both extract and predict properties of a diverse set of hemoproteins. R was used to analyze the results. A robust and high-throughput framework was constructed to process the datasets for each heme molecule, requiring only inputs of which ligand was to be examined per dataset.
 
@@ -467,17 +452,19 @@ These results may be of use in rational design of hemoproteins in future studies
 \hypertarget{methods}{%
 \chapter{Methods}\label{methods}}
 
+All scripts (as well as raw data, results, and this document) are available on GitHub\autocite{Finnerty_hemebinding_2021}.
+
 \hypertarget{datasets}{%
 \section{Datasets}\label{datasets}}
 
-\noindent A list of PDBs was assembled that represented either a representative sample of a variety of proteins, with a resolution better than 3A, (HEM and HEC) or, all proteins containing these ligands were downloaded from the PDB (in the case of SRM, VER, VEA). Not all downloaded PDBs were appropriate for this study (e.g.~contained ``wobble'' structures) and therefore the amount of PDBs was culled. The datasets are current as of 16 August 2021.
+\noindent A list of PDBs was assembled that represented either a representative sample of a variety of proteins, with a resolution better than 3A, (HEM and HEC) or, all proteins containing these ligands were downloaded from the PDB (in the case of SRM, VER, VEA). Not all downloaded PDBs were appropriate for this study (e.g.~contained superimposed structures) and therefore the amount of PDBs was culled. The datasets are current as of 16 August 2021.
 
 The size of the datasets actually used in the study were as follows: HEM (n=58), HEC(n=13), SRM (n=9), VER (n=2) and VEA (n=2), which are merged for a combined n=4 for VERDOHEME.
 
 The name of all proteins used in the study and their source organism are provided tables within Appendix \ref{molOrgSec}.
 
-\hypertarget{preprocessing}{%
-\section{Preprocessing}\label{preprocessing}}
+\hypertarget{pre-processing}{%
+\section{Pre-processing}\label{pre-processing}}
 
 Many of the PDBs downloaded were multimeric structures. The number of subunits per protein would skew results and overrepresent especially large multimeric proteins. Therefore, to only allow for one heme binding site per PDB, all downloaded PDBs were converted to monomeric structures. This was achieved by saving a single chain (chain A) of each PDB and eliminating all other chains. The single chain was then saved as a PDB and used in all subsequent scripts. Part of the script is reproduced below:
 
@@ -492,7 +479,7 @@ Chimera was used to predict the following qualities: Volume of the ligand bindin
 
 Atoms were selected within a distance cutoff, to be considered as ``interacting'' with the ligand or forming the binding pocket. Distance cutoffs from the ligand of 5A and 7A were chosen; for the predicted qualities, the algorithms were run twice to get values at 5A and 7A. For the distance and angle calculations, only the 7A distance cutoff was used, as the cutoff does not factor into any calculations and may be set during analysis.
 
-As these cutoffs are selected arbitrarily, data from the 5A and 7A runs are overlaid in the figures reported in Appendix \ref{Figures}. Data tables are also provided in Appendix \ref{Tables}.
+As these cutoffs are selected arbitrarily, data from the 5A and 7A runs are overlaid in the figures reported in Appendix \ref{a-figures}. Data tables are also provided in Appendix \ref{a-tables}.
 
 \hypertarget{amino-acid-frequency}{%
 \subsection{Amino Acid Frequency}\label{amino-acid-frequency}}
@@ -504,12 +491,12 @@ Amino acids within the bounds of the lower and upper distance cutoff were select
 
 Volume of the binding pocket was predicted via Surfnet \autocite{Laskowski1995}, and run with default parameters of Grid Interval = 1.0 and Distance Cutoff = 10.0 (the latter option does not relate to the distance cutoff from the ligand). Surfnet is the molecular volume calculation tool implemented within UCSF Chimera. The script used selects the residues around heme to consider as the bounds of the pocket, but effectively ignores heme's presence as its calculates the volume, as if the pocket were empty:
 
-Surfnet, at least in this investigation, was prone to generating very small volumes. During analysis these were removed and only the largest volume generated is recorded, since the largest volume generated and identified is most likely the binding pocket.
-
 \textbf{insert code}
 
-\hypertarget{surface-area-calculations}{%
-\subsection{Surface Area Calculations}\label{surface-area-calculations}}
+Surfnet, at least in this investigation, was prone to generating very small volumes. During analysis these were removed and only the largest volume generated is recorded, since the largest volume generated and identified is most likely the binding pocket.
+
+\hypertarget{SAmethods}{%
+\subsection{Surface Area Calculations}\label{SAmethods}}
 
 Solvent excluded and solvent accessible surface areas of both the ligand and the binding pocket were calculated using Chimera's ``surf'' algorithm, which itself is an implementation of a program called MSMS \autocite{Sanner1996}.
 
@@ -522,12 +509,14 @@ Distances of amino acids from the ligand could not be calculated accurately nor 
 
 \textbf{insert some code}
 
-The data produced in this step therefore include the mean distance of each amino acid. This is traceable, and the angular data below are cross-referenced with this list of distances. All data shown in figures (FIXME! Also for tables?) are multidimensional and may be filtered for distance.
+The data produced in this step therefore include the mean distance of each amino acid. Distances are traceable per residue and atoms in each residue; this data was used to construct the distributions of amino acids over distance, and the angular data below are cross-referenced with this list of distances.
 
 \hypertarget{planar-angle-calculations}{%
 \subsection{Planar Angle Calculations}\label{planar-angle-calculations}}
 
-Individual residues and the ligand were defined as axes. The angle between each residue's axis and the axis of the ligand were calculated. Each axis functions essentially as a separate plane. (FIXME! Include a picture of what this looks like?) This employed the ``define axis'', and ``angle'' functions of Chimera; the Axes/Planes/Centroids Structural Analysis function of Chimera via GUI.
+Individual residues and the ligand were defined as axes. The angle between each residue's axis and the axis of the ligand were calculated. Each axis functions essentially as a separate plane. This employed the ``define axis'', and ``angle'' functions of Chimera; the Axes/Planes/Centroids Structural Analysis function of Chimera via GUI.
+
+\textbf{insert picture}
 
 \hypertarget{ca-cb-fe-calculations}{%
 \subsection{CA-CB-Fe Calculations}\label{ca-cb-fe-calculations}}
@@ -537,32 +526,25 @@ Residues within the distance cutoff were examined one by one. The angle of betwe
 \hypertarget{import-to-r}{%
 \section{Import to R}\label{import-to-r}}
 
-The data produced by Chimera and the Python scripts were stored as .txt files. These files were imported to R and processed from text files into organized data formats. R was used to cross-reference angle and distance data. All plots and tables were constructed using R and imported directly to this document using Rmarkdown.
+The data produced by Chimera and the Python scripts were stored as .txt files. These files were imported to R and processed from .txt files into organized data formats. All plots and tables were constructed using R and imported directly to this document using Rmarkdown.
 
 \adjustmtc
 \markboth{Introduction}{}
 
 \adjustmtc
-\markboth{Methods}{}
+\markboth{Discussion}{}
 
 \hypertarget{discussion}{%
 \chapter{Results and Discussion}\label{discussion}}
 
 \minitoc
 
---\textgreater{}
-
-\hypertarget{analysis-of-residues-nearby-the-porphyrin-ring}{%
-\section{Analysis of Residues Nearby the Porphyrin Ring}\label{analysis-of-residues-nearby-the-porphyrin-ring}}
+\hypertarget{disc-aaFreq}{%
+\section{Analysis of Residues Nearby Each Heme Molecule}\label{disc-aaFreq}}
 
 We began the study by acquiring data to elucidate and quantify the propensity of amino acids to interact with heme (HEM, HEC, SRM, VEA/VER) in its binding environment. This study focused on potential interactions with the entire heme molecule, including the porphyrin ring and attached groups; therefore, any amino acids with potential interactons with the heme iron, porphyrin ring, or groups on the porphyrin ring (e.g.~vinyl, propionate groups), were included in the data gathered for this section. A potentially interacting amino acid was therefore defined as any amino acid with at least one atom within the distance cutoffs (5 and 7 Angstroms (A)) from the heme \emph{molecule}.
 
-See Section \textbf{INSERT SECTION} in Methods to see how this looks within the script.
-
-Amino acid frequencies were obtained for residues within the distance cutoffs of 5A and 7A - these figures and data are shown in \textbf{FIXME ADD APPENDICES LATER} The trends in these data are very similar and therefore only the data pertaining to the 7A distance cutoff are discussed below.
-
-\hypertarget{disc-aaFreq}{%
-\section{AA Frequency}\label{disc-aaFreq}}
+Amino acid frequencies were obtained for residues within the distance cutoffs of 5A and 7A - these data are overlaid in several figures in Appendix \ref{figs-aaFreqOverlaid}. The trends in these data are very similar and therefore only the data pertaining to the 7A distance cutoff are discussed below.
 
 \hypertarget{heme-b-1}{%
 \subsection{Heme-b}\label{heme-b-1}}
@@ -570,7 +552,7 @@ Amino acid frequencies were obtained for residues within the distance cutoffs of
 \hypertarget{amino-acid-frequencies-in-binding-pocket}{%
 \subsubsection{Amino Acid Frequencies in Binding Pocket}\label{amino-acid-frequencies-in-binding-pocket}}
 
-Figure \ref{fig:HEM-AAfreq} plots the frequency of each residue within 7A of heme-b. Immediately below is Figure \ref{fig:HEM-AAfreqAll}, which plots the frequency of each residue within the entire monomer.
+Figure \ref{fig:HEM-AAfreq} plots the frequency of each residue within 7A of heme-b.
 
 \begin{figure}
 \centering
@@ -579,12 +561,12 @@ Figure \ref{fig:HEM-AAfreq} plots the frequency of each residue within 7A of hem
 \end{figure}
 
 \begin{longtable}[t]{lr}
-\caption{\label{tab:HEM-t-AAfreq}HEM AA Freq}\\
+\caption{\label{tab:HEM-t-AAfreq}HEM: AA Frequency Table within 7A}\\
 \toprule
 Residue & Freq\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:HEM-t-AAfreq}HEM AA Freq \textit{(continued)}}\\
+\caption[]{\label{tab:HEM-t-AAfreq}HEM: AA Frequency Table within 7A \textit{(continued)}}\\
 \toprule
 Residue & Freq\\
 \midrule
@@ -618,37 +600,28 @@ MET & 72\\
 CYS & 17\\*
 \end{longtable}
 
-\textbf{I use `surprising, striking' a lot in this discussion. I'll reword this to have some variety later. The results are at least interesting!}
-
-Beginning at the left of the figure and moving right, large, nonpolar amino acids appear most frequently within 7A: LEU and PHE; ILE appears less frequently than these two amino acids but nonetheless is in high frequency. Small, nonpolar amino acids ALA and VAL also appear very frequently. As the majority of the heme-b molecule is made up of the nonpolar porphyrin ring, these amino acids are therefore likely in such high frequency to provide the nonpolar interactions/environment with the pyrole groups and methyl and vinyl groups.
+Beginning at the left of Figure \ref{fig:HEM-AAfreq} and moving right, large, nonpolar amino acids appear most frequently within 7A: LEU and PHE; ILE appears less frequently than these two amino acids but nonetheless is in high frequency. Small, nonpolar amino acids ALA and VAL also appear very frequently. As the majority of the heme-b molecule is made up of the nonpolar porphyrin ring, these amino acids are therefore likely in such high frequency to provide the nonpolar interactions with the pyrole groups and methyl and vinyl groups.
 
 Tyrosine, arginine, histidine appear next most frequently. The two propionate groups on heme make polar interactions with salt bridges formed between arginine groups within the binding environment\autocite{Barrows2005}. Therefore, the tyrosine and histidine likely form polar interactions with the portion of the propionate groups not interacting with the arginine salt bridges. This, in addition to the nonpolar interactions above, likely provides as hospitable of a binding environment as possible to coordinate the heme. It should be noted histidine is one of the residues that coordinates the iron atom, and this may therefore increase its frequency in the binding pocket.
 
-Glycine is a small residue and cannot form significant interactions within its environment; however, its frequency, or lack thereof (compared to background frequency, discussed later), suggests the binding pocket may not require as much flexibility or spatial considerations as in the rest of the protein. This would logically follow from the need for conserved binding sites.
+Glycine is a small residue and cannot form significant interactions within its environment; however, its frequency, or lack thereof (compared to background frequency, discussed below), suggests the binding pocket may not require as much flexibility or spatial considerations as in the rest of the protein.
 
-Next appear serine, glutamate (glutamic acid) and aspartate (aspartic acid) and lysine. These are polar residues, and glutamate and aspartate are negatively charged; lysine is polar too, but positively charged. The negative charge is unlikely of importance in interaction with heme-b, however these polar amino acids likely again interact with the propionate groups on heme; only, infrequently. What is most interesting is why lysine is in such low abundance relative to the other polar, positively charged residues, arginine and histidine. Perhaps lysine's fairly linear structure prevents it from fitting into the binding pocket; however, arginine is also somewhat linear and features prominently, but this can be ascribed to its necessary formation and provision of salt bridges for polar interactions. The exact reason for why lysine would therefore be of low frequency could be is beyond the scope of this study.
+Next appear serine, glutamate (glutamic acid) and aspartate (aspartic acid) and lysine. These are polar residues, and glutamate and aspartate are negatively charged; lysine is polar too, but positively charged (at pH 7). The negative charge on glutamate and aspartate may explain why they are fairly infrequent: although polar, the negative charge may induce a repulsion effect with the propionate groups. Or, it may be that other amino acids are preferable, as is likely the case for lysine. Lysine is polar and positively charged; but arginine residues forms the salt bridges necessary for propionate to make polar interactions. And histidine coordinates the heme iron. Therefore the infrequency of lysine may be less due to a problem with lysine and more due to a preference for other polar amino acids.
 
 Proline is a small nonpolar amino acid in low frequency; the trend for heme-b, at least, appears to be to favor large nonpolar amino acids in the binding pocket. This may suggest that a large amount of nonpolar interactions, per residue, is favored in the binding pocket, perhaps because of the limited space available to position residues to interact with heme.
 
 Asparagine and glutamine are both medium-sized polar amino acids; given the trends already discussed it is surprising these are not in greater abundance. But as with proline, it may simply be a matter of maximizing the benefit of the interactions that may be formed with the heme; while asparagine and glutamine are polar, amino acids like arginine and histidine are both polar and positively charged (and arginine forms salt bridges), capable of stronger interactions with the electronegative propionate groups.
 
-Methionine and tryptophan appear very infrequently in the binding pocket. Tryptophan is very surprising to find as second-to-least frequent. It is a large nonpolar amino acid - but perhaps its single, potential hydrogen bond, although weak, is enough to prefer completely nonpolar residues. Or, with its size, it is preferable to have more numerous, smaller nonpolar residues that can favorably interact with the porphyrin while reducing steric hindrance of other residues in the environment (taking up less space). The reason for methionine's low frequency is not clear, perhaps for similar reasons as with proline, where more nonpolar residues are preferred, rather than less nonpolar residues being unfavorable.
+Methionine and tryptophan appear very infrequently in the binding pocket. Tryptophan is very surprising to find as second-to-least frequent. It is a large nonpolar amino acid - but perhaps its single, potential hydrogen bond, although weak, is enough to prefer completely nonpolar residues. Or, with its size, it is preferable to have more numerous, smaller nonpolar residues that can favorably interact with the porphyrin while reducing steric hindrance of other residues in the environment. The reason for methionine's low frequency is not clear, perhaps for similar reasons as with proline, where more intensely nonpolar residues are preferred, rather than less nonpolar residues being unfavorable.
 
-Cystine appears most infrequently of all the amino acids in the binding pocket. This is quite surprising - cystine is highly evolutionarily conserved to coordinate the iron in the binding pocket. Perhaps the sample of PDBs used in this study mostly use histidine to coordinate the iron - but this would only account for one residue in the binding pocket per pdb. Therefore these results suggest that while cystidine may be well suited to coordinate the iron in heme, it is poorly suited to form any nonpolar interactions with the porphyrin ring, leaving the task up to other, more suitably, intensely nonpolar amino acids.
+Cystine appears most infrequently of all the amino acids in the binding pocket. This is quite surprising - cystine is the other highly conserved residue that may coordinate the heme iron. Perhaps the sample of PDBs used in this study mostly use histidine to coordinate the iron - but this would only account for one residue in the binding pocket per pdb. Therefore these results suggest that while cystidine may be well suited to coordinate the iron in heme, it is poorly suited to form any nonpolar interactions with the porphyrin ring, leaving the task up to other, more suitably, intensely nonpolar amino acids.
 
-Moving away from discussing individual amino acid populations, what is especially notable of the data for heme-b is that nonpolar residues appear in much greater frequency than polar residues. Nonpolar interactions with heme are therefore more numerous than polar interactions; quite logical, given there are only two polar propionate groups on a large porphyrin ring that is otherwise nonpolar. Their multiplicity may also suggest that they are potentially of greater importance than previously thought. At the very least, these results suggest that polar interactions and coordination of the iron atom, while necessary for heme binding, are insufficient, and that nonpolar intercations and the population of nopolar residues in the binding pocket should be considered when examining the binding environment of heme.
+Moving away from discussing individual amino acid populations, what is especially notable of the data for heme-b is that nonpolar residues appear in much greater frequency than polar residues. Nonpolar interactions with heme are therefore more numerous than polar interactions. Their multiplicity may also suggest that they are potentially of greater importance than previously thought. At the very least, these results suggest that polar interactions and coordination of the iron atom, while necessary for heme binding, are insufficient, and that nonpolar interactions and the population of nonpolar residues in the binding pocket should be considered when examining the binding environment of heme.
 
 \hypertarget{comparison-with-background-amino-acid-frequencies}{%
 \subsubsection{Comparison with Background Amino Acid Frequencies}\label{comparison-with-background-amino-acid-frequencies}}
 
-While the frequencies of amino acids in the binding pocket have been discussed, it may also be of interest to compare against the background amino acid frequency, the general frequency of amino acids within the entire monomer. The degree to which this may affect the significance of the frequencies of the amino acids in the binding pocket is unclear - those amino acids are still employed and placed such as to bind the heme, rather than being a random assortment of residues. However, an in depth examination of simlarities and differences may reveal that some amino acids may simply be extremely highly conserved by chance and by virtue of their numerous population, rather than some chemical benefit.
-
-Figure \ref{HEM-AAfreqAll} documents the frequencies of amino acids overall within the monomer.
-
-Leucine and alanine as in the binding pocket frequencies are highly frequent in the overall monomer. This may suggest their prevalence in the binding pocket may simply be due to a high population of leucine and alanine in hemoproteins.
-
-However, after these two amino acids the tendencies in frequency for the binding pocket and the monomer at large diverge.
-Glycine is in high frequency - likely due to more complex geometry e.g.~helices outside the binding pocket. In interest of brevity, the remaining frequencies are summed up thus: the same trends that appear to exist in the binding pocket do not appear to exist in the monomer at large. While the order of frequencies in conserved binding pockets can be rationalized, justifying the overall frequencies in monomers invites significant speculation.
+While the frequencies of amino acids in the binding pocket have been discussed, it may also be of interest to compare against the background amino acid frequency, the general frequency of amino acids within the entire monomer. The degree to which any results may affect the significance of the frequencies of the amino acids in the binding pocket is unclear - those amino acids are interacting with the heme. However, an in depth examination of similarities and differences may reveal that some amino acids may simply be extremely highly conserved by chance and by virtue of their numerous population, rather than some chemical benefit.
 
 \begin{figure}
 \centering
@@ -656,37 +629,48 @@ Glycine is in high frequency - likely due to more complex geometry e.g.~helices 
 \caption{\label{fig:HEM-AAfreqAll}HEM: AA Frequency of Monomer}
 \end{figure}
 
-\hypertarget{distributon-of-amino-acids-over-distance}{%
-\subsubsection{Distributon of Amino Acids over Distance}\label{distributon-of-amino-acids-over-distance}}
+Figure \ref{fig:HEM-AAfreqAll} documents the frequencies of amino acids overall within the monomer.
 
-After an exhaustive exploration of the relative frequencies of amino acids in the binding pocket, the figure below is fairly straightfoward. Figure \ref{fig:HEM-AAdist} plots the distribution of amino acids in the binding pocket against their distance from the iron of the heme.
+Leucine and alanine, as in the binding pocket frequencies, are highly frequent in the overall monomer. This may suggest their prevalence in the binding pocket may simply be due to a high population of leucine and alanine in hemoproteins.
 
-We find that only a few residues come in close contact (\textless4A) of the heme: Cys, His, Tyr. Most residues center their distribution at around 6A, although Lys seems more biased than the remaining residues to be a bit closer. Cysteine and histidine may be at least in part explained to be close due to their use as coordinating residues; histidine, being in greater frequency, may also be this close due to favorable interactions with the porphyrin ring.
+However, after these two amino acids the tendencies in frequency for the binding pocket and the monomer at large diverge. Glycine is in high frequency - likely due to more complex geometry e.g.~helices outside the binding pocket. In interest of brevity, the remaining frequencies are summed up thus: the same trends that appear to exist in the binding pocket do not appear to exist in the monomer at large. While the order of frequencies in conserved binding pockets can be rationalized, justifying the overall frequencies in monomers invites significant speculation.
 
-The proximity of tyrosine however, is more notable. It cannot form coordination bonds with the heme iron, but tyrosine residues do interact with the propionate groups. Tyrosine is also required for redox reactions, and part of the population of tyrosine residues may therefore be in close proximity to heme to facilitate electron transfer in various enzymes\autocite{Poulos2014}. These results suggest that of all potentially interacting polar/positively charged residues, tyrosine is the most likely at least to be in close proximity to the heme molecule. Whether this illustrates an extreme importance of tyrosine to interact with propionate groups, or instead the need for tyrosine to be in close proximity in order to form such interactions, or simply demonstrates coordination of oxidation/reduction reactions, is beyond the scope of this study.
+\hypertarget{distributon-of-amino-acids-by-distance}{%
+\subsubsection{Distributon of Amino Acids by Distance}\label{distributon-of-amino-acids-by-distance}}
 
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/HEM-AAdist-1.pdf}
-\caption{\label{fig:HEM-AAdist}HEM: AA Distances}
+\caption{\label{fig:HEM-AAdist}HEM: Residue Distribution by Distance}
 \end{figure}
+
+After an exhaustive exploration of the relative frequencies of amino acids in the binding pocket, Figure \ref{fig:HEM-AAdist} below is fairly straightfoward. It plots the distribution of amino acids in the binding pocket against their distance from the iron of the heme.
+
+We find that only a few residues come in close contact (\textless4A) of the heme: cysteine, histidine, and tyrosine. Most residues center their distribution at around 6A, although lysine seems more biased than the remaining residues to be a bit closer. Cysteine and histidine may be at least in part explained to be close due to their use as coordinating residues; histidine, being in greater frequency, may also be this close due to favorable interactions with the porphyrin ring.
+
+The proximity of tyrosine however, is more notable. It cannot form coordination bonds with the heme iron, but tyrosine residues do interact with the propionate groups. Tyrosine is also required for redox reactions, and part of the population of tyrosine residues may therefore be in close proximity to heme to facilitate electron transfer in various enzymes\autocite{Poulos2014}. These results suggest that of all potentially interacting polar/positively charged residues, tyrosine is the most likely at least to be in close proximity to the heme molecule. Whether this illustrates an importance of tyrosine to interact with propionate groups, or instead the need for tyrosine to be in close proximity in order to form such interactions, or simply demonstrates involvement in oxidation/reduction reactions, is beyond the scope of this study.
 
 \hypertarget{heme-c-1}{%
 \subsection{Heme-c}\label{heme-c-1}}
 
+\hypertarget{amino-acid-frequencies-in-binding-pocket-1}{%
+\subsubsection{Amino Acid Frequencies in Binding Pocket}\label{amino-acid-frequencies-in-binding-pocket-1}}
+
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/HEC-AAfreq-1.pdf}
-\caption{\label{fig:HEC-AAfreq}HEC: AA Frequency}
+\caption{\label{fig:HEC-AAfreq}HEC: AA Frequency within 7A}
 \end{figure}
 
+Leucine and alanine again are highly frequent for HEC, followed by quite similar trends, and therefore HEC will not be as thoroughly discussed as HEM. The most notable differences may be that GLY and CYS are in far higher frequency than in heme. Heme-c almost always forms covalent bonds with cysteine residues, and this may explain that frequency. But as for the high frequency of glycine, the reason for its abundance is unclear, although it seems it may have an important role in heme-c pockets.
+
 \begin{longtable}[t]{lr}
-\caption{\label{tab:HEC-t-AAfreq}HEC AA Freq}\\
+\caption{\label{tab:HEC-t-AAfreq}HEC: AA Frequency Table within 7A}\\
 \toprule
 Residue & Freq\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:HEC-t-AAfreq}HEC AA Freq \textit{(continued)}}\\
+\caption[]{\label{tab:HEC-t-AAfreq}HEC: AA Frequency Table within 7A \textit{(continued)}}\\
 \toprule
 Residue & Freq\\
 \midrule
@@ -720,10 +704,8 @@ ASP & 14\\
 GLU & 11\\*
 \end{longtable}
 
-Leucine and alanine again are highly frequent for HEC, followed by quite similar trends, and therefore HEC will not be as thoroughly discussed as HEM. The most notable differences may be that GLY and CYS are in far higher frequency than in heme. Heme-c almost always forms covalent bonds with cysteine residues, and this may explain that frequency. But as for the high frequency of glycine, the reason for its abundance is unclear, although it seems it has an important role in heme-c pockets.
-
-\hypertarget{comparison-to-background-frequency}{%
-\subsubsection{Comparison to background frequency}\label{comparison-to-background-frequency}}
+\hypertarget{comparison-with-background-amino-acid-frequencies-1}{%
+\subsubsection{Comparison with Background Amino Acid Frequencies}\label{comparison-with-background-amino-acid-frequencies-1}}
 
 \begin{figure}
 \centering
@@ -731,35 +713,38 @@ Leucine and alanine again are highly frequent for HEC, followed by quite similar
 \caption{\label{fig:HEC-AAfreqAll}HEC: AA Frequency of Monomer}
 \end{figure}
 
-Generally, the heme-c monomer is similar to the heme-b monomer, with a high frequency of alanine and leucine, followed by a divergence in the frequency of amino acids and therefore a struggle to form any meaningful discussion when it comes to comparing the binding pocket frequencies against background frequencies.
+Generally, the heme-c monomer AA frequency profile appears similar to the heme-b monomer, with a high frequency of alanine and leucine, followed by a divergence in the frequency of amino acids and therefore a struggle to form any meaningful discussion when it comes to comparing the binding pocket frequencies against background frequencies.
 
-\hypertarget{aa-distribution-v.-distance}{%
-\subsubsection{AA Distribution v. Distance}\label{aa-distribution-v.-distance}}
+\hypertarget{distributon-of-amino-acids-by-distance-1}{%
+\subsubsection{Distributon of Amino Acids by Distance}\label{distributon-of-amino-acids-by-distance-1}}
 
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/HEC-AAdist-1.pdf}
-\caption{\label{fig:HEC-AAdist}HEC: AA Distances}
+\caption{\label{fig:HEC-AAdist}HEC: Residue Distribution by Distance}
 \end{figure}
 
-The distribution of amino acids over distance from the heme iron for HEC is similar to HEM, with some exceptions. Cys, His, Tyr again are amongst the closest residues to HEC, likely for the same reasons of very strong polar interactions or coordination. Additionally, cysteine forms covalent, thioester bonds with heme-c, providing further justification for its proximity. However, for heme-c, lysine and methionine also are very proximal. The methionine residues are nonpolar, small, neutral; lysine is polar and positively charged; neither of these residues are favored to be included in the heme-b binding environment despite very similar structures. The reason for their inclusion so close to the binding pocket is therefore unclear, but based on their distribution, and lysine being even more close proximity than heme, the results suggest these two residues may have important roles.
+The distribution of amino acids over distance from the heme iron for HEC is similar to HEM, with some exceptions. Cys, His, Tyr again are amongst the closest residues to HEC, likely for the same reasons of very strong polar interactions or coordination. Additionally, cysteine forms covalent, thioether bonds with heme-c, providing further justification for its proximity. However, for heme-c, lysine and methionine also are very proximal. The methionine residues are nonpolar, small, neutral; lysine is polar and positively charged; neither of these residues are favored to be included in the heme-b binding environment despite very similar structures. The reason for their inclusion so close to the binding pocket is therefore unclear, but based on their distribution, and lysine being even more close proximity than heme, the results suggest these two residues may have important roles.
 
 \hypertarget{verdoheme-1}{%
 \subsection{Verdoheme}\label{verdoheme-1}}
 
+\hypertarget{amino-acid-frequencies-in-binding-pocket-2}{%
+\subsubsection{Amino Acid Frequencies in Binding Pocket}\label{amino-acid-frequencies-in-binding-pocket-2}}
+
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/VERDOHEME-AAfreq-1.pdf}
-\caption{\label{fig:VERDOHEME-AAfreq}VERDOHEME: AA Frequency}
+\caption{\label{fig:VERDOHEME-AAfreq}VERDOHEME: AA Frequency within 7A}
 \end{figure}
 
 \begin{longtable}[t]{lr}
-\caption{\label{tab:VERDOHEME-t-AAfreq}VERDOHEME AA Freq}\\
+\caption{\label{tab:VERDOHEME-t-AAfreq}VERDOHEME: AA Frequency Table within 7A}\\
 \toprule
 Residue & Freq\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:VERDOHEME-t-AAfreq}VERDOHEME AA Freq \textit{(continued)}}\\
+\caption[]{\label{tab:VERDOHEME-t-AAfreq}VERDOHEME: AA Frequency Table within 7A \textit{(continued)}}\\
 \toprule
 Residue & Freq\\
 \midrule
@@ -790,14 +775,14 @@ ILE & 6\\
 \cellcolor{gray!6}{ASP} & \cellcolor{gray!6}{4}\\*
 \end{longtable}
 
-Verdoheme is dissimilar from HEM and HEC above. This is fairly surprising, given that verdoheme is an intermediate in the binding pocket for heme within heme oxygenases. The results discussed below may be attributable to the small sample size of verdoheme PDBs (n=4, combining VEA and VER), and should be appreciated with some skepticism. Nonetheless, the results will be discussed.
+The frequqency of amino acids in the binding pocket for verdoheme is dissimilar from heme-b and heme-c above. This is fairly surprising, given that verdoheme is an intermediate in the binding pocket for heme-b within heme oxygenases.
 
-Leucine and alanine are again most frequent, but after these, results diverge. Tyrosine and arginine are next most frequent - surprising, given that this is still the same pocket that bound heme. The data for heme-b indicate more frequent nonpolar residues before tyrosine. Chemically, it may be that as heme is oxidized, there is greater need for polar interactions; this would help to explain the high frequency of polar residues, but does not explain the shift in amino acid frequencies within what should be a similar binding pocket - all verdoheme PDBs in this in study were sourced from heme oxgenase proteins. Some heme oxygenases are included for heme-b, but they are amongst a diverse set of proteins. Therefore, the heme oxygenase environment may simply be host to more polar residues than normal for hemoproteins. This also agrees with tyrosine's inclusion in redox reactions, and it may be favored to be present in heme oxygenase. A dedicated investigation to the heme binding environment for heme oxygenase may therefore be warranted in future study.
+Leucine and alanine are again most frequent, but after these, results diverge. Tyrosine and arginine are next most frequent - surprising, given that this is still the same pocket that bound heme-b. The data for heme-b indicate more frequent nonpolar residues before tyrosine. Chemically, it may be that as heme-b is oxidized, there is greater need for polar interactions; this would help to explain the high frequency of polar residues, but does not explain the shift in amino acid frequencies within what would be expected to be a similar binding pocket - all verdoheme PDBs in this in study were sourced from heme oxgenase proteins. Some heme oxygenases are included for heme-b, but they are amongst a diverse set of proteins. Therefore, the heme oxygenase environment may simply be host to more polar residues than normal for hemoproteins. This also agrees with tyrosine's inclusion in redox reactions, and it may be favored to be present in heme oxygenase. These results indicate more about the heme oxygenase environment than the verdoheme binding environment - however, these two are inseparable, given verdoheme only appears in heme oxygenase. A dedicated investigation to the heme binding environment for heme oxygenase, may therefore be warranted in future study.
 
 Glycine is the next most frequent - it is in lower frequency, relatively, for heme-b. As with other heme molecules, it is not clear as to what the role of glycine is in binding verdoheme.
 
-\hypertarget{comparison-to-background-freq}{%
-\subsubsection{Comparison to background freq}\label{comparison-to-background-freq}}
+\hypertarget{comparison-with-background-amino-acid-frequencies-2}{%
+\subsubsection{Comparison with Background Amino Acid Frequencies}\label{comparison-with-background-amino-acid-frequencies-2}}
 
 \begin{figure}
 \centering
@@ -807,35 +792,38 @@ Glycine is the next most frequent - it is in lower frequency, relatively, for he
 
 Besides the frequencies of leucine and alanine, which have been found for heme-b and heme-c above to be highly frequent in hemoproteins at large, the frequency profiles for the verdoheme binding environment and monomers is shown to be quite dissimilar, supporting the results for the binding environment as unique, not simply due to background frequency.
 
-\hypertarget{aa-distribution-over-distance}{%
-\subsubsection{AA Distribution over distance}\label{aa-distribution-over-distance}}
+\hypertarget{distributon-of-amino-acids-by-distance-2}{%
+\subsubsection{Distributon of Amino Acids by Distance}\label{distributon-of-amino-acids-by-distance-2}}
 
-The low sample size for verdoheme leads here to a poor figure with few residues plotted. This is likely attributable to an insufficient amount of distances and residues to cross-reference against each other, as occurs for all similar graphs. Regardless, the data that are plotted will be discussed.
+The low sample size for verdoheme leads here to a poor figure with few residues plotted. This is likely attributable to an insufficient amount of distances and residues to cross-reference against each other, an operation that successfully occurs for all similar graphs. Regardless, the data that are plotted will be discussed.
 
-The highly conserved histidine for hemoproteins is exclusively within 5A for verdoheme. This result again suggests that at least some of the data for verdoheme may be highly biased because of the small sample size - heme-b data included a greater range for histidine. The close proximity of glycine to verdoheme is also unexpected and unable to be explained without further study. The remainder of the residues plotted appear to follow the trends seen in for the other types of heme, distance values centered around 6A.
+The highly conserved histidine for hemoproteins is exclusively within 5A for verdoheme. This result again suggests that at least some of the data for verdoheme may be highly biased because of the small sample size - heme-b data included a greater range for histidine. Or, perhaps for heme oxygenases heme is solely present to coordinate the iron atom, leading to all His residues being nearby verdoheme. The close proximity of glycine to verdoheme is also unexpected and unable to be explained without further study. The remainder of the residues plotted appear to follow the trends seen in for the other types of heme, with distance values centered around 6A and unremarkable distributions.
 
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/VERDOHEME-AAdist-1.pdf}
-\caption{\label{fig:VERDOHEME-AAdist}VERDOHEME: AA Distances}
+\caption{\label{fig:VERDOHEME-AAdist}VERDOHEME: Residue Distribution by Distance}
 \end{figure}
 
 \hypertarget{siroheme-1}{%
 \subsection{Siroheme}\label{siroheme-1}}
 
+\hypertarget{amino-acid-frequencies-in-binding-pocket-3}{%
+\subsubsection{Amino Acid Frequencies in Binding Pocket}\label{amino-acid-frequencies-in-binding-pocket-3}}
+
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/SRM-AAfreq-1.pdf}
-\caption{\label{fig:SRM-AAfreq}SRM: AA Frequency}
+\caption{\label{fig:SRM-AAfreq}SRM: AA Frequency within 7A}
 \end{figure}
 
 \begin{longtable}[t]{lr}
-\caption{\label{tab:SRM-t-AAfreq}SRM AA Freq}\\
+\caption{\label{tab:SRM-t-AAfreq}SRM: AA Frequency Table within 7A}\\
 \toprule
 Residue & Freq\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:SRM-t-AAfreq}SRM AA Freq \textit{(continued)}}\\
+\caption[]{\label{tab:SRM-t-AAfreq}SRM: AA Frequency Table within 7A \textit{(continued)}}\\
 \toprule
 Residue & Freq\\
 \midrule
@@ -869,17 +857,17 @@ TRP & 10\\
 GLU & 2\\*
 \end{longtable}
 
-Siroheme, with a structure highly dissimilar to the other heme molecules examined, should be expected to have a different amino acid frequency profile - and indeed we confirm this in our results.
+Siroheme, with a structure highly dissimilar to the other heme molecules examined, should be expected to have a different amino acid frequency profile -- and indeed we confirm this in our results.
 
-Nonpolar residues are not the most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket - what is striking, however is the extreme preference for arginine; such a profile does not exist for the other hemes. This is, however, sensible, siroheme contains propionate groups that likely still form polar interactions with arginine salt bridges, and the carboxyl groups may also form polar interactions with arginine.
+Nonpolar residues are not the most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket -- what is striking, however is the extreme preference for arginine; such a profile does not exist for the other types of heme. This can be at least explained; siroheme contains propionate groups that likely still form polar interactions with arginine salt bridges, and the carboxyl groups may also form polar interactions with arginine, therefore highly favoring arginine's presence in the binding pocket.
 
-Arginine is followed by other polar amino acids: glutamine, cystine, lysine, threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that the trend is not interrupted as for other types of heme. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and ability to form salt bridges that interact with the propionate groups; lysine also has a positive charge and a low pKa but is not capable of the latter interaction. Cysteine is used to coordinate the iron of siroheme, and while this did not significantly affect the frequency for other heme molecules, it is still possible this increases the value for cysteine for siroheme.
+Arginine is followed by other polar amino acids: glutamine, cystine, lysine, threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that the trend is not interrupted by residues of opposing polarity as for other types of heme. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and ability to form salt bridges that interact with the propionate groups; lysine also has a positive charge and is polar, but does not form salt bridge interactions with the propionate groups. Cysteine is used to coordinate the iron of siroheme, and while this did not significantly affect the frequency for other heme molecules, it is still possible this increases the value for cysteine for siroheme.
 
 After this group of polar amino acids, glycine is the next most frequent. Glycine has been situated at about a median frequency for other heme molecules, so perhaps its frequency here, slightly above the median, is of note. Again, for glycine in particular, the reason for its particular frequency cannot be determined from this data, but it appears to have some role.
 
-Finally we come to several nonpolar amino acids: alanine, phenylalanine, and valine. These amino acids define roughly the median of the frequency data. With all the polar groups on siroheme, it might be expected that only polar interactions would be desirable. However, the not miniscule frequency of these residues suggests nonpolar interactions still occur in the binding pocket; the porphyrin ring remains, as well as methyl groups and the small nonpolar portion of the carboxyl and propionate groups. It is perhaps in these areas that the nonpolar residues interact.
+Finally we come to several nonpolar amino acids: alanine, phenylalanine, and valine. These amino acids define roughly the median of the frequency data. With all the polar groups on siroheme, it might be expected that only polar interactions would be desirable. However, the not minuscule frequency of these residues suggests nonpolar interactions still occur in the binding pocket; the porphyrin ring remains, as well as some methyl groups.
 
-After these nonpolar residues the remaining frequencies do not follow a clear trend but regardless are discussed. After aspartate the remaining frequencies are considerably lower. This may be an artefact of a small sample size, or may suggest the remaining residues form, if any, less favorable interactions with the heme.
+After these nonpolar residues the remaining frequencies do not follow a clear trend but regardless are discussed. After aspartate the remaining frequencies are considerably lower. This may be an artefact of a small sample size, or may suggest the remaining residues form, if any, far less favorable interactions with the heme.
 
 Aspartate appears next most frequently; it is a polar, negatively charged amino acid (at pH 7). Siroheme is saturated with other electronegative groups; perhaps there is some repulsion between these groups and aspartate -- this could explain why, despite being a polar residue, arginine does not appear very frequently in the binding pocket.
 
@@ -889,12 +877,12 @@ Serine appears just less frequently than leucine, and in this context may likely
 
 Histidine appears quite infrequently. As with siroheme, other, more strongly polar and perhaps less bulky residues are likely preferred.
 
-Tryptophan is the least frequent nonpolar residue. The presence of a weak hydrogen bond and its size may preclude its inclusion in the binding pocket in lieu of more uniformly nonpolar residues that take up less space.
+Tryptophan is the least frequent nonpolar residue. The presence of a weak hydrogen bond and its size may preclude its inclusion in the binding pocket in lieu of more uniformly nonpolar residues that take up less space and can better form interactions with the few nonpolar areas of siroheme.
 
 Tyrosine and glutamate are the least frequent polar residues. This is in stark opposition to the other heme molecules - tyrosine seemed to be favored for other heme molecules to form interactions with the propionate groups. Glutamate is also extremely infrequent, even in spite of its similarity to aspartate. Both are electronegative at pH 7 - glutamate's extra carbon may provide sufficient steric hindrance to render it less favored. In either case, the infrequency of these residues and the tendencies of other, more intensely polar or nonpolar amino acids to be more populous, suggests tyrosine and glutamate, in the siroheme binding environment, do not interact strongly enough to be favored over other polar residues.
 
-\hypertarget{comparing-to-srm-aa-background-freq}{%
-\subsubsection{Comparing to SRM AA Background Freq}\label{comparing-to-srm-aa-background-freq}}
+\hypertarget{comparison-with-background-amino-acid-frequencies-3}{%
+\subsubsection{Comparison with Background Amino Acid Frequencies}\label{comparison-with-background-amino-acid-frequencies-3}}
 
 \begin{figure}
 \centering
@@ -902,38 +890,116 @@ Tyrosine and glutamate are the least frequent polar residues. This is in stark o
 \caption{\label{fig:SRM-AAfreqAll}SRM: AA Frequency of Monomer}
 \end{figure}
 
-Compared to the other heme molecules, siroheme's binding pocket amino acid frequencies are even more different than the background frequencies. Arginine is far and away the most frequent amino acid in the binding pocket; leucine is the most populous amino acid in the monomer overall, seeming to follow a trend amongst the hemoproteins examined so far. Again, discussing the remainder of the frequencies of the monomer would be pure conjecture, but it is worthwhile to note that the pocket frequencies appear unique against the background.
+Compared to the other heme molecules, siroheme's binding pocket amino acid frequencies are even more different than the background frequencies. Arginine is far and away the most frequent amino acid in the binding pocket; leucine is the most populous amino acid in the monomer overall, seeming to follow a trend amongst the hemoproteins examined so far. Again, discussing the remainder of the frequencies of the monomer would be conjecture, but it is worthwhile to note that the pocket frequencies appear unique against the background.
 
-\hypertarget{distance-stuff}{%
-\subsubsection{Distance stuff}\label{distance-stuff}}
+\hypertarget{distributon-of-amino-acids-by-distance-3}{%
+\subsubsection{Distributon of Amino Acids by Distance}\label{distributon-of-amino-acids-by-distance-3}}
 
 Residues appear less uniformly distributed over distance for siroheme binding pockets when compared against the distribution for other heme molecules. Cysteine is the only residue that comes within 5A of siroheme; it is used to coordinate the iron in siroheme, so this result is expected. The lack of other residues being within 5A, differing from other heme molecules, suggests the many carboxyl and propionate groups on siroheme prevent, or preclude the need for closer interaction except for coordinating residues.
 
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/SRM-AAdist-1.pdf}
-\caption{\label{fig:SRM-AAdist}SRM: AA Distances}
+\caption{\label{fig:SRM-AAdist}SRM: Residue Distribution by Distance}
 \end{figure}
 
-\hypertarget{volume-discussion}{%
-\section{Volume Discussion}\label{volume-discussion}}
+\hypertarget{volume-of-heme-binding-pockets}{%
+\section{Volume of Heme Binding Pockets}\label{volume-of-heme-binding-pockets}}
 
-Figures can be found in Appendix \ref{figs-vol}.
+Figures are shown below.
 
 Volume results were rather spread out, with close agreement only found for heme-b. In general, volume for all heme molecules regardless of distance cutoff centered at approximately 1200 A³. This result may be useful in protein engineering efforts, especially for selection or design of binding pockets.
 
-\hypertarget{surface-areas}{%
-\section{Surface Areas}\label{surface-areas}}
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEM-Volume-1.pdf}
+\caption{\label{fig:HEM-Volume}HEM: Volume}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEC-Volume-1.pdf}
+\caption{\label{fig:HEC-Volume}HEC: Volume}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/SRM-Volume-1.pdf}
+\caption{\label{fig:SRM-Volume}SRM: Volume}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/VERDOHEME-Volume-1.pdf}
+\caption{\label{fig:VERDOHEME-Volume}VERDOHEME: Volume}
+\end{figure}
+
+\hypertarget{surface-areas-of-heme-molecules-and-their-binding-pockets}{%
+\section{Surface Areas of Heme Molecules and Their Binding Pockets}\label{surface-areas-of-heme-molecules-and-their-binding-pockets}}
 
 \hypertarget{surface-area-of-heme-molecules}{%
 \subsection{Surface Area of Heme Molecules}\label{surface-area-of-heme-molecules}}
 
-Both solvent accessible and solvent excluded surface areas were calculated for heme molecules and binding pockets. The differences between these two measures was discussed in Section (FIXME). The results are extremely similar for solvent accessible and solvent excluded surface areas; and therefore only solvent accessible surface area, a measure more practically interpreted into chemical phenomena, is discussed below. Figures and data for solvent excluded surface areas are available in Appendix (FIXME: insert reference).
+Both solvent accessible and solvent excluded surface areas were calculated for heme molecules and binding pockets. The differences between these two measures were discussed in Section \ref{SAmethods}. The results are extremely similar for solvent accessible and solvent excluded surface areas; and therefore only solvent accessible surface area, a measure more practically interpreted into chemical phenomena, is discussed below. Figures and data for solvent excluded surface areas are available in Appendix \ref{figs-ligExcSA}, \ref{figs-pocketExcSA}, and \ref{a-VSA}. Solvent accessible surface area figures are shown below; data tables are available in Appendix \ref{a-VSA}.
 
 The solvent accessible surface area for all heme \emph{molecules} themselves centers around values of 1000 A². This result is reasonable, given the similarity in size and structure of all heme molecules, in spite of the attached groups. Figures are shown below; extreme outliers have been removed from these figures but full data tables are available in (FIXME add appendix number). The outliers are likely artefacts of the method used to calculate surface area and potential conflicts with the method used to convert multimeric proteins to monomers.
 
+\hypertarget{figs-ligAccSA}{%
+\section{Ligand Solvent Accessible Surface Area}\label{figs-ligAccSA}}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEM-Ligand-AccessibleSA-1.pdf}
+\caption{\label{fig:HEM-Ligand-AccessibleSA}HEM: Ligand Accessible Surface Area}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEC-Ligand-AccessibleSA-1.pdf}
+\caption{\label{fig:HEC-Ligand-AccessibleSA}HEC: Ligand Accessible Surface Area}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/SRM-Ligand-AccessibleSA-1.pdf}
+\caption{\label{fig:SRM-Ligand-AccessibleSA}SRM: Ligand Accessible Surface Area}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/VERDOHEME-Ligand-AccessibleSA-1.pdf}
+\caption{\label{fig:VERDOHEME-Ligand-AccessibleSA}VERDOHEME: Ligand Accessible Surface Area}
+\end{figure}
+
 \hypertarget{surface-area-of-binding-pockets}{%
-\section{Surface Area of Binding Pockets}\label{surface-area-of-binding-pockets}}
+\subsection{Surface Area of Binding Pockets}\label{surface-area-of-binding-pockets}}
+
+\hypertarget{figs-pocketAccSA}{%
+\section{Pocket Solvent Accessible Surface Area}\label{figs-pocketAccSA}}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEM-Pocket-AccessibleSA-1.pdf}
+\caption{\label{fig:HEM-Pocket-AccessibleSA}HEM: Pocket Accessible Surface Area}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/HEC-Pocket-AccessibleSA-1.pdf}
+\caption{\label{fig:HEC-Pocket-AccessibleSA}HEC: Pocket Accessible Surface Area}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/SRM-Pocket-AccessibleSA-1.pdf}
+\caption{\label{fig:SRM-Pocket-AccessibleSA}SRM: Pocket Accessible Surface Area}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/VERDOHEME-Pocket-AccessibleSA-1.pdf}
+\caption{\label{fig:VERDOHEME-Pocket-AccessibleSA}VERDOHEME: Pocket Accessible Surface Area}
+\end{figure}
 
 The surface area of binding pockets is more varied than the heme surface areas.
 
@@ -946,30 +1012,30 @@ The surface area of siroheme's binding pocket is far greater than that for other
 \hypertarget{angular-data}{%
 \section{Angular Data}\label{angular-data}}
 
-As briefly mentioned in the introduction, angular data was generated but will not be discussed extensively. Figures and data tables may be found in Appendix (FIXME). Amongst the results are tight distributions of planar angles and CA-CB-Fe angles for some residues nearby and far away from heme; but much of the data demonstrates a broad range of angles that may be formed. The data may be useful for protein engineering and residue placement, but cannot be productively discussed and are therefore relegated to the appendices.
+As briefly mentioned in the introduction, angular data was generated but will not be discussed extensively. Figures may be found in Appendix \ref{figs-planarAll} and \ref{figs-cabAll} data tables may be found in Appendix \ref{a-planarTab} and \ref{a-cabTab}. Amongst the results are tight distributions of planar angles and CA-CB-Fe angles for some residues; but much of the data demonstrates a broad range of angles that may be formed. The data may be useful for protein engineering and residue placement, but cannot be productively discussed and are therefore relegated to the appendices.
 
 \hypertarget{limitations-of-the-study}{%
 \section{Limitations of the Study}\label{limitations-of-the-study}}
 
-A high throughput framework was built to conduct this study. However, guaranteeing the quality of PDBs to enable the scripts to functon properly proved challenging, and the sample size is small, although diverse. This problem only exists for heme-b and heme-c -- for siroheme and verdoheme, all structures in the PDB capable of being used, were used. Heme-b and heme-c would only require more trial and error, or preprocessing, to be input to the framework that has been built.
+A high throughput framework was built to conduct this study. However, guaranteeing the quality of PDBs to enable the scripts to function properly proved challenging, and the sample size is small, although diverse. This problem only exists for heme-b and heme-c -- for siroheme and verdoheme, all structures in the PDB capable of being used, were used. Heme-b and heme-c would only require more trial and error, or pre-processing, to be input to the framework that has been built.
 
-Although many hypotheses have been suggested in the discussion to explain the data, limited experimental data exists to confirm them. Future work may include wet lab experiments to confirm these hypotheses, such as mutating several hemoproteins to contain higher or lower pecentages of nonpolar residues in the binding pocket, and observing how the binding of heme is affected.
+Although many hypotheses have been suggested in the discussion to explain the data, limited experimental data exists to confirm them. Future work may include wet lab experiments to confirm these hypotheses, such as mutating several hemoproteins to contain higher or lower percentages of nonpolar residues in the binding pocket, and observing how the binding of heme is affected.
 
 Some of these data could also be analyzed more thoroughly, for example eliminating the coordinating amino acids from the amino acid frequency data. This was not possible here due to how the framework is constructed: coordinating residues are not identified, nor is a definition proposed to identify coordinating residues. Manual input of known coordinating residues would be necessary to be certain that they could be eliminated from the final dataset analyzed, but this was beyond the scope of this study.
 
-UCSF-Chimera was used to generate all data used in this study; many algorithms have remained unchanged for some time (surface area calculations are sourced from MSMS (1996) and volume calculations from surfnet (1995)). It would be ideal to compare with any new algorithms that are developed to calculate surface area or volume, or with any experimental data that may be used confirm these numbers.
+UCSF-Chimera was used to generate all data used in this study; many algorithms have remained unchanged for some time (surface area calculations are sourced from MSMS (1996) and volume calculations from Surfnet (1995)). It would be well to compare with any new algorithms that are developed to calculate surface area or volume, or with any experimental data that may be used confirm these numbers.
 
 The reason being for this desired orthogonality is that the algorithms themselves may certainly introduce bias based off how they work. Surfnet generates 3D-contour surfaces to identify cavities; in practice, many small ``bubbles'' or insignificant cavities were generated in the study, and are filtered out during analysis -- the parameters chosen can also significantly influence the behavior of the algorithm; in this study, the default parameters appeared to generate the most reasonable binding pocket. But this assessment is based off subjective visual observation by the author, and therefore introduces further bias. One may expect applying the same algorithm with the same parameters to many PDBs may at least introduce the same bias to all samples, but the algorithm may distort some PDBs more than others depending on the shape and size of their binding pocket.
 
 \adjustmtc
-\markboth{Methods}{}
+\markboth{Conclusion}{}
 
 \hypertarget{conclusion}{%
 \chapter{Conclusion}\label{conclusion}}
 
 A knowledge gap in the binding environment for heme exists in the present literature. A high-throughput framework employing UCSF Chimera was constructed to process diverse sets of hemoproteins and output information about their binding pockets: amino acid frequencies and distances from heme, volume, surface area, angles. Data was gathered and predicted from representative and varied datasets for heme-b, heme-c, verdoheme, and siroheme, and their respective hemoproteins. R was used to analyze all data.
 
-The results of this study are suggest that binding pockets for hemoproteins have some requirements for binding that may have been overlooked to date. The data and their trends observed in this study demonstrate several phenomena.
+The results of this study suggest that binding pockets for hemoproteins have some requirements for binding that may have been overlooked to date. The data and their trends observed in this study demonstrate several phenomena.
 
 First, the heme binding environments for heme-b, heme-c, and verdoheme contain high populations of nonpolar amino acids, suggesting nonpolar interactions may be of greater importance than previously thought to providing the necessary interactions to bind heme. The binding environment for siroheme, by contrast, is shown to be extremely enriched with polar amino acids, which is not very surprising; but this binding environment also still contains many nonpolar amino acids, reinforcing the idea that the polar interactions for all heme molecules, while necessary, may be insufficient for heme binding.
 
@@ -977,7 +1043,7 @@ Second, most of the volume data for the binding pockets of all heme molecules ce
 
 Additionally, the seeming conservation of the volume size but the variety in pocket surface areas demonstrates that while the heme molecules may be of similar size and, besides attached groups, similar structure, the attached groups will significantly affect what interactions occur in the binding pockets, and therefore the shape and exposure to solvent in the binding pockets. Siroheme is strongly polar and its binding pocket has a large surface area and is therefore highly solvent exposed, as compared to heme-b which has more nonpolar groups that must be buried and therefore requiring a smaller surface area.
 
-Finally, angular data were generated; but the phenomena observed, such as some residues having tight ranges of angles in relation to heme or the heme iron, cannot be interpreted as useful results, except perhaps for some protein engineering efforts that may have interest in the range of possible angles for a specific residue.
+Finally, angular data were generated; but the phenomena observed, such as some residues having tight ranges of angles in relation to heme or the heme iron, cannot be interpreted as useful results, except perhaps for some protein engineering efforts that may have interest in the range or distribution of possible angles for a specific residue.
 
 These results may be useful for the rational design of hemoproteins, with the importance of nonpolar interactions in particular likely of great interest. The framework constructed for this study can be applied to any list of PDBs and their respective ligands, thereby facilitating similar research for other proteins.
 
@@ -985,8 +1051,6 @@ These results may be useful for the rational design of hemoproteins, with the im
 
 \hypertarget{a-figures}{%
 \chapter{Figures}\label{a-figures}}
-
-\minitoc
 
 \hypertarget{figs-aaFreqOverlaid}{%
 \section{AA Frequency}\label{figs-aaFreqOverlaid}}
@@ -1013,33 +1077,6 @@ These results may be useful for the rational design of hemoproteins, with the im
 \centering
 \includegraphics{_main_files/figure-latex/VERDOHEME-AAfreqOverlaid-1.pdf}
 \caption{\label{fig:VERDOHEME-AAfreqOverlaid}VERDOHEME: AA Frequency}
-\end{figure}
-
-\hypertarget{figs-vol}{%
-\section{Volume}\label{figs-vol}}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEM-Volume-1.pdf}
-\caption{\label{fig:HEM-Volume}HEM: Volume}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEC-Volume-1.pdf}
-\caption{\label{fig:HEC-Volume}HEC: Volume}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/SRM-Volume-1.pdf}
-\caption{\label{fig:SRM-Volume}SRM: Volume}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/VERDOHEME-Volume-1.pdf}
-\caption{\label{fig:VERDOHEME-Volume}VERDOHEME: Volume}
 \end{figure}
 
 \hypertarget{figs-ligExcSA}{%
@@ -1069,33 +1106,6 @@ These results may be useful for the rational design of hemoproteins, with the im
 \caption{\label{fig:VERDOHEME-Ligand-ExcludedSA}VERDOHEME: Ligand Excluded Suface Area}
 \end{figure}
 
-\hypertarget{figs-ligAccSA}{%
-\section{Ligand Accessible Surface Area}\label{figs-ligAccSA}}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEM-Ligand-AccessibleSA-1.pdf}
-\caption{\label{fig:HEM-Ligand-AccessibleSA}HEM: Ligand Accessible Surface Area}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEC-Ligand-AccessibleSA-1.pdf}
-\caption{\label{fig:HEC-Ligand-AccessibleSA}HEC: Ligand Accessible Surface Area}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/SRM-Ligand-AccessibleSA-1.pdf}
-\caption{\label{fig:SRM-Ligand-AccessibleSA}SRM: Ligand Accessible Surface Area}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/VERDOHEME-Ligand-AccessibleSA-1.pdf}
-\caption{\label{fig:VERDOHEME-Ligand-AccessibleSA}VERDOHEME: Ligand Accessible Surface Area}
-\end{figure}
-
 \hypertarget{figs-pocketExcSA}{%
 \section{Pocket Excluded Surface Area}\label{figs-pocketExcSA}}
 
@@ -1121,33 +1131,6 @@ These results may be useful for the rational design of hemoproteins, with the im
 \centering
 \includegraphics{_main_files/figure-latex/VERDOHEME-Pocket-ExcludedSA-1.pdf}
 \caption{\label{fig:VERDOHEME-Pocket-ExcludedSA}VERDOHEME: Pocket Excluded Surface Area}
-\end{figure}
-
-\hypertarget{figs-pocketAccSA}{%
-\section{Pocket Accessible Surface Area}\label{figs-pocketAccSA}}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEM-Pocket-AccessibleSA-1.pdf}
-\caption{\label{fig:HEM-Pocket-AccessibleSA}HEM: Pocket Accessible Surface Area}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEC-Pocket-AccessibleSA-1.pdf}
-\caption{\label{fig:HEC-Pocket-AccessibleSA}HEC: Pocket Accessible Surface Area}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/SRM-Pocket-AccessibleSA-1.pdf}
-\caption{\label{fig:SRM-Pocket-AccessibleSA}SRM: Pocket Accessible Surface Area}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/VERDOHEME-Pocket-AccessibleSA-1.pdf}
-\caption{\label{fig:VERDOHEME-Pocket-AccessibleSA}VERDOHEME: Pocket Accessible Surface Area}
 \end{figure}
 
 \hypertarget{figs-planarAll}{%
@@ -1177,33 +1160,6 @@ These results may be useful for the rational design of hemoproteins, with the im
 \caption{\label{fig:VERDOHEME-planarAll}VERDOHEME: All Planar Angles}
 \end{figure}
 
-\hypertarget{figs-planarClosest}{%
-\section{Planar Angles of Closest Residues}\label{figs-planarClosest}}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEM-planarClosest-1.pdf}
-\caption{\label{fig:HEM-planarClosest}HEM: Planar Angles of Closest Residues}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEC-planarClosest-1.pdf}
-\caption{\label{fig:HEC-planarClosest}HEC: Planar Angles of Closest Residues}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/SRM-planarClosest-1.pdf}
-\caption{\label{fig:SRM-planarClosest}SRM: Planar Angles of Closest Residues}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/VERDOHEME-planarClosest-1.pdf}
-\caption{\label{fig:VERDOHEME-planarClosest}VERDOHEME: Planar Angles of Closest Residues}
-\end{figure}
-
 \hypertarget{figs-cabAll}{%
 \section{All CA-CB-Fe Angles}\label{figs-cabAll}}
 
@@ -1231,37 +1187,8 @@ These results may be useful for the rational design of hemoproteins, with the im
 \caption{\label{fig:VERDOHEME-cab-All}VERDOHEME: All CA-CB-Fe Angles}
 \end{figure}
 
-\hypertarget{figs-cabClosest}{%
-\section{CA-CB-Fe Angles of Closest Residues}\label{figs-cabClosest}}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEM-cabClosest-1.pdf}
-\caption{\label{fig:HEM-cabClosest}HEM: CACBFe Angles of Closest Residues}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/HEC-cabClosest-1.pdf}
-\caption{\label{fig:HEC-cabClosest}HEC: CACBFe Angles of Closest Residues}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/SRM-cabClosest-1.pdf}
-\caption{\label{fig:SRM-cabClosest}SRM: CACBFe Angles of Closest Residues}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/VERDOHEME-cabClosest-1.pdf}
-\caption{\label{fig:VERDOHEME-cabClosest}VERDOHEME: CACBFe Angles of Closest Residues}
-\end{figure}
-
 \hypertarget{a-tables}{%
 \chapter{Tables}\label{a-tables}}
-
-\minitoc
 
 \hypertarget{molOrgSec}{%
 \section{Molecule Names and Source Organisms}\label{molOrgSec}}
@@ -1431,6 +1358,163 @@ These results may be useful for the rational design of hemoproteins, with the im
 \cellcolor{gray!6}{1TWN} & \cellcolor{gray!6}{HEME OXYGENASE 1;} & \cellcolor{gray!6}{HOMO SAPIENS;}\\
 1TWR & HEME OXYGENASE 1; & HOMO SAPIENS;\\*
 \end{longtabu}
+
+\hypertarget{aaFreq5}{%
+\section{Amino Acid Frequencies at 5A Distance Cutoff}\label{aaFreq5}}
+
+\begin{longtable}[t]{lr}
+\caption{\label{tab:HEM-t-AAfreq5}HEM AA Freq, Cutoff 5A}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:HEM-t-AAfreq5}HEM AA Freq, Cutoff 5A \textit{(continued)}}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{153}\\
+LEU & 152\\
+\cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{97}\\
+ILE & 97\\
+\cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{97}\\
+\addlinespace
+VAL & 97\\
+\cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{95}\\
+ALA & 87\\
+\cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{70}\\
+SER & 64\\
+\addlinespace
+\cellcolor{gray!6}{THR} & \cellcolor{gray!6}{60}\\
+LYS & 49\\
+\cellcolor{gray!6}{MET} & \cellcolor{gray!6}{46}\\
+GLN & 37\\
+\cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{37}\\
+\addlinespace
+ASP & 36\\
+\cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{35}\\
+ASN & 33\\
+\cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{31}\\
+CYS & 12\\*
+\end{longtable}
+
+\begin{longtable}[t]{lr}
+\caption{\label{tab:HEC-t-AAfreq5}HEC AA Freq}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:HEC-t-AAfreq5}HEC AA Freq \textit{(continued)}}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{48}\\
+PHE & 29\\
+\cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{27}\\
+GLY & 26\\
+\cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{23}\\
+\addlinespace
+VAL & 23\\
+\cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{18}\\
+HIS & 18\\
+\cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{18}\\
+MET & 18\\
+\addlinespace
+\cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{17}\\
+ILE & 17\\
+\cellcolor{gray!6}{THR} & \cellcolor{gray!6}{17}\\
+PRO & 15\\
+\cellcolor{gray!6}{SER} & \cellcolor{gray!6}{15}\\
+\addlinespace
+GLN & 10\\
+\cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{9}\\
+ASN & 8\\
+\cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{6}\\
+ASP & 1\\*
+\end{longtable}
+
+\begin{longtable}[t]{lr}
+\caption{\label{tab:VERDOHEME-t-AAfreq5}VERDOHEME AA Freq}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:VERDOHEME-t-AAfreq5}VERDOHEME AA Freq \textit{(continued)}}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{9}\\
+ARG & 8\\
+\cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{8}\\
+PHE & 8\\
+\cellcolor{gray!6}{SER} & \cellcolor{gray!6}{7}\\
+\addlinespace
+ALA & 6\\
+\cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5}\\
+ASN & 4\\
+\cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{4}\\
+HIS & 4\\
+\addlinespace
+\cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4}\\
+TYR & 4\\
+\cellcolor{gray!6}{GLN} & \cellcolor{gray!6}{3}\\
+THR & 3\\
+\cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{2}\\
+\addlinespace
+ILE & 1\\*
+\end{longtable}
+
+\begin{longtable}[t]{lr}
+\caption{\label{tab:SRM-t-AAfreq5}SRM AA Freq}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:SRM-t-AAfreq5}SRM AA Freq \textit{(continued)}}\\
+\toprule
+Residue & Freq\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{65}\\
+GLN & 32\\
+\cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{32}\\
+THR & 30\\
+\cellcolor{gray!6}{ASN} & \cellcolor{gray!6}{28}\\
+\addlinespace
+CYS & 28\\
+\cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{25}\\
+SER & 19\\
+\cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{18}\\
+GLY & 18\\
+\addlinespace
+\cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{13}\\
+LEU & 9\\
+\cellcolor{gray!6}{MET} & \cellcolor{gray!6}{9}\\
+HIS & 3\\
+\cellcolor{gray!6}{PRO} & \cellcolor{gray!6}{3}\\
+\addlinespace
+VAL & 3\\
+\cellcolor{gray!6}{ASP} & \cellcolor{gray!6}{2}\\
+TYR & 2\\*
+\end{longtable}
 
 \hypertarget{distances}{%
 \section{Distances}\label{distances}}
@@ -6199,16 +6283,19 @@ These results may be useful for the rational design of hemoproteins, with the im
 \cellcolor{gray!6}{1TWN} & \cellcolor{gray!6}{135} & \cellcolor{gray!6}{THR} & \cellcolor{gray!6}{6.865192}\\*
 \end{longtabu}
 
-\hypertarget{volume-and-surface-areas}{%
-\section{Volume and Surface Areas}\label{volume-and-surface-areas}}
+\hypertarget{a-VSA}{%
+\section{Volume and Surface Areas}\label{a-VSA}}
+
+\hypertarget{tables-of-volume-and-surface-areas-distance-cutoff-7a}{%
+\subsection{Tables of Volume and Surface Areas, Distance Cutoff 7A}\label{tables-of-volume-and-surface-areas-distance-cutoff-7a}}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
-\caption{\label{tab:HEM-volSA}HEM: Volume and Surface Areas}\\
+\caption{\label{tab:HEM-volSA7}HEM: Volume and Surface Areas, Cutoff 7A}\\
 \toprule
 \rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{HEM\_Excluded\_SA} & \rotatebox{45}{HEM\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:HEM-volSA}HEM: Volume and Surface Areas \textit{(continued)}}\\
+\caption[]{\label{tab:HEM-volSA7}HEM: Volume and Surface Areas, Cutoff 7A \textit{(continued)}}\\
 \toprule
 \rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{HEM\_Excluded\_SA} & \rotatebox{45}{HEM\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
 \midrule
@@ -6289,12 +6376,12 @@ These results may be useful for the rational design of hemoproteins, with the im
 \end{longtabu}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
-\caption{\label{tab:HEC-volSA}HEC: Volume and Surface Areas}\\
+\caption{\label{tab:HEC-volSA7}HEC: Volume and Surface Areas, Cutoff 7A}\\
 \toprule
 \rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{HEC\_Excluded\_SA} & \rotatebox{45}{HEC\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:HEC-volSA}HEC: Volume and Surface Areas \textit{(continued)}}\\
+\caption[]{\label{tab:HEC-volSA7}HEC: Volume and Surface Areas, Cutoff 7A \textit{(continued)}}\\
 \toprule
 \rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{HEC\_Excluded\_SA} & \rotatebox{45}{HEC\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
 \midrule
@@ -6321,12 +6408,12 @@ These results may be useful for the rational design of hemoproteins, with the im
 \end{longtabu}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
-\caption{\label{tab:SRM-volSA}SRM: Volume and Surface Areas}\\
+\caption{\label{tab:SRM-volSA7}SRM: Volume and Surface Areas, Cutoff 7A}\\
 \toprule
 \rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{SRM\_Excluded\_SA} & \rotatebox{45}{SRM\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:SRM-volSA}SRM: Volume and Surface Areas \textit{(continued)}}\\
+\caption[]{\label{tab:SRM-volSA7}SRM: Volume and Surface Areas, Cutoff 7A \textit{(continued)}}\\
 \toprule
 \rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{SRM\_Excluded\_SA} & \rotatebox{45}{SRM\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
 \midrule
@@ -6348,12 +6435,12 @@ These results may be useful for the rational design of hemoproteins, with the im
 \end{longtabu}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
-\caption{\label{tab:VERDOHEME-volSA}VERDOHEME: Volume and Surface Areas}\\
+\caption{\label{tab:VERDOHEME-volSA7}VERDOHEME: Volume and Surface Areas, Cutoff 7A}\\
 \toprule
 \rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{VERDOHEME\_EXCLUDED\_SA} & \rotatebox{45}{VERDOHEME\_ACCESSIBLE\_SA} & \rotatebox{45}{POCKET\_EXCLUDED\_SA} & \rotatebox{45}{POCKET\_ACCESSIBLE\_SA}\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:VERDOHEME-volSA}VERDOHEME: Volume and Surface Areas \textit{(continued)}}\\
+\caption[]{\label{tab:VERDOHEME-volSA7}VERDOHEME: Volume and Surface Areas, Cutoff 7A \textit{(continued)}}\\
 \toprule
 \rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{VERDOHEME\_EXCLUDED\_SA} & \rotatebox{45}{VERDOHEME\_ACCESSIBLE\_SA} & \rotatebox{45}{POCKET\_EXCLUDED\_SA} & \rotatebox{45}{POCKET\_ACCESSIBLE\_SA}\\
 \midrule
@@ -6368,8 +6455,177 @@ These results may be useful for the rational design of hemoproteins, with the im
 1TWR & 1426 & 469.982 & 783.313 & 9854.01 & 10775.6\\*
 \end{longtabu}
 
-\hypertarget{all-planar-angles}{%
-\section{All Planar Angles}\label{all-planar-angles}}
+\hypertarget{tables-of-volume-and-surface-areas-distance-cutoff-5a}{%
+\subsection{Tables of Volume and Surface Areas, Distance Cutoff 5A}\label{tables-of-volume-and-surface-areas-distance-cutoff-5a}}
+
+\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\caption{\label{tab:HEM-volSA5}HEM: Volume and Surface Areas, Cutoff 5A}\\
+\toprule
+\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{HEM\_Excluded\_SA} & \rotatebox{45}{HEM\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:HEM-volSA5}HEM: Volume and Surface Areas, Cutoff 5A \textit{(continued)}}\\
+\toprule
+\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{HEM\_Excluded\_SA} & \rotatebox{45}{HEM\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{1B2V} & \cellcolor{gray!6}{825.86} & \cellcolor{gray!6}{502.042} & \cellcolor{gray!6}{820.988} & \cellcolor{gray!6}{7276.09} & \cellcolor{gray!6}{8232.60}\\
+1B5M & 644.19 & 490.050 & 800.780 & 4695.01 & 5512.20\\
+\cellcolor{gray!6}{1DK0} & \cellcolor{gray!6}{873.82} & \cellcolor{gray!6}{505.258} & \cellcolor{gray!6}{837.157} & \cellcolor{gray!6}{7237.94} & \cellcolor{gray!6}{8217.58}\\
+1DKH & 910.74 & 509.042 & 828.131 & 7402.34 & 8175.94\\
+\cellcolor{gray!6}{1ICC} & \cellcolor{gray!6}{904.56} & \cellcolor{gray!6}{499.585} & \cellcolor{gray!6}{811.357} & \cellcolor{gray!6}{5079.72} & \cellcolor{gray!6}{6028.23}\\
+\addlinespace
+1IPH & 976.97 & 501.603 & 814.652 & 33983.80 & 34094.40\\
+\cellcolor{gray!6}{1N45} & \cellcolor{gray!6}{836.59} & \cellcolor{gray!6}{560.384} & \cellcolor{gray!6}{983.238} & \cellcolor{gray!6}{9944.50} & \cellcolor{gray!6}{10779.30}\\
+1P3T & 930.51 & 509.939 & 829.611 & 9530.67 & 10410.80\\
+\cellcolor{gray!6}{1QHU} & \cellcolor{gray!6}{1214.00} & \cellcolor{gray!6}{573.686} & \cellcolor{gray!6}{1002.160} & \cellcolor{gray!6}{18503.10} & \cellcolor{gray!6}{18257.20}\\
+1QJS & 1093.20 & 573.266 & 1000.380 & 18588.40 & 18584.10\\
+\addlinespace
+\cellcolor{gray!6}{1SI8} & \cellcolor{gray!6}{762.27} & \cellcolor{gray!6}{646.643} & \cellcolor{gray!6}{1184.070} & \cellcolor{gray!6}{23711.20} & \cellcolor{gray!6}{25120.40}\\
+1SY2 & 898.89 & 501.850 & 817.749 & 8960.76 & 9610.23\\
+\cellcolor{gray!6}{1U9U} & \cellcolor{gray!6}{677.19} & \cellcolor{gray!6}{496.132} & \cellcolor{gray!6}{813.773} & \cellcolor{gray!6}{4675.76} & \cellcolor{gray!6}{5632.32}\\
+1VGI & 820.91 & 577.234 & 1002.530 & 9615.29 & 10248.20\\
+\cellcolor{gray!6}{1ZVI} & \cellcolor{gray!6}{994.62} & \cellcolor{gray!6}{701.091} & \cellcolor{gray!6}{1129.540} & \cellcolor{gray!6}{19918.60} & \cellcolor{gray!6}{20968.20}\\
+\addlinespace
+2BHJ & 1183.70 & 836.576 & 1290.530 & 20102.30 & 20762.60\\
+\cellcolor{gray!6}{2CJ0} & \cellcolor{gray!6}{798.44} & \cellcolor{gray!6}{2653.180} & \cellcolor{gray!6}{4835.280} & \cellcolor{gray!6}{12749.60} & \cellcolor{gray!6}{12892.20}\\
+2CN4 & 439.81 & 576.760 & 961.348 & 9617.23 & 11917.70\\
+\cellcolor{gray!6}{2CPO} & \cellcolor{gray!6}{884.75} & \cellcolor{gray!6}{1846.490} & \cellcolor{gray!6}{3329.540} & \cellcolor{gray!6}{13081.60} & \cellcolor{gray!6}{12995.60}\\
+2E2Y & 902.38 & 811.270 & 1607.370 & 7531.94 & 8240.75\\
+\addlinespace
+\cellcolor{gray!6}{2FC2} & \cellcolor{gray!6}{1048.40} & \cellcolor{gray!6}{1011.190} & \cellcolor{gray!6}{1669.900} & \cellcolor{gray!6}{18383.50} & \cellcolor{gray!6}{18552.10}\\
+2IIZ & 925.88 & 731.342 & 1393.160 & 13651.70 & 14031.40\\
+\cellcolor{gray!6}{2IPS} & \cellcolor{gray!6}{935.82} & \cellcolor{gray!6}{618.252} & \cellcolor{gray!6}{1075.560} & \cellcolor{gray!6}{27760.50} & \cellcolor{gray!6}{25814.10}\\
+2J0P & 925.87 & 1030.510 & 1873.810 & 15192.90 & 15871.10\\
+\cellcolor{gray!6}{2J18} & \cellcolor{gray!6}{788.31} & \cellcolor{gray!6}{1962.990} & \cellcolor{gray!6}{3556.340} & \cellcolor{gray!6}{12675.10} & \cellcolor{gray!6}{12779.00}\\
+\addlinespace
+2O6P & 675.40 & 499.017 & 822.121 & 6234.84 & 7200.43\\
+\cellcolor{gray!6}{2Q6N} & \cellcolor{gray!6}{971.08} & \cellcolor{gray!6}{644.365} & \cellcolor{gray!6}{1040.080} & \cellcolor{gray!6}{20051.10} & \cellcolor{gray!6}{19747.50}\\
+2R7A & 889.50 & 507.098 & 845.182 & 11255.10 & 12389.00\\
+\cellcolor{gray!6}{2SPL} & \cellcolor{gray!6}{882.22} & \cellcolor{gray!6}{589.706} & \cellcolor{gray!6}{1029.660} & \cellcolor{gray!6}{7588.36} & \cellcolor{gray!6}{8105.94}\\
+2VEB & 845.18 & 762.309 & 1454.750 & 9840.72 & 10401.80\\
+\addlinespace
+\cellcolor{gray!6}{3HX9} & \cellcolor{gray!6}{1792.70} & \cellcolor{gray!6}{785.442} & \cellcolor{gray!6}{1168.200} & \cellcolor{gray!6}{5819.08} & \cellcolor{gray!6}{7189.03}\\
+3MVF & 1087.90 & 576.502 & 1009.950 & 8559.24 & 9573.08\\
+\cellcolor{gray!6}{3QZN} & \cellcolor{gray!6}{724.66} & \cellcolor{gray!6}{664.858} & \cellcolor{gray!6}{1221.330} & \cellcolor{gray!6}{6133.24} & \cellcolor{gray!6}{7179.49}\\
+3QZZ & 903.93 & 496.950 & 825.255 & 8523.59 & 9708.28\\
+\cellcolor{gray!6}{3SIK} & \cellcolor{gray!6}{478.73} & \cellcolor{gray!6}{498.621} & \cellcolor{gray!6}{823.565} & \cellcolor{gray!6}{6495.38} & \cellcolor{gray!6}{7739.06}\\
+\addlinespace
+3TGC & 926.51 & 524.380 & 853.710 & 8712.77 & 9181.94\\
+\cellcolor{gray!6}{3VP5} & \cellcolor{gray!6}{875.01} & \cellcolor{gray!6}{602.790} & \cellcolor{gray!6}{1050.820} & \cellcolor{gray!6}{9801.82} & \cellcolor{gray!6}{10810.80}\\
+3ZJS & 842.79 & 528.419 & 860.137 & 9568.10 & 10130.40\\
+\cellcolor{gray!6}{4B8N} & \cellcolor{gray!6}{812.96} & \cellcolor{gray!6}{569.302} & \cellcolor{gray!6}{990.216} & \cellcolor{gray!6}{4560.39} & \cellcolor{gray!6}{5458.66}\\
+4CAT & 583.88 & 484.341 & 778.502 & 28372.40 & 36788.30\\
+\addlinespace
+\cellcolor{gray!6}{4CDP} & \cellcolor{gray!6}{996.51} & \cellcolor{gray!6}{1425.050} & \cellcolor{gray!6}{3141.090} & \cellcolor{gray!6}{14733.50} & \cellcolor{gray!6}{15887.40}\\
+4I3Q & 1044.70 & 510.623 & 845.108 & 21946.50 & 21093.70\\
+\cellcolor{gray!6}{4JET} & \cellcolor{gray!6}{908.16} & \cellcolor{gray!6}{495.992} & \cellcolor{gray!6}{818.131} & \cellcolor{gray!6}{7887.81} & \cellcolor{gray!6}{8695.85}\\
+4MF9 & 1041.70 & 488.695 & 790.732 & 15669.80 & 16791.30\\
+\cellcolor{gray!6}{4MYP} & \cellcolor{gray!6}{559.54} & \cellcolor{gray!6}{963.019} & \cellcolor{gray!6}{1834.680} & \cellcolor{gray!6}{6285.40} & \cellcolor{gray!6}{7351.53}\\
+\addlinespace
+4NL5 & 1052.20 & 576.669 & 1003.400 & 5715.52 & 6894.72\\
+\cellcolor{gray!6}{4UZV} & \cellcolor{gray!6}{1115.10} & \cellcolor{gray!6}{526.584} & \cellcolor{gray!6}{844.058} & \cellcolor{gray!6}{7378.28} & \cellcolor{gray!6}{8322.74}\\
+4XZD & 853.44 & 498.788 & 816.032 & 8028.32 & 8752.50\\
+\cellcolor{gray!6}{4Y1Q} & \cellcolor{gray!6}{835.77} & \cellcolor{gray!6}{494.939} & \cellcolor{gray!6}{806.960} & \cellcolor{gray!6}{7905.84} & \cellcolor{gray!6}{8785.04}\\
+5CN5 & 901.87 & 663.162 & 1223.640 & 7629.45 & 8117.34\\
+\addlinespace
+\cellcolor{gray!6}{5GJ3} & \cellcolor{gray!6}{1095.50} & \cellcolor{gray!6}{756.603} & \cellcolor{gray!6}{1131.670} & \cellcolor{gray!6}{11394.00} & \cellcolor{gray!6}{12591.80}\\
+5KZL & 870.61 & 483.760 & 805.567 & 9662.03 & 10431.00\\
+\cellcolor{gray!6}{5O1L} & \cellcolor{gray!6}{1111.80} & \cellcolor{gray!6}{801.519} & \cellcolor{gray!6}{1447.270} & \cellcolor{gray!6}{15538.20} & \cellcolor{gray!6}{16876.00}\\
+5O1M & 1053.40 & 493.850 & 799.331 & 16096.90 & 15912.50\\
+\cellcolor{gray!6}{5VEU} & \cellcolor{gray!6}{838.05} & \cellcolor{gray!6}{993.578} & \cellcolor{gray!6}{1502.660} & \cellcolor{gray!6}{20900.80} & \cellcolor{gray!6}{20425.90}\\
+\addlinespace
+6A2J & 857.55 & 6183.450 & 9902.920 & 14870.30 & 15888.00\\
+\cellcolor{gray!6}{7C74} & \cellcolor{gray!6}{904.00} & \cellcolor{gray!6}{497.527} & \cellcolor{gray!6}{820.381} & \cellcolor{gray!6}{26111.40} & \cellcolor{gray!6}{25094.20}\\
+7DMR & 853.80 & 1049.750 & 1916.950 & 26004.00 & 24563.80\\*
+\end{longtabu}
+
+\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\caption{\label{tab:HEC-volSA5}HEC: Volume and Surface Areas, Cutoff 5A}\\
+\toprule
+\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{HEC\_Excluded\_SA} & \rotatebox{45}{HEC\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:HEC-volSA5}HEC: Volume and Surface Areas, Cutoff 5A \textit{(continued)}}\\
+\toprule
+\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{HEC\_Excluded\_SA} & \rotatebox{45}{HEC\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{894.91} & \cellcolor{gray!6}{514.130} & \cellcolor{gray!6}{829.817} & \cellcolor{gray!6}{6441.44} & \cellcolor{gray!6}{7514.06}\\
+1S56 & 1012.10 & 643.733 & 1075.840 & 6711.26 & 7477.96\\
+\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{715.73} & \cellcolor{gray!6}{702.711} & \cellcolor{gray!6}{1240.680} & \cellcolor{gray!6}{5042.58} & \cellcolor{gray!6}{5485.50}\\
+2BC5 & 933.67 & 569.905 & 997.324 & 5489.91 & 6306.02\\
+\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{757.38} & \cellcolor{gray!6}{508.637} & \cellcolor{gray!6}{844.494} & \cellcolor{gray!6}{6359.51} & \cellcolor{gray!6}{6975.70}\\
+\addlinespace
+3EAH & 1022.70 & 993.430 & 1697.130 & 18413.40 & 19313.80\\
+\cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{600.12} & \cellcolor{gray!6}{496.328} & \cellcolor{gray!6}{802.584} & \cellcolor{gray!6}{5722.90} & \cellcolor{gray!6}{7493.62}\\
+5KPF & 747.68 & 568.036 & 1007.680 & 5485.51 & 6155.84\\
+\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{803.97} & \cellcolor{gray!6}{1720.870} & \cellcolor{gray!6}{2719.000} & \cellcolor{gray!6}{5539.47} & \cellcolor{gray!6}{6315.96}\\
+5T8W & 806.94 & 511.519 & 848.952 & 5755.48 & 6458.40\\
+\addlinespace
+\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{789.70} & \cellcolor{gray!6}{510.534} & \cellcolor{gray!6}{846.299} & \cellcolor{gray!6}{13399.60} & \cellcolor{gray!6}{14076.40}\\
+6WZA & 879.49 & 713.997 & 1095.240 & 5529.40 & 6385.75\\
+\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{1579.90} & \cellcolor{gray!6}{499.687} & \cellcolor{gray!6}{835.610} & \cellcolor{gray!6}{6737.92} & \cellcolor{gray!6}{8143.17}\\*
+\end{longtabu}
+
+\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\caption{\label{tab:SRM-volSA5}SRM: Volume and Surface Areas, Cutoff 5A}\\
+\toprule
+\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{SRM\_Excluded\_SA} & \rotatebox{45}{SRM\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:SRM-volSA5}SRM: Volume and Surface Areas, Cutoff 5A \textit{(continued)}}\\
+\toprule
+\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{SRM\_Excluded\_SA} & \rotatebox{45}{SRM\_Accessible\_SA} & \rotatebox{45}{Pocket\_Excluded\_SA} & \rotatebox{45}{Pocket\_Accessible\_SA}\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{1ZJ8} & \cellcolor{gray!6}{1605.5} & \cellcolor{gray!6}{656.508} & \cellcolor{gray!6}{1036.43} & \cellcolor{gray!6}{20388.7} & \cellcolor{gray!6}{21432.8}\\
+2AKJ & 1539.8 & 659.667 & 1041.00 & 21673.6 & 20933.7\\
+\cellcolor{gray!6}{2AOP} & \cellcolor{gray!6}{1057.2} & \cellcolor{gray!6}{682.170} & \cellcolor{gray!6}{1045.18} & \cellcolor{gray!6}{18119.8} & \cellcolor{gray!6}{18016.0}\\
+3B0G & 1104.0 & 666.995 & 1054.40 & 21496.8 & 21033.9\\
+\cellcolor{gray!6}{3VKP} & \cellcolor{gray!6}{1096.4} & \cellcolor{gray!6}{675.050} & \cellcolor{gray!6}{1049.85} & \cellcolor{gray!6}{21279.3} & \cellcolor{gray!6}{20964.9}\\
+\addlinespace
+3VLX & 1098.5 & 667.013 & 1052.76 & 21470.0 & 21037.0\\
+\cellcolor{gray!6}{3VLY} & \cellcolor{gray!6}{1040.1} & \cellcolor{gray!6}{675.293} & \cellcolor{gray!6}{1046.41} & \cellcolor{gray!6}{21476.6} & \cellcolor{gray!6}{21022.1}\\
+3VLZ & 1162.3 & 676.360 & 1051.40 & 21433.5 & 20901.8\\
+\cellcolor{gray!6}{5H8V} & \cellcolor{gray!6}{1153.7} & \cellcolor{gray!6}{685.850} & \cellcolor{gray!6}{1052.56} & \cellcolor{gray!6}{22885.9} & \cellcolor{gray!6}{22713.3}\\*
+\end{longtabu}
+
+\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
+\caption{\label{tab:VERDOHEME-volSA5}VERDOHEME: Volume and Surface Areas, Cutoff 5A}\\
+\toprule
+\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{VERDOHEME\_EXCLUDED\_SA} & \rotatebox{45}{VERDOHEME\_ACCESSIBLE\_SA} & \rotatebox{45}{POCKET\_EXCLUDED\_SA} & \rotatebox{45}{POCKET\_ACCESSIBLE\_SA}\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:VERDOHEME-volSA5}VERDOHEME: Volume and Surface Areas, Cutoff 5A \textit{(continued)}}\\
+\toprule
+\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Volume\_Data} & \rotatebox{45}{VERDOHEME\_EXCLUDED\_SA} & \rotatebox{45}{VERDOHEME\_ACCESSIBLE\_SA} & \rotatebox{45}{POCKET\_EXCLUDED\_SA} & \rotatebox{45}{POCKET\_ACCESSIBLE\_SA}\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+\cellcolor{gray!6}{2ZVU} & \cellcolor{gray!6}{875.9} & \cellcolor{gray!6}{560.791} & \cellcolor{gray!6}{969.143} & \cellcolor{gray!6}{9633.81} & \cellcolor{gray!6}{10317.3}\\
+3MOO & 705.2 & 870.228 & 1772.07 & 9371.88 & 10170.3\\
+\cellcolor{gray!6}{1TWN} & \cellcolor{gray!6}{1103.5} & \cellcolor{gray!6}{448.81} & \cellcolor{gray!6}{759.632} & \cellcolor{gray!6}{9966.97} & \cellcolor{gray!6}{10896.8}\\
+1TWR & 1002.9 & 469.982 & 783.313 & 9854.01 & 10775.6\\*
+\end{longtabu}
+
+\hypertarget{a-planarTab}{%
+\section{All Planar Angles}\label{a-planarTab}}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X}
 \caption{\label{tab:HEM-t-planarAll}HEM: All Planar Angles}\\
@@ -7397,376 +7653,8 @@ These results may be useful for the rational design of hemoproteins, with the im
 \cellcolor{gray!6}{1TWN} & \cellcolor{gray!6}{135} & \cellcolor{gray!6}{THR} & \cellcolor{gray!6}{6.865192} & \cellcolor{gray!6}{71.849} & \cellcolor{gray!6}{THR}\\*
 \end{longtabu}
 
-\hypertarget{planar-angles-of-closest-residues}{%
-\section{Planar Angles of Closest Residues}\label{planar-angles-of-closest-residues}}
-
-\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X}
-\caption{\label{tab:HEM-t-planarClosest}HEM: Planar Angles of Closest Residues}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Angle} & \rotatebox{45}{Residue\_Code.y}\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:HEM-t-planarClosest}HEM: Planar Angles of Closest Residues \textit{(continued)}}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Angle} & \rotatebox{45}{Residue\_Code.y}\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-\cellcolor{gray!6}{1B2V} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{4.251885} & \cellcolor{gray!6}{39.160} & \cellcolor{gray!6}{TYR}\\
-1B2V & 32 & HIS & 4.667618 & 51.415 & HIS\\
-\cellcolor{gray!6}{1B2V} & \cellcolor{gray!6}{83} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.366599} & \cellcolor{gray!6}{56.778} & \cellcolor{gray!6}{HIS}\\
-1B5M & 63 & HIS & 4.211990 & 71.272 & HIS\\
-\cellcolor{gray!6}{1B5M} & \cellcolor{gray!6}{39} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.456809} & \cellcolor{gray!6}{87.693} & \cellcolor{gray!6}{HIS}\\
-\addlinespace
-1B5M & 41 & GLY & 5.388127 & 72.708 & GLY\\
-\cellcolor{gray!6}{1DK0} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{4.346840} & \cellcolor{gray!6}{40.042} & \cellcolor{gray!6}{TYR}\\
-1DK0 & 32 & HIS & 4.556145 & 48.497 & HIS\\
-\cellcolor{gray!6}{1DK0} & \cellcolor{gray!6}{83} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.314133} & \cellcolor{gray!6}{62.320} & \cellcolor{gray!6}{HIS}\\
-1DKH & 75 & TYR & 4.792830 & 45.976 & TYR\\
-\addlinespace
-\cellcolor{gray!6}{1DKH} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.099382} & \cellcolor{gray!6}{50.187} & \cellcolor{gray!6}{HIS}\\
-1DKH & 83 & HIS & 5.223800 & 43.522 & HIS\\
-\cellcolor{gray!6}{1ICC} & \cellcolor{gray!6}{63} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.451283} & \cellcolor{gray!6}{57.814} & \cellcolor{gray!6}{HIS}\\
-1ICC & 39 & HIS & 4.542187 & 78.752 & HIS\\
-\cellcolor{gray!6}{1ICC} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.723853} & \cellcolor{gray!6}{72.752} & \cellcolor{gray!6}{GLY}\\
-\addlinespace
-1IPH & 415 & TYR & 4.218561 & 62.200 & TYR\\
-\cellcolor{gray!6}{1IPH} & \cellcolor{gray!6}{411} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.321024} & \cellcolor{gray!6}{79.235} & \cellcolor{gray!6}{ARG}\\
-1IPH & 128 & HIS & 5.713777 & 33.997 & HIS\\
-\cellcolor{gray!6}{1N45} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.545004} & \cellcolor{gray!6}{69.116} & \cellcolor{gray!6}{HIS}\\
-1N45 & 139 & GLY & 5.251379 & 58.119 & GLY\\
-\addlinespace
-\cellcolor{gray!6}{1N45} & \cellcolor{gray!6}{143} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.882948} & \cellcolor{gray!6}{37.778} & \cellcolor{gray!6}{GLY}\\
-1P3T & 23 & HIS & 4.573926 & 67.542 & HIS\\
-\cellcolor{gray!6}{1P3T} & \cellcolor{gray!6}{120} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{4.843774} & \cellcolor{gray!6}{41.129} & \cellcolor{gray!6}{GLY}\\
-1P3T & 117 & SER & 5.531584 & 72.173 & SER\\
-\cellcolor{gray!6}{1QHU} & \cellcolor{gray!6}{265} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.200094} & \cellcolor{gray!6}{83.910} & \cellcolor{gray!6}{HIS}\\
-\addlinespace
-1QHU & 213 & HIS & 4.734866 & 79.430 & HIS\\
-\cellcolor{gray!6}{1QHU} & \cellcolor{gray!6}{267} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{5.987630} & \cellcolor{gray!6}{76.604} & \cellcolor{gray!6}{TRP}\\
-1QJS & 266 & HIS & 4.484379 & 82.026 & HIS\\
-\cellcolor{gray!6}{1QJS} & \cellcolor{gray!6}{213} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.696712} & \cellcolor{gray!6}{82.802} & \cellcolor{gray!6}{HIS}\\
-1QJS & 171 & TRP & 6.211700 & 40.663 & TRP\\
-\addlinespace
-\cellcolor{gray!6}{1SI8} & \cellcolor{gray!6}{337} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{3.976560} & \cellcolor{gray!6}{58.339} & \cellcolor{gray!6}{TYR}\\
-1SI8 & 333 & ARG & 5.247624 & 87.335 & ARG\\
-\cellcolor{gray!6}{1SI8} & \cellcolor{gray!6}{140} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.575451} & \cellcolor{gray!6}{44.222} & \cellcolor{gray!6}{PHE}\\
-1SY2 & 59 & HIS & 4.045387 & 85.351 & HIS\\
-\cellcolor{gray!6}{1SY2} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.887937} & \cellcolor{gray!6}{30.456} & \cellcolor{gray!6}{TYR}\\
-\addlinespace
-1SY2 & 123 & LEU & 5.902915 & 71.098 & LEU\\
-\cellcolor{gray!6}{1U9U} & \cellcolor{gray!6}{63} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.417873} & \cellcolor{gray!6}{66.393} & \cellcolor{gray!6}{HIS}\\
-1U9U & 39 & HIS & 4.589294 & 80.451 & HIS\\
-\cellcolor{gray!6}{1U9U} & \cellcolor{gray!6}{41} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.723510} & \cellcolor{gray!6}{83.944} & \cellcolor{gray!6}{GLY}\\
-1VGI & 25 & HIS & 4.646180 & 72.142 & HIS\\
-\addlinespace
-\cellcolor{gray!6}{1VGI} & \cellcolor{gray!6}{139} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.155470} & \cellcolor{gray!6}{60.437} & \cellcolor{gray!6}{GLY}\\
-1VGI & 143 & GLY & 5.279720 & 32.760 & GLY\\
-\cellcolor{gray!6}{1ZVI} & \cellcolor{gray!6}{415} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.181834} & \cellcolor{gray!6}{46.871} & \cellcolor{gray!6}{CYS}\\
-1ZVI & 417 & GLY & 5.404983 & 24.763 & GLY\\
-\cellcolor{gray!6}{1ZVI} & \cellcolor{gray!6}{409} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{5.660275} & \cellcolor{gray!6}{56.622} & \cellcolor{gray!6}{TRP}\\
-\addlinespace
-2BHJ & 194 & CYS & 4.487497 & 52.816 & CYS\\
-\cellcolor{gray!6}{2BHJ} & \cellcolor{gray!6}{196} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.667103} & \cellcolor{gray!6}{19.625} & \cellcolor{gray!6}{GLY}\\
-2BHJ & 193 & ARG & 5.745098 & 22.913 & ARG\\
-\cellcolor{gray!6}{2CJ0} & \cellcolor{gray!6}{29} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.390905} & \cellcolor{gray!6}{47.217} & \cellcolor{gray!6}{CYS}\\
-2CJ0 & 31 & ALA & 5.440871 & 54.576 & ALA\\
-\addlinespace
-\cellcolor{gray!6}{2CJ0} & \cellcolor{gray!6}{183} & \cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{5.716050} & \cellcolor{gray!6}{77.664} & \cellcolor{gray!6}{GLU}\\
-2CN4 & 75 & TYR & 4.345054 & 45.523 & TYR\\
-\cellcolor{gray!6}{2CN4} & \cellcolor{gray!6}{83} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.251875} & \cellcolor{gray!6}{61.039} & \cellcolor{gray!6}{HIS}\\
-2CN4 & 140 & MET & 5.816277 & 79.067 & MET\\
-\cellcolor{gray!6}{2CPO} & \cellcolor{gray!6}{29} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.443549} & \cellcolor{gray!6}{49.291} & \cellcolor{gray!6}{CYS}\\
-\addlinespace
-2CPO & 31 & ALA & 5.505123 & 50.842 & ALA\\
-\cellcolor{gray!6}{2CPO} & \cellcolor{gray!6}{183} & \cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{5.799506} & \cellcolor{gray!6}{78.548} & \cellcolor{gray!6}{GLU}\\
-2E2Y & 93 & HIS & 4.514535 & 86.534 & HIS\\
-\cellcolor{gray!6}{2E2Y} & \cellcolor{gray!6}{68} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.517060} & \cellcolor{gray!6}{80.623} & \cellcolor{gray!6}{ILE}\\
-2E2Y & 43 & TRP & 5.845537 & 63.663 & TRP\\
-\addlinespace
-\cellcolor{gray!6}{2FC2} & \cellcolor{gray!6}{62} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.482879} & \cellcolor{gray!6}{54.005} & \cellcolor{gray!6}{CYS}\\
-2FC2 & 56 & TRP & 5.737975 & 58.198 & TRP\\
-\cellcolor{gray!6}{2FC2} & \cellcolor{gray!6}{64} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.882725} & \cellcolor{gray!6}{21.989} & \cellcolor{gray!6}{GLY}\\
-2IIZ & 224 & HIS & 4.533607 & 61.464 & HIS\\
-\cellcolor{gray!6}{2IIZ} & \cellcolor{gray!6}{242} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.236889} & \cellcolor{gray!6}{71.798} & \cellcolor{gray!6}{ARG}\\
-\addlinespace
-2IIZ & 228 & VAL & 5.315815 & 34.144 & VAL\\
-\cellcolor{gray!6}{2IPS} & \cellcolor{gray!6}{351} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.125792} & \cellcolor{gray!6}{28.391} & \cellcolor{gray!6}{HIS}\\
-2IPS & 433 & LEU & 5.458537 & 63.062 & LEU\\
-\cellcolor{gray!6}{2IPS} & \cellcolor{gray!6}{108} & \cellcolor{gray!6}{ASP} & \cellcolor{gray!6}{5.870986} & \cellcolor{gray!6}{78.247} & \cellcolor{gray!6}{ASP}\\
-2J0P & 196 & HIS & 4.310325 & 75.104 & HIS\\
-\addlinespace
-\cellcolor{gray!6}{2J0P} & \cellcolor{gray!6}{102} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.002395} & \cellcolor{gray!6}{83.046} & \cellcolor{gray!6}{ARG}\\
-2J0P & 246 & PHE & 6.155004 & 71.919 & PHE\\
-\cellcolor{gray!6}{2J18} & \cellcolor{gray!6}{29} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.359887} & \cellcolor{gray!6}{47.527} & \cellcolor{gray!6}{CYS}\\
-2J18 & 31 & ALA & 5.457126 & 52.882 & ALA\\
-\cellcolor{gray!6}{2J18} & \cellcolor{gray!6}{183} & \cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{5.722472} & \cellcolor{gray!6}{78.531} & \cellcolor{gray!6}{GLU}\\
-\addlinespace
-2O6P & 132 & TYR & 4.055037 & 56.191 & TYR\\
-\cellcolor{gray!6}{2O6P} & \cellcolor{gray!6}{136} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.148558} & \cellcolor{gray!6}{86.464} & \cellcolor{gray!6}{TYR}\\
-2O6P & 48 & ILE & 5.365972 & 44.466 & ILE\\
-\cellcolor{gray!6}{2Q6N} & \cellcolor{gray!6}{436} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.305637} & \cellcolor{gray!6}{40.993} & \cellcolor{gray!6}{CYS}\\
-2Q6N & 438 & GLY & 5.615678 & 28.366 & GLY\\
-\addlinespace
-\cellcolor{gray!6}{2Q6N} & \cellcolor{gray!6}{298} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{5.672036} & \cellcolor{gray!6}{28.414} & \cellcolor{gray!6}{ALA}\\
-2R7A & 67 & TYR & 4.159993 & 73.259 & TYR\\
-\cellcolor{gray!6}{2R7A} & \cellcolor{gray!6}{169} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{5.223004} & \cellcolor{gray!6}{39.141} & \cellcolor{gray!6}{ALA}\\
-2R7A & 257 & LEU & 5.559331 & 26.488 & LEU\\
-\cellcolor{gray!6}{2SPL} & \cellcolor{gray!6}{93} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.578545} & \cellcolor{gray!6}{88.954} & \cellcolor{gray!6}{HIS}\\
-\addlinespace
-2SPL & 68 & VAL & 5.598014 & 66.196 & VAL\\
-\cellcolor{gray!6}{2SPL} & \cellcolor{gray!6}{43} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.815167} & \cellcolor{gray!6}{43.358} & \cellcolor{gray!6}{PHE}\\
-2VEB & 120 & HIS & 4.471709 & 79.839 & HIS\\
-\cellcolor{gray!6}{2VEB} & \cellcolor{gray!6}{185} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{5.717992} & \cellcolor{gray!6}{82.552} & \cellcolor{gray!6}{TRP}\\
-2VEB & 93 & PHE & 5.810118 & 22.043 & PHE\\
-\addlinespace
-\cellcolor{gray!6}{3HX9} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.195649} & \cellcolor{gray!6}{50.709} & \cellcolor{gray!6}{HIS}\\
-3HX9 & 71 & ALA & 6.230664 & 24.118 & ALA\\
-\cellcolor{gray!6}{3HX9} & \cellcolor{gray!6}{66} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{7.852796} & \cellcolor{gray!6}{51.391} & \cellcolor{gray!6}{TRP}\\
-3MVF & 59 & HIS & 4.066882 & 87.977 & HIS\\
-\cellcolor{gray!6}{3MVF} & \cellcolor{gray!6}{42} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{5.827660} & \cellcolor{gray!6}{37.714} & \cellcolor{gray!6}{ALA}\\
-\addlinespace
-3MVF & 123 & LEU & 5.891492 & 77.839 & LEU\\
-\cellcolor{gray!6}{3QZN} & \cellcolor{gray!6}{83} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.660500} & \cellcolor{gray!6}{67.495} & \cellcolor{gray!6}{HIS}\\
-3QZN & 170 & TYR & 5.718488 & 72.518 & TYR\\
-\cellcolor{gray!6}{3QZN} & \cellcolor{gray!6}{159} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.866079} & \cellcolor{gray!6}{87.212} & \cellcolor{gray!6}{ILE}\\
-3QZZ & 120 & HIS & 4.599066 & 74.693 & HIS\\
-\addlinespace
-\cellcolor{gray!6}{3QZZ} & \cellcolor{gray!6}{89} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{5.927268} & \cellcolor{gray!6}{83.889} & \cellcolor{gray!6}{VAL}\\
-3QZZ & 93 & PHE & 6.033470 & 11.038 & PHE\\
-\cellcolor{gray!6}{3SIK} & \cellcolor{gray!6}{136} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{4.260470} & \cellcolor{gray!6}{52.942} & \cellcolor{gray!6}{TYR}\\
-3SIK & 140 & TYR & 5.120136 & 63.829 & TYR\\
-\cellcolor{gray!6}{3SIK} & \cellcolor{gray!6}{54} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{6.090293} & \cellcolor{gray!6}{58.962} & \cellcolor{gray!6}{ARG}\\
-\addlinespace
-3TGC & 59 & HIS & 4.100823 & 87.207 & HIS\\
-\cellcolor{gray!6}{3TGC} & \cellcolor{gray!6}{123} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.908675} & \cellcolor{gray!6}{73.018} & \cellcolor{gray!6}{LEU}\\
-3TGC & 40 & TYR & 5.967215 & 29.632 & TYR\\
-\cellcolor{gray!6}{3VP5} & \cellcolor{gray!6}{149} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.350835} & \cellcolor{gray!6}{49.264} & \cellcolor{gray!6}{HIS}\\
-3VP5 & 72 & HIS & 4.371971 & 45.918 & HIS\\
-\addlinespace
-\cellcolor{gray!6}{3VP5} & \cellcolor{gray!6}{131} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{5.568423} & \cellcolor{gray!6}{66.180} & \cellcolor{gray!6}{VAL}\\
-3ZJS & 120 & HIS & 4.427156 & 73.923 & HIS\\
-\cellcolor{gray!6}{3ZJS} & \cellcolor{gray!6}{89} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{5.790982} & \cellcolor{gray!6}{89.427} & \cellcolor{gray!6}{VAL}\\
-3ZJS & 93 & PHE & 5.922481 & 16.833 & PHE\\
-\cellcolor{gray!6}{4B8N} & \cellcolor{gray!6}{71} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.416116} & \cellcolor{gray!6}{70.933} & \cellcolor{gray!6}{HIS}\\
-\addlinespace
-4B8N & 48 & HIS & 4.479396 & 87.524 & HIS\\
-\cellcolor{gray!6}{4B8N} & \cellcolor{gray!6}{50} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.464969} & \cellcolor{gray!6}{87.471} & \cellcolor{gray!6}{GLY}\\
-4CDP & 193 & HIS & 4.417630 & 74.031 & HIS\\
-\cellcolor{gray!6}{4CDP} & \cellcolor{gray!6}{100} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.360373} & \cellcolor{gray!6}{82.404} & \cellcolor{gray!6}{ARG}\\
-4CDP & 192 & VAL & 5.600764 & 66.470 & VAL\\
-\addlinespace
-\cellcolor{gray!6}{4I3Q} & \cellcolor{gray!6}{442} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.085782} & \cellcolor{gray!6}{34.781} & \cellcolor{gray!6}{CYS}\\
-4I3Q & 444 & GLY & 5.222394 & 22.218 & GLY\\
-\cellcolor{gray!6}{4I3Q} & \cellcolor{gray!6}{305} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{5.305272} & \cellcolor{gray!6}{55.811} & \cellcolor{gray!6}{ALA}\\
-4JET & 75 & TYR & 4.420106 & 47.089 & TYR\\
-\cellcolor{gray!6}{4JET} & \cellcolor{gray!6}{81} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.381133} & \cellcolor{gray!6}{54.183} & \cellcolor{gray!6}{HIS}\\
-\addlinespace
-4JET & 40 & ARG & 5.660400 & 8.293 & ARG\\
-\cellcolor{gray!6}{4MF9} & \cellcolor{gray!6}{209} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.606487} & \cellcolor{gray!6}{63.203} & \cellcolor{gray!6}{HIS}\\
-4MF9 & 112 & ARG & 5.056393 & 85.919 & ARG\\
-\cellcolor{gray!6}{4MF9} & \cellcolor{gray!6}{259} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.680334} & \cellcolor{gray!6}{67.502} & \cellcolor{gray!6}{PHE}\\
-4MYP & 280 & TYR & 4.465249 & 56.836 & TYR\\
-\addlinespace
-\cellcolor{gray!6}{4MYP} & \cellcolor{gray!6}{289} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.900895} & \cellcolor{gray!6}{20.187} & \cellcolor{gray!6}{TYR}\\
-4MYP & 293 & ALA & 6.207799 & 64.118 & ALA\\
-\cellcolor{gray!6}{4NL5} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.473936} & \cellcolor{gray!6}{46.347} & \cellcolor{gray!6}{HIS}\\
-4NL5 & 7 & ASN & 5.402231 & 60.999 & ASN\\
-\cellcolor{gray!6}{4NL5} & \cellcolor{gray!6}{23} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.580423} & \cellcolor{gray!6}{79.989} & \cellcolor{gray!6}{PHE}\\
-\addlinespace
-4UZV & 106 & HIS & 4.502311 & 79.507 & HIS\\
-\cellcolor{gray!6}{4UZV} & \cellcolor{gray!6}{119} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.820671} & \cellcolor{gray!6}{52.586} & \cellcolor{gray!6}{PHE}\\
-4UZV & 111 & ILE & 5.897899 & 46.982 & ILE\\
-\cellcolor{gray!6}{4XZD} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{4.329954} & \cellcolor{gray!6}{46.839} & \cellcolor{gray!6}{TYR}\\
-4XZD & 81 & HIS & 5.263108 & 67.684 & HIS\\
-\addlinespace
-\cellcolor{gray!6}{4XZD} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.892195} & \cellcolor{gray!6}{23.940} & \cellcolor{gray!6}{ARG}\\
-4Y1Q & 81 & HIS & 5.294289 & 61.474 & HIS\\
-\cellcolor{gray!6}{4Y1Q} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.725205} & \cellcolor{gray!6}{11.586} & \cellcolor{gray!6}{ARG}\\
-4Y1Q & 147 & MET & 6.115760 & 72.668 & MET\\
-\cellcolor{gray!6}{5CN5} & \cellcolor{gray!6}{93} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.575365} & \cellcolor{gray!6}{82.799} & \cellcolor{gray!6}{HIS}\\
-\addlinespace
-5CN5 & 68 & VAL & 5.556498 & 70.253 & VAL\\
-\cellcolor{gray!6}{5CN5} & \cellcolor{gray!6}{64} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.804727} & \cellcolor{gray!6}{84.840} & \cellcolor{gray!6}{HIS}\\
-5GJ3 & 239 & TYR & 4.170326 & 62.993 & TYR\\
-\cellcolor{gray!6}{5GJ3} & \cellcolor{gray!6}{241} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.542517} & \cellcolor{gray!6}{89.231} & \cellcolor{gray!6}{ARG}\\
-5GJ3 & 140 & TYR & 7.520130 & 58.494 & TYR\\
-\addlinespace
-\cellcolor{gray!6}{5KZL} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.819650} & \cellcolor{gray!6}{59.949} & \cellcolor{gray!6}{HIS}\\
-5KZL & 128 & GLY & 5.130966 & 70.591 & GLY\\
-\cellcolor{gray!6}{5KZL} & \cellcolor{gray!6}{132} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.705062} & \cellcolor{gray!6}{50.430} & \cellcolor{gray!6}{GLY}\\
-5O1L & 198 & HIS & 4.305405 & 66.467 & HIS\\
-\cellcolor{gray!6}{5O1L} & \cellcolor{gray!6}{171} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.743071} & \cellcolor{gray!6}{78.726} & \cellcolor{gray!6}{LEU}\\
-\addlinespace
-5O1L & 222 & ILE & 6.024951 & 24.897 & ILE\\
-\cellcolor{gray!6}{5O1M} & \cellcolor{gray!6}{198} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.392715} & \cellcolor{gray!6}{64.463} & \cellcolor{gray!6}{HIS}\\
-5O1M & 167 & LYS & 5.125712 & 80.116 & LYS\\
-\cellcolor{gray!6}{5O1M} & \cellcolor{gray!6}{222} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{6.241067} & \cellcolor{gray!6}{30.392} & \cellcolor{gray!6}{ILE}\\
-5VEU & 441 & CYS & 4.349464 & 42.614 & CYS\\
-\addlinespace
-\cellcolor{gray!6}{5VEU} & \cellcolor{gray!6}{443} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.482822} & \cellcolor{gray!6}{27.362} & \cellcolor{gray!6}{GLY}\\
-5VEU & 309 & THR & 5.895842 & 31.467 & THR\\
-\cellcolor{gray!6}{6A2J} & \cellcolor{gray!6}{216} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.601722} & \cellcolor{gray!6}{63.468} & \cellcolor{gray!6}{HIS}\\
-6A2J & 278 & HIS & 4.655598 & 63.931 & HIS\\
-\cellcolor{gray!6}{6A2J} & \cellcolor{gray!6}{179} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.548597} & \cellcolor{gray!6}{36.551} & \cellcolor{gray!6}{GLY}\\
-\addlinespace
-7C74 & 351 & HIS & 4.494179 & 25.953 & HIS\\
-\cellcolor{gray!6}{7C74} & \cellcolor{gray!6}{433} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.275537} & \cellcolor{gray!6}{56.669} & \cellcolor{gray!6}{LEU}\\
-7C74 & 105 & GLN & 5.667218 & 84.879 & GLN\\
-\cellcolor{gray!6}{7DMR} & \cellcolor{gray!6}{351} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.201640} & \cellcolor{gray!6}{31.126} & \cellcolor{gray!6}{HIS}\\
-7DMR & 433 & LEU & 5.225161 & 71.791 & LEU\\
-\addlinespace
-\cellcolor{gray!6}{7DMR} & \cellcolor{gray!6}{105} & \cellcolor{gray!6}{GLN} & \cellcolor{gray!6}{5.517249} & \cellcolor{gray!6}{82.031} & \cellcolor{gray!6}{GLN}\\*
-\end{longtabu}
-
-\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X}
-\caption{\label{tab:HEC-t-planarClosest}HEC: Planar Angles of Closest Residues}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Angle} & \rotatebox{45}{Residue\_Code.y}\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:HEC-t-planarClosest}HEC: Planar Angles of Closest Residues \textit{(continued)}}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Angle} & \rotatebox{45}{Residue\_Code.y}\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{125} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.218890} & \cellcolor{gray!6}{89.456} & \cellcolor{gray!6}{HIS}\\
-1BBH & 16 & TYR & 4.795494 & 83.790 & TYR\\
-\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{121} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{5.737156} & \cellcolor{gray!6}{69.070} & \cellcolor{gray!6}{CYS}\\
-1S56 & 81 & HIS & 4.475028 & 80.865 & HIS\\
-\cellcolor{gray!6}{1S56} & \cellcolor{gray!6}{86} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.878780} & \cellcolor{gray!6}{46.879} & \cellcolor{gray!6}{ILE}\\
-\addlinespace
-1S56 & 46 & PHE & 5.938368 & 40.237 & PHE\\
-\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{22} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.350769} & \cellcolor{gray!6}{62.051} & \cellcolor{gray!6}{HIS}\\
-1W2L & 76 & MET & 4.403618 & 74.807 & MET\\
-\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{34} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.935685} & \cellcolor{gray!6}{47.542} & \cellcolor{gray!6}{PHE}\\
-2BC5 & 102 & HIS & 4.186908 & 82.850 & HIS\\
-\addlinespace
-\cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{7} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.661903} & \cellcolor{gray!6}{78.629} & \cellcolor{gray!6}{MET}\\
-2BC5 & 98 & CYS & 5.957326 & 62.529 & CYS\\
-\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{19} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.283790} & \cellcolor{gray!6}{56.825} & \cellcolor{gray!6}{HIS}\\
-2BH5 & 100 & LYS & 4.313747 & 77.818 & LYS\\
-\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{79} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.535216} & \cellcolor{gray!6}{66.731} & \cellcolor{gray!6}{TYR}\\
-\addlinespace
-3EAH & 150 & CYS & 4.247423 & 47.992 & CYS\\
-\cellcolor{gray!6}{3EAH} & \cellcolor{gray!6}{152} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.627214} & \cellcolor{gray!6}{19.760} & \cellcolor{gray!6}{GLY}\\
-3EAH & 144 & TRP & 5.647844 & 55.208 & TRP\\
-\cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{16} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.360557} & \cellcolor{gray!6}{56.339} & \cellcolor{gray!6}{HIS}\\
-3X15 & 44 & PHE & 6.024333 & 88.840 & PHE\\
-\addlinespace
-\cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{6.178945} & \cellcolor{gray!6}{60.268} & \cellcolor{gray!6}{CYS}\\
-5KPF & 18 & HIS & 4.310334 & 57.026 & HIS\\
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.692154} & \cellcolor{gray!6}{69.191} & \cellcolor{gray!6}{MET}\\
-5KPF & 67 & TYR & 5.922923 & 73.698 & TYR\\
-\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.342999} & \cellcolor{gray!6}{57.434} & \cellcolor{gray!6}{HIS}\\
-\addlinespace
-5LFT & 80 & MET & 4.757864 & 70.970 & MET\\
-\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.919346} & \cellcolor{gray!6}{72.327} & \cellcolor{gray!6}{TYR}\\
-5T8W & 18 & HIS & 4.334295 & 56.673 & HIS\\
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.693021} & \cellcolor{gray!6}{71.981} & \cellcolor{gray!6}{MET}\\
-5T8W & 67 & TYR & 5.858639 & 72.392 & TYR\\
-\addlinespace
-\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{313} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.120545} & \cellcolor{gray!6}{68.371} & \cellcolor{gray!6}{HIS}\\
-6VDQ & 274 & HIS & 4.500421 & 76.928 & HIS\\
-\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{278} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.358791} & \cellcolor{gray!6}{51.036} & \cellcolor{gray!6}{ILE}\\
-6WZA & 102 & HIS & 4.440577 & 87.413 & HIS\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{7} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.611608} & \cellcolor{gray!6}{76.023} & \cellcolor{gray!6}{MET}\\
-\addlinespace
-6WZA & 98 & CYS & 5.774303 & 65.838 & CYS\\
-\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{79} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{3.938274} & \cellcolor{gray!6}{74.591} & \cellcolor{gray!6}{LYS}\\
-6XNK & 18 & HIS & 4.599701 & 53.280 & HIS\\
-\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.613420} & \cellcolor{gray!6}{78.584} & \cellcolor{gray!6}{TYR}\\*
-\end{longtabu}
-
-\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X}
-\caption{\label{tab:SRM-t-planarClosest}SRM: Planar Angles of Closest Residues}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Angle} & \rotatebox{45}{Residue\_Code.y}\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:SRM-t-planarClosest}SRM: Planar Angles of Closest Residues \textit{(continued)}}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Angle} & \rotatebox{45}{Residue\_Code.y}\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-\cellcolor{gray!6}{1ZJ8} & \cellcolor{gray!6}{467} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.642760} & \cellcolor{gray!6}{87.220} & \cellcolor{gray!6}{CYS}\\
-1ZJ8 & 209 & LYS & 5.254105 & 61.416 & LYS\\
-\cellcolor{gray!6}{1ZJ8} & \cellcolor{gray!6}{207} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.279599} & \cellcolor{gray!6}{51.736} & \cellcolor{gray!6}{LYS}\\
-2AKJ & 486 & CYS & 4.400598 & 86.391 & CYS\\
-\cellcolor{gray!6}{2AKJ} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.292960} & \cellcolor{gray!6}{53.525} & \cellcolor{gray!6}{LYS}\\
-\addlinespace
-2AKJ & 109 & ARG & 5.624044 & 45.808 & ARG\\
-\cellcolor{gray!6}{2AOP} & \cellcolor{gray!6}{483} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.593058} & \cellcolor{gray!6}{85.931} & \cellcolor{gray!6}{CYS}\\
-2AOP & 217 & LYS & 5.485034 & 57.432 & LYS\\
-\cellcolor{gray!6}{2AOP} & \cellcolor{gray!6}{215} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.521547} & \cellcolor{gray!6}{41.259} & \cellcolor{gray!6}{LYS}\\
-3B0G & 485 & CYS & 4.334547 & 73.017 & CYS\\
-\addlinespace
-\cellcolor{gray!6}{3B0G} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.579947} & \cellcolor{gray!6}{59.557} & \cellcolor{gray!6}{LYS}\\
-3B0G & 109 & ARG & 5.714505 & 49.905 & ARG\\
-\cellcolor{gray!6}{3VKP} & \cellcolor{gray!6}{485} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.338921} & \cellcolor{gray!6}{84.887} & \cellcolor{gray!6}{CYS}\\
-3VKP & 224 & LYS & 5.500133 & 56.004 & LYS\\
-\cellcolor{gray!6}{3VKP} & \cellcolor{gray!6}{109} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.727950} & \cellcolor{gray!6}{45.457} & \cellcolor{gray!6}{ARG}\\
-\addlinespace
-3VLX & 485 & CYS & 4.333556 & 85.502 & CYS\\
-\cellcolor{gray!6}{3VLX} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.605021} & \cellcolor{gray!6}{56.372} & \cellcolor{gray!6}{LYS}\\
-3VLX & 109 & ARG & 5.657293 & 44.382 & ARG\\
-\cellcolor{gray!6}{3VLY} & \cellcolor{gray!6}{485} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.349260} & \cellcolor{gray!6}{84.134} & \cellcolor{gray!6}{CYS}\\
-3VLY & 226 & LYS & 5.485627 & 52.123 & LYS\\
-\addlinespace
-\cellcolor{gray!6}{3VLY} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.637976} & \cellcolor{gray!6}{59.364} & \cellcolor{gray!6}{LYS}\\
-3VLZ & 485 & CYS & 4.361247 & 73.065 & CYS\\
-\cellcolor{gray!6}{3VLZ} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.601385} & \cellcolor{gray!6}{52.886} & \cellcolor{gray!6}{LYS}\\
-3VLZ & 226 & LYS & 5.641233 & 47.713 & LYS\\
-\cellcolor{gray!6}{5H8V} & \cellcolor{gray!6}{544} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.294361} & \cellcolor{gray!6}{85.621} & \cellcolor{gray!6}{CYS}\\
-\addlinespace
-5H8V & 278 & LYS & 5.495851 & 53.934 & LYS\\
-\cellcolor{gray!6}{5H8V} & \cellcolor{gray!6}{124} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.731236} & \cellcolor{gray!6}{44.003} & \cellcolor{gray!6}{ARG}\\*
-\end{longtabu}
-
-\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X}
-\caption{\label{tab:VERDOHEME-t-planarClosest}VERDOHEME: Planar Angles of Closest Residues}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Angle} & \rotatebox{45}{Residue\_Code.y}\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:VERDOHEME-t-planarClosest}VERDOHEME: Planar Angles of Closest Residues \textit{(continued)}}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Angle} & \rotatebox{45}{Residue\_Code.y}\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-\cellcolor{gray!6}{2ZVU} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.603252} & \cellcolor{gray!6}{70.790} & \cellcolor{gray!6}{HIS}\\
-2ZVU & 139 & GLY & 5.265696 & 66.938 & GLY\\
-\cellcolor{gray!6}{2ZVU} & \cellcolor{gray!6}{143} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.436145} & \cellcolor{gray!6}{32.937} & \cellcolor{gray!6}{GLY}\\
-3MOO & 20 & HIS & 4.614778 & 65.389 & HIS\\
-\cellcolor{gray!6}{3MOO} & \cellcolor{gray!6}{135} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.288496} & \cellcolor{gray!6}{66.356} & \cellcolor{gray!6}{GLY}\\
-\addlinespace
-3MOO & 139 & GLY & 5.369017 & 35.165 & GLY\\
-\cellcolor{gray!6}{1TWN} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.673370} & \cellcolor{gray!6}{82.070} & \cellcolor{gray!6}{HIS}\\
-1TWN & 139 & GLY & 5.092800 & 37.268 & GLY\\
-\cellcolor{gray!6}{1TWN} & \cellcolor{gray!6}{143} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.231213} & \cellcolor{gray!6}{20.583} & \cellcolor{gray!6}{GLY}\\
-1TWR & 25 & HIS & 4.786588 & 75.802 & HIS\\
-\addlinespace
-\cellcolor{gray!6}{1TWR} & \cellcolor{gray!6}{139} & \cellcolor{gray!6}{GLY} & \cellcolor{gray!6}{5.369385} & \cellcolor{gray!6}{36.457} & \cellcolor{gray!6}{GLY}\\
-1TWR & 143 & GLY & 5.836559 & 26.276 & GLY\\*
-\end{longtabu}
-
-\hypertarget{all-ca-cb-fe-angles}{%
-\section{All CA-CB-Fe Angles}\label{all-ca-cb-fe-angles}}
+\hypertarget{a-cabTab}{%
+\section{All CA-CB-Fe Angles}\label{a-cabTab}}
 
 \begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X}
 \caption{\label{tab:HEM-t-cabAll}HEM: All CA-CB-Fe Angles}\\
@@ -8687,329 +8575,6 @@ These results may be useful for the rational design of hemoproteins, with the im
 1TWN & 142 & SER & 6.035867 & SER & 114.7150\\
 \cellcolor{gray!6}{1TWR} & \cellcolor{gray!6}{142} & \cellcolor{gray!6}{SER} & \cellcolor{gray!6}{6.195017} & \cellcolor{gray!6}{SER} & \cellcolor{gray!6}{129.2760}\\
 1TWN & 135 & THR & 6.865192 & THR & 60.8151\\*
-\end{longtabu}
-
-\hypertarget{ca-cb-fe-angles-of-closest-residues}{%
-\section{CA-CB-Fe Angles of Closest Residues}\label{ca-cb-fe-angles-of-closest-residues}}
-
-\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X}
-\caption{\label{tab:HEM-t-cabClosest}HEM: CA-CB-Fe Angles of Closest Residues}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Residue\_Code.y} & \rotatebox{45}{Angle}\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:HEM-t-cabClosest}HEM: CA-CB-Fe Angles of Closest Residues \textit{(continued)}}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Residue\_Code.y} & \rotatebox{45}{Angle}\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-\cellcolor{gray!6}{1B2V} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{4.251885} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{132.4540}\\
-1B2V & 32 & HIS & 4.667618 & HIS & 116.3150\\
-\cellcolor{gray!6}{1B2V} & \cellcolor{gray!6}{83} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.366599} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{102.9160}\\
-1B5M & 63 & HIS & 4.211990 & HIS & 125.8380\\
-\cellcolor{gray!6}{1B5M} & \cellcolor{gray!6}{39} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.456809} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{101.8130}\\
-\addlinespace
-1DK0 & 75 & TYR & 4.346840 & TYR & 131.4420\\
-\cellcolor{gray!6}{1DK0} & \cellcolor{gray!6}{32} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.556145} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{116.4470}\\
-1DK0 & 83 & HIS & 5.314133 & HIS & 102.7520\\
-\cellcolor{gray!6}{1DKH} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{4.792830} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{125.4210}\\
-1DKH & 32 & HIS & 5.099382 & HIS & 121.3750\\
-\addlinespace
-\cellcolor{gray!6}{1DKH} & \cellcolor{gray!6}{83} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.223800} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{122.9600}\\
-1ICC & 63 & HIS & 4.451283 & HIS & 114.1290\\
-\cellcolor{gray!6}{1ICC} & \cellcolor{gray!6}{39} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.542187} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{101.5070}\\
-1IPH & 415 & TYR & 4.218561 & TYR & 114.2710\\
-\cellcolor{gray!6}{1IPH} & \cellcolor{gray!6}{411} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.321024} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{108.2630}\\
-\addlinespace
-1IPH & 128 & HIS & 5.713777 & HIS & 129.2180\\
-\cellcolor{gray!6}{1N45} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.545004} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{112.7600}\\
-1P3T & 23 & HIS & 4.573926 & HIS & 111.7580\\
-\cellcolor{gray!6}{1P3T} & \cellcolor{gray!6}{117} & \cellcolor{gray!6}{SER} & \cellcolor{gray!6}{5.531584} & \cellcolor{gray!6}{SER} & \cellcolor{gray!6}{57.1608}\\
-1QHU & 265 & HIS & 4.200094 & HIS & 121.1810\\
-\addlinespace
-\cellcolor{gray!6}{1QHU} & \cellcolor{gray!6}{213} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.734866} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{114.5350}\\
-1QHU & 267 & TRP & 5.987630 & TRP & 70.5501\\
-\cellcolor{gray!6}{1QJS} & \cellcolor{gray!6}{266} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.484379} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{120.9930}\\
-1QJS & 213 & HIS & 4.696712 & HIS & 122.0930\\
-\cellcolor{gray!6}{1QJS} & \cellcolor{gray!6}{171} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{6.211700} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{138.2760}\\
-\addlinespace
-1SI8 & 337 & TYR & 3.976560 & TYR & 101.8400\\
-\cellcolor{gray!6}{1SI8} & \cellcolor{gray!6}{333} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.247624} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{116.1170}\\
-1SI8 & 140 & PHE & 5.575451 & PHE & 139.2170\\
-\cellcolor{gray!6}{1SY2} & \cellcolor{gray!6}{59} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.045387} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{126.3700}\\
-1SY2 & 40 & TYR & 5.887937 & TYR & 145.2220\\
-\addlinespace
-\cellcolor{gray!6}{1SY2} & \cellcolor{gray!6}{123} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.902915} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{147.6300}\\
-1U9U & 63 & HIS & 4.417873 & HIS & 116.0130\\
-\cellcolor{gray!6}{1U9U} & \cellcolor{gray!6}{39} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.589294} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{102.2750}\\
-1VGI & 25 & HIS & 4.646180 & HIS & 113.1630\\
-\cellcolor{gray!6}{1ZVI} & \cellcolor{gray!6}{415} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.181834} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{112.7440}\\
-\addlinespace
-1ZVI & 409 & TRP & 5.660275 & TRP & 90.9270\\
-\cellcolor{gray!6}{2BHJ} & \cellcolor{gray!6}{194} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.487497} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{118.0500}\\
-2BHJ & 193 & ARG & 5.745098 & ARG & 61.6429\\
-\cellcolor{gray!6}{2CJ0} & \cellcolor{gray!6}{29} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.390905} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{117.5660}\\
-2CJ0 & 31 & ALA & 5.440871 & ALA & 114.8710\\
-\addlinespace
-\cellcolor{gray!6}{2CJ0} & \cellcolor{gray!6}{183} & \cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{5.716050} & \cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{106.0810}\\
-2CN4 & 75 & TYR & 4.345054 & TYR & 126.9230\\
-\cellcolor{gray!6}{2CN4} & \cellcolor{gray!6}{83} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.251875} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{107.5140}\\
-2CN4 & 140 & MET & 5.816277 & MET & 172.2930\\
-\cellcolor{gray!6}{2CPO} & \cellcolor{gray!6}{29} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.443549} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{118.1890}\\
-\addlinespace
-2CPO & 31 & ALA & 5.505123 & ALA & 115.0400\\
-\cellcolor{gray!6}{2CPO} & \cellcolor{gray!6}{183} & \cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{5.799506} & \cellcolor{gray!6}{GLU} & \cellcolor{gray!6}{105.9460}\\
-2E2Y & 93 & HIS & 4.514535 & HIS & 114.4980\\
-\cellcolor{gray!6}{2E2Y} & \cellcolor{gray!6}{68} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.517060} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{97.7283}\\
-2E2Y & 43 & TRP & 5.845537 & TRP & 95.5213\\
-\addlinespace
-\cellcolor{gray!6}{2FC2} & \cellcolor{gray!6}{62} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.482879} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{112.5820}\\
-2FC2 & 56 & TRP & 5.737975 & TRP & 91.6643\\
-\cellcolor{gray!6}{2IIZ} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.533607} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{124.3380}\\
-2IIZ & 242 & ARG & 5.236889 & ARG & 162.0190\\
-\cellcolor{gray!6}{2IIZ} & \cellcolor{gray!6}{228} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{5.315815} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{165.2710}\\
-\addlinespace
-2IPS & 351 & HIS & 4.125792 & HIS & 94.9759\\
-\cellcolor{gray!6}{2IPS} & \cellcolor{gray!6}{433} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.458537} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{130.0630}\\
-2IPS & 108 & ASP & 5.870986 & ASP & 152.6010\\
-\cellcolor{gray!6}{2J0P} & \cellcolor{gray!6}{196} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.310325} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{111.1620}\\
-2J0P & 102 & ARG & 5.002395 & ARG & 139.6090\\
-\addlinespace
-\cellcolor{gray!6}{2J0P} & \cellcolor{gray!6}{246} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.155004} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{127.9200}\\
-2J18 & 29 & CYS & 4.359887 & CYS & 118.4250\\
-\cellcolor{gray!6}{2J18} & \cellcolor{gray!6}{31} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{5.457126} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{114.2550}\\
-2J18 & 183 & GLU & 5.722472 & GLU & 107.1960\\
-\cellcolor{gray!6}{2O6P} & \cellcolor{gray!6}{132} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{4.055037} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{132.9670}\\
-\addlinespace
-2O6P & 136 & TYR & 5.148558 & TYR & 145.4090\\
-\cellcolor{gray!6}{2O6P} & \cellcolor{gray!6}{48} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.365972} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{141.3220}\\
-2Q6N & 436 & CYS & 4.305637 & CYS & 109.8240\\
-\cellcolor{gray!6}{2Q6N} & \cellcolor{gray!6}{298} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{5.672036} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{129.8410}\\
-2R7A & 67 & TYR & 4.159993 & TYR & 116.4820\\
-\addlinespace
-\cellcolor{gray!6}{2R7A} & \cellcolor{gray!6}{169} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{5.223004} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{132.6020}\\
-2R7A & 257 & LEU & 5.559331 & LEU & 156.1720\\
-\cellcolor{gray!6}{2SPL} & \cellcolor{gray!6}{93} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.578545} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{112.4730}\\
-2SPL & 68 & VAL & 5.598014 & VAL & 111.2660\\
-\cellcolor{gray!6}{2SPL} & \cellcolor{gray!6}{43} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.815167} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{96.0910}\\
-\addlinespace
-2VEB & 120 & HIS & 4.471709 & HIS & 110.4880\\
-\cellcolor{gray!6}{2VEB} & \cellcolor{gray!6}{185} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{5.717992} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{165.6030}\\
-2VEB & 93 & PHE & 5.810118 & PHE & 112.4610\\
-\cellcolor{gray!6}{3MVF} & \cellcolor{gray!6}{59} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.066882} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{126.0770}\\
-3MVF & 42 & ALA & 5.827660 & ALA & 147.3790\\
-\addlinespace
-\cellcolor{gray!6}{3MVF} & \cellcolor{gray!6}{123} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.891492} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{147.9850}\\
-3QZZ & 120 & HIS & 4.599066 & HIS & 109.3460\\
-\cellcolor{gray!6}{3QZZ} & \cellcolor{gray!6}{89} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{5.927268} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{128.6650}\\
-3QZZ & 93 & PHE & 6.033470 & PHE & 111.4380\\
-\cellcolor{gray!6}{3SIK} & \cellcolor{gray!6}{136} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{4.260470} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{131.7390}\\
-\addlinespace
-3SIK & 140 & TYR & 5.120136 & TYR & 140.8870\\
-\cellcolor{gray!6}{3SIK} & \cellcolor{gray!6}{54} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{6.090293} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{163.0460}\\
-3TGC & 59 & HIS & 4.100823 & HIS & 124.3700\\
-\cellcolor{gray!6}{3TGC} & \cellcolor{gray!6}{123} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.908675} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{148.3100}\\
-3TGC & 40 & TYR & 5.967215 & TYR & 142.7160\\
-\addlinespace
-\cellcolor{gray!6}{3VP5} & \cellcolor{gray!6}{149} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.350835} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{100.8200}\\
-3VP5 & 72 & HIS & 4.371971 & HIS & 101.6570\\
-\cellcolor{gray!6}{3VP5} & \cellcolor{gray!6}{131} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{5.568423} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{118.6510}\\
-3ZJS & 120 & HIS & 4.427156 & HIS & 110.7000\\
-\cellcolor{gray!6}{3ZJS} & \cellcolor{gray!6}{89} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{5.790982} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{125.8290}\\
-\addlinespace
-3ZJS & 93 & PHE & 5.922481 & PHE & 109.4020\\
-\cellcolor{gray!6}{4B8N} & \cellcolor{gray!6}{71} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.416116} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{119.3920}\\
-4B8N & 48 & HIS & 4.479396 & HIS & 104.9040\\
-\cellcolor{gray!6}{4CDP} & \cellcolor{gray!6}{193} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.417630} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{109.7720}\\
-4CDP & 100 & ARG & 5.360373 & ARG & 139.0430\\
-\addlinespace
-\cellcolor{gray!6}{4CDP} & \cellcolor{gray!6}{192} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{5.600764} & \cellcolor{gray!6}{VAL} & \cellcolor{gray!6}{109.6320}\\
-4I3Q & 442 & CYS & 4.085782 & CYS & 103.9950\\
-\cellcolor{gray!6}{4I3Q} & \cellcolor{gray!6}{305} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{5.305272} & \cellcolor{gray!6}{ALA} & \cellcolor{gray!6}{115.6050}\\
-4JET & 75 & TYR & 4.420106 & TYR & 129.0130\\
-\cellcolor{gray!6}{4JET} & \cellcolor{gray!6}{81} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.381133} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{121.2740}\\
-\addlinespace
-4JET & 40 & ARG & 5.660400 & ARG & 117.6700\\
-\cellcolor{gray!6}{4MF9} & \cellcolor{gray!6}{209} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.606487} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{108.6490}\\
-4MF9 & 112 & ARG & 5.056393 & ARG & 134.9890\\
-\cellcolor{gray!6}{4MF9} & \cellcolor{gray!6}{259} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.680334} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{124.8600}\\
-4MYP & 280 & TYR & 4.465249 & TYR & 129.7640\\
-\addlinespace
-\cellcolor{gray!6}{4MYP} & \cellcolor{gray!6}{289} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.900895} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{133.7170}\\
-4MYP & 293 & ALA & 6.207799 & ALA & 133.2580\\
-\cellcolor{gray!6}{4NL5} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.473936} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{117.7090}\\
-4NL5 & 7 & ASN & 5.402231 & ASN & 170.5520\\
-\cellcolor{gray!6}{4NL5} & \cellcolor{gray!6}{23} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.580423} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{91.4353}\\
-\addlinespace
-4UZV & 106 & HIS & 4.502311 & HIS & 110.2430\\
-\cellcolor{gray!6}{4UZV} & \cellcolor{gray!6}{119} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.820671} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{139.8230}\\
-4UZV & 111 & ILE & 5.897899 & ILE & 140.3930\\
-\cellcolor{gray!6}{4XZD} & \cellcolor{gray!6}{75} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{4.329954} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{127.5350}\\
-4XZD & 81 & HIS & 5.263108 & HIS & 114.4420\\
-\addlinespace
-\cellcolor{gray!6}{4XZD} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.892195} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{118.8830}\\
-4Y1Q & 81 & HIS & 5.294289 & HIS & 126.8310\\
-\cellcolor{gray!6}{4Y1Q} & \cellcolor{gray!6}{40} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.725205} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{121.1480}\\
-4Y1Q & 147 & MET & 6.115760 & MET & 164.0570\\
-\cellcolor{gray!6}{5CN5} & \cellcolor{gray!6}{93} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.575365} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{113.1870}\\
-\addlinespace
-5CN5 & 68 & VAL & 5.556498 & VAL & 104.0070\\
-\cellcolor{gray!6}{5CN5} & \cellcolor{gray!6}{64} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{5.804727} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{107.1420}\\
-5O1L & 198 & HIS & 4.305405 & HIS & 102.4410\\
-\cellcolor{gray!6}{5O1L} & \cellcolor{gray!6}{171} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.743071} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{140.5170}\\
-5O1L & 222 & ILE & 6.024951 & ILE & 133.4090\\
-\addlinespace
-\cellcolor{gray!6}{5O1M} & \cellcolor{gray!6}{198} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.392715} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{100.3070}\\
-5O1M & 167 & LYS & 5.125712 & LYS & 134.4970\\
-\cellcolor{gray!6}{5O1M} & \cellcolor{gray!6}{222} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{6.241067} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{136.2240}\\
-5VEU & 441 & CYS & 4.349464 & CYS & 106.7690\\
-\cellcolor{gray!6}{5VEU} & \cellcolor{gray!6}{309} & \cellcolor{gray!6}{THR} & \cellcolor{gray!6}{5.895842} & \cellcolor{gray!6}{THR} & \cellcolor{gray!6}{174.8590}\\
-\addlinespace
-6A2J & 216 & HIS & 4.601722 & HIS & 122.2890\\
-\cellcolor{gray!6}{6A2J} & \cellcolor{gray!6}{278} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.655598} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{124.6210}\\
-7C74 & 351 & HIS & 4.494179 & HIS & 92.7950\\
-\cellcolor{gray!6}{7C74} & \cellcolor{gray!6}{433} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{5.275537} & \cellcolor{gray!6}{LEU} & \cellcolor{gray!6}{124.6650}\\
-7C74 & 105 & GLN & 5.667218 & GLN & 97.8161\\
-\addlinespace
-\cellcolor{gray!6}{7DMR} & \cellcolor{gray!6}{351} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.201640} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{96.7615}\\
-7DMR & 433 & LEU & 5.225161 & LEU & 132.7140\\
-\cellcolor{gray!6}{7DMR} & \cellcolor{gray!6}{105} & \cellcolor{gray!6}{GLN} & \cellcolor{gray!6}{5.517249} & \cellcolor{gray!6}{GLN} & \cellcolor{gray!6}{100.6130}\\*
-\end{longtabu}
-
-\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X}
-\caption{\label{tab:HEC-t-cabClosest}HEC: CA-CB-Fe Angles of Closest Residues}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Residue\_Code.y} & \rotatebox{45}{Angle}\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:HEC-t-cabClosest}HEC: CA-CB-Fe Angles of Closest Residues \textit{(continued)}}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Residue\_Code.y} & \rotatebox{45}{Angle}\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{125} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.218890} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{95.2502}\\
-1BBH & 16 & TYR & 4.795494 & TYR & 126.0380\\
-\cellcolor{gray!6}{1BBH} & \cellcolor{gray!6}{121} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{5.737156} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{88.6062}\\
-1S56 & 81 & HIS & 4.475028 & HIS & 112.6780\\
-\cellcolor{gray!6}{1S56} & \cellcolor{gray!6}{86} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{5.878780} & \cellcolor{gray!6}{ILE} & \cellcolor{gray!6}{163.7880}\\
-\addlinespace
-1S56 & 46 & PHE & 5.938368 & PHE & 100.7840\\
-\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{22} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.350769} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{122.1140}\\
-1W2L & 76 & MET & 4.403618 & MET & 95.5351\\
-\cellcolor{gray!6}{1W2L} & \cellcolor{gray!6}{34} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{5.935685} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{94.2433}\\
-2BC5 & 102 & HIS & 4.186908 & HIS & 96.2948\\
-\addlinespace
-\cellcolor{gray!6}{2BC5} & \cellcolor{gray!6}{7} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.661903} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{112.0730}\\
-2BC5 & 98 & CYS & 5.957326 & CYS & 83.1994\\
-\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{19} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.283790} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{122.4230}\\
-2BH5 & 100 & LYS & 4.313747 & LYS & 174.4600\\
-\cellcolor{gray!6}{2BH5} & \cellcolor{gray!6}{79} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.535216} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{107.5970}\\
-\addlinespace
-3EAH & 150 & CYS & 4.247423 & CYS & 109.9070\\
-\cellcolor{gray!6}{3EAH} & \cellcolor{gray!6}{144} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{5.647844} & \cellcolor{gray!6}{TRP} & \cellcolor{gray!6}{91.6868}\\
-3X15 & 16 & HIS & 4.360557 & HIS & 123.2520\\
-\cellcolor{gray!6}{3X15} & \cellcolor{gray!6}{44} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{6.024333} & \cellcolor{gray!6}{PHE} & \cellcolor{gray!6}{118.7300}\\
-3X15 & 15 & CYS & 6.178945 & CYS & 124.5130\\
-\addlinespace
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.310334} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{121.8690}\\
-5KPF & 80 & MET & 4.692154 & MET & 126.7040\\
-\cellcolor{gray!6}{5KPF} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.922923} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{117.3570}\\
-5LFT & 18 & HIS & 4.342999 & HIS & 122.5120\\
-\cellcolor{gray!6}{5LFT} & \cellcolor{gray!6}{80} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{4.757864} & \cellcolor{gray!6}{MET} & \cellcolor{gray!6}{124.0680}\\
-\addlinespace
-5LFT & 67 & TYR & 5.919346 & TYR & 117.9010\\
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.334295} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{122.3910}\\
-5T8W & 80 & MET & 4.693021 & MET & 126.3770\\
-\cellcolor{gray!6}{5T8W} & \cellcolor{gray!6}{67} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{5.858639} & \cellcolor{gray!6}{TYR} & \cellcolor{gray!6}{116.3210}\\
-6VDQ & 313 & HIS & 4.120545 & HIS & 123.2950\\
-\addlinespace
-\cellcolor{gray!6}{6VDQ} & \cellcolor{gray!6}{274} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.500421} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{121.1700}\\
-6VDQ & 278 & ILE & 5.358791 & ILE & 112.0200\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{102} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.440577} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{93.6577}\\
-6WZA & 7 & MET & 4.611608 & MET & 112.1700\\
-\cellcolor{gray!6}{6WZA} & \cellcolor{gray!6}{98} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{5.774303} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{89.2313}\\
-\addlinespace
-6XNK & 79 & LYS & 3.938274 & LYS & 132.9060\\
-\cellcolor{gray!6}{6XNK} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.599701} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{122.1970}\\
-6XNK & 67 & TYR & 5.613420 & TYR & 126.9700\\*
-\end{longtabu}
-
-\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X}
-\caption{\label{tab:SRM-t-cabClosest}SRM: CA-CB-Fe Angles of Closest Residues}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Residue\_Code.y} & \rotatebox{45}{Angle}\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:SRM-t-cabClosest}SRM: CA-CB-Fe Angles of Closest Residues \textit{(continued)}}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Residue\_Code.y} & \rotatebox{45}{Angle}\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-\cellcolor{gray!6}{1ZJ8} & \cellcolor{gray!6}{467} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.642760} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{106.838}\\
-1ZJ8 & 209 & LYS & 5.254105 & LYS & 132.216\\
-\cellcolor{gray!6}{1ZJ8} & \cellcolor{gray!6}{207} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.279599} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{172.220}\\
-2AKJ & 486 & CYS & 4.400598 & CYS & 106.363\\
-\cellcolor{gray!6}{2AKJ} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.292960} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{179.302}\\
-\addlinespace
-2AKJ & 109 & ARG & 5.624044 & ARG & 148.462\\
-\cellcolor{gray!6}{2AOP} & \cellcolor{gray!6}{483} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.593058} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{115.665}\\
-2AOP & 217 & LYS & 5.485034 & LYS & 135.748\\
-\cellcolor{gray!6}{2AOP} & \cellcolor{gray!6}{215} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.521547} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{157.380}\\
-3B0G & 485 & CYS & 4.334547 & CYS & 114.218\\
-\addlinespace
-\cellcolor{gray!6}{3B0G} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.579947} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{175.793}\\
-3B0G & 109 & ARG & 5.714505 & ARG & 157.759\\
-\cellcolor{gray!6}{3VKP} & \cellcolor{gray!6}{485} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.338921} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{113.156}\\
-3VKP & 224 & LYS & 5.500133 & LYS & 175.826\\
-\cellcolor{gray!6}{3VKP} & \cellcolor{gray!6}{109} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.727950} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{159.006}\\
-\addlinespace
-3VLX & 485 & CYS & 4.333556 & CYS & 112.758\\
-\cellcolor{gray!6}{3VLX} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.605021} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{177.426}\\
-3VLX & 109 & ARG & 5.657293 & ARG & 157.839\\
-\cellcolor{gray!6}{3VLY} & \cellcolor{gray!6}{485} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.349260} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{114.536}\\
-3VLY & 226 & LYS & 5.485627 & LYS & 132.628\\
-\addlinespace
-\cellcolor{gray!6}{3VLY} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.637976} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{177.525}\\
-3VLZ & 485 & CYS & 4.361247 & CYS & 115.631\\
-\cellcolor{gray!6}{3VLZ} & \cellcolor{gray!6}{224} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{5.601385} & \cellcolor{gray!6}{LYS} & \cellcolor{gray!6}{175.472}\\
-3VLZ & 226 & LYS & 5.641233 & LYS & 129.835\\
-\cellcolor{gray!6}{5H8V} & \cellcolor{gray!6}{544} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{4.294361} & \cellcolor{gray!6}{CYS} & \cellcolor{gray!6}{112.481}\\
-\addlinespace
-5H8V & 278 & LYS & 5.495851 & LYS & 140.582\\
-\cellcolor{gray!6}{5H8V} & \cellcolor{gray!6}{124} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{5.731236} & \cellcolor{gray!6}{ARG} & \cellcolor{gray!6}{158.195}\\*
-\end{longtabu}
-
-\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedleft}X}
-\caption{\label{tab:VERDOHEME-t-cabClosest}VERDOHEME: CA-CB-Fe Angles of Closest Residues}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Residue\_Code.y} & \rotatebox{45}{Angle}\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:VERDOHEME-t-cabClosest}VERDOHEME: CA-CB-Fe Angles of Closest Residues \textit{(continued)}}\\
-\toprule
-\rotatebox{45}{PDB\_ID} & \rotatebox{45}{Residue\_Number} & \rotatebox{45}{Residue\_Code.x} & \rotatebox{45}{Mean\_Distance} & \rotatebox{45}{Residue\_Code.y} & \rotatebox{45}{Angle}\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-\cellcolor{gray!6}{2ZVU} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.603252} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{110.751}\\
-3MOO & 20 & HIS & 4.614778 & HIS & 111.089\\
-\cellcolor{gray!6}{1TWN} & \cellcolor{gray!6}{25} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{4.673370} & \cellcolor{gray!6}{HIS} & \cellcolor{gray!6}{113.516}\\
-1TWR & 25 & HIS & 4.786588 & HIS & 108.864\\*
 \end{longtabu}
 
 

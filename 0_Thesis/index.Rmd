@@ -23,10 +23,10 @@ title: Structural Analysis of Hemoprotein Binding Sites
 #   Template for R Markdown
 author: Patrick Finnerty
 college: Biosciences
-university: Universtat Autonoma de Barcelona
+university: Universtat Autònoma de Barcelona
 university-logo: templates/UABlogo.pdf
 university-logo-width: 8cm
-submitted-text: Academic Tutor, JeanDi, Dept of Chemistry; A thesis submitted for the degree of
+submitted-text: Academic Tutor -- Prof. Jean-Didier Maréchal, Dept. of Chemistry  Thesis submitted for the degree of
 degree: Master of Science
 degreedate: Fall 2021
 abstract: |
