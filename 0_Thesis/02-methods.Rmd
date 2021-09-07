@@ -50,6 +50,9 @@ Amino acids within the bounds of the lower and upper distance cutoff were select
 
 Volume of the binding pocket was predicted via Surfnet [@Laskowski1995], and run with default parameters of Grid Interval = 1.0 and Distance Cutoff = 10.0 (the latter option does not relate to the distance cutoff from the ligand). Surfnet is the molecular volume calculation tool implemented within UCSF Chimera. The script used selects the residues around heme to consider as the bounds of the pocket, but effectively ignores heme's presence as its calculates the volume, as if the pocket were empty:
 
+
+Surfnet, at least in this investigation, was prone to generating very small volumes. During analysis these were removed and only the largest volume generated is recorded, since the largest volume generated and identified is most likely the binding pocket. 
+
 **insert code**
 
 ### Surface Area Calculations

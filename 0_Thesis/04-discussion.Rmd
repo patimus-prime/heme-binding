@@ -511,7 +511,7 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
 
 Figures can be found in Appendix \@ref(figs-vol).
 
-Volume results were rather spread out, with close agreement only found for heme-b. In general, volume for all heme molecules regardless of distance cutoff averaged about 1200 A³. This result may be useful in protein engineering efforts, especially for selection or design of binding pockets. 
+Volume results were rather spread out, with close agreement only found for heme-b. In general, volume for all heme molecules regardless of distance cutoff centered at approximately 1200 A³. This result may be useful in protein engineering efforts, especially for selection or design of binding pockets. 
 
 ## Surface Areas
 
@@ -544,13 +544,6 @@ Although many hypotheses have been suggested in the discussion to explain the da
 
 Some of these data could also be analyzed more thoroughly, for example eliminating the coordinating amino acids from the amino acid frequency data. This was not possible here due to how the framework is constructed: coordinating residues are not identified, nor is a definition proposed to identify coordinating residues. Manual input of known coordinating residues would be necessary to be certain that they could be eliminated from the final dataset analyzed, but this was beyond the scope of this study. 
 
-UCSF-Chimera was used to generate all data used in this study; many algorithms have remained unchanged for some time (surface area calculations are sourced from MSMS (1996) and volume calculations from surfnet (1995)). Comparison with any new algorithms that are developed to calculate surface area or volume would be ideal. 
-Only one software package/few algorithms used to calculate all these properties. Others were evaluated but none are compared w.
+UCSF-Chimera was used to generate all data used in this study; many algorithms have remained unchanged for some time (surface area calculations are sourced from MSMS (1996) and volume calculations from surfnet (1995)). It would be ideal to compare with any new algorithms that are developed to calculate surface area or volume, or with any experimental data that may be used confirm these numbers. 
 
-Algorithms may introduce bias based on how they work e.g. all the bubbles
-
-Arbitrary selection of parameters; some based on rule of thumb or visual evaluation but all or almost all arbitrary
-
-Unknown if the qualities measured are truly the most critical for the heme binding. Some papers suggest other properties may also be important but cannot be calculated, at least right now, e.g. ionic bonding strength etc.
-
-Visual examination itself to OK the parameters/algorithms can introduce bias
+The reason being for this desired orthogonality is that the algorithms themselves may certainly introduce bias based off how they work. Surfnet generates 3D-contour surfaces to identify cavities; in practice, many small "bubbles" or insignificant cavities were generated in the study, and are filtered out during analysis -- the parameters chosen can also significantly influence the behavior of the algorithm; in this study, the default parameters appeared to generate the most reasonable binding pocket. But this assessment is based off subjective visual observation by the author, and therefore introduces further bias. One may expect applying the same algorithm with the same parameters to many PDBs may at least introduce the same bias to all samples, but the algorithm may distort some PDBs more than others depending on the shape and size of their binding pocket. 

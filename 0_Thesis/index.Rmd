@@ -16,7 +16,7 @@ knit: (function(input, ...) {
 #####################
 ## thesis metadata ##
 #####################
-title: Characterizing Heme Pockets
+title: Structural Analysis of Hemoprotein Binding Sites
 # #title: |
 #   `oxforddown`: \
 #   An Oxford University Thesis \
