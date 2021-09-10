@@ -43,7 +43,7 @@ knitr::include_graphics("figures/HEM.png")
 
 The most common heme is heme-b. It is employed by the vast majority of hemoproteins. It is composed of an iron and porphyrin ring complex with attached vinyl and ethyl groups, and with the addition of two propionate groups. The iron atom is usually coordinated to a histidine or cysteine, depending on the enzyme[@Poulos2014; @Kleingardner2015].
 
-The two propionate groups stabilize the heme in the pocket by forming polar interactions with salt bridges formed by arginine residues in the binding environment[@Barrows2005]. This behavior is the same for heme-b and likely verdoheme. It has also been suggested that the propionate groups may also serve to exclude solvent from the binding environment, potentially acting to expel and repel water molecules [@Hayashi2009]. 
+The two propionate groups stabilize the heme in the pocket by forming polar interactions with salt bridges formed by arginine residues in the binding environment[@Barrows2005]. This behavior is the same for heme-b and likely verdoheme. It has also been suggested that the propionate groups may also serve to exclude solvent from the binding environment, potentially acting to expel and repel water molecules [@hayashi2009role].
 
 ### Heme-c
 

@@ -1,21 +1,24 @@
 # Welcome {-}
 
-::: {.row}
-:::::: {.col-sm-6}
-Welcome to the `bs4` output from the [`oxforddown`](https://github.com/ulyngs/oxforddown) thesis template for [R Markdown](https://rmarkdown.rstudio.com). 
-To view/download the PDF output, [click here](_main.pdf) (or click the cover image).
+<!-- ::: {.row} -->
+<!-- :::::: {.col-sm-6} -->
+<!-- Welcome to the `bs4` output from the [`oxforddown`](https://github.com/ulyngs/oxforddown) thesis template for [R Markdown](https://rmarkdown.rstudio.com).  -->
+Welcome to my thesis! To navigate: Sections are listed on the left of the screen, and subsections on the right; you may also click on the button at the bottom of the page to advance section by section.
+
+To view/download the PDF output, [click here](_main.pdf). Scripts, raw results, and all project-related material are available at [my GitHub](https://github.com/patimus-prime/heme-binding).
+
 Enjoy!
 
 ::::::::: {.byline}
-Ulrik Lyngs \
-4 January 2021
+Patrick Finnerty \
+7 September 2021
 :::::::::
 ::::::
 
-:::::: {.col-sm-6 .thesis-cover}
-<a href="_main.pdf" target="_blank"><img src="templates/cover.png" alt="Download PDF" class="img-fluid"/></a> 
-::::::
-:::
+<!-- :::::: {.col-sm-6 .thesis-cover} -->
+<!-- <a href="_main.pdf" target="_blank"><img src="templates/cover.png" alt="Download PDF" class="img-fluid"/></a>  -->
+<!-- :::::: -->
+<!-- ::: -->
 
 ## Abstract {-}
 ```{r abstract, child=here::here('front-and-back-matter/_abstract.Rmd')}

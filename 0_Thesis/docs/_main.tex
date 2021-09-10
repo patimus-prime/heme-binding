@@ -82,6 +82,56 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
  
 % UL 1 Dec 2018, fix to include code in shaded environments
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+
+%UL set white space before and after code blocks
+\renewenvironment{Shaded}
+{
+  \vspace{10pt}%
+  \begin{snugshade}%
+}{%
+  \end{snugshade}%
+  \vspace{8pt}%
+}
 
 % User-included things with header_includes or in_header will appear here
 % kableExtra packages will appear here if you use library(kableExtra)
@@ -172,8 +222,9 @@
 \usepackage[style=numeric-comp, sorting=none, backend=biber, maxcitenames=2, useprefix, doi=true, isbn=false, uniquename=false]{biblatex}
 \newcommand*{\bibtitle}{Works Cited}
 
-\addbibresource{bibliography/references.bib}
-\addbibresource{bibliography/additional-references.bib}
+\addbibresource{bibliography/pat.bib}
+\addbibresource{bibliography/super.bib}
+\addbibresource{bibliography/hayashi.bib}
 
 
 % This makes the bibliography left-aligned (not 'justified') and slightly smaller font.
@@ -279,7 +330,7 @@
 
   Thanks to Spain, and Catalonia, for even allowing me into the country, and, I emphasize, thanks for implementing public health measures.
 
-  Thanks to my classmates for also attempting to alleviate my gross incompetence and at least sharing in the suffering.
+  Thanks to my classmates for sharing in the suffering.
 
   Thanks to my family and friends for supporting me, often over the phone, throughout this program and interesting time.
 
@@ -376,7 +427,7 @@ Thus far, only heme-b and its respective hemoproteins have been discussed (altho
 
 The most common heme is heme-b. It is employed by the vast majority of hemoproteins. It is composed of an iron and porphyrin ring complex with attached vinyl and ethyl groups, and with the addition of two propionate groups. The iron atom is usually coordinated to a histidine or cysteine, depending on the enzyme\autocite{Poulos2014,Kleingardner2015}.
 
-The two propionate groups stabilize the heme in the pocket by forming polar interactions with salt bridges formed by arginine residues in the binding environment\autocite{Barrows2005}. This behavior is the same for heme-b and likely verdoheme. It has also been suggested that the propionate groups may also serve to exclude solvent from the binding environment, potentially acting to expel and repel water molecules \autocite{Hayashi2009}.
+The two propionate groups stabilize the heme in the pocket by forming polar interactions with salt bridges formed by arginine residues in the binding environment\autocite{Barrows2005}. This behavior is the same for heme-b and likely verdoheme. It has also been suggested that the propionate groups may also serve to exclude solvent from the binding environment, potentially acting to expel and repel water molecules \autocite{hayashi2009role}.
 
 \hypertarget{heme-c}{%
 \subsection{Heme-c}\label{heme-c}}
@@ -468,7 +519,20 @@ The name of all proteins used in the study and their source organism are provide
 
 Many of the PDBs downloaded were multimeric structures. The number of subunits per protein would skew results and overrepresent especially large multimeric proteins. Therefore, to only allow for one heme binding site per PDB, all downloaded PDBs were converted to monomeric structures. This was achieved by saving a single chain (chain A) of each PDB and eliminating all other chains. The single chain was then saved as a PDB and used in all subsequent scripts. Part of the script is reproduced below:
 
-\textbf{INSERT SCRIPT, if we want}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ chimera }\ImportTok{import}\NormalTok{ runCommand }\ImportTok{as}\NormalTok{ rc}
+\CommentTok{\# select chain A, a single unit}
+\NormalTok{rc(}\StringTok{"sel :.a"}\NormalTok{)}
+\CommentTok{\# select everything else}
+\NormalTok{rc(}\StringTok{"sel invert sel"}\NormalTok{)}
+\CommentTok{\# delete everything else besides that chain A}
+\NormalTok{rc(}\StringTok{"del sel"}\NormalTok{)}
+\CommentTok{\# now save the monomer:}
+\NormalTok{rc((}\StringTok{"write format pdb 0 "}\OperatorTok{+}\NormalTok{unexpandedResultPath}\OperatorTok{+}\NormalTok{activeLigand}\OperatorTok{+}\StringTok{"/}\SpecialCharTok{\%s}\StringTok{"}\NormalTok{)}\OperatorTok{\%}
+\NormalTok{  (fn }\OperatorTok{+} \StringTok{".mono.pdb"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{processing-monomers}{%
 \section{Processing Monomers}\label{processing-monomers}}
@@ -477,7 +541,7 @@ UCSF-Chimera was used to generate all data in this study. Multiple Python script
 
 Chimera was used to predict the following qualities: Volume of the ligand binding pocket, accessible and excluded surface area of the ligand, and accessible and excluded surface area of the binding pocket. These calculations require a population of atoms to be selected for the calculation.
 
-Atoms were selected within a distance cutoff, to be considered as ``interacting'' with the ligand or forming the binding pocket. Distance cutoffs from the ligand of 5A and 7A were chosen; for the predicted qualities, the algorithms were run twice to get values at 5A and 7A. For the distance and angle calculations, only the 7A distance cutoff was used, as the cutoff does not factor into any calculations and may be set during analysis.
+Atoms were selected within a distance cutoff, to be considered as potentially interacting with the ligand or forming the binding pocket. Distance cutoffs from the ligand of 5A and 7A were chosen; for the predicted qualities, the algorithms were run twice to get values at 5A and 7A. For the distance and angle calculations, only the 7A distance cutoff was used, as the cutoff does not factor into any calculations and may be set during analysis.
 
 As these cutoffs are selected arbitrarily, data from the 5A and 7A runs are overlaid in the figures reported in Appendix \ref{a-figures}. Data tables are also provided in Appendix \ref{a-tables}.
 
@@ -491,9 +555,40 @@ Amino acids within the bounds of the lower and upper distance cutoff were select
 
 Volume of the binding pocket was predicted via Surfnet \autocite{Laskowski1995}, and run with default parameters of Grid Interval = 1.0 and Distance Cutoff = 10.0 (the latter option does not relate to the distance cutoff from the ligand). Surfnet is the molecular volume calculation tool implemented within UCSF Chimera. The script used selects the residues around heme to consider as the bounds of the pocket, but effectively ignores heme's presence as its calculates the volume, as if the pocket were empty:
 
-\textbf{insert code}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ chimera }\ImportTok{import}\NormalTok{ runCommand }\ImportTok{as}\NormalTok{ rc}
+\CommentTok{\# Select the atoms within 7A of heme. }
+\CommentTok{\#Then, of that selection, keep everything but heme.}
+\NormalTok{rc(}\StringTok{"sel :"}\OperatorTok{+}\NormalTok{activeLigand}\OperatorTok{+}\StringTok{" za \textless{} "}\OperatorTok{+}\NormalTok{angstromDistance)}
+\CommentTok{\# this is the syntax that accomplishes our desired selection}
+\NormalTok{rc(}\StringTok{"sel sel \&\textasciitilde{}:"}\OperatorTok{+}\NormalTok{activeLigand) }
+\NormalTok{interface\_surfnet(}\StringTok{"sel"}\NormalTok{,}\StringTok{"sel"}\NormalTok{)}
+\NormalTok{rc(}\StringTok{"sop split \#"}\NormalTok{) }\CommentTok{\# acquire the individual pockets that have been generated}
+\NormalTok{rc(}\StringTok{"measure volume \#"}\NormalTok{) }\CommentTok{\# measures volume of individual pockets}
+\CommentTok{\# in R we keep only the largest volume}
+\end{Highlighting}
+\end{Shaded}
 
-Surfnet, at least in this investigation, was prone to generating very small volumes. During analysis these were removed and only the largest volume generated is recorded, since the largest volume generated and identified is most likely the binding pocket.
+Surfnet, at least in this investigation, was prone to generating very small volumes. During analysis these were removed and only the largest volume generated is recorded, since the largest volume generated and identified is most likely the binding pocket. Two figures below demonstrate a run where one good pocket is produced, and one where a few very small ``bubbles'' are generated:
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{figures/1B2V.good} 
+
+}
+
+\caption{Good Example of Surfnet Run (1B2V)}\label{fig:goodExample}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{figures/1DKH.bad} 
+
+}
+
+\caption{Non-Ideal Example of Surfnet Run (1DKH)}\label{fig:badExample}
+\end{figure}
 
 \hypertarget{SAmethods}{%
 \subsection{Surface Area Calculations}\label{SAmethods}}
@@ -507,7 +602,24 @@ These two measures are similar but not the same. Solvent accessible surface area
 
 Distances of amino acids from the ligand could not be calculated accurately nor precisely in a direct way. Instead, distances for each atom composing a residue were calculated. This was achieved using a built-in function of chimera; the syntax is not straightforward, but part of the script is shown below. The distances of all atoms within a residue were averaged, and this value was taken as the mean distance of the entire residue and used in subsequent steps.
 
-\textbf{insert some code}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ chimera }\ImportTok{import}\NormalTok{ runCommand }\ImportTok{as}\NormalTok{ rc}
+\CommentTok{\#select and define the Fe atom}
+\NormalTok{rc(}\StringTok{"sel :HEM@Fe"}\NormalTok{) }
+\CommentTok{\# index to acquire the one atom selected}
+\NormalTok{fe }\OperatorTok{=}\NormalTok{ chimera.selection.currentAtoms()[}\DecValTok{0}\NormalTok{] }
+\CommentTok{\# select all atoms within angstromDistance of Fe (also de{-}selects Fe)}
+\NormalTok{rc(}\StringTok{"sel sel za \textless{} "}\OperatorTok{+}\NormalTok{settings.angstromDistance) }
+\CommentTok{\# define this selection of atoms within distance as a list}
+\NormalTok{nearbyAtoms }\OperatorTok{=}\NormalTok{ chimera.selection.currentAtoms()}
+\CommentTok{\# parse and print the distances (and coordinates) of these atoms }
+\ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in}\NormalTok{ nearbyAtoms:}
+  \BuiltInTok{print} \StringTok{"Atom being analyzed..."}\NormalTok{, i, }\StringTok{"... Distance to Fe..."}\NormalTok{,}
+  \CommentTok{\#prints distance between atom i and the Fe atom}
+\NormalTok{  i.coord().distance(fe.coord())  }
+\end{Highlighting}
+\end{Shaded}
 
 The data produced in this step therefore include the mean distance of each amino acid. Distances are traceable per residue and atoms in each residue; this data was used to construct the distributions of amino acids over distance, and the angular data below are cross-referenced with this list of distances.
 
@@ -516,7 +628,14 @@ The data produced in this step therefore include the mean distance of each amino
 
 Individual residues and the ligand were defined as axes. The angle between each residue's axis and the axis of the ligand were calculated. Each axis functions essentially as a separate plane. This employed the ``define axis'', and ``angle'' functions of Chimera; the Axes/Planes/Centroids Structural Analysis function of Chimera via GUI.
 
-\textbf{insert picture}
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figures/1B5M.axes} 
+
+}
+
+\caption{Example of Planar Angles Calculation (1B5M)}\label{fig:axesExample}
+\end{figure}
 
 \hypertarget{ca-cb-fe-calculations}{%
 \subsection{CA-CB-Fe Calculations}\label{ca-cb-fe-calculations}}
@@ -536,8 +655,6 @@ The data produced by Chimera and the Python scripts were stored as .txt files. T
 
 \hypertarget{discussion}{%
 \chapter{Results and Discussion}\label{discussion}}
-
-\minitoc
 
 \hypertarget{disc-aaFreq}{%
 \section{Analysis of Residues Nearby Each Heme Molecule}\label{disc-aaFreq}}
@@ -648,7 +765,7 @@ After an exhaustive exploration of the relative frequencies of amino acids in th
 
 We find that only a few residues come in close contact (\textless4A) of the heme: cysteine, histidine, and tyrosine. Most residues center their distribution at around 6A, although lysine seems more biased than the remaining residues to be a bit closer. Cysteine and histidine may be at least in part explained to be close due to their use as coordinating residues; histidine, being in greater frequency, may also be this close due to favorable interactions with the porphyrin ring.
 
-The proximity of tyrosine however, is more notable. It cannot form coordination bonds with the heme iron, but tyrosine residues do interact with the propionate groups. Tyrosine is also required for redox reactions, and part of the population of tyrosine residues may therefore be in close proximity to heme to facilitate electron transfer in various enzymes\autocite{Poulos2014}. These results suggest that of all potentially interacting polar/positively charged residues, tyrosine is the most likely at least to be in close proximity to the heme molecule. Whether this illustrates an importance of tyrosine to interact with propionate groups, or instead the need for tyrosine to be in close proximity in order to form such interactions, or simply demonstrates involvement in oxidation/reduction reactions, is beyond the scope of this study.
+The proximity of tyrosine however, is more notable. It cannot form coordination bonds with the heme iron, but tyrosine residues do interact with the propionate groups. Tyrosine is also required for redox reactions, and part of the population of tyrosine residues may therefore be in close proximity to heme to facilitate electron transfer in various enzymes \autocite{Poulos2014}. These results suggest that of all potentially interacting polar/positively charged residues, tyrosine is the most likely at least to be in close proximity to the heme molecule. Whether this illustrates an importance of tyrosine to interact with propionate groups, or instead the need for tyrosine to be in close proximity in order to form such interactions, or simply demonstrates involvement in oxidation/reduction reactions, is beyond the scope of this study.
 
 \hypertarget{heme-c-1}{%
 \subsection{Heme-c}\label{heme-c-1}}
@@ -913,25 +1030,25 @@ Volume results were rather spread out, with close agreement only found for heme-
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/HEM-Volume-1.pdf}
-\caption{\label{fig:HEM-Volume}HEM: Volume}
+\caption{\label{fig:HEM-Volume}HEM: Volume of Binding Pocket}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/HEC-Volume-1.pdf}
-\caption{\label{fig:HEC-Volume}HEC: Volume}
+\caption{\label{fig:HEC-Volume}HEC: Volume of Binding Pocket}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/SRM-Volume-1.pdf}
-\caption{\label{fig:SRM-Volume}SRM: Volume}
+\caption{\label{fig:SRM-Volume}SRM: Volume of Binding Pocket}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/VERDOHEME-Volume-1.pdf}
-\caption{\label{fig:VERDOHEME-Volume}VERDOHEME: Volume}
+\caption{\label{fig:VERDOHEME-Volume}VERDOHEME: Volume of Binding Pocket}
 \end{figure}
 
 \hypertarget{surface-areas-of-heme-molecules-and-their-binding-pockets}{%
@@ -942,7 +1059,7 @@ Volume results were rather spread out, with close agreement only found for heme-
 
 Both solvent accessible and solvent excluded surface areas were calculated for heme molecules and binding pockets. The differences between these two measures were discussed in Section \ref{SAmethods}. The results are extremely similar for solvent accessible and solvent excluded surface areas; and therefore only solvent accessible surface area, a measure more practically interpreted into chemical phenomena, is discussed below. Figures and data for solvent excluded surface areas are available in Appendix \ref{figs-ligExcSA}, \ref{figs-pocketExcSA}, and \ref{a-VSA}. Solvent accessible surface area figures are shown below; data tables are available in Appendix \ref{a-VSA}.
 
-The solvent accessible surface area for all heme \emph{molecules} themselves centers around values of 1000 A². This result is reasonable, given the similarity in size and structure of all heme molecules, in spite of the attached groups. Figures are shown below; extreme outliers have been removed from these figures but full data tables are available in (FIXME add appendix number). The outliers are likely artefacts of the method used to calculate surface area and potential conflicts with the method used to convert multimeric proteins to monomers.
+The solvent accessible surface area for all heme \emph{molecules} themselves centers around values of 1000 A². This result is reasonable, given the similarity in size and structure of all heme molecules, in spite of the attached groups. Figures are shown below; full data tables are available in Appendix \ref{a-VSA}. The extreme outliers are likely artefacts of the method used to calculate surface area and potential conflicts with the method used to convert multimeric proteins to monomers.
 
 \hypertarget{figs-ligAccSA}{%
 \section{Ligand Solvent Accessible Surface Area}\label{figs-ligAccSA}}

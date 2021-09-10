@@ -7,7 +7,7 @@
 # The format options are: 'pdf', 'bs4', 'gitbook', 'word'
 # E.g. you can build both pdf and html with 'thesis_formats <- c("pdf", "bs4")'
 knit: (function(input, ...) {
-    thesis_formats <- c("pdf");
+    thesis_formats <- c("bs4");
     
     source("scripts_and_filters/knit-functions.R");
     knit_thesis(input, thesis_formats, ...)
@@ -40,7 +40,8 @@ abbreviations: |
 #######################
 ## bibliography path ##
 #######################
-bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+bibliography: [bibliography/pat.bib,bibliography/super.bib,bibliography/hayashi.bib]
+# bibliography/references.bib, bibliography/additional-references.bib]
 
 ########################
 ## PDF layout options ###
