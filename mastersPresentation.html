@@ -8,16 +8,9 @@
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
-    <script src="libs/leaflet-1.3.1/leaflet.js"></script>
-    <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-    <script src="libs/proj4-2.6.2/proj4.min.js"></script>
-    <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-    <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-    <script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
     <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
     <script src="libs/datatables-binding-0.19/datatables.js"></script>
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
     <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
     <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -32,7 +25,7 @@ class: center, middle, inverse, title-slide
 ## or: How I Spent My Summer
 ### Patrick Finnerty
 ### Universtat Autònoma de Barcelona
-### 2021/09/11 (updated: 2021-09-13)
+### 2021/09/11 (updated: 2021-09-14)
 
 ---
 
@@ -116,7 +109,7 @@ Cytochrome P450s
 
 Physiological Importance:
 - Hormone degradation and synthesis
-- Degrade the majority of all drugs! &lt;a name=cite-Poulos2014&gt;&lt;/a&gt;[Poulos [2]](#bib-Poulos2014)
+- Degrade the majority of all drugs! (&lt;a name=cite-Poulos2014&gt;&lt;/a&gt;[Poulos [2]](#bib-Poulos2014))
 
 &lt;!-- [Sanner, Olson, and Spehner [1]](#bib-Sanner1996) --&gt;
 
@@ -136,19 +129,366 @@ carbohydrates, steroids, fatty acids; catalyzing hormone degradation and synthes
 
 class: inverse, center, middle
 
+# Methods
+
+---
+# #CiteMe
+
+All scripts (as well as raw data, results, and this document) are available on GitHub, https://github.com/patimus-prime/heme-binding.
+
+---
+# Datasets
+A list of PDBs was assembled that represented either a representative sample of a variety of proteins, with a resolution better than 3A, (HEM and HEC) or, all proteins containing these ligands were downloaded from the PDB (in the case of SRM, VER, VEA). Not all downloaded PDBs were appropriate for this study (e.g. contained superimposed structures) and therefore the amount of PDBs was culled. The datasets are current as of 16 August 2021. 
+
+The size of the datasets actually used in the study were as follows: HEM (n=58), HEC(n=13), SRM (n=9), VER (n=2) and VEA (n=2), which are merged for a combined n=4 for VERDOHEME. 
+
+The name of all proteins used in the study and their source organism are provided.
+
+---
+
+
+## Pre-processing
+Many of the PDBs downloaded were multimeric structures. The number of subunits per protein would skew results and overrepresent especially large multimeric proteins. Therefore, to only allow for one heme binding site per PDB, all downloaded PDBs were converted to monomeric structures. This was achieved by saving a single chain (chain A) of each PDB and eliminating all other chains. The single chain was then saved as a PDB and used in all subsequent scripts. Part of the script is reproduced below:
+&lt;!-- BTW, need install.packages('reticulate') for this to work --&gt;
+
+```python
+from chimera import runCommand as rc
+# select chain A, a single unit
+rc("sel :.a")
+# select everything else
+rc("sel invert sel")
+# delete everything else besides that chain A
+rc("del sel")
+# now save the monomer:
+rc(("write format pdb 0 "+unexpandedResultPath+activeLigand+"/%s")%
+  (fn + ".mono.pdb"))
+```
+
+---
+# Break this shit up
+
+UCSF-Chimera was used to generate all data in this study. Multiple Python scripts were employed to achieve a high-throughput process where all monomeric PDBs could be processed in the same session. 
+
+Chimera was used to predict the following qualities: Volume of the ligand binding pocket, accessible and excluded surface area of the ligand, and accessible and excluded surface area of the binding pocket. These calculations require a population of atoms to be selected for the calculation. 
+
+Atoms were selected within a distance cutoff, to be considered as potentially interacting with the ligand or forming the binding pocket. Distance cutoffs from the ligand of 5A and 7A were chosen; for the predicted qualities, the algorithms were run twice to get values at 5A and 7A. For the distance and angle calculations, only the 7A distance cutoff was used, as the cutoff does not factor into any calculations and may be set during analysis.
+
+As these cutoffs are selected arbitrarily, data from the 5A and 7A runs are overlaid in the figures reported in Appendix \@ref(a-figures). Data tables are also provided in Appendix \@ref(a-tables).
+
+---
+
+#Amino Acid Frequency
+
+Amino acids within the bounds of the lower and upper distance cutoff were selected and recorded. These were then counted for frequency per residue.
+
+
+
+```python
+# GET RESIDUES
+rc("sel :"+activeLigand+" zr &lt; "+angstromDistance)#7.0")
+for i in chimera.selection.currentResidues():
+   print i
+```
+
+Example output (in text file):
+```
+ARG 143.A
+GLY 447.A
+ASN 145.A
+TRP 146.A
+GLN 147.A
+ARG 149.A
+CYS 446.A
+LYS 454.A
+```
+---
+
+# Volume Method
+
+Volume of the binding pocket was predicted via Surfnet (&lt;a name=cite-Laskowski1995&gt;&lt;/a&gt;[Laskowski [3]](#bib-Laskowski1995)).
+
+
+```python
+from chimera import runCommand as rc
+# Select the atoms within 7A of heme. 
+#Then, of that selection, keep everything but heme.
+rc("sel :"+activeLigand+" za &lt; "+angstromDistance)
+# this is the syntax that accomplishes our desired selection
+rc("sel sel &amp;~:"+activeLigand) 
+interface_surfnet("sel","sel")
+rc("sop split #") # acquire the individual pockets that have been generated
+rc("measure volume #") # measures volume of individual pockets
+# in R we keep only the largest volume
+```
+
+
+---
+
+# Surfnet Runs
+
+.pull-left[
+
+Good run
+
+&lt;img src="0_Thesis/figures/1B2V.good.png" alt="Good" width="300"/&gt;
+
+]
+.pull-right[
+
+Bad run
+
+&lt;img src="0_Thesis/figures/1DKH.bad.png" alt="Bad" width="300"/&gt;
+
+
+]
+
+
+---
+
+# Surface Area Method
+&lt;!-- # attempt using this method --&gt;
+
+&lt;!-- .center[![description of the image](0_Thesis/figures/SAfig.png)] --&gt;
+Solvent excluded and solvent accessible surface areas of both the ligand and the binding pocket were calculated using Chimera's "surf" algorithm, which itself is an implementation of a program called MSMS 
+([Sanner, Olson, and Spehner [1]](#bib-Sanner1996)). 
+
+
+.center[
+&lt;img src="mastersPresentation_files/SAfig.png" alt="SA Fig" width="250"/&gt;
+]
+
+Figure Source: https://commons.wikimedia.org/wiki/File:Accessible_surface.svg
+and https://en.wikipedia.org/wiki/Accessible_surface_area
+---
+
+# Surface Area Run
+
+.pull-left[
+
+```python
+from chimera import runCommand as rc
+rc("sel :"+activeLigand+" za &lt;"+angstromDistance)
+rc("del :"+activeLigand)
+rc("surf sel")
+```
+]
+
+.pull-right[
+
+&lt;img src="mastersPresentation_files/imageofSA.png" alt="SA Fig2" width="300"/&gt;
+
+]
+
+---
+
+# Distance Method
+
+--
+
+1. Select ALL atoms within **residues with at least one atom within 7A of heme**
+
+--
+
+1. For EVERY atom, output atom name, host residue, and **distance to Fe**
+
+--
+
+1. For distance used to filter: assign mean distance to each residue: Average distance of all atoms within each residue is the assigned distance per residue
+
+--
+
+&lt;!-- Distances of amino acids from the ligand could not be calculated accurately nor precisely in a direct way. Instead, distances for each atom composing a residue were calculated. This was achieved using a built-in function of chimera; the syntax is not straightforward, but part of the script is shown below. The distances of all atoms within a residue were averaged, and this value was taken as the mean distance of the entire residue and used in subsequent steps. --&gt;
+
+
+```python
+from chimera import runCommand as rc
+#select and define the Fe atom
+rc("sel :HEM@Fe") 
+# index to acquire the one atom selected
+fe = chimera.selection.currentAtoms()[0] 
+# select all atoms within angstromDistance of Fe (also de-selects Fe)
+rc("sel sel za &lt; "+settings.angstromDistance) 
+# define this selection of atoms within distance as a list
+nearbyAtoms = chimera.selection.currentAtoms()
+# parse and print the distances (and coordinates) of these atoms 
+for i in nearbyAtoms:
+  print "Atom being analyzed...", i, "... Distance to Fe...",
+  #prints distance between atom i and the Fe atom
+  i.coord().distance(fe.coord())  
+```
+
+---
+
+# Distances TXT file to dataframe
+
+Output from UCSF Chimera:
+```
+Atom being analyzed... HIS 63.A CA ... Distance to Fe... 6.22215951258
+Atom being analyzed... HIS 63.A N ... Distance to Fe... 6.97919092732
+Atom being analyzed... GLY 62.A O ... Distance to Fe... 6.36589734444
+Atom being analyzed... HEM 201.A C3B ... Distance to Fe... 4.25208066716
+Atom being analyzed... HEM 201.A C2B ... Distance to Fe... 4.29567235715
+Atom being analyzed... HEM 201.A C1B ... Distance to Fe... 3.09004110005
+```
+
+
+--
+
+After R processing:
+
+```r
+head(HEM_distList$mean_distances)
+```
+
+```
+##   PDB_ID Residue_Number Residue_Code Mean_Distance
+## 1   1N45             28          ALA      6.981230
+## 2   2CJ0             31          ALA      5.440871
+## 3   2CPO             31          ALA      5.505123
+## 4   2J18             31          ALA      5.457126
+## 5   1SY2             42          ALA      6.006055
+## 6   3MVF             42          ALA      5.827660
+```
+
+
+---
+
+# Angles Data
+
+--
+
+1. Planar Angle (heme = plane, residue as a whole = axis)
+
+--
+
+1. Ca-Cb-Fe Angle (Ca and Cb of ea. residue v. Fe of heme)
+
+--
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="0_Thesis/figures/1B5M.axes.png" alt="Example of Planar Angles Calculation (1B5M)" width="100%" /&gt;
+&lt;p class="caption"&gt;Example of Planar Angles Calculation (1B5M)&lt;/p&gt;
+&lt;/div&gt;
+
+
+---
+
+# Txt processing in R
+
+--
+```
+#0, chain A: HASA
+1B2V.pdb.mono.pdb opened
+1276 spheres
+Surfnet for "sel" - "sel":  volume = 964.9
+Surfnet for "sel" - "sel" split ? 2:  volume = 893.6
+Surfnet for "sel" - "sel" split ? 6:  volume = 12.474
+Surfnet for "sel" - "sel" split ? 7:  volume = 9.4209
+Surfnet for "sel" - "sel" split ? 1:  volume = 2.2534
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.2888
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.9486
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.3856
+Surfnet for "sel" - "sel" split ? 8:  volume = 39.532
+```
+]
+
+--
+
+
+```r
+head(HEM_maxVolDf)
+```
+
+```
+## # A tibble: 6 × 2
+## # Groups:   PDB_ID [6]
+##   PDB_ID volume_data
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 1B2V          894.
+## 2 1B5M          673.
+## 3 1DK0          967.
+## 4 1DKH         1011.
+## 5 1ICC         1000.
+## 6 1IPH         1346.
+```
+
+---
+
+# High Throughput Implementation
+--
+Inside settings.py:
+
+```python
+# specify ligands of interest in pdb's, likely also construct file structure
+setLigandList = [
+    "HEM",
+    "HEC",
+    "SRM",
+    "VER",
+    "VEA"
+]
+```
+--
+
+```python
+#### CALCULATE DISTANCES ########
+sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
+resultPath = "~/heme-binding/results/only_distances/"
+
+for activeLigand in ligandList:
+    activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
+    activeResultPath = os.path.expanduser(resultPath + activeLigand)
+    calc_distances.d(activeLigand,activeSourcePath,activeResultPath,angstromDistance)
+```
+
+
+```r
+# Distances of AA atoms to Fe ------------------
+source("~/heme-binding/scripts/r/only_distances.R")
+resultPath = "~/heme-binding/results/only_distances/"
+
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   distancesList &lt;- distancesFn(activeLigand,activeResultPath)
+   assign(paste(activeLigand,"_distList",sep=""),distancesList)
+}
+```
+---
+
+class: inverse, center, middle
+
 # Results
+
+--
+
+# Amino Acid Frequencies
 
 --
 
 # Heme-b
 
-
 ---
-
+# Note on Similarity 5A and 7A
+.right-column[
+![HEM: AA Frequency](mastersPresentation_files/figure-html/HEM-AAfreqOverlaid-1.png)
+]
+.left-column[
+- The trends are Pretty similar, no?
+- I take cash, card, and patcoin.
+]
+---
 # HEM AA Freq
 
+.right-column[
 ![HEM: AA Frequency within 7A](mastersPresentation_files/figure-html/HEM-AAfreq0-1.png)
+]
+--
 
+.left-column[
+
+Special text for special people
+]
 
 ---
 
@@ -430,12 +770,92 @@ Arginine is followed by other polar amino acids: glutamine, cystine, lysine, thr
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq10-1.png)
 
 
+
+
 ---
+
+class: inverse, center, middle
+
+# Volume Data
+
+---
+
+# Heme-b Volume Data
+
+Volume results were rather spread out, with close agreement only found for heme-b. **In general, volume for all heme molecules regardless of distance cutoff centered at approximately 1200 A³.** This result may be useful in protein engineering efforts, especially for selection or design of binding pockets. 
+
+
+![HEM: Volume of Binding Pocket](mastersPresentation_files/figure-html/HEM-Volume-1.png)
+
+---
+class: inverse, center, middle
+
+# Surface Area Data
+
+---
+# Note on Ligand SA
+
+The solvent accessible surface area for all heme *molecules* themselves centers around values of 1000 A².
+
+---
+# Heme-b Pocket SA
+
+![HEM: Pocket Accessible Surface Area](mastersPresentation_files/figure-html/HEM-Pocket-AccessibleSA-1.png)
+
+---
+# Verdoheme Pocket SA
+![VERDOHEME: Pocket Accessible Surface Area](mastersPresentation_files/figure-html/VERDOHEME-Pocket-AccessibleSA-1.png)
+
+
+
+Heme-b and verdoheme, being highly similar molecules, with the same propionate groups, and one the derivative of the other, have quite similar surface areas, centering around 10,000-11,000 A². This is useful as a baseline to discuss the surface area of the binding pockets of the other two heme molecules below.
+
+
+---
+# Heme-c Pocket SA
+![HEC: Pocket Accessible Surface Area](mastersPresentation_files/figure-html/HEC-Pocket-AccessibleSA-1.png)
+
+
+The surface area of the binding pocket of heme-c is considerably lower than that of heme-b and verdoheme. Its values center around 7500 A². Heme-c is bound covalently to the hemoprotein, forming thioether bonds with cysteine residues at two sites; this result suggests that the covalent bonds may exclude these sites from interacting with water molecules. Further study would be required to confirm this phenomenon.
+
+
+---
+# Siroheme Pocket SA
+![SRM: Pocket Accessible Surface Area](mastersPresentation_files/figure-html/SRM-Pocket-AccessibleSA-1.png)
+
+The surface area of siroheme's binding pocket is far greater than that for other heme molecules: values center around 21000 A². Siroheme's extra groups on the porphyrin ring do not appear to affect its own surface area, per above. However, it is effectively a very polar molecule and appropriately the binding pocket is highly saturated with very polar amino acids, as seen in the amino acid frequency analysis. The binding pocket is therefore completely different from the other heme molecules, and these populous, polar amino acids favorably interact with aqueous solvent, negating the need to bury any hydrophobic residues and reduce surface area.
+
+
+
+---
+class: inverse, center, middle
+# Angles
+
+---
+# HEM Planar Angle Data
+
+![HEM: All Planar Angles](mastersPresentation_files/figure-html/HEM-planarAll-1.png)
+
+
+---
+# HEM CAB Data
+![HEM: All CA-CB-Fe Angles](mastersPresentation_files/figure-html/HEM-cab-All-1.png)
+
+
+
+---
+
 &lt;!-- # 6. 'NoCite' function to include references in bib that  --&gt;
 &lt;!-- #    don't appear in text --&gt;
 &lt;!-- NoCite(bib, c("knuth:ct:a", "aristotle:poetics", "herrmann")) --&gt;
 
 # References
+
+&lt;a name=bib-Laskowski1995&gt;&lt;/a&gt;[Laskowski, R. A.](#cite-Laskowski1995)
+(1995). "SURFNET: A program for visualizing molecular surfaces,
+cavities, and intermolecular interactions". In: _Journal of Molecular
+Graphics_ 13.5, pp. 323-330. ISSN: 02637855. DOI:
+[10.1016/0263-7855(95)00073-9](https://doi.org/10.1016%2F0263-7855%2895%2900073-9).
 
 &lt;a name=bib-Poulos2014&gt;&lt;/a&gt;[Poulos, T. L.](#cite-Poulos2014) (2014).
 "Heme enzyme structure and function". In: _Chemical Reviews_ 114.7, pp.
@@ -456,6 +876,91 @@ class: inverse, center, middle
 
 # In Case of Emergency
 
+
+---
+# HEC AA Overlay
+
+
+
+![HEC: AA Frequency](mastersPresentation_files/figure-html/HEC-AAfreqOverlaid-1.png)
+---
+# Siroheme AA Overlay
+![SRM: AA Frequency](mastersPresentation_files/figure-html/SRM-AAfreqOverlaid-1.png)
+---
+# Verdoheme AA Overlay
+![VERDOHEME: AA Frequency](mastersPresentation_files/figure-html/VERDOHEME-AAfreqOverlaid-1.png)
+
+
+
+
+---
+
+# Heme-c Volume Data
+
+![HEC: Volume of Binding Pocket](mastersPresentation_files/figure-html/HEC-Volume-1.png)
+---
+
+# Siroheme Volume Data
+
+![SRM: Volume of Binding Pocket](mastersPresentation_files/figure-html/SRM-Volume-1.png)
+
+---
+
+# Verdoheme Volume Data
+
+
+![VERDOHEME: Volume of Binding Pocket](mastersPresentation_files/figure-html/VERDOHEME-Volume-1.png)
+
+---
+# Source Organism Data HEM
+<div id="htmlwidget-598ec59c6a60d1859865" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-598ec59c6a60d1859865">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58"],["1B2V","1B5M","1DK0","1DKH","1ICC","1IPH","1N45","1P3T","1QHU","1QJS","1SI8","1SY2","1U9U","1VGI","1ZVI","2BHJ","2CJ0","2CN4","2CPO","2E2Y","2FC2","2IIZ","2IPS","2J0P","2J18","2O6P","2Q6N","2R7A","2SPL","2VEB","3HX9","3MVF","3QZN","3QZZ","3SIK","3TGC","3VP5","3ZJS","4B8N","4CAT","4CDP","4I3Q","4JET","4MF9","4MYP","4NL5","4UZV","4XZD","4Y1Q","5CN5","5GJ3","5KZL","5O1L","5O1M","5VEU","6A2J","7C74","7DMR"],["PROTEIN (HEME-BINDING PROTEIN A);                          ","CYTOCHROME B5;                                             ","HEME-BINDING PROTEIN A;                                    ","HEME-BINDING PROTEIN A;                                    ","CYTOCHROME B5 OUTER MITOCHONDRIAL MEMBRANE                 ","CATALASE HPII;                                             ","HEME OXYGENASE 1;                                          ","HEME OXYGENASE 1;                                          ","PROTEIN (HEMOPEXIN);                                       ","HEMOPEXIN;                                                 ","CATALASE;                                                  ","NITROPHORIN 4;                                             ","CYTOCHROME B5;                                             ","HEME OXYGENASE 1;                                          ","NITRIC-OXIDE SYNTHASE, BRAIN;                              ","NITRIC OXIDE SYNTHASE;                                     ","CHLOROPEROXIDASE;                                          ","HEMOPHORE HASA;                                            ","CHLOROPEROXIDASE;                                          ","MYOGLOBIN;                                                 ","NITRIC OXIDE SYNTHASE;                                     ","MELANIN BIOSYNTHESIS PROTEIN TYRA, PUTATIVE;               ","LACTOPEROXIDASE;                                           ","HEMIN TRANSPORT PROTEIN HEMS;                              ","CHLOROPEROXIDASE;                                          ","IRON-REGULATED SURFACE DETERMINANT PROTEIN C;              ","CYTOCHROME P450 2B4;                                       ","BACTERIAL HEME BINDING PROTEIN;                            ","MYOGLOBIN;                                                 ","PROTOGLOBIN;                                               ","PROTEIN RV3592;                                            ","NITROPHORIN-4;                                             ","IRON-REGULATED SURFACE DETERMINANT PROTEIN A;              ","METHANOSARCINA ACETIVORANS PROTOGLOBIN;                    ","CONSERVED DOMAIN PROTEIN;                                  ","NITROPHORIN-4;                                             ","TRANSCRIPTIONAL REGULATOR;                                 ","PROTOGLOBIN;                                               ","CYTOCHROME B5-HOST ORIGIN;                                 ","CATALASE;                                                  ","PUTATIVE HEME/HEMOGLOBIN TRANSPORT PROTEIN;                ","CYTOCHROME P450 3A4;                                       ","HEMOPHORE HASA;                                            ","HEMIN DEGRADING FACTOR;                                    ","IRON-REGULATED SURFACE DETERMINANT PROTEIN A;              ","HEME-DEGRADING MONOOXYGENASE HMOB;                         ","HEMOGLOBIN;                                                ","EXTRACELLULAR HEME ACQUISITION HEMOPHORE HASA;             ","EXTRACELLULAR HEME ACQUISITION HEMOPHORE HASA;             ","MYOGLOBIN;                                                 ","PERIPLASMIC BINDING PROTEIN;                               ","HEME OXYGENASE;                                            ","RUBBER OXYGENASE;                                          ","RUBBER OXYGENASE;                                          ","CYTOCHROME P450 3A5;                                       ","HEME A SYNTHASE;                                           ","LACTOPEROXIDASE;                                           ","LACTOPEROXIDASE;                                           "],["SERRATIA MARCESCENS;                            ","RATTUS NORVEGICUS;                              ","SERRATIA MARCESCENS;                            ","SERRATIA MARCESCENS;                            ","RATTUS NORVEGICUS;                              ","ESCHERICHIA COLI;                               ","HOMO SAPIENS;                                   ","NEISSERIA MENINGITIDIS;                         ","ORYCTOLAGUS CUNICULUS;                          ","ORYCTOLAGUS CUNICULUS;                          ","ENTEROCOCCUS FAECALIS;                          ","RHODNIUS PROLIXUS;                              ","BOS TAURUS;                                     ","RATTUS NORVEGICUS;                              ","RATTUS NORVEGICUS;                              ","MUS MUSCULUS;                                   ","CALDARIOMYCES FUMAGO;                           ","SERRATIA MARCESCENS;                            ","LEPTOXYPHIUM FUMAGO;                            ","PHYSETER CATODON;                               ","BACILLUS SUBTILIS;                              ","SHEWANELLA ONEIDENSIS;                          ","BOS TAURUS;                                     ","YERSINIA ENTEROCOLITICA;                        ","CALDARIOMYCES FUMAGO;                           ","STAPHYLOCOCCUS AUREUS SUBSP. AUREUS;            ","ORYCTOLAGUS CUNICULUS;                          ","SHIGELLA DYSENTERIAE;                           ","PHYSETER CATODON;                               ","METHANOSARCINA ACETIVORANS;                     ","MYCOBACTERIUM TUBERCULOSIS;                     ","RHODNIUS PROLIXUS;                              ","STAPHYLOCOCCUS AUREUS SUBSP. AUREUS;            ","METHANOSARCINA ACETIVORANS;                     ","BACILLUS ANTHRACIS;                             ","RHODNIUS PROLIXUS;                              ","LACTOCOCCUS LACTIS;                             ","METHANOSARCINA ACETIVORANS;                     ","OSTREOCOCCUS TAURI VIRUS 2;                     ","PENICILLIUM JANTHINELLUM;                       ","ESCHERICHIA COLI;                               ","HOMO SAPIENS;                                   ","YERSINIA PESTIS;                                ","PSEUDOMONAS AERUGINOSA;                         ","LISTERIA MONOCYTOGENES;                         ","MYCOBACTERIUM TUBERCULOSIS;                     ","THERMOBIFIDA FUSCA TM51;                        ","YERSINIA PSEUDOTUBERCULOSIS IP 32953;           ","YERSINIA PSEUDOTUBERCULOSIS IP 32953;           ","EQUUS CABALLUS;                                 ","ROSEIFLEXUS SP. RS-1;                           ","LEPTOSPIRA INTERROGANS;                         ","STREPTOMYCES SP. (STRAIN K30);                  ","STREPTOMYCES SP. (STRAIN K30);                  ","HOMO SAPIENS;                                   ","BACILLUS SUBTILIS (STRAIN 168);                 ","BOS MUTUS;                                      ","BOS MUTUS;                                      "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+
+
+---
+# Source Organism Data HEC
+
+```r
+DT::datatable(HEC_p1DF)
+```
+
+<div id="htmlwidget-d95a18c474224479f98f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d95a18c474224479f98f">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13"],["1BBH","1S56","1W2L","2BC5","2BH5","3EAH","3X15","5KPF","5LFT","5T8W","6VDQ","6WZA","6XNK"],["CYTOCHROME C';                                             ","HEMOGLOBIN-LIKE PROTEIN HBN;                               ","CYTOCHROME OXIDASE SUBUNIT II;                             ","SOLUBLE CYTOCHROME B562;                                   ","CYTOCHROME C-550;                                          ","NITRIC OXIDE SYNTHASE, ENDOTHELIAL;                        ","CYTOCHROME C552;                                           ","CYTOCHROME C ISO-1;                                        ","CYTOCHROME C ISO-1;                                        ","CYC1P;                                                     ","3-METHYL-L-TYROSINE PEROXYGENASE;                          ","SOLUBLE CYTOCHROME B562;                                   ","CYTOCHROME C;                                              "],["ALLOCHROMATIUM VINOSUM;                         ","MYCOBACTERIUM TUBERCULOSIS;                     ","RHODOTHERMUS MARINUS;                           ","ESCHERICHIA COLI;                               ","PARACOCCUS VERSUTUS;                            ","HOMO SAPIENS;                                   ","AQUIFEX AEOLICUS VF5;                           ","SACCHAROMYCES CEREVISIAE;                       ","SACCHAROMYCES CEREVISIAE;                       ","SACCHAROMYCES CEREVISIAE;                       ","STREPTOMYCES LAVENDULAE;                        ","ESCHERICHIA COLI;                               ","HOMO SAPIENS;                                   "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+
+
+---
+# Source Organism Data SRM
+
+```r
+#load("mainData.RData")
+DT::datatable(SRM_p1DF)
+```
+
+<div id="htmlwidget-89e62d2075db0bc96b6c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-89e62d2075db0bc96b6c">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9"],["1ZJ8","2AKJ","2AOP","3B0G","3VKP","3VLX","3VLY","3VLZ","5H8V"],["PROBABLE FERREDOXIN-DEPENDENT NITRITE REDUCTASE NIRA;      ","FERREDOXIN--NITRITE REDUCTASE, CHLOROPLAST;                ","SULFITE REDUCTASE HEMOPROTEIN;                             ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","SULFITE REDUCTASE [FERREDOXIN], CHLOROPLASTIC;             "],["MYCOBACTERIUM TUBERCULOSIS;                     ","SPINACIA OLERACEA;                              ","ESCHERICHIA COLI;                               ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","ZEA MAYS;                                       "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+
+
+---
+# Source Organism Data verdoheme
+
+```r
+DT::datatable(VERDOHEME_p1DF)
+```
+
+<div id="htmlwidget-1b4e72705895a34fbd74" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1b4e72705895a34fbd74">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4"],["2ZVU","3MOO","1TWN","1TWR"],["HEME OXYGENASE 1;                                          ","HEME OXYGENASE;                                            ","HEME OXYGENASE 1;                                          ","HEME OXYGENASE 1;                                          "],["RATTUS NORVEGICUS;                              ","CORYNEBACTERIUM DIPHTHERIAE;                    ","HOMO SAPIENS;                                   ","HOMO SAPIENS;                                   "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+
+
+---
+# Big Data HEM
+
+```r
+DT::datatable(HEM_p2DF)
+```
+
+<div id="htmlwidget-563c3f5a609add8c847c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-563c3f5a609add8c847c">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58"],["1B2V","1B5M","1DK0","1DKH","1ICC","1IPH","1N45","1P3T","1QHU","1QJS","1SI8","1SY2","1U9U","1VGI","1ZVI","2BHJ","2CJ0","2CN4","2CPO","2E2Y","2FC2","2IIZ","2IPS","2J0P","2J18","2O6P","2Q6N","2R7A","2SPL","2VEB","3HX9","3MVF","3QZN","3QZZ","3SIK","3TGC","3VP5","3ZJS","4B8N","4CAT","4CDP","4I3Q","4JET","4MF9","4MYP","4NL5","4UZV","4XZD","4Y1Q","5CN5","5GJ3","5KZL","5O1L","5O1M","5VEU","6A2J","7C74","7DMR"],[893.6,672.79,966.72,1010.7,1000.4,1345.6,978.98,987.05,1389.2,1102.3,965.57,918.34,738.55,870.44,1435.9,1438.3,809.62,526.88,886.17,994.92,1091.4,1015.6,1242.4,1281.8,841.67,788.05,1030.1,1284.5,1055.7,886.06,1844.5,1271.4,726.52,977.3,492.15,969.87,1094.6,788.74,841.27,1933.9,1053.7,1220.5,1010.8,1286.5,610.72,1088.7,1184.1,932.14,952.23,1070.3,1108.2,914.22,1438.7,1431.3,964.76,1015.9,1155.1,1083.4],[502.042,490.05,505.258,509.042,499.585,501.603,560.384,509.939,573.686,573.266,646.643,501.85,496.132,577.234,701.091,836.576,2653.18,576.76,1846.49,811.27,1011.19,731.342,618.252,1030.51,1962.99,499.017,644.365,507.098,589.706,762.309,785.442,576.502,664.858,496.95,498.621,524.38,602.79,528.419,569.302,484.341,1425.05,510.623,495.992,488.695,963.019,576.669,526.584,498.788,494.939,663.162,756.603,483.76,801.519,493.85,993.578,6183.45,497.527,1049.75],[820.988,800.78,837.157,828.131,811.357,814.652,983.238,829.611,1002.16,1000.38,1184.07,817.749,813.773,1002.53,1129.54,1290.53,4835.28,961.348,3329.54,1607.37,1669.9,1393.16,1075.56,1873.81,3556.34,822.121,1040.08,845.182,1029.66,1454.75,1168.2,1009.95,1221.33,825.255,823.565,853.71,1050.82,860.137,990.216,778.502,3141.09,845.108,818.131,790.732,1834.68,1003.4,844.058,816.032,806.96,1223.64,1131.67,805.567,1447.27,799.331,1502.66,9902.92,820.381,1916.95],[7276.09,4695.01,7237.94,7402.34,5079.72,33983.8,9944.5,9530.67,18503.1,18588.4,23711.2,8960.76,4675.76,9615.29,19918.6,20102.3,12749.6,9617.23,13081.6,7531.94,18383.5,13651.7,27760.5,15192.9,12675.1,6234.84,20051.1,11255.1,7588.36,9840.72,5819.08,8559.24,6133.24,8523.59,6495.38,8712.77,9801.82,9568.1,4560.39,28372.4,14733.5,21946.5,7887.81,15669.8,6285.4,5715.52,7378.28,8028.32,7905.84,7629.45,11394,9662.03,15538.2,16096.9,20900.8,14870.3,26111.4,26004],[8232.6,5512.2,8217.58,8175.94,6028.23,34094.4,10779.3,10410.8,18257.2,18584.1,25120.4,9610.23,5632.32,10248.2,20968.2,20762.6,12892.2,11917.7,12995.6,8240.75,18552.1,14031.4,25814.1,15871.1,12779,7200.43,19747.5,12389,8105.94,10401.8,7189.03,9573.08,7179.49,9708.28,7739.06,9181.94,10810.8,10130.4,5458.66,36788.3,15887.4,21093.7,8695.85,16791.3,7351.53,6894.72,8322.74,8752.5,8785.04,8117.34,12591.8,10431,16876,15912.5,20425.9,15888,25094.2,24563.8]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Volume_Data<\/th>\n      <th>HEM_Excluded_SA<\/th>\n      <th>HEM_Accessible_SA<\/th>\n      <th>Pocket_Excluded_SA<\/th>\n      <th>Pocket_Accessible_SA<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+
 ---
 # HEM AA Interactive
 
@@ -464,715 +969,87 @@ class: inverse, center, middle
 &lt;iframe src="example-plotly.html" width="550" height="500"&gt;&lt;/iframe&gt;
 
 
-
-&lt;!-- Install the **xaringan** package from [Github](https://github.com/yihui/xaringan): --&gt;
-
-&lt;!-- ```{r eval=FALSE, tidy=FALSE} --&gt;
-&lt;!-- remotes::install_github("yihui/xaringan") --&gt;
-&lt;!-- ``` --&gt;
-
 ---
+# Planar Angle Data
 
-You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
-
-- Create a new R Markdown document from the menu `File -&gt; New File -&gt; R Markdown -&gt; From Template -&gt; Ninja Presentation`;&lt;sup&gt;1&lt;/sup&gt;
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="0_Thesis/figures/1B5M.axes.png" alt="Example of Planar Angles Calculation (1B5M)" width="100%" /&gt;
+&lt;p class="caption"&gt;Example of Planar Angles Calculation (1B5M)&lt;/p&gt;
+&lt;/div&gt;
 
 --
 
-- Click the `Knit` button to compile it;
+The code is ghastly!
+
+Within a bunch of for loops:
+
+```python
+currentResidue = re.sub("[^0-9]","", currentResidue) #strip non-numerics
+print "stripped to only the number, this is residue " + currentResidue
+rc("define axis number " + currentResidue + " :" + currentResidue)
+rc("distance a999999999 a" + currentResidue)
+# we now have the plane defined, using the axis function
+rc("angle a999999999 a" + currentResidue)
+```
+
+
+---
+
+# CA-CB-Fe Angles
+
+
+Within a bunch of for loops:
+
+```python
+print "ResID: " + ResID # no way to combine these lines :(
+rc("angle :" + currentResidue + "@CA" + " :" + currentResidue + "@CB" + " :"+activeLigand+"@FE")
+```
+
+
+---
+
+
+# Distances and Sample R Code
 
 --
 
-- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)&lt;sup&gt;2&lt;/sup&gt; "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
-
-.footnote[
-[1] 中文用户请看[这份教程](https://slides.yihui.org/xaringan/zh-CN.html)
-
-[2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
-]
-
----
-background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
-background-position: 50% 50%
-class: center, bottom, inverse
-
-# You only live once!
-
----
-
-# Hello Ninja
-
-As a presentation ninja, you certainly should not be satisfied by the "Hello World" example. You need to understand more about two things:
-
-1. The [remark.js](https://remarkjs.com) library;
-
-1. The **xaringan** package;
-
-Basically **xaringan** injected the chakra of R Markdown (minus Pandoc) into **remark.js**. The slides are rendered by remark.js in the web browser, and the Markdown source needed by remark.js is generated from R Markdown (**knitr**).
-
----
-
-# remark.js
-
-You can see an introduction of remark.js from [its homepage](https://remarkjs.com). You should read the [remark.js Wiki](https://github.com/gnab/remark/wiki) at least once to know how to
-
-- create a new slide (Markdown syntax&lt;sup&gt;*&lt;/sup&gt; and slide properties);
-
-- format a slide (e.g. text alignment);
-
-- configure the slideshow;
-
-- and use the presentation (keyboard shortcuts).
-
-It is important to be familiar with remark.js before you can understand the options in **xaringan**.
-
-.footnote[[*] It is different with Pandoc's Markdown! It is limited but should be enough for presentation purposes. Come on... You do not need a slide for the Table of Contents! Well, the Markdown support in remark.js [may be improved](https://github.com/gnab/remark/issues/142) in the future.]
-
----
-background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
-background-size: cover
-class: center, bottom, inverse
-
-# I was so happy to have discovered remark.js!
-
----
-class: inverse, middle, center
-
-# Using xaringan
-
----
-
-# xaringan
-
-Provides an R Markdown output format `xaringan::moon_reader` as a wrapper for remark.js, and you can use it in the YAML metadata, e.g.
-
-```yaml
----
-title: "A Cool Presentation"
-output:
-  xaringan::moon_reader:
-    yolo: true
-    nature:
-      autoplay: 30000
----
-```
-
-See the help page `?xaringan::moon_reader` for all possible options that you can use.
-
----
-
-# remark.js vs xaringan
-
-Some differences between using remark.js (left) and using **xaringan** (right):
-
-.pull-left[
-1. Start with a boilerplate HTML file;
-
-1. Plain Markdown;
-
-1. Write JavaScript to autoplay slides;
-
-1. Manually configure MathJax;
-
-1. Highlight code with `*`;
-
-1. Edit Markdown source and refresh browser to see updated slides;
-]
-
-.pull-right[
-1. Start with an R Markdown document;
-
-1. R Markdown (can embed R/other code chunks);
-
-1. Provide an option `autoplay`;
-
-1. MathJax just works;&lt;sup&gt;*&lt;/sup&gt;
-
-1. Highlight code with `{{}}`;
-
-1. The RStudio addin "Infinite Moon Reader" automatically refreshes slides on changes;
-]
-
-.footnote[[*] Not really. See next page.]
-
----
-
-# Math Expressions
-
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. &amp;#36;\alpha+\beta$ renders `\(\alpha+\beta\)`. You can use the display style with double dollar signs:
-
-```
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-```
-
-`$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
-
-Limitations:
-
-1. The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
-
-1. There should not be spaces after the opening `$` or before the closing `$`.
-
-1. Math does not work on the title slide (see [#61](https://github.com/yihui/xaringan/issues/61) for a workaround).
-
----
-
-# R Code
-
-
 ```r
-# a boring regression
-fit = lm(dist ~ 1 + speed, data = cars)
-coef(summary(fit))
-```
-
-```
-#               Estimate Std. Error   t value     Pr(&gt;|t|)
-# (Intercept) -17.579095  6.7584402 -2.601058 1.231882e-02
-# speed         3.932409  0.4155128  9.463990 1.489836e-12
-```
-
-```r
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
-```
-
-```
-# [1] "地爆天星" "天照"
-```
-
----
-
-# R Plots
-
-
-```r
-par(mar = c(4, 4, 1, .1))
-plot(cars, pch = 19, col = 'darkgray', las = 1)
-abline(fit, lwd = 2)
-```
-
-![](mastersPresentation_files/figure-html/cars-1.svg)&lt;!-- --&gt;
-
----
-
-# Tables
-
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
-
-
-```r
-knitr::kable(head(iris), format = 'html')
-```
-
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:right;"&gt; Sepal.Length &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Sepal.Width &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Petal.Length &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Petal.Width &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Species &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.9 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.4 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-
-# HTML Widgets
-
-I have not thoroughly tested HTML widgets against **xaringan**. Some may work well, and some may not. It is a little tricky.
-
-Similarly, the Shiny mode (`runtime: shiny`) does not work. I might get these issues fixed in the future, but these are not of high priority to me. I never turn my presentation into a Shiny app. When I need to demonstrate more complicated examples, I just launch them separately. It is convenient to share slides with other people when they are plain HTML/JS applications.
-
-See the next page for two HTML widgets.
-
----
-
-
-```r
-library(leaflet)
-leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
-```
-
-<div id="htmlwidget-d95a18c474224479f98f" style="width:100%;height:432px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d95a18c474224479f98f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
-
----
-
-
-```r
-DT::datatable(
-  head(iris, 10),
-  fillContainer = FALSE, options = list(pageLength = 8)
-)
-```
-
-<div id="htmlwidget-89e62d2075db0bc96b6c" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-89e62d2075db0bc96b6c">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
-
----
-
-# Some Tips
-
-- Do not forget to try the `yolo` option of `xaringan::moon_reader`.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        yolo: true
-    ```
-
----
-
-# Some Tips
-
-- Slides can be automatically played if you set the `autoplay` option under `nature`, e.g. go to the next slide every 30 seconds in a lightning talk:
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay: 30000
-    ```
-
-- If you want to restart the play after it reaches the last slide, you may set the sub-option `loop` to TRUE, e.g.,
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay:
-            interval: 30000
-            loop: true
-    ```
-
----
-
-# Some Tips
-
-- A countdown timer can be added to every page of the slides using the `countdown` option under `nature`, e.g. if you want to spend one minute on every page when you give the talk, you can set:
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          countdown: 60000
-    ```
-
-    Then you will see a timer counting down from `01:00`, to `00:59`, `00:58`, ... When the time is out, the timer will continue but the time turns red.
+combined_results_df %&gt;%
+    filter(grepl('Atom being analyzed...', V1)) -&gt; combined_results_df 
+  
+  combined_results_df %&gt;%
+    separate(V1, c(NA,'V1'),'Atom being analyzed....') -&gt; OnlyDistance_df
+  
+  OnlyDistance_df %&gt;%
+    separate(V1, c('Residue_Analyzed','Distance'),'....Distance to Fe....') -&gt; OnlyDistance_df
+  
+  OnlyDistance_df %&gt;%
+    separate(Residue_Analyzed, c('Residue_Code','Residue_Number','Atom'),' ') -&gt; OnlyDistance_df
     
----
+**Eventually...**
 
-# Some Tips
+regexp &lt;- "[[:digit:]]+"
+  str_extract(OnlyDistance_df$Residue_Number,regexp) -&gt; OnlyDistance_df$Residue_Number
 
-- The title slide is created automatically by **xaringan**, but it is just another remark.js slide added before your other slides.
-
-    The title slide is set to `class: center, middle, inverse, title-slide` by default. You can change the classes applied to the title slide with the `titleSlideClass` option of `nature` (`title-slide` is always applied).
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          titleSlideClass: [top, left, inverse]
-    ```
-    
---
-
-- If you'd like to create your own title slide, disable **xaringan**'s title slide with the `seal = FALSE` option of `moon_reader`.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        seal: false
-    ```
-
----
-
-# Some Tips
-
-- There are several ways to build incremental slides. See [this presentation](https://slides.yihui.org/xaringan/incremental.html) for examples.
-
-- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#&lt;&lt;`;
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          highlightLines: true
-    ```
-
-    See examples on the next page.
-
----
-
-# Some Tips
-
-
-.pull-left[
-An example using a leading `*`:
-
-    ```r
-    if (TRUE) {
-    ** message("Very important!")
-    }
-    ```
-Output:
-```r
-if (TRUE) {
-* message("Very important!")
-}
-```
-
-This is invalid R code, so it is a plain fenced code block that is not executed.
-]
-
-.pull-right[
-An example using `{{}}`:
-
-````
-```{r tidy=FALSE}
-if (TRUE) {
-*{{ message("Very important!") }}
-}
-```
-````
-Output:
-
-```r
-if (TRUE) {
-* message("Very important!") 
-}
-```
-
-```
-## Very important!
-```
-
-It is valid R code so you can run it. Note that `{{}}` can wrap an R expression of multiple lines.
-]
-
----
-
-# Some Tips
-
-An example of using the trailing comment `#&lt;&lt;` to highlight lines:
-
-````markdown
-```{r tidy=FALSE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #&lt;&lt;
-  geom_smooth()    #&lt;&lt;
-```
-````
-
-Output:
-
-
-```r
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-* geom_point() +
-* geom_smooth()
+**Finally..**
+  
+# 3. Average distance to Fe
+  mean_dist_df &lt;- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID,OnlyDistance_df$Residue_Number,OnlyDistance_df$Residue_Code), mean)
+  # rename nasty defaults
+  mean_dist_df %&gt;%
+    dplyr::rename(
+      PDB_ID = Group.1,
+      Residue_Number = Group.2,
+      Residue_Code = Group.3,
+      Mean_Distance = x
+    ) -&gt; mean_dist_df
 ```
 
 ---
 
-# Some Tips
+# End of Slides
 
-When you enable line-highlighting, you can also use the chunk option `highlight.output` to highlight specific lines of the text output from a code chunk. For example, `highlight.output = TRUE` means highlighting all lines, and `highlight.output = c(1, 3)` means highlighting the first and third line.
-
-````md
-```{r, highlight.output=c(1, 3)}
-head(iris)
-```
-````
-
-
-```
-*##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-*## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa
-```
-
-Question: what does `highlight.output = c(TRUE, FALSE)` mean? (Hint: think about R's recycling of vectors)
-
----
-
-# Some Tips
-
-- To make slides work offline, you need to download a copy of remark.js in advance, because **xaringan** uses the online version by default (see the help page `?xaringan::moon_reader`).
-
-- You can use `xaringan::summon_remark()` to download the latest or a specified version of remark.js. By default, it is downloaded to `libs/remark-latest.min.js`.
-
-- Then change the `chakra` option in YAML to point to this file, e.g.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        chakra: libs/remark-latest.min.js
-    ```
-
-- If you used Google fonts in slides (the default theme uses _Yanone Kaffeesatz_, _Droid Serif_, and _Source Code Pro_), they won't work offline unless you download or install them locally. The Heroku app [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) can help you download fonts and generate the necessary CSS.
-
----
-
-# Macros
-
-- remark.js [allows users to define custom macros](https://github.com/yihui/xaringan/issues/80) (JS functions) that can be applied to Markdown text using the syntax `![:macroName arg1, arg2, ...]` or `![:macroName arg1, arg2, ...](this)`. For example, before remark.js initializes the slides, you can define a macro named `scale`:
-
-    ```js
-    remark.macros.scale = function (percentage) {
-      var url = this;
-      return '&lt;img src="' + url + '" style="width: ' + percentage + '" /&gt;';
-    };
-    ```
-
-    Then the Markdown text
-
-    ```markdown
-    ![:scale 50%](image.jpg)
-    ```
-
-    will be translated to
-    
-    ```html
-    &lt;img src="image.jpg" style="width: 50%" /&gt;
-    ```
-
----
-
-# Macros (continued)
-
-- To insert macros in **xaringan** slides, you can use the option `beforeInit` under the option `nature`, e.g.,
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          beforeInit: "macros.js"
-    ```
-
-    You save your remark.js macros in the file `macros.js`.
-
-- The `beforeInit` option can be used to insert arbitrary JS code before `remark.create()`. Inserting macros is just one of its possible applications.
-
----
-
-# CSS
-
-Among all options in `xaringan::moon_reader`, the most challenging but perhaps also the most rewarding one is `css`, because it allows you to customize the appearance of your slides using any CSS rules or hacks you know.
-
-You can see the default CSS file [here](https://github.com/yihui/xaringan/blob/master/inst/rmarkdown/templates/xaringan/resources/default.css). You can completely replace it with your own CSS files, or define new rules to override the default. See the help page `?xaringan::moon_reader` for more information.
-
----
-
-# CSS
-
-For example, suppose you want to change the font for code from the default "Source Code Pro" to "Ubuntu Mono". You can create a CSS file named, say, `ubuntu-mono.css`:
-
-```css
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-```
-
-Then set the `css` option in the YAML metadata:
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "ubuntu-mono.css"]
-```
-
-Here I assume `ubuntu-mono.css` is under the same directory as your Rmd.
-
-See [yihui/xaringan#83](https://github.com/yihui/xaringan/issues/83) for an example of using the [Fira Code](https://github.com/tonsky/FiraCode) font, which supports ligatures in program code.
-
----
-
-# CSS (with Sass)
-
-**xaringan** also supports Sass support via **rmarkdown**. Suppose you want to use the same color for different elements, e.g., first heading and bold text. You can create a `.scss` file, say `mytheme.scss`, using the [sass](https://sass-lang.com/) syntax with variables:
-
-```scss
-$mycolor: #ff0000; 
-.remark-slide-content &gt; h1 { color: $mycolor; }
-.remark-slide-content strong { color: $mycolor; }
-```
-
-Then set the `css` option in the YAML metadata using this file placed under the same directory as your Rmd:
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "mytheme.scss"]
-```
-
-This requires **rmarkdown** &gt;= 2.8 and the [**sass**](https://rstudio.github.io/sass/) package. You can learn more about **rmarkdown** and **sass** support in [this blog post](https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/#sass-and-scss-support-for-html-based-output) and in [**sass** overview vignette](https://rstudio.github.io/sass/articles/sass.html).
-
----
-
-# Themes
-
-Don't want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files `foo.css` and `foo-fonts.css`, where `foo` is the theme name. Below are some existing themes:
-
-
-```r
-names(xaringan:::list_css())
-```
-
-```
-##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"   
-##  [4] "default"          "duke-blue"        "fc-fonts"        
-##  [7] "fc"               "glasgow_template" "hygge-duke"      
-## [10] "hygge"            "ki-fonts"         "ki"              
-## [13] "kunoichi"         "lucy-fonts"       "lucy"            
-## [16] "metropolis-fonts" "metropolis"       "middlebury-fonts"
-## [19] "middlebury"       "nhsr-fonts"       "nhsr"            
-## [22] "ninjutsu"         "rladies-fonts"    "rladies"         
-## [25] "robot-fonts"      "robot"            "rutgers-fonts"   
-## [28] "rutgers"          "shinobi"          "tamu-fonts"      
-## [31] "tamu"             "uio-fonts"        "uio"             
-## [34] "uo-fonts"         "uo"               "uol-fonts"       
-## [37] "uol"              "useR-fonts"       "useR"            
-## [40] "uwm-fonts"        "uwm"
-```
-
----
-
-# Themes
-
-To use a theme, you can specify the `css` option as an array of CSS filenames (without the `.css` extensions), e.g.,
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts]
-```
-
-If you want to contribute a theme to **xaringan**, please read [this blog post](https://yihui.org/en/2017/10/xaringan-themes).
-
----
-class: inverse, middle, center
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
-background-size: contain
-
-# Naruto
-
----
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-background-size: 100px
-background-position: 90% 8%
-
-# Sharingan
-
-The R package name **xaringan** was derived&lt;sup&gt;1&lt;/sup&gt; from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
-
-- the "Eye of Insight"
-
-- the "Eye of Hypnotism"
-
-I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.&lt;sup&gt;2,3&lt;/sup&gt;
-
-.footnote[
-[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
-
-[2] By comparison, bad presentations only put the audience to sleep.
-
-[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
-]
-
----
-
-# Naruto terminology
-
-The **xaringan** package borrowed a few terms from Naruto, such as
-
-- [Sharingan](https://naruto.fandom.com/wiki/Sharingan) (写輪眼; the package name)
-
-- The [moon reader](https://naruto.fandom.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
-
-- [Chakra](https://naruto.fandom.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
-
-- [Nature transformation](https://naruto.fandom.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
-
-- The [infinite moon reader](https://naruto.fandom.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
-
-- The [summoning technique](https://naruto.fandom.com/wiki/Summoning_Technique) (download remark.js from the web)
-
-You can click the links to know more about them if you want. The jutsu "Moon Reader" may seem a little evil, but that does not mean your slides are evil.
-
----
-
-class: center
-
-# Hand seals (印)
-
-Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
-
-![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
-
----
-
-class: center, middle
-
-# Thanks!
-
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](https://yihui.org/knitr/), and [R Markdown](https://rmarkdown.rstudio.com).
+Who's buying?
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

@@ -106,7 +106,7 @@ Cytochrome P450s
 
 Physiological Importance:
 - Hormone degradation and synthesis
-- Degrade the majority of all drugs! `r Citet(myBib,"Poulos2014")`
+- Degrade the majority of all drugs! (`r Citet(myBib,"Poulos2014")`)
 
 <!-- `r Citet(myBib, "Sanner1996")` -->
 
@@ -126,6 +126,301 @@ carbohydrates, steroids, fatty acids; catalyzing hormone degradation and synthes
 
 class: inverse, center, middle
 
+# Methods
+
+---
+# #CiteMe
+
+All scripts (as well as raw data, results, and this document) are available on GitHub, https://github.com/patimus-prime/heme-binding.
+
+---
+# Datasets
+A list of PDBs was assembled that represented either a representative sample of a variety of proteins, with a resolution better than 3A, (HEM and HEC) or, all proteins containing these ligands were downloaded from the PDB (in the case of SRM, VER, VEA). Not all downloaded PDBs were appropriate for this study (e.g. contained superimposed structures) and therefore the amount of PDBs was culled. The datasets are current as of 16 August 2021. 
+
+The size of the datasets actually used in the study were as follows: HEM (n=58), HEC(n=13), SRM (n=9), VER (n=2) and VEA (n=2), which are merged for a combined n=4 for VERDOHEME. 
+
+The name of all proteins used in the study and their source organism are provided.
+
+---
+
+
+## Pre-processing
+Many of the PDBs downloaded were multimeric structures. The number of subunits per protein would skew results and overrepresent especially large multimeric proteins. Therefore, to only allow for one heme binding site per PDB, all downloaded PDBs were converted to monomeric structures. This was achieved by saving a single chain (chain A) of each PDB and eliminating all other chains. The single chain was then saved as a PDB and used in all subsequent scripts. Part of the script is reproduced below:
+<!-- BTW, need install.packages('reticulate') for this to work -->
+```{python eval=FALSE}
+from chimera import runCommand as rc
+# select chain A, a single unit
+rc("sel :.a")
+# select everything else
+rc("sel invert sel")
+# delete everything else besides that chain A
+rc("del sel")
+# now save the monomer:
+rc(("write format pdb 0 "+unexpandedResultPath+activeLigand+"/%s")%
+  (fn + ".mono.pdb"))
+```
+
+---
+# Break this shit up
+
+UCSF-Chimera was used to generate all data in this study. Multiple Python scripts were employed to achieve a high-throughput process where all monomeric PDBs could be processed in the same session. 
+
+Chimera was used to predict the following qualities: Volume of the ligand binding pocket, accessible and excluded surface area of the ligand, and accessible and excluded surface area of the binding pocket. These calculations require a population of atoms to be selected for the calculation. 
+
+Atoms were selected within a distance cutoff, to be considered as potentially interacting with the ligand or forming the binding pocket. Distance cutoffs from the ligand of 5A and 7A were chosen; for the predicted qualities, the algorithms were run twice to get values at 5A and 7A. For the distance and angle calculations, only the 7A distance cutoff was used, as the cutoff does not factor into any calculations and may be set during analysis.
+
+As these cutoffs are selected arbitrarily, data from the 5A and 7A runs are overlaid in the figures reported in Appendix \@ref(a-figures). Data tables are also provided in Appendix \@ref(a-tables).
+
+---
+
+#Amino Acid Frequency
+
+Amino acids within the bounds of the lower and upper distance cutoff were selected and recorded. These were then counted for frequency per residue.
+
+
+```{python eval=FALSE}
+# GET RESIDUES
+rc("sel :"+activeLigand+" zr < "+angstromDistance)#7.0")
+for i in chimera.selection.currentResidues():
+   print i
+```
+
+Example output (in text file):
+```
+ARG 143.A
+GLY 447.A
+ASN 145.A
+TRP 146.A
+GLN 147.A
+ARG 149.A
+CYS 446.A
+LYS 454.A
+```
+---
+
+# Volume Method
+
+Volume of the binding pocket was predicted via Surfnet (`r Citet(myBib,"Laskowski1995")`).
+
+```{python eval=FALSE}
+from chimera import runCommand as rc
+# Select the atoms within 7A of heme. 
+#Then, of that selection, keep everything but heme.
+rc("sel :"+activeLigand+" za < "+angstromDistance)
+# this is the syntax that accomplishes our desired selection
+rc("sel sel &~:"+activeLigand) 
+interface_surfnet("sel","sel")
+rc("sop split #") # acquire the individual pockets that have been generated
+rc("measure volume #") # measures volume of individual pockets
+# in R we keep only the largest volume
+```
+
+
+---
+
+# Surfnet Runs
+
+.pull-left[
+
+Good run
+
+<img src="0_Thesis/figures/1B2V.good.png" alt="Good" width="300"/>
+
+]
+.pull-right[
+
+Bad run
+
+<img src="0_Thesis/figures/1DKH.bad.png" alt="Bad" width="300"/>
+
+
+]
+
+
+---
+
+# Surface Area Method
+<!-- # attempt using this method -->
+
+<!-- .center[![description of the image](0_Thesis/figures/SAfig.png)] -->
+Solvent excluded and solvent accessible surface areas of both the ligand and the binding pocket were calculated using Chimera's "surf" algorithm, which itself is an implementation of a program called MSMS 
+(`r Citet(myBib,"Sanner1996")`). 
+
+
+.center[
+<img src="mastersPresentation_files/SAfig.png" alt="SA Fig" width="250"/>
+]
+
+Figure Source: https://commons.wikimedia.org/wiki/File:Accessible_surface.svg
+and https://en.wikipedia.org/wiki/Accessible_surface_area
+---
+
+# Surface Area Run
+
+.pull-left[
+```{python eval=FALSE}
+from chimera import runCommand as rc
+rc("sel :"+activeLigand+" za <"+angstromDistance)
+rc("del :"+activeLigand)
+rc("surf sel")
+```
+]
+
+.pull-right[
+
+<img src="mastersPresentation_files/imageofSA.png" alt="SA Fig2" width="300"/>
+
+]
+
+---
+
+# Distance Method
+
+--
+
+1. Select ALL atoms within **residues with at least one atom within 7A of heme**
+
+--
+
+1. For EVERY atom, output atom name, host residue, and **distance to Fe**
+
+--
+
+1. For distance used to filter: assign mean distance to each residue: Average distance of all atoms within each residue is the assigned distance per residue
+
+--
+
+<!-- Distances of amino acids from the ligand could not be calculated accurately nor precisely in a direct way. Instead, distances for each atom composing a residue were calculated. This was achieved using a built-in function of chimera; the syntax is not straightforward, but part of the script is shown below. The distances of all atoms within a residue were averaged, and this value was taken as the mean distance of the entire residue and used in subsequent steps. -->
+
+```{python eval=FALSE}
+from chimera import runCommand as rc
+#select and define the Fe atom
+rc("sel :HEM@Fe") 
+# index to acquire the one atom selected
+fe = chimera.selection.currentAtoms()[0] 
+# select all atoms within angstromDistance of Fe (also de-selects Fe)
+rc("sel sel za < "+settings.angstromDistance) 
+# define this selection of atoms within distance as a list
+nearbyAtoms = chimera.selection.currentAtoms()
+# parse and print the distances (and coordinates) of these atoms 
+for i in nearbyAtoms:
+  print "Atom being analyzed...", i, "... Distance to Fe...",
+  #prints distance between atom i and the Fe atom
+  i.coord().distance(fe.coord())  
+```
+
+---
+
+# Distances TXT file to dataframe
+
+Output from UCSF Chimera:
+```
+Atom being analyzed... HIS 63.A CA ... Distance to Fe... 6.22215951258
+Atom being analyzed... HIS 63.A N ... Distance to Fe... 6.97919092732
+Atom being analyzed... GLY 62.A O ... Distance to Fe... 6.36589734444
+Atom being analyzed... HEM 201.A C3B ... Distance to Fe... 4.25208066716
+Atom being analyzed... HEM 201.A C2B ... Distance to Fe... 4.29567235715
+Atom being analyzed... HEM 201.A C1B ... Distance to Fe... 3.09004110005
+```
+
+
+--
+
+After R processing:
+```{r echo=TRUE}
+head(HEM_distList$mean_distances)
+```
+
+
+---
+
+# Angles Data
+
+--
+
+1. Planar Angle (heme = plane, residue as a whole = axis)
+
+--
+
+1. Ca-Cb-Fe Angle (Ca and Cb of ea. residue v. Fe of heme)
+
+--
+```{r axesExample, echo=FALSE,out.width="100%",fig.cap="Example of Planar Angles Calculation (1B5M)",fig.show="hold",fig.align='center'}
+knitr::include_graphics("0_Thesis/figures/1B5M.axes.png")
+```
+
+
+---
+
+# Txt processing in R
+
+--
+```
+#0, chain A: HASA
+1B2V.pdb.mono.pdb opened
+1276 spheres
+Surfnet for "sel" - "sel":  volume = 964.9
+Surfnet for "sel" - "sel" split ? 2:  volume = 893.6
+Surfnet for "sel" - "sel" split ? 6:  volume = 12.474
+Surfnet for "sel" - "sel" split ? 7:  volume = 9.4209
+Surfnet for "sel" - "sel" split ? 1:  volume = 2.2534
+Surfnet for "sel" - "sel" split ? 4:  volume = 2.2888
+Surfnet for "sel" - "sel" split ? 3:  volume = 2.9486
+Surfnet for "sel" - "sel" split ? 5:  volume = 2.3856
+Surfnet for "sel" - "sel" split ? 8:  volume = 39.532
+```
+]
+
+--
+
+```{r echo=TRUE}
+head(HEM_maxVolDf)
+```
+
+---
+
+# High Throughput Implementation
+--
+Inside settings.py:
+```{python eval=FALSE}
+# specify ligands of interest in pdb's, likely also construct file structure
+setLigandList = [
+    "HEM",
+    "HEC",
+    "SRM",
+    "VER",
+    "VEA"
+]
+```
+--
+```{python eval=FALSE}
+#### CALCULATE DISTANCES ########
+sourcePath = "~/heme-binding/pdb_source_data/1_monomers_processed/"
+resultPath = "~/heme-binding/results/only_distances/"
+
+for activeLigand in ligandList:
+    activeSourcePath = os.path.expanduser(sourcePath + activeLigand)
+    activeResultPath = os.path.expanduser(resultPath + activeLigand)
+    calc_distances.d(activeLigand,activeSourcePath,activeResultPath,angstromDistance)
+```
+
+```{r eval = FALSE}
+# Distances of AA atoms to Fe ------------------
+source("~/heme-binding/scripts/r/only_distances.R")
+resultPath = "~/heme-binding/results/only_distances/"
+
+for(ligand in 1:(length(ligandList)))
+{
+   activeLigand = ligandList[[ligand]]
+   activeResultPath = paste(resultPath,activeLigand,sep = "")
+   distancesList <- distancesFn(activeLigand,activeResultPath)
+   assign(paste(activeLigand,"_distList",sep=""),distancesList)
+}
+```
+---
+
+class: inverse, center, middle
+
 # Results
 
 --
@@ -138,12 +433,65 @@ class: inverse, center, middle
 
 ---
 # Note on Similarity 5A and 7A
+.right-column[
+```{r HEM-AAfreqOverlaid,fig.cap="HEM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
 
-FIXME: Insert an overlay for HEM
-
+   # AA FReq ----
+   rm(tmp5A,tmp7A,tmpBoth)
+   head(HEM_aaFreqDf)
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_aaFreqDf",sep="")))))
+                          #HEM_aaFreqDf)
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_aaFreqDf",sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   head(tmp7A)
+   tmp7A
+   tmp7A %>%
+      dplyr::rename(
+         df5A.Residue = df7A.Residue
+      ) -> tmp7A
+   merge(tmp5A,tmp7A,by = 'df5A.Residue') -> tmpBoth
+   #alternative: left_join(tmp5A,tmp7A,by='df5A.Residue')
+   tmpBoth %>%
+      dplyr::rename(
+         Residue = df5A.Residue
+      ) -> tmpBoth
+   tmpBoth
+   
+   library(reshape) #ONLY LOAD THIS HERE. IF YOU LOAD EALIER,
+   # ALL CASE OF RENAME() FROM DPLYR PACKAGE IN ALL SCRIPTS GETS FUCKED UP.
+   # PUTTING IT HERE, ONLY BELOW THIS LIBRARY LOAD DO YOU NEED NEED TO SPECIFY DPLYR::XXX
+   
+   to_plot <- reshape::melt((data.frame(x=tmpBoth$Residue,`Distance_5A`=tmpBoth$df5A.Freq,`Distance_7A`=tmpBoth$df7A.Freq)),id="x")
+#   detach("package:reshape", unload=TRUE) #maybe avoid the problem anyway lol
+   
+   print(ggplot(to_plot,aes(x= reorder(x,-value),y=value,fill=variable)) + 
+            geom_bar(stat="identity",position = "identity", alpha=.4) +
+            labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep='')) +
+            scale_fill_discrete(name = "Distance Cutoff")+
+            theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+   
+```
+]
+.left-column[
+- The trends are Pretty similar, no?
+- I take cash, card, and patcoin.
+]
 ---
 # HEM AA Freq
 
+.right-column[
 ```{r HEM-AAfreq0,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
 activeLigand = "HEM"
@@ -165,7 +513,13 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g #+  gghighlight(Residue == c("LEU","PHE","ALA","ILE","VAL")) #dank
 ```
+]
+--
 
+.left-column[
+
+Special text for special people
+]
 
 ---
 
@@ -1019,6 +1373,9 @@ class: inverse, center, middle
 
 # Heme-b Volume Data
 
+Volume results were rather spread out, with close agreement only found for heme-b. **In general, volume for all heme molecules regardless of distance cutoff centered at approximately 1200 A³.** This result may be useful in protein engineering efforts, especially for selection or design of binding pockets. 
+
+
 ```{r HEM-Volume,fig.cap="HEM: Volume of Binding Pocket",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
 #    # ### VOLUME ####
@@ -1052,6 +1409,412 @@ library(kableExtra)
    )
     
 ```
+
+---
+class: inverse, center, middle
+
+# Surface Area Data
+
+---
+# Note on Ligand SA
+
+The solvent accessible surface area for all heme *molecules* themselves centers around values of 1000 A².
+
+---
+# Heme-b Pocket SA
+
+```{r HEM-Pocket-AccessibleSA,fig.cap="HEM: Pocket Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+   # Pocket Acessible histo
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = "Pocket_Accessible_SA"
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$Distance_Cutoff = '7A'
+   tmp5A$Distance_Cutoff = '5A'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(title = paste(activeLigand,"Pocket Acessible SA (A²)"))
+   )
+```
+
+---
+# Verdoheme Pocket SA
+```{r VERDOHEME-Pocket-AccessibleSA,fig.cap="VERDOHEME: Pocket Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+   # Pocket Acessible histo
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = "Pocket_Accessible_SA"
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$Distance_Cutoff = '7A'
+   tmp5A$Distance_Cutoff = '5A'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(title = paste(activeLigand,"Pocket Acessible SA (A²)"))
+   )
+```
+
+
+
+Heme-b and verdoheme, being highly similar molecules, with the same propionate groups, and one the derivative of the other, have quite similar surface areas, centering around 10,000-11,000 A². This is useful as a baseline to discuss the surface area of the binding pockets of the other two heme molecules below.
+
+
+---
+# Heme-c Pocket SA
+```{r HEC-Pocket-AccessibleSA,fig.cap="HEC: Pocket Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+   # Pocket Acessible histo
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = "Pocket_Accessible_SA"
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$Distance_Cutoff = '7A'
+   tmp5A$Distance_Cutoff = '5A'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(title = paste(activeLigand,"Pocket Acessible SA (A²)"))
+   )
+```
+
+
+The surface area of the binding pocket of heme-c is considerably lower than that of heme-b and verdoheme. Its values center around 7500 A². Heme-c is bound covalently to the hemoprotein, forming thioether bonds with cysteine residues at two sites; this result suggests that the covalent bonds may exclude these sites from interacting with water molecules. Further study would be required to confirm this phenomenon.
+
+
+---
+# Siroheme Pocket SA
+```{r SRM-Pocket-AccessibleSA,fig.cap="SRM: Pocket Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+   # Pocket Acessible histo
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = "Pocket_Accessible_SA"
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$Distance_Cutoff = '7A'
+   tmp5A$Distance_Cutoff = '5A'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(title = paste(activeLigand,"Pocket Acessible SA (A²)"))
+   )
+```
+
+The surface area of siroheme's binding pocket is far greater than that for other heme molecules: values center around 21000 A². Siroheme's extra groups on the porphyrin ring do not appear to affect its own surface area, per above. However, it is effectively a very polar molecule and appropriately the binding pocket is highly saturated with very polar amino acids, as seen in the amino acid frequency analysis. The binding pocket is therefore completely different from the other heme molecules, and these populous, polar amino acids favorably interact with aqueous solvent, negating the need to bury any hydrophobic residues and reduce surface area.
+
+
+
+---
+class: inverse, center, middle
+# Angles
+
+---
+# HEM Planar Angle Data
+
+```{r HEM-planarAll,fig.cap="HEM: All Planar Angles",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+   # all planar angles
+   # yeah keep the as.numeric(as.character),easiest way to solve the problem
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+
+
+   planarAllPlot <- ggplot(eval(parse(text=paste(activeLigand,"_allDistPlanarDf",sep=''))),
+                           aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": All Planar Angles",sep=''), x="Residue",y="Angle") + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+   print(planarAllPlot)
+```
+
+
+---
+# HEM CAB Data
+```{r HEM-cab-All,fig.cap="HEM: All CA-CB-Fe Angles",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+   # all cabs with distance intersect
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+
+   cabAllPlot <- ggplot(eval(parse(text=paste(activeLigand,"_allDistCabDf",sep=''))),
+                        aes(x=Residue_Code.x,y=as.numeric(as.character(Angle)),fill=Residue_Code.x)) +
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": All CA-CB-Fe Angles",sep=''), x="Residue",y="Angle") + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+   print(cabAllPlot)
+   
+```
+
+
+
+---
+
+<!-- # 6. 'NoCite' function to include references in bib that  -->
+<!-- #    don't appear in text -->
+<!-- NoCite(bib, c("knuth:ct:a", "aristotle:poetics", "herrmann")) -->
+
+# References
+
+```{r refs, echo=FALSE, results="asis"}
+PrintBibliography(myBib)
+```
+
+
+
+---
+
+class: inverse, center, middle
+
+# In Case of Emergency
+
+
+---
+# HEC AA Overlay
+
+
+
+```{r HEC-AAfreqOverlaid,fig.cap="HEC: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+   # AA FReq ----
+   rm(tmp5A,tmp7A,tmpBoth)
+   head(HEM_aaFreqDf)
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_aaFreqDf",sep="")))))
+                          #HEM_aaFreqDf)
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_aaFreqDf",sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   head(tmp7A)
+   tmp7A
+   tmp7A %>%
+      dplyr::rename(
+         df5A.Residue = df7A.Residue
+      ) -> tmp7A
+   merge(tmp5A,tmp7A,by = 'df5A.Residue') -> tmpBoth
+   #alternative: left_join(tmp5A,tmp7A,by='df5A.Residue')
+   tmpBoth %>%
+      dplyr::rename(
+         Residue = df5A.Residue
+      ) -> tmpBoth
+   tmpBoth
+   
+   library(reshape) #ONLY LOAD THIS HERE. IF YOU LOAD EALIER,
+   # ALL CASE OF RENAME() FROM DPLYR PACKAGE IN ALL SCRIPTS GETS FUCKED UP.
+   # PUTTING IT HERE, ONLY BELOW THIS LIBRARY LOAD DO YOU NEED NEED TO SPECIFY DPLYR::XXX
+   
+   to_plot <- reshape::melt((data.frame(x=tmpBoth$Residue,`Distance_5A`=tmpBoth$df5A.Freq,`Distance_7A`=tmpBoth$df7A.Freq)),id="x")
+#   detach("package:reshape", unload=TRUE) #maybe avoid the problem anyway lol
+   
+   print(ggplot(to_plot,aes(x= reorder(x,-value),y=value,fill=variable)) + 
+            geom_bar(stat="identity",position = "identity", alpha=.4) +
+            labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep='')) +
+            scale_fill_discrete(name = "Distance Cutoff")+
+            theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+   
+```
+---
+# Siroheme AA Overlay
+```{r SRM-AAfreqOverlaid,fig.cap="SRM: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+   # AA FReq ----
+   rm(tmp5A,tmp7A,tmpBoth)
+   head(HEM_aaFreqDf)
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_aaFreqDf",sep="")))))
+                          #HEM_aaFreqDf)
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_aaFreqDf",sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   head(tmp7A)
+   tmp7A
+   tmp7A %>%
+      dplyr::rename(
+         df5A.Residue = df7A.Residue
+      ) -> tmp7A
+   merge(tmp5A,tmp7A,by = 'df5A.Residue') -> tmpBoth
+   #alternative: left_join(tmp5A,tmp7A,by='df5A.Residue')
+   tmpBoth %>%
+      dplyr::rename(
+         Residue = df5A.Residue
+      ) -> tmpBoth
+   tmpBoth
+   
+   library(reshape) #ONLY LOAD THIS HERE. IF YOU LOAD EALIER,
+   # ALL CASE OF RENAME() FROM DPLYR PACKAGE IN ALL SCRIPTS GETS FUCKED UP.
+   # PUTTING IT HERE, ONLY BELOW THIS LIBRARY LOAD DO YOU NEED NEED TO SPECIFY DPLYR::XXX
+   
+   to_plot <- reshape::melt((data.frame(x=tmpBoth$Residue,`Distance_5A`=tmpBoth$df5A.Freq,`Distance_7A`=tmpBoth$df7A.Freq)),id="x")
+#   detach("package:reshape", unload=TRUE) #maybe avoid the problem anyway lol
+   
+   print(ggplot(to_plot,aes(x= reorder(x,-value),y=value,fill=variable)) + 
+            geom_bar(stat="identity",position = "identity", alpha=.4) +
+            labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep='')) +
+            scale_fill_discrete(name = "Distance Cutoff")+
+            theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+   
+```
+---
+# Verdoheme AA Overlay
+```{r VERDOHEME-AAfreqOverlaid,fig.cap="VERDOHEME: AA Frequency",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+   # AA FReq ----
+   rm(tmp5A,tmp7A,tmpBoth)
+   head(HEM_aaFreqDf)
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_aaFreqDf",sep="")))))
+                          #HEM_aaFreqDf)
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_aaFreqDf",sep="")))))
+   tmp7A$ang = '7'
+   tmp5A$ang = '5'
+   head(tmp7A)
+   tmp7A
+   tmp7A %>%
+      dplyr::rename(
+         df5A.Residue = df7A.Residue
+      ) -> tmp7A
+   merge(tmp5A,tmp7A,by = 'df5A.Residue') -> tmpBoth
+   #alternative: left_join(tmp5A,tmp7A,by='df5A.Residue')
+   tmpBoth %>%
+      dplyr::rename(
+         Residue = df5A.Residue
+      ) -> tmpBoth
+   tmpBoth
+   
+   library(reshape) #ONLY LOAD THIS HERE. IF YOU LOAD EALIER,
+   # ALL CASE OF RENAME() FROM DPLYR PACKAGE IN ALL SCRIPTS GETS FUCKED UP.
+   # PUTTING IT HERE, ONLY BELOW THIS LIBRARY LOAD DO YOU NEED NEED TO SPECIFY DPLYR::XXX
+   
+   to_plot <- reshape::melt((data.frame(x=tmpBoth$Residue,`Distance_5A`=tmpBoth$df5A.Freq,`Distance_7A`=tmpBoth$df7A.Freq)),id="x")
+#   detach("package:reshape", unload=TRUE) #maybe avoid the problem anyway lol
+   
+   print(ggplot(to_plot,aes(x= reorder(x,-value),y=value,fill=variable)) + 
+            geom_bar(stat="identity",position = "identity", alpha=.4) +
+            labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency",sep='')) +
+            scale_fill_discrete(name = "Distance Cutoff")+
+            theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+   
+```
+
+
+
 
 ---
 
@@ -1168,35 +1931,48 @@ library(kableExtra)
 ```
 
 ---
+# Source Organism Data HEM
+```{r eval=require('DT'), tidy=FALSE, echo=FALSE}
 
-class: inverse, center, middle
+DT::datatable(HEM_p1DF,fillContainer = FALSE, options = list(pageLength = 5))
 
-# Surface Area Data
-
----
-# Note on Similarity
-
-FIXME Insert the overlay
-
-
----
-<!-- # 6. 'NoCite' function to include references in bib that  -->
-<!-- #    don't appear in text -->
-<!-- NoCite(bib, c("knuth:ct:a", "aristotle:poetics", "herrmann")) -->
-
-# References
-
-```{r refs, echo=FALSE, results="asis"}
-PrintBibliography(myBib)
 ```
 
 
+---
+# Source Organism Data HEC
+```{r molOrgDThec}
+
+DT::datatable(HEC_p1DF)
+
+```
+
 
 ---
+# Source Organism Data SRM
+```{r molOrgDTsrm}
+#load("mainData.RData")
+DT::datatable(SRM_p1DF)
 
-class: inverse, center, middle
+```
 
-# In Case of Emergency
+
+---
+# Source Organism Data verdoheme
+```{r molOrgDTver}
+
+DT::datatable(VERDOHEME_p1DF)
+
+```
+
+
+---
+# Big Data HEM
+```{r bigly}
+
+DT::datatable(HEM_p2DF)
+
+```
 
 ---
 # HEM AA Interactive
@@ -1229,599 +2005,83 @@ htmltools::save_html(p, file = "example-plotly.html")
 <iframe src="example-plotly.html" width="550" height="500"></iframe>
 
 
-
-<!-- Install the **xaringan** package from [Github](https://github.com/yihui/xaringan): -->
-
-<!-- ```{r eval=FALSE, tidy=FALSE} -->
-<!-- remotes::install_github("yihui/xaringan") -->
-<!-- ``` -->
-
 ---
+# Planar Angle Data
 
-You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
-
-- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
+```{r axesExampl2, echo=FALSE,out.width="100%",fig.cap="Example of Planar Angles Calculation (1B5M)",fig.show="hold",fig.align='center'}
+knitr::include_graphics("0_Thesis/figures/1B5M.axes.png")
+```
 
 --
 
-- Click the `Knit` button to compile it;
+The code is ghastly!
+
+Within a bunch of for loops:
+```{python eval=FALSE}
+currentResidue = re.sub("[^0-9]","", currentResidue) #strip non-numerics
+print "stripped to only the number, this is residue " + currentResidue
+rc("define axis number " + currentResidue + " :" + currentResidue)
+rc("distance a999999999 a" + currentResidue)
+# we now have the plane defined, using the axis function
+rc("angle a999999999 a" + currentResidue)
+```
+
+
+---
+
+# CA-CB-Fe Angles
+
+
+Within a bunch of for loops:
+```{python eval=FALSE}
+print "ResID: " + ResID # no way to combine these lines :(
+rc("angle :" + currentResidue + "@CA" + " :" + currentResidue + "@CB" + " :"+activeLigand+"@FE")
+```
+
+
+---
+
+
+# Distances and Sample R Code
 
 --
-
-- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
-
-.footnote[
-[1] 中文用户请看[这份教程](https://slides.yihui.org/xaringan/zh-CN.html)
-
-[2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
-]
-
----
-background-image: url(`r xaringan:::karl`)
-background-position: 50% 50%
-class: center, bottom, inverse
-
-# You only live once!
-
----
-
-# Hello Ninja
-
-As a presentation ninja, you certainly should not be satisfied by the "Hello World" example. You need to understand more about two things:
-
-1. The [remark.js](https://remarkjs.com) library;
-
-1. The **xaringan** package;
-
-Basically **xaringan** injected the chakra of R Markdown (minus Pandoc) into **remark.js**. The slides are rendered by remark.js in the web browser, and the Markdown source needed by remark.js is generated from R Markdown (**knitr**).
-
----
-
-# remark.js
-
-You can see an introduction of remark.js from [its homepage](https://remarkjs.com). You should read the [remark.js Wiki](https://github.com/gnab/remark/wiki) at least once to know how to
-
-- create a new slide (Markdown syntax<sup>*</sup> and slide properties);
-
-- format a slide (e.g. text alignment);
-
-- configure the slideshow;
-
-- and use the presentation (keyboard shortcuts).
-
-It is important to be familiar with remark.js before you can understand the options in **xaringan**.
-
-.footnote[[*] It is different with Pandoc's Markdown! It is limited but should be enough for presentation purposes. Come on... You do not need a slide for the Table of Contents! Well, the Markdown support in remark.js [may be improved](https://github.com/gnab/remark/issues/142) in the future.]
-
----
-background-image: url(`r xaringan:::karl`)
-background-size: cover
-class: center, bottom, inverse
-
-# I was so happy to have discovered remark.js!
-
----
-class: inverse, middle, center
-
-# Using xaringan
-
----
-
-# xaringan
-
-Provides an R Markdown output format `xaringan::moon_reader` as a wrapper for remark.js, and you can use it in the YAML metadata, e.g.
-
-```yaml
----
-title: "A Cool Presentation"
-output:
-  xaringan::moon_reader:
-    yolo: true
-    nature:
-      autoplay: 30000
----
-```
-
-See the help page `?xaringan::moon_reader` for all possible options that you can use.
-
----
-
-# remark.js vs xaringan
-
-Some differences between using remark.js (left) and using **xaringan** (right):
-
-.pull-left[
-1. Start with a boilerplate HTML file;
-
-1. Plain Markdown;
-
-1. Write JavaScript to autoplay slides;
-
-1. Manually configure MathJax;
-
-1. Highlight code with `*`;
-
-1. Edit Markdown source and refresh browser to see updated slides;
-]
-
-.pull-right[
-1. Start with an R Markdown document;
-
-1. R Markdown (can embed R/other code chunks);
-
-1. Provide an option `autoplay`;
-
-1. MathJax just works;<sup>*</sup>
-
-1. Highlight code with `{{}}`;
-
-1. The RStudio addin "Infinite Moon Reader" automatically refreshes slides on changes;
-]
-
-.footnote[[*] Not really. See next page.]
-
----
-
-# Math Expressions
-
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. &#36;\alpha+\beta$ renders $\alpha+\beta$. You can use the display style with double dollar signs:
-
-```
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-```
-
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-
-Limitations:
-
-1. The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
-
-1. There should not be spaces after the opening `$` or before the closing `$`.
-
-1. Math does not work on the title slide (see [#61](https://github.com/yihui/xaringan/issues/61) for a workaround).
-
----
-
-# R Code
-
-```{r comment='#'}
-# a boring regression
-fit = lm(dist ~ 1 + speed, data = cars)
-coef(summary(fit))
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
-```
-
----
-
-# R Plots
-
-```{r cars, fig.height=4, dev='svg'}
-par(mar = c(4, 4, 1, .1))
-plot(cars, pch = 19, col = 'darkgray', las = 1)
-abline(fit, lwd = 2)
-```
-
----
-
-# Tables
-
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
-
-```{r}
-knitr::kable(head(iris), format = 'html')
-```
-
----
-
-# HTML Widgets
-
-I have not thoroughly tested HTML widgets against **xaringan**. Some may work well, and some may not. It is a little tricky.
-
-Similarly, the Shiny mode (`runtime: shiny`) does not work. I might get these issues fixed in the future, but these are not of high priority to me. I never turn my presentation into a Shiny app. When I need to demonstrate more complicated examples, I just launch them separately. It is convenient to share slides with other people when they are plain HTML/JS applications.
-
-See the next page for two HTML widgets.
-
----
-
-```{r out.width='100%', fig.height=6, eval=require('leaflet')}
-library(leaflet)
-leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
-```
-
----
-
-```{r eval=require('DT'), tidy=FALSE}
-DT::datatable(
-  head(iris, 10),
-  fillContainer = FALSE, options = list(pageLength = 8)
-)
-```
-
----
-
-# Some Tips
-
-- Do not forget to try the `yolo` option of `xaringan::moon_reader`.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        yolo: true
-    ```
-
----
-
-# Some Tips
-
-- Slides can be automatically played if you set the `autoplay` option under `nature`, e.g. go to the next slide every 30 seconds in a lightning talk:
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay: 30000
-    ```
-
-- If you want to restart the play after it reaches the last slide, you may set the sub-option `loop` to TRUE, e.g.,
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay:
-            interval: 30000
-            loop: true
-    ```
-
----
-
-# Some Tips
-
-- A countdown timer can be added to every page of the slides using the `countdown` option under `nature`, e.g. if you want to spend one minute on every page when you give the talk, you can set:
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          countdown: 60000
-    ```
-
-    Then you will see a timer counting down from `01:00`, to `00:59`, `00:58`, ... When the time is out, the timer will continue but the time turns red.
+```{r eval=FALSE}
+combined_results_df %>%
+    filter(grepl('Atom being analyzed...', V1)) -> combined_results_df 
+  
+  combined_results_df %>%
+    separate(V1, c(NA,'V1'),'Atom being analyzed....') -> OnlyDistance_df
+  
+  OnlyDistance_df %>%
+    separate(V1, c('Residue_Analyzed','Distance'),'....Distance to Fe....') -> OnlyDistance_df
+  
+  OnlyDistance_df %>%
+    separate(Residue_Analyzed, c('Residue_Code','Residue_Number','Atom'),' ') -> OnlyDistance_df
     
----
+**Eventually...**
 
-# Some Tips
+regexp <- "[[:digit:]]+"
+  str_extract(OnlyDistance_df$Residue_Number,regexp) -> OnlyDistance_df$Residue_Number
 
-- The title slide is created automatically by **xaringan**, but it is just another remark.js slide added before your other slides.
-
-    The title slide is set to `class: center, middle, inverse, title-slide` by default. You can change the classes applied to the title slide with the `titleSlideClass` option of `nature` (`title-slide` is always applied).
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          titleSlideClass: [top, left, inverse]
-    ```
-    
---
-
-- If you'd like to create your own title slide, disable **xaringan**'s title slide with the `seal = FALSE` option of `moon_reader`.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        seal: false
-    ```
-
----
-
-# Some Tips
-
-- There are several ways to build incremental slides. See [this presentation](https://slides.yihui.org/xaringan/incremental.html) for examples.
-
-- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#<<`;
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          highlightLines: true
-    ```
-
-    See examples on the next page.
-
----
-
-# Some Tips
-
-
-.pull-left[
-An example using a leading `*`:
-
-    ```r
-    if (TRUE) {
-    ** message("Very important!")
-    }
-    ```
-Output:
-```r
-if (TRUE) {
-* message("Very important!")
-}
-```
-
-This is invalid R code, so it is a plain fenced code block that is not executed.
-]
-
-.pull-right[
-An example using `{{}}`:
-
-````
-`r ''````{r tidy=FALSE}
-if (TRUE) {
-*{{ message("Very important!") }}
-}
-```
-````
-Output:
-```{r tidy=FALSE}
-if (TRUE) {
-{{ message("Very important!") }}
-}
-```
-
-It is valid R code so you can run it. Note that `{{}}` can wrap an R expression of multiple lines.
-]
-
----
-
-# Some Tips
-
-An example of using the trailing comment `#<<` to highlight lines:
-
-````markdown
-`r ''````{r tidy=FALSE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #<<
-  geom_smooth()    #<<
-```
-````
-
-Output:
-
-```{r tidy=FALSE, eval=FALSE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #<<
-  geom_smooth()    #<<
+**Finally..**
+  
+# 3. Average distance to Fe
+  mean_dist_df <- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID,OnlyDistance_df$Residue_Number,OnlyDistance_df$Residue_Code), mean)
+  # rename nasty defaults
+  mean_dist_df %>%
+    dplyr::rename(
+      PDB_ID = Group.1,
+      Residue_Number = Group.2,
+      Residue_Code = Group.3,
+      Mean_Distance = x
+    ) -> mean_dist_df
+  
+      
+ 
 ```
 
 ---
 
-# Some Tips
+# End of Slides
 
-When you enable line-highlighting, you can also use the chunk option `highlight.output` to highlight specific lines of the text output from a code chunk. For example, `highlight.output = TRUE` means highlighting all lines, and `highlight.output = c(1, 3)` means highlighting the first and third line.
-
-````md
-`r ''````{r, highlight.output=c(1, 3)}
-head(iris)
-```
-````
-
-```{r, highlight.output=c(1, 3), echo=FALSE}
-head(iris)
-```
-
-Question: what does `highlight.output = c(TRUE, FALSE)` mean? (Hint: think about R's recycling of vectors)
-
----
-
-# Some Tips
-
-- To make slides work offline, you need to download a copy of remark.js in advance, because **xaringan** uses the online version by default (see the help page `?xaringan::moon_reader`).
-
-- You can use `xaringan::summon_remark()` to download the latest or a specified version of remark.js. By default, it is downloaded to `libs/remark-latest.min.js`.
-
-- Then change the `chakra` option in YAML to point to this file, e.g.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        chakra: libs/remark-latest.min.js
-    ```
-
-- If you used Google fonts in slides (the default theme uses _Yanone Kaffeesatz_, _Droid Serif_, and _Source Code Pro_), they won't work offline unless you download or install them locally. The Heroku app [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) can help you download fonts and generate the necessary CSS.
-
----
-
-# Macros
-
-- remark.js [allows users to define custom macros](https://github.com/yihui/xaringan/issues/80) (JS functions) that can be applied to Markdown text using the syntax `![:macroName arg1, arg2, ...]` or `![:macroName arg1, arg2, ...](this)`. For example, before remark.js initializes the slides, you can define a macro named `scale`:
-
-    ```js
-    remark.macros.scale = function (percentage) {
-      var url = this;
-      return '<img src="' + url + '" style="width: ' + percentage + '" />';
-    };
-    ```
-
-    Then the Markdown text
-
-    ```markdown
-    ![:scale 50%](image.jpg)
-    ```
-
-    will be translated to
-    
-    ```html
-    <img src="image.jpg" style="width: 50%" />
-    ```
-
----
-
-# Macros (continued)
-
-- To insert macros in **xaringan** slides, you can use the option `beforeInit` under the option `nature`, e.g.,
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          beforeInit: "macros.js"
-    ```
-
-    You save your remark.js macros in the file `macros.js`.
-
-- The `beforeInit` option can be used to insert arbitrary JS code before `remark.create()`. Inserting macros is just one of its possible applications.
-
----
-
-# CSS
-
-Among all options in `xaringan::moon_reader`, the most challenging but perhaps also the most rewarding one is `css`, because it allows you to customize the appearance of your slides using any CSS rules or hacks you know.
-
-You can see the default CSS file [here](https://github.com/yihui/xaringan/blob/master/inst/rmarkdown/templates/xaringan/resources/default.css). You can completely replace it with your own CSS files, or define new rules to override the default. See the help page `?xaringan::moon_reader` for more information.
-
----
-
-# CSS
-
-For example, suppose you want to change the font for code from the default "Source Code Pro" to "Ubuntu Mono". You can create a CSS file named, say, `ubuntu-mono.css`:
-
-```css
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-```
-
-Then set the `css` option in the YAML metadata:
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "ubuntu-mono.css"]
-```
-
-Here I assume `ubuntu-mono.css` is under the same directory as your Rmd.
-
-See [yihui/xaringan#83](https://github.com/yihui/xaringan/issues/83) for an example of using the [Fira Code](https://github.com/tonsky/FiraCode) font, which supports ligatures in program code.
-
----
-
-# CSS (with Sass)
-
-**xaringan** also supports Sass support via **rmarkdown**. Suppose you want to use the same color for different elements, e.g., first heading and bold text. You can create a `.scss` file, say `mytheme.scss`, using the [sass](https://sass-lang.com/) syntax with variables:
-
-```scss
-$mycolor: #ff0000; 
-.remark-slide-content > h1 { color: $mycolor; }
-.remark-slide-content strong { color: $mycolor; }
-```
-
-Then set the `css` option in the YAML metadata using this file placed under the same directory as your Rmd:
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "mytheme.scss"]
-```
-
-This requires **rmarkdown** >= 2.8 and the [**sass**](https://rstudio.github.io/sass/) package. You can learn more about **rmarkdown** and **sass** support in [this blog post](https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/#sass-and-scss-support-for-html-based-output) and in [**sass** overview vignette](https://rstudio.github.io/sass/articles/sass.html).
-
----
-
-# Themes
-
-Don't want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files `foo.css` and `foo-fonts.css`, where `foo` is the theme name. Below are some existing themes:
-
-```{r, R.options=list(width = 70)}
-names(xaringan:::list_css())
-```
-
----
-
-# Themes
-
-To use a theme, you can specify the `css` option as an array of CSS filenames (without the `.css` extensions), e.g.,
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts]
-```
-
-If you want to contribute a theme to **xaringan**, please read [this blog post](https://yihui.org/en/2017/10/xaringan-themes).
-
----
-class: inverse, middle, center
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
-background-size: contain
-
-# Naruto
-
----
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-background-size: 100px
-background-position: 90% 8%
-
-# Sharingan
-
-The R package name **xaringan** was derived<sup>1</sup> from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
-
-- the "Eye of Insight"
-
-- the "Eye of Hypnotism"
-
-I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.<sup>2,3</sup>
-
-.footnote[
-[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
-
-[2] By comparison, bad presentations only put the audience to sleep.
-
-[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
-]
-
----
-
-# Naruto terminology
-
-The **xaringan** package borrowed a few terms from Naruto, such as
-
-- [Sharingan](https://naruto.fandom.com/wiki/Sharingan) (写輪眼; the package name)
-
-- The [moon reader](https://naruto.fandom.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
-
-- [Chakra](https://naruto.fandom.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
-
-- [Nature transformation](https://naruto.fandom.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
-
-- The [infinite moon reader](https://naruto.fandom.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
-
-- The [summoning technique](https://naruto.fandom.com/wiki/Summoning_Technique) (download remark.js from the web)
-
-You can click the links to know more about them if you want. The jutsu "Moon Reader" may seem a little evil, but that does not mean your slides are evil.
-
----
-
-class: center
-
-# Hand seals (印)
-
-Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
-
-![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
-
----
-
-class: center, middle
-
-# Thanks!
-
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](https://yihui.org/knitr/), and [R Markdown](https://rmarkdown.rstudio.com).
+Who's buying?
