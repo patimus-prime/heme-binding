@@ -19,10 +19,10 @@ output:
 library(RefManageR)
 BibOptions(check.entries = FALSE,
            bib.style = "authoryear",
-           cite.style = "alphabetic",
-           style = "markdown",
+           cite.style = "numeric", #alphabetic
+           style = "markdown", 
            hyperlink = TRUE,
-           dashed = TRUE)
+           dashed = TRUE) #can add super = TRUE to have numeric cites be superscripts
 myBib <- ReadBib("./super.bib", check = FALSE)
 
 ```
@@ -124,9 +124,54 @@ carbohydrates, steroids, fatty acids; catalyzing hormone degradation and synthes
 
 ---
 
+class: inverse, center, middle
+
+# Results
+
+--
+
+# Amino Acid Frequencies
+
+--
+
+# Heme-b
+
+---
+# Note on Similarity 5A and 7A
+
+FIXME: Insert an overlay for HEM
+
+---
 # HEM AA Freq
 
-```{r HEM-AAfreq,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+```{r HEM-AAfreq0,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g #+  gghighlight(Residue == c("LEU","PHE","ALA","ILE","VAL")) #dank
+```
+
+
+---
+
+# HEM AA Freq (cont'd)
+<!-- for the nonpolar at beginning -->
+```{r HEM-AAfreq1,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
 activeLigand = "HEM"
 library(dplyr) 
@@ -147,6 +192,991 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g +  gghighlight(Residue == c("LEU","PHE","ALA","ILE","VAL")) #dank
 ```
+
+
+Beginning at the left of Figure \@ref(fig:HEM-AAfreq) and moving right, large, nonpolar amino acids appear most frequently within 7A: LEU and PHE; ILE appears less frequently than these two amino acids but nonetheless is in high frequency. Small, nonpolar amino acids ALA and VAL also appear very frequently. As the majority of the heme-b molecule is made up of the nonpolar porphyrin ring, these amino acids are therefore likely in such high frequency to provide the nonpolar interactions with the pyrole groups and methyl and vinyl groups. 
+
+
+---
+
+
+# HEM AA Freq (cont'd) 
+<!-- FIXME! Make the THR work, very weird error. TYR also gave me issues -->
+<!-- for after the nonpolars lol -->
+
+I need to note here that THR was overlooked in the thesis, but falls into this group of polar residue and therefore the implications of the results do not change.
+```{r HEM-AAfreq2,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g +  gghighlight(Residue %in% c("THR","ARG","HIS","TYR")) #dank
+```
+
+
+Tyrosine, arginine, histidine appear next most frequently. The two propionate groups on heme make polar interactions with salt bridges formed between arginine groups within the binding environment[@Barrows2005]. Therefore, the tyrosine and histidine likely form polar interactions with the portion of the propionate groups not interacting with the arginine salt bridges. This, in addition to the nonpolar interactions above, likely provides as hospitable of a binding environment as possible to coordinate the heme. It should be noted histidine is one of the residues that coordinates the iron atom, and this may therefore increase its frequency in the binding pocket.
+
+
+
+---
+
+# HEM AA Freq (cont'd)
+<!-- GLY -->
+```{r HEM-AAfreq3,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g +  gghighlight(Residue == c("GLY")) #dank
+```
+
+
+Glycine is a small residue and cannot form significant interactions within its environment; however, its frequency, or lack thereof (compared to background frequency, discussed below), suggests the binding pocket may not require as much flexibility or spatial considerations as in the rest of the protein.
+
+---
+
+# HEM AA Freq (cont'd)
+<!-- ser etc -->
+```{r HEM-AAfreq4,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+gv <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+      #gx <- list("SER",'GLU')
+      gv +  gghighlight(Residue %in% c("SER","ASP","LYS","GLU"))   #Residue == gx) #dank
+```
+
+
+
+Next appear serine, glutamate (glutamic acid) and aspartate (aspartic acid) and lysine. These are polar residues, and glutamate and aspartate are negatively charged; lysine is polar too, but positively charged (at pH 7). The negative charge on glutamate and aspartate may explain why they are fairly infrequent: although polar, the negative charge may induce a repulsion effect with the propionate groups. Or, it may be that other amino acids are preferable, as is likely the case for lysine. Lysine is polar and positively charged; but arginine residues forms the salt bridges necessary for propionate to make polar interactions. And histidine coordinates the heme iron. Therefore the infrequency of lysine may be less due to a problem with lysine and more due to a preference for other polar amino acids.
+
+
+---
+
+
+# HEM AA Freq (cont'd)
+<!-- pro -->
+```{r HEM-AAfreq5,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+gv <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+      #gx <- list("SER",'GLU')
+      gv +  gghighlight(Residue %in% c("PRO"))   #Residue == gx) #dank
+```
+
+Proline is a small nonpolar amino acid in low frequency; the trend for heme-b, at least, appears to be to favor large nonpolar amino acids in the binding pocket. This may suggest that a large amount of nonpolar interactions, per residue, is favored in the binding pocket, perhaps because of the limited space available to position residues to interact with heme.
+
+
+
+---
+
+
+# HEM AA Freq (cont'd)
+<!-- asparagine and glutamine -->
+```{r HEM-AAfreq7,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+gv <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+      #gx <- list("SER",'GLU')
+      gv +  gghighlight(Residue %in% c("ASN","GLN"))   #Residue == gx) #dank
+```
+
+Asparagine and glutamine are both medium-sized polar amino acids; given the trends already discussed it is surprising these are not in greater abundance. But as with proline, it may simply be a matter of maximizing the benefit of the interactions that may be formed with the heme; while asparagine and glutamine are polar, amino acids like arginine and histidine are both polar and positively charged (and arginine forms salt bridges), capable of stronger interactions with the electronegative propionate groups.
+
+
+
+---
+
+
+# HEM AA Freq (cont'd)
+<!-- met and trp -->
+```{r HEM-AAfreq8,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+gv <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+      #gx <- list("SER",'GLU')
+      gv +  gghighlight(Residue %in% c("MET","TRP"))   #Residue == gx) #dank
+```
+
+
+
+Methionine and tryptophan appear very infrequently in the binding pocket. Tryptophan is very surprising to find as second-to-least frequent. It is a large nonpolar amino acid - but perhaps its single, potential hydrogen bond, although weak, is enough to prefer completely nonpolar residues. Or, with its size, it is preferable to have more numerous, smaller nonpolar residues that can favorably interact with the porphyrin while reducing steric hindrance of other residues in the environment. The reason for methionine's low frequency is not clear, perhaps for similar reasons as with proline, where more intensely nonpolar residues are preferred, rather than less nonpolar residues being unfavorable.
+
+---
+
+# HEM AA Freq (cont'd)
+<!-- cys  -->
+```{r HEM-AAfreq9,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+gv <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+      #gx <- list("SER",'GLU')
+      gv +  gghighlight(Residue %in% c("CYS"))   #Residue == gx) #dank
+```
+
+Cystine appears most infrequently of all the amino acids in the binding pocket. This is quite  surprising - cystine is the other highly conserved residue that may coordinate the heme iron. Perhaps the sample of PDBs used in this study mostly use histidine to coordinate the iron - but this would only account for one residue in the binding pocket per pdb. Therefore these results suggest that while cystidine may be well suited to coordinate the iron in heme, it is poorly suited to form any nonpolar interactions with the porphyrin ring, leaving the task up to other, more suitably, intensely nonpolar amino acids.
+
+
+---
+
+# HEM AA Freq (cont'd)
+<!-- cys  -->
+```{r HEM-AAfreq10,fig.cap="HEM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+gv <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+      #Below is a list of nonpolar residues, nonpolar_res, if you need later
+      gv +  gghighlight(Residue %in% c("ALA","VAL","CYS","PRO","LEU","ILE","MET","TRP","PHE"))   #Residue == gx) #dank
+```
+
+
+Moving away from discussing individual amino acid populations, what is especially notable of the data for heme-b is that nonpolar residues appear in much greater frequency than polar residues. Nonpolar interactions with heme are therefore more numerous than polar interactions. Their multiplicity may also suggest that they are potentially of greater importance than previously thought. At the very least, these results suggest that polar interactions and coordination of the iron atom, while necessary for heme binding, are insufficient, and that nonpolar interactions and the population of nonpolar residues in the binding pocket should be considered when examining the binding environment of heme.
+
+
+
+---
+
+
+# Comparison with Background Amino Acid Frequencies
+
+While the frequencies of amino acids in the binding pocket have been discussed, it may also be of interest to compare against the background amino acid frequency, the general frequency of amino acids within the entire monomer. The degree to which any results may affect the significance of the frequencies of the amino acids in the binding pocket is unclear - those amino acids are interacting with the heme. However, an in depth examination of similarities and differences may reveal that some amino acids may simply be extremely highly conserved by chance and by virtue of their numerous population, rather than some chemical benefit.
+
+```{r HEM-AAfreqAll,fig.cap="HEM: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=0.65) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+
+
+Leucine and alanine, as in the binding pocket frequencies, are highly frequent in the overall monomer. This may suggest their prevalence in the binding pocket may simply be due to a high population of leucine and alanine in hemoproteins.
+
+However, after these two amino acids the tendencies in frequency for the binding pocket and the monomer at large diverge. Glycine is in high frequency - likely due to more complex geometry e.g. helices outside the binding pocket. In interest of brevity, the remaining frequencies are summed up thus: the same trends that appear to exist in the binding pocket do not appear to exist in the monomer at large. While the order of frequencies in conserved binding pockets can be rationalized, justifying the overall frequencies in monomers invites significant speculation. 
+
+---
+
+# Distributon of Amino Acids by Distance
+
+```{r HEM-AAdist,fig.cap="HEM: Residue Distribution by Distance",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Mean_Distance) -> tmpDist 
+   
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Mean_Distance))),fill=Residue_Code)) + 
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Distribution of Residues by Mean_Distance",sep=''), x="Residue",y="Mean_Distance (Å)") +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
+   print(distanceDist)
+   
+```
+
+
+
+<!-- After an exhaustive exploration of the relative frequencies of amino acids in the binding pocket, Figure \@ref(fig:HEM-AAdist) below is fairly straightfoward. It plots the distribution of amino acids in the binding pocket against their distance from the iron of the heme.  -->
+
+We find that only a few residues come in close contact (<4A) of the heme: cysteine, histidine, and tyrosine. Most residues center their distribution at around 6A, although lysine seems more biased than the remaining residues to be a bit closer. Cysteine and histidine may be at least in part explained to be close due to their use as coordinating residues; histidine, being in greater frequency, may also be this close due to favorable interactions with the porphyrin ring. 
+
+The proximity of tyrosine  however, is more notable. It cannot form coordination bonds with the heme iron, but tyrosine residues do interact with the propionate groups. Tyrosine is also required for redox reactions, and part of the population of tyrosine residues may therefore be in close proximity to heme to facilitate electron transfer in various enzymes [@Poulos2014]. These results suggest that of all potentially interacting polar/positively charged residues, tyrosine is the most likely at least to be in close proximity to the heme molecule. Whether this illustrates an importance of tyrosine to interact with propionate groups, or instead the need for tyrosine to be in close proximity in order to form such interactions, or simply demonstrates involvement in oxidation/reduction reactions, is beyond the scope of this study. 
+
+
+---
+
+class: inverse, center, middle
+
+# Heme-c
+
+---
+
+
+# HEC Amino Acid Frequencies in Binding Pocket
+
+```{r HEC-AAfreq,fig.cap="HEC: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+library(plotly)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g +  gghighlight(Residue %in% c("LEU","ALA","GLY","CYS","LYS"))   #Residue == gx) #dank
+
+```
+
+Leucine and alanine again are highly frequent for HEC, followed by quite similar trends, and therefore HEC will not be as thoroughly discussed as HEM. The most notable differences may be that GLY and CYS are in far higher frequency than in heme. Heme-c almost always forms covalent bonds with cysteine residues, and this may explain that frequency. But as for the high frequency of glycine, the reason for its abundance is unclear, although it seems it may have an important role in heme-c pockets. 
+
+Lys was overlooked in the thesis also - oops lol. But anyway, LYS is a weakly polar, positively charged thing. It also has propionate groups to bind to - it may be that a weaker polar residue is fine when there's a covalent bond, but this is in high frequency. This may indicate a specialized role for Lys in HEC binding. 
+
+---
+
+# Comparison with Background Amino Acid Frequencies
+
+```{r HEC-AAfreqAll,fig.cap="HEC: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=0.65) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+
+Generally, the heme-c monomer AA frequency profile appears similar to the heme-b monomer, with a high frequency of alanine and leucine, followed by a divergence in the frequency of amino acids and therefore a struggle to form any meaningful discussion when it comes to comparing the binding pocket frequencies against background frequencies.  
+
+---
+
+# Distributon of Amino Acids by Distance
+
+```{r HEC-AAdist,fig.cap="HEC: Residue Distribution by Distance",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(plotly)
+
+eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Mean_Distance) -> tmpDist 
+   
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Mean_Distance))),fill=Residue_Code)) + 
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Distribution of Residues by Mean_Distance",sep=''), x="Residue",y="Mean_Distance (Å)") +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
+   print(distanceDist)
+```
+
+The distribution of amino acids over distance from the heme iron for HEC is similar to HEM, with some exceptions. Cys, His, Tyr again are amongst the closest residues to HEC, likely for the same reasons of very strong polar interactions or coordination. Additionally, cysteine forms covalent, thioether bonds with heme-c, providing further justification for its proximity. However, for heme-c, lysine and methionine also are very proximal. The methionine residues are nonpolar, small, neutral; lysine is polar and positively charged; neither of these residues are favored to be included in the heme-b binding environment despite very similar structures. The reason for their inclusion so close to the binding pocket is therefore unclear, but based on their distribution, and lysine being even more close proximity than heme, the results suggest these two residues may have important roles.
+
+---
+
+
+---
+
+class: inverse, center, middle
+
+# Verdoheme
+
+---
+# Amino Acid Frequencies in Binding Pocket
+
+```{r VERDOHEME-AAfreq,fig.cap="VERDOHEME: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(plotly)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+p <- ggplotly(g)
+htmltools::save_html(p, file = "verdoAA.html")
+
+```
+
+<iframe src="verdoAA.html" width="550" height="500"></iframe>
+
+The frequqency of amino acids in the binding pocket for verdoheme is dissimilar from heme-b and heme-c above. This is fairly surprising, given that verdoheme is an intermediate in the binding pocket for heme-b within heme oxygenases. 
+
+<!-- The results discussed below may be attributable to the small sample size of verdoheme PDBs (n=4, combining VEA and VER), and should be appreciated with some skepticism. Nonetheless, the results will be discussed. -->
+
+Leucine and alanine are again most frequent, but after these, results diverge. Tyrosine and arginine are next most frequent - surprising, given that this is still the same pocket that bound heme-b. The data for heme-b indicate more frequent nonpolar residues before tyrosine. Chemically, it may be that as heme-b is oxidized, there is greater need for polar interactions; this would help to explain the high frequency of polar residues, but does not explain the shift in amino acid frequencies within what would be expected to be a similar binding pocket - all verdoheme PDBs in this in study were sourced from heme oxgenase proteins. Some heme oxygenases are included for heme-b, but they are amongst a diverse set of proteins. Therefore, the heme oxygenase environment may simply be host to more polar residues than normal for hemoproteins. This also agrees with tyrosine's inclusion in redox reactions, and it may be favored to be present in heme oxygenase. These results indicate more about the heme oxygenase environment than the verdoheme binding environment - however, these two are inseparable, given verdoheme only appears in heme oxygenase. A dedicated investigation to the heme binding environment for heme oxygenase, may therefore be warranted in future study. 
+
+Glycine is the next most frequent - it is in lower frequency, relatively, for heme-b. As with other heme molecules, it is not clear as to what the role of glycine is in binding verdoheme. 
+
+---
+
+# Comparison with Background Amino Acid Frequencies
+
+```{r VERDOHEME-AAfreqAll,fig.cap="VERDOHEME: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=0.65) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+
+Besides the frequencies of leucine and alanine, which have been found for heme-b and heme-c above to be highly frequent in hemoproteins at large, the frequency profiles for the verdoheme binding environment and monomers is shown to be quite dissimilar, supporting the results for the binding environment as unique, not simply due to background frequency. 
+
+---
+
+# Distributon of Amino Acids by Distance
+
+The low sample size for verdoheme leads here to a poor figure with few residues plotted. This is likely attributable to an insufficient amount of distances and residues to cross-reference against each other, an operation that successfully occurs for all similar graphs. Regardless, the data that are plotted will be discussed.
+
+The highly conserved histidine for hemoproteins is exclusively within 5A for verdoheme. This result again suggests that at least some of the data for verdoheme may be highly biased because of the small sample size - heme-b data included a greater range for histidine. Or, perhaps for heme oxygenases heme is solely present to coordinate the iron atom, leading to all His residues being nearby verdoheme. The close proximity of glycine to verdoheme is also unexpected and unable to be explained without further study. The remainder of the residues plotted appear to follow the trends seen in for the other types of heme, with distance values centered around 6A and unremarkable distributions.
+
+```{r VERDOHEME-AAdist,fig.cap="VERDOHEME: Residue Distribution by Distance",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
+      dplyr::select(Residue_Code,Mean_Distance) -> tmpDist 
+   
+   distanceDist <- ggplot(tmpDist,aes(x=Residue_Code,y=(as.numeric(as.character(Mean_Distance))),fill=Residue_Code)) + 
+      geom_violin(trim=FALSE) +
+      labs(title = paste(activeLigand,": Distribution of Residues by Mean_Distance",sep=''), x="Residue",y="Mean_Distance (Å)") +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
+   print(distanceDist)
+   
+```
+
+
+---
+
+class: inverse, center, middle
+
+# Siroheme
+
+---
+
+# Amino Acid Frequencies in Binding Pocket
+
+```{r SRM-AAfreq0,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+print(g)
+```
+
+---
+
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq1,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("ARG"))
+```
+
+
+Siroheme, with a structure highly dissimilar to the other heme molecules examined, should be expected to have a different amino acid frequency profile -- and indeed we confirm this in our results. 
+
+Nonpolar residues are not the  most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket -- what is striking, however is the extreme preference for arginine; such a profile does not exist for the other types of heme. This can be at least explained; siroheme contains propionate groups that likely still form polar interactions with arginine salt bridges, and the carboxyl groups may also form polar interactions with arginine, therefore highly favoring arginine's presence in the binding pocket.
+
+---
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq2,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("GLN","ASN","CYS","LYS","THR"))
+```
+
+
+
+Arginine is followed by other polar amino acids: glutamine, cystine, lysine, threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that the trend is not interrupted by residues of opposing polarity as for other types of heme. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and ability to form salt bridges that interact with the propionate groups; lysine also has a positive charge and is polar, but does not form salt bridge interactions with the propionate  groups. Cysteine is used to coordinate the iron of siroheme, and while this did not significantly affect the frequency for other heme molecules, it is still possible this increases the value for cysteine for siroheme.
+
+---
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq3,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("GLY"))
+```
+
+---
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq4,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("ALA","PHE","VAL"))
+```
+
+---
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq5,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("ASP"))
+```
+
+---
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq6,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("LEU","MET","ILE","PRO"))
+```
+
+
+---
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq7,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("SER"))
+```
+
+
+---
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq8,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("HIS"))
+```
+
+
+---
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq9,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("TRP"))
+```
+
+
+---
+# Amino Acid Frequencies in Binding Pocket (cont'd)
+
+```{r SRM-AAfreq10,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+library(gghighlight)
+
+g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=1) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency within 7A of ",activeLigand,sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+g + gghighlight(Residue %in% c("TYR","GLU"))
+```
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Volume Data
+
+---
+
+# Heme-b Volume Data
+
+```{r HEM-Volume,fig.cap="HEM: Volume of Binding Pocket",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+#    # ### VOLUME ####
+load("mainData.RData")
+activeLigand = "HEM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = 'volume_data'
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$Distance_Cutoff = '7A'
+   tmp5A$Distance_Cutoff = '5A'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(x="Volume (A³)",y="Frequency",title = paste(activeLigand,": Volume (A³)"))
+   )
+    
+```
+
+---
+
+# Heme-c Volume Data
+
+```{r HEC-Volume,fig.cap="HEC: Volume of Binding Pocket",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+#    # ### VOLUME ####
+load("mainData.RData")
+activeLigand = "HEC"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = 'volume_data'
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$Distance_Cutoff = '7A'
+   tmp5A$Distance_Cutoff = '5A'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(x="Volume (A³)",y="Frequency",title = paste(activeLigand,": Volume (A³)"))
+   )
+    
+```
+---
+
+# Siroheme Volume Data
+
+```{r SRM-Volume,fig.cap="SRM: Volume of Binding Pocket",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+#    # ### VOLUME ####
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = 'volume_data'
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$Distance_Cutoff = '7A'
+   tmp5A$Distance_Cutoff = '5A'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(x="Volume (A³)",y="Frequency",title = paste(activeLigand,": Volume (A³)"))
+   )
+    
+```
+
+---
+
+# Verdoheme Volume Data
+
+
+```{r VERDOHEME-Volume,fig.cap="VERDOHEME: Volume of Binding Pocket",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+
+#    # ### VOLUME ####
+load("mainData.RData")
+activeLigand = "VERDOHEME"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra)
+
+   rm(tmp5A,tmp7A,tmpBoth)
+   colName = 'volume_data'
+   tmp7A <- data.frame(df7A = eval(parse(text=(paste(activeLigand,"_MERGED_DF$",colName,sep="")))))
+   tmp5A <- data.frame(df5A = eval(parse(text=(paste("ls5A$",activeLigand,"_5A_MERGED_DF$",colName,sep="")))))
+   tmp7A$Distance_Cutoff = '7A'
+   tmp5A$Distance_Cutoff = '5A'
+   tmp7A %>%
+      dplyr::rename(
+         df5A = df7A #hopefuly does not append, rm() should take care of that
+      ) -> tmp7A
+   tmpBoth <- rbind(tmp5A,tmp7A)
+   print(
+      ggplot(tmpBoth, aes(x=df5A,fill=Distance_Cutoff,color=)) +
+         geom_histogram(position="identity",alpha=0.4)
+      + labs(x="Volume (A³)",y="Frequency",title = paste(activeLigand,": Volume (A³)"))
+   )
+    
+```
+
+---
+
+class: inverse, center, middle
+
+# Surface Area Data
+
+---
+# Note on Similarity
+
+FIXME Insert the overlay
 
 
 ---
@@ -206,7 +1236,7 @@ htmltools::save_html(p, file = "example-plotly.html")
 <!-- remotes::install_github("yihui/xaringan") -->
 <!-- ``` -->
 
---
+---
 
 You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
 
