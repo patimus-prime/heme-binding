@@ -1337,6 +1337,7 @@ VER
 ---
 # Verdoheme AA Freq
 
+.right-column[
 ```{r VERDOHEME-AAfreq,fig.cap="VERDOHEME: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "VERDOHEME"
@@ -1361,8 +1362,19 @@ htmltools::save_html(p, file = "verdoAA.html")
 ```
 
 <iframe src="verdoAA.html" width="550" height="500"></iframe>
+]
 
-The frequqency of amino acids in the binding pocket for verdoheme is dissimilar from heme-b and heme-c above. This is fairly surprising, given that verdoheme is an intermediate in the binding pocket for heme-b within heme oxygenases. 
+.left-column[
+- Dissimilar to HEM/HEC
+- LYS and ALA
+- TYR and ARG; need more polar to convert?
+- TYR for redox, oxygenase
+- GLY, seems a role?
+- After this ??
+]
+
+???
+The frequency of amino acids in the binding pocket for verdoheme is dissimilar from heme-b and heme-c above. This is fairly surprising, given that verdoheme is an intermediate in the binding pocket for heme-b within heme oxygenases. 
 
 <!-- The results discussed below may be attributable to the small sample size of verdoheme PDBs (n=4, combining VEA and VER), and should be appreciated with some skepticism. Nonetheless, the results will be discussed. -->
 
@@ -1374,6 +1386,7 @@ Glycine is the next most frequent - it is in lower frequency, relatively, for he
 
 # Background Frequencies
 
+.right-column[
 ```{r VERDOHEME-AAfreqAll,fig.cap="VERDOHEME: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "VERDOHEME"
@@ -1393,17 +1406,21 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= 
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
+]
+.left-column[
+- LEU, ALA
+- After that different
+]
 
+???
 Besides the frequencies of leucine and alanine, which have been found for heme-b and heme-c above to be highly frequent in hemoproteins at large, the frequency profiles for the verdoheme binding environment and monomers is shown to be quite dissimilar, supporting the results for the binding environment as unique, not simply due to background frequency. 
 
 ---
 
 # Distributon of Amino Acids by Distance
 
-The low sample size for verdoheme leads here to a poor figure with few residues plotted. This is likely attributable to an insufficient amount of distances and residues to cross-reference against each other, an operation that successfully occurs for all similar graphs. Regardless, the data that are plotted will be discussed.
 
-The highly conserved histidine for hemoproteins is exclusively within 5A for verdoheme. This result again suggests that at least some of the data for verdoheme may be highly biased because of the small sample size - heme-b data included a greater range for histidine. Or, perhaps for heme oxygenases heme is solely present to coordinate the iron atom, leading to all His residues being nearby verdoheme. The close proximity of glycine to verdoheme is also unexpected and unable to be explained without further study. The remainder of the residues plotted appear to follow the trends seen in for the other types of heme, with distance values centered around 6A and unremarkable distributions.
-
+.right-column[
 ```{r VERDOHEME-AAdist,fig.cap="VERDOHEME: Residue Distribution by Distance",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "VERDOHEME"
@@ -1428,7 +1445,18 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
    print(distanceDist)
    
 ```
+]
 
+.left-column[
+- n=4 -> poor graph
+- His coordination only?
+- GLY?
+]
+
+???
+The low sample size for verdoheme leads here to a poor figure with few residues plotted. This is likely attributable to an insufficient amount of distances and residues to cross-reference against each other, an operation that successfully occurs for all similar graphs. Regardless, the data that are plotted will be discussed.
+
+The highly conserved histidine for hemoproteins is exclusively within 5A for verdoheme. This result again suggests that at least some of the data for verdoheme may be highly biased because of the small sample size - heme-b data included a greater range for histidine. Or, perhaps for heme oxygenases heme is solely present to coordinate the iron atom, leading to all His residues being nearby verdoheme. The close proximity of glycine to verdoheme is also unexpected and unable to be explained without further study. The remainder of the residues plotted appear to follow the trends seen in for the other types of heme, with distance values centered around 6A and unremarkable distributions.
 
 ---
 
