@@ -1128,6 +1128,7 @@ While the frequencies of amino acids in the binding pocket have been discussed, 
 
 # Distributon of Amino Acids by Distance
 
+.right-column[
 ```{r HEM-AAdist,fig.cap="HEM: Residue Distribution by Distance",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEM"
@@ -1152,11 +1153,16 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
    print(distanceDist)
    
 ```
+]
+.left-column[
+- CYS, HIS, TYR
+- CYS and HIS coord
+- HIS interactions w. porphyrin
+- TYR: propionates, redox/e- transfer
+- LYS a little closer
+]
 
-
-
-<!-- After an exhaustive exploration of the relative frequencies of amino acids in the binding pocket, Figure \@ref(fig:HEM-AAdist) below is fairly straightfoward. It plots the distribution of amino acids in the binding pocket against their distance from the iron of the heme.  -->
-
+???
 We find that only a few residues come in close contact (<4A) of the heme: cysteine, histidine, and tyrosine. Most residues center their distribution at around 6A, although lysine seems more biased than the remaining residues to be a bit closer. Cysteine and histidine may be at least in part explained to be close due to their use as coordinating residues; histidine, being in greater frequency, may also be this close due to favorable interactions with the porphyrin ring. 
 
 The proximity of tyrosine  however, is more notable. It cannot form coordination bonds with the heme iron, but tyrosine residues do interact with the propionate groups. Tyrosine is also required for redox reactions, and part of the population of tyrosine residues may therefore be in close proximity to heme to facilitate electron transfer in various enzymes [@Poulos2014]. These results suggest that of all potentially interacting polar/positively charged residues, tyrosine is the most likely at least to be in close proximity to the heme molecule. Whether this illustrates an importance of tyrosine to interact with propionate groups, or instead the need for tyrosine to be in close proximity in order to form such interactions, or simply demonstrates involvement in oxidation/reduction reactions, is beyond the scope of this study. 
@@ -1180,6 +1186,7 @@ class: inverse, center, middle
 
 # HEC AA Freq
 
+.right-column[
 ```{r HEC-AAfreq,fig.cap="HEC: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEC"
@@ -1202,15 +1209,30 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
 g +  gghighlight(Residue %in% c("LEU","ALA","GLY","CYS","LYS"))   #Residue == gx) #dank
 
 ```
+]
 
+.left-column[
+- LEU and ALA high freq
+- similar to HEM
+- GLY and CYS higher freq
+- CYS covalent bonds
+- GLY ???
+- LYS overlooked in thesis
+- weakly polar, e+
+- OK in HEC w/ covalent
+- or special!
+]
+
+???
 Leucine and alanine again are highly frequent for HEC, followed by quite similar trends, and therefore HEC will not be as thoroughly discussed as HEM. The most notable differences may be that GLY and CYS are in far higher frequency than in heme. Heme-c almost always forms covalent bonds with cysteine residues, and this may explain that frequency. But as for the high frequency of glycine, the reason for its abundance is unclear, although it seems it may have an important role in heme-c pockets. 
 
 Lys was overlooked in the thesis also - oops lol. But anyway, LYS is a weakly polar, positively charged thing. It also has propionate groups to bind to - it may be that a weaker polar residue is fine when there's a covalent bond, but this is in high frequency. This may indicate a specialized role for Lys in HEC binding. 
 
 ---
 
-# Comparison with Background Amino Acid Frequencies
+# Background Frequencies
 
+.right-column[
 ```{r HEC-AAfreqAll,fig.cap="HEC: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEC"
@@ -1230,13 +1252,22 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= 
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
+]
 
+.left-column[
+- similar to HEM
+- ALA and LEU high freq
+- different after that
+]
+
+???
 Generally, the heme-c monomer AA frequency profile appears similar to the heme-b monomer, with a high frequency of alanine and leucine, followed by a divergence in the frequency of amino acids and therefore a struggle to form any meaningful discussion when it comes to comparing the binding pocket frequencies against background frequencies.  
 
 ---
 
 # Distributon of Amino Acids by Distance
 
+.right-column[
 ```{r HEC-AAdist,fig.cap="HEC: Residue Distribution by Distance",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "HEC"
@@ -1261,10 +1292,20 @@ eval(parse(text=paste(activeLigand,"_distList$mean_distances",sep=""))) %>%
 
    print(distanceDist)
 ```
+]
+.left-column[
+- similar to HEM, but...
+- CYS, HIS, TYR
+- CYS covalent bonds
+- LYS and MET too!
+- WHY?
+- MET small, nonpolar
+- LYS polar, e+
+- important?
+]
 
+???
 The distribution of amino acids over distance from the heme iron for HEC is similar to HEM, with some exceptions. Cys, His, Tyr again are amongst the closest residues to HEC, likely for the same reasons of very strong polar interactions or coordination. Additionally, cysteine forms covalent, thioether bonds with heme-c, providing further justification for its proximity. However, for heme-c, lysine and methionine also are very proximal. The methionine residues are nonpolar, small, neutral; lysine is polar and positively charged; neither of these residues are favored to be included in the heme-b binding environment despite very similar structures. The reason for their inclusion so close to the binding pocket is therefore unclear, but based on their distribution, and lysine being even more close proximity than heme, the results suggest these two residues may have important roles.
-
----
 
 
 ---
@@ -1331,7 +1372,7 @@ Glycine is the next most frequent - it is in lower frequency, relatively, for he
 
 ---
 
-# Comparison with Background Amino Acid Frequencies
+# Background Frequencies
 
 ```{r VERDOHEME-AAfreqAll,fig.cap="VERDOHEME: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1680,7 +1721,33 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
 g + gghighlight(Residue %in% c("TYR","GLU"))
 ```
 
+---
+# Background Frequencies
 
+.right-column[
+```{r SRM-AAfreqAll,fig.cap="SRM: AA Frequency of Monomer",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
+load("mainData.RData")
+activeLigand = "SRM"
+library(dplyr) 
+library(data.table)
+library(tidyr)
+library(ggplot2) 
+library(stringr)
+library(knitr)
+library(clipr) # Linux) sudo apt-get install xclip ... R)install.packages("clipr")  
+source("~/heme-binding/scripts/r/addpdbcol.R")
+library(kableExtra) 
+
+print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= reorder(Residue,-Freq),y=Freq))  +
+      geom_bar(stat="identity",position = "identity", alpha=0.65) +
+      labs(x = "Residue",y="Frequency", title = paste(activeLigand,": AA Frequency of Monomer",sep='')) +
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
+
+```
+]
+
+???
+Compared to the other heme molecules, siroheme's binding pocket amino acid frequencies are even more different than the background frequencies. Arginine is far and away the most frequent amino acid in the binding pocket; leucine is the most populous amino acid in the monomer overall, seeming to follow a trend amongst the hemoproteins examined so far. Again, discussing the remainder of the frequencies of the monomer would be  conjecture, but it is worthwhile to note that the pocket frequencies appear unique against the background.  
 
 
 ---
