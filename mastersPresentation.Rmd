@@ -130,6 +130,33 @@ Physiological Importance:
 ]
 ---
 
+# But the heme! What is heme?
+
+--
+
+There is not just one heme amongst all hemoproteins!
+
+--
+
+But in general, a heme is a coordination complex composed of an iron atom coordinated and bound to a modified porphyrin ring. A porphyrin ring looks like:
+
+--
+
+
+<img src="mastersPresentation_files/Porphin-18e.png" alt="ring" width="300"/>
+
+Macrocycle!
+Highly variable!  
+Image from: https://commons.wikimedia.org/wiki/File:Porphin-18e.png
+---
+
+# Heme-b
+ 
+
+<img src="mastersPresentation_files/HEM.png" alt="SA Fig2" width="300"/>
+
+---
+
 # Heme varies too!
 
 In this study, we examined a few hemes:
@@ -277,18 +304,39 @@ class: inverse, center, middle
 # Methods
 
 ---
+
 # Datasets
-A list of PDBs was assembled that represented either a representative sample of a variety of proteins, with a resolution better than 3A, (HEM and HEC) or, all proteins containing these ligands were downloaded from the PDB (in the case of SRM, VER, VEA). Not all downloaded PDBs were appropriate for this study (e.g. contained superimposed structures) and therefore the amount of PDBs was culled. The datasets are current as of 16 August 2021. 
 
-The size of the datasets actually used in the study were as follows: HEM (n=58), HEC(n=13), SRM (n=9), VER (n=2) and VEA (n=2), which are merged for a combined n=4 for VERDOHEME. 
+- Downloaded a diverse set of proteins for HEM (n=58) and HEC (n=13)
 
-The name of all proteins used in the study and their source organism are provided.
+--
+
+- Or all proteins that were usable, were used, SRM (n=9) and VER (n=2) and VEA (n=2)
+
+--
+
+VEA and VER merged
+
+--
+
+- The datasets are current as of 16 August 2021. 
+
+--
+ 
+- Table of all this in the back if desired
 
 ---
 
+# Pre-processing
 
-## Pre-processing
-Many of the PDBs downloaded were multimeric structures. The number of subunits per protein would skew results and overrepresent especially large multimeric proteins. Therefore, to only allow for one heme binding site per PDB, all downloaded PDBs were converted to monomeric structures. This was achieved by saving a single chain (chain A) of each PDB and eliminating all other chains. The single chain was then saved as a PDB and used in all subsequent scripts. Part of the script is reproduced below:
+Many of the PDBs downloaded were multimeric structures. 
+
+--
+
+So, only grabbed chain A, therefore monomer to represent all PDBs
+
+--
+
 <!-- BTW, need install.packages('reticulate') for this to work -->
 ```{python eval=FALSE}
 from chimera import runCommand as rc
@@ -304,19 +352,30 @@ rc(("write format pdb 0 "+unexpandedResultPath+activeLigand+"/%s")%
 ```
 
 ---
-# Break this shit up
+# Chimera and Selection
 
-UCSF-Chimera was used to generate all data in this study. Multiple Python scripts were employed to achieve a high-throughput process where all monomeric PDBs could be processed in the same session. 
+UCSF-Chimera was used to generate all data in this study:
+- AA Freq
+- V
+- SA, heme and pocket
+- Distances
+- Angles
 
-Chimera was used to predict the following qualities: Volume of the ligand binding pocket, accessible and excluded surface area of the ligand, and accessible and excluded surface area of the binding pocket. These calculations require a population of atoms to be selected for the calculation. 
+--
 
-Atoms were selected within a distance cutoff, to be considered as potentially interacting with the ligand or forming the binding pocket. Distance cutoffs from the ligand of 5A and 7A were chosen; for the predicted qualities, the algorithms were run twice to get values at 5A and 7A. For the distance and angle calculations, only the 7A distance cutoff was used, as the cutoff does not factor into any calculations and may be set during analysis.
+Algorithms discussed in next slides - but the AA selected were:
 
-As these cutoffs are selected arbitrarily, data from the 5A and 7A runs are overlaid in the figures reported in Appendix \@ref(a-figures). Data tables are also provided in Appendix \@ref(a-tables).
+--
+
+- within 5A or 7A for AA freq, V, SA
+
+--
+
+- within 7A for distance and angles (filter/cross-reference later)
 
 ---
 
-#Amino Acid Frequency
+# Amino Acid Frequency
 
 Amino acids within the bounds of the lower and upper distance cutoff were selected and recorded. These were then counted for frequency per residue.
 
@@ -422,7 +481,7 @@ rc("surf sel")
 
 --
 
-1. Select ALL atoms within **residues with at least one atom within 7A of heme**
+1. Select ALL atoms **within 7A of heme**
 
 --
 
@@ -430,7 +489,11 @@ rc("surf sel")
 
 --
 
-1. For distance used to filter: assign mean distance to each residue: Average distance of all atoms within each residue is the assigned distance per residue
+1. Assign mean distance to each residue: Average distance of all atoms within each residue is the assigned distance per residue *(introduces bias for residues ~7A)*
+
+--
+
+1. Introduces bias for residues on the fringes, but was, at least initially, the preferred method in order to avoid inclusion of very far off residues and bias results. But this can be changed easily and does not affect the rest of the code; the most interesting results are also unaffected. **za -> zr in code below**
 
 --
 
@@ -581,6 +644,13 @@ class: inverse, center, middle
 --
 
 # Heme-b
+
+---
+
+# Heme-b (HEM)
+
+<img src="mastersPresentation_files/HEM.png" alt="SA Fig3" width="300"/>
+
 
 ---
 # Note on Similarity 5A and 7A
@@ -1034,6 +1104,13 @@ class: inverse, center, middle
 
 ---
 
+# Heme-c (HEC)
+
+
+<img src="mastersPresentation_files/HEC.png" alt="SA Fig3" width="300"/>
+
+
+---
 
 # HEC AA Freq
 
@@ -1129,6 +1206,26 @@ The distribution of amino acids over distance from the heme iron for HEC is simi
 class: inverse, center, middle
 
 # Verdoheme
+
+---
+
+# Verdoheme (VER and VEA)
+
+Again, in two different stages of degradation; and n=4 so these two are merged.
+
+.pull-left[
+
+VEA
+
+<img src="mastersPresentation_files/VEA.png" alt="SA Fig3" width="300"/>
+]
+.pull-right[
+
+VER
+
+<img src="mastersPresentation_files/VER.png" alt="SA Fig3" width="300"/>
+
+]
 
 ---
 # Verdoheme AA Freq
@@ -1234,6 +1331,12 @@ class: inverse, center, middle
 
 ---
 
+# Siroheme (SRM)
+
+
+<img src="mastersPresentation_files/SRM.png" alt="SA Fig3" width="300"/>
+
+---
 # Siroheme AA Freq
 
 ```{r SRM-AAfreq0,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
@@ -1796,29 +1899,55 @@ class: inverse, center, middle
 
 # Conclusion
 
-1. Big ass study with many hemes and high throughput
+--
 
-1. we examined multiple factors that could affect binding
+1. Conducted a structural analysis of multiple hemes and their hemoproteins
 
-1. we find that I'm tired as fuck and going to bed. But everryyything is ready.
+--
 
-1. You can just reorganize words tomorrow, not so much work. talk to yourself and to nat later
+1. Examined:
+- AA Freq
+- V
+- SA
+- AA Distances
+- AA Angles, planar and CAB
 
+---
 
-A knowledge gap in the binding environment for heme exists in the present literature. A high-throughput framework employing UCSF Chimera  was constructed to process diverse sets of hemoproteins and output information about their binding pockets: amino acid frequencies and distances from heme, volume, surface area, angles. Data was gathered and predicted from representative and varied datasets for heme-b, heme-c, verdoheme, and siroheme, and their respective hemoproteins. R was used to analyze all data.
+# Conclusion (cont'd)
 
-The results of this study suggest that binding pockets for hemoproteins have some requirements for binding that may have been overlooked to date. The data and their trends observed in this study demonstrate several phenomena. 
+We find: 
 
-First, the heme binding environments for heme-b, heme-c, and verdoheme contain high populations of nonpolar amino acids, suggesting nonpolar interactions may be of greater importance than previously thought to providing the necessary interactions to bind heme. The binding environment for siroheme, by contrast, is shown to be extremely enriched with polar amino acids, which is not very surprising; but this binding environment also still contains many nonpolar amino acids, reinforcing the idea that the polar interactions for all heme molecules, while necessary, may be insufficient for heme binding.
+--
 
-Second, most of the volume data for the binding pockets of all heme molecules centers around a value of 1200 A³. Surface areas of heme-b and verdoheme binding pockets are similar, approximately 10000 A², the surface area for heme-c is less, approximately 7500 A², and for siroheme is approximately 21000 A². These values may be useful in the design of artifical metalloenzymes.
+1. Heme-b, heme-c, verdoheme have very high populations of nonpolar amino acids
 
+--
+
+1. Siroheme has A LOT of polar amino acids; but also a lot of nonpolar amino acids!
+
+--
+
+1. Some values for V and SA that may be useful for hemoprotein design
+
+--
+
+1. Surface area of pockets varies by type of heme bound (more SA for SRM, less for HEM)
+
+--
+
+1. Angular data is generated but not useful here
+
+--
+
+1. Results may be useful for hemoprotein design and understanding
+
+--
+
+1.  Framework developed here is highly adaptable and may be useful!
+
+???
 Additionally, the seeming conservation of the volume size but the variety in pocket surface areas demonstrates that while the heme molecules may be of similar size and, besides attached groups, similar structure, the attached groups will significantly affect what interactions occur in the binding pockets, and therefore the shape and exposure to solvent in the binding pockets. Siroheme is strongly polar and its binding pocket has a large surface area and is therefore highly solvent exposed, as compared to heme-b which has more nonpolar groups that must be buried and therefore requiring a smaller surface area.
-
-Finally, angular data were generated; but the phenomena observed, such as some residues having tight ranges of angles in relation to heme or the heme iron,  cannot be interpreted as useful results, except perhaps for some protein engineering efforts that may have interest in the range or distribution of possible angles for a specific residue.
-
-These results may be useful for the rational design of hemoproteins, with the importance of nonpolar interactions in particular likely of great interest. The framework constructed for this study can be applied to any list of PDBs and their respective ligands, thereby facilitating similar research for other proteins.
-
 ---
 
 <!-- # 6. 'NoCite' function to include references in bib that  -->
