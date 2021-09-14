@@ -3,7 +3,7 @@ title: "Structural Analysis of Hemprotein Binding Sites"
 subtitle: "or: How I Spent My Summer"
 author: "Patrick Finnerty"
 institute: "Universtat Autònoma de Barcelona"
-date: "2021/09/11 (updated: `r Sys.Date()`)"
+date: "2021/09/15 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     #chakra: libs/remark-latest.min.js #dont fuckin work
@@ -12,7 +12,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-
+      countdown: 60000 #countdown for 1 minute on each slide, help pace
 ---
 
 ```{r, load_refs, include=FALSE, cache=FALSE}
@@ -36,7 +36,6 @@ load("mainData.RData")
 
 Introduction
 - What's a hemoprotein? What's heme? 
-<!-- `r Citet(myBib, "Sanner1996")` -->
 --
 
 - How hemoproteins are used, COULD be used, and why they aren't (YET!)
@@ -64,18 +63,14 @@ class: inverse, center, middle
 
 # Introduction
 
----
-
-# Heme
-
-Hemoprotein = Any protein containing a heme, used for its chemistry
-
-Heme = A group of 
-- something
-  - another something
 
 ---
 # Hemoproteins
+
+--
+
+Hemoprotein = Any protein containing a heme, used for its chemistry
+--
 
 Hemoproteins encompass a broad range of enzyzmes:
 --
@@ -104,34 +99,182 @@ Cytochrome P450s
 
 # Cytochrome P450s
 
+.pull-left[
 Physiological Importance:
 - Hormone degradation and synthesis
 - Degrade the majority of all drugs! (`r Citet(myBib,"Poulos2014")`)
+]
 
-<!-- `r Citet(myBib, "Sanner1996")` -->
+--
 
+.pull-right[
 **Oxidize**:
 - Carbohydrates
 - Steroids
 - Fatty Acids
+]
 
 --
 
-And therefore, can be applied to many other oxidation reactions with stable substrates!!!
+.pull-left[
+- Industrial Biocatalysis e.g. pharmaceutical production (`r Citet(myBib, "Du2017")`,`r Citet(myBib, "Lalonde2016")`)
+- Bioremediation of CONTAMINACION (`r Citet(myBib, "Girvan2016")`,`r Citet(myBib, "Li2020")`)
+
+... The issue is efficiency. 
+]
+
+.pull-right[
+
+<img src="mastersPresentation_files/bioreactor.jpg" alt="" width="200"/>
+
+]
+---
+
+# Heme varies too!
+
+In this study, we examined a few hemes:
+
+--
+
+.pull-left[
+- Heme-b
+  - Most common
+  - Porphyrin + 2 propionates
+  - Propionates interact with Arg salt bridges
+- Heme-c
+  - Cytochromes-c
+  - Porphyrin + 2 propionates + 2 vinyl groups
+  - Vinyl groups covalently bind to hemoproteins via thioether bonds w. Cys
+  - Electron carrier (maybe bc. better e- potential range) (`r Citet(myBib, "Bowman2008")`,`r Citet(myBib, "Kleingardner2015")`)
+]
+--
+.pull-right[
+<img src="0_Thesis/figures/HEM.png" alt="" width="200"/>
+<img src="0_Thesis/figures/HEC.png" alt="" width="200"/>
+]
+
+---
+
+# Heme varies too!
+
+In this study, we examined a few hemes:
+
+.pull-left[
+- Verdoheme
+  - Only in heme oxygenase
+  - An intermediate of the degradation process
+  - Heme-b + propionates removed + O insertion
+- Siroheme
+  - Only in nitrite/sulfite reductase
+  - Very structurally different
+  - Many propionate + carboxyl groups
+  - Effectively *very* polar
+  - Channels LOTS of e- 
+]
+
+--
+
+.pull-right[
+<img src="0_Thesis/figures/VER.png" alt="" width="250"/>
+<img src="0_Thesis/figures/SRM.png" alt="" width="250"/>
+]
+
+---
+
+# How to Improve Efficiency?
+
+Well:
+--
+
+- <input type="checkbox" checked> Coordination in Binding Pocket</input>
+--
+
+- <input type="checkbox" checked> Bonding to Residues in Binding Pocket</input>
+--
+
+- <input type="checkbox" checked> Purpose of Heme in Reactions </input>
+--
+
+- <input type="checkbox" unchecked> Binding Pocket/Environment</input>
+--
+
+- <input type="checkbox" unchecked> Variability of Environments</input>
 
 
-carbohydrates, steroids, fatty acids; catalyzing hormone degradation and synthesis; and degrading the majority of drugs[@Poulos2014]. Due to their extraordinary utility and range of reactions, cytochrome p450s are of great interest in the protein engineering field. Cytochrome P450s have the potential to be used  in industrial biocatalysis, e.g. in pharmaceutical production, bioremediation of environmental pollutants[@Du2017; @Lalonde2016]. The limiting factor preventing its deployment has been the struggle to increase enzymatic efficiency and therefore yield of processes employing the enzyme[@Girvan2016; @Li2020]. 
+---
+# Prior Work
+
+Structural analysis in 2011 (`r Citet(myBib, "Li2011")`)
+
+--
+
+- 125 Hemoprotein chains (not 125 proteins)
+
+- heme-b and heme-c
+
+--
+
+They found or suggested:
+  
+- hemoproteins undergo small conformational changes during binding
+
+--
+  
+- ligand-containing proteins may therefore suitable for prediction/design
+
+--
+  
+- CYS, HIS, PHE, MET, TYR most abudant residues
+  
+--
+
+Study in 2011
+
+--
+
+Focus on conformational differences induced by *binding to the environment*
+
+---
+
+# All caught up!
+
+We want to better understand hemoproteins... 
+--
+at least, to design better hemoproteins to implement better industrial processes, new chemical processes.
+
+--
+
+.pull-left[
+
+Collect data on the binding environment:
+
+- Frequency of amino acids in binding pocket
+- Distances of amino acids in binding pocket
+- Volume of the binding pocket
+- Surface Areas of binding pocket and hemes
+- Angles, planar and CA-CB-Fe, (not discussed)
+]
+
+--
+
+.pull-right[
+
+Variation by type of heme:
+- Heme-b
+- Heme-c
+- Verdoheme
+- Siroheme
+
+]
+
+Hopefully useful for design, and hopefully informative.
+
 
 ---
 
 class: inverse, center, middle
 
 # Methods
-
----
-# #CiteMe
-
-All scripts (as well as raw data, results, and this document) are available on GitHub, https://github.com/patimus-prime/heme-binding.
 
 ---
 # Datasets
@@ -269,6 +412,7 @@ rc("surf sel")
 .pull-right[
 
 <img src="mastersPresentation_files/imageofSA.png" alt="SA Fig2" width="300"/>
+<img src="mastersPresentation_files/HECpocket.png" alt="SA Fig3" width="300"/>
 
 ]
 
@@ -380,7 +524,9 @@ head(HEM_maxVolDf)
 ---
 
 # High Throughput Implementation
+
 --
+
 Inside settings.py:
 ```{python eval=FALSE}
 # specify ligands of interest in pdb's, likely also construct file structure
@@ -417,6 +563,11 @@ for(ligand in 1:(length(ligandList)))
    assign(paste(activeLigand,"_distList",sep=""),distancesList)
 }
 ```
+
+
+
+
+
 ---
 
 class: inverse, center, middle
@@ -884,7 +1035,7 @@ class: inverse, center, middle
 ---
 
 
-# HEC Amino Acid Frequencies in Binding Pocket
+# HEC AA Freq
 
 ```{r HEC-AAfreq,fig.cap="HEC: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -980,7 +1131,7 @@ class: inverse, center, middle
 # Verdoheme
 
 ---
-# Amino Acid Frequencies in Binding Pocket
+# Verdoheme AA Freq
 
 ```{r VERDOHEME-AAfreq,fig.cap="VERDOHEME: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1083,7 +1234,7 @@ class: inverse, center, middle
 
 ---
 
-# Amino Acid Frequencies in Binding Pocket
+# Siroheme AA Freq
 
 ```{r SRM-AAfreq0,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1108,7 +1259,7 @@ print(g)
 
 ---
 
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq1,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1137,7 +1288,7 @@ Siroheme, with a structure highly dissimilar to the other heme molecules examine
 Nonpolar residues are not the  most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket -- what is striking, however is the extreme preference for arginine; such a profile does not exist for the other types of heme. This can be at least explained; siroheme contains propionate groups that likely still form polar interactions with arginine salt bridges, and the carboxyl groups may also form polar interactions with arginine, therefore highly favoring arginine's presence in the binding pocket.
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq2,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1165,7 +1316,7 @@ g + gghighlight(Residue %in% c("GLN","ASN","CYS","LYS","THR"))
 Arginine is followed by other polar amino acids: glutamine, cystine, lysine, threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that the trend is not interrupted by residues of opposing polarity as for other types of heme. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and ability to form salt bridges that interact with the propionate groups; lysine also has a positive charge and is polar, but does not form salt bridge interactions with the propionate  groups. Cysteine is used to coordinate the iron of siroheme, and while this did not significantly affect the frequency for other heme molecules, it is still possible this increases the value for cysteine for siroheme.
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq3,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1189,7 +1340,7 @@ g + gghighlight(Residue %in% c("GLY"))
 ```
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq4,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1213,7 +1364,7 @@ g + gghighlight(Residue %in% c("ALA","PHE","VAL"))
 ```
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq5,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1237,7 +1388,7 @@ g + gghighlight(Residue %in% c("ASP"))
 ```
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq6,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1262,7 +1413,7 @@ g + gghighlight(Residue %in% c("LEU","MET","ILE","PRO"))
 
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq7,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1287,7 +1438,7 @@ g + gghighlight(Residue %in% c("SER"))
 
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq8,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1312,7 +1463,7 @@ g + gghighlight(Residue %in% c("HIS"))
 
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq9,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1337,7 +1488,7 @@ g + gghighlight(Residue %in% c("TRP"))
 
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ```{r SRM-AAfreq10,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
@@ -1637,6 +1788,39 @@ library(kableExtra)
 
 ---
 
+class: inverse, center, middle
+
+# Conclusion
+
+---
+
+# Conclusion
+
+1. Big ass study with many hemes and high throughput
+
+1. we examined multiple factors that could affect binding
+
+1. we find that I'm tired as fuck and going to bed. But everryyything is ready.
+
+1. You can just reorganize words tomorrow, not so much work. talk to yourself and to nat later
+
+
+A knowledge gap in the binding environment for heme exists in the present literature. A high-throughput framework employing UCSF Chimera  was constructed to process diverse sets of hemoproteins and output information about their binding pockets: amino acid frequencies and distances from heme, volume, surface area, angles. Data was gathered and predicted from representative and varied datasets for heme-b, heme-c, verdoheme, and siroheme, and their respective hemoproteins. R was used to analyze all data.
+
+The results of this study suggest that binding pockets for hemoproteins have some requirements for binding that may have been overlooked to date. The data and their trends observed in this study demonstrate several phenomena. 
+
+First, the heme binding environments for heme-b, heme-c, and verdoheme contain high populations of nonpolar amino acids, suggesting nonpolar interactions may be of greater importance than previously thought to providing the necessary interactions to bind heme. The binding environment for siroheme, by contrast, is shown to be extremely enriched with polar amino acids, which is not very surprising; but this binding environment also still contains many nonpolar amino acids, reinforcing the idea that the polar interactions for all heme molecules, while necessary, may be insufficient for heme binding.
+
+Second, most of the volume data for the binding pockets of all heme molecules centers around a value of 1200 A³. Surface areas of heme-b and verdoheme binding pockets are similar, approximately 10000 A², the surface area for heme-c is less, approximately 7500 A², and for siroheme is approximately 21000 A². These values may be useful in the design of artifical metalloenzymes.
+
+Additionally, the seeming conservation of the volume size but the variety in pocket surface areas demonstrates that while the heme molecules may be of similar size and, besides attached groups, similar structure, the attached groups will significantly affect what interactions occur in the binding pockets, and therefore the shape and exposure to solvent in the binding pockets. Siroheme is strongly polar and its binding pocket has a large surface area and is therefore highly solvent exposed, as compared to heme-b which has more nonpolar groups that must be buried and therefore requiring a smaller surface area.
+
+Finally, angular data were generated; but the phenomena observed, such as some residues having tight ranges of angles in relation to heme or the heme iron,  cannot be interpreted as useful results, except perhaps for some protein engineering efforts that may have interest in the range or distribution of possible angles for a specific residue.
+
+These results may be useful for the rational design of hemoproteins, with the importance of nonpolar interactions in particular likely of great interest. The framework constructed for this study can be applied to any list of PDBs and their respective ligands, thereby facilitating similar research for other proteins.
+
+---
+
 <!-- # 6. 'NoCite' function to include references in bib that  -->
 <!-- #    don't appear in text -->
 <!-- NoCite(bib, c("knuth:ct:a", "aristotle:poetics", "herrmann")) -->
@@ -1648,6 +1832,55 @@ PrintBibliography(myBib)
 ```
 
 
+---
+# #CiteMe
+
+All scripts (as well as raw data, results, and this document) are available on GitHub, https://github.com/patimus-prime/heme-binding.
+
+
+---
+
+# Acknowledgements
+
+In case anyone reads this in the future, some context may be appreciated: I attended and (hopefully) completed this Master's program during the COVID-19 global pandemic from September 2020 to September 2021.
+
+Thanks to everyone who taught me something during this program.
+
+Thanks to those in the research group who helped me understand what a heme is and got me this far; they tolerated and attempted to alleviate my ignorance: Laura Tiessler Sala, José Emilio Sánchez Aparicio and JeanDi.
+
+Thanks to the UAB for having me; and thanks to our professors for providing a mercilessly thorough education.
+
+Thanks to Spain, and Catalonia, for even allowing me into the country, and, I emphasize, thanks for implementing public health measures.
+
+Thanks to my classmates for sharing in the suffering.
+
+Thanks to my family and friends for supporting me, often over the phone, throughout this program and interesting time.
+
+Thanks to whatever media I consumed and the creators of that media that facilitated the survival of my sanity through the pandemic.
+
+---
+
+class: middle, center
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=c-Pv55i2bc0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c-Pv55i2bc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/c-Pv55i2bc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+--
+
+"Last but not least, I wanna thank me. I wanna thank me for believing in me. I wanna thank me for doing all this hard work. I wanna thank me for having no days off. I wanna thank me for, for never quitting. I wanna thank me for always being a giver, and trying to give more than I receive. I wanna thank me for trying to do more right than wrong. I wanna thank me for just being me at all times."
+  -- Calvin Cordozar Broadus Jr. 
+--
+"Snoop Dogg"
+
+---
+
+class: inverse, center, middle
+
+# Fin
+
 
 ---
 
@@ -1655,6 +1888,13 @@ class: inverse, center, middle
 
 # In Case of Emergency
 
+---
+
+<iframe src="https://open.spotify.com/embed/track/55VcwDNsQZcW8YBDudv9uS" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+--
+
+<iframe src="https://open.spotify.com/embed/track/55VcwDNsQZcW8YBDudv9uS" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 ---
 # HEC AA Overlay
@@ -1941,36 +2181,36 @@ DT::datatable(HEM_p1DF,fillContainer = FALSE, options = list(pageLength = 5))
 
 ---
 # Source Organism Data HEC
-```{r molOrgDThec}
+```{r eval=require('DT'), tidy=FALSE, echo=FALSE}
 
-DT::datatable(HEC_p1DF)
+DT::datatable(HEC_p1DF,fillContainer = FALSE, options = list(pageLength = 5))
 
 ```
 
 
 ---
 # Source Organism Data SRM
-```{r molOrgDTsrm}
-#load("mainData.RData")
-DT::datatable(SRM_p1DF)
+```{r eval=require('DT'), tidy=FALSE, echo=FALSE}
+
+DT::datatable(SRM_p1DF,fillContainer = FALSE, options = list(pageLength = 5))
 
 ```
 
 
 ---
 # Source Organism Data verdoheme
-```{r molOrgDTver}
+```{r eval=require('DT'), tidy=FALSE, echo=FALSE}
 
-DT::datatable(VERDOHEME_p1DF)
+DT::datatable(VERDOHEME_p1DF,fillContainer = FALSE, options = list(pageLength = 5))
 
 ```
 
 
 ---
 # Big Data HEM
-```{r bigly}
+```{r eval=require('DT'), tidy=FALSE, echo=FALSE}
 
-DT::datatable(HEM_p2DF)
+DT::datatable(HEM_p2DF,fillContainer = FALSE, options = list(pageLength = 5))
 
 ```
 
@@ -2012,7 +2252,9 @@ htmltools::save_html(p, file = "example-plotly.html")
 knitr::include_graphics("0_Thesis/figures/1B5M.axes.png")
 ```
 
---
+---
+
+# Planar Angle cont'd
 
 The code is ghastly!
 

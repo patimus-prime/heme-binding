@@ -25,7 +25,7 @@ class: center, middle, inverse, title-slide
 ## or: How I Spent My Summer
 ### Patrick Finnerty
 ### Universtat Autònoma de Barcelona
-### 2021/09/11 (updated: 2021-09-14)
+### 2021/09/15 (updated: 2021-09-14)
 
 ---
 
@@ -39,7 +39,6 @@ class: center, middle, inverse, title-slide
 
 Introduction
 - What's a hemoprotein? What's heme? 
-&lt;!-- &lt;a name=cite-Sanner1996&gt;&lt;/a&gt;[Sanner, Olson, and Spehner [1]](#bib-Sanner1996) --&gt;
 --
 
 - How hemoproteins are used, COULD be used, and why they aren't (YET!)
@@ -67,18 +66,14 @@ class: inverse, center, middle
 
 # Introduction
 
----
-
-# Heme
-
-Hemoprotein = Any protein containing a heme, used for its chemistry
-
-Heme = A group of 
-- something
-  - another something
 
 ---
 # Hemoproteins
+
+--
+
+Hemoprotein = Any protein containing a heme, used for its chemistry
+--
 
 Hemoproteins encompass a broad range of enzyzmes:
 --
@@ -107,34 +102,182 @@ Cytochrome P450s
 
 # Cytochrome P450s
 
+.pull-left[
 Physiological Importance:
 - Hormone degradation and synthesis
-- Degrade the majority of all drugs! (&lt;a name=cite-Poulos2014&gt;&lt;/a&gt;[Poulos [2]](#bib-Poulos2014))
+- Degrade the majority of all drugs! (&lt;a name=cite-Poulos2014&gt;&lt;/a&gt;[Poulos [1]](#bib-Poulos2014))
+]
 
-&lt;!-- [Sanner, Olson, and Spehner [1]](#bib-Sanner1996) --&gt;
+--
 
+.pull-right[
 **Oxidize**:
 - Carbohydrates
 - Steroids
 - Fatty Acids
+]
 
 --
 
-And therefore, can be applied to many other oxidation reactions with stable substrates!!!
+.pull-left[
+- Industrial Biocatalysis e.g. pharmaceutical production (&lt;a name=cite-Du2017&gt;&lt;/a&gt;[Du, Dong, Zhang, Jiang, Chen, Yao, Wang, Wan, Liu, Wangi, Huang, Cui, Feng, Liu, and Li [2]](#bib-Du2017),&lt;a name=cite-Lalonde2016&gt;&lt;/a&gt;[Lalonde [3]](#bib-Lalonde2016))
+- Bioremediation of CONTAMINACION (&lt;a name=cite-Girvan2016&gt;&lt;/a&gt;[Girvan and Munro [4]](#bib-Girvan2016),&lt;a name=cite-Li2020&gt;&lt;/a&gt;[Li, Jiang, Guengerich, Ma, Li, and Zhang [5]](#bib-Li2020))
+
+... The issue is efficiency. 
+]
+
+.pull-right[
+
+&lt;img src="mastersPresentation_files/bioreactor.jpg" alt="" width="200"/&gt;
+
+]
+---
+
+# Heme varies too!
+
+In this study, we examined a few hemes:
+
+--
+
+.pull-left[
+- Heme-b
+  - Most common
+  - Porphyrin + 2 propionates
+  - Propionates interact with Arg salt bridges
+- Heme-c
+  - Cytochromes-c
+  - Porphyrin + 2 propionates + 2 vinyl groups
+  - Vinyl groups covalently bind to hemoproteins via thioether bonds w. Cys
+  - Electron carrier (maybe bc. better e- potential range) (&lt;a name=cite-Bowman2008&gt;&lt;/a&gt;[Bowman and Bren [6]](#bib-Bowman2008),&lt;a name=cite-Kleingardner2015&gt;&lt;/a&gt;[Kleingardner and Bren [7]](#bib-Kleingardner2015))
+]
+--
+.pull-right[
+&lt;img src="0_Thesis/figures/HEM.png" alt="" width="200"/&gt;
+&lt;img src="0_Thesis/figures/HEC.png" alt="" width="200"/&gt;
+]
+
+---
+
+# Heme varies too!
+
+In this study, we examined a few hemes:
+
+.pull-left[
+- Verdoheme
+  - Only in heme oxygenase
+  - An intermediate of the degradation process
+  - Heme-b + propionates removed + O insertion
+- Siroheme
+  - Only in nitrite/sulfite reductase
+  - Very structurally different
+  - Many propionate + carboxyl groups
+  - Effectively *very* polar
+  - Channels LOTS of e- 
+]
+
+--
+
+.pull-right[
+&lt;img src="0_Thesis/figures/VER.png" alt="" width="250"/&gt;
+&lt;img src="0_Thesis/figures/SRM.png" alt="" width="250"/&gt;
+]
+
+---
+
+# How to Improve Efficiency?
+
+Well:
+--
+
+- &lt;input type="checkbox" checked&gt; Coordination in Binding Pocket&lt;/input&gt;
+--
+
+- &lt;input type="checkbox" checked&gt; Bonding to Residues in Binding Pocket&lt;/input&gt;
+--
+
+- &lt;input type="checkbox" checked&gt; Purpose of Heme in Reactions &lt;/input&gt;
+--
+
+- &lt;input type="checkbox" unchecked&gt; Binding Pocket/Environment&lt;/input&gt;
+--
+
+- &lt;input type="checkbox" unchecked&gt; Variability of Environments&lt;/input&gt;
 
 
-carbohydrates, steroids, fatty acids; catalyzing hormone degradation and synthesis; and degrading the majority of drugs[@Poulos2014]. Due to their extraordinary utility and range of reactions, cytochrome p450s are of great interest in the protein engineering field. Cytochrome P450s have the potential to be used  in industrial biocatalysis, e.g. in pharmaceutical production, bioremediation of environmental pollutants[@Du2017; @Lalonde2016]. The limiting factor preventing its deployment has been the struggle to increase enzymatic efficiency and therefore yield of processes employing the enzyme[@Girvan2016; @Li2020]. 
+---
+# Prior Work
+
+Structural analysis in 2011 (&lt;a name=cite-Li2011&gt;&lt;/a&gt;[Li, Bonkovsky, and Guo [8]](#bib-Li2011))
+
+--
+
+- 125 Hemoprotein chains (not 125 proteins)
+
+- heme-b and heme-c
+
+--
+
+They found or suggested:
+  
+- hemoproteins undergo small conformational changes during binding
+
+--
+  
+- ligand-containing proteins may therefore suitable for prediction/design
+
+--
+  
+- CYS, HIS, PHE, MET, TYR most abudant residues
+  
+--
+
+Study in 2011
+
+--
+
+Focus on conformational differences induced by *binding to the environment*
+
+---
+
+# All caught up!
+
+We want to better understand hemoproteins... 
+--
+at least, to design better hemoproteins to implement better industrial processes, new chemical processes.
+
+--
+
+.pull-left[
+
+Collect data on the binding environment:
+
+- Frequency of amino acids in binding pocket
+- Distances of amino acids in binding pocket
+- Volume of the binding pocket
+- Surface Areas of binding pocket and hemes
+- Angles, planar and CA-CB-Fe, (not discussed)
+]
+
+--
+
+.pull-right[
+
+Variation by type of heme:
+- Heme-b
+- Heme-c
+- Verdoheme
+- Siroheme
+
+]
+
+Hopefully useful for design, and hopefully informative.
+
 
 ---
 
 class: inverse, center, middle
 
 # Methods
-
----
-# #CiteMe
-
-All scripts (as well as raw data, results, and this document) are available on GitHub, https://github.com/patimus-prime/heme-binding.
 
 ---
 # Datasets
@@ -205,7 +348,7 @@ LYS 454.A
 
 # Volume Method
 
-Volume of the binding pocket was predicted via Surfnet (&lt;a name=cite-Laskowski1995&gt;&lt;/a&gt;[Laskowski [3]](#bib-Laskowski1995)).
+Volume of the binding pocket was predicted via Surfnet (&lt;a name=cite-Laskowski1995&gt;&lt;/a&gt;[Laskowski [9]](#bib-Laskowski1995)).
 
 
 ```python
@@ -250,7 +393,7 @@ Bad run
 
 &lt;!-- .center[![description of the image](0_Thesis/figures/SAfig.png)] --&gt;
 Solvent excluded and solvent accessible surface areas of both the ligand and the binding pocket were calculated using Chimera's "surf" algorithm, which itself is an implementation of a program called MSMS 
-([Sanner, Olson, and Spehner [1]](#bib-Sanner1996)). 
+(&lt;a name=cite-Sanner1996&gt;&lt;/a&gt;[Sanner, Olson, and Spehner [10]](#bib-Sanner1996)). 
 
 
 .center[
@@ -276,6 +419,7 @@ rc("surf sel")
 .pull-right[
 
 &lt;img src="mastersPresentation_files/imageofSA.png" alt="SA Fig2" width="300"/&gt;
+&lt;img src="mastersPresentation_files/HECpocket.png" alt="SA Fig3" width="300"/&gt;
 
 ]
 
@@ -414,7 +558,9 @@ head(HEM_maxVolDf)
 ---
 
 # High Throughput Implementation
+
 --
+
 Inside settings.py:
 
 ```python
@@ -454,6 +600,11 @@ for(ligand in 1:(length(ligandList)))
    assign(paste(activeLigand,"_distList",sep=""),distancesList)
 }
 ```
+
+
+
+
+
 ---
 
 class: inverse, center, middle
@@ -626,7 +777,7 @@ class: inverse, center, middle
 ---
 
 
-# HEC Amino Acid Frequencies in Binding Pocket
+# HEC AA Freq
 
 ![HEC: AA Frequency within 7A](mastersPresentation_files/figure-html/HEC-AAfreq-1.png)
 
@@ -660,7 +811,7 @@ class: inverse, center, middle
 # Verdoheme
 
 ---
-# Amino Acid Frequencies in Binding Pocket
+# Verdoheme AA Freq
 
 
 
@@ -701,13 +852,13 @@ class: inverse, center, middle
 
 ---
 
-# Amino Acid Frequencies in Binding Pocket
+# Siroheme AA Freq
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq0-1.png)
 
 ---
 
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq1-1.png)
 
@@ -717,7 +868,7 @@ Siroheme, with a structure highly dissimilar to the other heme molecules examine
 Nonpolar residues are not the  most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket -- what is striking, however is the extreme preference for arginine; such a profile does not exist for the other types of heme. This can be at least explained; siroheme contains propionate groups that likely still form polar interactions with arginine salt bridges, and the carboxyl groups may also form polar interactions with arginine, therefore highly favoring arginine's presence in the binding pocket.
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq2-1.png)
 
@@ -726,46 +877,46 @@ Nonpolar residues are not the  most abundant in the siroheme binding pocket. In 
 Arginine is followed by other polar amino acids: glutamine, cystine, lysine, threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that the trend is not interrupted by residues of opposing polarity as for other types of heme. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and ability to form salt bridges that interact with the propionate groups; lysine also has a positive charge and is polar, but does not form salt bridge interactions with the propionate  groups. Cysteine is used to coordinate the iron of siroheme, and while this did not significantly affect the frequency for other heme molecules, it is still possible this increases the value for cysteine for siroheme.
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq3-1.png)
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq4-1.png)
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq5-1.png)
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq6-1.png)
 
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq7-1.png)
 
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq8-1.png)
 
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq9-1.png)
 
 
 ---
-# Amino Acid Frequencies in Binding Pocket (cont'd)
+# Siroheme AA Freq (cont'd)
 
 ![SRM: AA Frequency within 7A](mastersPresentation_files/figure-html/SRM-AAfreq10-1.png)
 
@@ -851,11 +1002,58 @@ class: inverse, center, middle
 
 # References
 
+&lt;a name=bib-Bowman2008&gt;&lt;/a&gt;[Bowman, S. E. and K. L.
+Bren](#cite-Bowman2008) (2008). "The chemistry and biochemistry of heme
+c: Functional bases for covalent attachment". In: _Natural Product
+Reports_ 25.6, pp. 1118-1130. ISSN: 02650568. DOI:
+[10.1039/b717196j](https://doi.org/10.1039%2Fb717196j).
+
+&lt;a name=bib-Du2017&gt;&lt;/a&gt;[Du, L., S. Dong, X. Zhang, et
+al.](#cite-Du2017) (2017). "Selective oxidation of aliphatic C-H bonds
+in alkylphenols by a chemomimetic biocatalytic system". In:
+_Proceedings of the National Academy of Sciences of the United States
+of America_ 114.26, pp. E5129-E5137. ISSN: 10916490. DOI:
+[10.1073/pnas.1702317114](https://doi.org/10.1073%2Fpnas.1702317114).
+
+&lt;a name=bib-Girvan2016&gt;&lt;/a&gt;[Girvan, H. M. and A. W.
+Munro](#cite-Girvan2016) (2016). "Applications of microbial cytochrome
+P450 enzymes in biotechnology and synthetic biology". In: _Current
+Opinion in Chemical Biology_ 31, pp. 136-145. ISSN: 18790402. DOI:
+[10.1016/j.cbpa.2016.02.018](https://doi.org/10.1016%2Fj.cbpa.2016.02.018).
+URL:
+[http://dx.doi.org/10.1016/j.cbpa.2016.02.018](http://dx.doi.org/10.1016/j.cbpa.2016.02.018).
+
+&lt;a name=bib-Kleingardner2015&gt;&lt;/a&gt;[Kleingardner, J. G. and K. L.
+Bren](#cite-Kleingardner2015) (2015). "Biological Significance and
+Applications of Heme c Proteins and Peptides". In: _Accounts of
+Chemical Research_ 48.7, pp. 1845-1852. ISSN: 15204898. DOI:
+[10.1021/acs.accounts.5b00106](https://doi.org/10.1021%2Facs.accounts.5b00106).
+
+&lt;a name=bib-Lalonde2016&gt;&lt;/a&gt;[Lalonde, J.](#cite-Lalonde2016) (2016).
+"Highly engineered biocatalysts for efficient small molecule
+pharmaceutical synthesis". In: _Current Opinion in Biotechnology_ 42,
+pp. 152-158. ISSN: 18790429. DOI:
+[10.1016/j.copbio.2016.04.023](https://doi.org/10.1016%2Fj.copbio.2016.04.023).
+URL:
+[http://dx.doi.org/10.1016/j.copbio.2016.04.023](http://dx.doi.org/10.1016/j.copbio.2016.04.023).
+
 &lt;a name=bib-Laskowski1995&gt;&lt;/a&gt;[Laskowski, R. A.](#cite-Laskowski1995)
 (1995). "SURFNET: A program for visualizing molecular surfaces,
 cavities, and intermolecular interactions". In: _Journal of Molecular
 Graphics_ 13.5, pp. 323-330. ISSN: 02637855. DOI:
 [10.1016/0263-7855(95)00073-9](https://doi.org/10.1016%2F0263-7855%2895%2900073-9).
+
+&lt;a name=bib-Li2011&gt;&lt;/a&gt;[Li, T., H. L. Bonkovsky, and J. T.
+Guo](#cite-Li2011) (2011). "Structural analysis of heme proteins:
+Implications for design and prediction". In: _BMC Structural Biology_
+11. ISSN: 14726807. DOI:
+[10.1186/1472-6807-11-13](https://doi.org/10.1186%2F1472-6807-11-13).
+
+&lt;a name=bib-Li2020&gt;&lt;/a&gt;[Li, Z., Y. Jiang, F. P. Guengerich, et
+al.](#cite-Li2020) (2020). "Engineering cytochrome P450 enzyme systems
+for biomedical and biotechnological applications". In: _Journal of
+Biological Chemistry_ 295.3, pp. 833-849. ISSN: 00219258. DOI:
+[10.1016/s0021-9258(17)49939-x](https://doi.org/10.1016%2Fs0021-9258%2817%2949939-x).
 
 &lt;a name=bib-Poulos2014&gt;&lt;/a&gt;[Poulos, T. L.](#cite-Poulos2014) (2014).
 "Heme enzyme structure and function". In: _Chemical Reviews_ 114.7, pp.
@@ -869,6 +1067,55 @@ ISSN: 00063525. DOI:
 [10.1002/(sici)1097-0282(199603)38:3&lt;305::aid-bip4&gt;3.0.co;2-y](https://doi.org/10.1002%2F%28sici%291097-0282%28199603%2938%3A3%3C305%3A%3Aaid-bip4%3E3.0.co%3B2-y).
 
 
+---
+# #CiteMe
+
+All scripts (as well as raw data, results, and this document) are available on GitHub, https://github.com/patimus-prime/heme-binding.
+
+
+---
+
+# Acknowledgements
+
+In case anyone reads this in the future, some context may be appreciated: I attended and (hopefully) completed this Master's program during the COVID-19 global pandemic from September 2020 to September 2021.
+
+Thanks to everyone who taught me something during this program.
+
+Thanks to those in the research group who helped me understand what a heme is and got me this far; they tolerated and attempted to alleviate my ignorance: Laura Tiessler Sala, José Emilio Sánchez Aparicio and JeanDi.
+
+Thanks to the UAB for having me; and thanks to our professors for providing a mercilessly thorough education.
+
+Thanks to Spain, and Catalonia, for even allowing me into the country, and, I emphasize, thanks for implementing public health measures.
+
+Thanks to my classmates for sharing in the suffering.
+
+Thanks to my family and friends for supporting me, often over the phone, throughout this program and interesting time.
+
+Thanks to whatever media I consumed and the creators of that media that facilitated the survival of my sanity through the pandemic.
+
+---
+
+class: middle, center
+
+&lt;!-- &lt;iframe width="560" height="315" src="https://www.youtube.com/watch?v=c-Pv55i2bc0" frameborder="0" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt; --&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/c-Pv55i2bc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;!-- &lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/c-Pv55i2bc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt; --&gt;
+
+--
+
+"Last but not least, I wanna thank me. I wanna thank me for believing in me. I wanna thank me for doing all this hard work. I wanna thank me for having no days off. I wanna thank me for, for never quitting. I wanna thank me for always being a giver, and trying to give more than I receive. I wanna thank me for trying to do more right than wrong. I wanna thank me for just being me at all times."
+  -- Calvin Cordozar Broadus Jr. 
+--
+"Snoop Dogg"
+
+---
+
+class: inverse, center, middle
+
+# Fin
+
 
 ---
 
@@ -876,6 +1123,13 @@ class: inverse, center, middle
 
 # In Case of Emergency
 
+---
+
+&lt;iframe src="https://open.spotify.com/embed/track/55VcwDNsQZcW8YBDudv9uS" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"&gt;&lt;/iframe&gt;
+
+--
+
+&lt;iframe src="https://open.spotify.com/embed/track/55VcwDNsQZcW8YBDudv9uS" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"&gt;&lt;/iframe&gt;
 
 ---
 # HEC AA Overlay
@@ -919,47 +1173,26 @@ class: inverse, center, middle
 
 ---
 # Source Organism Data HEC
-
-```r
-DT::datatable(HEC_p1DF)
-```
-
 <div id="htmlwidget-d95a18c474224479f98f" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d95a18c474224479f98f">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13"],["1BBH","1S56","1W2L","2BC5","2BH5","3EAH","3X15","5KPF","5LFT","5T8W","6VDQ","6WZA","6XNK"],["CYTOCHROME C';                                             ","HEMOGLOBIN-LIKE PROTEIN HBN;                               ","CYTOCHROME OXIDASE SUBUNIT II;                             ","SOLUBLE CYTOCHROME B562;                                   ","CYTOCHROME C-550;                                          ","NITRIC OXIDE SYNTHASE, ENDOTHELIAL;                        ","CYTOCHROME C552;                                           ","CYTOCHROME C ISO-1;                                        ","CYTOCHROME C ISO-1;                                        ","CYC1P;                                                     ","3-METHYL-L-TYROSINE PEROXYGENASE;                          ","SOLUBLE CYTOCHROME B562;                                   ","CYTOCHROME C;                                              "],["ALLOCHROMATIUM VINOSUM;                         ","MYCOBACTERIUM TUBERCULOSIS;                     ","RHODOTHERMUS MARINUS;                           ","ESCHERICHIA COLI;                               ","PARACOCCUS VERSUTUS;                            ","HOMO SAPIENS;                                   ","AQUIFEX AEOLICUS VF5;                           ","SACCHAROMYCES CEREVISIAE;                       ","SACCHAROMYCES CEREVISIAE;                       ","SACCHAROMYCES CEREVISIAE;                       ","STREPTOMYCES LAVENDULAE;                        ","ESCHERICHIA COLI;                               ","HOMO SAPIENS;                                   "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-d95a18c474224479f98f">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13"],["1BBH","1S56","1W2L","2BC5","2BH5","3EAH","3X15","5KPF","5LFT","5T8W","6VDQ","6WZA","6XNK"],["CYTOCHROME C';                                             ","HEMOGLOBIN-LIKE PROTEIN HBN;                               ","CYTOCHROME OXIDASE SUBUNIT II;                             ","SOLUBLE CYTOCHROME B562;                                   ","CYTOCHROME C-550;                                          ","NITRIC OXIDE SYNTHASE, ENDOTHELIAL;                        ","CYTOCHROME C552;                                           ","CYTOCHROME C ISO-1;                                        ","CYTOCHROME C ISO-1;                                        ","CYC1P;                                                     ","3-METHYL-L-TYROSINE PEROXYGENASE;                          ","SOLUBLE CYTOCHROME B562;                                   ","CYTOCHROME C;                                              "],["ALLOCHROMATIUM VINOSUM;                         ","MYCOBACTERIUM TUBERCULOSIS;                     ","RHODOTHERMUS MARINUS;                           ","ESCHERICHIA COLI;                               ","PARACOCCUS VERSUTUS;                            ","HOMO SAPIENS;                                   ","AQUIFEX AEOLICUS VF5;                           ","SACCHAROMYCES CEREVISIAE;                       ","SACCHAROMYCES CEREVISIAE;                       ","SACCHAROMYCES CEREVISIAE;                       ","STREPTOMYCES LAVENDULAE;                        ","ESCHERICHIA COLI;                               ","HOMO SAPIENS;                                   "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
 # Source Organism Data SRM
-
-```r
-#load("mainData.RData")
-DT::datatable(SRM_p1DF)
-```
-
 <div id="htmlwidget-89e62d2075db0bc96b6c" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-89e62d2075db0bc96b6c">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9"],["1ZJ8","2AKJ","2AOP","3B0G","3VKP","3VLX","3VLY","3VLZ","5H8V"],["PROBABLE FERREDOXIN-DEPENDENT NITRITE REDUCTASE NIRA;      ","FERREDOXIN--NITRITE REDUCTASE, CHLOROPLAST;                ","SULFITE REDUCTASE HEMOPROTEIN;                             ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","SULFITE REDUCTASE [FERREDOXIN], CHLOROPLASTIC;             "],["MYCOBACTERIUM TUBERCULOSIS;                     ","SPINACIA OLERACEA;                              ","ESCHERICHIA COLI;                               ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","ZEA MAYS;                                       "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-89e62d2075db0bc96b6c">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9"],["1ZJ8","2AKJ","2AOP","3B0G","3VKP","3VLX","3VLY","3VLZ","5H8V"],["PROBABLE FERREDOXIN-DEPENDENT NITRITE REDUCTASE NIRA;      ","FERREDOXIN--NITRITE REDUCTASE, CHLOROPLAST;                ","SULFITE REDUCTASE HEMOPROTEIN;                             ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","NITRITE REDUCTASE;                                         ","SULFITE REDUCTASE [FERREDOXIN], CHLOROPLASTIC;             "],["MYCOBACTERIUM TUBERCULOSIS;                     ","SPINACIA OLERACEA;                              ","ESCHERICHIA COLI;                               ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","NICOTIANA TABACUM;                              ","ZEA MAYS;                                       "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
 # Source Organism Data verdoheme
-
-```r
-DT::datatable(VERDOHEME_p1DF)
-```
-
 <div id="htmlwidget-1b4e72705895a34fbd74" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1b4e72705895a34fbd74">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4"],["2ZVU","3MOO","1TWN","1TWR"],["HEME OXYGENASE 1;                                          ","HEME OXYGENASE;                                            ","HEME OXYGENASE 1;                                          ","HEME OXYGENASE 1;                                          "],["RATTUS NORVEGICUS;                              ","CORYNEBACTERIUM DIPHTHERIAE;                    ","HOMO SAPIENS;                                   ","HOMO SAPIENS;                                   "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1b4e72705895a34fbd74">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4"],["2ZVU","3MOO","1TWN","1TWR"],["HEME OXYGENASE 1;                                          ","HEME OXYGENASE;                                            ","HEME OXYGENASE 1;                                          ","HEME OXYGENASE 1;                                          "],["RATTUS NORVEGICUS;                              ","CORYNEBACTERIUM DIPHTHERIAE;                    ","HOMO SAPIENS;                                   ","HOMO SAPIENS;                                   "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Molecule_Name<\/th>\n      <th>Source_Organism<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
 # Big Data HEM
-
-```r
-DT::datatable(HEM_p2DF)
-```
-
 <div id="htmlwidget-563c3f5a609add8c847c" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-563c3f5a609add8c847c">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58"],["1B2V","1B5M","1DK0","1DKH","1ICC","1IPH","1N45","1P3T","1QHU","1QJS","1SI8","1SY2","1U9U","1VGI","1ZVI","2BHJ","2CJ0","2CN4","2CPO","2E2Y","2FC2","2IIZ","2IPS","2J0P","2J18","2O6P","2Q6N","2R7A","2SPL","2VEB","3HX9","3MVF","3QZN","3QZZ","3SIK","3TGC","3VP5","3ZJS","4B8N","4CAT","4CDP","4I3Q","4JET","4MF9","4MYP","4NL5","4UZV","4XZD","4Y1Q","5CN5","5GJ3","5KZL","5O1L","5O1M","5VEU","6A2J","7C74","7DMR"],[893.6,672.79,966.72,1010.7,1000.4,1345.6,978.98,987.05,1389.2,1102.3,965.57,918.34,738.55,870.44,1435.9,1438.3,809.62,526.88,886.17,994.92,1091.4,1015.6,1242.4,1281.8,841.67,788.05,1030.1,1284.5,1055.7,886.06,1844.5,1271.4,726.52,977.3,492.15,969.87,1094.6,788.74,841.27,1933.9,1053.7,1220.5,1010.8,1286.5,610.72,1088.7,1184.1,932.14,952.23,1070.3,1108.2,914.22,1438.7,1431.3,964.76,1015.9,1155.1,1083.4],[502.042,490.05,505.258,509.042,499.585,501.603,560.384,509.939,573.686,573.266,646.643,501.85,496.132,577.234,701.091,836.576,2653.18,576.76,1846.49,811.27,1011.19,731.342,618.252,1030.51,1962.99,499.017,644.365,507.098,589.706,762.309,785.442,576.502,664.858,496.95,498.621,524.38,602.79,528.419,569.302,484.341,1425.05,510.623,495.992,488.695,963.019,576.669,526.584,498.788,494.939,663.162,756.603,483.76,801.519,493.85,993.578,6183.45,497.527,1049.75],[820.988,800.78,837.157,828.131,811.357,814.652,983.238,829.611,1002.16,1000.38,1184.07,817.749,813.773,1002.53,1129.54,1290.53,4835.28,961.348,3329.54,1607.37,1669.9,1393.16,1075.56,1873.81,3556.34,822.121,1040.08,845.182,1029.66,1454.75,1168.2,1009.95,1221.33,825.255,823.565,853.71,1050.82,860.137,990.216,778.502,3141.09,845.108,818.131,790.732,1834.68,1003.4,844.058,816.032,806.96,1223.64,1131.67,805.567,1447.27,799.331,1502.66,9902.92,820.381,1916.95],[7276.09,4695.01,7237.94,7402.34,5079.72,33983.8,9944.5,9530.67,18503.1,18588.4,23711.2,8960.76,4675.76,9615.29,19918.6,20102.3,12749.6,9617.23,13081.6,7531.94,18383.5,13651.7,27760.5,15192.9,12675.1,6234.84,20051.1,11255.1,7588.36,9840.72,5819.08,8559.24,6133.24,8523.59,6495.38,8712.77,9801.82,9568.1,4560.39,28372.4,14733.5,21946.5,7887.81,15669.8,6285.4,5715.52,7378.28,8028.32,7905.84,7629.45,11394,9662.03,15538.2,16096.9,20900.8,14870.3,26111.4,26004],[8232.6,5512.2,8217.58,8175.94,6028.23,34094.4,10779.3,10410.8,18257.2,18584.1,25120.4,9610.23,5632.32,10248.2,20968.2,20762.6,12892.2,11917.7,12995.6,8240.75,18552.1,14031.4,25814.1,15871.1,12779,7200.43,19747.5,12389,8105.94,10401.8,7189.03,9573.08,7179.49,9708.28,7739.06,9181.94,10810.8,10130.4,5458.66,36788.3,15887.4,21093.7,8695.85,16791.3,7351.53,6894.72,8322.74,8752.5,8785.04,8117.34,12591.8,10431,16876,15912.5,20425.9,15888,25094.2,24563.8]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Volume_Data<\/th>\n      <th>HEM_Excluded_SA<\/th>\n      <th>HEM_Accessible_SA<\/th>\n      <th>Pocket_Excluded_SA<\/th>\n      <th>Pocket_Accessible_SA<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-563c3f5a609add8c847c">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58"],["1B2V","1B5M","1DK0","1DKH","1ICC","1IPH","1N45","1P3T","1QHU","1QJS","1SI8","1SY2","1U9U","1VGI","1ZVI","2BHJ","2CJ0","2CN4","2CPO","2E2Y","2FC2","2IIZ","2IPS","2J0P","2J18","2O6P","2Q6N","2R7A","2SPL","2VEB","3HX9","3MVF","3QZN","3QZZ","3SIK","3TGC","3VP5","3ZJS","4B8N","4CAT","4CDP","4I3Q","4JET","4MF9","4MYP","4NL5","4UZV","4XZD","4Y1Q","5CN5","5GJ3","5KZL","5O1L","5O1M","5VEU","6A2J","7C74","7DMR"],[893.6,672.79,966.72,1010.7,1000.4,1345.6,978.98,987.05,1389.2,1102.3,965.57,918.34,738.55,870.44,1435.9,1438.3,809.62,526.88,886.17,994.92,1091.4,1015.6,1242.4,1281.8,841.67,788.05,1030.1,1284.5,1055.7,886.06,1844.5,1271.4,726.52,977.3,492.15,969.87,1094.6,788.74,841.27,1933.9,1053.7,1220.5,1010.8,1286.5,610.72,1088.7,1184.1,932.14,952.23,1070.3,1108.2,914.22,1438.7,1431.3,964.76,1015.9,1155.1,1083.4],[502.042,490.05,505.258,509.042,499.585,501.603,560.384,509.939,573.686,573.266,646.643,501.85,496.132,577.234,701.091,836.576,2653.18,576.76,1846.49,811.27,1011.19,731.342,618.252,1030.51,1962.99,499.017,644.365,507.098,589.706,762.309,785.442,576.502,664.858,496.95,498.621,524.38,602.79,528.419,569.302,484.341,1425.05,510.623,495.992,488.695,963.019,576.669,526.584,498.788,494.939,663.162,756.603,483.76,801.519,493.85,993.578,6183.45,497.527,1049.75],[820.988,800.78,837.157,828.131,811.357,814.652,983.238,829.611,1002.16,1000.38,1184.07,817.749,813.773,1002.53,1129.54,1290.53,4835.28,961.348,3329.54,1607.37,1669.9,1393.16,1075.56,1873.81,3556.34,822.121,1040.08,845.182,1029.66,1454.75,1168.2,1009.95,1221.33,825.255,823.565,853.71,1050.82,860.137,990.216,778.502,3141.09,845.108,818.131,790.732,1834.68,1003.4,844.058,816.032,806.96,1223.64,1131.67,805.567,1447.27,799.331,1502.66,9902.92,820.381,1916.95],[7276.09,4695.01,7237.94,7402.34,5079.72,33983.8,9944.5,9530.67,18503.1,18588.4,23711.2,8960.76,4675.76,9615.29,19918.6,20102.3,12749.6,9617.23,13081.6,7531.94,18383.5,13651.7,27760.5,15192.9,12675.1,6234.84,20051.1,11255.1,7588.36,9840.72,5819.08,8559.24,6133.24,8523.59,6495.38,8712.77,9801.82,9568.1,4560.39,28372.4,14733.5,21946.5,7887.81,15669.8,6285.4,5715.52,7378.28,8028.32,7905.84,7629.45,11394,9662.03,15538.2,16096.9,20900.8,14870.3,26111.4,26004],[8232.6,5512.2,8217.58,8175.94,6028.23,34094.4,10779.3,10410.8,18257.2,18584.1,25120.4,9610.23,5632.32,10248.2,20968.2,20762.6,12892.2,11917.7,12995.6,8240.75,18552.1,14031.4,25814.1,15871.1,12779,7200.43,19747.5,12389,8105.94,10401.8,7189.03,9573.08,7179.49,9708.28,7739.06,9181.94,10810.8,10130.4,5458.66,36788.3,15887.4,21093.7,8695.85,16791.3,7351.53,6894.72,8322.74,8752.5,8785.04,8117.34,12591.8,10431,16876,15912.5,20425.9,15888,25094.2,24563.8]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PDB_ID<\/th>\n      <th>Volume_Data<\/th>\n      <th>HEM_Excluded_SA<\/th>\n      <th>HEM_Accessible_SA<\/th>\n      <th>Pocket_Excluded_SA<\/th>\n      <th>Pocket_Accessible_SA<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 # HEM AA Interactive
@@ -977,7 +1210,9 @@ DT::datatable(HEM_p2DF)
 &lt;p class="caption"&gt;Example of Planar Angles Calculation (1B5M)&lt;/p&gt;
 &lt;/div&gt;
 
---
+---
+
+# Planar Angle cont'd
 
 The code is ghastly!
 
@@ -1123,6 +1358,51 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
   }
 })();
+(function(time) {
+  var d2 = function(number) {
+    return ('0' + number).slice(-2); // left-pad 0 to minutes/seconds
+  },
+
+  time_format = function(total) {
+    var secs = Math.abs(total) / 1000;
+    var h = Math.floor(secs / 3600);
+    var m = Math.floor(secs % 3600 / 60);
+    var s = Math.round(secs % 60);
+    var res = d2(m) + ':' + d2(s);
+    if (h > 0) res = h + ':' + res;
+    return res;  // [hh:]mm:ss
+  },
+
+  slide_number_div = function(i) {
+    return document.getElementsByClassName('remark-slide-number').item(i);
+  },
+
+  current_page_number = function(i) {
+    return slide_number_div(i).firstChild.textContent;  // text "i / N"
+  };
+
+  var timer = document.createElement('span'); timer.id = 'slide-time-left';
+  var time_left = time, k = slideshow.getCurrentSlideIndex(),
+      last_page_number = current_page_number(k);
+
+  setInterval(function() {
+    time_left = time_left - 1000;
+    timer.innerHTML = ' ' + time_format(time_left);
+    if (time_left < 0) timer.style.color = 'red';
+  }, 1000);
+
+  slide_number_div(k).appendChild(timer);
+
+  slideshow.on('showSlide', function(slide) {
+    var i = slide.getSlideIndex(), n = current_page_number(i);
+    // reset timer when a new slide is shown and the page number is changed
+    if (last_page_number !== n) {
+      time_left = time; last_page_number = n;
+      timer.innerHTML = ' ' + time_format(time); timer.style.color = null;
+    }
+    slide_number_div(i).appendChild(timer);
+  });
+})(60000);
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
