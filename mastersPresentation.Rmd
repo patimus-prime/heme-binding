@@ -142,11 +142,18 @@ But in general, a heme is a coordination complex composed of an iron atom coordi
 
 --
 
-
+.pull-left[
 <img src="mastersPresentation_files/Porphin-18e.png" alt="ring" width="300"/>
+]
+.pull-right[
+- Macrocycle (large ring)!
+- Highly variable!  
+- Pyrrole subunits (4C-1N) x4
+- methine bridges connecting
+- resonant/aromatic/heterocyclic ring
+- very good for e- transfer
+]
 
-Macrocycle!
-Highly variable!  
 Image from: https://commons.wikimedia.org/wiki/File:Porphin-18e.png
 ---
 
@@ -1901,9 +1908,7 @@ class: inverse, center, middle
 
 # Heme-b Volume Data
 
-Volume results were rather spread out, with close agreement only found for heme-b. **In general, volume for all heme molecules regardless of distance cutoff centered at approximately 1200 A³.** This result may be useful in protein engineering efforts, especially for selection or design of binding pockets. 
-
-
+.right-column[
 ```{r HEM-Volume,fig.cap="HEM: Volume of Binding Pocket",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
 #    # ### VOLUME ####
@@ -1937,6 +1942,14 @@ library(kableExtra)
    )
     
 ```
+]
+.left-column[
+- For all hemes, ~1200 A³ in binding pocket
+- Others in appendix
+]
+
+???
+Volume results were rather spread out, with close agreement only found for heme-b. **In general, volume for all heme molecules regardless of distance cutoff centered at approximately 1200 A³.** This result may be useful in protein engineering efforts, especially for selection or design of binding pockets. 
 
 ---
 class: inverse, center, middle
@@ -1951,6 +1964,7 @@ The solvent accessible surface area for all heme *molecules* themselves centers 
 ---
 # Heme-b Pocket SA
 
+.right-column[
 ```{r HEM-Pocket-AccessibleSA,fig.cap="HEM: Pocket Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
    # Pocket Acessible histo
 load("mainData.RData")
@@ -1983,9 +1997,15 @@ library(kableExtra)
       + labs(title = paste(activeLigand,"Pocket Acessible SA (A²)"))
    )
 ```
+]
+.left-column[
+note on next slide
+]
 
 ---
 # Verdoheme Pocket SA
+
+.right-column[
 ```{r VERDOHEME-Pocket-AccessibleSA,fig.cap="VERDOHEME: Pocket Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
    # Pocket Acessible histo
 load("mainData.RData")
@@ -2018,14 +2038,20 @@ library(kableExtra)
       + labs(title = paste(activeLigand,"Pocket Acessible SA (A²)"))
    )
 ```
+]
+.left-column[
+- Similar to HEM, 10,000-11,000 A²
+- useful to compare next slides
+]
 
-
-
+???
 Heme-b and verdoheme, being highly similar molecules, with the same propionate groups, and one the derivative of the other, have quite similar surface areas, centering around 10,000-11,000 A². This is useful as a baseline to discuss the surface area of the binding pockets of the other two heme molecules below.
 
 
 ---
 # Heme-c Pocket SA
+
+.right-column[
 ```{r HEC-Pocket-AccessibleSA,fig.cap="HEC: Pocket Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
    # Pocket Acessible histo
 load("mainData.RData")
@@ -2058,13 +2084,22 @@ library(kableExtra)
       + labs(title = paste(activeLigand,"Pocket Acessible SA (A²)"))
    )
 ```
+]
 
+.left-column[
+- ~7500 A²
+- covalent bonds/thioether bonds exclude water?
+- othewise similar to HEM
+]
 
+???
 The surface area of the binding pocket of heme-c is considerably lower than that of heme-b and verdoheme. Its values center around 7500 A². Heme-c is bound covalently to the hemoprotein, forming thioether bonds with cysteine residues at two sites; this result suggests that the covalent bonds may exclude these sites from interacting with water molecules. Further study would be required to confirm this phenomenon.
 
 
 ---
 # Siroheme Pocket SA
+
+.right-column[
 ```{r SRM-Pocket-AccessibleSA,fig.cap="SRM: Pocket Accessible Surface Area",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
    # Pocket Acessible histo
 load("mainData.RData")
@@ -2097,7 +2132,16 @@ library(kableExtra)
       + labs(title = paste(activeLigand,"Pocket Acessible SA (A²)"))
    )
 ```
+]
 
+.left-column[
+- ~21000 A²
+- ligand SA is similar to HEM/HEC/VER etc.
+- everything polar = no need to bury anything
+- favorable interactions with solvent
+]
+
+???
 The surface area of siroheme's binding pocket is far greater than that for other heme molecules: values center around 21000 A². Siroheme's extra groups on the porphyrin ring do not appear to affect its own surface area, per above. However, it is effectively a very polar molecule and appropriately the binding pocket is highly saturated with very polar amino acids, as seen in the amino acid frequency analysis. The binding pocket is therefore completely different from the other heme molecules, and these populous, polar amino acids favorably interact with aqueous solvent, negating the need to bury any hydrophobic residues and reduce surface area.
 
 
@@ -2109,6 +2153,7 @@ class: inverse, center, middle
 ---
 # HEM Planar Angle Data
 
+.right-column[
 ```{r HEM-planarAll,fig.cap="HEM: All Planar Angles",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
    # all planar angles
@@ -2133,10 +2178,18 @@ library(kableExtra)
       labs(title = paste(activeLigand,": All Planar Angles",sep=''), x="Residue",y="Angle") + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
    print(planarAllPlot)
 ```
+]
 
+--
+
+.left-column[
+- CYS, but otherwise...
+]
 
 ---
 # HEM CAB Data
+
+.right-column[
 ```{r HEM-cab-All,fig.cap="HEM: All CA-CB-Fe Angles",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 
    # all cabs with distance intersect
@@ -2160,7 +2213,11 @@ library(kableExtra)
    print(cabAllPlot)
    
 ```
+]
 
+.left-column[
+- CYS
+]
 
 
 ---
