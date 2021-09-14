@@ -1474,6 +1474,7 @@ class: inverse, center, middle
 ---
 # Siroheme AA Freq
 
+.right-column[
 ```{r SRM-AAfreq0,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1494,11 +1495,20 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 print(g)
 ```
+]
+
+--
+
+.left[
+last aa freq dataset here we go
+]
+
 
 ---
 
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq1,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1519,8 +1529,15 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("ARG"))
 ```
+]
 
+.left-column[
+- LOTS of polar
+- ARG (e+)
+- salt bridges and interactions w carboxyl/propionates
+]
 
+???
 Siroheme, with a structure highly dissimilar to the other heme molecules examined, should be expected to have a different amino acid frequency profile -- and indeed we confirm this in our results. 
 
 Nonpolar residues are not the  most abundant in the siroheme binding pocket. In fact, disproportionately frequent to the rest of the residues in the binding pocket is arginine. Siroheme is saturated with carboxyl and propionate groups; the entire porphyrin ring surrounded by polar, electronegative groups. And therefore a polar, positively charged amino acid such as arginine is reasonable to expect in the binding pocket -- what is striking, however is the extreme preference for arginine; such a profile does not exist for the other types of heme. This can be at least explained; siroheme contains propionate groups that likely still form polar interactions with arginine salt bridges, and the carboxyl groups may also form polar interactions with arginine, therefore highly favoring arginine's presence in the binding pocket.
@@ -1528,6 +1545,7 @@ Nonpolar residues are not the  most abundant in the siroheme binding pocket. In 
 ---
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq2,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1548,14 +1566,22 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("GLN","ASN","CYS","LYS","THR"))
 ```
+]
 
+.left-column[
+- polar!!
+- GLN, ASN, CYS, LYS, THR
+- LYS polar, e+, no salt
+- CYS coordination?
+]
 
-
+???
 Arginine is followed by other polar amino acids: glutamine, cystine, lysine, threonine, and asparagine; a more homogenous trend than seen for the other heme molecules, in that the trend is not interrupted by residues of opposing polarity as for other types of heme. Though these results could be expected, they demonstrate the extent to which siroheme's binding pocket is dominated by polar residues. The preference for arginine out of all polar amino acids may be attributed to its positive charge, and ability to form salt bridges that interact with the propionate groups; lysine also has a positive charge and is polar, but does not form salt bridge interactions with the propionate  groups. Cysteine is used to coordinate the iron of siroheme, and while this did not significantly affect the frequency for other heme molecules, it is still possible this increases the value for cysteine for siroheme.
 
 ---
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq3,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1576,10 +1602,19 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("GLY"))
 ```
+]
 
+.left-column[
+- GLY
+- some role, idk
+]
+
+???
+After this group of polar amino acids, glycine is the next most frequent. Glycine has been situated at about a median frequency for other heme molecules, so perhaps its frequency here, slightly above the median, is of note. Again, for glycine in particular, the reason for its particular frequency cannot be determined from this data, but it appears to have some role.
 ---
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq4,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1600,10 +1635,21 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("ALA","PHE","VAL"))
 ```
+]
+.left-column[
+- ALA, PHE, VAL
+- nonpolar
+- still have porphyrin ring and methyls
+]
+
+???
+Finally we come to several nonpolar amino acids: alanine, phenylalanine, and valine. These amino acids define roughly the median of the frequency data. With all the polar groups on siroheme, it might be expected that only polar interactions would be desirable. However, the not minuscule frequency of these residues suggests nonpolar interactions still occur in the binding pocket; the porphyrin ring remains, as well as some methyl groups.
+
 
 ---
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq5,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1624,10 +1670,24 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("ASP"))
 ```
+]
+.left-column[
+- ASP
+- polar, e-
+- Repulsion?
+- heads up: after this no clear trends
+]
+
+???
+After these nonpolar residues the remaining frequencies do not follow a clear trend but regardless are discussed. After aspartate the remaining frequencies are considerably lower. This may be an artefact of a small sample size, or may suggest the remaining residues form, if any, far less favorable interactions with the heme. 
+
+Aspartate appears next most frequently; it is a polar, negatively charged amino acid (at pH 7). Siroheme is saturated with other electronegative groups; perhaps there is some repulsion between these groups and aspartate -- this could explain why, despite being a polar residue, arginine does not appear very frequently in the binding pocket. 
+
 
 ---
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq6,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1648,11 +1708,21 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("LEU","MET","ILE","PRO"))
 ```
+]
+.left-column[
+- LEU, MET, ILE, PRO
+- nonpolars
+- disfavored, but unclear why; other nonpolars preferred
+]
+
+???
+Leucine is the first of the residues of diminished frequency. It is nonpolar. It, and, skipping a frequency, methionine, isoleucine, and proline, appear less frequently, and therefore are likely disfavored from forming the relatively few nonpolar interactions that do occur. Why is not clear - other small, nonpolar residues, and other lengthy nonpolar residues appear in the pocket in greater frequency.      
 
 
 ---
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq7,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1673,11 +1743,19 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("SER"))
 ```
-
+]
+.left-column[
+- SER
+- polar, no e
+- less bang for buck
+]
+???
+Serine appears just less frequently than leucine, and in this context may likely be considered a polar residue that is not as strongly polar or positively charged and therefore less preferred to include in the binding pocket to form polar interactions with siroheme as other residues.
 
 ---
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq8,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1698,11 +1776,19 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("HIS"))
 ```
+]
+.left-column[
+- HIS
+- other strongly polar, less bulky preferred?
+]
 
+???
+Histidine appears quite infrequently. As with siroheme, other, more strongly polar and perhaps less bulky residues are likely preferred. 
 
 ---
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq9,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1723,11 +1809,22 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("TRP"))
 ```
+]
+.left-column[
+- TRP
+- too big?
+- not uniformly polar, H bond
+]
+
+
+???
+Tryptophan is the least frequent nonpolar residue. The presence of a weak hydrogen bond and its size may preclude its inclusion in the binding pocket in lieu of more uniformly nonpolar residues that take up less space and can better form interactions with the few nonpolar areas of siroheme.
 
 
 ---
 # Siroheme AA Freq (cont'd)
 
+.right-column[
 ```{r SRM-AAfreq10,fig.cap="SRM: AA Frequency within 7A",echo=FALSE, message= FALSE, warning=FALSE, results=FALSE}
 load("mainData.RData")
 activeLigand = "SRM"
@@ -1748,6 +1845,17 @@ g <- ggplot(eval(parse(text=paste(activeLigand,"_aaFreqDf",sep=""))),aes(x= reor
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 g + gghighlight(Residue %in% c("TYR","GLU"))
 ```
+]
+
+.left-column[
+- TYR, GLU
+- GLU a little too big? Why ASP preferred?
+- bang for buck
+- TYR not needed for chemistry, no redox here
+]
+???
+Tyrosine and glutamate are the least frequent polar residues. This is in stark opposition to the other heme molecules - tyrosine seemed to be favored for other heme molecules to form interactions with the propionate groups. Glutamate is also extremely infrequent, even in spite of its similarity to aspartate. Both are electronegative at pH 7 - glutamate's extra carbon may provide sufficient steric hindrance to render it less favored. In either case, the infrequency of these residues and the tendencies of other, more intensely polar or nonpolar amino acids to be more populous, suggests tyrosine and glutamate, in the siroheme binding environment, do not interact strongly enough to be favored over other polar residues.
+
 
 ---
 # Background Frequencies
@@ -1772,6 +1880,11 @@ print(ggplot(eval(parse(text=paste(activeLigand,"_aaFreqAllDf",sep=""))),aes(x= 
       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)))
 
 ```
+]
+
+.left-column[
+- very different from binding pocket
+- ARG in pocket v. LEU in monomer
 ]
 
 ???
