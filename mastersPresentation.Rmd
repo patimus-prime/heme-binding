@@ -1373,7 +1373,7 @@ htmltools::save_html(p, file = "verdoAA.html")
 
 .left-column[
 - Dissimilar to HEM/HEC
-- LYS and ALA
+- LEU and ALA
 - TYR and ARG; need more polar to convert?
 - TYR for redox, oxygenase
 - GLY, seems a role?
