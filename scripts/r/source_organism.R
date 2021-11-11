@@ -8,10 +8,6 @@ library(stringr)
 #to grab the fucking pdb titles
 sourceOrganismFn <- function(activeLigand,activeResultPath)
 {
- #activeLigand = "VEA"
- #activeResultPath = "~/heme-binding/pdb_source_data/0_raw_download/VEA"
-  #pdb_path = test_path = "~/heme-binding/pdb_source_data/0_raw_download" 
-  #setwd(pdb_path)
   
   setwd(activeResultPath)
   pdb_files_ls <- list.files(pattern = "*.pdb")
@@ -30,9 +26,6 @@ sourceOrganismFn <- function(activeLigand,activeResultPath)
   pdb_list <- as.data.frame(pdb_files_ls)
   
   title_data_df$code = pdb_list$pdb_files_ls
-  
-  #pdb_list %>%
-  #  separate(pdb_files_ls, c(NA,"Code"), ".txt") -> pdb_list
   
   # naming is confusing
   src_org_df <- pdb_list
@@ -53,12 +46,5 @@ sourceOrganismFn <- function(activeLigand,activeResultPath)
   
   source_organism_df <- src_org_df
   
-  #src_org_df <- title_data_df$title_of_pdbs
-  #src_org_df <- as.data.frame(src_org_df)
-  #new_title_df <- title_data_df$title_of_pdbs
-  #new_title_df <- as.data.frame(new_title_df)
-  #id_title_df <- merge(src_org_df,new_title_df,by.x = "PDB_ID")
-  
-  #mega_df <- merge(max_volume_df,hemeSA_df,by.x = "PDB_ID") 
   return(source_organism_df)
 }

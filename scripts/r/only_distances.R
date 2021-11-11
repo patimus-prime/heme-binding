@@ -1,3 +1,15 @@
+############################
+############################
+# AS OF 2 NOV 2021, THIS SCRIPT ACQURIES
+# DISTANCE DATA OF AMINO ACIDS SURROUNDING THE LIGAND
+# BY AVERAGING THE DISTANCES OF ATOMS WITHIN EACH RESIDUE
+# RATHER THAN CHIMERA'S APPROACH OF THE CLOSEST ATOM (SEE PLANAR ANGLES SCRIPT)
+# 3 DATAFRAMES ARE RETURNED IN A LIST.
+############################
+############################
+
+
+
 library(dplyr) 
 library(data.table)
 library(tidyr)
@@ -7,12 +19,8 @@ source("~/heme-binding/scripts/r/addpdbcol.R")
  
 distancesFn <- function(activeLigand,activeResultPath)
 {
-    #activeLigand = "HEM"
-    #activeResultPath = "~/heme-binding/results/only_distances/HEM"
-
   # data acquisition ----------------------------------
   setwd(activeResultPath)
-  #setwd("~/heme-binding/results/only_distances")
   
   # import all the shit that's been processed
   # currently using results specific file, all of type .txt; therefore:
@@ -29,7 +37,6 @@ distancesFn <- function(activeLigand,activeResultPath)
   
   #i think each file now has its own dataframe. now we combine them
   combined_results_df <- do.call("rbind", lapply(result_files_df, as.data.frame))
-  #@ line 981 (w/ orig PDBs, get an enormous volume. can either throw out this header, or filter as below)
   
   # combined_results_df is now the final output of this section and the primary df
   
@@ -91,8 +98,7 @@ distancesFn <- function(activeLigand,activeResultPath)
                        "LEU","LYS","MET","PHE","PRO","SER",
                        "THR","TRP","TYR","VAL")
   
-  # FIXME!!! CHANGE HERE TO ERRRRRADICATE THE NON-RES DATAPOINTS
-  # 26 Aug 2021, to clarify below DOES NOW remove non residues, which seems good
+  # REMOVE THE NON-RESIDUE DATAPOINTS
   OnlyDistance_df <- subset(OnlyDistance_df, Residue_Code %in% residues_ref_ls)
   
   
@@ -102,15 +108,9 @@ distancesFn <- function(activeLigand,activeResultPath)
   OnlyDistance_df %>%
     group_by(PDB_ID) %>% slice(which.min(Distance)) -> min_distance_df
   
-  # maybe of interest later
-  #barplot(min_distance_df$Distance) 
-  
   # 2. Maximum distnace to Fe
   OnlyDistance_df %>%
     group_by(PDB_ID) %>% slice(which.max(Distance)) -> max_distance_df
-  
-  #barplot(max_distance_df$Distance) #FIXME! NEED TO CONVERT TO NUMERICS
-    # sensible result, we select only atoms <= 7A away. NOT RESIDUES
   
   # next part tricky!!!!!!!!!11
   # no it's not: https://stackoverflow.com/questions/21982987/mean-per-group-in-a-data-frame
@@ -126,10 +126,6 @@ distancesFn <- function(activeLigand,activeResultPath)
       Mean_Distance = x
     ) -> mean_dist_df
   
-  
-  
-  #hist(mean_dist_df$Mean_Distance) #so, the mean distance across all PDBs
-  
   # 4. Median distance to Fe
   median_dist_df <- aggregate(OnlyDistance_df[, 5], list(OnlyDistance_df$PDB_ID), median)
   #rename
@@ -138,12 +134,6 @@ distancesFn <- function(activeLigand,activeResultPath)
       PDB_ID = Group.1,
       Median_Distance = x
     ) -> median_dist_df
-  #hist(median_dist_df$Median_Distance) # median distance across all PDBs
-  
-  # GRAPHING HISTOGRAMS OF STATISTICS, MEANS AND MEDIANS OF ALL PDBS --------------------
-  # upon furher thought none of this is useful to see
-  
-  
   
   # GRAPHING AS VIOLIN PLOT LET'S GO!!!!!  -----------------------------
   

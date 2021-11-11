@@ -1,7 +1,14 @@
-# This script is to import all distance/angle data into R. 
-# slightly dependent uponn Python script details as to what 
-# additional... helper information is printed out into the replylog.
-# here we go:
+############################
+############################
+# This script, as of 2 Nov 2021 ONLY, ONLY
+# IS USED TO ACQUIRE PLANAR ANGLE DATA
+# REMAINING CODE IS COMMENTED OUT BUT 
+# IF YOU FIND THE INACCURATE DISTANCES REPORTED
+# ARE SOMEHOW USEFUL TO YOU, THE CODE IS THERE.
+############################
+############################
+
+
 
 library(dplyr) 
 library(data.table)
@@ -23,18 +30,12 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    
    # 1. Assembling all results into one dataframe -----------------------------
    
-   #set working directory to the folder w files!
-   #hemeSA_path = "~/heme-binding/results/hemeSA" 
-   #setwd(hemeSA_path)
-   #setwd("~/heme-binding/results/distances_and_angles")
    setwd(activeResultPath)
+   
    # import all the shit that's been processed
    # currently using results specific file, all of type .txt; therefore:
-   #XXXXX THIS WILL PROBABLY CHANGE... THE EXTENSION, EVENTUALLY MANNNNN
    result_files_ls <- list.files(pattern = "*.dist.angle.txt") #double check what's up
    
-   # may need to add path = whatever from wd into the parentheses
-   # result_files_ls is now a list of all the fuckin txt files
    
    # now read them from the list into a dataframe 
    result_files_df <- lapply(result_files_ls, function(x) {read.delim(file = x, header = FALSE)})
@@ -44,15 +45,10 @@ aaAnglesFn <- function(activeLigand,activeResultPath)
    
    #i think each file now has its own dataframe. now we combine them
    combined_results_df <- do.call("rbind", lapply(result_files_df, as.data.frame))
-   #@ line 981 (w/ orig PDBs, get an enormous volume. can either throw out this header, or filter as below)
    
    # combined_results_df is now the final output of this section and the primary df
    
    # 2. Acquire data from noise ---------------------------------------
-   
-   # aight, this reply log kinda sucks so we're gonna need multiple data frames to cope
-   # kinda gonna reference *SA.R to deal with multiple outputs in one file
-   # forgive me for the extra dataframes! Will try to sweep up at the end.
    
    # this grabs only the lines containing the grepl. We'll grab
    # specific results first into respective dataframes, then join at the end.

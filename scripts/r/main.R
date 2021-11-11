@@ -6,11 +6,12 @@
 # 0. Specify ligands and angstromDistance to be used
 # 1. Launches all scripts to acquire the data from .txt result files
 # 2. Merges those results and makes some stately dataframes
-# 3. Constructs plots, which must be manually saved.
-# 4. Outputs tables in latex format, which must be manually copied over.
-   # This part might need to be done AFTER the graphs have been produced.
-   # Therefore latex code is commented by default until needed
-# might end up doing that part by itself
+# 3. These dataframes are then plotted; this code may be copied into .Rmd files
+# 4. As of 2 Nov 2021, requires saving data; hit save button to the right in Environment
+
+# NOTE: I ADVISE READING THROUGH THIS, AND THEN VOLUME.R TO UNDERSTAND THE
+# GENERAL IDEA OF HOW THIS CODE ALL WORKS TOGETHER.
+
 # -------------------------------------------------------------
 #  Packages used; and comments if kableExtra gives problems ---------------
 
@@ -38,9 +39,11 @@ library(kableExtra)
 # just keep trying to install kableExtra and download what you need, until it works
 
 #get 5A data real quick so we overwrite all DFs it uses, below:
+
 source("~/heme-binding/scripts/r/data5A.R") 
 ls5A <- data5A_fn()
-print("the pdbs shouldnt be printed yet")
+#print("the pdbs shouldnt be printed yet")
+
 # DECLARATIONS --------------
 # warning: ligandList is altered at the end of merging dataframes below
 # this is because VER and VEA are merged to 'VERDOHEME'
@@ -63,6 +66,7 @@ for(ligand in 1:(length(ligandList)))
    # paste() automates df name creation, second arg is the df assigned. BAM!
    assign(paste(activeLigand,"_maxVolDf",sep=""), volume_dfs$maxVolDf)
    }
+
 # AA Frequency -----------------
 source("~/heme-binding/scripts/r/aa_frequency.R")
 resultPath = "~/heme-binding/results/aa_frequency/"
@@ -114,6 +118,7 @@ for(ligand in 1:(length(ligandList)))
 }
 
 # AA angles to ligand PLANE -------------
+# FIXME: RENAME THE SCRIPT INVOLVED BELOW, DIST_ANGLES.R -> PLANAR.R
 source("~/heme-binding/scripts/r/dist_angles.R")
 resultPath = "~/heme-binding/results/distances_and_angles/"
 
@@ -122,10 +127,7 @@ for(ligand in 1:(length(ligandList)))
    activeLigand = ligandList[[ligand]]
    activeResultPath = paste(resultPath,activeLigand,sep = "")
    planar_angles_df <- aaAnglesFn(activeLigand,activeResultPath)
-   #assign(paste(activeLigand,"_planar_angles_list",sep = ""), planar_angles_list)
    assign(paste(activeLigand,"_planar_angles_DF",sep=""),planar_angles_df)
-   #assign(paste(activeLigand,"_coord_Res_df",sep=""),planar_angles_list$coord_Res_df)
-   #assign(paste(activeLigand,"_min_dist_df",sep=""),planar_angles_list$min_dist_df)
 }
 
 # Distances of AA atoms to Fe ------------------
@@ -187,7 +189,8 @@ for(ligand in 1:(length(ligandList)))
    mergedDF <- merge(eval(parse(text = paste(activeLigand,"_pdbCodesDf",sep = ""))),
                 eval(parse(text = paste(activeLigand,"_sourceOrganismDf",sep = ""))),
                 by.x = "PDB_ID")
-   ##### DECLARE REPORTED DFs ###
+   
+   ##### DECLARE REPORTED DFs -- too large of a DF for output to PDF ###
    p1DF <- mergedDF #just codes and source orgs, done
    p2DF <- eval(parse(text = paste(activeLigand,"_pdbCodesDf$PDB_ID",sep = "")))
    p2DF <- as.data.frame(p2DF)
@@ -257,7 +260,7 @@ VERDOHEME_MERGED_DF %>%
       VERDOHEME_Accessible_SA = VXX_Accessible_SA
    ) -> VERDOHEME_MERGED_DF
 
-# angle stuff:
+# angle stuff merging:
 VERDOHEME_CACBFe_DF <- rbind(VEA_CACBFe_DF,VER_CACBFe_DF)
 VERDOHEME_planar_angles_DF <- rbind(VEA_planar_angles_DF,VER_planar_angles_DF)
 VERDOHEME_distList <- list(
@@ -294,6 +297,18 @@ VERDOHEME_aaFreqAllDf %>%
    ) -> VERDOHEME_aaFreqAllDf
 #almost done, have to order it:
 VERDOHEME_aaFreqAllDf <- arrange(VERDOHEME_aaFreqAllDf,desc(Freq))
+
+
+########################################
+########################################
+# BELOW IS OUTDATED AS OF 2 NOV 2021
+# ALL GRAPHS WERE CONSTRUCTED IN .RMD,
+# BUT THE BELOW CODE WAS USED AS REFERENCE.
+# IT MAY STILL BE USED TO SEE MULTIPLE GRAPHS IMMEDIATELY
+# BELOW IN THE BOTTOM RIGHT.
+########################################
+########################################
+
 
 # 2.5) Distances stuff, merging the distances/angles DF's --------------------
    # for use below in plots
@@ -577,7 +592,26 @@ v2df %>%
 VERDOHEME_p1DF <- v1df
 VERDOHEME_p2DF <- v2df
 
+
+
+########################################
+########################################
+# BELOW IS SOME CODE IF YOU REALLY, REALLY
+# WANT TO EXPORT TO LATEX. BUT DON'T DO THAT.
+# LEARN AND USE RMARKDOWN (.RMD)
+# DO NOT, DO NOT USE LATEX. LEARN .RMD
+# IT WILL SAVE YOU SOOOOOOOOOOOOOOO MUCH TIME.
+# LOOK UP 'BOOKDOWN' OR 'THESISDOWN' TO GET STARTED
+#
+# USE LATEX FOR A RESUME/CV THO, SO MUCH EASIER
+#
+# SERIOUSLY DO NOT DO NOT DO NOT USE LATEX FOR THIS
+########################################
+########################################
+
 ## EXPORT TO LATEX ---------------------
+##
+
 # splitting shit up worked!!!
 # irrelevant as of discovery of Rmd
 # 

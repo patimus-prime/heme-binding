@@ -48,12 +48,5 @@ pdbTitlesCodesFn <- function(activeLigand,activeResultPath)
   # now add in the column for the molecule names
   pdb_code_df['Molecule Name'] <- title_data_df$title_of_pdbs
   
-  #pdb_code_df <- title_data_df$title_of_pdbs
-  #pdb_code_df <- as.data.frame(pdb_code_df)
-  #new_title_df <- title_data_df$title_of_pdbs
-  #new_title_df <- as.data.frame(new_title_df)
-  #id_title_df <- merge(pdb_code_df,new_title_df,by.x = "PDB_ID")
-  
-  #mega_df <- merge(max_volume_df,hemeSA_df,by.x = "PDB_ID")  
   return(pdb_code_df)
 }
